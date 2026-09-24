@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: aerotopo
+      POSTGRES_USER: aerotopo
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["survey-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aerotopo"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  app:
+    build: .
+    ports: ["127.0.0.1:8080:8080"]
+    environment:
+      SPRING_PROFILES_ACTIVE: postgres
+      DB_URL: jdbc:postgresql://postgres:5432/aerotopo
+      DB_USERNAME: aerotopo
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD}
+      SURVEY_MANAGER_PASSWORD: ${SURVEY_MANAGER_PASSWORD:?Set SURVEY_MANAGER_PASSWORD}
+      SURVEY_PROCESSOR_PASSWORD: ${SURVEY_PROCESSOR_PASSWORD:?Set SURVEY_PROCESSOR_PASSWORD}
+      SURVEY_REVIEWER_PASSWORD: ${SURVEY_REVIEWER_PASSWORD:?Set SURVEY_REVIEWER_PASSWORD}
+    depends_on:
+      postgres: {condition: service_healthy}
+volumes:
+  survey-data:
