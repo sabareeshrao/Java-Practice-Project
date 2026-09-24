@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AeroTopo · Survey operations</title>
+<link rel="stylesheet" href="/app.css"></head><body>
+<header><a class="brand" href="/">△ AeroTopo</a><span>Survey operations</span><a href="/logout">Sign out</a></header>
+<main><section class="intro"><div><p class="eyebrow">AERIAL SURVEYING / OPERATIONS CONSOLE</p><h1>From ground observation<br>to approved delivery.</h1><p>Track survey datasets, inspect terrain and review quality.</p></div><div class="datum">WGS84 / UTM NORTH<br><strong>Metres. Measured.</strong></div></section>
+<div class="layout"><aside><h2>Survey projects</h2><form id="create"><label>Project name<input name="name" required maxlength="120" placeholder="Hyderabad corridor"></label><label>EPSG code<input name="srid" type="number" min="32601" max="32660" value="32644" required></label><button>Create project</button></form><div id="projects"></div><button id="more" class="secondary">Load more</button></aside>
+<section><div id="notice" role="status" aria-live="polite"></div><div id="empty"><h2>Choose a survey to begin</h2><p>Create a project, then import samples/hyderabad-ground.csv.</p><ol><li>Import ground observations</li><li>Validate independent checkpoints</li><li>Review and approve QA</li><li>Release the delivery</li></ol></div>
+<div id="detail" hidden><div class="heading"><div><p class="eyebrow" id="project-id"></p><h2 id="project-name"></h2></div><span id="status" class="tag"></span></div>
+<div class="metrics"><div><span>Observations</span><strong id="count"></strong></div><div><span>Vertical RMSE</span><strong id="rmse"></strong></div><div><span>Coordinate system</span><strong id="srid"></strong></div></div>
+<div class="plot"><svg id="plot" viewBox="0 0 700 300" role="img" aria-label="Ground observations in projected coordinates"></svg><p>Plan view · projected metres · point positions scaled to the dataset extent</p></div>
+<div class="actions"><form id="upload"><label>Ground-point CSV<input type="file" name="file" accept=".csv" required></label><button>Import points</button></form>
+<form id="quality"><label>Measured checkpoint heights (m)<input name="measured" value="510.01,510.12,510.19" required></label><label>Independent reference heights (m)<input name="reference" value="510,510.1,510.2" required></label><button>Run quality validation</button></form></div>
+<div class="toolbar"><button id="approve">Approve QA</button><button id="deliver">Release delivery</button><a id="export" class="button secondary">Export CSV</a></div>
+<h3>Audit history</h3><div id="history"></div></div></section></div></main><footer>AeroTopo · Java GIS learning project · Year 1 to Year 5</footer><script src="/app.js"></script></body></html>
