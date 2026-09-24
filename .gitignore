@@ -1,0 +1,8 @@
+target/
+.cache/
+data/
+*.log
+.idea/
+*.iml
+.env
+__pycache__/
