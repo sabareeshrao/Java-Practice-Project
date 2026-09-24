@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "lesson_number": 17,
+  "question_id": 17,
+  "mode": "build",
+  "project_impact": "permanent",
+  "title": "Understand public static void main(String[] args)",
+  "info_language": "te-Latn",
+  "answer": "In `public static void main(String[] args)`, `public` makes the method accessible to the Java launcher from outside the class; `static` lets the JVM invoke it without first creating an object; `void` means the method does not return a value; `main` is the conventional method name the launcher searches for; and `String[] args` receives command-line arguments. The standard launch signature is `public static void main(String[] args)`; the varargs form `String... args` is source-compatible because it compiles to a String-array parameter. The JVM starts the class and invokes this entry point to begin normal standalone Java execution.",
+  "steps": [
+    {
+      "title": "Create MainMethodLab",
+      "question": "The earlier Hello World lab demonstrated the JVM execution path, but this lesson needs a stable source file that later lessons can extend when discussing overloads and launch rules. Why should IntelliJ create a separate `MainMethodLab.java` instead of repeatedly rewriting the earlier HelloWorld example?",
+      "why": "A dedicated lab preserves earlier learning artifacts and gives later main-method lessons one cumulative file to evolve.",
+      "why_te": "Separate `MainMethodLab.java` create chesthe previous HelloWorld lab untouched ga untundi. Main-method related future lessons same file ni cumulative ga extend cheyyachu kabatti continuity clear ga maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/jvm/MainMethodLab.java",
+          "language": "java",
+          "content": ""
+        }
+      }
+    },
+    {
+      "title": "Type the standard main method",
+      "question": "A standalone Java application begins from a specific entry-point shape that the launcher recognizes, so seeing the complete signature in source is more useful than memorizing isolated keywords. Which responsibilities are represented by `public`, `static`, `void`, `main`, and `String[] args` in this method?",
+      "why": "The signature combines accessibility, object-free invocation, return type, launcher-recognized name, and command-line arguments.",
+      "why_te": "`public static void main(String[] args)` signature lo accessibility, object create cheyyakunda invocation, return type, launcher recognize chese method name mariyu command-line arguments anni oka place lo represent avutayi.",
+      "software": "intellij",
+      "required_capability": "type-code",
+      "feature_available": true,
+      "action": {
+        "action": "typeCode",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java",
+          "position": "replace",
+          "code": "public class MainMethodLab {\n    public static void main(String[] args) {\n        System.out.println(\"standard main\");\n    }\n\n    // OVERLOADS_GO_HERE\n}\n"
+        }
+      }
+    },
+    {
+      "title": "Inspect the class structure",
+      "question": "IntelliJ can parse the newly created class and expose its methods before the JVM ever runs it, which helps separate source structure from launch behavior. What should the File Structure view reveal about the standard `main(String[])` member and its placement inside `MainMethodLab`?",
+      "why": "The IDE should show main as a static class member with its parameter list, providing source-structure evidence before runtime.",
+      "why_te": "File Structure view lo `main(String[])` class member ga kanipistundi. IDE source structure ni runtime start kakamunde understand chestundi; JVM launch behavior next stage lo separate ga verify chestam.",
+      "software": "intellij",
+      "required_capability": "show-file-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showFileStructure",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java"
+        }
+      }
+    },
+    {
+      "title": "Explain public",
+      "question": "The Java launcher must be able to access the entry point from outside normal application object code, which is why the standard main method is declared public. When the signature line is highlighted, how does `public` support the launcher's ability to call the method?",
+      "why": "Public removes access restrictions that would otherwise prevent external launcher access to the entry point.",
+      "why_te": "`public` valla launcher class bayata nundi main method ni access cheyyagaladu. Private leda restricted access unte standard launcher entry point ni normal ga invoke cheyyalekapovachu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/jvm/MainMethodLab.java",
+            "line": 2
+          }
+        }
+      }
+    },
+    {
+      "title": "Explain static",
+      "question": "The launcher needs to start execution before ordinary application objects necessarily exist, so requiring an instance just to enter the program would add an unnecessary construction step. Why does declaring `main` as `static` let the JVM invoke it directly on the class?",
+      "why": "Static methods belong to the class-level execution context and do not require an object instance for invocation.",
+      "why_te": "`static` method ni object instance lekunda class level nundi invoke cheyyachu. Program start ayye mundu `MainMethodLab` object create cheyyalsina dependency avoid avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/jvm/MainMethodLab.java",
+            "line": 2
+          }
+        }
+      }
+    },
+    {
+      "title": "Explain void and main",
+      "question": "The launcher uses the method as an entry point rather than expecting an application result value through a normal return contract, while the name `main` is part of the recognized launch convention. Why do `void` and `main` together fit this startup role?",
+      "why": "Void expresses no return value and main is the launcher-recognized entry-point name.",
+      "why_te": "`void` method return value ivvadani indicate chestundi; `main` launcher search chese conventional entry-point name. Renditiki different responsibilities unna kuda startup signature lo kalisi untayi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/jvm/MainMethodLab.java",
+            "line": 2
+          }
+        }
+      }
+    },
+    {
+      "title": "Explain String array args",
+      "question": "Command-line programs often need values supplied at launch time, and Java passes those textual arguments to the entry point rather than exposing raw operating-system argument structures. What does `String[] args` provide to application code when the program is started with extra command-line values?",
+      "why": "The array contains command-line arguments in Java String form and may be empty when no arguments are supplied.",
+      "why_te": "`String[] args` command line nundi vachina arguments ni Java String array ga main method ki istundi. Arguments ivvakapothe array empty ga undachu, kani standard parameter shape same ga untundi.",
+      "software": "intellij",
+      "required_capability": "show-quick-documentation",
+      "feature_available": true,
+      "action": {
+        "action": "showQuickDocumentation",
+        "data": {
+          "symbol": "String[] args",
+          "documentation": "Command-line arguments supplied to the Java application entry point."
+        }
+      }
+    },
+    {
+      "title": "Compile the lab",
+      "question": "Understanding each keyword is useful only if the complete declaration is also valid Java source that the selected JDK can compile into class-file bytecode. Why should the lesson compile `MainMethodLab.java` before discussing what the JVM launcher recognizes at runtime?",
+      "why": "Compilation proves the source signature is legal and creates the class file the launcher will inspect next.",
+      "why_te": "Compile step source signature valid Java ani prove chestundi mariyu `MainMethodLab.class` create chestundi. Runtime launcher source text kaakunda compiled class file meeda work chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "javac -d target/main-method-demo labs/jvm/MainMethodLab.java",
+          "output": "Compilation successful\ntarget/main-method-demo/MainMethodLab.class created",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Run the standard main",
+      "question": "The final proof of the signature is that the Java launcher can locate the class, recognize `public static void main(String[] args)`, and invoke it without constructing `MainMethodLab`. What does the `standard main` output demonstrate about the complete entry-point contract?",
+      "why": "A successful launch shows that the recognized signature satisfies the runtime entry-point requirements.",
+      "why_te": "`standard main` output vachindante launcher compiled class ni load chesi correct public static main signature ni identify chesi object create cheyyakunda invoke chesindani prove avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "java -cp target/main-method-demo MainMethodLab alpha beta",
+          "output": "standard main",
+          "exitCode": 0
+        }
+      }
+    }
+  ]
+}

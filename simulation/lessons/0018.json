@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "lesson_number": 18,
+  "question_id": 18,
+  "mode": "build",
+  "project_impact": "permanent",
+  "title": "Overload the Java main method",
+  "info_language": "te-Latn",
+  "answer": "Yes, the `main` method can be overloaded because overloading is based on having the same method name with different parameter lists. A class can contain `main(String[] args)`, `main(int value)`, `main(String value)`, or other valid overloads. However, the Java launcher looks for the standard entry-point signature `public static void main(String[] args)` (or equivalent varargs form) when starting the class. It does not automatically choose another overloaded `main`. If you want an overload to run, the standard main method or other Java code must call it explicitly.",
+  "steps": [
+    {
+      "title": "Open the existing lab",
+      "question": "Method overloading should be demonstrated on the same class whose standard entry point was already compiled and executed, because that lets us observe what changes and what remains constant. Why is reopening `MainMethodLab.java` better than creating an unrelated second class for this question?",
+      "why": "Reusing the same file preserves continuity and makes the standard entry point visible beside the overloads.",
+      "why_te": "Previous lesson lo create chesina same `MainMethodLab.java` ni reuse chesthe standard main mariyu overloaded main methods side-by-side compare cheyyachu. Separate toy class create cheyyakunda continuity maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java"
+        }
+      }
+    },
+    {
+      "title": "Add overloaded main methods",
+      "question": "Java permits methods with the same name when their parameter lists differ, so overloading rules apply to `main` just as they do to other static methods. What should happen when IntelliJ adds `main(int)` and `main(String)` alongside the existing standard `main(String[])` method?",
+      "why": "The class should contain three valid methods named main with distinct parameter lists and no duplicate-signature conflict.",
+      "why_te": "Java overloading rule parameter list difference meeda depend avutundi. `main(int)` mariyu `main(String)` standard `main(String[])` pakkana valid ga coexist avvachu endukante signatures different ga unnayi.",
+      "software": "intellij",
+      "required_capability": "type-code",
+      "feature_available": true,
+      "action": {
+        "action": "typeCode",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java",
+          "marker": "    // OVERLOADS_GO_HERE",
+          "position": "replace",
+          "code": "    public static void main(int value) {\n        System.out.println(\"int overload: \" + value);\n    }\n\n    public static void main(String value) {\n        System.out.println(\"string overload: \" + value);\n    }\n"
+        }
+      }
+    },
+    {
+      "title": "Inspect overloads",
+      "question": "Once the overloads are added, the IDE should distinguish each method by its parameter list rather than treating every `main` declaration as the same member. What does File Structure reveal about Java's compile-time method overloading rules inside this single class?",
+      "why": "The IDE should list multiple main methods with distinct signatures, reflecting legal overloads.",
+      "why_te": "File Structure lo `main(String[])`, `main(int)` mariyu `main(String)` separate signatures ga kanipistayi. Same method name unna kuda parameter lists different kabatti Java valid overloads ga treat chestundi.",
+      "software": "intellij",
+      "required_capability": "show-file-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showFileStructure",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java"
+        }
+      }
+    },
+    {
+      "title": "Compile the overloads",
+      "question": "Overloading is a Java language feature, so the first question is whether the compiler accepts all three `main` signatures together before we discuss launcher behavior. Why should a successful `javac` compile be used to separate legal overloading from the JVM's choice of startup entry point?",
+      "why": "Compilation proves the overloads are legal; launch selection is a separate runtime rule.",
+      "why_te": "Compile success overload methods Java language rules prakaram legal ani prove chestundi. JVM launcher ye main ni startup entry point ga select chestundo separate runtime contract.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "javac -d target/main-method-demo labs/jvm/MainMethodLab.java",
+          "output": "Compilation successful\nThree main overloads compiled",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Inspect compiled signatures",
+      "question": "The compiled class file can contain several methods named `main`, each with a different descriptor, which makes the overloads real bytecode members rather than an IDE-only display. Why does `javap` help prove that all overloads survived compilation into the class file?",
+      "why": "Javap exposes the distinct compiled method descriptors stored in the class file.",
+      "why_te": "`javap` compiled class lo multiple `main` method descriptors ni chupistundi. IDE display matrame kaadani, overloads actual bytecode members ga class file lo store ayyayani verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "javap -classpath target/main-method-demo MainMethodLab",
+          "output": "public static void main(java.lang.String[]);\npublic static void main(int);\npublic static void main(java.lang.String);",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Launch the class normally",
+      "question": "The launcher invokes only the standard String-array main signature as the program entry point. The launcher chooses the standard String-array entry point rather than performing arbitrary overload resolution at startup. When `java MainMethodLab` runs even though `main(int)` and `main(String)` also exist, which overload should execute automatically and what rule explains that behavior?",
+      "why": "The launcher invokes only the standard String-array main signature as the program entry point.",
+      "why_te": "Normal `java MainMethodLab` launch appudu JVM launcher standard `main(String[])` signature ni matrame entry point ga use chestundi. Vere overloads legal ayina automatic ga select cheyyadu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "java -cp target/main-method-demo MainMethodLab",
+          "output": "standard main",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Separate legality from entry-point selection",
+      "question": "The existence of `main(int)` and `main(String)` proves that overloading is legal, but their absence from the launch output proves that startup selection follows a narrower rule. How should you explain this difference without incorrectly claiming that overloaded main methods are forbidden?",
+      "why": "Overloading is legal at compile time, while the launcher recognizes a specific entry-point signature at startup.",
+      "why_te": "Main overload cheyyadam legal; compiler accept chestundi. Kani launcher startup appudu standard String-array signature ni search chestundi. Kabatti overloaded methods forbidden kaavu, automatic entry points matrame kaavu.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "class": "MainMethodLab",
+          "entryPoint": "public static void main(String[] args)",
+          "availableOverloads": [
+            "main(int)",
+            "main(String)"
+          ],
+          "launcherRule": "Invoke standard String-array main"
+        }
+      }
+    },
+    {
+      "title": "Verify the project",
+      "question": "Because these overloads are a permanent educational addition to the JVM lab, the lesson should finish by verifying that the broader AeroTopo project still builds after the source change. Why is project-level verification important even for a small isolated learning file?",
+      "why": "Permanent repository changes should not silently break the real project's build or tests.",
+      "why_te": "Educational lab change small aina kuda repo lo permanent ga add avutundi. Project-level Maven test success ayithe new source existing AeroTopo build ni break cheyyaledani confirm chestundi.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "test",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] MainMethodLab compiled\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}
