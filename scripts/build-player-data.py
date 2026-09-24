@@ -145,7 +145,8 @@ def load_lessons() -> tuple[dict, list[dict]]:
             question = source["question"]
             lesson_label = f"Lesson {lesson['lesson_number']} · {question}"
 
-            for raw_step in lesson["steps"]:
+            for step_index, raw_step in enumerate(lesson["steps"]):
+                is_last_step = step_index == len(lesson["steps"]) - 1
                 software = raw_step.get("software", "intellij")
                 if software in FORBIDDEN_IDES:
                     raise SystemExit(
@@ -164,7 +165,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "projectImpact": lesson["project_impact"],
                         "title": raw_step["title"],
                         "why": raw_step["why"],
-                        "answer": lesson["answer"],
+                        "answer": lesson["answer"] if is_last_step else "",
                         "software": software,
                         "required_capability": raw_step.get("required_capability"),
                         "feature_available": raw_step.get("feature_available", True),
