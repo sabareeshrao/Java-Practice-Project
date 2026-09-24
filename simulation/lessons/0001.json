@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "lesson_number": 1,
+  "question_id": 1,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Java for enterprise development",
+  "answer": "Java is widely used for enterprise systems because the JVM is mature and portable, the language is statically typed, and the ecosystem provides strong tooling, testing, build automation, security, persistence, observability, concurrency, and web frameworks. Spring Boot and Maven make it practical to assemble large applications from well-supported components, while the JVM provides garbage collection, JIT compilation, diagnostics, and long-term runtime stability. The trade-offs are real: Java applications can use more memory than smaller runtimes, cold startup can be slower, framework stacks can become complex, dependency and build configuration require discipline, and teams must manage JVM, library, and framework upgrades. Modern Java reduces some historical verbosity, and newer runtime techniques can improve startup and footprint, but enterprise Java still rewards structured engineering over minimal setup. AeroTopo will use these strengths where they fit, while later lessons will expose the operational and architectural costs instead of hiding them.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo project in IntelliJ",
+      "why": "Question: What are the advantages and disadvantages of using Java for Enterprise-level development?\n\nStart by grounding the discussion in the project we will build. IntelliJ is the only IDE used in this course. The project is configured for Java 21 so later lessons can connect language features, tooling, testing, Spring, persistence, security, and operations to one cumulative codebase.",
+      "software": "intellij",
+      "required_capability": "open-project",
+      "feature_available": true,
+      "action": {
+        "action": "openProject",
+        "data": {
+          "project": {
+            "name": "AeroTopo",
+            "sdk": "Java 21",
+            "languageLevel": "21"
+          }
+        }
+      }
+    },
+    {
+      "title": "Inspect the Maven project descriptor",
+      "why": "The enterprise advantage is not just the Java syntax. A major strength is the surrounding ecosystem. Maven gives the project a reproducible dependency and build model, while Spring Boot supplies a mature application framework on top of the JVM.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "pom.xml"
+        }
+      }
+    },
+    {
+      "title": "Focus on the Spring Boot parent",
+      "why": "The Spring Boot parent centralizes compatible dependency and plugin defaults. This is an enterprise advantage because teams can standardize builds and reduce version mismatch, but it also illustrates a trade-off: framework conventions and dependency graphs add layers that developers must understand and maintain.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "pom.xml",
+            "line": 4
+          }
+        }
+      }
+    },
+    {
+      "title": "Inspect the starter dependencies",
+      "why": "The web, validation, and test starters demonstrate Java's broad enterprise ecosystem. Instead of implementing HTTP handling, validation, and test infrastructure from scratch, the project composes proven libraries. The cost is a larger dependency surface and more framework knowledge than a tiny standalone program requires.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "pom.xml",
+            "line": 18
+          }
+        }
+      }
+    },
+    {
+      "title": "Open IntelliJ External Libraries",
+      "why": "IntelliJ can resolve the JDK and Maven libraries directly into the project model. Strong IDE support is one of Java's practical advantages in large codebases: navigation, refactoring, debugging, inspections, dependency awareness, and test integration all work against the same typed project model.",
+      "software": "intellij",
+      "required_capability": "show-external-libraries",
+      "feature_available": true,
+      "action": {
+        "action": "showExternalLibraries",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect the Java application entry point",
+      "why": "The application starts from a normal Java main method and then hands control to Spring Boot. Java's explicit types and predictable entry points help large teams navigate and refactor systems safely, while Spring adds substantial runtime behavior that developers must learn rather than treating as magic.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Focus on the Spring Boot application declaration",
+      "why": "A single annotation activates a large amount of framework behavior through auto-configuration and component scanning. That productivity is valuable in enterprise work, but the abstraction can make startup behavior and configuration harder to understand unless the team learns what the framework is doing.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+            "line": 5
+          }
+        }
+      }
+    },
+    {
+      "title": "Open IntelliJ's integrated terminal",
+      "why": "Enterprise Java development is not limited to the editor. The same IntelliJ workspace can expose the terminal for JDK, Maven, Git, test, and diagnostic commands. We keep those development commands inside IntelliJ for this learning project rather than switching to another IDE.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Confirm the Java runtime from IntelliJ",
+      "why": "The JVM is both a strength and an operational responsibility. A managed runtime provides garbage collection, JIT compilation, diagnostics, threading, and portability, but production teams still need to understand runtime versions, memory behavior, startup characteristics, and tuning. Later lessons will make those costs visible instead of presenting Java as universally better.",
+      "software": "intellij",
+      "required_capability": "integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "title": "AeroTopo — 2308 Question Developer Simulation",
+  "subtitle": "One interview question per lesson, with cumulative developer actions and the real AeroTopo project as the full-code reference.",
+  "ide_policy": {
+    "primary_ide": "intellij",
+    "forbidden_ides": ["eclipse", "vscode"]
+  },
+  "books": [
+    {
+      "id": "book-1",
+      "title": "Java Foundations & Enterprise Context",
+      "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-001",
+      "title": "1: Java Foundations — Enterprise Context",
+      "subtitle": "Pilot chapter for the 2,308-question simulation.",
+      "lessons": ["lessons/0001.json"]
+    }
+  ]
+}
