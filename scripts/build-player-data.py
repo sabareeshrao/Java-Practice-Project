@@ -261,7 +261,24 @@ def build_seed_package() -> dict:
                 {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-test"},
             ]
         },
-        "spring": {},
+        "spring": {
+            "apps": [
+                {"name": "AeroTopo", "status": "Stopped", "profile": "default", "port": 8080}
+            ],
+            "beans": [
+                "aeroTopoApplication",
+                "projectService",
+                "projectController"
+            ],
+            "mappings": [
+                "GET /api/v1/projects",
+                "POST /api/v1/projects",
+                "GET /api/v1/gis/area"
+            ],
+            "properties": {
+                "spring.application.name": "aerotopo"
+            }
+        },
         "jpa": {},
         "git": {"branch": "main", "changes": [], "history": []},
         "database": {},

@@ -22,12 +22,13 @@
     {
       "id": "chapter-001",
       "title": "1: Java Foundations — Enterprise Context",
-      "subtitle": "Java enterprise context, ecosystem evolution, IntelliJ/Maven setup, and Spring Boot developer tooling.",
+      "subtitle": "Java enterprise context, ecosystem evolution, IntelliJ/Maven setup, Spring Boot development environment, and core Java developer tooling.",
       "lessons": [
         "lessons/0001.json",
         "lessons/0002.json",
         "lessons/0003.json",
-        "lessons/0004.json"
+        "lessons/0004.json",
+        "lessons/0005.json"
       ]
     }
   ],

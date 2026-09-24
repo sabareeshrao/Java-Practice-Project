@@ -28,3 +28,7 @@ Lesson 1 is the initial pilot used to validate the UI contract, explanation box,
 ## #Q1 info-box contract
 
 Each lesson keeps the original source interview question through `question_id`, while every simulator step supplies a different knowledge-bearing English `question` and a Telugu-in-English-font `why_te`. The player renders `Question → unique English step question → Telugu-in-English-font explanation`. Intermediate steps carry an empty answer and therefore show no Answer UI. The final step carries the complete English lesson `answer` and `answerBox: true`, which activates the existing global Answer box without creating a second explanation component.
+
+## Visible-state rule
+
+A simulator step must not intentionally open an empty software surface when the concept requires visible evidence. The downstream seed package includes minimal realistic state needed by early lessons; for example, the Spring seed state contains the AeroTopo application, representative beans, mappings, and application properties so Spring-tool-window lessons render meaningful content.
