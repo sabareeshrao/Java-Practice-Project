@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "lesson_number": 9,
+  "question_id": 9,
+  "mode": "demo",
+  "project_impact": "none",
+  "title": "A few useful IntelliJ shortcuts",
+  "info_language": "te-Latn",
+  "answer": "A few IntelliJ shortcuts I use on the default Windows/Linux keymap are: double Shift for Search Everywhere, Ctrl+Shift+N for Go to File, Ctrl+E for Recent Files, Ctrl+B for Go to Declaration, Alt+F7 for Find Usages, Ctrl+F12 for File Structure, Ctrl+Q for Quick Documentation, and Alt+Enter for intention actions and quick fixes. These shortcuts reduce mouse-driven navigation and help me move between files, symbols, usages, documentation, and fixes quickly. Shortcut keys can differ by operating system or custom keymap, so I verify the active IntelliJ keymap when working on a different setup.",
+  "steps": [
+    {
+      "title": "Use Search Everywhere — double Shift",
+      "question": "IntelliJ can search classes, files, symbols, settings, and actions from one entry point. Why is double Shift a useful first shortcut to remember when you do not know exactly where something lives?",
+      "why": "Search Everywhere reduces the need to navigate menus or project-tree folders first; you can start from what you remember about the target.",
+      "why_te": "Search Everywhere target ekkada undo exact ga teliyakapoina class, file, symbol, setting leda action peru nundi direct ga search start cheyyadaniki help chestundi.",
+      "software": "intellij",
+      "required_capability": "search-everywhere",
+      "feature_available": true,
+      "action": {
+        "action": "searchEverywhere",
+        "data": {
+          "shortcut": "Shift Shift",
+          "query": "AeroTopoApplication",
+          "results": [
+            "AeroTopoApplication",
+            "pom.xml",
+            "Project Structure"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Use Go to File — Ctrl+Shift+N",
+      "question": "When you know a filename but not its folder path, why is Ctrl+Shift+N faster than expanding several project-tree directories?",
+      "why": "Go to File searches by filename and lets you jump directly to the target without manually traversing the package tree.",
+      "why_te": "Filename teliste Ctrl+Shift+N tho folder tree manually expand cheyyakunda direct ga target file ki vellachu.",
+      "software": "intellij",
+      "required_capability": "goto-file",
+      "feature_available": true,
+      "action": {
+        "action": "gotoFile",
+        "data": {
+          "shortcut": "Ctrl+Shift+N",
+          "query": "pom.xml",
+          "results": [
+            "pom.xml"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Use Recent Files — Ctrl+E",
+      "question": "Developers often switch repeatedly among a small working set of files. Why does Ctrl+E become useful during that kind of back-and-forth work?",
+      "why": "Recent Files exposes the files you were just using, which is faster than searching for the same files again.",
+      "why_te": "Recent Files recent ga use chesina files ni immediate ga chupistundi. Same files ni malli project tree lo search cheyyalsina avasaram taggutundi.",
+      "software": "intellij",
+      "required_capability": "recent-files",
+      "feature_available": true,
+      "action": {
+        "action": "recentFiles",
+        "data": {
+          "shortcut": "Ctrl+E",
+          "files": [
+            "AeroTopoApplication.java",
+            "pom.xml"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Use Go to Declaration — Ctrl+B",
+      "question": "Reading Java code often requires jumping from a method call or type reference to where it is declared. Why is Ctrl+B a core navigation shortcut?",
+      "why": "Go to Declaration turns a symbol reference into direct source navigation, which is especially valuable in typed Java code.",
+      "why_te": "Ctrl+B symbol reference nundi declaration ki direct ga teesukeltundi. Typed Java code lo implementation context fast ga understand cheyyadaniki idi useful.",
+      "software": "intellij",
+      "required_capability": "goto-declaration",
+      "feature_available": true,
+      "action": {
+        "action": "gotoDeclaration",
+        "data": {
+          "shortcut": "Ctrl+B",
+          "symbol": "SpringApplication.run",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Use Find Usages — Alt+F7",
+      "question": "Before changing a class or method, why should you be able to see where it is used across the project?",
+      "why": "Find Usages helps estimate the impact of a change and is safer than assuming a symbol is referenced only in the file currently open.",
+      "why_te": "Class leda method marchadaniki mundu usages chusthe change impact entha undo telustundi. Current file matrame chusi assumption cheyyadam kanna idi safer.",
+      "software": "intellij",
+      "required_capability": "find-usages",
+      "feature_available": true,
+      "action": {
+        "action": "findUsages",
+        "data": {
+          "shortcut": "Alt+F7",
+          "symbol": "AeroTopoApplication",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+          "usages": [
+            "SpringApplication.run(AeroTopoApplication.class, args)"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Use File Structure — Ctrl+F12",
+      "question": "A long Java class can contain many methods and fields. Why is Ctrl+F12 useful when you want to move inside one file without scrolling through every line?",
+      "why": "File Structure lists the symbols inside the current file and lets you jump to the member you need.",
+      "why_te": "Ctrl+F12 current file lo methods, fields mariyu symbols list chupistundi. Long file ni full ga scroll cheyyakunda required member ki jump cheyyachu.",
+      "software": "intellij",
+      "required_capability": "show-file-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showFileStructure",
+        "data": {
+          "shortcut": "Ctrl+F12",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Use Quick Documentation — Ctrl+Q",
+      "question": "When you recognize a Java or framework symbol but need its API details, why is Ctrl+Q useful before leaving the editor for external documentation?",
+      "why": "Quick Documentation keeps API context beside the code and can answer many small questions without breaking the current navigation flow.",
+      "why_te": "Ctrl+Q API documentation ni editor pakkane chupistundi. Chinna API doubts kosam external browser ki switch avvalsina avasaram taggutundi.",
+      "software": "intellij",
+      "required_capability": "show-quick-documentation",
+      "feature_available": true,
+      "action": {
+        "action": "showQuickDocumentation",
+        "data": {
+          "shortcut": "Ctrl+Q",
+          "symbol": "SpringApplication",
+          "documentation": "Bootstrap and launch a Spring application from a Java main method."
+        }
+      }
+    },
+    {
+      "title": "Use intention actions — Alt+Enter",
+      "question": "IntelliJ can suggest imports, fixes, and context-aware transformations at the caret. Why is Alt+Enter one of the most useful shortcuts to know?",
+      "why": "Intention actions surface relevant fixes or improvements exactly where the IDE detects a problem or opportunity.",
+      "why_te": "Alt+Enter current caret context ki relevant fixes, imports leda improvements ni direct ga chupistundi. Problem unna place nundi action start cheyyachu.",
+      "software": "intellij",
+      "required_capability": "show-intention-actions",
+      "feature_available": true,
+      "action": {
+        "action": "showIntentionActions",
+        "data": {
+          "shortcut": "Alt+Enter",
+          "items": [
+            "Import class",
+            "Add exception to method signature",
+            "Replace with modern API",
+            "Refactor expression"
+          ]
+        }
+      }
+    }
+  ]
+}

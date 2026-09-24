@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "lesson_number": 7,
+  "question_id": 7,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "IDE used for the current AeroTopo project",
+  "info_language": "te-Latn",
+  "answer": "For my current AeroTopo project, I use IntelliJ IDEA as the primary IDE. The project is Java 21 with Maven and Spring Boot, so IntelliJ gives me Java-aware navigation and refactoring, dependency visibility, Spring support, Git integration, an integrated terminal, and test/build workflows in one place. I keep the project configuration in Maven and source control so the build is not locked to the IDE, but IntelliJ is the daily workspace I use to develop and inspect this project.",
+  "steps": [
+    {
+      "title": "Open the current AeroTopo workspace",
+      "question": "When an interviewer asks about your current project, the answer should connect the IDE to that project's real setup. Why does identifying AeroTopo inside IntelliJ make the response project-specific?",
+      "why": "It ties the IDE choice directly to the codebase being discussed rather than giving a generic tooling answer.",
+      "why_te": "Current project gurinchi answer istunnappudu AeroTopo ni IntelliJ lo direct ga identify cheyyadam valla response generic kaakunda project-specific ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-project",
+      "feature_available": true,
+      "action": {
+        "action": "openProject",
+        "data": {
+          "project": {
+            "name": "AeroTopo",
+            "sdk": "Java 21",
+            "languageLevel": "21"
+          }
+        }
+      }
+    },
+    {
+      "title": "Inspect the current project's Maven model",
+      "question": "A current-project IDE should expose the build configuration the team actually shares. Why is `pom.xml` important evidence when explaining how IntelliJ fits into AeroTopo?",
+      "why": "The Maven descriptor shows that IntelliJ is working with a project-owned build definition rather than replacing it with IDE-only settings.",
+      "why_te": "`pom.xml` project-owned build definition. IntelliJ danini use chestundi kani replace cheyyadu; kabatti build team andariki reproducible ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "pom.xml"
+        }
+      }
+    },
+    {
+      "title": "Inspect the current application class",
+      "question": "Why should an IDE used on a Spring Boot project make it easy to move from build configuration to the Java application entry point?",
+      "why": "Developers constantly move between configuration and source, so quick project navigation is part of the daily IDE workflow.",
+      "why_te": "Spring Boot project lo configuration nundi Java source ki frequent ga move avvali. IntelliJ quick navigation daily workflow ni fast ga chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Inspect resolved libraries",
+      "question": "The current project uses framework and test dependencies beyond the JDK. Why is IntelliJ's resolved External Libraries view useful during normal AeroTopo development?",
+      "why": "It gives immediate visibility into the JDK and Maven libraries available to the current project for navigation and troubleshooting.",
+      "why_te": "External Libraries view current project ki available JDK mariyu Maven libraries ni immediate ga chupistundi. Navigation mariyu troubleshooting lo idi useful.",
+      "software": "intellij",
+      "required_capability": "show-external-libraries",
+      "feature_available": true,
+      "action": {
+        "action": "showExternalLibraries",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect Git integration for the project",
+      "question": "A current project is developed collaboratively rather than as isolated files. Why is Git visibility inside IntelliJ part of the IDE workflow you use on AeroTopo?",
+      "why": "Source-control context makes changes, branches, diffs, and history available alongside the files being edited.",
+      "why_te": "Git integration valla changes, branches, diffs mariyu history source files tho kalisi same workspace lo kanipistayi.",
+      "software": "intellij",
+      "required_capability": "open-git-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openGitToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect Spring context for AeroTopo",
+      "question": "Why does the IDE choice matter more on a Spring Boot project once the application has beans, mappings, and framework-managed behavior?",
+      "why": "Spring-aware tooling helps connect ordinary Java classes to the framework relationships that exist around them at runtime.",
+      "why_te": "Spring-aware tooling ordinary Java classes ni beans, mappings mariyu framework-managed runtime relationships tho connect chestundi.",
+      "software": "intellij",
+      "required_capability": "open-spring-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openSpringToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Use the current project's terminal",
+      "question": "A project-specific IDE setup should still expose the real CLI environment. What does using IntelliJ's terminal add to the AeroTopo workflow?",
+      "why": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE.",
+      "why_te": "IntelliJ terminal same project context lo Java, Maven, Git mariyu diagnostic commands direct ga run cheyyadaniki help chestundi.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Prove the current-project setup",
+      "question": "How do you demonstrate that IntelliJ is not just opening AeroTopo visually but is correctly connected to the project's actual build and tests?",
+      "why": "A successful Maven test run confirms that the current IntelliJ workspace and the repository build agree on the project environment.",
+      "why_te": "Maven test success ayithe current IntelliJ workspace mariyu repository build project environment gurinchi same state lo unnayani confirm avutundi.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "test",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] AeroTopo tests passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}

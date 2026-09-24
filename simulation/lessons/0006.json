@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "lesson_number": 6,
+  "question_id": 6,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "The editor used for Java development",
+  "info_language": "te-Latn",
+  "answer": "I use IntelliJ IDEA as my Java development IDE. In this AeroTopo project it is configured around Java 21, Maven, Spring Boot, Git, the integrated terminal, and automated tests. I prefer it because it combines strong Java code intelligence, navigation, refactoring, debugging, build integration, and Spring-aware tooling in one workspace. I still rely on the underlying JDK, Maven, Git, and command-line tools, so the project remains reproducible outside the IDE as well.",
+  "steps": [
+    {
+      "title": "Open the Java project in IntelliJ",
+      "question": "An editor answer is stronger when it reflects the environment you actually use. Why does opening the real AeroTopo workspace make “I use IntelliJ IDEA” more meaningful than simply naming an editor?",
+      "why": "The project view shows that IntelliJ is the working environment around the actual Java codebase rather than an abstract preference.",
+      "why_te": "Real AeroTopo workspace ni IntelliJ lo open cheyyadam valla idi just preference kaadani, actual project development environment ani clear avutundi.",
+      "software": "intellij",
+      "required_capability": "open-project",
+      "feature_available": true,
+      "action": {
+        "action": "openProject",
+        "data": {
+          "project": {
+            "name": "AeroTopo",
+            "sdk": "Java 21",
+            "languageLevel": "21"
+          }
+        }
+      }
+    },
+    {
+      "title": "Confirm the project JDK",
+      "question": "A Java IDE must understand the same JDK level that the build expects. What does checking IntelliJ's Project SDK tell you about the editor's role in this Java 21 project?",
+      "why": "The project SDK connects editor analysis, compilation assumptions, language features, and navigation to the Java version used by the project.",
+      "why_te": "Project SDK check chesthe editor analysis, compilation assumptions, language features mariyu navigation Java 21 baseline tho align ayyi unnayani telustundi.",
+      "software": "intellij",
+      "required_capability": "show-project-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showProjectStructure",
+        "data": {
+          "sdk": "Java 21",
+          "jdkOpen": true
+        }
+      }
+    },
+    {
+      "title": "Open the application entry point",
+      "question": "An IDE should make source navigation fast in a growing Java project. Why is opening `AeroTopoApplication.java` a useful demonstration of IntelliJ as more than a plain text editor?",
+      "why": "IntelliJ understands Java source structure, packages, types, imports, and framework annotations instead of treating the file as unstructured text.",
+      "why_te": "IntelliJ Java source ni plain text laga kaakunda packages, types, imports mariyu annotations tho structured code ga understand chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Inspect Maven integration",
+      "question": "Java development usually depends on a build tool outside the editor itself. Why does having Maven integrated into IntelliJ matter when describing the editor you use?",
+      "why": "The IDE can expose the same Maven lifecycle and dependency model used by command-line builds and CI.",
+      "why_te": "IntelliJ Maven integration valla IDE lo kanipinche build lifecycle mariyu dependency model command line mariyu CI tho same source nundi vastayi.",
+      "software": "intellij",
+      "required_capability": "open-maven-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openMavenToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect Spring support",
+      "question": "A Spring Boot developer works with beans, mappings, configuration, and application lifecycle in addition to Java syntax. Why is Spring-aware tooling one reason to use IntelliJ for this project?",
+      "why": "Framework-aware views help connect Java classes to Spring runtime concepts and reduce navigation effort in a larger application.",
+      "why_te": "Spring-aware tooling Java classes ni beans, mappings mariyu runtime concepts tho connect chestundi. Large application lo navigation effort taggutundi.",
+      "software": "intellij",
+      "required_capability": "open-spring-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openSpringToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Open the integrated terminal",
+      "question": "Using an IDE should not hide the actual command-line tools behind proprietary buttons. Why is IntelliJ's integrated terminal important to your development workflow?",
+      "why": "It keeps Java, Maven, Git, and diagnostics accessible in the same workspace while preserving direct command-line verification.",
+      "why_te": "Integrated terminal valla Java, Maven, Git mariyu diagnostic commands same workspace lo direct ga run cheyyachu. IDE buttons meeda matrame depend avvalsina avasaram undadu.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Verify the workspace with Maven tests",
+      "question": "If IntelliJ is your development IDE, what practical evidence shows that the editor, JDK, build configuration, and project dependencies are working together correctly?",
+      "why": "Running the repository's Maven tests provides a reproducible final check that the IDE environment agrees with the real project build.",
+      "why_te": "Maven tests success ayithe IntelliJ environment, JDK, dependencies mariyu project build okate configuration meeda correct ga work chestunnayani practical proof vastundi.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "test",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}

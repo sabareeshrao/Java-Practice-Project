@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 1
+      "chapterEnd": 2
     }
   ],
   "chapters": [
@@ -29,6 +29,18 @@
         "lessons/0003.json",
         "lessons/0004.json",
         "lessons/0005.json"
+      ]
+    },
+    {
+      "id": "chapter-002",
+      "title": "2: IntelliJ IDEA — Editor Choice & Keyboard Productivity",
+      "subtitle": "Use IntelliJ as the project-standard Java IDE, understand why it fits the current project, and build fast navigation/refactoring habits with keyboard shortcuts.",
+      "lessons": [
+        "lessons/0006.json",
+        "lessons/0007.json",
+        "lessons/0008.json",
+        "lessons/0009.json",
+        "lessons/0010.json"
       ]
     }
   ],
