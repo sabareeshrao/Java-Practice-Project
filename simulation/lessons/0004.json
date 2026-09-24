@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 4,
+  "question_id": 4,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Preferred Spring Boot development environment and tool set",
+  "info_language": "te-Latn",
+  "answer": "My preferred Spring Boot development environment is IntelliJ IDEA with a supported JDK, Maven for build and dependency management, and Git for source control. I use IntelliJ's Spring-aware tooling for navigation and framework context, the integrated terminal for Java, Maven, Git, and diagnostics, and automated tests as the final verification gate. For API work I commonly use Postman, and depending on the project I may also use database tools, Docker, Jenkins or GitHub Actions, and Kubernetes. The important point is that the environment is reproducible and project-driven: the JDK baseline, Maven build, source control, and tests should behave consistently on a developer machine and in CI. For this AeroTopo learning project, IntelliJ IDEA is the only IDE used.",
+  "steps": [
+    {
+      "title": "Inspect the project SDK",
+      "question": "A Spring Boot project can behave differently when developers use different JDKs. Why should your preferred development environment begin with an explicit project SDK and language level instead of relying on a machine default?",
+      "why": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable.",
+      "why_te": "IDE build mariyu CI expect chese Java baseline tho match avvali. Project SDK mariyu language level explicit ga unte local compilation, language features mariyu diagnostics predictable ga untayi.",
+      "software": "intellij",
+      "required_capability": "show-project-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showProjectStructure",
+        "data": {
+          "sdk": "Java 21",
+          "jdkOpen": true
+        }
+      }
+    },
+    {
+      "title": "Inspect the Maven tool window",
+      "question": "A reliable Spring Boot setup needs a build that behaves the same outside the IDE. Why is Maven part of the preferred tool set even when IntelliJ can compile and run Java directly?",
+      "why": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce.",
+      "why_te": "Maven dependencies, plugins, lifecycle goals, tests mariyu packaging ni shared build model lo define chestundi. Local machine mariyu CI rendu ade build ni reproduce cheyyagalavu.",
+      "software": "intellij",
+      "required_capability": "open-maven-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openMavenToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect Spring support inside IntelliJ",
+      "question": "Spring Boot adds framework concepts such as beans, mappings, configuration, and application lifecycle. Why is Spring-aware tooling useful in the IDE instead of treating the project as only a collection of plain Java files?",
+      "why": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand.",
+      "why_te": "Spring-aware views Java source ni beans, mappings, configuration lanti Spring concepts tho connect chestayi. Dini valla navigation better avutundi mariyu growing application ni ardham chesukovadam easy avutundi.",
+      "software": "intellij",
+      "required_capability": "open-spring-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openSpringToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Inspect Git integration",
+      "question": "Enterprise Spring Boot development is collaborative, so source history and review matter as much as local editing. Why should Git integration be part of the normal development environment?",
+      "why": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace.",
+      "why_te": "Git traceable changes, branches, diffs, commits mariyu collaboration workflow istundi. IntelliJ integration valla ee source-control operations same project workspace lo visible ga untayi.",
+      "software": "intellij",
+      "required_capability": "open-git-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openGitToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Open the integrated terminal",
+      "question": "Even with rich IDE tooling, Java developers still need direct access to Java, Maven, Git, and diagnostic commands. Why is an integrated terminal part of a practical Spring Boot environment?",
+      "why": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools.",
+      "why_te": "Integrated terminal command-line verification ni same project context lo unchutundi. IDE behavior ni real Java, Maven mariyu Git commands tho compare cheyyadam easy avutundi.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Verify the active Java runtime",
+      "question": "An IDE can be configured for one JDK while its terminal resolves another from PATH. Why should a developer verify `java --version` as part of environment setup?",
+      "why": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference.",
+      "why_te": "Actual executable version ni check chesthe local version drift mundhe dorukutundi. Leka pothe compilation leda runtime difference confusing ga kanipinchachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    },
+    {
+      "title": "Verify Maven from the same workspace",
+      "question": "A preferred tool set is useful only when the build tool and JDK agree on the execution environment. What does `mvn -version` help you verify before running a Spring Boot build?",
+      "why": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed.",
+      "why_te": "Maven tana version tho paatu adi use chestunna Java runtime ni report chestundi. Dini valla toolchain mismatch build failure laga confuse avvakunda mundhe identify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "mvn -version",
+          "output": "Apache Maven 3.9.x\nJava version: 21"
+        }
+      }
+    },
+    {
+      "title": "Prove the environment with tests",
+      "question": "The final proof of a development environment is not that the IDE opens successfully; it is that the project builds and tests reproducibly. Why should your preferred Spring Boot tool set finish with a Maven test gate?",
+      "why": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects.",
+      "why_te": "Successful Maven test gate JDK, Maven model, dependencies mariyu test tooling repository expect chesina vidhamga kalisi work chestunnayi ani confirm chestundi.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "test",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}

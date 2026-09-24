@@ -11,6 +11,7 @@ QUESTIONS_FILE = ROOT / "interview" / "questions.json"
 COURSE_FILE = SIM_ROOT / "course.json"
 
 FORBIDDEN_IDES = {"eclipse", "vscode"}
+MAX_LESSONS_PER_CHAPTER = 5
 
 SEED_POM = """<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
@@ -122,6 +123,15 @@ def load_lessons() -> tuple[dict, list[dict]]:
     questions_doc = read_json(QUESTIONS_FILE)
     by_id = {int(item["id"]): item for item in questions_doc["questions"]}
     course_cfg = read_json(COURSE_FILE)
+    configured_max = int(course_cfg.get("max_lessons_per_chapter", MAX_LESSONS_PER_CHAPTER))
+    if configured_max != MAX_LESSONS_PER_CHAPTER:
+        raise SystemExit(f"max_lessons_per_chapter must remain {MAX_LESSONS_PER_CHAPTER}")
+    for chapter in course_cfg["chapters"]:
+        lesson_count = len(chapter.get("lessons", []))
+        if lesson_count > MAX_LESSONS_PER_CHAPTER:
+            raise SystemExit(
+                f"{chapter.get('id', 'chapter')} has {lesson_count} lessons; maximum is {MAX_LESSONS_PER_CHAPTER}"
+            )
 
     stages = []
     seen_question_ids: set[int] = set()
@@ -155,15 +165,14 @@ def load_lessons() -> tuple[dict, list[dict]]:
             for step_index, raw_step in enumerate(lesson["steps"]):
                 is_last_step = step_index == len(lesson["steps"]) - 1
                 step_question = str(raw_step.get("question") or "").strip()
-                step_question_te = str(raw_step.get("question_te") or "").strip()
                 step_why_te = str(raw_step.get("why_te") or "").strip()
                 if not step_question:
                     raise SystemExit(
-                        f"Question {question_id}, step {step_index + 1} is missing its unique #Q1 question"
+                        f"Question {question_id}, step {step_index + 1} is missing its unique English #Q1 question"
                     )
-                if not step_question_te or not step_why_te:
+                if not step_why_te:
                     raise SystemExit(
-                        f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font info text"
+                        f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font explanation text"
                     )
                 normalized_step_question = " ".join(step_question.casefold().split())
                 if normalized_step_question in seen_step_questions:
@@ -189,7 +198,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "lessonMode": lesson["mode"],
                         "projectImpact": lesson["project_impact"],
                         "title": raw_step["title"],
-                        "why": f"Question\n{step_question_te}\n\n{step_why_te}",
+                        "why": f"Question\n{step_question}\n\n{step_why_te}",
                         "answer": lesson_answer if is_last_step else "",
                         "answerBox": is_last_step,
                         "infoLanguage": info_language,
@@ -373,6 +382,7 @@ def main() -> None:
         "published_lesson_count": published_lesson_count,
         "published_step_count": published_step_count,
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
+        "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
     }
     (SITE / "simulation-summary.json").write_text(
         json.dumps(summary, indent=2) + "\n",

@@ -7,11 +7,13 @@ Rules:
 - There are 2,308 source interview questions.
 - The target is exactly one lesson per source question.
 - A lesson may contain multiple simulator steps.
+- A chapter may contain **at most 5 lessons**. A sixth lesson must start a new chapter; the build rejects chapters above this limit to avoid excessive sidebar scrolling.
 - Every simulator step must define its own unique `question` using the **#Q1** style: that step's question first teaches the relevant concept/context and then asks the learner to reason about it.
 - Step questions must be unique across the published curriculum. Duplicate step-question text is a build error.
-- Every lesson must set `info_language` to `te-Latn`. The generated info box uses Telugu written in English letters for the step question and explanation, while preserving the English source question in curriculum metadata.
-- Each step keeps English authoring fields (`question`, `why`) and must also provide display fields (`question_te`, `why_te`) in Telugu written with English characters.
-- The generated info box prepends `question_te` to `why_te`.
+- Every lesson must set `info_language` to `te-Latn` for the explanatory text.
+- Every step question remains **English** and follows the unique **#Q1** teaching-question style.
+- Each step must provide `why_te` in Telugu written with English characters; this is the explanatory/info text shown below the English question.
+- The generated info box renders `English question → Telugu-in-English-font explanation`.
 - The Answer UI is hidden on all intermediate steps and receives the complete lesson answer only on the final step. The interview Answer block remains English.
 - Question text is resolved from `interview/questions.json`; lesson JSON references the source question ID instead of rewriting it.
 - IntelliJ IDEA is the only IDE used for this project. Eclipse and VS Code are forbidden lesson software IDs.
@@ -25,4 +27,4 @@ Lesson 1 is the initial pilot used to validate the UI contract, explanation box,
 
 ## #Q1 info-box contract
 
-Each lesson keeps the original source interview question through `question_id`, while every simulator step supplies a different knowledge-bearing English authoring question plus `question_te`/`why_te` for display. The player renders `Question → unique Telugu-in-English-font step question → Telugu-in-English-font explanation`. Intermediate steps carry an empty answer and therefore show no Answer UI. The final step carries the complete English lesson `answer` and `answerBox: true`, which activates the existing global Answer box without creating a second explanation component.
+Each lesson keeps the original source interview question through `question_id`, while every simulator step supplies a different knowledge-bearing English `question` and a Telugu-in-English-font `why_te`. The player renders `Question → unique English step question → Telugu-in-English-font explanation`. Intermediate steps carry an empty answer and therefore show no Answer UI. The final step carries the complete English lesson `answer` and `answerBox: true`, which activates the existing global Answer box without creating a second explanation component.
