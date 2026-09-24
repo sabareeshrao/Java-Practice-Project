@@ -7,8 +7,9 @@ Rules:
 - There are 2,308 source interview questions.
 - The target is exactly one lesson per source question.
 - A lesson may contain multiple simulator steps.
-- Every lesson must define a `learning_question` using the **#Q1** style: the question itself first teaches the key concept/context and then asks the learner to reason about it.
-- The generated info box prepends that `learning_question` to the existing step explanation on every step.
+- Every simulator step must define its own unique `question` using the **#Q1** style: that step's question first teaches the relevant concept/context and then asks the learner to reason about it.
+- Step questions must be unique across the published curriculum. Duplicate step-question text is a build error.
+- The generated info box prepends that step's unique `question` to its existing explanation.
 - The Answer UI is hidden on all intermediate steps and receives the complete lesson answer only on the final step.
 - Question text is resolved from `interview/questions.json`; lesson JSON references the source question ID instead of rewriting it.
 - IntelliJ IDEA is the only IDE used for this project. Eclipse and VS Code are forbidden lesson software IDs.
@@ -21,4 +22,4 @@ Lesson 1 is the initial pilot used to validate the UI contract, explanation box,
 
 ## #Q1 info-box contract
 
-Each lesson keeps the original source question through `question_id`, but also supplies a knowledge-bearing `learning_question`. The player renders `Question → learning_question → existing step explanation`. Only the final step carries `answer`, which activates the existing global Answer box without creating a second explanation component.
+Each lesson keeps the original source interview question through `question_id`, while every simulator step supplies a different knowledge-bearing `question`. The player renders `Question → unique step question → existing step explanation`. Intermediate steps carry an empty answer and therefore show no Answer UI. The final step carries the complete lesson `answer` and `answerBox: true`, which activates the existing global Answer box without creating a second explanation component.

@@ -125,6 +125,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
 
     stages = []
     seen_question_ids: set[int] = set()
+    seen_step_questions: set[str] = set()
 
     for chapter in course_cfg["chapters"]:
         stage_steps = []
@@ -143,15 +144,25 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 raise SystemExit(f"Question {question_id} is missing from interview/questions.json")
 
             question = source["question"]
-            learning_question = str(lesson.get("learning_question") or "").strip()
-            if not learning_question:
-                raise SystemExit(
-                    f"Question {question_id} is missing learning_question; #Q1 requires the question itself to teach the concept before asking."
-                )
+            lesson_answer = str(lesson.get("answer") or "").strip()
+            if not lesson_answer:
+                raise SystemExit(f"Question {question_id} is missing the full lesson answer")
             lesson_label = f"Lesson {lesson['lesson_number']} · {question}"
 
             for step_index, raw_step in enumerate(lesson["steps"]):
                 is_last_step = step_index == len(lesson["steps"]) - 1
+                step_question = str(raw_step.get("question") or "").strip()
+                if not step_question:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} is missing its unique #Q1 question"
+                    )
+                normalized_step_question = " ".join(step_question.casefold().split())
+                if normalized_step_question in seen_step_questions:
+                    raise SystemExit(
+                        f"Duplicate step question detected at question {question_id}, step {step_index + 1}: {step_question}"
+                    )
+                seen_step_questions.add(normalized_step_question)
+
                 software = raw_step.get("software", "intellij")
                 if software in FORBIDDEN_IDES:
                     raise SystemExit(
@@ -169,8 +180,9 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "lessonMode": lesson["mode"],
                         "projectImpact": lesson["project_impact"],
                         "title": raw_step["title"],
-                        "why": f"Question\n{learning_question}\n\n{raw_step['why']}",
-                        "answer": lesson["answer"] if is_last_step else "",
+                        "why": f"Question\n{step_question}\n\n{raw_step['why']}",
+                        "answer": lesson_answer if is_last_step else "",
+                        "answerBox": is_last_step,
                         "software": software,
                         "required_capability": raw_step.get("required_capability"),
                         "feature_available": raw_step.get("feature_available", True),
