@@ -211,6 +211,25 @@ Why should you inspect pom.xml before changing a dependency version?
 
 Do not use one lesson-level question repeated across every step.
 
+### No boilerplate / no repeated filler
+
+Meeting the word-count floor must come from **step-specific technical knowledge**, not repeated padding.
+
+Forbidden patterns include repeatedly starting questions with phrases such as:
+
+- "In the cumulative AeroTopo learning project..."
+- "This step connects this concept to a visible IntelliJ workflow..."
+- any reusable sentence whose only purpose is to inflate the word count.
+
+If a question is too short:
+
+1. keep its useful original wording,
+2. add the step's actual concept, prerequisite, trade-off, or observable behavior,
+3. tie that context to the real file/tool/action being shown,
+4. keep the resulting question natural to read.
+
+Do not solve short questions by stamping the same introductory sentence across dozens of steps.
+
 ### Step 1 word-count floor
 
 Global Lesson 1 / Step 1 establishes the minimum detail level for every step question. Its current question is **39 words**, so:
@@ -387,6 +406,27 @@ For IntelliJ, typical existing actions include:
 
 If the exact action exists, reuse it.
 
+### Latest IntelliJ UI fidelity rule
+
+Before publishing any Java/IntelliJ lesson batch:
+
+1. inspect the latest **validated** IntelliJ feature catalog in the master,
+2. inspect the matching P0/P1 verification lessons when the feature has an upgraded UI,
+3. use the richest canonical software-owned surface that matches the lesson intent,
+4. preserve the same action contract when the master renderer itself has improved,
+5. when a more specific canonical action now exists, prefer it over an older generic surface.
+
+Examples:
+
+- prefer `showSpringBootDashboard`, `showSpringBeans`, or `showSpringMappings` over a vague generic Spring pane when the lesson intent is specific,
+- Search Everywhere / Go To payloads should include structured result objects when the current master supports them,
+- Find Usages should provide grouped source results for the real tool window,
+- Rename/refactoring demonstrations should use the real dialog/preview state instead of a generic card,
+- Maven lessons should populate lifecycle/dependency/profile context,
+- terminal steps should include session/shell metadata so the upgraded terminal UI is exercised.
+
+The downstream project must be pinned to the newest compatible master commit whose validation, packaging, and Pages workflows are green.
+
 If the lesson requires a UI/behavior that does not exist, do **not** fake it with unrelated actions. Upgrade the master simulator.
 
 ---
@@ -487,6 +527,29 @@ find semantic anchor
 ```
 
 ---
+
+## 15A. Continuity runtime hardening before deep scale
+
+The current master already replays earlier software actions to reconstruct cumulative state. Before the curriculum grows deeply into hundreds of lessons, harden the master runtime with three explicit features:
+
+1. **Project impact enforcement**
+   - build/permanent → mutation survives later lessons,
+   - temporary/demo → mutation is automatically reverted or excluded from future project state,
+   - inspect → no project mutation is allowed.
+
+2. **Semantic targeting**
+   - resolve file → class → method/symbol → statement/text fallback,
+   - prefer semantic anchors for long-lived edits,
+   - calculate the current location at replay time instead of depending on stale line numbers.
+
+3. **Checkpoint engine**
+   - checkpoint interval must be configurable (roughly every 50 lessons is a practical default),
+   - store permanent project state separately from transient UI state,
+   - load the newest checkpoint at or before the requested lesson, then replay only later actions.
+
+Also protect cumulative continuity from destructive reset actions such as `newProject` or whole-project replacement. Such resets require an explicit lesson intent and must not silently erase earlier permanent work.
+
+Do not claim these runtime features are active until they are actually implemented and validated in the master.
 
 ## 15. Checkpoint strategy for very large curricula
 

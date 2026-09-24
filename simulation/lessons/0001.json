@@ -38,7 +38,7 @@
           "file": "pom.xml"
         }
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the Maven project descriptor\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Maven gives Java teams a reproducible project model for dependencies, plugins, compilation, testing, and packaging. How does inspecting AeroTopo's `pom.xml` help you understand one of Java's major enterprise strengths and one of its complexity costs?",
+      "question": "The enterprise advantage is not just the Java syntax. A major strength is the surrounding ecosystem. Maven gives the project a reproducible dependency and build model, while Spring Boot supplies a mature application framework on top of the JVM. Maven gives Java teams a reproducible project model for dependencies, plugins, compilation, testing, and packaging. How does inspecting AeroTopo's `pom.xml` help you understand one of Java's major enterprise strengths and one of its complexity costs?",
       "why_te": "Enterprise advantage Java syntax matrame kaadu; surrounding ecosystem kuda mukhyam. Maven reproducible dependency mariyu build model istundi, Spring Boot JVM paina mature application framework ni andistundi."
     },
     {
@@ -57,7 +57,7 @@
           }
         }
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Focus on the Spring Boot parent\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Spring Boot's parent POM supplies coordinated dependency and plugin defaults so teams do not manually align every version. Why is this centralized version management useful in enterprise Java, and what dependency-management trade-off does it introduce?",
+      "question": "The Spring Boot parent centralizes compatible dependency and plugin defaults. This is an enterprise advantage because teams can standardize builds and reduce version mismatch, but it also illustrates a trade-off: framework conventions and dependency graphs add layers that developers must understand and maintain. Spring Boot's parent POM supplies coordinated dependency and plugin defaults so teams do not manually align every version. Why is this centralized version management useful in enterprise Java, and what dependency-management trade-off does it introduce?",
       "why_te": "Spring Boot parent compatible dependency mariyu plugin defaults ni centralize chestundi. Dini valla teams versions ni standardize cheyyagalavu; ade samayam lo framework conventions mariyu dependency graph ni ardham chesukovali."
     },
     {
@@ -89,7 +89,7 @@
         "action": "showExternalLibraries",
         "data": {}
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Open IntelliJ External Libraries\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A statically typed Java project lets IntelliJ index the JDK and resolved Maven libraries for navigation, refactoring, inspections, and debugging. Why does strong IDE awareness become especially valuable as an enterprise codebase grows?",
+      "question": "IntelliJ can resolve the JDK and Maven libraries directly into the project model. Strong IDE support is one of Java's practical advantages in large codebases: navigation, refactoring, debugging, inspections, dependency awareness, and test integration all work against the same typed project model. A statically typed Java project lets IntelliJ index the JDK and resolved Maven libraries for navigation, refactoring, inspections, and debugging. Why does strong IDE awareness become especially valuable as an enterprise codebase grows?",
       "why_te": "IntelliJ JDK mariyu Maven libraries ni direct ga project model lo resolve chestundi. Large codebase lo navigation, refactoring, debugging, inspections, dependency awareness mariyu tests same typed model meeda work cheyyadam strong advantage."
     },
     {
@@ -104,7 +104,7 @@
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the Java application entry point\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Java application still begins from an explicit entry point even when a framework controls most runtime behavior. What does AeroTopo's `main` method reveal about the boundary between ordinary Java execution and Spring Boot framework startup?",
+      "question": "The application starts from a normal Java main method and then hands control to Spring Boot. Java's explicit types and predictable entry points help large teams navigate and refactor systems safely, while Spring adds substantial runtime behavior that developers must learn rather than treating as magic. A Java application still begins from an explicit entry point even when a framework controls most runtime behavior. What does AeroTopo's `main` method reveal about the boundary between ordinary Java execution and Spring Boot framework startup?",
       "why_te": "Application normal Java `main` method nundi start ayi tarvata Spring Boot ki control istundi. Explicit Java entry point clear ga untundi; Spring runtime behavior additional abstraction ga vastundi."
     },
     {
@@ -123,7 +123,7 @@
           }
         }
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Focus on the Spring Boot application declaration\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. `@SpringBootApplication` enables component scanning and auto-configuration with a small amount of source code. Why does this improve enterprise productivity while also requiring developers to understand framework behavior that is not visible directly in the class?",
+      "question": "A single annotation activates a large amount of framework behavior through auto-configuration and component scanning. That productivity is valuable in enterprise work, but the abstraction can make startup behavior and configuration harder to understand unless the team learns what the framework is doing. `@SpringBootApplication` enables component scanning and auto-configuration with a small amount of source code. Why does this improve enterprise productivity while also requiring developers to understand framework behavior that is not visible directly in the class?",
       "why_te": "Oka annotation tho auto-configuration mariyu component scanning activate avutayi. Productivity ekkuva avutundi, kani framework em chestundo ardham kakapothe startup behavior mariyu configuration confusing ga anipinchachu."
     },
     {
@@ -136,7 +136,7 @@
         "action": "openIntegratedTerminal",
         "data": {}
       },
-      "question": "In the cumulative AeroTopo learning project, the \"Open IntelliJ's integrated terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Enterprise Java work includes build, Git, JVM, test, and diagnostic commands in addition to editing source files. Why is using IntelliJ's integrated terminal useful for keeping those workflows inside the same project context?",
+      "question": "Enterprise Java development is not limited to the editor. The same IntelliJ workspace can expose the terminal for JDK, Maven, Git, test, and diagnostic commands. We keep those development commands inside IntelliJ for this learning project rather than switching to another IDE. Enterprise Java work includes build, Git, JVM, test, and diagnostic commands in addition to editing source files. Why is using IntelliJ's integrated terminal useful for keeping those workflows inside the same project context?",
       "why_te": "Enterprise development editor tho matrame ayipodu. IntelliJ integrated terminal lo JDK, Maven, Git, test mariyu diagnostic commands run cheyyadam valla context switch taggipoyi same project lo workflow untundi."
     },
     {
@@ -148,6 +148,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "java --version",
           "output": "openjdk 21"
         }

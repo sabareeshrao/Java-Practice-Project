@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Start with IntelliJ IDEA",
-      "question": "In the cumulative AeroTopo learning project, the \"Start with IntelliJ IDEA\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Java developer's tool set should support the whole coding cycle rather than only text editing. Why is IntelliJ IDEA useful for navigation, refactoring, inspections, debugging, and Spring-aware development in one workspace?",
+      "question": "IntelliJ gives the project one place for source navigation, typed refactoring, inspections, debugging, framework awareness, build integration, and terminal access. A Java developer's tool set should support the whole coding cycle rather than only text editing. Why is IntelliJ IDEA useful for navigation, refactoring, inspections, debugging, and Spring-aware development in one workspace?",
       "why": "IntelliJ gives the project one place for source navigation, typed refactoring, inspections, debugging, framework awareness, build integration, and terminal access.",
       "why_te": "IntelliJ source navigation, typed refactoring, inspections, debugging, Spring awareness, build integration mariyu terminal access ni oka workspace lo istundi. Anduke Java development lo IDE central tool ga useful.",
       "software": "intellij",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Inspect the configured JDK",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the configured JDK\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. The IDE is only one part of the environment; Java itself is provided by the JDK. Why should a Java developer treat the configured JDK as a core development tool rather than an invisible machine dependency?",
+      "question": "The JDK controls the compiler, runtime, language level, diagnostics, and many command-line utilities, so its version directly affects what the project can build and run. The IDE is only one part of the environment; Java itself is provided by the JDK. Why should a Java developer treat the configured JDK as a core development tool rather than an invisible machine dependency?",
       "why": "The JDK controls the compiler, runtime, language level, diagnostics, and many command-line utilities, so its version directly affects what the project can build and run.",
       "why_te": "JDK compiler, runtime, language level, diagnostics mariyu command-line utilities ni provide chestundi. Daani version project build mariyu run behavior ni direct ga affect chestundi kabatti idi core development tool.",
       "software": "intellij",
@@ -45,7 +45,7 @@
     },
     {
       "title": "Use Maven for the build",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Maven for the build\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Enterprise Java projects depend on many libraries and repeatable lifecycle tasks. Why is Maven a core tool for dependency management, compilation, testing, and packaging instead of leaving those tasks to IDE-specific buttons?",
+      "question": "Maven makes the build portable and repeatable outside IntelliJ, which is essential for teammates and CI systems. Enterprise Java projects depend on many libraries and repeatable lifecycle tasks. Why is Maven a core tool for dependency management, compilation, testing, and packaging instead of leaving those tasks to IDE-specific buttons?",
       "why": "Maven makes the build portable and repeatable outside IntelliJ, which is essential for teammates and CI systems.",
       "why_te": "Maven build ni IntelliJ ki matrame depend kakunda portable mariyu repeatable ga chestundi. Dependencies, compile, test, package lifecycle teammates mariyu CI lo kuda same ga run avutayi.",
       "software": "intellij",
@@ -53,12 +53,45 @@
       "feature_available": true,
       "action": {
         "action": "openMavenToolWindow",
-        "data": {}
+        "data": {
+          "project": "AeroTopo",
+          "profile": "default",
+          "status": "Ready",
+          "plugins": [
+            "spring-boot",
+            "compiler",
+            "surefire",
+            "resources"
+          ],
+          "profiles": [
+            "default",
+            "dev",
+            "test",
+            "prod"
+          ],
+          "dependencies": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-web",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-validation",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-test",
+              "version": "3.5.16"
+            }
+          ]
+        }
       }
     },
     {
       "title": "Use Git for source control",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Git for source control\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Java development is collaborative and every production change needs traceability. What role does Git play beyond simply keeping a backup of source files?",
+      "question": "Git records change history, supports branches and diffs, and provides the basis for code review, collaboration, rollback, and CI triggers. Java development is collaborative and every production change needs traceability. What role does Git play beyond simply keeping a backup of source files?",
       "why": "Git records change history, supports branches and diffs, and provides the basis for code review, collaboration, rollback, and CI triggers.",
       "why_te": "Git source backup matrame kaadu. Change history, branches, diffs, collaboration, code review, rollback mariyu CI triggers ki base ga work chestundi.",
       "software": "intellij",
@@ -71,20 +104,70 @@
     },
     {
       "title": "Inspect Spring-aware tooling",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect Spring-aware tooling\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Spring Boot application contains framework concepts that are not obvious from individual Java files. Why is Spring-aware IDE tooling useful when working with beans, mappings, properties, and application lifecycle?",
+      "question": "Framework-aware tooling helps connect source code to the runtime concepts Spring creates around it, reducing the effort needed to navigate a large application. A Spring Boot application contains framework concepts that are not obvious from individual Java files. Why is Spring-aware IDE tooling useful when working with beans, mappings, properties, and application lifecycle?",
       "why": "Framework-aware tooling helps connect source code to the runtime concepts Spring creates around it, reducing the effort needed to navigate a large application.",
       "why_te": "Spring-aware tooling Java source ni beans, mappings, properties mariyu application lifecycle tho connect chestundi. Large application lo framework relationships ni fast ga understand cheyyadaniki idi help chestundi.",
       "software": "intellij",
-      "required_capability": "open-spring-tool-window",
+      "required_capability": "show-spring-beans",
       "feature_available": true,
       "action": {
-        "action": "openSpringToolWindow",
-        "data": {}
+        "action": "showSpringBeans",
+        "data": {
+          "beans": [
+            {
+              "name": "aeroTopoApplication",
+              "className": "com.aerotopo.AeroTopoApplication",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+              "line": 7
+            },
+            {
+              "name": "projectController",
+              "className": "com.aerotopo.api.ProjectController",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "name": "projectService",
+              "className": "com.aerotopo.service.ProjectService",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/service/ProjectService.java",
+              "line": 1
+            }
+          ],
+          "mappings": [
+            {
+              "method": "GET",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "listProjects()",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "POST",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "createProject(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "GET",
+              "path": "/api/v1/gis/area",
+              "controller": "ProjectController",
+              "handler": "area(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            }
+          ]
+        }
       }
     },
     {
       "title": "Use the integrated terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Use the integrated terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A graphical IDE does not replace command-line verification. Why should Java developers remain comfortable running build, Git, runtime, and diagnostic commands from a terminal?",
+      "question": "Direct command execution exposes the real tools used by CI and production troubleshooting and makes environment problems easier to diagnose. A graphical IDE does not replace command-line verification. Why should Java developers remain comfortable running build, Git, runtime, and diagnostic commands from a terminal?",
       "why": "Direct command execution exposes the real tools used by CI and production troubleshooting and makes environment problems easier to diagnose.",
       "why_te": "Terminal nundi direct commands run chesthe CI use chese real tools tho same behavior verify cheyyachu. Environment, build mariyu troubleshooting problems ni diagnose cheyyadam kuda easy avutundi.",
       "software": "intellij",
@@ -97,7 +180,7 @@
     },
     {
       "title": "Check Java from the terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Check Java from the terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. When several JDKs are installed, IDE configuration and shell PATH can disagree. What does checking `java --version` tell you about the actual Java tool being used in the current terminal?",
+      "question": "It confirms the runtime executable that commands will use, preventing version drift from being mistaken for a source-code problem. When several JDKs are installed, IDE configuration and shell PATH can disagree. What does checking `java --version` tell you about the actual Java tool being used in the current terminal?",
       "why": "It confirms the runtime executable that commands will use, preventing version drift from being mistaken for a source-code problem.",
       "why_te": "`java --version` current terminal actual ga ye Java runtime use chestundo confirm chestundi. Version drift ni source-code issue laga confuse avvakunda help chestundi.",
       "software": "intellij",
@@ -106,6 +189,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "java --version",
           "output": "openjdk 21"
         }
@@ -113,7 +200,7 @@
     },
     {
       "title": "Check Maven from the terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Check Maven from the terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. The Maven tool window is convenient, but the command-line build is what CI commonly executes. Why is `mvn -version` a useful toolchain check for a Java developer?",
+      "question": "It verifies both Maven and the Java runtime Maven is using, which helps expose local build-tool mismatches early. The Maven tool window is convenient, but the command-line build is what CI commonly executes. Why is `mvn -version` a useful toolchain check for a Java developer?",
       "why": "It verifies both Maven and the Java runtime Maven is using, which helps expose local build-tool mismatches early.",
       "why_te": "`mvn -version` Maven version mariyu Maven use chestunna Java runtime renditini chupistundi. Local build-tool mismatch ni mundhe identify cheyyadaniki idi useful.",
       "software": "intellij",
@@ -122,6 +209,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "mvn -version",
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
@@ -129,7 +220,7 @@
     },
     {
       "title": "Check Git from the terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Check Git from the terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Source control operations may be performed through IntelliJ or from the command line. Why is checking `git --version` useful when describing a reproducible Java development tool set?",
+      "question": "It proves the underlying Git client is present independently of the IDE integration, which matters for scripts, hooks, and CI-style workflows. Source control operations may be performed through IntelliJ or from the command line. Why is checking `git --version` useful when describing a reproducible Java development tool set?",
       "why": "It proves the underlying Git client is present independently of the IDE integration, which matters for scripts, hooks, and CI-style workflows.",
       "why_te": "`git --version` underlying Git client IDE integration ki separate ga available undani confirm chestundi. Scripts, hooks mariyu CI-style workflows lo idi important.",
       "software": "intellij",
@@ -138,6 +229,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "git --version",
           "output": "git version 2.x"
         }
@@ -145,7 +240,7 @@
     },
     {
       "title": "Finish with automated verification",
-      "question": "In the cumulative AeroTopo learning project, the \"Finish with automated verification\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A long list of tools is not valuable unless they work together consistently. Why should a Java developer prove the environment with the project's automated test command before considering the toolchain ready?",
+      "question": "The test gate exercises the JDK, Maven build, dependencies, compiled code, and test framework together and therefore provides evidence that the development toolchain is coherent. A long list of tools is not valuable unless they work together consistently. Why should a Java developer prove the environment with the project's automated test command before considering the toolchain ready?",
       "why": "The test gate exercises the JDK, Maven build, dependencies, compiled code, and test framework together and therefore provides evidence that the development toolchain is coherent.",
       "why_te": "Automated test gate JDK, Maven build, dependencies, compiled code mariyu test framework anni kalisi correct ga work chestunnayi ani prove chestundi. Tool list kanna ee reproducible verification mukhyam.",
       "software": "intellij",

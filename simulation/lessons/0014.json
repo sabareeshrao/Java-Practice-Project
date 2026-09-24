@@ -133,6 +133,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "java --version",
           "output": "openjdk 21"
         }

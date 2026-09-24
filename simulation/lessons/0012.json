@@ -41,7 +41,7 @@
     },
     {
       "title": "Open the build terminal before compilation",
-      "question": "In the cumulative AeroTopo learning project, the \"Open the build terminal before compilation\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. The platform-independent execution path becomes clearer when compilation and runtime are viewed as separate stages instead of one IDE button. Why should you use the integrated terminal to observe how AeroTopo moves from Java source toward JVM-executable bytecode?",
+      "question": "The terminal exposes compilation and runtime as separate stages rather than hiding them behind one IDE control. The platform-independent execution path becomes clearer when compilation and runtime are viewed as separate stages instead of one IDE button. Why should you use the integrated terminal to observe how AeroTopo moves from Java source toward JVM-executable bytecode?",
       "why": "The terminal exposes compilation and runtime as separate stages rather than hiding them behind one IDE control.",
       "why_te": "Terminal commands compile stage mariyu runtime stage ni separate ga visible chestayi. IDE abstraction venaka jarige process ni direct ga observe cheyyadaniki idi useful.",
       "software": "intellij",
@@ -63,6 +63,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "mvn -B -ntp -DskipTests compile",
           "output": "[INFO] Compiling AeroTopo sources for Java 21\n[INFO] BUILD SUCCESS\n[INFO] Bytecode written under target/classes"
         }
@@ -70,7 +74,7 @@
     },
     {
       "title": "Inspect the runtime classpath",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the runtime classpath\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. A JVM cannot execute bytecode in isolation when an enterprise application depends on framework and library classes. Why is the runtime classpath part of the platform-independence story even though the bytecode format itself is designed to be portable?",
+      "question": "The JVM must still resolve all required classes and dependencies at runtime. A JVM cannot execute bytecode in isolation when an enterprise application depends on framework and library classes. Why is the runtime classpath part of the platform-independence story even though the bytecode format itself is designed to be portable?",
       "why": "The JVM must still resolve all required classes and dependencies at runtime.",
       "why_te": "Portable bytecode ki required classes mariyu dependencies runtime lo resolve avvali. Classpath JVM ki application classes mariyu libraries ekkada unnayo cheptundi; missing dependency unte platform independence alone program ni run cheyyaledu.",
       "software": "intellij",
@@ -122,6 +126,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "java --version",
           "output": "openjdk 21"
         }

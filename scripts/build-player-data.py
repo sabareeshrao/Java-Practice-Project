@@ -12,6 +12,11 @@ COURSE_FILE = SIM_ROOT / "course.json"
 
 FORBIDDEN_IDES = {"eclipse", "vscode"}
 MAX_LESSONS_PER_CHAPTER = 5
+FORBIDDEN_QUESTION_BOILERPLATE = (
+    "in the cumulative aerotopo learning project",
+    "connects this concept to a visible intellij workflow",
+    "instead of reducing it to a short interview phrase",
+)
 
 SEED_POM = """<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
@@ -116,14 +121,23 @@ def build_tree(files: dict[str, dict]) -> list[dict]:
 
             existing = next((node for node in nodes if node.get("path") == current_path), None)
             if existing is None:
+                package_root = current_path.startswith("src/main/java/") or current_path.startswith("src/test/java/")
                 existing = {
                     "name": part,
                     "path": current_path,
-                    "type": "file" if last else "folder",
+                    "type": "file" if last else ("package" if package_root else "folder"),
                 }
                 if last:
                     existing["language"] = files[path]["language"]
                 else:
+                    if current_path == "src/main/java":
+                        existing["rootKind"] = "source"
+                    elif current_path == "src/test/java":
+                        existing["rootKind"] = "test"
+                    elif current_path == "src/main/resources":
+                        existing["rootKind"] = "resource"
+                    elif current_path in {"target", "build"}:
+                        existing["generated"] = True
                     existing["open"] = len(acc) <= 3
                     existing["children"] = []
                 nodes.append(existing)
@@ -197,6 +211,12 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font explanation text"
                     )
                 normalized_step_question = " ".join(step_question.casefold().split())
+                for forbidden_phrase in FORBIDDEN_QUESTION_BOILERPLATE:
+                    if forbidden_phrase in normalized_step_question:
+                        raise SystemExit(
+                            f"Question boilerplate is forbidden at question {question_id}, step {step_index + 1}: "
+                            f"{forbidden_phrase!r}. Add step-specific technical context instead."
+                        )
                 if normalized_step_question in seen_step_questions:
                     raise SystemExit(
                         f"Duplicate step question detected at question {question_id}, step {step_index + 1}: {step_question}"
@@ -277,25 +297,70 @@ def build_seed_package() -> dict:
         "breakpoints": [],
         "runConfigurations": [],
         "maven": {
+            "project": "AeroTopo",
+            "profile": "default",
+            "status": "Ready",
+            "plugins": ["spring-boot", "compiler", "surefire", "resources"],
+            "profiles": ["default", "dev", "test", "prod"],
             "dependencies": [
-                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-web"},
-                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-validation"},
-                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-test"},
+                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-web", "version": "3.5.16"},
+                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-validation", "version": "3.5.16"},
+                {"groupId": "org.springframework.boot", "artifactId": "spring-boot-starter-test", "version": "3.5.16"},
             ]
         },
         "spring": {
+            "activeProfile": "default",
             "apps": [
-                {"name": "AeroTopo", "status": "Stopped", "profile": "default", "port": 8080}
+                {"name": "AeroTopoApplication", "status": "Running", "profile": "default", "port": 8080}
             ],
             "beans": [
-                "aeroTopoApplication",
-                "projectService",
-                "projectController"
+                {
+                    "name": "aeroTopoApplication",
+                    "className": "com.aerotopo.AeroTopoApplication",
+                    "scope": "singleton",
+                    "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+                    "line": 7,
+                },
+                {
+                    "name": "projectService",
+                    "className": "com.aerotopo.service.ProjectService",
+                    "scope": "singleton",
+                    "file": "src/main/java/com/aerotopo/service/ProjectService.java",
+                    "line": 1,
+                },
+                {
+                    "name": "projectController",
+                    "className": "com.aerotopo.api.ProjectController",
+                    "scope": "singleton",
+                    "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+                    "line": 1,
+                },
             ],
             "mappings": [
-                "GET /api/v1/projects",
-                "POST /api/v1/projects",
-                "GET /api/v1/gis/area"
+                {
+                    "method": "GET",
+                    "path": "/api/v1/projects",
+                    "controller": "ProjectController",
+                    "handler": "listProjects()",
+                    "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+                    "line": 1,
+                },
+                {
+                    "method": "POST",
+                    "path": "/api/v1/projects",
+                    "controller": "ProjectController",
+                    "handler": "createProject(...)",
+                    "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+                    "line": 1,
+                },
+                {
+                    "method": "GET",
+                    "path": "/api/v1/gis/area",
+                    "controller": "ProjectController",
+                    "handler": "area(...)",
+                    "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+                    "line": 1,
+                },
             ],
             "properties": {
                 "spring.application.name": "aerotopo"
@@ -306,6 +371,11 @@ def build_seed_package() -> dict:
         "database": {},
         "tests": {},
         "terminal": "",
+        "terminalSessions": [
+            {"id": "powershell-1", "name": "PowerShell", "shell": "PowerShell"}
+        ],
+        "activeTerminalSession": "powershell-1",
+        "breadcrumbsVisible": True,
         "console": "",
         "visibleFeatures": [],
         "initialFile": "pom.xml",
@@ -423,6 +493,7 @@ def main() -> None:
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
         "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
         "min_step_question_words": minimum_step_question_words(),
+        "intellij_ui_policy": "latest validated master feature contracts; prefer rich software-owned surfaces over generic fallbacks",
     }
     (SITE / "simulation-summary.json").write_text(
         json.dumps(summary, indent=2) + "\n",

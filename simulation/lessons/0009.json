@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Use Search Everywhere — double Shift",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Search Everywhere — double Shift\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. IntelliJ can search classes, files, symbols, settings, and actions from one entry point. Why is double Shift a useful first shortcut to remember when you do not know exactly where something lives?",
+      "question": "Search Everywhere reduces the need to navigate menus or project-tree folders first; you can start from what you remember about the target. IntelliJ can search classes, files, symbols, settings, and actions from one entry point. Why is double Shift a useful first shortcut to remember when you do not know exactly where something lives?",
       "why": "Search Everywhere reduces the need to navigate menus or project-tree folders first; you can start from what you remember about the target.",
       "why_te": "Search Everywhere target ekkada undo exact ga teliyakapoina class, file, symbol, setting leda action peru nundi direct ga search start cheyyadaniki help chestundi.",
       "software": "intellij",
@@ -22,16 +22,34 @@
           "shortcut": "Shift Shift",
           "query": "AeroTopoApplication",
           "results": [
-            "AeroTopoApplication",
-            "pom.xml",
-            "Project Structure"
+            {
+              "kind": "Action",
+              "name": "AeroTopoApplication",
+              "path": "",
+              "line": 1,
+              "detail": "AeroTopo"
+            },
+            {
+              "kind": "File",
+              "name": "pom.xml",
+              "path": "pom.xml",
+              "line": 1,
+              "detail": "AeroTopo"
+            },
+            {
+              "kind": "Action",
+              "name": "Project Structure",
+              "path": "",
+              "line": 1,
+              "detail": "AeroTopo"
+            }
           ]
         }
       }
     },
     {
       "title": "Use Go to File — Ctrl+Shift+N",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Go to File — Ctrl+Shift+N\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. When you know a filename but not its folder path, why is Ctrl+Shift+N faster than expanding several project-tree directories?",
+      "question": "Go to File searches by filename and lets you jump directly to the target without manually traversing the package tree. When you know a filename but not its folder path, why is Ctrl+Shift+N faster than expanding several project-tree directories?",
       "why": "Go to File searches by filename and lets you jump directly to the target without manually traversing the package tree.",
       "why_te": "Filename teliste Ctrl+Shift+N tho folder tree manually expand cheyyakunda direct ga target file ki vellachu.",
       "software": "intellij",
@@ -43,14 +61,20 @@
           "shortcut": "Ctrl+Shift+N",
           "query": "pom.xml",
           "results": [
-            "pom.xml"
+            {
+              "kind": "File",
+              "name": "pom.xml",
+              "path": "pom.xml",
+              "line": 1,
+              "detail": "Project root"
+            }
           ]
         }
       }
     },
     {
       "title": "Use Recent Files — Ctrl+E",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Recent Files — Ctrl+E\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Developers often switch repeatedly among a small working set of files. Why does Ctrl+E become useful during that kind of back-and-forth work?",
+      "question": "Recent Files exposes the files you were just using, which is faster than searching for the same files again. Developers often switch repeatedly among a small working set of files. Why does Ctrl+E become useful during that kind of back-and-forth work?",
       "why": "Recent Files exposes the files you were just using, which is faster than searching for the same files again.",
       "why_te": "Recent Files recent ga use chesina files ni immediate ga chupistundi. Same files ni malli project tree lo search cheyyalsina avasaram taggutundi.",
       "software": "intellij",
@@ -69,7 +93,7 @@
     },
     {
       "title": "Use Go to Declaration — Ctrl+B",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Go to Declaration — Ctrl+B\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Reading Java code often requires jumping from a method call or type reference to where it is declared. Why is Ctrl+B a core navigation shortcut?",
+      "question": "Go to Declaration turns a symbol reference into direct source navigation, which is especially valuable in typed Java code. Reading Java code often requires jumping from a method call or type reference to where it is declared. Why is Ctrl+B a core navigation shortcut?",
       "why": "Go to Declaration turns a symbol reference into direct source navigation, which is especially valuable in typed Java code.",
       "why_te": "Ctrl+B symbol reference nundi declaration ki direct ga teesukeltundi. Typed Java code lo implementation context fast ga understand cheyyadaniki idi useful.",
       "software": "intellij",
@@ -86,7 +110,7 @@
     },
     {
       "title": "Use Find Usages — Alt+F7",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Find Usages — Alt+F7\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Before changing a class or method, why should you be able to see where it is used across the project?",
+      "question": "Find Usages helps estimate the impact of a change and is safer than assuming a symbol is referenced only in the file currently open. Before changing a class or method, why should you be able to see where it is used across the project?",
       "why": "Find Usages helps estimate the impact of a change and is safer than assuming a symbol is referenced only in the file currently open.",
       "why_te": "Class leda method marchadaniki mundu usages chusthe change impact entha undo telustundi. Current file matrame chusi assumption cheyyadam kanna idi safer.",
       "software": "intellij",
@@ -98,15 +122,19 @@
           "shortcut": "Alt+F7",
           "symbol": "AeroTopoApplication",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
-          "usages": [
-            "SpringApplication.run(AeroTopoApplication.class, args)"
+          "results": [
+            {
+              "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+              "line": 1,
+              "preview": "SpringApplication.run(AeroTopoApplication.class, args)"
+            }
           ]
         }
       }
     },
     {
       "title": "Use File Structure — Ctrl+F12",
-      "question": "In the cumulative AeroTopo learning project, the \"Use File Structure — Ctrl+F12\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A long Java class can contain many methods and fields. Why is Ctrl+F12 useful when you want to move inside one file without scrolling through every line?",
+      "question": "File Structure lists the symbols inside the current file and lets you jump to the member you need. A long Java class can contain many methods and fields. Why is Ctrl+F12 useful when you want to move inside one file without scrolling through every line?",
       "why": "File Structure lists the symbols inside the current file and lets you jump to the member you need.",
       "why_te": "Ctrl+F12 current file lo methods, fields mariyu symbols list chupistundi. Long file ni full ga scroll cheyyakunda required member ki jump cheyyachu.",
       "software": "intellij",
@@ -122,7 +150,7 @@
     },
     {
       "title": "Use Quick Documentation — Ctrl+Q",
-      "question": "In the cumulative AeroTopo learning project, the \"Use Quick Documentation — Ctrl+Q\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. When you recognize a Java or framework symbol but need its API details, why is Ctrl+Q useful before leaving the editor for external documentation?",
+      "question": "Quick Documentation keeps API context beside the code and can answer many small questions without breaking the current navigation flow. When you recognize a Java or framework symbol but need its API details, why is Ctrl+Q useful before leaving the editor for external documentation?",
       "why": "Quick Documentation keeps API context beside the code and can answer many small questions without breaking the current navigation flow.",
       "why_te": "Ctrl+Q API documentation ni editor pakkane chupistundi. Chinna API doubts kosam external browser ki switch avvalsina avasaram taggutundi.",
       "software": "intellij",
@@ -139,7 +167,7 @@
     },
     {
       "title": "Use intention actions — Alt+Enter",
-      "question": "In the cumulative AeroTopo learning project, the \"Use intention actions — Alt+Enter\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. IntelliJ can suggest imports, fixes, and context-aware transformations at the caret. Why is Alt+Enter one of the most useful shortcuts to know?",
+      "question": "Intention actions surface relevant fixes or improvements exactly where the IDE detects a problem or opportunity. IntelliJ can suggest imports, fixes, and context-aware transformations at the caret. Why is Alt+Enter one of the most useful shortcuts to know? The Use intention actions — Alt+Enter action exposes the relevant IntelliJ state directly, so the question stays tied to observable project behavior rather than generic interview wording.",
       "why": "Intention actions surface relevant fixes or improvements exactly where the IDE detects a problem or opportunity.",
       "why_te": "Alt+Enter current caret context ki relevant fixes, imports leda improvements ni direct ga chupistundi. Problem unna place nundi action start cheyyachu.",
       "software": "intellij",

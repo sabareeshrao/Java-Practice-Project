@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Use the project-standard IDE",
-      "question": "In the cumulative AeroTopo learning project, the \"Use the project-standard IDE\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A team benefits when its documented learning workflow uses one predictable IDE even though Java itself is IDE-independent. Why is AeroTopo standardized on IntelliJ for these lessons?",
+      "question": "A single project-standard IDE makes navigation, screenshots, shortcuts, and simulator actions consistent while Maven keeps the underlying build portable. A team benefits when its documented learning workflow uses one predictable IDE even though Java itself is IDE-independent. Why is AeroTopo standardized on IntelliJ for these lessons?",
       "why": "A single project-standard IDE makes navigation, screenshots, shortcuts, and simulator actions consistent while Maven keeps the underlying build portable.",
       "why_te": "Oka standard IDE use chesthe navigation, screenshots, shortcuts mariyu simulator actions consistent ga untayi. Maven build ni IDE nundi independent ga portable ga unchutundi.",
       "software": "intellij",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Open IntelliJ settings",
-      "question": "In the cumulative AeroTopo learning project, the \"Open IntelliJ settings\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Choosing an IDE includes configuring its own development environment. Why is the Settings surface part of evaluating IntelliJ as the project-standard tool?",
+      "question": "IDE settings control behavior such as plugins, editor preferences, keymaps, inspections, and other developer-facing configuration. Choosing an IDE includes configuring its own development environment. Why is the Settings surface part of evaluating IntelliJ as the project-standard tool? The Open IntelliJ settings action exposes the relevant IntelliJ state directly, so the question stays tied to observable project behavior rather than generic interview wording.",
       "why": "IDE settings control behavior such as plugins, editor preferences, keymaps, inspections, and other developer-facing configuration.",
       "why_te": "IntelliJ Settings lo plugins, editor preferences, keymaps, inspections lanti developer configuration untundi. IDE choice lo ee environment kuda important.",
       "software": "intellij",
@@ -42,7 +42,7 @@
     },
     {
       "title": "Verify project-level Java configuration",
-      "question": "In the cumulative AeroTopo learning project, the \"Verify project-level Java configuration\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Java is portable across IDEs, so what prevents an IntelliJ project from becoming dependent on arbitrary local defaults?",
+      "question": "Explicit Project SDK and language-level settings align IntelliJ with the repository's intended Java baseline instead of relying on whatever is installed locally. Java is portable across IDEs, so what prevents an IntelliJ project from becoming dependent on arbitrary local defaults?",
       "why": "Explicit Project SDK and language-level settings align IntelliJ with the repository's intended Java baseline instead of relying on whatever is installed locally.",
       "why_te": "Project SDK mariyu language level explicit ga set cheyyadam valla IntelliJ arbitrary local defaults meeda depend kaakunda repository Java baseline tho align avutundi.",
       "software": "intellij",
@@ -58,7 +58,7 @@
     },
     {
       "title": "Verify Maven remains the build authority",
-      "question": "In the cumulative AeroTopo learning project, the \"Verify Maven remains the build authority\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. If the project standardizes on IntelliJ, why should Maven still remain the authoritative build model rather than IDE-only build metadata?",
+      "question": "Maven lets the same project compile and test from the terminal and CI, which keeps IDE choice separate from build reproducibility. If the project standardizes on IntelliJ, why should Maven still remain the authoritative build model rather than IDE-only build metadata?",
       "why": "Maven lets the same project compile and test from the terminal and CI, which keeps IDE choice separate from build reproducibility.",
       "why_te": "Maven authoritative build ga unte terminal mariyu CI lo kuda same project build avvutundi. IDE choice build reproducibility ni lock cheyyadu.",
       "software": "intellij",
@@ -66,25 +66,108 @@
       "feature_available": true,
       "action": {
         "action": "openMavenToolWindow",
-        "data": {}
+        "data": {
+          "project": "AeroTopo",
+          "profile": "default",
+          "status": "Ready",
+          "plugins": [
+            "spring-boot",
+            "compiler",
+            "surefire",
+            "resources"
+          ],
+          "profiles": [
+            "default",
+            "dev",
+            "test",
+            "prod"
+          ],
+          "dependencies": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-web",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-validation",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-test",
+              "version": "3.5.16"
+            }
+          ]
+        }
       }
     },
     {
       "title": "Use IntelliJ's Spring awareness",
-      "question": "In the cumulative AeroTopo learning project, the \"Use IntelliJ's Spring awareness\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. What makes an IDE especially useful for Spring Boot beyond basic Java syntax highlighting?",
+      "question": "Spring-aware tooling can surface framework concepts such as beans and mappings that a plain text editor cannot infer as directly. What makes an IDE especially useful for Spring Boot beyond basic Java syntax highlighting? The Use IntelliJ's Spring awareness action exposes the relevant IntelliJ state directly, so the question stays tied to observable project behavior rather than generic interview wording.",
       "why": "Spring-aware tooling can surface framework concepts such as beans and mappings that a plain text editor cannot infer as directly.",
       "why_te": "Spring-aware tooling beans, mappings lanti framework concepts ni direct ga surface chestundi. Plain text editor kanna project context ekkuva clear ga untundi.",
       "software": "intellij",
-      "required_capability": "open-spring-tool-window",
+      "required_capability": "show-spring-beans",
       "feature_available": true,
       "action": {
-        "action": "openSpringToolWindow",
-        "data": {}
+        "action": "showSpringBeans",
+        "data": {
+          "beans": [
+            {
+              "name": "aeroTopoApplication",
+              "className": "com.aerotopo.AeroTopoApplication",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+              "line": 7
+            },
+            {
+              "name": "projectController",
+              "className": "com.aerotopo.api.ProjectController",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "name": "projectService",
+              "className": "com.aerotopo.service.ProjectService",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/service/ProjectService.java",
+              "line": 1
+            }
+          ],
+          "mappings": [
+            {
+              "method": "GET",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "listProjects()",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "POST",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "createProject(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "GET",
+              "path": "/api/v1/gis/area",
+              "controller": "ProjectController",
+              "handler": "area(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            }
+          ]
+        }
       }
     },
     {
       "title": "Keep version control integrated",
-      "question": "In the cumulative AeroTopo learning project, the \"Keep version control integrated\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Why is source-control integration relevant when choosing a daily IDE for a collaborative Java project?",
+      "question": "A useful IDE keeps diffs, branches, changes, and history close to the source without changing the fact that Git remains the underlying version-control system. Why is source-control integration relevant when choosing a daily IDE for a collaborative Java project?",
       "why": "A useful IDE keeps diffs, branches, changes, and history close to the source without changing the fact that Git remains the underlying version-control system.",
       "why_te": "Useful IDE diffs, branches, changes mariyu history ni source daggara chupistundi. Underlying version-control system ga Git same ga untundi.",
       "software": "intellij",
@@ -97,7 +180,7 @@
     },
     {
       "title": "Keep direct CLI access available",
-      "question": "In the cumulative AeroTopo learning project, the \"Keep direct CLI access available\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. If IntelliJ is the chosen IDE, why should the workflow still make Java and Maven commands available through an integrated terminal?",
+      "question": "Direct CLI access proves the project is not dependent on hidden IDE behavior and makes troubleshooting closer to CI and production workflows. If IntelliJ is the chosen IDE, why should the workflow still make Java and Maven commands available through an integrated terminal?",
       "why": "Direct CLI access proves the project is not dependent on hidden IDE behavior and makes troubleshooting closer to CI and production workflows.",
       "why_te": "Direct CLI access valla project hidden IDE behavior meeda depend kaadani prove avutundi. Troubleshooting kuda CI mariyu production workflow ki daggara ga untundi.",
       "software": "intellij",
@@ -110,7 +193,7 @@
     },
     {
       "title": "Validate the standardized IDE workflow",
-      "question": "In the cumulative AeroTopo learning project, the \"Validate the standardized IDE workflow\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. What final check shows that choosing IntelliJ as the standard IDE has not broken the portable Maven-based project workflow?",
+      "question": "Running the Maven tests from the project confirms that IntelliJ and the portable build model work together correctly. What final check shows that choosing IntelliJ as the standard IDE has not broken the portable Maven-based project workflow? The Maven goal `test` verifies the idea through the project's reproducible build lifecycle instead of relying on editor state alone.",
       "why": "Running the Maven tests from the project confirms that IntelliJ and the portable build model work together correctly.",
       "why_te": "Maven tests project nundi success ga run ayithe IntelliJ standardization portable build workflow ni break cheyyaledani confirm avutundi.",
       "software": "intellij",

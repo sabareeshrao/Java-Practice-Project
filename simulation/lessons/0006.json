@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the Java project in IntelliJ",
-      "question": "In the cumulative AeroTopo learning project, the \"Open the Java project in IntelliJ\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. An editor answer is stronger when it reflects the environment you actually use. Why does opening the real AeroTopo workspace make “I use IntelliJ IDEA” more meaningful than simply naming an editor?",
+      "question": "The project view shows that IntelliJ is the working environment around the actual Java codebase rather than an abstract preference. An editor answer is stronger when it reflects the environment you actually use. Why does opening the real AeroTopo workspace make “I use IntelliJ IDEA” more meaningful than simply naming an editor?",
       "why": "The project view shows that IntelliJ is the working environment around the actual Java codebase rather than an abstract preference.",
       "why_te": "Real AeroTopo workspace ni IntelliJ lo open cheyyadam valla idi just preference kaadani, actual project development environment ani clear avutundi.",
       "software": "intellij",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Confirm the project JDK",
-      "question": "In the cumulative AeroTopo learning project, the \"Confirm the project JDK\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Java IDE must understand the same JDK level that the build expects. What does checking IntelliJ's Project SDK tell you about the editor's role in this Java 21 project?",
+      "question": "The project SDK connects editor analysis, compilation assumptions, language features, and navigation to the Java version used by the project. A Java IDE must understand the same JDK level that the build expects. What does checking IntelliJ's Project SDK tell you about the editor's role in this Java 21 project?",
       "why": "The project SDK connects editor analysis, compilation assumptions, language features, and navigation to the Java version used by the project.",
       "why_te": "Project SDK check chesthe editor analysis, compilation assumptions, language features mariyu navigation Java 21 baseline tho align ayyi unnayani telustundi.",
       "software": "intellij",
@@ -45,7 +45,7 @@
     },
     {
       "title": "Open the application entry point",
-      "question": "In the cumulative AeroTopo learning project, the \"Open the application entry point\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. An IDE should make source navigation fast in a growing Java project. Why is opening `AeroTopoApplication.java` a useful demonstration of IntelliJ as more than a plain text editor?",
+      "question": "IntelliJ understands Java source structure, packages, types, imports, and framework annotations instead of treating the file as unstructured text. An IDE should make source navigation fast in a growing Java project. Why is opening `AeroTopoApplication.java` a useful demonstration of IntelliJ as more than a plain text editor?",
       "why": "IntelliJ understands Java source structure, packages, types, imports, and framework annotations instead of treating the file as unstructured text.",
       "why_te": "IntelliJ Java source ni plain text laga kaakunda packages, types, imports mariyu annotations tho structured code ga understand chestundi.",
       "software": "intellij",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Inspect Maven integration",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect Maven integration\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Java development usually depends on a build tool outside the editor itself. Why does having Maven integrated into IntelliJ matter when describing the editor you use?",
+      "question": "The IDE can expose the same Maven lifecycle and dependency model used by command-line builds and CI. Java development usually depends on a build tool outside the editor itself. Why does having Maven integrated into IntelliJ matter when describing the editor you use?",
       "why": "The IDE can expose the same Maven lifecycle and dependency model used by command-line builds and CI.",
       "why_te": "IntelliJ Maven integration valla IDE lo kanipinche build lifecycle mariyu dependency model command line mariyu CI tho same source nundi vastayi.",
       "software": "intellij",
@@ -68,25 +68,108 @@
       "feature_available": true,
       "action": {
         "action": "openMavenToolWindow",
-        "data": {}
+        "data": {
+          "project": "AeroTopo",
+          "profile": "default",
+          "status": "Ready",
+          "plugins": [
+            "spring-boot",
+            "compiler",
+            "surefire",
+            "resources"
+          ],
+          "profiles": [
+            "default",
+            "dev",
+            "test",
+            "prod"
+          ],
+          "dependencies": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-web",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-validation",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-test",
+              "version": "3.5.16"
+            }
+          ]
+        }
       }
     },
     {
       "title": "Inspect Spring support",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect Spring support\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Spring Boot developer works with beans, mappings, configuration, and application lifecycle in addition to Java syntax. Why is Spring-aware tooling one reason to use IntelliJ for this project?",
+      "question": "Framework-aware views help connect Java classes to Spring runtime concepts and reduce navigation effort in a larger application. A Spring Boot developer works with beans, mappings, configuration, and application lifecycle in addition to Java syntax. Why is Spring-aware tooling one reason to use IntelliJ for this project?",
       "why": "Framework-aware views help connect Java classes to Spring runtime concepts and reduce navigation effort in a larger application.",
       "why_te": "Spring-aware tooling Java classes ni beans, mappings mariyu runtime concepts tho connect chestundi. Large application lo navigation effort taggutundi.",
       "software": "intellij",
-      "required_capability": "open-spring-tool-window",
+      "required_capability": "show-spring-beans",
       "feature_available": true,
       "action": {
-        "action": "openSpringToolWindow",
-        "data": {}
+        "action": "showSpringBeans",
+        "data": {
+          "beans": [
+            {
+              "name": "aeroTopoApplication",
+              "className": "com.aerotopo.AeroTopoApplication",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+              "line": 7
+            },
+            {
+              "name": "projectController",
+              "className": "com.aerotopo.api.ProjectController",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "name": "projectService",
+              "className": "com.aerotopo.service.ProjectService",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/service/ProjectService.java",
+              "line": 1
+            }
+          ],
+          "mappings": [
+            {
+              "method": "GET",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "listProjects()",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "POST",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "createProject(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "GET",
+              "path": "/api/v1/gis/area",
+              "controller": "ProjectController",
+              "handler": "area(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            }
+          ]
+        }
       }
     },
     {
       "title": "Open the integrated terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Open the integrated terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Using an IDE should not hide the actual command-line tools behind proprietary buttons. Why is IntelliJ's integrated terminal important to your development workflow?",
+      "question": "It keeps Java, Maven, Git, and diagnostics accessible in the same workspace while preserving direct command-line verification. Using an IDE should not hide the actual command-line tools behind proprietary buttons. Why is IntelliJ's integrated terminal important to your development workflow?",
       "why": "It keeps Java, Maven, Git, and diagnostics accessible in the same workspace while preserving direct command-line verification.",
       "why_te": "Integrated terminal valla Java, Maven, Git mariyu diagnostic commands same workspace lo direct ga run cheyyachu. IDE buttons meeda matrame depend avvalsina avasaram undadu.",
       "software": "intellij",
@@ -99,7 +182,7 @@
     },
     {
       "title": "Verify the workspace with Maven tests",
-      "question": "In the cumulative AeroTopo learning project, the \"Verify the workspace with Maven tests\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. If IntelliJ is your development IDE, what practical evidence shows that the editor, JDK, build configuration, and project dependencies are working together correctly?",
+      "question": "Running the repository's Maven tests provides a reproducible final check that the IDE environment agrees with the real project build. If IntelliJ is your development IDE, what practical evidence shows that the editor, JDK, build configuration, and project dependencies are working together correctly?",
       "why": "Running the repository's Maven tests provides a reproducible final check that the IDE environment agrees with the real project build.",
       "why_te": "Maven tests success ayithe IntelliJ environment, JDK, dependencies mariyu project build okate configuration meeda correct ga work chestunnayani practical proof vastundi.",
       "software": "intellij",

@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Inspect the project SDK",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the project SDK\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A Spring Boot project can behave differently when developers use different JDKs. Why should your preferred development environment begin with an explicit project SDK and language level instead of relying on a machine default?",
+      "question": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable. A Spring Boot project can behave differently when developers use different JDKs. Why should your preferred development environment begin with an explicit project SDK and language level instead of relying on a machine default?",
       "why": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable.",
       "why_te": "IDE build mariyu CI expect chese Java baseline tho match avvali. Project SDK mariyu language level explicit ga unte local compilation, language features mariyu diagnostics predictable ga untayi.",
       "software": "intellij",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Inspect the Maven tool window",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect the Maven tool window\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A reliable Spring Boot setup needs a build that behaves the same outside the IDE. Why is Maven part of the preferred tool set even when IntelliJ can compile and run Java directly?",
+      "question": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce. A reliable Spring Boot setup needs a build that behaves the same outside the IDE. Why is Maven part of the preferred tool set even when IntelliJ can compile and run Java directly?",
       "why": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce.",
       "why_te": "Maven dependencies, plugins, lifecycle goals, tests mariyu packaging ni shared build model lo define chestundi. Local machine mariyu CI rendu ade build ni reproduce cheyyagalavu.",
       "software": "intellij",
@@ -34,25 +34,108 @@
       "feature_available": true,
       "action": {
         "action": "openMavenToolWindow",
-        "data": {}
+        "data": {
+          "project": "AeroTopo",
+          "profile": "default",
+          "status": "Ready",
+          "plugins": [
+            "spring-boot",
+            "compiler",
+            "surefire",
+            "resources"
+          ],
+          "profiles": [
+            "default",
+            "dev",
+            "test",
+            "prod"
+          ],
+          "dependencies": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-web",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-validation",
+              "version": "3.5.16"
+            },
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "spring-boot-starter-test",
+              "version": "3.5.16"
+            }
+          ]
+        }
       }
     },
     {
       "title": "Inspect Spring support inside IntelliJ",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect Spring support inside IntelliJ\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Spring Boot adds framework concepts such as beans, mappings, configuration, and application lifecycle. Why is Spring-aware tooling useful in the IDE instead of treating the project as only a collection of plain Java files?",
+      "question": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand. Spring Boot adds framework concepts such as beans, mappings, configuration, and application lifecycle. Why is Spring-aware tooling useful in the IDE instead of treating the project as only a collection of plain Java files?",
       "why": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand.",
       "why_te": "Spring-aware views Java source ni beans, mappings, configuration lanti Spring concepts tho connect chestayi. Dini valla navigation better avutundi mariyu growing application ni ardham chesukovadam easy avutundi.",
       "software": "intellij",
-      "required_capability": "open-spring-tool-window",
+      "required_capability": "show-spring-beans",
       "feature_available": true,
       "action": {
-        "action": "openSpringToolWindow",
-        "data": {}
+        "action": "showSpringBeans",
+        "data": {
+          "beans": [
+            {
+              "name": "aeroTopoApplication",
+              "className": "com.aerotopo.AeroTopoApplication",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+              "line": 7
+            },
+            {
+              "name": "projectController",
+              "className": "com.aerotopo.api.ProjectController",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "name": "projectService",
+              "className": "com.aerotopo.service.ProjectService",
+              "scope": "singleton",
+              "file": "src/main/java/com/aerotopo/service/ProjectService.java",
+              "line": 1
+            }
+          ],
+          "mappings": [
+            {
+              "method": "GET",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "listProjects()",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "POST",
+              "path": "/api/v1/projects",
+              "controller": "ProjectController",
+              "handler": "createProject(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            },
+            {
+              "method": "GET",
+              "path": "/api/v1/gis/area",
+              "controller": "ProjectController",
+              "handler": "area(...)",
+              "file": "src/main/java/com/aerotopo/api/ProjectController.java",
+              "line": 1
+            }
+          ]
+        }
       }
     },
     {
       "title": "Inspect Git integration",
-      "question": "In the cumulative AeroTopo learning project, the \"Inspect Git integration\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Enterprise Spring Boot development is collaborative, so source history and review matter as much as local editing. Why should Git integration be part of the normal development environment?",
+      "question": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace. Enterprise Spring Boot development is collaborative, so source history and review matter as much as local editing. Why should Git integration be part of the normal development environment?",
       "why": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace.",
       "why_te": "Git traceable changes, branches, diffs, commits mariyu collaboration workflow istundi. IntelliJ integration valla ee source-control operations same project workspace lo visible ga untayi.",
       "software": "intellij",
@@ -65,7 +148,7 @@
     },
     {
       "title": "Open the integrated terminal",
-      "question": "In the cumulative AeroTopo learning project, the \"Open the integrated terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Even with rich IDE tooling, Java developers still need direct access to Java, Maven, Git, and diagnostic commands. Why is an integrated terminal part of a practical Spring Boot environment?",
+      "question": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools. Even with rich IDE tooling, Java developers still need direct access to Java, Maven, Git, and diagnostic commands. Why is an integrated terminal part of a practical Spring Boot environment?",
       "why": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools.",
       "why_te": "Integrated terminal command-line verification ni same project context lo unchutundi. IDE behavior ni real Java, Maven mariyu Git commands tho compare cheyyadam easy avutundi.",
       "software": "intellij",
@@ -78,7 +161,7 @@
     },
     {
       "title": "Verify the active Java runtime",
-      "question": "In the cumulative AeroTopo learning project, the \"Verify the active Java runtime\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. An IDE can be configured for one JDK while its terminal resolves another from PATH. Why should a developer verify `java --version` as part of environment setup?",
+      "question": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference. An IDE can be configured for one JDK while its terminal resolves another from PATH. Why should a developer verify `java --version` as part of environment setup?",
       "why": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference.",
       "why_te": "Actual executable version ni check chesthe local version drift mundhe dorukutundi. Leka pothe compilation leda runtime difference confusing ga kanipinchachu.",
       "software": "intellij",
@@ -87,6 +170,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "java --version",
           "output": "openjdk 21"
         }
@@ -94,7 +181,7 @@
     },
     {
       "title": "Verify Maven from the same workspace",
-      "question": "In the cumulative AeroTopo learning project, the \"Verify Maven from the same workspace\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A preferred tool set is useful only when the build tool and JDK agree on the execution environment. What does `mvn -version` help you verify before running a Spring Boot build?",
+      "question": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed. A preferred tool set is useful only when the build tool and JDK agree on the execution environment. What does `mvn -version` help you verify before running a Spring Boot build?",
       "why": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed.",
       "why_te": "Maven tana version tho paatu adi use chestunna Java runtime ni report chestundi. Dini valla toolchain mismatch build failure laga confuse avvakunda mundhe identify cheyyachu.",
       "software": "intellij",
@@ -103,6 +190,10 @@
       "action": {
         "action": "typeTerminal",
         "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
           "command": "mvn -version",
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
@@ -110,7 +201,7 @@
     },
     {
       "title": "Prove the environment with tests",
-      "question": "In the cumulative AeroTopo learning project, the \"Prove the environment with tests\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. The final proof of a development environment is not that the IDE opens successfully; it is that the project builds and tests reproducibly. Why should your preferred Spring Boot tool set finish with a Maven test gate?",
+      "question": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects. The final proof of a development environment is not that the IDE opens successfully; it is that the project builds and tests reproducibly. Why should your preferred Spring Boot tool set finish with a Maven test gate?",
       "why": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects.",
       "why_te": "Successful Maven test gate JDK, Maven model, dependencies mariyu test tooling repository expect chesina vidhamga kalisi work chestunnayi ani confirm chestundi.",
       "software": "intellij",

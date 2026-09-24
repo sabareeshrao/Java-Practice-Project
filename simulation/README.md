@@ -36,3 +36,11 @@ A simulator step must not intentionally open an empty software surface when the 
 ## Step 1 question-length floor
 
 The English #Q1 text in global Lesson 1 / Step 1 is the minimum detail baseline for every simulator step question. The current baseline is **39 words**. Questions may be longer but may never be summarized below that baseline. The generator reads the live Lesson 1 / Step 1 question and rejects any shorter step question automatically.
+
+## Question cleanliness
+
+The 39-word minimum is a detail floor, not a padding target. Questions must gain length through step-specific technical context. Repeated filler such as "In the cumulative AeroTopo learning project..." is forbidden and rejected by the generator.
+
+## IntelliJ UI fidelity
+
+Every lesson batch must be authored against the latest compatible validated master IntelliJ feature catalog. Prefer specific rich P0/P1 surfaces such as real Search/Go To results, Find Usages, refactoring preview, Maven lifecycle/dependencies/profiles, Spring Services/Beans/Mappings, upgraded editor/project tree, and first-class terminal metadata instead of older generic fallback surfaces.
