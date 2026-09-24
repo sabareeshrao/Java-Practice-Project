@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "lesson_number": 11,
+  "question_id": 11,
+  "mode": "procedure",
+  "project_impact": "none",
+  "title": "STS shortcuts and their IntelliJ workflow equivalents",
+  "info_language": "te-Latn",
+  "answer": "STS is based on the Eclipse platform, so common STS/Eclipse shortcuts include Ctrl+Shift+R for Open Resource, Ctrl+Shift+T for Open Type, Ctrl+O for Quick Outline, F3 for Open Declaration, Ctrl+Shift+G for references, Ctrl+Space for content assist, Ctrl+1 for Quick Fix, Ctrl+Shift+F for formatting, and Alt+Shift+R for Rename. Exact bindings can vary by operating system or customized keymap. In this AeroTopo course the Java IDE is IntelliJ IDEA only, so the lesson demonstrates the equivalent navigation, completion, intention, formatting, and refactoring workflows in IntelliJ rather than switching the simulator to STS.",
+  "steps": [
+    {
+      "title": "Map STS Open Resource to IntelliJ Go to File",
+      "question": "STS commonly uses Ctrl+Shift+R to open a resource by name when you know the file but not its exact package location. In an IntelliJ-only AeroTopo workflow, how does Go to File provide the same navigation idea without manually expanding the project tree?",
+      "why": "Both workflows solve the same developer problem: file-name-driven navigation. This course remains IntelliJ-only, so we demonstrate the equivalent action without switching IDEs.",
+      "why_te": "STS lo Ctrl+Shift+R file/resource peru nundi direct navigation ki use avutundi. Ee project IntelliJ-only kabatti ade concept ni Go to File tho demonstrate chestam; project tree folders manually expand cheyyalsina avasaram taggutundi.",
+      "software": "intellij",
+      "required_capability": "goto-file",
+      "feature_available": true,
+      "action": {
+        "action": "gotoFile",
+        "data": {
+          "shortcut": "Ctrl+Shift+N",
+          "query": "AeroTopoApplication.java",
+          "results": [
+            "src/main/java/com/aerotopo/AeroTopoApplication.java"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Map STS Open Type to IntelliJ Go to Class",
+      "question": "STS commonly uses Ctrl+Shift+T to locate a Java type directly across the workspace. When the project standard is IntelliJ, why is Go to Class the natural equivalent for quickly finding AeroTopo classes by type name rather than by physical file path?",
+      "why": "Type-oriented navigation is different from raw file browsing because the IDE understands Java classes and packages. IntelliJ Go to Class provides that semantic navigation.",
+      "why_te": "STS Ctrl+Shift+T type peru nundi class ni find cheyyadaniki use avutundi. IntelliJ lo Go to Class Java type semantics ni use chesi ade developer goal ni satisfy chestundi.",
+      "software": "intellij",
+      "required_capability": "goto-class",
+      "feature_available": true,
+      "action": {
+        "action": "gotoClass",
+        "data": {
+          "shortcut": "Ctrl+N",
+          "query": "AeroTopoApplication",
+          "results": [
+            "com.aerotopo.AeroTopoApplication"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Map STS Quick Outline to IntelliJ File Structure",
+      "question": "STS/Eclipse developers often use Ctrl+O for Quick Outline so they can jump among fields, constructors, and methods inside the current class. How does IntelliJ File Structure provide the same kind of within-file navigation for a growing Java source file?",
+      "why": "The important skill is symbol-level movement inside one file rather than scrolling line by line. IntelliJ File Structure exposes the same conceptual navigation model.",
+      "why_te": "STS Ctrl+O current class lo fields, constructors mariyu methods madhya fast navigation istundi. IntelliJ File Structure kuda same concept ni provide chestundi kabatti long Java file ni line-by-line scroll cheyyalsina avasaram taggutundi.",
+      "software": "intellij",
+      "required_capability": "show-file-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showFileStructure",
+        "data": {
+          "shortcut": "Ctrl+F12",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Map STS F3 declaration navigation to IntelliJ",
+      "question": "In the cumulative AeroTopo learning project, the \"Map STS F3 declaration navigation to IntelliJ\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. In STS/Eclipse, F3 is commonly used to open the declaration behind a selected type, method, or field reference. Why is declaration navigation essential in enterprise Java, and how does IntelliJ provide that same source-tracing capability inside AeroTopo?",
+      "why": "Declaration navigation lets a developer follow typed relationships through the codebase instead of searching manually for definitions.",
+      "why_te": "Enterprise Java lo reference nundi declaration ki direct ga velladam code relationships ni fast ga understand cheyyadaniki important. IntelliJ declaration navigation STS F3 concept ki equivalent workflow ni istundi.",
+      "software": "intellij",
+      "required_capability": "goto-declaration",
+      "feature_available": true,
+      "action": {
+        "action": "gotoDeclaration",
+        "data": {
+          "shortcut": "Ctrl+B",
+          "symbol": "SpringApplication.run",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Map STS reference search to IntelliJ Find Usages",
+      "question": "In the cumulative AeroTopo learning project, the \"Map STS reference search to IntelliJ Find Usages\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. STS/Eclipse commonly provides workspace reference search through Ctrl+Shift+G so a developer can see where a selected symbol is referenced before changing it. Why should AeroTopo developers perform the equivalent Find Usages check in IntelliJ before refactoring shared code?",
+      "why": "Usage discovery reduces the risk of changing a symbol without understanding its callers or references across the project.",
+      "why_te": "STS reference search laga IntelliJ Find Usages selected symbol ekkada use ayindo chupistundi. Shared code refactor cheyyadaniki mundu impact scope telusukovadam safer development ki important.",
+      "software": "intellij",
+      "required_capability": "find-usages",
+      "feature_available": true,
+      "action": {
+        "action": "findUsages",
+        "data": {
+          "shortcut": "Alt+F7",
+          "symbol": "AeroTopoApplication",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java",
+          "usages": [
+            "SpringApplication.run(AeroTopoApplication.class, args)"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Map STS content assist to IntelliJ code completion",
+      "question": "In the cumulative AeroTopo learning project, the \"Map STS content assist to IntelliJ code completion\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. STS/Eclipse uses Ctrl+Space for content assist so the editor can suggest valid types, methods, fields, and templates from the current code context. Why is IntelliJ code completion the corresponding productivity tool when writing strongly typed Java in AeroTopo?",
+      "why": "Both features use code context to reduce memorization and typing errors while helping the developer discover available APIs.",
+      "why_te": "STS Ctrl+Space content assist current context batti APIs suggest chestundi. IntelliJ completion kuda typed Java model nundi valid methods mariyu symbols ni suggest chesi typing mistakes mariyu memorization burden ni taggistundi.",
+      "software": "intellij",
+      "required_capability": "show-completion",
+      "feature_available": true,
+      "action": {
+        "action": "showCompletion",
+        "data": {
+          "shortcut": "Ctrl+Space",
+          "items": [
+            "run(...)",
+            "getApplicationContext()",
+            "setDefaultProperties(...)"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Map STS Quick Fix to IntelliJ intention actions",
+      "question": "In the cumulative AeroTopo learning project, the \"Map STS Quick Fix to IntelliJ intention actions\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. STS/Eclipse commonly uses Ctrl+1 to show Quick Fix suggestions at the current problem location, including imports and corrective actions. Why is IntelliJ Alt+Enter the equivalent habit for resolving context-specific inspections and code issues without leaving the editor?",
+      "why": "The available fix depends on the exact caret and diagnostic context rather than a generic menu.",
+      "why_te": "STS Ctrl+1 Quick Fix current problem context ki suggestions istundi. IntelliJ Alt+Enter kuda caret daggara unna inspection, import leda correction ki relevant actions ni direct ga surface chestundi.",
+      "software": "intellij",
+      "required_capability": "show-intention-actions",
+      "feature_available": true,
+      "action": {
+        "action": "showIntentionActions",
+        "data": {
+          "shortcut": "Alt+Enter",
+          "items": [
+            "Import class",
+            "Add exception to method signature",
+            "Replace with modern API",
+            "Refactor expression"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Map STS formatting to IntelliJ Reformat Code",
+      "question": "STS/Eclipse commonly uses Ctrl+Shift+F to format source according to configured code style, which keeps team diffs focused on logic rather than inconsistent whitespace. Why should an IntelliJ-based AeroTopo workflow use its own Reformat Code action for the same engineering purpose?",
+      "why": "Formatting is a team-consistency tool, not merely cosmetic. The IntelliJ action applies this project's configured style without switching IDEs.",
+      "why_te": "STS formatting shortcut code style consistency kosam use avutundi. AeroTopo IntelliJ-only workflow lo Reformat Code same engineering purpose ni fulfil chestundi; reviews lo unnecessary whitespace differences taggutayi.",
+      "software": "intellij",
+      "required_capability": "format-code",
+      "feature_available": true,
+      "action": {
+        "action": "formatCode",
+        "data": {
+          "shortcut": "Ctrl+Alt+L",
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Map STS Rename to IntelliJ safe refactoring",
+      "question": "In the cumulative AeroTopo learning project, the \"Map STS Rename to IntelliJ safe refactoring\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. STS/Eclipse commonly uses Alt+Shift+R for Rename so a Java symbol is changed semantically across its references rather than through unsafe text replacement. Why is IntelliJ's safe Rename refactoring the correct equivalent to remember for production code changes?",
+      "why": "Semantic rename uses the IDE symbol model and is safer than replacing matching text blindly across unrelated files or comments.",
+      "why_te": "STS Alt+Shift+R semantic rename concept ni IntelliJ safe Rename kuda provide chestundi. Symbol references ni IDE model tho identify chestundi kabatti raw text replace kanna production code ki safer.",
+      "software": "intellij",
+      "required_capability": "rename-symbol",
+      "feature_available": true,
+      "action": {
+        "action": "renameSymbol",
+        "data": {
+          "shortcut": "Shift+F6",
+          "symbol": "exampleSymbol",
+          "mode": "preview",
+          "note": "Equivalent workflow demonstration only; no AeroTopo production symbol is changed."
+        }
+      }
+    }
+  ]
+}

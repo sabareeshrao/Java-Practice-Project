@@ -211,6 +211,17 @@ Why should you inspect pom.xml before changing a dependency version?
 
 Do not use one lesson-level question repeated across every step.
 
+### Step 1 word-count floor
+
+Global Lesson 1 / Step 1 establishes the minimum detail level for every step question. Its current question is **39 words**, so:
+
+- no existing or future step question may contain fewer than 39 words unless Step 1 itself is deliberately expanded later,
+- longer questions are accepted and encouraged when the concept needs more context,
+- never shorten or summarize a step question merely to make the UI text smaller,
+- when an existing question is below the baseline, preserve its useful wording and **add instructional context before it** rather than deleting detail,
+- the generator must calculate the baseline directly from Lesson 1 / Step 1 and reject any question below that live baseline,
+- if Lesson 1 / Step 1 is later expanded, the new larger word count automatically becomes the new minimum for every lesson.
+
 The generator must fail when:
 
 - a step question is missing,
@@ -627,6 +638,7 @@ Check:
 - no duplicate lesson IDs,
 - no duplicate source questions,
 - every step question is unique,
+- every step question meets or exceeds the live Lesson 1 / Step 1 word-count baseline (currently 39 words),
 - English question present,
 - Telugu-in-English-font explanation present,
 - English final answer present,
@@ -790,7 +802,7 @@ Always preserve these rules:
 - original project stays the cumulative real project,
 - one source question = one lesson,
 - maximum 5 lessons per chapter,
-- every simulator step has a unique English #Q1 question,
+- every simulator step has a unique English #Q1 question that is never shorter than the Lesson 1 / Step 1 baseline,
 - explanation beneath the question is Telugu written in English letters,
 - only the final step gets the English Answer block,
 - IntelliJ only for Java IDE actions,

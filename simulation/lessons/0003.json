@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open IntelliJ Settings",
-      "question": "Lombok has an IDE-support side and a build-dependency side. Before changing the Maven build, why should you first open IntelliJ Settings and confirm the IDE can understand Lombok-generated code?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open IntelliJ Settings\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Lombok has an IDE-support side and a build-dependency side. Before changing the Maven build, why should you first open IntelliJ Settings and confirm the IDE can understand Lombok-generated code?",
       "why": "The IDE may otherwise show false errors for generated getters, setters, constructors, or builders even when the Maven compiler can process them.",
       "why_te": "IDE ki Lombok support lekapothe Maven compiler code ni process chesina kuda generated getters, setters, constructors leda builders meeda false errors chupinchachu. Kabatti munduga IDE awareness ni verify cheyyadam useful.",
       "software": "intellij",
@@ -23,7 +23,7 @@
     },
     {
       "title": "Install the Lombok plugin",
-      "question": "The Lombok plugin improves IntelliJ's awareness of members generated during annotation processing. Why is installing or enabling this plugin an IDE concern rather than a replacement for the Maven dependency?",
+      "question": "In the cumulative AeroTopo learning project, the \"Install the Lombok plugin\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. The Lombok plugin improves IntelliJ's awareness of members generated during annotation processing. Why is installing or enabling this plugin an IDE concern rather than a replacement for the Maven dependency?",
       "why": "The plugin helps editor analysis and navigation. The build still needs Lombok on its dependency/annotation-processing path, so IDE support and build support solve different problems.",
       "why_te": "Plugin editor analysis mariyu navigation ki help chestundi. Kani build ki Lombok dependency leda annotation-processing path lo undali. Kabatti IDE support mariyu build support rendu veru problems ni solve chestayi.",
       "software": "intellij",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Open the Maven descriptor",
-      "question": "A plugin alone does not make Lombok part of a reproducible build. Why should the next step return to `pom.xml` before using Lombok annotations in project source code?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open the Maven descriptor\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A plugin alone does not make Lombok part of a reproducible build. Why should the next step return to `pom.xml` before using Lombok annotations in project source code?",
       "why": "The project build file is shared by local development, CI, and other developers. Lombok must be represented in that build model rather than existing only in one person's IDE.",
       "why_te": "Project build file local development, CI mariyu vere developers andariki common source of truth. Lombok oka developer IntelliJ lo matrame undakunda build model lo kuda represent avvali.",
       "software": "intellij",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Add the Lombok Maven dependency",
-      "question": "Lombok works as a compile-time code-generation dependency. What does adding `org.projectlombok:lombok` to Maven provide that the IntelliJ plugin by itself cannot provide?",
+      "question": "In the cumulative AeroTopo learning project, the \"Add the Lombok Maven dependency\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Lombok works as a compile-time code-generation dependency. What does adding `org.projectlombok:lombok` to Maven provide that the IntelliJ plugin by itself cannot provide?",
       "why": "The Maven dependency makes Lombok available to the compiler and repeatable builds. In a Spring Boot project its version can often be managed by the parent dependency-management stack.",
       "why_te": "Maven dependency Lombok ni compiler ki available chestundi mariyu repeatable builds lo kuda same behavior istundi. Spring Boot project lo version parent dependency management dwara manage avvachu.",
       "software": "intellij",
@@ -72,7 +72,7 @@
     },
     {
       "title": "Open the Maven tool window",
-      "question": "After the build model changes, IntelliJ must synchronize its Maven project model. Why is opening the Maven tool window useful before assuming the new Lombok dependency is already active?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open the Maven tool window\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. After the build model changes, IntelliJ must synchronize its Maven project model. Why is opening the Maven tool window useful before assuming the new Lombok dependency is already active?",
       "why": "The Maven tool window exposes the project's build lifecycle and synchronization state, giving a visible place to reload and inspect the updated dependency model.",
       "why_te": "Maven tool window build lifecycle mariyu synchronization state ni visible ga chupistundi. Updated dependency model ni reload chesi inspect cheyyadaniki idi correct place.",
       "software": "intellij",
@@ -85,7 +85,7 @@
     },
     {
       "title": "Reload the Maven project",
-      "question": "IntelliJ can cache an older Maven model after `pom.xml` changes. Why should you explicitly reload the Maven project after adding Lombok?",
+      "question": "In the cumulative AeroTopo learning project, the \"Reload the Maven project\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. IntelliJ can cache an older Maven model after `pom.xml` changes. Why should you explicitly reload the Maven project after adding Lombok?",
       "why": "Reloading forces IntelliJ to resolve the updated dependency model so editor analysis and build tooling agree about what is available.",
       "why_te": "Reload cheyyadam valla IntelliJ updated dependency model ni malli resolve chestundi. Appudu editor analysis mariyu build tooling rendu available dependencies gurinchi same state lo untayi.",
       "software": "intellij",
@@ -98,7 +98,7 @@
     },
     {
       "title": "Inspect resolved libraries",
-      "question": "A declared dependency is not enough evidence that resolution succeeded. Why should you inspect External Libraries to confirm Lombok appears in the resolved project model?",
+      "question": "In the cumulative AeroTopo learning project, the \"Inspect resolved libraries\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A declared dependency is not enough evidence that resolution succeeded. Why should you inspect External Libraries to confirm Lombok appears in the resolved project model?",
       "why": "The resolved view shows what IntelliJ actually obtained from Maven, which is more useful than assuming the declaration was downloaded and indexed successfully.",
       "why_te": "Resolved view Maven nundi IntelliJ actual ga em pondindo chupistundi. Declaration file lo undi kabatti download mariyu indexing success ayayi ani assume cheyyadam kanna idi better evidence.",
       "software": "intellij",
@@ -111,7 +111,7 @@
     },
     {
       "title": "Verify the build after Lombok setup",
-      "question": "IDE recognition can look correct while the real build still fails. Why should Lombok setup be verified with a Maven test or compile goal before the team starts relying on generated code?",
+      "question": "In the cumulative AeroTopo learning project, the \"Verify the build after Lombok setup\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. IDE recognition can look correct while the real build still fails. Why should Lombok setup be verified with a Maven test or compile goal before the team starts relying on generated code?",
       "why": "A successful Maven build proves the shared build path can resolve and process Lombok, not just the local editor.",
       "why_te": "Successful Maven build shared build path Lombok ni resolve mariyu process cheyyagaladani prove chestundi; local editor support okkate proof kaadu.",
       "software": "intellij",
@@ -128,7 +128,7 @@
     },
     {
       "title": "Remove the temporary Lombok dependency",
-      "question": "A learning demo should not leave an unused library in production. Since AeroTopo currently has no Lombok-based source code, why should this lesson remove the temporary Maven dependency after proving the setup workflow?",
+      "question": "In the cumulative AeroTopo learning project, the \"Remove the temporary Lombok dependency\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A learning demo should not leave an unused library in production. Since AeroTopo currently has no Lombok-based source code, why should this lesson remove the temporary Maven dependency after proving the setup workflow?",
       "why": "This keeps the cumulative AeroTopo project honest: we learned the real IntelliJ/Maven procedure without permanently adding a dependency the application does not need.",
       "why_te": "Dini valla cumulative AeroTopo project clean ga untundi. Real IntelliJ/Maven procedure ni nerchukunnam, kani application ki avasaram leni dependency ni permanent ga add cheyyaledu.",
       "software": "intellij",

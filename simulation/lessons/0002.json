@@ -24,7 +24,7 @@
     },
     {
       "title": "Check the declared Java baseline",
-      "question": "Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java.version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
+      "question": "In the cumulative AeroTopo learning project, the \"Check the declared Java baseline\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java.version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
       "why": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -43,7 +43,7 @@
     },
     {
       "title": "Check the Spring Boot baseline",
-      "question": "Framework releases often determine which Java versions and library combinations are supported together. Why should a Java ecosystem upgrade review include AeroTopo's Spring Boot parent version instead of treating a JDK upgrade as an isolated decision?",
+      "question": "In the cumulative AeroTopo learning project, the \"Check the Spring Boot baseline\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Framework releases often determine which Java versions and library combinations are supported together. Why should a Java ecosystem upgrade review include AeroTopo's Spring Boot parent version instead of treating a JDK upgrade as an isolated decision?",
       "why": "Enterprise upgrades are compatibility decisions across a stack. Spring Boot coordinates many dependency and plugin versions, so its supported Java range and migration notes matter when the JDK or framework changes.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -75,7 +75,7 @@
     },
     {
       "title": "Open the Maven tool window",
-      "question": "Keeping current requires a repeatable build workflow, not just reading release announcements. How does IntelliJ's Maven tool window help turn ecosystem changes into something the team can inspect, reload, build, test, and reproduce?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open the Maven tool window\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Keeping current requires a repeatable build workflow, not just reading release announcements. How does IntelliJ's Maven tool window help turn ecosystem changes into something the team can inspect, reload, build, test, and reproduce?",
       "why": "The Maven tool window keeps lifecycle and dependency work tied to the project's declared build model. That makes an upgrade review reproducible instead of depending on ad-hoc IDE state.",
       "software": "intellij",
       "required_capability": "open-maven-tool-window",
@@ -88,7 +88,7 @@
     },
     {
       "title": "Open IntelliJ's integrated terminal",
-      "question": "Release notes tell you what changed, but your local and CI toolchain determines what the project actually executes. Why is a terminal inside the same IntelliJ project useful when validating Java ecosystem upgrades?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open IntelliJ's integrated terminal\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Release notes tell you what changed, but your local and CI toolchain determines what the project actually executes. Why is a terminal inside the same IntelliJ project useful when validating Java ecosystem upgrades?",
       "why": "The integrated terminal lets you check the real JDK and Maven commands from the same project context used by the editor. This connects release knowledge to the build that will actually be verified.",
       "software": "intellij",
       "required_capability": "open-integrated-terminal",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Verify Maven's toolchain view",
-      "question": "Maven reports both its own version and the Java runtime it is using. Why is checking `mvn -version` useful before blaming a new library, plugin, or framework release for an upgrade failure?",
+      "question": "In the cumulative AeroTopo learning project, the \"Verify Maven's toolchain view\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Maven reports both its own version and the Java runtime it is using. Why is checking `mvn -version` useful before blaming a new library, plugin, or framework release for an upgrade failure?",
       "why": "Build-tool and runtime mismatches can look like framework problems. Verifying Maven's execution environment removes that ambiguity before deeper migration work begins.",
       "software": "intellij",
       "required_capability": "type-terminal",

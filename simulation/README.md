@@ -32,3 +32,7 @@ Each lesson keeps the original source interview question through `question_id`, 
 ## Visible-state rule
 
 A simulator step must not intentionally open an empty software surface when the concept requires visible evidence. The downstream seed package includes minimal realistic state needed by early lessons; for example, the Spring seed state contains the AeroTopo application, representative beans, mappings, and application properties so Spring-tool-window lessons render meaningful content.
+
+## Step 1 question-length floor
+
+The English #Q1 text in global Lesson 1 / Step 1 is the minimum detail baseline for every simulator step question. The current baseline is **39 words**. Questions may be longer but may never be summarized below that baseline. The generator reads the live Lesson 1 / Step 1 question and rejects any shorter step question automatically.

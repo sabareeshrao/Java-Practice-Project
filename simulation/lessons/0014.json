@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "lesson_number": 14,
+  "question_id": 14,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "What the JVM is and how it works",
+  "info_language": "te-Latn",
+  "answer": "The JVM, or Java Virtual Machine, is the runtime that executes Java bytecode. Java source is first compiled into `.class` files containing bytecode. When the application starts, the JVM loads the required classes, verifies bytecode for structural and safety rules, links and initializes classes, and then executes bytecode using interpretation and just-in-time compilation so frequently executed paths can become native machine code. The JVM also provides runtime services such as memory areas, garbage collection, threads, exceptions, security/runtime checks, and interaction with native operating-system resources. The JVM is a specification with platform-specific implementations, which is why the same compatible bytecode can run on different operating systems with an appropriate JVM.",
+  "steps": [
+    {
+      "title": "Open the Java source the JVM will eventually execute",
+      "question": "The JVM does not directly execute the `.java` text that developers edit; source code must first pass through compilation into a runtime representation. When you open AeroTopo's application class, what distinction should you make between Java source code and the bytecode the JVM actually consumes?",
+      "why": "The source file is the developer-facing representation while the JVM consumes compiled class-file bytecode.",
+      "why_te": "Developer `.java` source human-readable code. JVM direct ga source text execute cheyyadu; compiler generate chese `.class` bytecode JVM runtime ki input avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Confirm the target Java level before compilation",
+      "question": "Bytecode is portable, but class files still carry version information tied to the Java release used for compilation. Why should AeroTopo's Java 21 SDK and language level be explicit before discussing how the JVM loads and executes the resulting classes?",
+      "why": "The target Java level defines the bytecode/API compatibility expected by the runtime.",
+      "why_te": "Class-file compatibility Java target version tho relate avutundi. Project Java 21 baseline explicit ga unte compiler output mariyu runtime requirement clear ga untayi.",
+      "software": "intellij",
+      "required_capability": "show-project-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showProjectStructure",
+        "data": {
+          "sdk": "Java 21",
+          "jdkOpen": true
+        }
+      }
+    },
+    {
+      "title": "Compile the project into class files",
+      "question": "Understanding the JVM requires seeing the boundary between compilation and execution, because `javac` or Maven compilation produces bytecode before the JVM starts the application. What does a successful compile phase create that the JVM can later load, verify, link, and execute?",
+      "why": "The compile phase creates `.class` files containing JVM bytecode.",
+      "why_te": "Compile phase Java source nundi `.class` files create chestundi. Ee files lo JVM bytecode untundi; runtime start ayyaka class loader mariyu verifier ee bytecode ni process chestayi.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "compile",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] Compiling AeroTopo Java sources\n[INFO] Classes written to target/classes\n[INFO] BUILD SUCCESS"
+        }
+      }
+    },
+    {
+      "title": "Inspect the JVM classpath",
+      "question": "Before bytecode can run, the JVM must locate the application's classes and the framework libraries referenced by them. Why is classpath resolution part of JVM startup, and what kind of failure would occur if a required class could not be found?",
+      "why": "Classpath resolution tells the JVM where application and dependency classes can be located.",
+      "why_te": "Classpath JVM ki application classes mariyu dependencies locations ni istundi. Required class resolve kakapothe class loading/linking stage lo runtime error vastundi, bytecode portable unna kuda application complete ga start avvadu.",
+      "software": "intellij",
+      "required_capability": "show-classpath",
+      "feature_available": true,
+      "action": {
+        "action": "showClasspath",
+        "data": {
+          "entries": [
+            "target/classes",
+            "Spring Boot dependencies",
+            "JDK modules"
+          ],
+          "stage": "Class loading and dependency resolution"
+        }
+      }
+    },
+    {
+      "title": "Inspect JVM loading and execution stages",
+      "question": "After locating class files, the JVM performs more work than simply reading bytes into memory. How do class loading, bytecode verification, linking, initialization, interpretation, and JIT compilation cooperate to turn portable bytecode into executable behavior on the current machine?",
+      "why": "The JVM stages transform verified portable class definitions into executing code on the host machine.",
+      "why_te": "JVM classes ni load chesi bytecode verify chestundi, references link chestundi, classes initialize chestundi, tarvata interpretation/JIT dwara hot code ni native instructions ga execute chestundi.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "stages": [
+            "Load classes",
+            "Verify bytecode",
+            "Link references",
+            "Initialize classes",
+            "Interpret bytecode",
+            "JIT-compile hot code"
+          ],
+          "runtime": "OpenJDK 21"
+        }
+      }
+    },
+    {
+      "title": "Inspect JVM-managed runtime services",
+      "question": "Java execution depends on runtime services that application code does not manually implement for every operating system. Why are managed memory, garbage collection, threads, exceptions, and runtime diagnostics considered part of what the JVM contributes beyond simply translating bytecode instructions?",
+      "why": "The JVM is a managed runtime environment, not only a bytecode translator.",
+      "why_te": "JVM execution engine tho paatu memory areas, GC, threads, exceptions mariyu diagnostics provide chestundi. Ee managed runtime services Java applications ki common execution environment ni istayi.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "services": [
+            "Heap and stacks",
+            "Garbage collection",
+            "Threads",
+            "Exceptions",
+            "JIT compilation",
+            "Runtime diagnostics"
+          ],
+          "runtime": "OpenJDK 21"
+        }
+      }
+    },
+    {
+      "title": "Verify the concrete JVM implementation",
+      "question": "The JVM is a specification, but your computer runs a concrete implementation such as OpenJDK HotSpot with a particular version and vendor build. Why should `java --version` be checked when debugging behavior that may depend on the exact runtime implementation?",
+      "why": "The command identifies the concrete Java runtime available on the current environment.",
+      "why_te": "JVM concept/specification common aina kuda actual runtime implementation version/vendor specific details kaligi untundi. `java --version` current process ki available concrete JVM ni identify chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    },
+    {
+      "title": "Launch AeroTopo through the JVM",
+      "question": "Once class loading, verification, linking, initialization, and execution services are available, the JVM can invoke the application's `main` method and continue executing framework code. What does a successful AeroTopo launch demonstrate about the complete JVM path from compiled classes to a running Java process?",
+      "why": "A successful launch demonstrates the full path from class files to runtime execution.",
+      "why_te": "Successful launch compiled class files nundi class loading, runtime initialization mariyu execution varaku full JVM path work chestundani demonstrate chestundi. Spring Boot kuda ade JVM process lo execute avutundi.",
+      "software": "intellij",
+      "required_capability": "run-java-main",
+      "feature_available": true,
+      "action": {
+        "action": "runJavaMain",
+        "data": {
+          "name": "AeroTopoApplication",
+          "mainClass": "com.aerotopo.AeroTopoApplication",
+          "console": "JVM: OpenJDK 21\nLoading com.aerotopo.AeroTopoApplication\nInvoking public static void main(String[] args)\nAeroTopo application started"
+        }
+      }
+    }
+  ]
+}

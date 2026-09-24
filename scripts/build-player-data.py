@@ -66,6 +66,21 @@ def read_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def question_word_count(text: str) -> int:
+    return len(str(text or "").strip().split())
+
+
+def minimum_step_question_words() -> int:
+    reference = read_json(SIM_ROOT / "lessons" / "0001.json")
+    steps = reference.get("steps") or []
+    if not steps:
+        raise SystemExit("Lesson 1 must contain Step 1 so the #Q1 word-count baseline can be measured")
+    baseline = question_word_count(steps[0].get("question", ""))
+    if baseline < 1:
+        raise SystemExit("Lesson 1 Step 1 question cannot be empty")
+    return baseline
+
+
 def language_for(path: str) -> str:
     ext = Path(path).suffix.lower()
     return {
@@ -133,6 +148,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 f"{chapter.get('id', 'chapter')} has {lesson_count} lessons; maximum is {MAX_LESSONS_PER_CHAPTER}"
             )
 
+    min_step_question_words = minimum_step_question_words()
     stages = []
     seen_question_ids: set[int] = set()
     seen_step_questions: set[str] = set()
@@ -169,6 +185,12 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 if not step_question:
                     raise SystemExit(
                         f"Question {question_id}, step {step_index + 1} is missing its unique English #Q1 question"
+                    )
+                step_question_words = question_word_count(step_question)
+                if step_question_words < min_step_question_words:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} has only {step_question_words} words; "
+                        f"the Step 1 #Q1 baseline is {min_step_question_words} words and questions must never be summarized below it"
                     )
                 if not step_why_te:
                     raise SystemExit(
@@ -400,6 +422,7 @@ def main() -> None:
         "published_step_count": published_step_count,
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
         "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
+        "min_step_question_words": minimum_step_question_words(),
     }
     (SITE / "simulation-summary.json").write_text(
         json.dumps(summary, indent=2) + "\n",

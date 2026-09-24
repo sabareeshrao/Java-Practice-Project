@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Jump to a class — Ctrl+N",
-      "question": "A large Java project may contain hundreds of classes across many packages. Why is Ctrl+N a shortcut worth using repeatedly instead of navigating the package tree every time?",
+      "question": "In the cumulative AeroTopo learning project, the \"Jump to a class — Ctrl+N\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A large Java project may contain hundreds of classes across many packages. Why is Ctrl+N a shortcut worth using repeatedly instead of navigating the package tree every time?",
       "why": "Go to Class searches directly by type name, which makes class-level navigation scale better as the project grows.",
       "why_te": "Large Java project lo chala classes untayi. Ctrl+N class name nundi direct ga search chestundi kabatti package tree repeatedly expand cheyyalsina avasaram taggutundi.",
       "software": "intellij",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Jump to any symbol — Ctrl+Alt+Shift+N",
-      "question": "Sometimes you know a method or field name but not the class that contains it. Why is Go to Symbol useful in that situation?",
+      "question": "In the cumulative AeroTopo learning project, the \"Jump to any symbol — Ctrl+Alt+Shift+N\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Sometimes you know a method or field name but not the class that contains it. Why is Go to Symbol useful in that situation?",
       "why": "Symbol search works across members rather than only filenames or class names, so it helps when your memory starts from behavior instead of location.",
       "why_te": "Method leda field peru telisi class peru teliyakapoina Go to Symbol project-wide members ni search chestundi. Location kanna behavior gurthunte idi useful.",
       "software": "intellij",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Search project text — Ctrl+Shift+F",
-      "question": "Navigation shortcuts work best when you know a symbol, but sometimes you only remember a string, property, or fragment of code. Why is Ctrl+Shift+F useful then?",
+      "question": "In the cumulative AeroTopo learning project, the \"Search project text — Ctrl+Shift+F\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Navigation shortcuts work best when you know a symbol, but sometimes you only remember a string, property, or fragment of code. Why is Ctrl+Shift+F useful then?",
       "why": "Find in Files searches project text across files and is ideal for configuration values, messages, SQL fragments, and code patterns.",
       "why_te": "Symbol exact ga teliyakapoina string, property leda code fragment gurthunte Ctrl+Shift+F project files anni search chestundi.",
       "software": "intellij",
@@ -67,7 +67,7 @@
     },
     {
       "title": "Show parameter information — Ctrl+P",
-      "question": "Overloaded methods can have several argument combinations. Why is Ctrl+P useful while writing a method call?",
+      "question": "In the cumulative AeroTopo learning project, the \"Show parameter information — Ctrl+P\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Overloaded methods can have several argument combinations. Why is Ctrl+P useful while writing a method call?",
       "why": "Parameter Info shows the expected method signature at the call site so you can choose arguments without leaving the editor.",
       "why_te": "Overloaded method call rasetappudu Ctrl+P expected parameter signatures ni current place lo chupistundi. Documentation kosam flow break cheyyalsina avasaram taggutundi.",
       "software": "intellij",
@@ -85,7 +85,7 @@
     },
     {
       "title": "Invoke code completion — Ctrl+Space",
-      "question": "A productive IDE should help you discover valid members and APIs from the current type context. Why is Ctrl+Space a frequently used editing shortcut?",
+      "question": "In the cumulative AeroTopo learning project, the \"Invoke code completion — Ctrl+Space\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. A productive IDE should help you discover valid members and APIs from the current type context. Why is Ctrl+Space a frequently used editing shortcut?",
       "why": "Code completion uses the typed project model to suggest relevant symbols, reducing memorization and typing mistakes.",
       "why_te": "Ctrl+Space typed project context nundi relevant members mariyu APIs suggest chestundi. Memorization burden mariyu typing mistakes taggutayi.",
       "software": "intellij",
@@ -105,7 +105,7 @@
     },
     {
       "title": "Open context actions — Alt+Enter",
-      "question": "Why does Alt+Enter remain useful even for experienced developers who already know Java syntax well?",
+      "question": "In the cumulative AeroTopo learning project, the \"Open context actions — Alt+Enter\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Why does Alt+Enter remain useful even for experienced developers who already know Java syntax well?",
       "why": "Many IDE actions are context-specific—imports, quick fixes, inspections, and transformations—so the best option depends on the exact caret location.",
       "why_te": "Experienced developer ki kuda Alt+Enter useful endukante imports, quick fixes, inspections mariyu transformations current caret context batti marutayi.",
       "software": "intellij",
@@ -126,7 +126,7 @@
     },
     {
       "title": "Use safe Rename — Shift+F6",
-      "question": "Changing a Java symbol by raw text replacement can miss references or change unrelated text. Why is Shift+F6 safer for renaming code symbols?",
+      "question": "In the cumulative AeroTopo learning project, the \"Use safe Rename — Shift+F6\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Changing a Java symbol by raw text replacement can miss references or change unrelated text. Why is Shift+F6 safer for renaming code symbols?",
       "why": "Rename is a semantic refactoring that uses IntelliJ's symbol model to identify related references before applying a change.",
       "why_te": "Shift+F6 raw text replacement kaadu; IntelliJ symbol model use chesi related references ni identify chese semantic refactoring. Anduke rename safer.",
       "software": "intellij",
@@ -144,7 +144,7 @@
     },
     {
       "title": "Optimize imports — Ctrl+Alt+O",
-      "question": "Java files accumulate unused or disordered imports as code changes. Why is Ctrl+Alt+O a useful cleanup shortcut in normal development?",
+      "question": "In the cumulative AeroTopo learning project, the \"Optimize imports — Ctrl+Alt+O\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Java files accumulate unused or disordered imports as code changes. Why is Ctrl+Alt+O a useful cleanup shortcut in normal development?",
       "why": "Optimize Imports removes unnecessary imports and normalizes the import section using IDE knowledge of the current file.",
       "why_te": "Code change ayyaka unused imports accumulate avvachu. Ctrl+Alt+O unnecessary imports ni remove chesi import section ni clean ga maintain chestundi.",
       "software": "intellij",
@@ -160,7 +160,7 @@
     },
     {
       "title": "Reformat code — Ctrl+Alt+L",
-      "question": "Consistent formatting helps reviews focus on logic rather than whitespace. Why is Ctrl+Alt+L commonly used before finishing an edit?",
+      "question": "In the cumulative AeroTopo learning project, the \"Reformat code — Ctrl+Alt+L\" step connects this concept to a visible IntelliJ workflow and keeps enough technical context for later lessons instead of reducing it to a short interview phrase. Consistent formatting helps reviews focus on logic rather than whitespace. Why is Ctrl+Alt+L commonly used before finishing an edit?",
       "why": "Reformat Code applies the configured code style consistently, reducing manual formatting differences between developers.",
       "why_te": "Ctrl+Alt+L configured code style ni consistent ga apply chestundi. Review lo whitespace differences kanna actual logic meeda focus cheyyadaniki help chestundi.",
       "software": "intellij",

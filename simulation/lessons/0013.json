@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "lesson_number": 13,
+  "question_id": 13,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Multiple JDK and JRE versions on one machine",
+  "info_language": "te-Latn",
+  "answer": "Yes. A machine can have multiple JDK versions installed side by side, and depending on the vendor and Java generation it may also have separate runtime/JRE installations. Each JDK contains the tools needed for development, such as `javac`, along with a runtime capable of executing Java applications. Which Java version a command uses is controlled by configuration such as PATH, JAVA_HOME, SDK managers, container/CI configuration, or the IDE's project/module SDK selection. A single Java process runs on one selected runtime at a time. In modern Java distributions, teams often install JDKs rather than separate JRE packages, so the exact packaging depends on the vendor and version. For AeroTopo, IntelliJ and Maven should consistently use the project's chosen Java 21 baseline.",
+  "steps": [
+    {
+      "title": "Inspect the available SDK table",
+      "question": "Developers often maintain older applications while evaluating newer Java releases, so multiple JDK installations can coexist on one workstation. What should an IDE SDK table make visible so you can distinguish installed Java versions from the single version selected for the current project?",
+      "why": "The SDK table distinguishes installed runtimes/toolchains from the version assigned to the current project.",
+      "why_te": "SDK table installed Java homes/versions ni list cheyyagaladu. Multiple versions machine lo undavachu, kani current project ki select ayina SDK separate decision ani ee view clarify chestundi.",
+      "software": "intellij",
+      "required_capability": "show-sdk-table",
+      "feature_available": true,
+      "action": {
+        "action": "showSdkTable",
+        "data": {
+          "sdks": [
+            {
+              "name": "Java 17",
+              "home": "C:/Java/jdk-17"
+            },
+            {
+              "name": "Java 21",
+              "home": "C:/Java/jdk-21"
+            },
+            {
+              "name": "Java 25",
+              "home": "C:/Java/jdk-25"
+            }
+          ],
+          "selected": "Java 21"
+        }
+      }
+    },
+    {
+      "title": "Inspect AeroTopo's selected Project SDK",
+      "question": "Having several JDKs installed does not automatically determine which one AeroTopo should compile against. Why must IntelliJ store an explicit Project SDK so this repository can consistently use Java 21 even when Java 17 or a newer JDK is also installed?",
+      "why": "The installed SDK list shows machine capability while Project SDK defines the version assigned to AeroTopo.",
+      "why_te": "Installed JDK list machine capability ni chupistundi; Project SDK project choice ni define chestundi. AeroTopo Java 21 baseline explicit ga select cheyyadam valla local environment ambiguity taggutundi.",
+      "software": "intellij",
+      "required_capability": "show-project-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showProjectStructure",
+        "data": {
+          "sdk": "Java 21",
+          "jdkOpen": true
+        }
+      }
+    },
+    {
+      "title": "Open the terminal to inspect PATH selection",
+      "question": "Command-line Java selection can differ from the IDE because the shell resolves executables through environment configuration such as PATH or JAVA_HOME. Why should you inspect the terminal separately instead of assuming IntelliJ's Project SDK automatically controls every shell command?",
+      "why": "IDE and shell can select Java through different configuration mechanisms.",
+      "why_te": "IDE SDK setting mariyu shell PATH/JAVA_HOME independent configuration paths avvachu. Anduke terminal actual ga ye executable resolve chestundo separate ga verify cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Check the active Java runtime",
+      "question": "In the cumulative AeroTopo learning project, the \"Check the active Java runtime\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. When multiple JDKs exist, typing `java` starts whichever runtime is currently selected by the shell environment rather than all installed versions at once. What does `java --version` tell you about the specific runtime chosen for this terminal session?",
+      "why": "The command confirms the runtime resolved by the current shell environment.",
+      "why_te": "`java --version` current PATH/JAVA_HOME resolution dwara active ayina runtime ni chupistundi. Machine lo vere JDKs installed unna kuda current process ee selected runtime meeda start avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    },
+    {
+      "title": "Check the active Java compiler",
+      "question": "A JDK includes development tools such as `javac`, and its compiler version should normally align with the project's intended Java baseline. Why should `javac --version` be checked separately when multiple JDK installations could cause runtime and compiler executables to resolve differently?",
+      "why": "The compiler and runtime executables can be resolved from different locations on a misconfigured machine.",
+      "why_te": "Runtime `java` mariyu compiler `javac` PATH configuration valla different installations nundi resolve avvachu. Renditini verify chesthe mixed toolchain issue mundhe identify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "javac --version",
+          "output": "javac 21"
+        }
+      }
+    },
+    {
+      "title": "Check which JVM Maven is using",
+      "question": "In the cumulative AeroTopo learning project, the \"Check which JVM Maven is using\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. Maven itself runs inside a Java runtime, so a terminal may show the expected `java` command while the build tool still uses a different configured Java home. Why is `mvn -version` useful when verifying a multi-JDK development machine?",
+      "why": "Maven reports the runtime it is actually using for the build process.",
+      "why_te": "`mvn -version` Maven version tho paatu build process use chestunna Java runtime ni report chestundi. Multiple JDK machine lo build tool correct Java 21 meeda undani confirm cheyyadaniki idi important.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "mvn -version",
+          "output": "Apache Maven 3.9.x\nJava version: 21\nJava home: C:/Java/jdk-21"
+        }
+      }
+    },
+    {
+      "title": "Inspect the selected JVM runtime details",
+      "question": "In the cumulative AeroTopo learning project, the \"Inspect the selected JVM runtime details\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. Multiple JDKs may be installed, but each running Java process is associated with one concrete JVM implementation and Java home. What runtime details help you prove which installation the current AeroTopo process would actually use at execution time?",
+      "why": "Runtime version, Java home, and vendor identify the selected process environment.",
+      "why_te": "Runtime version, Java home, vendor mariyu process context actual execution environment ni identify chestayi. Installed versions list kanna current process ki selected JVM detail important.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "runtime": "OpenJDK 21",
+          "javaHome": "C:/Java/jdk-21",
+          "project": "AeroTopo",
+          "note": "One selected JVM per running Java process"
+        }
+      }
+    },
+    {
+      "title": "Verify the chosen version with the project build",
+      "question": "A multi-JDK machine is configured correctly only when the IDE, compiler, Maven process, and project build all agree on the intended baseline. Why should a Maven test run be the final check after verifying the separate Java installations and selections?",
+      "why": "The project test gate proves the separate toolchain selections cooperate correctly.",
+      "why_te": "Final test gate IDE/project configuration mariyu command-line toolchain actual ga same Java baseline tho work chestunnayo prove chestundi. Version checks isolated ga correct unna kuda build integration verify cheyyali.",
+      "software": "intellij",
+      "required_capability": "run-maven-goal",
+      "feature_available": true,
+      "action": {
+        "action": "runMavenGoal",
+        "data": {
+          "goal": "test",
+          "status": "BUILD SUCCESS",
+          "console": "[INFO] Java runtime: 21\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 2
+      "chapterEnd": 3
     }
   ],
   "chapters": [
@@ -41,6 +41,18 @@
         "lessons/0008.json",
         "lessons/0009.json",
         "lessons/0010.json"
+      ]
+    },
+    {
+      "id": "chapter-003",
+      "title": "3: IDE Equivalents & JVM Foundations",
+      "subtitle": "Translate familiar STS shortcut concepts into the IntelliJ-only workflow, then trace JDK/JVM selection, bytecode portability, JVM internals, and a complete Hello World execution path.",
+      "lessons": [
+        "lessons/0011.json",
+        "lessons/0012.json",
+        "lessons/0013.json",
+        "lessons/0014.json",
+        "lessons/0015.json"
       ]
     }
   ],

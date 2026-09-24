@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "lesson_number": 12,
+  "question_id": 12,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "How the JVM makes Java platform-independent",
+  "info_language": "te-Latn",
+  "answer": "The JVM is the key runtime layer behind Java's platform independence. Java source is compiled into platform-neutral bytecode rather than directly into one operating system's native machine code. A JVM implementation for Windows, Linux, macOS, or another supported platform loads and verifies that bytecode, resolves classes, manages memory, interprets or JIT-compiles frequently executed bytecode into native instructions for that machine, and executes the program. This is the basis of the “write once, run anywhere” model: the same compatible bytecode can run on different systems when an appropriate JVM and required dependencies are available. Platform independence is not absolute when an application depends on native libraries, OS-specific paths, external services, or environment-specific behavior.",
+  "steps": [
+    {
+      "title": "Start from platform-neutral Java source",
+      "question": "Java developers write source code without embedding the CPU instruction set of one operating system into each class. When you open AeroTopo's Java entry point, what does that source-level separation suggest about where platform-specific execution responsibility must eventually be handled?",
+      "why": "Source Java stays at the language level while platform-specific execution is handled later by the runtime layer.",
+      "why_te": "Source Java high-level language rules meeda untundi; Windows leda Linux machine instructions direct ga source lo rayamu. Platform-specific execution responsibility later JVM/runtime layer daggara handle avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      }
+    },
+    {
+      "title": "Confirm the Java language and SDK baseline",
+      "question": "Platform independence does not mean a project has no Java-version requirements, because bytecode and APIs still target a chosen Java level. Why should AeroTopo explicitly declare and use Java 21 even though the JVM enables the program to run across operating systems?",
+      "why": "A Java baseline defines bytecode compatibility and available APIs; platform independence is not the same as version independence.",
+      "why_te": "Java version baseline bytecode compatibility mariyu available APIs ni define chestundi. Platform independent ani cheppadam version-independent ani meaning kaadu; supported JVM version still required.",
+      "software": "intellij",
+      "required_capability": "show-project-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showProjectStructure",
+        "data": {
+          "sdk": "Java 21",
+          "jdkOpen": true
+        }
+      }
+    },
+    {
+      "title": "Open the build terminal before compilation",
+      "question": "In the cumulative AeroTopo learning project, the \"Open the build terminal before compilation\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. The platform-independent execution path becomes clearer when compilation and runtime are viewed as separate stages instead of one IDE button. Why should you use the integrated terminal to observe how AeroTopo moves from Java source toward JVM-executable bytecode?",
+      "why": "The terminal exposes compilation and runtime as separate stages rather than hiding them behind one IDE control.",
+      "why_te": "Terminal commands compile stage mariyu runtime stage ni separate ga visible chestayi. IDE abstraction venaka jarige process ni direct ga observe cheyyadaniki idi useful.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Compile AeroTopo into JVM bytecode",
+      "question": "The Java compiler does not normally emit Windows x64 or Linux ARM machine instructions directly; it produces class-file bytecode for the JVM specification. How does running the Maven compile phase demonstrate the portable intermediate representation that separates source code from a particular host machine?",
+      "why": "Maven compile converts Java source into class-file bytecode targeted at the JVM specification.",
+      "why_te": "Maven compile Java source ni `.class` bytecode ga transform chestundi. Ee bytecode JVM specification ni target chestundi kabatti same compiled form different supported operating systems lo JVM dwara execute avvachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "mvn -B -ntp -DskipTests compile",
+          "output": "[INFO] Compiling AeroTopo sources for Java 21\n[INFO] BUILD SUCCESS\n[INFO] Bytecode written under target/classes"
+        }
+      }
+    },
+    {
+      "title": "Inspect the runtime classpath",
+      "question": "In the cumulative AeroTopo learning project, the \"Inspect the runtime classpath\" step connects this concept to a visible IntelliJ workflow and preserves enough technical detail to support later lessons rather than reducing the idea to a short interview phrase. A JVM cannot execute bytecode in isolation when an enterprise application depends on framework and library classes. Why is the runtime classpath part of the platform-independence story even though the bytecode format itself is designed to be portable?",
+      "why": "The JVM must still resolve all required classes and dependencies at runtime.",
+      "why_te": "Portable bytecode ki required classes mariyu dependencies runtime lo resolve avvali. Classpath JVM ki application classes mariyu libraries ekkada unnayo cheptundi; missing dependency unte platform independence alone program ni run cheyyaledu.",
+      "software": "intellij",
+      "required_capability": "show-classpath",
+      "feature_available": true,
+      "action": {
+        "action": "showClasspath",
+        "data": {
+          "entries": [
+            "target/classes",
+            "Spring Boot dependencies",
+            "JDK modules"
+          ],
+          "purpose": "Classes and libraries resolved by the JVM"
+        }
+      }
+    },
+    {
+      "title": "Inspect the JVM runtime layer",
+      "question": "Each operating system needs a JVM implementation that understands the same bytecode specification while translating execution into that machine's native behavior. What responsibilities should you expect the JVM to handle between portable class files and the host operating system?",
+      "why": "The JVM bridges portable bytecode to host execution through loading, verification, JIT/interpreter work, memory management, and runtime services.",
+      "why_te": "JVM class loading, bytecode verification, memory management, interpretation/JIT compilation, threads mariyu native execution integration ni handle chestundi. Ee layer portable bytecode ni host machine execution tho bridge chestundi.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "runtime": "OpenJDK 21 JVM",
+          "bytecode": "Java class files",
+          "execution": [
+            "Class loading",
+            "Bytecode verification",
+            "Interpretation / JIT compilation",
+            "Garbage collection"
+          ],
+          "host": "Current operating system"
+        }
+      }
+    },
+    {
+      "title": "Verify the installed runtime implementation",
+      "question": "The same Java program can move between machines only when each machine has a compatible runtime implementation available. Why does checking `java --version` matter when diagnosing whether a supposedly portable Java application can actually start on a specific environment?",
+      "why": "Portability depends on a compatible JVM being available on the target environment.",
+      "why_te": "Portable application ki compatible JVM implementation installed undali. `java --version` active runtime version/vendor ni confirm chestundi kabatti environment compatibility ni verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    },
+    {
+      "title": "Run the Java application through the JVM",
+      "question": "Compilation creates bytecode, but platform independence becomes useful only when the host JVM loads and executes that bytecode on the current machine. What does successfully launching AeroTopo through Java demonstrate about the separation between portable program representation and platform-specific runtime execution?",
+      "why": "A successful launch demonstrates that portable bytecode and the host-specific JVM cooperate to produce execution.",
+      "why_te": "Application bytecode same Java model ni follow chestundi; current host JVM danini load chesi native machine meeda execute chestundi. Ee separation Java platform independence ki practical base.",
+      "software": "intellij",
+      "required_capability": "run-java-main",
+      "feature_available": true,
+      "action": {
+        "action": "runJavaMain",
+        "data": {
+          "name": "AeroTopoApplication",
+          "mainClass": "com.aerotopo.AeroTopoApplication",
+          "console": "AeroTopo starting on OpenJDK 21\nJVM loaded application bytecode\nApplication process started successfully"
+        }
+      }
+    }
+  ]
+}
