@@ -9,7 +9,7 @@
   "steps": [
     {
       "title": "Open the AeroTopo project in IntelliJ",
-      "why": "Question: What are the advantages and disadvantages of using Java for Enterprise-level development?\n\nStart by grounding the discussion in the project we will build. IntelliJ is the only IDE used in this course. The project is configured for Java 21 so later lessons can connect language features, tooling, testing, Spring, persistence, security, and operations to one cumulative codebase.",
+      "why": "Start by grounding the discussion in the project we will build. IntelliJ is the only IDE used in this course. The project is configured for Java 21 so later lessons can connect language features, tooling, testing, Spring, persistence, security, and operations to one cumulative codebase.",
       "software": "intellij",
       "required_capability": "open-project",
       "feature_available": true,
@@ -137,5 +137,6 @@
         }
       }
     }
-  ]
+  ],
+  "learning_question": "Enterprise Java is chosen for mature JVM portability, static typing, strong tooling, a large library ecosystem, and frameworks such as Spring, but those strengths can also bring higher memory use, slower startup, dependency complexity, and more runtime and framework knowledge. In an enterprise system such as AeroTopo, what are the advantages and disadvantages of using Java?"
 }

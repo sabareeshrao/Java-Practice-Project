@@ -143,6 +143,11 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 raise SystemExit(f"Question {question_id} is missing from interview/questions.json")
 
             question = source["question"]
+            learning_question = str(lesson.get("learning_question") or "").strip()
+            if not learning_question:
+                raise SystemExit(
+                    f"Question {question_id} is missing learning_question; #Q1 requires the question itself to teach the concept before asking."
+                )
             lesson_label = f"Lesson {lesson['lesson_number']} · {question}"
 
             for step_index, raw_step in enumerate(lesson["steps"]):
@@ -164,7 +169,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "lessonMode": lesson["mode"],
                         "projectImpact": lesson["project_impact"],
                         "title": raw_step["title"],
-                        "why": raw_step["why"],
+                        "why": f"Question\n{learning_question}\n\n{raw_step['why']}",
                         "answer": lesson["answer"] if is_last_step else "",
                         "software": software,
                         "required_capability": raw_step.get("required_capability"),
