@@ -4,7 +4,10 @@
   "subtitle": "One interview question per lesson, with cumulative developer actions and the real AeroTopo project as the full-code reference.",
   "ide_policy": {
     "primary_ide": "intellij",
-    "forbidden_ides": ["eclipse", "vscode"]
+    "forbidden_ides": [
+      "eclipse",
+      "vscode"
+    ]
   },
   "books": [
     {
@@ -19,8 +22,11 @@
     {
       "id": "chapter-001",
       "title": "1: Java Foundations — Enterprise Context",
-      "subtitle": "Pilot chapter for the 2,308-question simulation.",
-      "lessons": ["lessons/0001.json"]
+      "subtitle": "Java enterprise context and a repeatable process for tracking ecosystem evolution.",
+      "lessons": [
+        "lessons/0001.json",
+        "lessons/0002.json"
+      ]
     }
   ]
 }

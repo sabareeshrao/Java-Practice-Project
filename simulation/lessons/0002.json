@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "lesson_number": 2,
+  "question_id": 2,
+  "mode": "procedure",
+  "project_impact": "none",
+  "title": "Keeping up with the evolving Java ecosystem",
+  "answer": "I keep up with the Java ecosystem through a controlled engineering loop rather than chasing every new release. I monitor OpenJDK/JDK release notes and JEPs, Spring and major-library release notes, Maven/plugin changes, and security advisories. In the project I keep the Java and framework baselines explicit, inspect the resolved dependency graph, and verify which JDK and Maven versions the build actually uses. I evaluate upgrades in small isolated changes, read migration notes for breaking behavior, then compile and run automated tests before adoption; important runtime changes should also be measured with relevant performance or operational checks. I prefer supported versions that fit the project's compatibility needs, especially appropriate LTS JDKs, and I document upgrade impact and rollback steps. This keeps AeroTopo current without turning production development into an uncontrolled latest-version experiment.",
+  "steps": [
+    {
+      "title": "Open the project build baseline",
+      "question": "A fast-moving ecosystem is manageable only when a project states its current technology baseline explicitly. Before considering any upgrade, why should you first inspect AeroTopo's `pom.xml` rather than starting from whatever versions happen to be installed on your machine?",
+      "why": "The build descriptor is the project's reproducible source of truth for Java, Spring Boot, dependencies, and plugins. Keeping up with the ecosystem begins by knowing exactly what the application is already built against.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "pom.xml"
+        }
+      }
+    },
+    {
+      "title": "Check the declared Java baseline",
+      "question": "Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java.version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
+      "why": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "pom.xml",
+            "line": 15
+          }
+        }
+      }
+    },
+    {
+      "title": "Check the Spring Boot baseline",
+      "question": "Framework releases often determine which Java versions and library combinations are supported together. Why should a Java ecosystem upgrade review include AeroTopo's Spring Boot parent version instead of treating a JDK upgrade as an isolated decision?",
+      "why": "Enterprise upgrades are compatibility decisions across a stack. Spring Boot coordinates many dependency and plugin versions, so its supported Java range and migration notes matter when the JDK or framework changes.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "pom.xml",
+            "line": 7
+          }
+        }
+      }
+    },
+    {
+      "title": "Inspect resolved external libraries",
+      "question": "A Maven file declares direct dependencies, but the application actually runs with a larger resolved graph that includes transitive libraries. Why should you inspect IntelliJ's External Libraries view before deciding that a dependency upgrade is small or low risk?",
+      "why": "The resolved dependency graph exposes the wider compatibility surface. A seemingly small version change can affect transitive APIs, security fixes, runtime behavior, or framework integration.",
+      "software": "intellij",
+      "required_capability": "show-external-libraries",
+      "feature_available": true,
+      "action": {
+        "action": "showExternalLibraries",
+        "data": {}
+      }
+    },
+    {
+      "title": "Open the Maven tool window",
+      "question": "Keeping current requires a repeatable build workflow, not just reading release announcements. How does IntelliJ's Maven tool window help turn ecosystem changes into something the team can inspect, reload, build, test, and reproduce?",
+      "why": "The Maven tool window keeps lifecycle and dependency work tied to the project's declared build model. That makes an upgrade review reproducible instead of depending on ad-hoc IDE state.",
+      "software": "intellij",
+      "required_capability": "open-maven-tool-window",
+      "feature_available": true,
+      "action": {
+        "action": "openMavenToolWindow",
+        "data": {}
+      }
+    },
+    {
+      "title": "Open IntelliJ's integrated terminal",
+      "question": "Release notes tell you what changed, but your local and CI toolchain determines what the project actually executes. Why is a terminal inside the same IntelliJ project useful when validating Java ecosystem upgrades?",
+      "why": "The integrated terminal lets you check the real JDK and Maven commands from the same project context used by the editor. This connects release knowledge to the build that will actually be verified.",
+      "software": "intellij",
+      "required_capability": "open-integrated-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "openIntegratedTerminal",
+        "data": {}
+      }
+    },
+    {
+      "title": "Verify the active JDK",
+      "question": "A `pom.xml` can declare Java 21 while the shell or CI runner uses a different JDK. Before testing an ecosystem upgrade, why must you verify the active runtime instead of assuming the configured version and executable version are identical?",
+      "why": "Version drift produces misleading build results. Confirming the active JDK ensures that compilation and tests are evaluating the environment you think they are evaluating.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "java --version",
+          "output": "openjdk 21"
+        }
+      }
+    },
+    {
+      "title": "Verify Maven's toolchain view",
+      "question": "Maven reports both its own version and the Java runtime it is using. Why is checking `mvn -version` useful before blaming a new library, plugin, or framework release for an upgrade failure?",
+      "why": "Build-tool and runtime mismatches can look like framework problems. Verifying Maven's execution environment removes that ambiguity before deeper migration work begins.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "mvn -version",
+          "output": "Apache Maven 3.9.x\nJava version: 21"
+        }
+      }
+    },
+    {
+      "title": "Prove an upgrade with automated tests",
+      "question": "Reading JEPs, release notes, and security advisories keeps you informed, but production adoption requires evidence from the project itself. Why should a Java ecosystem update finish with an automated build/test gate instead of being accepted simply because the new version starts successfully?",
+      "why": "A controlled upgrade is complete only after the application is verified against its own behavior. Tests provide project-specific evidence for compatibility, and failures give the team a concrete reason to investigate, defer, or roll back the change.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "command": "mvn -B -ntp test",
+          "output": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
+        }
+      }
+    }
+  ]
+}

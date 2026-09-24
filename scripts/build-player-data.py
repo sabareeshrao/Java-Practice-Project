@@ -348,9 +348,11 @@ def main() -> None:
 
     course, questions = load_lessons()
 
-    first_lesson_count = sum(len(stage["steps"]) for stage in course["stages"])
-    if first_lesson_count < 1:
+    published_step_count = sum(len(stage["steps"]) for stage in course["stages"])
+    if published_step_count < 1:
         raise SystemExit("No simulator steps were generated")
+    course_cfg = read_json(COURSE_FILE)
+    published_lesson_count = sum(len(chapter.get("lessons", [])) for chapter in course_cfg["chapters"])
 
     lessons_js = "window.COURSE = " + json.dumps(course, ensure_ascii=False, indent=2) + ";\n"
     (SITE / "lessons.js").write_text(lessons_js, encoding="utf-8")
@@ -358,8 +360,8 @@ def main() -> None:
 
     summary = {
         "source_question_count": len(questions),
-        "published_lesson_count": 1,
-        "published_step_count": first_lesson_count,
+        "published_lesson_count": published_lesson_count,
+        "published_step_count": published_step_count,
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
     }
     (SITE / "simulation-summary.json").write_text(

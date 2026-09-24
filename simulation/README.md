@@ -17,6 +17,7 @@ Rules:
 - Production code is changed only when a question exposes a legitimate project improvement. Otherwise use inspect/demo/procedure/version-lab behavior.
 - The real repository is the Full Code reference. The normal lesson timeline represents the cumulative project state at that point in the learning journey.
 - Simulator/runtime fixes belong in `sabareeshrao/Experiment-VS-Code`, not here.
+- Blue action guidance comes from the master highlighter, must target only the precise action/control, uses the stronger glow, and stays visible for five seconds.
 
 Lesson 1 is the initial pilot used to validate the UI contract, explanation box, blue guidance, cumulative replay, direct step navigation, and Full Code behavior before scaling the curriculum.
 
