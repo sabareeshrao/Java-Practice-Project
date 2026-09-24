@@ -144,6 +144,9 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 raise SystemExit(f"Question {question_id} is missing from interview/questions.json")
 
             question = source["question"]
+            info_language = str(lesson.get("info_language") or "").strip()
+            if info_language != "te-Latn":
+                raise SystemExit(f"Question {question_id} must use info_language=te-Latn for the explanation box")
             lesson_answer = str(lesson.get("answer") or "").strip()
             if not lesson_answer:
                 raise SystemExit(f"Question {question_id} is missing the full lesson answer")
@@ -152,9 +155,15 @@ def load_lessons() -> tuple[dict, list[dict]]:
             for step_index, raw_step in enumerate(lesson["steps"]):
                 is_last_step = step_index == len(lesson["steps"]) - 1
                 step_question = str(raw_step.get("question") or "").strip()
+                step_question_te = str(raw_step.get("question_te") or "").strip()
+                step_why_te = str(raw_step.get("why_te") or "").strip()
                 if not step_question:
                     raise SystemExit(
                         f"Question {question_id}, step {step_index + 1} is missing its unique #Q1 question"
+                    )
+                if not step_question_te or not step_why_te:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font info text"
                     )
                 normalized_step_question = " ".join(step_question.casefold().split())
                 if normalized_step_question in seen_step_questions:
@@ -180,9 +189,10 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "lessonMode": lesson["mode"],
                         "projectImpact": lesson["project_impact"],
                         "title": raw_step["title"],
-                        "why": f"Question\n{step_question}\n\n{raw_step['why']}",
+                        "why": f"Question\n{step_question_te}\n\n{step_why_te}",
                         "answer": lesson_answer if is_last_step else "",
                         "answerBox": is_last_step,
+                        "infoLanguage": info_language,
                         "software": software,
                         "required_capability": raw_step.get("required_capability"),
                         "feature_available": raw_step.get("feature_available", True),

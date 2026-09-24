@@ -19,7 +19,9 @@
         "data": {
           "file": "pom.xml"
         }
-      }
+      },
+      "question_te": "Fast-moving Java ecosystem ni safe ga manage cheyyalante project current technology baseline explicit ga undali. Upgrade gurinchi alochinche mundu machine lo install ayina versions meeda depend kakunda AeroTopo `pom.xml` ni enduku inspect cheyyali?",
+      "why_te": "Build descriptor project yokka reproducible source of truth. Java, Spring Boot, dependencies mariyu plugins exact baseline enti ani teliste ecosystem change ni controlled ga compare cheyyachu."
     },
     {
       "title": "Check the declared Java baseline",
@@ -37,7 +39,9 @@
             "line": 15
           }
         }
-      }
+      },
+      "question_te": "Java regular feature releases tho evolve avutundi, kani enterprise projects deliberate ga supported baseline select chestayi. `java.version` property explicit ga undadam valla newer JDK AeroTopo ki correct aa kaada ani evaluate cheyyadam ela easy avutundi?",
+      "why_te": "Explicit Java baseline developer machine nundi project compatibility ni separate chestundi. Upgrade ki clear before/after point vastundi mariyu compiler, CI expectations understandable ga untayi."
     },
     {
       "title": "Check the Spring Boot baseline",
@@ -55,7 +59,9 @@
             "line": 7
           }
         }
-      }
+      },
+      "question_te": "Framework releases ye Java versions mariyu libraries kalisi support avuthayo decide chestayi. JDK upgrade ni isolated decision ga chudakunda Spring Boot parent version ni kuda enduku review cheyyali?",
+      "why_te": "Enterprise upgrade oka full-stack compatibility decision. Spring Boot chala dependency mariyu plugin versions ni coordinate chestundi kabatti supported Java range mariyu migration notes important."
     },
     {
       "title": "Inspect resolved external libraries",
@@ -67,7 +73,9 @@
       "action": {
         "action": "showExternalLibraries",
         "data": {}
-      }
+      },
+      "question_te": "Maven file direct dependencies ni declare chestundi, kani runtime lo transitive libraries tho pedda resolved graph untundi. Dependency upgrade small change ani decide cheyyadaniki mundu IntelliJ External Libraries ni enduku inspect cheyyali?",
+      "why_te": "Resolved dependency graph wider compatibility surface ni chupistundi. Chinna version change kuda transitive APIs, security fixes, runtime behavior leda framework integration ni affect cheyyachu."
     },
     {
       "title": "Open the Maven tool window",
@@ -79,7 +87,9 @@
       "action": {
         "action": "openMavenToolWindow",
         "data": {}
-      }
+      },
+      "question_te": "Release announcements chadavadam matrame current ga undadaniki saripodu; repeatable build workflow kavali. IntelliJ Maven tool window ecosystem changes ni inspect, reload, build, test mariyu reproduce cheyyadaniki ela help chestundi?",
+      "why_te": "Maven tool window lifecycle mariyu dependency work ni declared build model tho link chestundi. Dini valla upgrade review ad-hoc IDE state meeda kakunda reproducible ga untundi."
     },
     {
       "title": "Open IntelliJ's integrated terminal",
@@ -91,7 +101,9 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
-      }
+      },
+      "question_te": "Release notes em marchindo cheptayi, kani local mariyu CI toolchain actual ga em execute chestundo validation decide chestundi. Java ecosystem upgrade check cheyyadaniki same IntelliJ project lo terminal enduku useful?",
+      "why_te": "Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi."
     },
     {
       "title": "Verify the active JDK",
@@ -106,7 +118,9 @@
           "command": "java --version",
           "output": "openjdk 21"
         }
-      }
+      },
+      "question_te": "`pom.xml` Java 21 declare chesina kuda shell leda CI vere JDK use cheyyachu. Upgrade test cheyyadaniki mundu configured version mariyu actual executable version same ani assume cheyyakunda active runtime ni enduku verify cheyyali?",
+      "why_te": "Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi."
     },
     {
       "title": "Verify Maven's toolchain view",
@@ -121,7 +135,9 @@
           "command": "mvn -version",
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
-      }
+      },
+      "question_te": "Maven tana version tho paatu adi use chestunna Java runtime ni kuda report chestundi. New library leda framework ni blame cheyyadaniki mundu `mvn -version` check cheyyadam enduku useful?",
+      "why_te": "Build-tool/runtime mismatch framework problem laga kanipinchachu. Maven execution environment ni munduga verify chesthe deeper migration analysis clear ga untundi."
     },
     {
       "title": "Prove an upgrade with automated tests",
@@ -136,7 +152,10 @@
           "command": "mvn -B -ntp test",
           "output": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
-      }
+      },
+      "question_te": "JEPs, release notes, security advisories knowledge istayi, kani production adoption ki project evidence kavali. New version start ayindi ani matrame accept cheyyakunda Java ecosystem update ni automated build/test gate tho enduku finish cheyyali?",
+      "why_te": "Controlled upgrade app own behavior meeda verify ayyaka matrame complete. Tests compatibility ki project-specific evidence istayi; failure vachina investigate, defer leda rollback cheyyadaniki concrete signal dorukutundi."
     }
-  ]
+  ],
+  "info_language": "te-Latn"
 }

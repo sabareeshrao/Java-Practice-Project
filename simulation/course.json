@@ -22,10 +22,11 @@
     {
       "id": "chapter-001",
       "title": "1: Java Foundations — Enterprise Context",
-      "subtitle": "Java enterprise context and a repeatable process for tracking ecosystem evolution.",
+      "subtitle": "Java enterprise context, ecosystem evolution, and IntelliJ/Maven setup workflows.",
       "lessons": [
         "lessons/0001.json",
-        "lessons/0002.json"
+        "lessons/0002.json",
+        "lessons/0003.json"
       ]
     }
   ]
