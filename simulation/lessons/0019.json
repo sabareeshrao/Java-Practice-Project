@@ -101,7 +101,7 @@
       "title": "Connect the error to JVM startup",
       "question": "The compiler accepted the class, but the launcher rejected it because startup occurs before there is any `NonStaticMainDemo` object available for an instance call. How does this result explain the practical reason the recognized Java application entry point is static?",
       "why": "Static lets the launcher invoke the method directly from the class without constructing an application object first.",
-      "why_te": "JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.",
+      "why_te": "JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.",
       "software": "intellij",
       "required_capability": "show-jvm-runtime",
       "feature_available": true,

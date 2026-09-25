@@ -106,7 +106,7 @@
       "title": "Inspect the JVM",
       "question": "The JVM is narrower than the whole JDK because its job begins after compiled bytecode is available. When IntelliJ visualizes class loading, verification, interpretation or JIT compilation, and garbage collection, which part of the Java platform stack are you observing?",
       "why": "Those services belong to JVM execution rather than source compilation or the complete developer kit.",
-      "why_te": "JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.",
+      "why_te": "JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.",
       "software": "intellij",
       "required_capability": "show-jvm-runtime",
       "feature_available": true,

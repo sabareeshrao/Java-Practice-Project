@@ -20,7 +20,7 @@
           "file": "pom.xml"
         }
       },
-      "why_te": "pom.xml ni open chesi relevant code ni chuddam. Build descriptor project yokka main project config. Java, Spring Boot, dependencies mariyu plugins exact current version enti ani teliste ecosystem change ni controlled ga compare cheyyachu."
+      "why_te": "pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu."
     },
     {
       "title": "Check the declared Java baseline",
@@ -40,7 +40,7 @@
           }
         }
       },
-      "why_te": "Highlight ayina line ni chudandi. clear Java current version developer machine nundi project compatibility ni separate chestundi. Upgrade ki clear before/after point vastundi mariyu compiler, CI expectations clear ga untayi."
+      "why_te": "Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi."
     },
     {
       "title": "Check the Spring Boot baseline",
@@ -172,7 +172,7 @@
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
       },
-      "why_te": "Ee command run chesi output ni chudandi. Build-tool/runtime mismatch framework problem laga kanipinchachu. Maven execution environment ni munduga verify chesthe deeper migration analysis clear ga untundi."
+      "why_te": "`mvn -version` Maven ye Java version use chestundo chupistundi. IntelliJ and Maven different Java versions use chesthe build result confuse cheyyachu. Renditlo same Java version unda ani check cheyyali."
     },
     {
       "title": "Prove an upgrade with automated tests",
@@ -192,7 +192,7 @@
           "output": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
       },
-      "why_te": "Ee command run chesi output ni chudandi. Controlled upgrade app own behavior meeda verify ayyaka matrame complete. Tests compatibility ki project-specific evidence istayi."
+      "why_te": "Maven tests run chesi application expected ga work chestunda check chestam. Upgrade taruvata tests pass ayithe main behavior break avvaledu ani confidence vastundi."
     }
   ],
   "info_language": "te-Latn"

@@ -102,7 +102,7 @@
       "title": "Inspect the JVM entry-point rule",
       "question": "The overloaded methods are present and valid, yet normal startup still enters `main(String[])`, so the distinction belongs to the launch protocol rather than ordinary overload resolution. How should the JVM view represent the recognized entry point alongside the available overloads?",
       "why": "The runtime should identify the String-array main as the launcher entry point while listing the others as ordinary overloads.",
-      "why_te": "JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.",
+      "why_te": "JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.",
       "software": "intellij",
       "required_capability": "show-jvm-runtime",
       "feature_available": true,

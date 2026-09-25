@@ -27,7 +27,7 @@
       "title": "Focus on Integer to String conversion",
       "question": "The inner call `Integer.toString(truncated)` creates the textual decimal representation of the current integer value without manual concatenation. Why is an explicit conversion API often clearer when the program needs a String value for storage, logging, serialization, or another text-oriented operation?",
       "why": "The API makes the conversion intent explicit and returns a String representation of the numeric value.",
-      "why_te": "Highlight ayina line ni chudandi. `Integer.toString` numeric value ni clear ga textual representation ga convert chestundi. Logging, serialization leda text-oriented processing kosam intent clear ga kanipistundi.",
+      "why_te": "Highlight ayina line ni chudandi. `Integer.toString` integer value ni String ga marchutundi. Example 258 value `\"258\"` text ga avutundi. Logging leda text output kosam idi useful.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,

@@ -130,7 +130,7 @@
       "title": "Inspect the selected JVM runtime details",
       "question": "Runtime version, Java home, and vendor identify the selected process environment. Multiple JDKs may be installed, but each running Java process is associated with one concrete JVM implementation and Java home. What runtime details help you prove which installation the current AeroTopo process would actually use at execution time?",
       "why": "Runtime version, Java home, and vendor identify the selected process environment.",
-      "why_te": "JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.",
+      "why_te": "JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.",
       "software": "intellij",
       "required_capability": "show-jvm-runtime",
       "feature_available": true,

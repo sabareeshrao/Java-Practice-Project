@@ -150,7 +150,7 @@
       "title": "Use the current project's terminal",
       "question": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE. A project-specific IDE setup should still expose the real CLI environment. What does using IntelliJ's terminal add to the AeroTopo workflow?",
       "why": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE.",
-      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. IntelliJ terminal same project context lo Java, Maven, Git mariyu diagnostic commands direct ga run cheyyadaniki help chestundi.",
+      "why_te": "IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Commands same project folder nundi run avutayi kabatti current project context clear ga untundi.",
       "software": "intellij",
       "required_capability": "open-integrated-terminal",
       "feature_available": true,

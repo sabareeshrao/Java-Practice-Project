@@ -53,7 +53,8 @@ Every `why_te` uses **Option B — Very easy learner style**.
 - Use short sentences and one idea at a time.
 - Normally use 2–3 sentences.
 - Keep explanations between **15 and 55 words**.
-- Do not use lecture-style coaching, forced translations, motivational filler, or repeated phrases.
+- Do not use lecture-style coaching, forced translations, motivational filler, or artificial padding.
+- Repeated simple explanations are allowed when the same UI concept genuinely repeats; do not make wording complex just to force uniqueness.
 - The living readable corpus is `simulation/OPTION_B_EXPLANATION_TEXTS.md`; future lesson batches must append their new explanation text there.
 
 ## Playback file coverage

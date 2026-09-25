@@ -103,7 +103,7 @@
       "title": "Launch the parent class directly",
       "question": "Static method selection is tied to the class being referenced rather than runtime object polymorphism. When the Java launcher is given `ParentMain` as the startup class, which main method should execute and what does that tell you about static dispatch?",
       "why": "Launching the parent should execute the parent's own static main method.",
-      "why_te": "Ee command run chesi output ni chudandi. `java ParentMain` appudu launcher ParentMain class lo unna standard static main ni execute chestundi. Runtime child object dispatch ikkada jaragadu.",
+      "why_te": "`java ParentMain` run chesthe ParentMain lo unna static main execute avutundi. Child class method automatic ga run avvadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,

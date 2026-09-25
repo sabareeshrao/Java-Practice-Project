@@ -171,7 +171,7 @@
       "title": "Open the integrated terminal",
       "question": "It keeps Java, Maven, Git, and diagnostics accessible in the same workspace while preserving direct command-line verification. Using an IDE should not hide the actual command-line tools behind proprietary buttons. Why is IntelliJ's integrated terminal important to your development workflow?",
       "why": "It keeps Java, Maven, Git, and diagnostics accessible in the same workspace while preserving direct command-line verification.",
-      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal valla Java, Maven, Git mariyu diagnostic commands same workspace lo direct ga run cheyyachu. IDE buttons meeda matrame depend avvalsina avasaram undadu.",
+      "why_te": "IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Same project folder lo commands run avvadam valla IDE buttons meeda matrame depend avvalsina avasaram undadu.",
       "software": "intellij",
       "required_capability": "open-integrated-terminal",
       "feature_available": true,

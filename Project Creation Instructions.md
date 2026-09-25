@@ -300,6 +300,7 @@ Rules:
   - "screen/action lo kanipinche evidence ni question concept tho connect cheyyandi"
   - "reason cheyyandi" when a simpler sentence works.
 - If the learner can understand the point in a shorter simple sentence, prefer the shorter sentence.
+- Repeated simple explanations are allowed when the same UI concept genuinely repeats. Never add fake wording only to make explanations unique.
 
 Preferred example:
 

@@ -21,6 +21,7 @@ Rules:
 - Usually keep the explanation between **15 and 55 words**.
 - Two or three short sentences are normally enough.
 - The explanation should simply tell the learner what is happening and why it matters.
+- Repeated simple explanations are allowed when the same UI concept genuinely repeats. Do not add fake wording only to make text unique.
 
 ### Preferred example
 
@@ -50,7 +51,7 @@ AeroTopo project ni IntelliJ lo open chesi start cheddam. Manam build cheyyaboye
 
 ### Step 2 — Inspect the Maven project descriptor
 
-pom.xml ni open chesi relevant code ni chuddam. Java enterprise project lo syntax matrame kaadu. tools and libraries kuda mukhyam.
+pom.xml ni open chesi relevant code ni chuddam. Java enterprise project lo syntax matrame kaadu. Tools and libraries kuda important.
 
 ### Step 3 — Focus on the Spring Boot parent
 
@@ -58,7 +59,7 @@ Highlight ayina line ni chudandi. Spring Boot parent compatible dependency mariy
 
 ### Step 4 — Inspect the starter dependencies
 
-Highlight ayina line ni chudandi. Web, validation mariyu test starters Java ecosystem lo ready-made tools unnayi ani chupistayi. HTTP handling, validation, testing infrastructure ni scratch nundi build cheyyakunda ready-made libraries ni use chestam.
+Highlight ayina starter dependencies ni chudandi. Web starter REST API build cheyyadaniki help chestundi. Validation starter input checks kosam use chestam. Test starter tests run cheyyadaniki required tools istundi.
 
 ### Step 5 — Open IntelliJ External Libraries
 
@@ -70,25 +71,25 @@ AeroTopoApplication.java ni open chesi relevant code ni chuddam. Application nor
 
 ### Step 7 — Focus on the Spring Boot application declaration
 
-Highlight ayina line ni chudandi. Oka annotation tho auto-configuration mariyu component scanning activate avutayi. Productivity ekkuva avutundi, kani framework em chestundo ardham kakapothe startup behavior mariyu configuration confusing ga anipinchachu.
+Highlight ayina `@SpringBootApplication` ni chudandi. Ee annotation Spring Boot application setup ni start chestundi. Auto-configuration and component scanning kuda enable avutayi.
 
 ### Step 8 — Open IntelliJ's integrated terminal
 
-IntelliJ terminal ni open chesi commands run cheddam. Enterprise development editor tho matrame ayipodu. IntelliJ integrated terminal lo JDK, Maven, Git, test mariyu diagnostic commands run cheyyadam valla context switch taggipoyi same project lo workflow untundi.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Separate terminal ki switch avvalsina avasaram taggutundi. Same project folder lo commands run avvadam valla work easy ga untundi.
 
 ### Step 9 — Confirm the Java runtime from IntelliJ
 
-Ee command run chesi output ni chudandi. Managed JVM GC, JIT, diagnostics, threading mariyu portability istundi. Production team runtime versions, memory behavior, startup mariyu tuning ni kuda ardham chesukovali.
+`java --version` current Java runtime version ni chupistundi. AeroTopo Java 21 expect chestundi. Vere version kanipisthe build leda run issue ravachu.
 
 ## Lesson 2 — Keeping up with the evolving Java ecosystem
 
 ### Step 1 — Open the project build baseline
 
-pom.xml ni open chesi relevant code ni chuddam. Build descriptor project yokka main project config. Java, Spring Boot, dependencies mariyu plugins exact current version enti ani teliste ecosystem change ni controlled ga compare cheyyachu.
+pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.
 
 ### Step 2 — Check the declared Java baseline
 
-Highlight ayina line ni chudandi. clear Java current version developer machine nundi project compatibility ni separate chestundi. Upgrade ki clear before/after point vastundi mariyu compiler, CI expectations clear ga untayi.
+Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.
 
 ### Step 3 — Check the Spring Boot baseline
 
@@ -112,11 +113,11 @@ Ee command run chesi output ni chudandi. Version drift misleading build results 
 
 ### Step 8 — Verify Maven's toolchain view
 
-Ee command run chesi output ni chudandi. Build-tool/runtime mismatch framework problem laga kanipinchachu. Maven execution environment ni munduga verify chesthe deeper migration analysis clear ga untundi.
+`mvn -version` Maven ye Java version use chestundo chupistundi. IntelliJ and Maven different Java versions use chesthe build result confuse cheyyachu. Renditlo same Java version unda ani check cheyyali.
 
 ### Step 9 — Prove an upgrade with automated tests
 
-Ee command run chesi output ni chudandi. Controlled upgrade app own behavior meeda verify ayyaka matrame complete. Tests compatibility ki project-specific evidence istayi.
+Maven tests run chesi application expected ga work chestunda check chestam. Upgrade taruvata tests pass ayithe main behavior break avvaledu ani confidence vastundi.
 
 ## Lesson 3 — Add Lombok in IntelliJ
 
@@ -142,7 +143,7 @@ Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project e
 
 ### Step 6 — Reload the Maven project
 
-Reload the Maven project ni simple ga chuddam. Reload cheyyadam valla IntelliJ updated dependency model ni malli resolve chestundi. Appudu editor analysis mariyu build tooling rendu available dependencies gurinchi same state lo untayi.
+Maven reload chesaka IntelliJ updated dependencies ni malli read chestundi. New dependency editor lo kuda available avutundi. Build and IDE rendu same dependency list use cheyyadam important.
 
 ### Step 7 — Inspect resolved libraries
 
@@ -230,7 +231,7 @@ Ee command run chesi output ni chudandi. `git --version` underlying Git client I
 
 ### Step 10 — Finish with automated verification
 
-Maven goal run chesi build result ni chudandi. Automated test gate JDK, Maven build, dependencies, compiled code mariyu test framework anni kalisi correct ga work chestunnayi ani prove chestundi. Tool list kanna ee same result icche verification mukhyam.
+Maven tests pass ayithe JDK, dependencies, compiled code and tests kalisi correct ga work chestunnayi ani confirm avutundi. Tools install ayyayani chudatam kanna actual build pass avvadam better check.
 
 # Lessons 6–10
 
@@ -258,7 +259,7 @@ Spring view lo project beans kanipistayi. Java class Spring manage chestunna obj
 
 ### Step 6 — Open the integrated terminal
 
-IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal valla Java, Maven, Git mariyu diagnostic commands same workspace lo direct ga run cheyyachu. IDE buttons meeda matrame depend avvalsina avasaram undadu.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Same project folder lo commands run avvadam valla IDE buttons meeda matrame depend avvalsina avasaram undadu.
 
 ### Step 7 — Verify the workspace with Maven tests
 
@@ -292,7 +293,7 @@ Spring view lo project beans kanipistayi. Java class Spring manage chestunna obj
 
 ### Step 7 — Use the current project's terminal
 
-IntelliJ terminal ni open chesi commands run cheddam. IntelliJ terminal same project context lo Java, Maven, Git mariyu diagnostic commands direct ga run cheyyadaniki help chestundi.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Commands same project folder nundi run avutayi kabatti current project context clear ga untundi.
 
 ### Step 8 — Prove the current-project setup
 
@@ -302,7 +303,7 @@ Maven goal run chesi build result ni chudandi. Maven test success ayithe current
 
 ### Step 1 — Use the project-standard IDE
 
-AeroTopo project ni IntelliJ lo open chesi start cheddam. Oka standard IDE use chesthe navigation, screenshots, shortcuts mariyu simulator actions consistent ga untayi. Maven build ni IDE nundi independent ga portable ga unchutundi.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. Same IDE use chesthe navigation and shortcuts consistent ga untayi. Maven build IntelliJ bayata kuda run avvachu.
 
 ### Step 2 — Open IntelliJ settings
 
@@ -330,7 +331,7 @@ IntelliJ terminal ni open chesi commands run cheddam. Direct CLI access valla pr
 
 ### Step 8 — Validate the standardized IDE workflow
 
-Maven goal run chesi build result ni chudandi. Maven tests project nundi success ga run ayithe IntelliJ standardization portable build workflow ni break cheyyaledani confirm avutundi.
+Maven tests pass ayithe IntelliJ use chestunna kuda project build Maven dwara correct ga run avutundi ani confirm avutundi.
 
 ## Lesson 9 — A few useful IntelliJ shortcuts
 
@@ -456,11 +457,11 @@ Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga chec
 
 ### Step 3 — Open the build terminal before compilation
 
-IntelliJ terminal ni open chesi commands run cheddam. Terminal commands compile stage mariyu runtime stage ni separate ga visible chestayi. IDE abstraction venaka jarige process ni direct ga observe cheyyadaniki idi useful.
+IntelliJ terminal lo compile and run commands separate ga chudachu. First code compile avutundi. Tarvata JVM compiled code ni run chestundi. Ee difference terminal lo easy ga kanipistundi.
 
 ### Step 4 — Compile AeroTopo into JVM bytecode
 
-Ee command run chesi output ni chudandi. Maven compile Java source ni `.class` bytecode ga transform chestundi. Ee bytecode JVM specification ni target chestundi kabatti same compiled form different supported operating systems lo JVM dwara execute avvachu.
+Maven compile Java source ni `.class` bytecode ga marchutundi. Ee bytecode ni JVM run chestundi. Anduke same compiled classes supported operating systems lo run avvagalavu.
 
 ### Step 5 — Inspect the runtime classpath
 
@@ -468,11 +469,11 @@ Classpath lo application classes and required libraries ekkada unnayo kanipistay
 
 ### Step 6 — Inspect the JVM runtime layer
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Verify the installed runtime implementation
 
-Ee command run chesi output ni chudandi. Portable application ki compatible JVM implementation installed undali. `java --version` active runtime version/vendor ni confirm chestundi kabatti environment compatibility ni verify cheyyachu.
+`java --version` active Java runtime version and vendor ni chupistundi. Project expect chese Java version ade na ani easy ga check cheyyachu.
 
 ### Step 8 — Run the Java application through the JVM
 
@@ -506,7 +507,7 @@ Ee command run chesi output ni chudandi. `mvn -version` Maven version tho paatu 
 
 ### Step 7 — Inspect the selected JVM runtime details
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Verify the chosen version with the project build
 
@@ -532,15 +533,15 @@ Classpath lo application classes and required libraries ekkada unnayo kanipistay
 
 ### Step 5 — Inspect JVM loading and execution stages
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 6 — Inspect JVM-managed runtime services
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Verify the concrete JVM implementation
 
-Ee command run chesi output ni chudandi. JVM concept/specification common aina kuda actual runtime version/vendor specific details kaligi untundi. `java --version` current process ki available concrete JVM ni identify chestundi.
+`java --version` current Java runtime version and vendor ni chupistundi. Machine lo actual ga ye JVM run avutundo ikkada easy ga check cheyyachu.
 
 ### Step 8 — Launch AeroTopo through the JVM
 
@@ -566,7 +567,7 @@ IntelliJ terminal ni open chesi commands run cheddam. Terminal lo `javac`, `java
 
 ### Step 5 — Compile HelloWorld into a class file
 
-Ee command run chesi output ni chudandi. `javac` source ni `HelloWorld.class` bytecode ga compile chestundi. JVM next step lo `.java` text kaakunda ee class-file representation ni load chesi execute chestundi.
+`javac` Java source ni `HelloWorld.class` ga compile chestundi. JVM `.java` file ni direct ga run cheyyadu. Compiled `.class` bytecode ni load chesi execute chestundi.
 
 ### Step 6 — Inspect the generated JVM bytecode
 
@@ -574,7 +575,7 @@ Ee command run chesi output ni chudandi. `javap -c` class file lo JVM bytecode i
 
 ### Step 7 — Inspect the JVM responsibilities before launch
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Run HelloWorld on the selected JVM
 
@@ -606,7 +607,7 @@ Ee command run chesi output ni chudandi. `java --version` current shell nundi ap
 
 ### Step 6 — Inspect the JVM
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Inspect runtime libraries
 
@@ -670,7 +671,7 @@ Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Fil
 
 ### Step 4 — Compile the overloads
 
-Ee command run chesi output ni chudandi. Compile success overload methods Java language rules prakaram legal ani prove chestundi. JVM launcher ye main ni startup entry point ga select chestundo separate runtime contract.
+Compile success ayithe three main overloads legal Java methods ani telustundi. Kani program start appudu JVM standard `main(String[])` ni matrame entry point ga use chestundi.
 
 ### Step 5 — Inspect compiled signatures
 
@@ -682,7 +683,7 @@ Ee command run chesi output ni chudandi. Normal `java MainMethodLab` launch appu
 
 ### Step 7 — Separate legality from entry-point selection
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Verify the project
 
@@ -712,7 +713,7 @@ Ee command run chesi output ni chudandi. Normal launcher `public void main(Strin
 
 ### Step 6 — Connect the error to JVM startup
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Delete the temporary demo
 
@@ -738,11 +739,11 @@ IntelliJ current code context batti useful information chupistundi. `static` met
 
 ### Step 5 — Inspect the JVM launch contract
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 6 — Inspect compiled modifiers
 
-Ee command run chesi output ni chudandi. `javap` compiled class method declaration ni chupistundi kabatti `public static` modifiers source editor display matrame kaadani prove chestundi. class file metadata lo kuda launch contract reflect avutundi.
+`javap` compiled class lo `public static` main method ni chupistundi. Ee modifiers source code lo matrame kaadu, compiled class lo kuda untayi.
 
 ### Step 7 — Run the working entry point
 
@@ -778,7 +779,7 @@ Ee command run chesi output ni chudandi. Annotation remove chesaka compile succe
 
 ### Step 6 — Launch the parent class directly
 
-Ee command run chesi output ni chudandi. `java ParentMain` appudu launcher ParentMain class lo unna standard static main ni execute chestundi. Runtime child object dispatch ikkada jaragadu.
+`java ParentMain` run chesthe ParentMain lo unna static main execute avutundi. Child class method automatic ga run avvadu.
 
 ### Step 7 — Launch the child class directly
 
@@ -812,7 +813,7 @@ Ee command run chesi output ni chudandi. `42` command line lo numeric laga kanip
 
 ### Step 6 — Inspect the JVM entry-point rule
 
-JVM view lo Java program runtime lo ela execute avutundo chudachu. Class loading, bytecode verification and JIT lanti steps ikkada kanipistayi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Relate the result to explicit method calls
 
@@ -894,7 +895,7 @@ LanguageLab.java ni open chesi relevant code ni chuddam. `LanguageLab.numericCon
 
 ### Step 2 — Focus on Integer to String conversion
 
-Highlight ayina line ni chudandi. `Integer.toString` numeric value ni clear ga textual representation ga convert chestundi. Logging, serialization leda text-oriented processing kosam intent clear ga kanipistundi.
+Highlight ayina line ni chudandi. `Integer.toString` integer value ni String ga marchutundi. Example 258 value `"258"` text ga avutundi. Logging leda text output kosam idi useful.
 
 ### Step 3 — Focus on String to int parsing
 
@@ -919,4 +920,3 @@ Test run chesi result ni chudandi. IntelliJ JUnit green result current `numericC
 ### Step 8 — Review the passing conversion test
 
 Test run chesi result ni chudandi. Final answer lo `Integer.toString`/`String.valueOf`, `Integer.parseInt`/`Integer.valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi.
-

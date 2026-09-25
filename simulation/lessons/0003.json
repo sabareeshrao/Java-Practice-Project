@@ -120,7 +120,7 @@
       "title": "Reload the Maven project",
       "question": "Reloading forces IntelliJ to resolve the updated dependency model so editor analysis and build tooling agree about what is available. IntelliJ can cache an older Maven model after `pom.xml` changes. Why should you explicitly reload the Maven project after adding Lombok?",
       "why": "Reloading forces IntelliJ to resolve the updated dependency model so editor analysis and build tooling agree about what is available.",
-      "why_te": "Reload the Maven project ni simple ga chuddam. Reload cheyyadam valla IntelliJ updated dependency model ni malli resolve chestundi. Appudu editor analysis mariyu build tooling rendu available dependencies gurinchi same state lo untayi.",
+      "why_te": "Maven reload chesaka IntelliJ updated dependencies ni malli read chestundi. New dependency editor lo kuda available avutundi. Build and IDE rendu same dependency list use cheyyadam important.",
       "software": "intellij",
       "required_capability": "reload-maven-project",
       "feature_available": true,

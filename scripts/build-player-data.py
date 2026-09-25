@@ -305,7 +305,6 @@ def load_lessons() -> tuple[dict, list[dict]]:
     stages = []
     seen_question_ids: set[int] = set()
     seen_step_questions: set[str] = set()
-    seen_explanations: set[str] = set()
 
     for chapter in course_cfg["chapters"]:
         stage_steps = []
@@ -363,13 +362,6 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         f"{explanation_words} words; Option B explanations must stay at or below "
                         f"{MAX_SIMPLE_EXPLANATION_WORDS} words"
                     )
-                normalized_explanation = " ".join(step_why_te.casefold().split())
-                if normalized_explanation in seen_explanations:
-                    raise SystemExit(
-                        f"Duplicate explanation detected at question {question_id}, step {step_index + 1}"
-                    )
-                seen_explanations.add(normalized_explanation)
-
                 normalized_step_question = " ".join(step_question.casefold().split())
                 for forbidden_phrase in FORBIDDEN_QUESTION_BOILERPLATE:
                     if forbidden_phrase in normalized_step_question:
