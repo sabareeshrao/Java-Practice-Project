@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 4
+      "chapterEnd": 5
     }
   ],
   "chapters": [
@@ -65,6 +65,18 @@
         "lessons/0018.json",
         "lessons/0019.json",
         "lessons/0020.json"
+      ]
+    },
+    {
+      "id": "chapter-005",
+      "title": "5: Main Dispatch, Type Casting & Static State",
+      "subtitle": "Finish the Java main-method dispatch rules, then use the existing AeroTopo LanguageLab and JUnit tests to study type casting, shared static state, and Integer/String conversions without duplicating project code.",
+      "lessons": [
+        "lessons/0021.json",
+        "lessons/0022.json",
+        "lessons/0023.json",
+        "lessons/0024.json",
+        "lessons/0025.json"
       ]
     }
   ],

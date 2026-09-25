@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "lesson_number": 22,
+  "question_id": 22,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why the JVM does not directly execute an overloaded main",
+  "info_language": "te-Latn",
+  "answer": "No. When the Java launcher starts a class, it looks for the standard entry-point signature `public static void main(String[] args)` (or the source-equivalent varargs form). Other overloaded methods named `main`, such as `main(int)` or `main(String)`, are normal Java overloads but are not alternative startup signatures that the JVM chooses from automatically. Even if you launch the program with a numeric-looking argument like `42`, that value is delivered as a String inside `String[] args`; the launcher does not switch to `main(int)`. An overloaded main executes only if the standard main method or other Java code calls it explicitly.",
+  "steps": [
+    {
+      "title": "Open the existing overloaded main lab",
+      "question": "The file should visibly contain three methods named main with distinct parameter lists. The permanent `MainMethodLab` already contains the standard String-array entry point plus `main(int)` and `main(String)` overloads, so it provides the exact source needed for this question. What should you verify in the file before testing the launcher's method-selection behavior?",
+      "why": "The file should visibly contain three methods named main with distinct parameter lists.",
+      "why_te": "`MainMethodLab.java` lo standard `main(String[])` tho paatu `main(int)` mariyu `main(String)` overloads already unnayi. Launcher behavior test cheyyadaniki mundu ee three signatures source lo visible ga confirm cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java"
+        }
+      }
+    },
+    {
+      "title": "Inspect all main signatures together",
+      "question": "IntelliJ File Structure separates overloaded methods by parameter list, making it clear that all three declarations are valid members of the same class. Why is this useful before asking which method the Java launcher treats as the application entry point?",
+      "why": "It separates the compile-time fact that overloads exist from the runtime rule that only one signature is recognized for startup.",
+      "why_te": "File Structure three main signatures ni separate members ga chupistundi. Overloads legal ga exist avvadam oka fact; launcher startup ki ye signature recognize chestundo separate runtime rule ani clear avutundi.",
+      "software": "intellij",
+      "required_capability": "show-file-structure",
+      "feature_available": true,
+      "action": {
+        "action": "showFileStructure",
+        "data": {
+          "file": "labs/jvm/MainMethodLab.java"
+        }
+      }
+    },
+    {
+      "title": "Compile all overloads into one class file",
+      "question": "Compilation proves all three overloads are legal Java methods stored in the resulting class file. The Java compiler must accept every overload before we can meaningfully test whether the launcher selects among them. What does a successful compilation of `MainMethodLab.java` establish about `main(String[])`, `main(int)`, and `main(String)`?",
+      "why": "Compilation proves all three overloads are legal Java methods stored in the resulting class file.",
+      "why_te": "Compile success three main methods kuda legal Java overloads ani prove chestundi. Runtime launcher selection ni discuss cheyyadaniki mundu class file lo all signatures valid ga exist avutayi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "javac -d target/main-method-demo labs/jvm/MainMethodLab.java",
+          "output": "Compilation successful\nMainMethodLab.class created",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Inspect the compiled overload descriptors",
+      "question": "The class file itself contains all three methods, so the JVM is not failing to see the overloaded versions. Why does `javap` matter when explaining that the launcher's refusal to choose `main(int)` is a startup-contract rule rather than missing bytecode?",
+      "why": "Javap proves the overloaded methods are present in the compiled class even though they are not launcher entry points.",
+      "why_te": "`javap` output lo `main(String[])`, `main(int)`, `main(String)` anni kanipistayi. Kabatti overloaded methods bytecode lo missing kaavu; startup launcher contract matrame standard signature ni choose chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "javap -classpath target/main-method-demo MainMethodLab",
+          "output": "public static void main(java.lang.String[]);\npublic static void main(int);\npublic static void main(java.lang.String);",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Launch with a numeric-looking argument",
+      "question": "Passing `42` on the command line might look like a reason to choose `main(int)`, but operating-system command-line values reach Java as strings. When `java MainMethodLab 42` runs, why should the standard String-array main still execute instead of the integer overload?",
+      "why": "The launcher always uses the standard entry signature and places command-line text into its String array.",
+      "why_te": "`42` command line lo numeric laga kanipinchina Java launcher danini String argument ga `String[] args` lo pass chestundi. `main(int)` overload ni automatic ga choose cheyyadu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "command": "java -cp target/main-method-demo MainMethodLab 42",
+          "output": "standard main",
+          "exitCode": 0
+        }
+      }
+    },
+    {
+      "title": "Inspect the JVM entry-point rule",
+      "question": "The overloaded methods are present and valid, yet normal startup still enters `main(String[])`, so the distinction belongs to the launch protocol rather than ordinary overload resolution. How should the JVM view represent the recognized entry point alongside the available overloads?",
+      "why": "The runtime should identify the String-array main as the launcher entry point while listing the others as ordinary overloads.",
+      "why_te": "JVM view standard `public static void main(String[] args)` ni entry point ga identify chestundi; `main(int)` mariyu `main(String)` ordinary overloads ga matrame remain avutayi.",
+      "software": "intellij",
+      "required_capability": "show-jvm-runtime",
+      "feature_available": true,
+      "action": {
+        "action": "showJvmRuntime",
+        "data": {
+          "class": "MainMethodLab",
+          "entryPoint": "public static void main(String[] args)",
+          "availableOverloads": [
+            "main(int)",
+            "main(String)"
+          ],
+          "commandLineArguments": "String[] args",
+          "launcherRule": "No automatic overload selection"
+        }
+      }
+    },
+    {
+      "title": "Relate the result to explicit method calls",
+      "question": "An overload executes only when another Java method explicitly invokes that overload with a matching argument type. Overloaded main methods are still callable Java methods even though the launcher will not choose them directly. Based on the compiled signatures and launch result, when would `main(int)` or `main(String)` actually execute in a normal program?",
+      "why": "An overload executes only when another Java method explicitly invokes that overload with a matching argument type.",
+      "why_te": "Overloaded main methods valid methods kabatti Java code explicit ga `main(42)` leda `main(\"value\")` call chesthe execute avutayi. Launcher direct startup selection matrame standard String-array signature ki limited.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/jvm/MainMethodLab.java",
+            "line": 6
+          }
+        }
+      }
+    }
+  ]
+}
