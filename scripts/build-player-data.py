@@ -12,6 +12,7 @@ COURSE_FILE = SIM_ROOT / "course.json"
 
 FORBIDDEN_IDES = {"eclipse", "vscode"}
 MAX_LESSONS_PER_CHAPTER = 5
+MIN_MENTOR_EXPLANATION_WORDS = 45
 FORBIDDEN_QUESTION_BOILERPLATE = (
     "in the cumulative aerotopo learning project",
     "connects this concept to a visible intellij workflow",
@@ -148,6 +149,143 @@ def build_tree(files: dict[str, dict]) -> list[dict]:
     return root
 
 
+def iter_file_refs(value):
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if key == "file" and isinstance(child, str) and child.strip():
+                yield child.strip()
+            yield from iter_file_refs(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from iter_file_refs(child)
+
+
+def collect_seed_reference_paths(stages: list[dict]) -> set[str]:
+    """Return real project files that must exist in the IntelliJ baseline.
+
+    Files created by lesson actions are intentionally excluded so cumulative
+    replay still shows those files appearing at the lesson that creates them.
+    """
+    created_by_lessons: set[str] = set()
+    baseline_refs: set[str] = set()
+
+    for stage in stages:
+        for step in stage.get("steps", []):
+            action = (step.get("action") or {}).get("action")
+            data = (step.get("action") or {}).get("data") or {}
+
+            if action != "createFile":
+                for path in iter_file_refs(data):
+                    if path not in created_by_lessons:
+                        baseline_refs.add(path)
+
+            if action == "createFile":
+                path = str(data.get("path") or "").strip()
+                if path:
+                    created_by_lessons.add(path)
+
+    return baseline_refs
+
+
+def apply_type_code_for_validation(old: str, data: dict, question_id: int, title: str) -> str:
+    code = str(data.get("code") or "")
+    position = str(data.get("position") or "replace")
+    marker = data.get("marker")
+
+    if marker is not None:
+        marker = str(marker)
+        if marker not in old:
+            raise SystemExit(
+                f"Playback validation failed for question {question_id} ({title}): "
+                f"typeCode marker not found: {marker!r}"
+            )
+        if position == "before":
+            return old.replace(marker, code + marker, 1)
+        if position == "after":
+            return old.replace(marker, marker + code, 1)
+        return old.replace(marker, code, 1)
+
+    if position == "start":
+        return code + old
+    if position == "end":
+        return old + code
+    return code
+
+
+def validate_playback_file_references(stages: list[dict], seed: dict) -> None:
+    """Fail the build instead of allowing IntelliJ to silently no-op on a missing file."""
+    files = {
+        path: str(meta.get("content") or "")
+        for path, meta in (seed.get("files") or {}).items()
+    }
+
+    for stage in stages:
+        for step in stage.get("steps", []):
+            question_id = int(step.get("questionId") or 0)
+            title = str(step.get("title") or "step")
+            action_doc = step.get("action") or {}
+            action = str(action_doc.get("action") or "")
+            data = action_doc.get("data") or {}
+
+            if action != "createFile":
+                for path in iter_file_refs(data):
+                    if path not in files:
+                        raise SystemExit(
+                            f"Playback validation failed for question {question_id} ({title}): "
+                            f"{action} references missing IntelliJ file {path!r}"
+                        )
+
+            if action == "highlightTarget":
+                target = data.get("target") or {}
+                if target.get("type") == "line" and target.get("file"):
+                    path = str(target["file"])
+                    line = int(target.get("line") or 0)
+                    lines = files.get(path, "").splitlines()
+                    if line < 1 or line > len(lines):
+                        raise SystemExit(
+                            f"Playback validation failed for question {question_id} ({title}): "
+                            f"highlight line {line} is outside {path} ({len(lines)} lines)"
+                        )
+                    expected = str(target.get("expected_text") or "").strip()
+                    if expected and expected not in lines[line - 1]:
+                        raise SystemExit(
+                            f"Playback validation failed for question {question_id} ({title}): "
+                            f"line {line} in {path} no longer contains expected text {expected!r}; "
+                            f"update the target before publishing"
+                        )
+
+            if action == "createFile":
+                path = str(data.get("path") or "").strip()
+                if path:
+                    files[path] = str(data.get("content") or "")
+            elif action == "deleteResource":
+                path = str(data.get("path") or "").strip()
+                if path and path not in files:
+                    raise SystemExit(
+                        f"Playback validation failed for question {question_id} ({title}): "
+                        f"cannot delete missing file {path!r}"
+                    )
+                files.pop(path, None)
+            elif action == "typeCode":
+                path = str(data.get("file") or "").strip()
+                if path:
+                    files[path] = apply_type_code_for_validation(files[path], data, question_id, title)
+            elif action == "setCode":
+                path = str(data.get("file") or "").strip()
+                if path:
+                    files[path] = str(data.get("code", data.get("content", "")))
+            elif action == "replaceCode":
+                path = str(data.get("file") or "").strip()
+                if path:
+                    find = str(data.get("find") or "")
+                    if find not in files[path]:
+                        raise SystemExit(
+                            f"Playback validation failed for question {question_id} ({title}): "
+                            f"replaceCode text not found in {path}: {find!r}"
+                        )
+                    files[path] = files[path].replace(find, str(data.get("replace") or ""), 1)
+
+
 def load_lessons() -> tuple[dict, list[dict]]:
     questions_doc = read_json(QUESTIONS_FILE)
     by_id = {int(item["id"]): item for item in questions_doc["questions"]}
@@ -166,6 +304,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
     stages = []
     seen_question_ids: set[int] = set()
     seen_step_questions: set[str] = set()
+    seen_explanations: set[str] = set()
 
     for chapter in course_cfg["chapters"]:
         stage_steps = []
@@ -210,6 +349,20 @@ def load_lessons() -> tuple[dict, list[dict]]:
                     raise SystemExit(
                         f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font explanation text"
                     )
+                explanation_words = question_word_count(step_why_te)
+                if explanation_words < MIN_MENTOR_EXPLANATION_WORDS:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} explanation has only "
+                        f"{explanation_words} words; mentor-style explanations require at least "
+                        f"{MIN_MENTOR_EXPLANATION_WORDS} useful words"
+                    )
+                normalized_explanation = " ".join(step_why_te.casefold().split())
+                if normalized_explanation in seen_explanations:
+                    raise SystemExit(
+                        f"Duplicate explanation detected at question {question_id}, step {step_index + 1}"
+                    )
+                seen_explanations.add(normalized_explanation)
+
                 normalized_step_question = " ".join(step_question.casefold().split())
                 for forbidden_phrase in FORBIDDEN_QUESTION_BOILERPLATE:
                     if forbidden_phrase in normalized_step_question:
@@ -261,6 +414,9 @@ def load_lessons() -> tuple[dict, list[dict]]:
             }
         )
 
+    seed_package = build_seed_package(stages)
+    validate_playback_file_references(stages, seed_package)
+
     browser_course = {
         "title": course_cfg["title"],
         "subtitle": course_cfg["subtitle"],
@@ -268,7 +424,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
         "stepLabel": "steps",
         "package": {
             "apps": {
-                "intellij_idea": build_seed_package(),
+                "intellij_idea": seed_package,
             }
         },
         "stages": stages,
@@ -276,7 +432,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
     return browser_course, list(by_id.values())
 
 
-def build_seed_package() -> dict:
+def build_seed_package(stages: list[dict] | None = None) -> dict:
     files = {
         "pom.xml": {"language": "xml", "content": SEED_POM},
         "src/main/java/com/aerotopo/AeroTopoApplication.java": {
@@ -284,6 +440,20 @@ def build_seed_package() -> dict:
             "content": SEED_APP,
         },
     }
+
+    for rel in sorted(collect_seed_reference_paths(stages or [])):
+        if rel in files:
+            continue
+        path = ROOT / rel
+        if not path.exists() or not path.is_file():
+            raise SystemExit(
+                f"Lesson references {rel!r}, but that baseline file does not exist in the real project"
+            )
+        try:
+            content = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError as exc:
+            raise SystemExit(f"Lesson-referenced file is not UTF-8 text: {rel}") from exc
+        files[rel] = {"language": language_for(rel), "content": content}
 
     return {
         "project": {
@@ -493,6 +663,7 @@ def main() -> None:
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
         "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
         "min_step_question_words": minimum_step_question_words(),
+        "min_mentor_explanation_words": MIN_MENTOR_EXPLANATION_WORDS,
         "intellij_ui_policy": "latest validated master feature contracts; prefer rich software-owned surfaces over generic fallbacks",
     }
     (SITE / "simulation-summary.json").write_text(

@@ -44,3 +44,14 @@ The 39-word minimum is a detail floor, not a padding target. Questions must gain
 ## IntelliJ UI fidelity
 
 Every lesson batch must be authored against the latest compatible validated master IntelliJ feature catalog. Prefer specific rich P0/P1 surfaces such as real Search/Go To results, Find Usages, refactoring preview, Maven lifecycle/dependencies/profiles, Spring Services/Beans/Mappings, upgraded editor/project tree, and first-class terminal metadata instead of older generic fallback surfaces.
+## Mentor-style explanations
+
+`why_te` is learner guidance, not a literal translation. Every step must use natural Telugu written in English letters, retain standard technical terms when clearer, contain at least 45 useful words, and explain what to observe, why it matters, and how the visible evidence connects to the concept. Repeated coaching filler and terse note-like sentences are not acceptable.
+
+## Playback file coverage
+
+Every baseline project file referenced by a lesson must be included in the generated IntelliJ seed. Files introduced by `createFile` remain lesson-created and must not be pre-seeded. Generation validates the replay order and fails if an open/highlight/edit action would target a missing file.
+
+## Highlight stability
+
+Line-based `highlightTarget` actions should carry `expected_text`. Generation verifies the current line still contains that text so project edits cannot silently move a lesson highlight onto unrelated code.

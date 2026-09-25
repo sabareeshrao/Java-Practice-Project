@@ -276,6 +276,40 @@ portable mariyu repeatable ga chestundi. Local machine mariyu
 CI rendu ade build model ni use cheyyagalavu.
 ```
 
+### Mentor-style Telugu-in-English explanation contract
+
+The explanation is not a literal translation, a glossary, or a compressed note. It must read like a capable mentor is sitting beside the learner and guiding attention through the current screen.
+
+Every `why_te` must:
+
+- contain at least **45 useful words**,
+- use natural Telugu written in English letters while keeping technical Java/IntelliJ/Maven/Spring terms in English when that is clearer,
+- begin by giving the learner a reason to look at the current file, line, command, popup, test, or tool window,
+- explain **what is happening and why it matters**, not merely restate the English question,
+- tell the learner what evidence to notice on screen,
+- connect that evidence to the concept or developer decision,
+- use 2–4 natural sentences rather than one dense translated sentence,
+- avoid forced Telugu translations of standard technical terms,
+- avoid robotic filler such as repeating "ee step lo manam..." or the same coaching sentence across many steps,
+- remain specific to that action so two different steps do not sound interchangeable.
+
+Good style:
+
+```text
+`java --version` ni just run cheyyadam goal kaadu; output lo active runtime exact ga
+edi ani first chuddam. Ee result terminal PATH/JAVA_HOME selection ni prove chestundi.
+IDE Java 21 chupistunna terminal vere version use chesthe later build issue source-code
+problem laga kanipinchachu, kabatti rendu states ni compare cheyyadam important.
+```
+
+Bad style:
+
+```text
+Java version ni verify chestundi. Idi important. Next step ki vellandi.
+```
+
+The generator must reject explanations below the live minimum and exact duplicate explanations.
+
 ### Answer box
 
 - Intermediate steps: **no Answer UI at all**.
@@ -459,6 +493,37 @@ A lesson can have:
 - later lessons inherit the change.
 
 ---
+
+### Playback seed coverage rule
+
+The IntelliJ playback package must contain every **real baseline project file referenced by a lesson action**. The simulator engine silently ignores `openFile` when the requested file is absent, so missing seed coverage creates stale or apparently blank lessons.
+
+The generator must:
+
+1. scan every lesson action for referenced `file` paths, including nested Spring/Find Usages/result data,
+2. distinguish baseline files from files intentionally introduced later through `createFile`,
+3. copy referenced baseline files from the real project into the IntelliJ seed,
+4. replay lesson file mutations in validation order,
+5. fail the build if an action references a file that does not exist at that point.
+
+Do not solve this by putting lesson-created future files into the baseline; those files must still appear only when their lesson creates them.
+
+### Stable code-highlight targets
+
+Current IntelliJ line highlights are line-based. Until semantic anchors are implemented in the master, every authored line target should also include an `expected_text` guard. The downstream generator must verify that the target line still contains that text. If earlier source edits shift the code, the build should fail rather than silently highlighting the wrong line.
+
+Example:
+
+```json
+{
+  "target": {
+    "type": "line",
+    "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+    "line": 34,
+    "expected_text": "int truncated = (int)metres;"
+  }
+}
+```
 
 ## 13. Cumulative continuity is mandatory
 
@@ -866,7 +931,7 @@ Always preserve these rules:
 - one source question = one lesson,
 - maximum 5 lessons per chapter,
 - every simulator step has a unique English #Q1 question that is never shorter than the Lesson 1 / Step 1 baseline,
-- explanation beneath the question is Telugu written in English letters,
+- explanation beneath the question is a mentor-style Telugu-in-English explanation with at least 45 useful words,
 - only the final step gets the English Answer block,
 - IntelliJ only for Java IDE actions,
 - reuse canonical master actions,

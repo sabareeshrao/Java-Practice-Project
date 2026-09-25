@@ -20,7 +20,7 @@
           "file": "pom.xml"
         }
       },
-      "why_te": "Build descriptor project yokka reproducible source of truth. Java, Spring Boot, dependencies mariyu plugins exact baseline enti ani teliste ecosystem change ni controlled ga compare cheyyachu."
+      "why_te": "Ee step lo pom.xml ni theory example ga kaakunda real project evidence ga use chestunnam; file lo unna relevant part ni question concept tho direct ga match cheyyandi. Build descriptor project yokka reproducible source of truth. Java, Spring Boot, dependencies mariyu plugins exact baseline enti ani teliste ecosystem change ni controlled ga compare cheyyachu."
     },
     {
       "title": "Check the declared Java baseline",
@@ -35,11 +35,12 @@
           "target": {
             "type": "line",
             "file": "pom.xml",
-            "line": 15
+            "line": 15,
+            "expected_text": "<java.version>21</java.version>"
           }
         }
       },
-      "why_te": "Explicit Java baseline developer machine nundi project compatibility ni separate chestundi. Upgrade ki clear before/after point vastundi mariyu compiler, CI expectations understandable ga untayi."
+      "why_te": "Ee blue focus oka visual clue matrame; highlighted token enduku akkada undi, adi remove leda change ayithe behavior ela marutundo reason cheyyandi. Explicit Java baseline developer machine nundi project compatibility ni separate chestundi. Upgrade ki clear before/after point vastundi mariyu compiler, CI expectations understandable ga untayi."
     },
     {
       "title": "Check the Spring Boot baseline",
@@ -54,11 +55,12 @@
           "target": {
             "type": "line",
             "file": "pom.xml",
-            "line": 7
+            "line": 7,
+            "expected_text": "<version>3.5.16</version>"
           }
         }
       },
-      "why_te": "Enterprise upgrade oka full-stack compatibility decision. Spring Boot chala dependency mariyu plugin versions ni coordinate chestundi kabatti supported Java range mariyu migration notes important."
+      "why_te": "Ee blue focus oka visual clue matrame; highlighted token enduku akkada undi, adi remove leda change ayithe behavior ela marutundo reason cheyyandi. Enterprise upgrade oka full-stack compatibility decision. Spring Boot chala dependency mariyu plugin versions ni coordinate chestundi kabatti supported Java range mariyu migration notes important."
     },
     {
       "title": "Inspect resolved external libraries",
@@ -71,7 +73,7 @@
         "action": "showExternalLibraries",
         "data": {}
       },
-      "why_te": "Resolved dependency graph wider compatibility surface ni chupistundi. Chinna version change kuda transitive APIs, security fixes, runtime behavior leda framework integration ni affect cheyyachu."
+      "why_te": "Ee step ni isolated fact laga memorize cheyyakandi; Inspect resolved external libraries lo kanipinche evidence ni question concept tho direct ga connect chesi, project lo eppudu use avutundo reason cheyyandi. Resolved dependency graph wider compatibility surface ni chupistundi. Chinna version change kuda transitive APIs, security fixes, runtime behavior leda framework integration ni affect cheyyachu."
     },
     {
       "title": "Open the Maven tool window",
@@ -117,7 +119,7 @@
           ]
         }
       },
-      "why_te": "Maven tool window lifecycle mariyu dependency work ni declared build model tho link chestundi. Dini valla upgrade review ad-hoc IDE state meeda kakunda reproducible ga untundi."
+      "why_te": "Tool window lo final green/red color kanna dani venaka run ayina lifecycle leda test behavior important; result ni source/configuration tho connect chesi chuddam. Maven tool window lifecycle mariyu dependency work ni declared build model tho link chestundi. Dini valla upgrade review ad-hoc IDE state meeda kakunda reproducible ga untundi."
     },
     {
       "title": "Open IntelliJ's integrated terminal",
@@ -130,7 +132,7 @@
         "action": "openIntegratedTerminal",
         "data": {}
       },
-      "why_te": "Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi."
+      "why_te": "Terminal ni separate tool laga kaakunda same project workspace lo direct verification channel laga chudandi; IDE view mariyu command-line reality okate state ni reflect chestunnaya ani compare cheyyandi. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi."
     },
     {
       "title": "Verify the active JDK",
@@ -150,7 +152,7 @@
           "output": "openjdk 21"
         }
       },
-      "why_te": "Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi."
+      "why_te": "java --version result ni one-line proof laga use cheddam; idi ye assumption ni confirm chestundo identify cheste later troubleshooting lo same pattern easy ga recognize chestaru. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi."
     },
     {
       "title": "Verify Maven's toolchain view",
@@ -170,7 +172,7 @@
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
       },
-      "why_te": "Build-tool/runtime mismatch framework problem laga kanipinchachu. Maven execution environment ni munduga verify chesthe deeper migration analysis clear ga untundi."
+      "why_te": "mvn -version result ni one-line proof laga use cheddam; idi ye assumption ni confirm chestundo identify cheste later troubleshooting lo same pattern easy ga recognize chestaru. Build-tool/runtime mismatch framework problem laga kanipinchachu. Maven execution environment ni munduga verify chesthe deeper migration analysis clear ga untundi."
     },
     {
       "title": "Prove an upgrade with automated tests",
@@ -190,7 +192,7 @@
           "output": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
       },
-      "why_te": "Controlled upgrade app own behavior meeda verify ayyaka matrame complete. Tests compatibility ki project-specific evidence istayi; failure vachina investigate, defer leda rollback cheyyadaniki concrete signal dorukutundi."
+      "why_te": "mvn -B -ntp test result ni one-line proof laga use cheddam; idi ye assumption ni confirm chestundo identify cheste later troubleshooting lo same pattern easy ga recognize chestaru. Controlled upgrade app own behavior meeda verify ayyaka matrame complete. Tests compatibility ki project-specific evidence istayi; failure vachina investigate, defer leda rollback cheyyadaniki concrete signal dorukutundi."
     }
   ],
   "info_language": "te-Latn"

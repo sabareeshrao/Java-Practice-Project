@@ -12,7 +12,7 @@
       "title": "Reopen the numeric conversion method",
       "question": "The method uses Integer.toString to create text and Integer.parseInt to convert that text back into an int. The existing `numericConversions` method already performs an Integer-to-String conversion immediately followed by a String-to-integer conversion, so it directly answers this question without adding duplicate utility code. Which nested calls on the return line perform the round trip?",
       "why": "The method uses Integer.toString to create text and Integer.parseInt to convert that text back into an int.",
-      "why_te": "`LanguageLab.numericConversions` return line lo `Integer.toString(truncated)` integer value ni String ga convert chestundi; outer `Integer.parseInt(...)` aa numeric String ni malli primitive int ga parse chestundi.",
+      "why_te": "LanguageLab.java ni theory example ga kaakunda real project evidence ga use chestunnam; relevant part ni question concept tho direct ga match cheyyandi. `LanguageLab.numericConversions` return line lo `Integer.toString(truncated)` integer value ni String ga convert chestundi; outer `Integer.parseInt(...)` aa numeric String ni malli primitive int ga parse chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -27,7 +27,7 @@
       "title": "Focus on Integer to String conversion",
       "question": "The inner call `Integer.toString(truncated)` creates the textual decimal representation of the current integer value without manual concatenation. Why is an explicit conversion API often clearer when the program needs a String value for storage, logging, serialization, or another text-oriented operation?",
       "why": "The API makes the conversion intent explicit and returns a String representation of the numeric value.",
-      "why_te": "`Integer.toString` numeric value ni explicit ga textual representation ga convert chestundi. Logging, serialization leda text-oriented processing kosam intent clear ga kanipistundi; accidental arithmetic/string concatenation confusion taggutundi.",
+      "why_te": "Blue focus visual clue matrame; highlighted token enduku akkada undi, adi change ayithe behavior ela marutundo reason cheyyandi. `Integer.toString` numeric value ni explicit ga textual representation ga convert chestundi. Logging, serialization leda text-oriented processing kosam intent clear ga kanipistundi; accidental arithmetic/string concatenation confusion taggutundi. Ee step complete ayyaka \"Focus on Integer to String conversion\" ni tool action laga kaakunda concept ki evidence laga mee own words lo explain cheyyagalali.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -37,7 +37,8 @@
           "target": {
             "type": "line",
             "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
-            "line": 37
+            "line": 37,
+            "expected_text": "Integer.parseInt(Integer.toString(truncated))"
           }
         }
       }
@@ -46,7 +47,7 @@
       "title": "Focus on String to int parsing",
       "question": "Invalid numeric text causes NumberFormatException, so external input often requires validation or exception handling. The outer `Integer.parseInt(...)` expects text that represents a valid base-10 integer and returns a primitive `int`. What important failure case must application code consider when the input String comes from users, files, HTTP requests, or other untrusted sources?",
       "why": "Invalid numeric text causes NumberFormatException, so external input often requires validation or exception handling.",
-      "why_te": "`Integer.parseInt` valid numeric text expect chestundi. User/file/HTTP input invalid ga unte `NumberFormatException` ravachu; production code lo validation leda exception handling consider cheyyali.",
+      "why_te": "Blue focus visual clue matrame; highlighted token enduku akkada undi, adi change ayithe behavior ela marutundo reason cheyyandi. `Integer.parseInt` valid numeric text expect chestundi. User/file/HTTP input invalid ga unte `NumberFormatException` ravachu; production code lo validation leda exception handling consider cheyyali. Ee step complete ayyaka \"Focus on String to int parsing\" ni tool action laga kaakunda concept ki evidence laga mee own words lo explain cheyyagalali.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -56,7 +57,8 @@
           "target": {
             "type": "line",
             "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
-            "line": 37
+            "line": 37,
+            "expected_text": "Integer.parseInt(Integer.toString(truncated))"
           }
         }
       }
@@ -65,7 +67,7 @@
       "title": "Compare parseInt with valueOf",
       "question": "parseInt returns primitive int, while valueOf returns an Integer wrapper object. Java offers both `Integer.parseInt(text)` and `Integer.valueOf(text)`, and the difference matters when APIs distinguish primitive values from wrapper objects. When would you choose `parseInt` versus `valueOf` in ordinary application code?",
       "why": "parseInt returns primitive int, while valueOf returns an Integer wrapper object.",
-      "why_te": "`parseInt` primitive `int` return chestundi; `Integer.valueOf` wrapper `Integer` object return chestundi. Downstream API primitive kavala wrapper kavala ane requirement batti method choose cheyyali.",
+      "why_te": "Popup open ayindani matrame point kaadu; current caret/symbol context batti IDE enduku ee information leda action ni suggest chestundo observe chesi eppudu use cheyyalo ardham cheskondi. `parseInt` primitive `int` return chestundi; `Integer.valueOf` wrapper `Integer` object return chestundi. Downstream API primitive kavala wrapper kavala ane requirement batti method choose cheyyali.",
       "software": "intellij",
       "required_capability": "show-quick-documentation",
       "feature_available": true,
@@ -80,7 +82,7 @@
       "title": "Open the regression test covering the round trip",
       "question": "The test verifies the String round trip still returns the original integer value as part of the conversion sequence. The existing `languageSemantics` test checks the full `numericConversions(258.9)` result, including the final element created by converting 258 to text and parsing it back. Why is that assertion useful for guarding this conversion behavior over time?",
       "why": "The test verifies the String round trip still returns the original integer value as part of the conversion sequence.",
-      "why_te": "Existing test final expected `258` value Integer-to-String-to-int round trip correct ga work chestundani guard chestundi. Later code changes conversion behavior ni silently break cheyyakunda regression evidence istundi.",
+      "why_te": "LearningLabTest.java ni theory example ga kaakunda real project evidence ga use chestunnam; relevant part ni question concept tho direct ga match cheyyandi. Existing test final expected `258` value Integer-to-String-to-int round trip correct ga work chestundani guard chestundi. Later code changes conversion behavior ni silently break cheyyakunda regression evidence istundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -95,7 +97,7 @@
       "title": "Inspect the expected final conversion value",
       "question": "The assertion expects the last list element to be `258`, matching the integer that was converted to String and parsed back. How does this result demonstrate a successful round trip when the intermediate textual value itself is not retained in the returned list?",
       "why": "The final integer equality shows that converting to decimal text and parsing the text restored the original numeric value.",
-      "why_te": "Return list lo intermediate String store cheyyakapoyina final element `258` ga undadam `258 -> \"258\" -> 258` round trip successful ani demonstrate chestundi.",
+      "why_te": "Blue focus visual clue matrame; highlighted token enduku akkada undi, adi change ayithe behavior ela marutundo reason cheyyandi. Return list lo intermediate String store cheyyakapoyina final element `258` ga undadam `258 -> \"258\" -> 258` round trip successful ani demonstrate chestundi. Ee step complete ayyaka \"Inspect the expected final conversion value\" ni tool action laga kaakunda concept ki evidence laga mee own words lo explain cheyyagalali.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -105,7 +107,8 @@
           "target": {
             "type": "line",
             "file": "src/test/java/com/aerotopo/LearningLabTest.java",
-            "line": 19
+            "line": 19,
+            "expected_text": "LanguageLab.numericConversions(258.9)"
           }
         }
       }
@@ -114,7 +117,7 @@
       "title": "Run the language semantics test",
       "question": "It confirms the current implementation still converts to text and parses back to the expected numeric result within the tested sequence. The conversion APIs are simple, but using the actual IntelliJ JUnit runner ties the explanation to the code and assertion already maintained by the project. What does a green `languageSemantics` result confirm about the current Integer/String conversion path?",
       "why": "It confirms the current implementation still converts to text and parses back to the expected numeric result within the tested sequence.",
-      "why_te": "IntelliJ JUnit green result current `numericConversions` method lo Integer/String round trip expected ga work chestundani actual project test dwara verify chestundi.",
+      "why_te": "Tool window lo color kanna dani venaka run ayina lifecycle leda test behavior important; result ni source/configuration tho connect chesi chuddam. IntelliJ JUnit green result current `numericConversions` method lo Integer/String round trip expected ga work chestundani actual project test dwara verify chestundi. Ee step complete ayyaka \"Run the language semantics test\" ni tool action laga kaakunda concept ki evidence laga mee own words lo explain cheyyagalali.",
       "software": "intellij",
       "required_capability": "run-junit-method",
       "feature_available": true,
@@ -138,7 +141,7 @@
       "title": "Review the passing conversion test",
       "question": "The Tests tool window now connects the source conversion, expected values, and executed regression check in one workflow. How should you answer the interview question while also mentioning the primitive-versus-wrapper difference and invalid-input behavior that production code must consider?",
       "why": "A complete answer should name toString or String.valueOf, parseInt or valueOf, their return types, and NumberFormatException for invalid numeric text.",
-      "why_te": "Final answer lo `Integer.toString`/`String.valueOf`, `Integer.parseInt`/`Integer.valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi.",
+      "why_te": "Tool window lo color kanna dani venaka run ayina lifecycle leda test behavior important; result ni source/configuration tho connect chesi chuddam. Final answer lo `Integer.toString`/`String.valueOf`, `Integer.parseInt`/`Integer.valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi. Ee step complete ayyaka \"Review the passing conversion test\" ni tool action laga kaakunda concept ki evidence laga mee own words lo explain cheyyagalali.",
       "software": "intellij",
       "required_capability": "show-test-results",
       "feature_available": true,
