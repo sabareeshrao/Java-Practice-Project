@@ -21,7 +21,7 @@ Rules:
 - Production code is changed only when a question exposes a legitimate project improvement. Otherwise use inspect/demo/procedure/version-lab behavior.
 - The real repository is the Full Code reference. The normal lesson timeline represents the cumulative project state at that point in the learning journey.
 - Simulator/runtime fixes belong in `sabareeshrao/Experiment-VS-Code`, not here.
-- Blue action guidance comes from the master highlighter, must target only the precise action/control, uses the stronger glow, ignores premature clear messages, and remains visible for the full five-second notice window.
+- Visual guidance comes from the master highlighter. Every step must declare an explicit highlight contract; controls use a precise blue boundary, code uses a readable line highlight, and terminal commands use their native command focus. Guidance is applied after replay completes so it cannot be erased by the new step.
 
 Lesson 1 is the initial pilot used to validate the UI contract, explanation box, blue guidance, cumulative replay, direct step navigation, and Full Code behavior before scaling the curriculum.
 
@@ -64,3 +64,15 @@ Every baseline project file referenced by a lesson must be included in the gener
 ## Highlight stability
 
 Line-based `highlightTarget` actions should carry `expected_text`. Generation verifies the current line still contains that text so project edits cannot silently move a lesson highlight onto unrelated code.
+## Mandatory highlight contract
+
+Every lesson step must include `highlight` with one of `auto`, `code`, `target`, or `none`.
+
+- Use `code` for the exact source lines being discussed. Opening the right file without highlighting the relevant line is not sufficient.
+- Use `target` for a precise UI control, row, dialog, tool window, result, field, or tab.
+- Use `auto` only when the master can resolve a precise native target after the action completes.
+- Use `none` only when no software-owned visual target exists; provide a reason and start `why_te` with `[no highlight]`.
+
+The generator rejects steps without this contract. If an automatic target fails at runtime, the master explanation card visibly marks the step with `[no highlight]` instead of pretending that something was highlighted.
+
+Code focus must keep the readable left side of the editor visible. Next/Previous/Replay must not push horizontal scroll to the far right.

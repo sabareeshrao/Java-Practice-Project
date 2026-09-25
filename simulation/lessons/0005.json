@@ -25,6 +25,12 @@
             "languageLevel": "21"
           }
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#projectTitle"
+        ]
       }
     },
     {
@@ -41,6 +47,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -87,6 +99,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-maven-head"
+        ]
       }
     },
     {
@@ -100,6 +118,12 @@
       "action": {
         "action": "openGitToolWindow",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"git\"]"
+        ]
       }
     },
     {
@@ -163,6 +187,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-spring-head"
+        ]
       }
     },
     {
@@ -176,6 +206,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -196,6 +232,9 @@
           "command": "java --version",
           "output": "openjdk 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -216,6 +255,9 @@
           "command": "mvn -version",
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -236,6 +278,9 @@
           "command": "git --version",
           "output": "git version 2.x"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -253,6 +298,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

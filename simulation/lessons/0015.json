@@ -23,6 +23,11 @@
           "language": "java",
           "content": ""
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "text": "HelloWorld.java",
+        "scope": "#tree"
       }
     },
     {
@@ -40,6 +45,9 @@
           "position": "replace",
           "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n}\n"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -55,6 +63,12 @@
         "data": {
           "file": "labs/jvm/HelloWorld.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -68,6 +82,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -88,6 +108,9 @@
           "command": "javac -d target/lesson15-demo labs/jvm/HelloWorld.java",
           "output": "Compilation successful\ntarget/lesson15-demo/HelloWorld.class created"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -108,6 +131,9 @@
           "command": "javap -c -classpath target/lesson15-demo HelloWorld",
           "output": "public static void main(java.lang.String[]);\n  0: getstatic\n  3: ldc           #13  // String Hello World\n  5: invokevirtual #15  // PrintStream.println\n  8: return"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -132,6 +158,12 @@
             "Runtime memory management"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -152,6 +184,9 @@
           "command": "java -cp target/lesson15-demo HelloWorld",
           "output": "Hello World"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     }
   ]

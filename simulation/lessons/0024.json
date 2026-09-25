@@ -21,6 +21,16 @@
         "data": {
           "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -41,6 +51,13 @@
             "expected_text": "public static final int VALID"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -61,6 +78,13 @@
             "expected_text": "private static int batches;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -81,6 +105,13 @@
             "expected_text": "private int accepted;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          10
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -101,6 +132,13 @@
             "expected_text": "static { batches = 0; }"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          11
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -121,6 +159,13 @@
             "expected_text": "batches++;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -141,6 +186,13 @@
             "expected_text": "return new Snapshot"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          26
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -179,6 +231,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-p0-bottom"
+        ]
       }
     }
   ]

@@ -20,7 +20,14 @@
           "file": "pom.xml"
         }
       },
-      "why_te": "pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu."
+      "why_te": "pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.",
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
+      }
     },
     {
       "title": "Check the declared Java baseline",
@@ -40,7 +47,14 @@
           }
         }
       },
-      "why_te": "Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi."
+      "why_te": "Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.",
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15
+        ],
+        "preserveHorizontal": true
+      }
     },
     {
       "title": "Check the Spring Boot baseline",
@@ -60,7 +74,14 @@
           }
         }
       },
-      "why_te": "Highlight ayina line ni chudandi. Enterprise upgrade oka versions anni kalisi work avutunnaya ani check. Spring Boot chala dependency mariyu plugin versions ni manage chestundi kabatti supported Java version and upgrade notes check cheyyali."
+      "why_te": "Highlight ayina line ni chudandi. Enterprise upgrade oka versions anni kalisi work avutunnaya ani check. Spring Boot chala dependency mariyu plugin versions ni manage chestundi kabatti supported Java version and upgrade notes check cheyyali.",
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7
+        ],
+        "preserveHorizontal": true
+      }
     },
     {
       "title": "Inspect resolved external libraries",
@@ -73,7 +94,13 @@
         "action": "showExternalLibraries",
         "data": {}
       },
-      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi."
+      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.",
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-external-libraries=\"1\"]"
+        ]
+      }
     },
     {
       "title": "Open the Maven tool window",
@@ -119,7 +146,13 @@
           ]
         }
       },
-      "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi."
+      "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.",
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-maven-head"
+        ]
+      }
     },
     {
       "title": "Open IntelliJ's integrated terminal",
@@ -132,7 +165,13 @@
         "action": "openIntegratedTerminal",
         "data": {}
       },
-      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi."
+      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi.",
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
+      }
     },
     {
       "title": "Verify the active JDK",
@@ -152,7 +191,10 @@
           "output": "openjdk 21"
         }
       },
-      "why_te": "Ee command run chesi output ni chudandi. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi."
+      "why_te": "Ee command run chesi output ni chudandi. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi.",
+      "highlight": {
+        "kind": "auto"
+      }
     },
     {
       "title": "Verify Maven's toolchain view",
@@ -172,7 +214,10 @@
           "output": "Apache Maven 3.9.x\nJava version: 21"
         }
       },
-      "why_te": "`mvn -version` Maven ye Java version use chestundo chupistundi. IntelliJ and Maven different Java versions use chesthe build result confuse cheyyachu. Renditlo same Java version unda ani check cheyyali."
+      "why_te": "`mvn -version` Maven ye Java version use chestundo chupistundi. IntelliJ and Maven different Java versions use chesthe build result confuse cheyyachu. Renditlo same Java version unda ani check cheyyali.",
+      "highlight": {
+        "kind": "auto"
+      }
     },
     {
       "title": "Prove an upgrade with automated tests",
@@ -192,7 +237,10 @@
           "output": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
       },
-      "why_te": "Maven tests run chesi application expected ga work chestunda check chestam. Upgrade taruvata tests pass ayithe main behavior break avvaledu ani confidence vastundi."
+      "why_te": "Maven tests run chesi application expected ga work chestunda check chestam. Upgrade taruvata tests pass ayithe main behavior break avvaledu ani confidence vastundi.",
+      "highlight": {
+        "kind": "auto"
+      }
     }
   ],
   "info_language": "te-Latn"

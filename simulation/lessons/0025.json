@@ -21,6 +21,13 @@
         "data": {
           "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -41,6 +48,13 @@
             "expected_text": "Integer.parseInt(Integer.toString(truncated))"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -61,6 +75,13 @@
             "expected_text": "Integer.parseInt(Integer.toString(truncated))"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -76,6 +97,12 @@
         "data": {
           "uiState": "symbolCard"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-symbol-card"
+        ]
       }
     },
     {
@@ -91,6 +118,13 @@
         "data": {
           "file": "src/test/java/com/aerotopo/LearningLabTest.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -111,6 +145,13 @@
             "expected_text": "LanguageLab.numericConversions(258.9)"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -135,6 +176,12 @@
           "passed": 1,
           "failed": 0
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-tests-tool"
+        ]
       }
     },
     {
@@ -148,6 +195,12 @@
       "action": {
         "action": "showTestResults",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-tests-tool"
+        ]
       }
     }
   ]

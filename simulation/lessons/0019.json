@@ -23,6 +23,11 @@
           "language": "java",
           "content": ""
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "text": "NonStaticMainDemo.java",
+        "scope": "#tree"
       }
     },
     {
@@ -40,6 +45,9 @@
           "position": "replace",
           "code": "public class NonStaticMainDemo {\n    public void main(String[] args) {\n        System.out.println(\"instance main\");\n    }\n}\n"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -55,6 +63,12 @@
         "data": {
           "file": "labs/jvm/NonStaticMainDemo.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -75,6 +89,9 @@
           "output": "Compilation successful\ntarget/nonstatic-demo/NonStaticMainDemo.class created",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -95,6 +112,9 @@
           "output": "Error: Main method is not static in class NonStaticMainDemo; please define the main method as:\n   public static void main(String[] args)",
           "exitCode": 1
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -113,6 +133,12 @@
           "requiredEntryPoint": "public static void main(String[] args)",
           "result": "Launcher rejects non-static main"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -128,6 +154,12 @@
         "data": {
           "path": "labs/jvm/NonStaticMainDemo.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#tree"
+        ]
       }
     }
   ]

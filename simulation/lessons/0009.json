@@ -45,6 +45,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -70,6 +76,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -89,6 +101,12 @@
             "pom.xml"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -106,6 +124,12 @@
           "symbol": "SpringApplication.run",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -130,6 +154,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-p0-bottom"
+        ]
       }
     },
     {
@@ -146,6 +176,12 @@
           "shortcut": "Ctrl+F12",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -166,6 +202,12 @@
           "package": "org.springframework.boot",
           "className": "SpringApplication"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-symbol-card"
+        ]
       }
     },
     {
@@ -187,6 +229,12 @@
             "Refactor expression"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#intentions"
+        ]
       }
     }
   ]

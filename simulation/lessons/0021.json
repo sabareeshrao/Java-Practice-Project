@@ -23,6 +23,11 @@
           "language": "java",
           "content": ""
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "text": "MainOverrideDemo.java",
+        "scope": "#tree"
       }
     },
     {
@@ -40,6 +45,9 @@
           "position": "replace",
           "code": "class ParentMain {\n    public static void main(String[] args) {\n        System.out.println(\"parent main\");\n    }\n}\n\nclass ChildMain extends ParentMain {\n    @Override\n    public static void main(String[] args) {\n        System.out.println(\"child main\");\n    }\n}\n"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -60,6 +68,9 @@
           "output": "MainOverrideDemo.java:8: error: static methods cannot be annotated with @Override\n    @Override\n    ^\n1 error",
           "exitCode": 1
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -77,6 +88,13 @@
           "find": "    @Override\n",
           "replace": ""
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          8
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -97,6 +115,9 @@
           "output": "Compilation successful\nParentMain.class created\nChildMain.class created",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -117,6 +138,9 @@
           "output": "parent main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -137,6 +161,9 @@
           "output": "child main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -152,6 +179,12 @@
         "data": {
           "path": "labs/jvm/MainOverrideDemo.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#tree"
+        ]
       }
     }
   ]

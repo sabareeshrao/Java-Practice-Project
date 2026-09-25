@@ -14,6 +14,8 @@ FORBIDDEN_IDES = {"eclipse", "vscode"}
 MAX_LESSONS_PER_CHAPTER = 5
 MIN_SIMPLE_EXPLANATION_WORDS = 15
 MAX_SIMPLE_EXPLANATION_WORDS = 55
+HIGHLIGHT_KINDS = {"auto", "code", "target", "none"}
+NO_HIGHLIGHT_PREFIX = "[no highlight]"
 FORBIDDEN_QUESTION_BOILERPLATE = (
     "in the cumulative aerotopo learning project",
     "connects this concept to a visible intellij workflow",
@@ -385,6 +387,46 @@ def load_lessons() -> tuple[dict, list[dict]]:
                 if not action.get("action"):
                     raise SystemExit(f"Question {question_id} has a step without an action")
 
+                highlight = raw_step.get("highlight")
+                if not isinstance(highlight, dict):
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} is missing the mandatory highlight contract"
+                    )
+                highlight_kind = str(highlight.get("kind") or "").strip().lower()
+                if highlight_kind not in HIGHLIGHT_KINDS:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} has invalid highlight kind "
+                        f"{highlight_kind!r}; expected one of {sorted(HIGHLIGHT_KINDS)}"
+                    )
+                if highlight_kind == "target" and not (
+                    highlight.get("selectors") or highlight.get("text")
+                ):
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} highlight kind=target "
+                        "must provide selectors or text"
+                    )
+                if highlight_kind == "code" and not (
+                    highlight.get("line")
+                    or highlight.get("lines")
+                    or highlight.get("selector")
+                    or highlight.get("text")
+                ):
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} highlight kind=code "
+                        "must identify one or more code lines"
+                    )
+                if highlight_kind == "none":
+                    if not str(highlight.get("reason") or "").strip():
+                        raise SystemExit(
+                            f"Question {question_id}, step {step_index + 1} highlight kind=none "
+                            "requires a non-empty reason"
+                        )
+                    if not step_why_te.casefold().startswith(NO_HIGHLIGHT_PREFIX):
+                        raise SystemExit(
+                            f"Question {question_id}, step {step_index + 1} has no visual target, "
+                            f"so why_te must begin with {NO_HIGHLIGHT_PREFIX}"
+                        )
+
                 stage_steps.append(
                     {
                         "lesson": lesson_label,
@@ -399,6 +441,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         "software": software,
                         "required_capability": raw_step.get("required_capability"),
                         "feature_available": raw_step.get("feature_available", True),
+                        "highlight": highlight,
                         "action": action,
                     }
                 )

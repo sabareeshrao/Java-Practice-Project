@@ -21,6 +21,17 @@
         "data": {
           "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -41,6 +52,13 @@
             "expected_text": "int truncated = (int)metres;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          34
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -61,6 +79,13 @@
             "expected_text": "byte wrapped = (byte)truncated;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          35
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -81,6 +106,13 @@
             "expected_text": "long widened = truncated;"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          36
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -96,6 +128,13 @@
         "data": {
           "file": "src/test/java/com/aerotopo/LearningLabTest.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -116,6 +155,13 @@
             "expected_text": "LanguageLab.numericConversions(258.9)"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -140,6 +186,12 @@
           "passed": 1,
           "failed": 0
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-tests-tool"
+        ]
       }
     },
     {
@@ -153,6 +205,12 @@
       "action": {
         "action": "showTestResults",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-tests-tool"
+        ]
       }
     }
   ]

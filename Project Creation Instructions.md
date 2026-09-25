@@ -775,6 +775,24 @@ Never claim something was pushed, deployed, fixed, live, or green until the exac
 
 ---
 
+
+## Mandatory visual-focus / highlight contract
+
+Every lesson step must declare a master-compatible `highlight` object. This is not optional.
+
+Use one of:
+
+- `{"kind":"code","lines":[...]}` when the explanation asks the learner to inspect or reason about source code. Highlight the exact relevant line(s), not merely the file tab.
+- `{"kind":"target","selectors":[...]}` or target text when the step points at a precise IntelliJ control, tool-window row, dialog, result, tab, or field.
+- `{"kind":"auto"}` only when the master runtime can resolve the final native/current target after the action completes, such as a freshly typed code range or terminal command.
+- `{"kind":"none","reason":"..."}` only when there is genuinely no visual target. In that case `why_te` must begin with `[no highlight]`.
+
+Never write phrases such as "look at this code", "see the relevant line", or "notice this panel" unless that exact code/element is visibly highlighted or pointed at.
+
+The downstream generator must fail if a step has no highlight contract. The master applies the final guidance after seek/replay finishes, so lesson authors must not add guessed timers.
+
+For code focus, preserve the editor's horizontal position at the left/current readable start. Next/Previous/Replay must never leave the editor scrolled to the extreme right. The learner must still be free to scroll manually afterward.
+
 ## 21. Validation required before calling a lesson batch complete
 
 For every batch:

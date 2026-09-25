@@ -31,6 +31,12 @@
           ],
           "selected": "Java 21"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -47,6 +53,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -60,6 +72,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -80,6 +98,9 @@
           "output": "javac 21",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -100,6 +121,9 @@
           "output": "openjdk 21",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -122,6 +146,12 @@
           ],
           "host": "Current operating system"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -142,6 +172,12 @@
           ],
           "purpose": "Runtime classes and libraries available to the JVM"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -159,6 +195,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Java compiler/runtime baseline: 21\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

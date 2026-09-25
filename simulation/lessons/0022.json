@@ -21,6 +21,15 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          6,
+          10
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -36,6 +45,12 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -56,6 +71,9 @@
           "output": "Compilation successful\nMainMethodLab.class created",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -76,6 +94,9 @@
           "output": "public static void main(java.lang.String[]);\npublic static void main(int);\npublic static void main(java.lang.String);",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -96,6 +117,9 @@
           "output": "standard main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -118,6 +142,12 @@
           "commandLineArguments": "String[] args",
           "launcherRule": "No automatic overload selection"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -138,6 +168,13 @@
             "expected_text": "public static void main(int value) {"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6
+        ],
+        "preserveHorizontal": true
       }
     }
   ]

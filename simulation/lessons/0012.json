@@ -21,6 +21,13 @@
         "data": {
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          8
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -37,6 +44,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -50,6 +63,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -70,6 +89,9 @@
           "command": "mvn -B -ntp -DskipTests compile",
           "output": "[INFO] Compiling AeroTopo sources for Java 21\n[INFO] BUILD SUCCESS\n[INFO] Bytecode written under target/classes"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -90,6 +112,12 @@
           ],
           "purpose": "Classes and libraries resolved by the JVM"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -113,6 +141,12 @@
           ],
           "host": "Current operating system"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -133,6 +167,9 @@
           "command": "java --version",
           "output": "openjdk 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -150,6 +187,12 @@
           "mainClass": "com.aerotopo.AeroTopoApplication",
           "console": "AeroTopo starting on OpenJDK 21\nJVM loaded application bytecode\nApplication process started successfully"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

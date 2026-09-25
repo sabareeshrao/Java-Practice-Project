@@ -31,6 +31,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -56,6 +62,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -75,6 +87,12 @@
             "src/main/java/com/aerotopo/AeroTopoApplication.java"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-find-popup"
+        ]
       }
     },
     {
@@ -93,6 +111,12 @@
             "run(Class<?> primarySource, String... args)"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#completion"
+        ]
       }
     },
     {
@@ -113,6 +137,12 @@
             "setDefaultProperties(...)"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#completion"
+        ]
       }
     },
     {
@@ -134,6 +164,12 @@
             "Replace with modern API"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#intentions"
+        ]
       }
     },
     {
@@ -161,6 +197,12 @@
           "mode": "preview",
           "note": "Demonstration only; no AeroTopo production symbol is changed."
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-refactor-dialog"
+        ]
       }
     },
     {
@@ -177,6 +219,12 @@
           "shortcut": "Ctrl+Alt+O",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#statusText"
+        ]
       }
     },
     {
@@ -193,6 +241,12 @@
           "shortcut": "Ctrl+Alt+L",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#statusText"
+        ]
       }
     }
   ]

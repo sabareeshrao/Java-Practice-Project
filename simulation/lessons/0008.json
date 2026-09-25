@@ -25,6 +25,12 @@
             "languageLevel": "21"
           }
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#projectTitle"
+        ]
       }
     },
     {
@@ -38,6 +44,12 @@
       "action": {
         "action": "openSettings",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalTitle"
+        ]
       }
     },
     {
@@ -54,6 +66,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -100,6 +118,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-maven-head"
+        ]
       }
     },
     {
@@ -163,6 +187,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-spring-head"
+        ]
       }
     },
     {
@@ -176,6 +206,12 @@
       "action": {
         "action": "openGitToolWindow",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"git\"]"
+        ]
       }
     },
     {
@@ -189,6 +225,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -206,6 +248,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

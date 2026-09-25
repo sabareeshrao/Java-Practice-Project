@@ -21,6 +21,15 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          6,
+          10
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -41,6 +50,13 @@
             "expected_text": "public static void main(String[] args) {"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -57,6 +73,12 @@
           "symbol": "public",
           "documentation": "Public members are accessible from outside the declaring class subject to normal Java access rules."
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -73,6 +95,12 @@
           "symbol": "static",
           "documentation": "A static method belongs to the class and can be invoked without an instance."
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -93,6 +121,12 @@
             "static": "Invokable without object instance"
           }
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -113,6 +147,9 @@
           "output": "public class MainMethodLab {\n  public static void main(java.lang.String[]);\n  public static void main(int);\n  public static void main(java.lang.String);\n}",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -133,6 +170,9 @@
           "output": "standard main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -150,6 +190,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] JVM/main-method learning labs compiled\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

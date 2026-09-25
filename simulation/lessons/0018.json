@@ -21,6 +21,15 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          6,
+          10
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -39,6 +48,9 @@
           "position": "replace",
           "code": "    public static void main(int value) {\n        System.out.println(\"int overload: \" + value);\n    }\n\n    public static void main(String value) {\n        System.out.println(\"string overload: \" + value);\n    }\n"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -54,6 +66,12 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -74,6 +92,9 @@
           "output": "Compilation successful\nThree main overloads compiled",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -94,6 +115,9 @@
           "output": "public static void main(java.lang.String[]);\npublic static void main(int);\npublic static void main(java.lang.String);",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -114,6 +138,9 @@
           "output": "standard main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -135,6 +162,12 @@
           ],
           "launcherRule": "Invoke standard String-array main"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -152,6 +185,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] MainMethodLab compiled\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

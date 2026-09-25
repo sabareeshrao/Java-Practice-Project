@@ -21,6 +21,13 @@
         "data": {
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -37,6 +44,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -54,6 +67,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Compiling AeroTopo Java sources\n[INFO] Classes written to target/classes\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     },
     {
@@ -74,6 +93,12 @@
           ],
           "stage": "Class loading and dependency resolution"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -97,6 +122,12 @@
           ],
           "runtime": "OpenJDK 21"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -120,6 +151,12 @@
           ],
           "runtime": "OpenJDK 21"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -140,6 +177,9 @@
           "command": "java --version",
           "output": "openjdk 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -157,6 +197,12 @@
           "mainClass": "com.aerotopo.AeroTopoApplication",
           "console": "JVM: OpenJDK 21\nLoading com.aerotopo.AeroTopoApplication\nInvoking public static void main(String[] args)\nAeroTopo application started"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

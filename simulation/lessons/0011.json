@@ -31,6 +31,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -56,6 +62,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-search-popup"
+        ]
       }
     },
     {
@@ -72,6 +84,12 @@
           "shortcut": "Ctrl+F12",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -89,6 +107,12 @@
           "symbol": "SpringApplication.run",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -113,6 +137,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-p0-bottom"
+        ]
       }
     },
     {
@@ -133,6 +163,12 @@
             "setDefaultProperties(...)"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#completion"
+        ]
       }
     },
     {
@@ -154,6 +190,12 @@
             "Refactor expression"
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#intentions"
+        ]
       }
     },
     {
@@ -170,6 +212,12 @@
           "shortcut": "Ctrl+Alt+L",
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#statusText"
+        ]
       }
     },
     {
@@ -197,6 +245,12 @@
           "mode": "preview",
           "note": "Equivalent workflow demonstration only; no AeroTopo production symbol is changed."
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-refactor-dialog"
+        ]
       }
     }
   ]

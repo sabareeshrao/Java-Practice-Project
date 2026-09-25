@@ -19,6 +19,12 @@
       "action": {
         "action": "openSettings",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalTitle"
+        ]
       }
     },
     {
@@ -34,6 +40,12 @@
         "data": {
           "name": "Lombok"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalTitle"
+        ]
       }
     },
     {
@@ -49,6 +61,13 @@
         "data": {
           "file": "pom.xml"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -68,6 +87,12 @@
             "scope": "provided"
           }
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-maven-section=\"Dependencies\"]"
+        ]
       }
     },
     {
@@ -114,6 +139,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-maven-head"
+        ]
       }
     },
     {
@@ -127,6 +158,12 @@
       "action": {
         "action": "reloadMavenProject",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#ijMavenReload"
+        ]
       }
     },
     {
@@ -140,6 +177,12 @@
       "action": {
         "action": "showExternalLibraries",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-external-libraries=\"1\"]"
+        ]
       }
     },
     {
@@ -157,6 +200,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Lombok demo dependency resolved\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     },
     {
@@ -172,6 +221,12 @@
         "data": {
           "artifactId": "lombok"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-maven-section=\"Dependencies\"]"
+        ]
       }
     }
   ]

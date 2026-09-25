@@ -23,6 +23,11 @@
           "language": "java",
           "content": ""
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "text": "MainMethodLab.java",
+        "scope": "#tree"
       }
     },
     {
@@ -40,6 +45,9 @@
           "position": "replace",
           "code": "public class MainMethodLab {\n    public static void main(String[] args) {\n        System.out.println(\"standard main\");\n    }\n\n    // OVERLOADS_GO_HERE\n}\n"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -55,6 +63,12 @@
         "data": {
           "file": "labs/jvm/MainMethodLab.java"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -75,6 +89,13 @@
             "expected_text": "public static void main(String[] args) {"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -95,6 +116,13 @@
             "expected_text": "public static void main(String[] args) {"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -115,6 +143,13 @@
             "expected_text": "public static void main(String[] args) {"
           }
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -131,6 +166,12 @@
           "symbol": "String[] args",
           "documentation": "Command-line arguments supplied to the Java application entry point."
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#modalBody"
+        ]
       }
     },
     {
@@ -151,6 +192,9 @@
           "output": "Compilation successful\ntarget/main-method-demo/MainMethodLab.class created",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -171,6 +215,9 @@
           "output": "standard main",
           "exitCode": 0
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     }
   ]

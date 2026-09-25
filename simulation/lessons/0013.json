@@ -35,6 +35,12 @@
           ],
           "selected": "Java 21"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -51,6 +57,12 @@
           "sdk": "Java 21",
           "jdkOpen": true
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ps"
+        ]
       }
     },
     {
@@ -64,6 +76,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -84,6 +102,9 @@
           "command": "java --version",
           "output": "openjdk 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -104,6 +125,9 @@
           "command": "javac --version",
           "output": "javac 21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -124,6 +148,9 @@
           "command": "mvn -version",
           "output": "Apache Maven 3.9.x\nJava version: 21\nJava home: C:/Java/jdk-21"
         }
+      },
+      "highlight": {
+        "kind": "auto"
       }
     },
     {
@@ -142,6 +169,12 @@
           "project": "AeroTopo",
           "note": "One selected JVM per running Java process"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-ent-panel.show"
+        ]
       }
     },
     {
@@ -159,6 +192,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] Java runtime: 21\n[INFO] Tests run: all passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]

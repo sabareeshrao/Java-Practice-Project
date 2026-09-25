@@ -25,6 +25,12 @@
             "languageLevel": "21"
           }
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "#projectTitle"
+        ]
       }
     },
     {
@@ -40,6 +46,13 @@
         "data": {
           "file": "pom.xml"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -55,6 +68,13 @@
         "data": {
           "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
         }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          8
+        ],
+        "preserveHorizontal": true
       }
     },
     {
@@ -68,6 +88,12 @@
       "action": {
         "action": "showExternalLibraries",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-external-libraries=\"1\"]"
+        ]
       }
     },
     {
@@ -81,6 +107,12 @@
       "action": {
         "action": "openGitToolWindow",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"git\"]"
+        ]
       }
     },
     {
@@ -144,6 +176,12 @@
             }
           ]
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-spring-head"
+        ]
       }
     },
     {
@@ -157,6 +195,12 @@
       "action": {
         "action": "openIntegratedTerminal",
         "data": {}
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"terminal\"]"
+        ]
       }
     },
     {
@@ -174,6 +218,12 @@
           "status": "BUILD SUCCESS",
           "console": "[INFO] AeroTopo tests passed\n[INFO] BUILD SUCCESS"
         }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          "[data-bottom=\"run\"]"
+        ]
       }
     }
   ]
