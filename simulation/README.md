@@ -44,9 +44,17 @@ The 39-word minimum is a detail floor, not a padding target. Questions must gain
 ## IntelliJ UI fidelity
 
 Every lesson batch must be authored against the latest compatible validated master IntelliJ feature catalog. Prefer specific rich P0/P1 surfaces such as real Search/Go To results, Find Usages, refactoring preview, Maven lifecycle/dependencies/profiles, Spring Services/Beans/Mappings, upgraded editor/project tree, and first-class terminal metadata instead of older generic fallback surfaces.
-## Mentor-style explanations
+## Option B explanation style
 
-`why_te` is learner guidance, not a literal translation. Every step must use natural Telugu written in English letters, retain standard technical terms when clearer, contain at least 45 useful words, and explain what to observe, why it matters, and how the visible evidence connects to the concept. Repeated coaching filler and terse note-like sentences are not acceptable.
+Every `why_te` uses **Option B — Very easy learner style**.
+
+- Telugu is written in English letters.
+- Standard technical terms stay in English.
+- Use short sentences and one idea at a time.
+- Normally use 2–3 sentences.
+- Keep explanations between **15 and 55 words**.
+- Do not use lecture-style coaching, forced translations, motivational filler, or repeated phrases.
+- The living readable corpus is `simulation/OPTION_B_EXPLANATION_TEXTS.md`; future lesson batches must append their new explanation text there.
 
 ## Playback file coverage
 

@@ -276,39 +276,60 @@ portable mariyu repeatable ga chestundi. Local machine mariyu
 CI rendu ade build model ni use cheyyagalavu.
 ```
 
-### Mentor-style Telugu-in-English explanation contract
+### Option B — Very easy learner explanation contract
 
-The explanation is not a literal translation, a glossary, or a compressed note. It must read like a capable mentor is sitting beside the learner and guiding attention through the current screen.
+This project uses **Option B — Very easy learner style** for every `why_te`.
 
-Every `why_te` must:
+The goal is simple understanding, not maximum detail.
 
-- contain at least **45 useful words**,
-- use natural Telugu written in English letters while keeping technical Java/IntelliJ/Maven/Spring terms in English when that is clearer,
-- begin by giving the learner a reason to look at the current file, line, command, popup, test, or tool window,
-- explain **what is happening and why it matters**, not merely restate the English question,
-- tell the learner what evidence to notice on screen,
-- connect that evidence to the concept or developer decision,
-- use 2–4 natural sentences rather than one dense translated sentence,
-- avoid forced Telugu translations of standard technical terms,
-- avoid robotic filler such as repeating "ee step lo manam..." or the same coaching sentence across many steps,
-- remain specific to that action so two different steps do not sound interchangeable.
+Rules:
 
-Good style:
+- Telugu is written in English letters.
+- Keep standard technical words in English: Java, JVM, JDK, IntelliJ, Maven, Spring, Git, JUnit, API, dependency, class, method, etc.
+- Use short sentences.
+- Explain one idea at a time.
+- Usually use **2–3 sentences**.
+- Keep each explanation between **15 and 55 words**.
+- Prefer common wording: `chudandi`, `check cheyyachu`, `easy ga`, `use chestam`, `run chestundi`.
+- Say what is happening and why it matters.
+- Do not translate technical terms into awkward Telugu.
+- Do not sound like a lecture or motivational coach.
+- Do not add filler just to increase word count.
+- Never use artificial phrases such as:
+  - "isolated fact laga memorize cheyyakandi"
+  - "screen/action lo kanipinche evidence ni question concept tho connect cheyyandi"
+  - "reason cheyyandi" when a simpler sentence works.
+- If the learner can understand the point in a shorter simple sentence, prefer the shorter sentence.
+
+Preferred example:
 
 ```text
-`java --version` ni just run cheyyadam goal kaadu; output lo active runtime exact ga
-edi ani first chuddam. Ee result terminal PATH/JAVA_HOME selection ni prove chestundi.
-IDE Java 21 chupistunna terminal vere version use chesthe later build issue source-code
-problem laga kanipinchachu, kabatti rendu states ni compare cheyyadam important.
+External Libraries lo JDK and Maven dependencies kanipistayi.
+Project ki ye libraries available unnayo ikkada easy ga check cheyyachu.
+Dependency missing ayina leda wrong version unna, ee view useful clue istundi.
 ```
 
-Bad style:
+Avoid:
 
 ```text
-Java version ni verify chestundi. Idi important. Next step ki vellandi.
+IntelliJ External Libraries gurinchi ee step ni isolated fact laga memorize cheyyakandi;
+screen/action lo kanipinche evidence ni question concept tho direct ga connect chesi
+enduku matter avutundo reason cheyyandi.
 ```
 
-The generator must reject explanations below the live minimum and exact duplicate explanations.
+### Living explanation corpus
+
+The file `simulation/OPTION_B_EXPLANATION_TEXTS.md` is the readable style reference and complete explanation corpus.
+
+Before writing new lessons, a replicating AI must read it.
+
+After every new lesson batch:
+
+1. write the new `why_te` using Option B,
+2. add the new lesson/step explanation text to that file,
+3. keep the existing text intact unless the user explicitly asks for a rewrite,
+4. use the earlier entries as tone examples,
+5. make sure the file continues to grow with the curriculum.
 
 ### Answer box
 
@@ -931,7 +952,7 @@ Always preserve these rules:
 - one source question = one lesson,
 - maximum 5 lessons per chapter,
 - every simulator step has a unique English #Q1 question that is never shorter than the Lesson 1 / Step 1 baseline,
-- explanation beneath the question is a mentor-style Telugu-in-English explanation with at least 45 useful words,
+- explanation beneath the question uses Option B — very easy learner Telugu-in-English style, normally 15–55 words,
 - only the final step gets the English Answer block,
 - IntelliJ only for Java IDE actions,
 - reuse canonical master actions,

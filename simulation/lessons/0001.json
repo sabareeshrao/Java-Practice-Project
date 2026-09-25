@@ -24,7 +24,7 @@
         }
       },
       "question": "Enterprise Java projects can span many packages, frameworks, build files, and runtime settings, so understanding the workspace before editing reduces blind changes. Why should you first open the complete AeroTopo project in IntelliJ before evaluating Java for enterprise development?",
-      "why_te": "the AeroTopo project in IntelliJ gurinchi file leda workspace open ayindani matrame next step ki vellakandi; ee question ki relevant evidence ekkada undo first identify chesi project flow tho connect cheyyandi. Manam build cheyyaboye real AeroTopo project nundi discussion start chestunnam. Ee course lo IDE ga IntelliJ matrame use chestam. Java 21 configuration later lessons lo language features, tooling, testing, Spring, persistence, security mariyu operations ni oka cumulative codebase tho connect cheyyadaniki base istundi."
+      "why_te": "AeroTopo project ni IntelliJ lo open chesi start cheddam. Manam build cheyyaboye real AeroTopo project nundi discussion start chestunnam. Ee course lo IDE ga IntelliJ matrame use chestam."
     },
     {
       "title": "Inspect the Maven project descriptor",
@@ -39,7 +39,7 @@
         }
       },
       "question": "The enterprise advantage is not just the Java syntax. A major strength is the surrounding ecosystem. Maven gives the project a reproducible dependency and build model, while Spring Boot supplies a mature application framework on top of the JVM. Maven gives Java teams a reproducible project model for dependencies, plugins, compilation, testing, and packaging. How does inspecting AeroTopo's `pom.xml` help you understand one of Java's major enterprise strengths and one of its complexity costs?",
-      "why_te": "the Maven project descriptor gurinchi file leda workspace open ayindani matrame next step ki vellakandi; ee question ki relevant evidence ekkada undo first identify chesi project flow tho connect cheyyandi. Enterprise advantage Java syntax matrame kaadu; surrounding ecosystem kuda mukhyam. Maven reproducible dependency mariyu build model istundi, Spring Boot JVM paina mature application framework ni andistundi."
+      "why_te": "pom.xml ni open chesi relevant code ni chuddam. Java enterprise project lo syntax matrame kaadu. tools and libraries kuda mukhyam."
     },
     {
       "title": "Focus on the Spring Boot parent",
@@ -59,7 +59,7 @@
         }
       },
       "question": "The Spring Boot parent centralizes compatible dependency and plugin defaults. This is an enterprise advantage because teams can standardize builds and reduce version mismatch, but it also illustrates a trade-off: framework conventions and dependency graphs add layers that developers must understand and maintain. Spring Boot's parent POM supplies coordinated dependency and plugin defaults so teams do not manually align every version. Why is this centralized version management useful in enterprise Java, and what dependency-management trade-off does it introduce?",
-      "why_te": "the Spring Boot parent gurinchi ikkada practical ga chudalsindi enti ante, highlight ayina code exact ga em responsibility teesukuntundo line number kanna meaning meeda focus cheyyandi. Spring Boot parent compatible dependency mariyu plugin defaults ni centralize chestundi. Dini valla teams versions ni standardize cheyyagalavu; ade samayam lo framework conventions mariyu dependency graph ni ardham chesukovali."
+      "why_te": "Highlight ayina line ni chudandi. Spring Boot parent compatible dependency mariyu plugin defaults ni oka place lo manage chestundi. Dini valla team andariki same versions use cheyyadam easy avutundi."
     },
     {
       "title": "Inspect the starter dependencies",
@@ -79,7 +79,7 @@
         }
       },
       "question": "Enterprise Java applications usually assemble capabilities such as web handling, validation, persistence, security, and testing from libraries instead of rebuilding them. What advantage does AeroTopo gain from Spring Boot starter dependencies, and what maintenance cost comes with a larger dependency graph?",
-      "why_te": "the starter dependencies gurinchi ikkada practical ga chudalsindi enti ante, highlight ayina code exact ga em responsibility teesukuntundo line number kanna meaning meeda focus cheyyandi. Web, validation mariyu test starters enterprise ecosystem breadth ni chupistayi. HTTP handling, validation, testing infrastructure ni scratch nundi build cheyyakunda proven libraries ni compose chestam; kani dependency surface mariyu framework knowledge perugutayi."
+      "why_te": "Highlight ayina line ni chudandi. Web, validation mariyu test starters Java ecosystem lo ready-made tools unnayi ani chupistayi. HTTP handling, validation, testing infrastructure ni scratch nundi build cheyyakunda ready-made libraries ni use chestam."
     },
     {
       "title": "Open IntelliJ External Libraries",
@@ -92,7 +92,7 @@
         "data": {}
       },
       "question": "IntelliJ can resolve the JDK and Maven libraries directly into the project model. Strong IDE support is one of Java's practical advantages in large codebases: navigation, refactoring, debugging, inspections, dependency awareness, and test integration all work against the same typed project model. A statically typed Java project lets IntelliJ index the JDK and resolved Maven libraries for navigation, refactoring, inspections, and debugging. Why does strong IDE awareness become especially valuable as an enterprise codebase grows?",
-      "why_te": "IntelliJ External Libraries gurinchi ee step ni isolated fact laga memorize cheyyakandi; screen/action lo kanipinche evidence ni question concept tho direct ga connect chesi enduku matter avutundo reason cheyyandi. IntelliJ JDK mariyu Maven libraries ni direct ga project model lo resolve chestundi. Large codebase lo navigation, refactoring, debugging, inspections, dependency awareness mariyu tests same typed model meeda work cheyyadam strong advantage."
+      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi."
     },
     {
       "title": "Inspect the Java application entry point",
@@ -107,7 +107,7 @@
         }
       },
       "question": "The application starts from a normal Java main method and then hands control to Spring Boot. Java's explicit types and predictable entry points help large teams navigate and refactor systems safely, while Spring adds substantial runtime behavior that developers must learn rather than treating as magic. A Java application still begins from an explicit entry point even when a framework controls most runtime behavior. What does AeroTopo's `main` method reveal about the boundary between ordinary Java execution and Spring Boot framework startup?",
-      "why_te": "the Java application entry point gurinchi file leda workspace open ayindani matrame next step ki vellakandi; ee question ki relevant evidence ekkada undo first identify chesi project flow tho connect cheyyandi. Application normal Java `main` method nundi start ayi tarvata Spring Boot ki control istundi. Explicit Java entry point clear ga untundi; Spring runtime behavior additional abstraction ga vastundi."
+      "why_te": "AeroTopoApplication.java ni open chesi relevant code ni chuddam. Application normal Java `main` method nundi start ayi tarvata Spring Boot ki control istundi. Java entry point easy ga kanipistundi."
     },
     {
       "title": "Focus on the Spring Boot application declaration",
@@ -127,7 +127,7 @@
         }
       },
       "question": "A single annotation activates a large amount of framework behavior through auto-configuration and component scanning. That productivity is valuable in enterprise work, but the abstraction can make startup behavior and configuration harder to understand unless the team learns what the framework is doing. `@SpringBootApplication` enables component scanning and auto-configuration with a small amount of source code. Why does this improve enterprise productivity while also requiring developers to understand framework behavior that is not visible directly in the class?",
-      "why_te": "the Spring Boot application declaration gurinchi ikkada practical ga chudalsindi enti ante, highlight ayina code exact ga em responsibility teesukuntundo line number kanna meaning meeda focus cheyyandi. Oka annotation tho auto-configuration mariyu component scanning activate avutayi. Productivity ekkuva avutundi, kani framework em chestundo ardham kakapothe startup behavior mariyu configuration confusing ga anipinchachu."
+      "why_te": "Highlight ayina line ni chudandi. Oka annotation tho auto-configuration mariyu component scanning activate avutayi. Productivity ekkuva avutundi, kani framework em chestundo ardham kakapothe startup behavior mariyu configuration confusing ga anipinchachu."
     },
     {
       "title": "Open IntelliJ's integrated terminal",
@@ -140,7 +140,7 @@
         "data": {}
       },
       "question": "Enterprise Java development is not limited to the editor. The same IntelliJ workspace can expose the terminal for JDK, Maven, Git, test, and diagnostic commands. We keep those development commands inside IntelliJ for this learning project rather than switching to another IDE. Enterprise Java work includes build, Git, JVM, test, and diagnostic commands in addition to editing source files. Why is using IntelliJ's integrated terminal useful for keeping those workflows inside the same project context?",
-      "why_te": "IntelliJ's integrated terminal gurinchi ikkada IDE view tho command-line reality ni compare cheyyadam mukhyam; same project context lo direct verification enduku useful o observe cheyyandi. Enterprise development editor tho matrame ayipodu. IntelliJ integrated terminal lo JDK, Maven, Git, test mariyu diagnostic commands run cheyyadam valla context switch taggipoyi same project lo workflow untundi."
+      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Enterprise development editor tho matrame ayipodu. IntelliJ integrated terminal lo JDK, Maven, Git, test mariyu diagnostic commands run cheyyadam valla context switch taggipoyi same project lo workflow untundi."
     },
     {
       "title": "Confirm the Java runtime from IntelliJ",
@@ -160,7 +160,7 @@
         }
       },
       "question": "The JVM provides portability, garbage collection, JIT compilation, diagnostics, and a managed runtime, but teams must still control runtime versions and operational behavior. After confirming Java 21 with `java --version`, how would you summarize the main advantages and disadvantages of Java for enterprise development?",
-      "why_te": "the Java runtime from IntelliJ gurinchi ikkada command syntax ni memorize cheyyadam kaadu; terminal output exact ga ye environment leda runtime fact ni prove chestundo evidence laga chudandi. Managed JVM GC, JIT, diagnostics, threading mariyu portability istundi. Production team runtime versions, memory behavior, startup mariyu tuning ni kuda ardham chesukovali; kabatti benefits tho paatu operational costs kuda evaluate cheyyali."
+      "why_te": "Ee command run chesi output ni chudandi. Managed JVM GC, JIT, diagnostics, threading mariyu portability istundi. Production team runtime versions, memory behavior, startup mariyu tuning ni kuda ardham chesukovali."
     }
   ],
   "info_language": "te-Latn"

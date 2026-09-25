@@ -12,7 +12,8 @@ COURSE_FILE = SIM_ROOT / "course.json"
 
 FORBIDDEN_IDES = {"eclipse", "vscode"}
 MAX_LESSONS_PER_CHAPTER = 5
-MIN_MENTOR_EXPLANATION_WORDS = 45
+MIN_SIMPLE_EXPLANATION_WORDS = 15
+MAX_SIMPLE_EXPLANATION_WORDS = 55
 FORBIDDEN_QUESTION_BOILERPLATE = (
     "in the cumulative aerotopo learning project",
     "connects this concept to a visible intellij workflow",
@@ -350,11 +351,17 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         f"Question {question_id}, step {step_index + 1} is missing Telugu-in-English-font explanation text"
                     )
                 explanation_words = question_word_count(step_why_te)
-                if explanation_words < MIN_MENTOR_EXPLANATION_WORDS:
+                if explanation_words < MIN_SIMPLE_EXPLANATION_WORDS:
                     raise SystemExit(
                         f"Question {question_id}, step {step_index + 1} explanation has only "
-                        f"{explanation_words} words; mentor-style explanations require at least "
-                        f"{MIN_MENTOR_EXPLANATION_WORDS} useful words"
+                        f"{explanation_words} words; Option B explanations require at least "
+                        f"{MIN_SIMPLE_EXPLANATION_WORDS} words"
+                    )
+                if explanation_words > MAX_SIMPLE_EXPLANATION_WORDS:
+                    raise SystemExit(
+                        f"Question {question_id}, step {step_index + 1} explanation has "
+                        f"{explanation_words} words; Option B explanations must stay at or below "
+                        f"{MAX_SIMPLE_EXPLANATION_WORDS} words"
                     )
                 normalized_explanation = " ".join(step_why_te.casefold().split())
                 if normalized_explanation in seen_explanations:
@@ -663,8 +670,11 @@ def main() -> None:
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
         "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
         "min_step_question_words": minimum_step_question_words(),
-        "min_mentor_explanation_words": MIN_MENTOR_EXPLANATION_WORDS,
+        "explanation_style": "Option B — Very easy learner style",
+        "min_simple_explanation_words": MIN_SIMPLE_EXPLANATION_WORDS,
+        "max_simple_explanation_words": MAX_SIMPLE_EXPLANATION_WORDS,
         "intellij_ui_policy": "latest validated master feature contracts; prefer rich software-owned surfaces over generic fallbacks",
+        "explanation_corpus": "simulation/OPTION_B_EXPLANATION_TEXTS.md",
     }
     (SITE / "simulation-summary.json").write_text(
         json.dumps(summary, indent=2) + "\n",
