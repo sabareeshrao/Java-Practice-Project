@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 13
+      "chapterEnd": 15
     }
   ],
   "chapters": [
@@ -225,6 +225,63 @@
         "lessons/0115.json",
         "lessons/0116.json",
         "lessons/0117.json"
+      ]
+    },
+    {
+      "id": "chapter-014",
+      "title": "14: Inheritance",
+      "subtitle": "Follow the source Inheritance module as one continuous chapter: constructor chaining, hybrid and multiple-inheritance rules, diamond conflicts, composition over inheritance, superclass construction, final methods, access visibility, substitutability, super, interface-based multiple contracts, and static method hiding.",
+      "lessons": [
+        "lessons/0118.json",
+        "lessons/0119.json",
+        "lessons/0120.json",
+        "lessons/0121.json",
+        "lessons/0122.json",
+        "lessons/0123.json",
+        "lessons/0124.json",
+        "lessons/0125.json",
+        "lessons/0126.json",
+        "lessons/0127.json",
+        "lessons/0128.json",
+        "lessons/0129.json",
+        "lessons/0130.json",
+        "lessons/0131.json",
+        "lessons/0132.json",
+        "lessons/0133.json",
+        "lessons/0134.json",
+        "lessons/0135.json"
+      ]
+    },
+    {
+      "id": "chapter-015",
+      "title": "15: Polymorphism, Overloading & Overriding",
+      "subtitle": "Keep the complete source module together: covariant returns, constructor dispatch risks, overload resolution, return-type and visibility rules, compile-time versus runtime polymorphism, dynamic dispatch, field hiding, superclass parameters, super calls, and plug-in design through common contracts.",
+      "lessons": [
+        "lessons/0136.json",
+        "lessons/0137.json",
+        "lessons/0138.json",
+        "lessons/0139.json",
+        "lessons/0140.json",
+        "lessons/0141.json",
+        "lessons/0142.json",
+        "lessons/0143.json",
+        "lessons/0144.json",
+        "lessons/0145.json",
+        "lessons/0146.json",
+        "lessons/0147.json",
+        "lessons/0148.json",
+        "lessons/0149.json",
+        "lessons/0150.json",
+        "lessons/0151.json",
+        "lessons/0152.json",
+        "lessons/0153.json",
+        "lessons/0154.json",
+        "lessons/0155.json",
+        "lessons/0156.json",
+        "lessons/0157.json",
+        "lessons/0158.json",
+        "lessons/0159.json",
+        "lessons/0160.json"
       ]
     }
   ],
