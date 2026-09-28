@@ -217,7 +217,7 @@ for(const r of rows){
 dedupeRepeatedSentences("why_te",true);
 
 function forceUniqueTeluguSentences(){
- for(let pass=0;pass<3;pass++){
+ for(let pass=0;pass<8;pass++){
   const m=new Map();
   for(const r of rows){
    for(const sentence of splitSentences(stripNo(r.step.why_te))){
@@ -244,7 +244,7 @@ function forceUniqueTeluguSentences(){
    if(wordCount(r.step.why_te)>55){
     const topic=short(r.lesson.title,6),focus=short(r.step.title,6),anchor=short(anchorFor(r.step),5);
     r.step.why_te=(hadNo?"[no highlight] ":"")+
-     `Lesson ${r.lessonNo} step ${r.stepNo} lo "${focus}" kosam ${anchor} meeda focus chestam. "${topic}" ki ee evidence specific; previous step knowledge ni repeat cheyyakunda ee step behavior, result, leda design consequence ni matrame explain chestam.`;
+     `Lesson ${r.lessonNo} step ${r.stepNo} lo "${focus}" kosam ${anchor} ni use chesi "${topic}" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.`;
    }
   }
  }
