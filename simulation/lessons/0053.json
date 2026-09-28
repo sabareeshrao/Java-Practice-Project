@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "lesson_number": 53,
+  "question_id": 53,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Expand encoded runs such as 3a2b",
+  "info_language": "te-Latn",
+  "answer": "Parse one or more digits into a count, then when a non-digit symbol appears, append that symbol `count` times and reset the count. AeroTopo's `expandRuns` supports multi-digit counts, checks for arithmetic overflow and oversized output, rejects missing counts, and rejects an encoded String that ends with digits only. For `3a2b` it returns `aaabb`. Its running time is proportional to the encoded input plus the produced output.",
+  "steps": [
+    {
+      "title": "Open the existing run-expansion parser",
+      "question": "AeroTopo's `expandRuns` already solves the encoded-count problem and includes validation that a simple interview solution often omits. Inspect how the method accumulates multi-digit counts, detects the following symbol, appends repeated characters, resets parser state, and rejects malformed trailing digits before returning the final String.",
+      "why_te": "expandRuns count digits ni accumulate chestundi, symbol vachinappudu repeat append chestundi, state reset chestundi. Invalid or oversized input ki checks kuda unnayi. Existing method direct ga reuse chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect count accumulation and overflow protection",
+      "question": "The digit branch updates `count` with `count * 10 + digit` using `Math.multiplyExact` and `Math.addExact`. Why does this support counts larger than nine while also preventing silent numeric overflow from turning a very large encoded count into an incorrect smaller value?",
+      "why_te": "`count*10 + digit` multi-digit numbers build chestundi. Exact arithmetic overflow ayithe exception istundi. Silent wraparound valla wrong repeat count ravadaniki chance taggutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 47,
+            "expected_text": "if(c>='0' && c<='9') { count=Math.addExact(Math.multiplyExact(count,10),c-'0'); digits=true; }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          47
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a driver for 3a2b and a multi-digit run",
+      "question": "The temporary driver sends both `3a2b` and `12x` to the real parser, demonstrating the common single-digit example and the production method's multi-digit capability. What outputs should appear if count accumulation, repeated append, parser-state reset, and final validation all work correctly for both encoded inputs?",
+      "why_te": "`3a2b` output `aaabb` avvali. `12x` twelve x characters produce cheyyali. Rendu cases parser count build and reset behavior ni verify chestayi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ExpandRunsDemo.java",
+          "language": "java",
+          "content": "import com.aerotopo.learning.SurveyAlgorithms;\npublic class ExpandRunsDemo {\n    public static void main(String[] args) {\n        System.out.println(SurveyAlgorithms.expandRuns(\"3a2b\",100));\n        System.out.println(SurveyAlgorithms.expandRuns(\"12x\",100));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run both encoded examples",
+      "question": "If the program prints `aaabb` and then twelve `x` characters, what does that establish about the parser beyond the original `3a2b` requirement? How does the second case prove that the implementation is parsing a numeric run length rather than treating each digit independently?",
+      "why_te": "First output basic requirement satisfy chestundi. Second output `12` ni single count ga parse chestundi ani prove chestundi. Digits separate counts ga handle cheyyadam ledu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson53-demo labs/java/ExpandRunsDemo.java; java -cp \"target/classes;target/lesson53-demo\" ExpandRunsDemo",
+          "output": "aaabb\nxxxxxxxxxxxx"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the driver and summarize the validated parser",
+      "question": "The temporary caller can now be deleted because `expandRuns` remains the reusable implementation. How would you explain count parsing, repeated append with `StringBuilder`, reset behavior, malformed-input checks, output-size protection, and complexity proportional to both encoded input and expanded output?",
+      "why_te": "Temporary driver remove chestunnam. Final answer count parse, builder append, reset, validation, maxLength protection, and input plus produced-output proportional work gurinchi explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ExpandRunsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          42,
+          43,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          53,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "lesson_number": 54,
+  "question_id": 54,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Find the longest palindromic substring",
+  "info_language": "te-Latn",
+  "answer": "A practical O(n²) solution is expand-around-center. Treat every character as the center of an odd-length palindrome and every gap as the center of an even-length palindrome. Expand left and right while characters match, and keep the longest range found. AeroTopo's `longestPalindrome` method checks both parities for every center and returns the best substring. It uses O(1) extra working space aside from the returned String and is simpler than dynamic programming for this interview problem.",
+  "steps": [
+    {
+      "title": "Open the expand-around-center implementation",
+      "question": "AeroTopo's `longestPalindrome` method checks every position twice: once for odd-length palindromes and once for even-length palindromes. It expands two pointers outward while characters match and records the longest span. Which lines establish the two center types, expansion loop, best-range update, and final substring?",
+      "why_te": "Method prathi center ki odd and even parity check chestundi. Left/right pointers match ayina varaku expand avutayi. Longest range track chesi final substring return chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect odd and even center handling",
+      "question": "The nested `parity` loop sets `right = center + parity`, so parity zero starts both pointers on one character and parity one starts them on adjacent characters. Why is checking both configurations necessary to find palindromes such as `racecar` and `abba` with the same algorithm?",
+      "why_te": "Parity 0 odd palindrome center one character. Parity 1 even palindrome center two adjacent positions madhya. Rendu check cheyyakapothe `racecar` leda `abba` type lo oka category miss avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 59,
+            "expected_text": "int left=center,right=center+parity;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          58,
+          59,
+          60
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create inputs with different palindrome shapes",
+      "question": "The temporary driver tests `babad`, where a length-three palindrome exists, and `cbbd`, where the longest answer is the even palindrome `bb`. Why do these two inputs together provide better coverage of the center-expansion logic than testing only one palindrome shape?",
+      "why_te": "`babad` odd-length result ni test chestundi; `cbbd` even-length `bb` ni test chestundi. Rendu together parity handling complete ga verify chestayi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PalindromeDemo.java",
+          "language": "java",
+          "content": "import com.aerotopo.learning.SurveyAlgorithms;\npublic class PalindromeDemo {\n    public static void main(String[] args) {\n        System.out.println(SurveyAlgorithms.longestPalindrome(\"babad\"));\n        System.out.println(SurveyAlgorithms.longestPalindrome(\"cbbd\"));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run odd and even palindrome cases",
+      "question": "When the output is a length-three palindrome such as `bab` for the first input and `bb` for the second, what does that verify about the two parity paths? Why can multiple equally long answers for `babad` still be correct under the problem definition?",
+      "why_te": "First input lo `bab` or `aba` rendu length 3 valid longest answers. Second lo `bb` even case. Output parity paths correct ga work chestunnayi ani show chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson54-demo labs/java/PalindromeDemo.java; java -cp \"target/classes;target/lesson54-demo\" PalindromeDemo",
+          "output": "bab\nbb"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the driver and retain the center-expansion method",
+      "question": "The temporary examples have verified both palindrome shapes and can be deleted. How would you explain the n centers, two parity checks, outward matching, longest-range tracking, O(n²) worst-case time, and O(1) additional working memory in a concise interview response?",
+      "why_te": "Temporary driver remove chestunnam. Final answer every center, odd/even parity, outward expansion, longest range update, O(n²) time, O(1) working space ani explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PalindromeDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          63
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

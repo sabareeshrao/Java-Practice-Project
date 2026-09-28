@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "lesson_number": 52,
+  "question_id": 52,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Find the first non-repeating character in a String",
+  "info_language": "te-Latn",
+  "answer": "Count characters while preserving encounter order, then return the first entry whose count is one. AeroTopo's `firstUniqueCodePoint` uses a `LinkedHashMap<Integer,Integer>` and iterates Unicode code points instead of only UTF-16 `char` values. The first pass builds counts; the second pass filters for count 1 and returns the first matching code point as `OptionalInt`. This runs in O(n) expected time with O(k) extra space for distinct characters.",
+  "steps": [
+    {
+      "title": "Open the Unicode-aware first-unique implementation",
+      "question": "AeroTopo's `firstUniqueCodePoint` counts Unicode code points in a `LinkedHashMap`, then scans entries in encounter order for the first count equal to one. Which lines establish ordered counting and which line selects the first unique entry after all frequencies are known?",
+      "why_te": "Method LinkedHashMap use chesi encounter order preserve chestundi. First pass counts build chestundi; second stream count 1 unna first entry ni select chestundi. Code points use chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect ordered frequency counting",
+      "question": "The expression `label.codePoints().forEach(c -> counts.merge(c,1,Integer::sum))` increments the frequency for each Unicode code point while `LinkedHashMap` remembers first insertion order. Why is preserving encounter order essential if the requirement asks for the first non-repeating character rather than any non-repeating character?",
+      "why_te": "Counts matrame saripovu; first unique kavali kabatti original encounter order kuda kavali. LinkedHashMap insertion order preserve chestundi. Anduke first count-1 entry correct answer avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 39,
+            "expected_text": "label.codePoints().forEach(c -> counts.merge(c,1,Integer::sum));"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a driver with repeated prefixes",
+      "question": "The temporary driver uses `aabbcdeff`, where several repeated characters appear before the first unique value. It converts the returned code point back to a printable character. Which character should be produced, and why is this input stronger than testing a String whose first character is already unique?",
+      "why_te": "Input repeated prefix tho start avutundi kabatti algorithm counts and order rendu correctly use chestunda ani test avutundi. First unique character `c` avvali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/FirstUniqueDemo.java",
+          "language": "java",
+          "content": "import com.aerotopo.learning.SurveyAlgorithms;\npublic class FirstUniqueDemo {\n    public static void main(String[] args) {\n        int cp = SurveyAlgorithms.firstUniqueCodePoint(\"aabbcdeff\").orElseThrow();\n        System.out.println(new String(Character.toChars(cp)));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the ordered-frequency solution",
+      "question": "When the program prints `c`, what does that verify about both the frequency calculation and the ordered second pass? Why would a plain unordered HashMap be a weaker fit if you relied on entry iteration to identify the first unique character?",
+      "why_te": "Output `c` count and encounter order rendu correct ani prove chestundi. Plain HashMap iteration original order guarantee cheyyadu. First unique requirement ki ordered map suitable.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson52-demo labs/java/FirstUniqueDemo.java; java -cp \"target/classes;target/lesson52-demo\" FirstUniqueDemo",
+          "output": "c"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the driver and retain the reusable code-point solution",
+      "question": "The temporary caller has verified the method and should be deleted while the real implementation remains. How would you explain the two-pass ordered-frequency approach, the reason for `LinkedHashMap`, the benefit of code-point iteration, expected O(n) time, and O(k) memory in an interview?",
+      "why_te": "Temporary driver remove chestunnam. Final answer two-pass frequency approach, LinkedHashMap order, Unicode code points, O(n) expected time, O(k) distinct-character memory ani explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/FirstUniqueDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

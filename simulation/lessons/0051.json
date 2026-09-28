@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "lesson_number": 51,
+  "question_id": 51,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Find a substring without built-in contains or indexOf",
+  "info_language": "te-Latn",
+  "answer": "Use a naive sliding comparison. For every possible starting index in the main String, compare the substring characters one by one. If every character matches, return that start index; if a mismatch occurs, move to the next possible start. AeroTopo's `indexOf` method implements this with nested loops and a labeled `continue`. Its worst-case time complexity is O((n-m+1) · m), commonly simplified to O(nm), with O(1) extra space.",
+  "steps": [
+    {
+      "title": "Open the manual substring-search implementation",
+      "question": "AeroTopo's `SurveyAlgorithms.indexOf` intentionally searches without calling String's built-in substring-checking methods. It tries every legal start position and compares characters one by one. Inspect the method and identify the outer candidate-start loop, inner character comparison, successful return path, and final not-found result.",
+      "why_te": "SurveyAlgorithms.indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the mismatch shortcut",
+      "question": "The inner comparison uses a labeled `continue outer` when one character differs, immediately abandoning the current candidate start. Why does this avoid unnecessary comparisons after a known mismatch while still ensuring that the next possible starting position in the main String is tested correctly?",
+      "why_te": "Mismatch vachina current start already fail ayyindi. `continue outer` remaining inner comparisons skip chesi next start position ki velthundi. Search coverage miss avvadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 32,
+            "expected_text": "for(int j=0;j<part.length();j++) if(text.charAt(i+j)!=part.charAt(j)) continue outer;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a caller with a visible middle match",
+      "question": "The temporary driver searches for `topo` inside `aerotopo-service`, where the match begins after several earlier characters instead of at index zero. What index should the real method return, and why does this input demonstrate that the outer loop advances through candidate positions rather than checking only a prefix?",
+      "why_te": "`aerotopo-service` lo `topo` index 4 daggara start avutundi. Demo outer loop multiple candidate positions cross chesi correct middle match find chestunda ani verify chestundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/SubstringSearchDemo.java",
+          "language": "java",
+          "content": "import com.aerotopo.learning.SurveyAlgorithms;\npublic class SubstringSearchDemo {\n    public static void main(String[] args) {\n        System.out.println(SurveyAlgorithms.indexOf(\"aerotopo-service\",\"topo\"));\n        System.out.println(SurveyAlgorithms.indexOf(\"aerotopo-service\",\"xyz\"));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run matching and not-found cases",
+      "question": "The driver checks both a successful middle match and a missing substring. If the program prints `4` and `-1`, what does that establish about the method's success contract and its not-found contract, and how do those results mirror the conventional behavior of String indexing APIs?",
+      "why_te": "First output 4 correct start index ni show chestundi. Second -1 not-found result. Manual method built-in index contract la behave chestundi, kani search logic own loops tho implement ayyindi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson51-demo labs/java/SubstringSearchDemo.java; java -cp \"target/classes;target/lesson51-demo\" SubstringSearchDemo",
+          "output": "4\n-1"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the driver and summarize the scanning algorithm",
+      "question": "The temporary class has verified both outcomes and can now be deleted without changing the reusable algorithm. How would you describe the candidate-start scan, character-by-character comparison, early mismatch skip, O(nm) worst-case time, and constant extra space when answering this question?",
+      "why_te": "Temporary driver remove chestunnam. Final answer outer start scan, inner char comparison, mismatch early skip, match index return, worst-case O(nm), O(1) extra space ani explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/SubstringSearchDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

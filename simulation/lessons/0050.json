@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "lesson_number": 50,
+  "question_id": 50,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Group strings by character similarity",
+  "info_language": "te-Latn",
+  "answer": "A common interpretation of character similarity is anagram grouping. Normalize each String to a canonical key by converting it to a character array, sorting the characters, and rebuilding a String key. Then group original values by that key in a Map. AeroTopo's `anagrams` method uses `Collectors.groupingBy`, a `LinkedHashMap`, and the sorted-character key so encounter order of groups remains predictable. For n strings of maximum length k, sorting each key gives roughly O(n · k log k) time.",
+  "steps": [
+    {
+      "title": "Open the existing anagram-grouping method",
+      "question": "AeroTopo already contains an `anagrams` method that groups tile labels by a canonical character signature, so no duplicate implementation is needed. Inspect the stream pipeline and identify where each original String is transformed into a sorted-character key before `groupingBy` collects matching Strings together.",
+      "why_te": "SurveyAlgorithms.anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on canonical-key creation",
+      "question": "The grouping function converts each String to `char[]`, sorts the characters, and creates a new String from that sorted array. Why do words such as `eat`, `tea`, and `ate` produce the same key even though their original character order differs, and why is that useful for grouping anagrams?",
+      "why_te": "`eat`, `tea`, `ate` chars sort cheste same key vastundi. Original order different ayina character multiset same. Anduke same key use chesi anagrams ni oka group lo collect cheyyachu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 27,
+            "expected_text": "char[] chars=s.toCharArray(); Arrays.sort(chars); return new String(chars);"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a driver with two anagram families",
+      "question": "The temporary driver sends `eat`, `tea`, `tan`, `ate`, `nat`, and `bat` to the real project method. This input contains two multi-item anagram groups plus one unmatched String. What grouping structure should you expect if canonical sorted-character keys are working correctly for every value in the list?",
+      "why_te": "Demo input lo `eat/tea/ate` oka group, `tan/nat` second group, `bat` single group. Real method output map lo ee grouping clear ga kanipinchali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AnagramGroupsDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\nimport com.aerotopo.learning.SurveyAlgorithms;\npublic class AnagramGroupsDemo {\n    public static void main(String[] args) {\n        System.out.println(SurveyAlgorithms.anagrams(List.of(\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\")));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the anagram grouping example",
+      "question": "When the driver prints groups containing `[eat, tea, ate]`, `[tan, nat]`, and `[bat]`, what does that verify about both canonical-key equality and preservation of the original values inside each group, rather than returning only the normalized sorted keys themselves?",
+      "why_te": "Output groups original Strings ni retain chestayi. Sorted key grouping kosam matrame use avutundi. Same key values together vastayi, kani user data original form lo group list lo untundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson50-demo labs/java/AnagramGroupsDemo.java; java -cp \"target/classes;target/lesson50-demo\" AnagramGroupsDemo",
+          "output": "{aet=[eat, tea, ate], ant=[tan, nat], abt=[bat]}"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the driver and retain the reusable grouping method",
+      "question": "The temporary caller has verified the existing production algorithm, so it should be deleted while the real `anagrams` method remains unchanged. How would you explain the canonical sorted-key technique, Map grouping, encounter-order choice, and O(n · k log k) cost in an interview answer?",
+      "why_te": "Temporary driver ni remove chestunnam. Final answer sorted-character key, Map grouping, original values retention, mariyu per-string sorting cost gurinchi explain cheyyali. Existing project method reusable ga remain avutundi.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AnagramGroupsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
