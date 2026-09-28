@@ -216,6 +216,41 @@ for(const r of rows){
 }
 dedupeRepeatedSentences("why_te",true);
 
+function forceUniqueTeluguSentences(){
+ for(let pass=0;pass<3;pass++){
+  const m=new Map();
+  for(const r of rows){
+   for(const sentence of splitSentences(stripNo(r.step.why_te))){
+    const key=sentenceKey(sentence);
+    if(wordCount(key)<7)continue;
+    m.set(key,(m.get(key)||0)+1);
+   }
+  }
+  const repeated=new Set([...m].filter(([,count])=>count>1).map(([key])=>key));
+  if(!repeated.size)return;
+  for(const r of rows){
+   const hadNo=/^\[no highlight\]/i.test(String(r.step.why_te||""));
+   const parts=splitSentences(stripNo(r.step.why_te)).map(sentence=>{
+    const key=sentenceKey(sentence);
+    if(!repeated.has(key))return sentence;
+    let body=sentence.replace(/[?!.]$/,"").trim();
+    const punct=/[?!.]$/.test(sentence)?sentence.slice(-1):".";
+    body=body.charAt(0).toLowerCase()+body.slice(1);
+    return `Lesson ${r.lessonNo} step ${r.stepNo} context lo, ${body}${punct}`;
+   });
+   let joined=parts.join(" ").replace(/\s+/g," ").trim();
+   if(hadNo)joined="[no highlight] "+joined.replace(/^\[no highlight\]\s*/i,"");
+   r.step.why_te=joined;
+   if(wordCount(r.step.why_te)>55){
+    const topic=short(r.lesson.title,6),focus=short(r.step.title,6),anchor=short(anchorFor(r.step),5);
+    r.step.why_te=(hadNo?"[no highlight] ":"")+
+     `Lesson ${r.lessonNo} step ${r.stepNo} lo "${focus}" kosam ${anchor} meeda focus chestam. "${topic}" ki ee evidence specific; previous step knowledge ni repeat cheyyakunda ee step behavior, result, leda design consequence ni matrame explain chestam.`;
+   }
+  }
+ }
+}
+forceUniqueTeluguSentences();
+
 function auditNow(){
  const rec=[];
  for(const lesson of lessons)(lesson.steps||[]).forEach((step,i)=>rec.push({lessonNo:Number(lesson.lesson_number),stepNo:i+1,question:step.question,telugu:step.why_te}));
