@@ -2810,3 +2810,163 @@ Main class use cheyyadaniki JVM first class initialize chestundi. Static initial
 ### Step 5 — Return to the production example — Why a static block runs before main
 
 Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
+
+## Lesson 105 — Delaying static initialization until a method is called
+
+### Step 1 — Open the project evidence — Delaying static initialization until a method is called
+
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
+
+### Step 2 — Trace lifecycle and restriction — Delaying static initialization until a method is called
+
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
+
+### Step 3 — Evaluate the design effect — Delaying static initialization until a method is called
+
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
+
+### Step 4 — State the interview rule — Delaying static initialization until a method is called
+
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
+
+## Lesson 106 — Printing without a main method in the initialized class
+
+### Step 1 — Open the AeroTopo baseline — Printing without a main method in the initialized class
+
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
+
+### Step 2 — Create the focused static experiment — Printing without a main method in the initialized class
+
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
+
+### Step 3 — Run the focused static experiment — Printing without a main method in the initialized class
+
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
+
+### Step 4 — Remove the temporary static experiment — Printing without a main method in the initialized class
+
+[no highlight] Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
+
+### Step 5 — Return to the real AeroTopo code — Printing without a main method in the initialized class
+
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
+
+## Lesson 107 — The static keyword in Java
+
+### Step 1 — Open the project evidence — The static keyword in Java
+
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
+
+### Step 2 — Trace binding and ownership — The static keyword in Java
+
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
+
+### Step 3 — Evaluate the design choice — The static keyword in Java
+
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
+
+### Step 4 — State the interview rule — The static keyword in Java
+
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
+
+## Lesson 108 — Whether static methods can be overridden
+
+### Step 1 — Open the project evidence — Whether static methods can be overridden
+
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
+
+### Step 2 — Trace binding and ownership — Whether static methods can be overridden
+
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
+
+### Step 3 — Evaluate the design choice — Whether static methods can be overridden
+
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
+
+### Step 4 — State the interview rule — Whether static methods can be overridden
+
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
+
+## Lesson 109 — Calling instance members from a static method
+
+### Step 1 — Open the AeroTopo baseline — Calling instance members from a static method
+
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
+
+### Step 2 — Create the focused static experiment — Calling instance members from a static method
+
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
+
+### Step 3 — Run the focused static experiment — Calling instance members from a static method
+
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
+
+### Step 4 — Remove the temporary static experiment — Calling instance members from a static method
+
+[no highlight] Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
+
+### Step 5 — Return to the real AeroTopo code — Calling instance members from a static method
+
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
+
+## Lesson 110 — Why static methods are used
+
+### Step 1 — Open the project evidence — Why static methods are used
+
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
+
+### Step 2 — Trace binding and ownership — Why static methods are used
+
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
+
+### Step 3 — Evaluate the design choice — Why static methods are used
+
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
+
+### Step 4 — State the interview rule — Why static methods are used
+
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
+
+## Lesson 111 — Static method hiding versus overriding
+
+### Step 1 — Open the AeroTopo baseline — Static method hiding versus overriding
+
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
+
+### Step 2 — Create the focused static experiment — Static method hiding versus overriding
+
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
+
+### Step 3 — Run the focused static experiment — Static method hiding versus overriding
+
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
+
+### Step 4 — Remove the temporary static experiment — Static method hiding versus overriding
+
+[no highlight] Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
+
+### Step 5 — Return to the real AeroTopo code — Static method hiding versus overriding
+
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
+
+## Lesson 112 — Accessing non-static members inside a static method
+
+### Step 1 — Open the AeroTopo baseline — Accessing non-static members inside a static method
+
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
+
+### Step 2 — Create the focused static experiment — Accessing non-static members inside a static method
+
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
+
+### Step 3 — Run the focused static experiment — Accessing non-static members inside a static method
+
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
+
+### Step 4 — Remove the temporary static experiment — Accessing non-static members inside a static method
+
+[no highlight] Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
+
+### Step 5 — Return to the real AeroTopo code — Accessing non-static members inside a static method
+
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
