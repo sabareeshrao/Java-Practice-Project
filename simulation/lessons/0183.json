@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "lesson_number": 183,
+  "question_id": 183,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Choosing an interface versus extending a class",
+  "info_language": "te-Latn",
+  "answer": "Use an interface when you want to express a capability or role that many unrelated classes can implement and when multiple contracts may be combined. Extend a class when the subtype truly belongs to that base hierarchy and should inherit shared state, construction rules, or protected behavior. A concrete class can often do both.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Choosing an interface versus extending a class",
+      "question": "Can you provide examples of when to use an interface versus when to extend a class? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Orthomosaic` belongs to the stateful `Product` hierarchy while `Product` separately promises the `Exportable` and `Identified` capabilities, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Orthomosaic` belongs to the stateful `Product` hierarchy while `Product` separately promises the `Exportable` and `Identified` capabilities; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          14,
+          16,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Choosing an interface versus extending a class",
+      "question": "Create the temporary InterfaceOrClassDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: class inheritance should model one shared implementation lineage, while interfaces express orthogonal behaviors that can cross hierarchies; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "class inheritance should model one shared implementation lineage, while interfaces express orthogonal behaviors that can cross hierarchies; temporary InterfaceOrClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/InterfaceOrClassDemo.java",
+          "language": "java",
+          "content": "interface ExportRole { String export(); }\nabstract class ProductBaseType {\n    final String id;\n    ProductBaseType(String id) { this.id = id; }\n}\nclass OrthoRole extends ProductBaseType implements ExportRole {\n    OrthoRole(String id) { super(id); }\n    public String export() { return \"csv:\" + id; }\n}\npublic class InterfaceOrClassDemo {\n    public static void main(String[] args) { System.out.println(new OrthoRole(\"O1\").export()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Choosing an interface versus extending a class",
+      "question": "Run the focused Lesson 183 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"csv:O1\"; explain how that observed compiler or runtime behavior demonstrates that the demo gets common `id` state from `ProductBaseType` and independently advertises `ExportRole` as a capability, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"csv:O1\" ani report chestundi; the demo gets common `id` state from `ProductBaseType` and independently advertises `ExportRole` as a capability; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson183-demo labs/java/InterfaceOrClassDemo.java; java -cp target/lesson183-demo InterfaceOrClassDemo",
+          "output": "csv:O1"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Choosing an interface versus extending a class",
+      "question": "The temporary file labs/java/InterfaceOrClassDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] InterfaceOrClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/InterfaceOrClassDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 183 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Choosing an interface versus extending a class",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Prefer the narrowest relationship that reflects the domain rather than choosing inheritance merely to reuse a few lines of code, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Prefer the narrowest relationship that reflects the domain rather than choosing inheritance merely to reuse a few lines of code; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          14,
+          16,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

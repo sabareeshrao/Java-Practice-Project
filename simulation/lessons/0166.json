@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "lesson_number": 166,
+  "question_id": 166,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Abstraction in Java library APIs",
+  "info_language": "te-Latn",
+  "answer": "Java libraries use abstraction everywhere. Code often programs to interfaces such as List, Map, Set, Executor, or Path while concrete implementations do the work. Abstract classes such as InputStream also hide common mechanics behind a stable API. The benefit is that client code focuses on operations and contracts instead of implementation details.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Abstraction in Java library APIs",
+      "question": "Can you provide examples where abstraction is effectively used in Java libraries? Inspect the highlighted LanguageLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `LanguageLab` returns and accepts collection abstractions such as `List` instead of exposing a particular mutable implementation, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`LanguageLab` returns and accepts collection abstractions such as `List` instead of exposing a particular mutable implementation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Abstraction in Java library APIs",
+      "question": "Create the temporary LibraryAbstractionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: library-facing code can declare an interface type while a concrete implementation remains replaceable behind that reference; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "library-facing code can declare an interface type while a concrete implementation remains replaceable behind that reference; temporary LibraryAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/LibraryAbstractionDemo.java",
+          "language": "java",
+          "content": "import java.util.ArrayList;\nimport java.util.List;\npublic class LibraryAbstractionDemo {\n    public static void main(String[] args) {\n        List<String> tiles = new ArrayList<>();\n        tiles.add(\"T1\");\n        System.out.println(tiles.get(0) + \":\" + tiles.getClass().getSimpleName());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Abstraction in Java library APIs",
+      "question": "Run the focused Lesson 166 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"T1:ArrayList\"; explain how that observed compiler or runtime behavior demonstrates that a `List` reference operates normally even though the created object is specifically an `ArrayList`, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"T1:ArrayList\" ani report chestundi; a `List` reference operates normally even though the created object is specifically an `ArrayList`; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson166-demo labs/java/LibraryAbstractionDemo.java; java -cp target/lesson166-demo LibraryAbstractionDemo",
+          "output": "T1:ArrayList"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Abstraction in Java library APIs",
+      "question": "The temporary file labs/java/LibraryAbstractionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent LanguageLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] LibraryAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent LanguageLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/LibraryAbstractionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 166 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Abstraction in Java library APIs",
+      "question": "Return to the highlighted LanguageLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Program to stable library abstractions when callers need behavior rather than knowledge of storage mechanics, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Program to stable library abstractions when callers need behavior rather than knowledge of storage mechanics; final interview answer lo LanguageLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_number": 181,
+  "question_id": 181,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Resolving conflicting interface default methods",
+  "info_language": "te-Latn",
+  "answer": "If two unrelated interfaces provide the same default method signature and a class implements both, the class must resolve the conflict by overriding that method. Inside the override it may choose one implementation explicitly with InterfaceName.super.method(), combine both, or provide completely new behavior.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Resolving conflicting interface default methods",
+      "question": "If two interfaces provide the same default method and your class implements both, how do you resolve the conflict? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Units` implements `Left` and `Right` and resolves their competing `units()` defaults with an explicit override, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Units` implements `Left` and `Right` and resolves their competing `units()` defaults with an explicit override; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          63,
+          64,
+          65,
+          66
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Resolving conflicting interface default methods",
+      "question": "Create the temporary DefaultConflictResolutionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: Java requires an explicit most-specific choice when two unrelated inherited defaults have the same signature; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "Java requires an explicit most-specific choice when two unrelated inherited defaults have the same signature; temporary DefaultConflictResolutionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/DefaultConflictResolutionDemo.java",
+          "language": "java",
+          "content": "interface LeftUnits { default String units() { return \"m\"; } }\ninterface RightUnits { default String units() { return \"metres\"; } }\nclass CombinedUnits implements LeftUnits, RightUnits {\n    public String units() { return LeftUnits.super.units() + \"/\" + RightUnits.super.units(); }\n}\npublic class DefaultConflictResolutionDemo {\n    public static void main(String[] args) { System.out.println(new CombinedUnits().units()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Resolving conflicting interface default methods",
+      "question": "Run the focused Lesson 181 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"m/metres\"; explain how that observed compiler or runtime behavior demonstrates that the overriding method legally calls both qualified defaults and combines them into one unambiguous result, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"m/metres\" ani report chestundi; the overriding method legally calls both qualified defaults and combines them into one unambiguous result; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson181-demo labs/java/DefaultConflictResolutionDemo.java; java -cp target/lesson181-demo DefaultConflictResolutionDemo",
+          "output": "m/metres"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Resolving conflicting interface default methods",
+      "question": "The temporary file labs/java/DefaultConflictResolutionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] DefaultConflictResolutionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/DefaultConflictResolutionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 181 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Resolving conflicting interface default methods",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Resolve the conflict at the composition point so callers see one clear method contract instead of hidden precedence rules, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Resolve the conflict at the composition point so callers see one clear method contract instead of hidden precedence rules; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          63,
+          64,
+          65,
+          66
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "lesson_number": 192,
+  "question_id": 192,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "How Java recognizes marker interfaces",
+  "info_language": "te-Latn",
+  "answer": "A marker interface has no required methods; its presence on a class carries type metadata. Java can distinguish marked classes through normal type checks such as instanceof or Class.isAssignableFrom(...), and frameworks can inspect implemented-interface metadata through reflection. The JDK historically uses marker interfaces such as Serializable and Cloneable to signal special semantics.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — How Java recognizes marker interfaces",
+      "question": "How does Java distinguish Classes that implement a Marker Interface from Classes that do not? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Identified` is a behavior-bearing interface, giving a useful contrast before the experiment removes methods entirely to form a marker, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Identified` is a behavior-bearing interface, giving a useful contrast before the experiment removes methods entirely to form a marker; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          12,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — How Java recognizes marker interfaces",
+      "question": "Create the temporary MarkerInterfaceDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: implementing even an empty interface changes the class's type metadata, so runtime type checks can detect participation without invoking any method; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "implementing even an empty interface changes the class's type metadata, so runtime type checks can detect participation without invoking any method; temporary MarkerInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/MarkerInterfaceDemo.java",
+          "language": "java",
+          "content": "interface Audited {}\nclass CheckedTile implements Audited {}\nclass PlainTile {}\npublic class MarkerInterfaceDemo {\n    public static void main(String[] args) {\n        System.out.println((new CheckedTile() instanceof Audited) + \" \" + (new PlainTile() instanceof Audited));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — How Java recognizes marker interfaces",
+      "question": "Run the focused Lesson 192 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"true false\"; explain how that observed compiler or runtime behavior demonstrates that `instanceof Audited` returns true for `CheckedTile` and false for `PlainTile`, proving the marker is visible to the type system, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"true false\" ani report chestundi; `instanceof Audited` returns true for `CheckedTile` and false for `PlainTile`, proving the marker is visible to the type system; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson192-demo labs/java/MarkerInterfaceDemo.java; java -cp target/lesson192-demo MarkerInterfaceDemo",
+          "output": "true false"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — How Java recognizes marker interfaces",
+      "question": "The temporary file labs/java/MarkerInterfaceDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] MarkerInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/MarkerInterfaceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 192 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — How Java recognizes marker interfaces",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Use marker interfaces only when type membership itself has clear semantics; annotations are often better when metadata needs values or broader targeting, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Use marker interfaces only when type membership itself has clear semantics; annotations are often better when metadata needs values or broader targeting; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          12,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "lesson_number": 173,
+  "question_id": 173,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Abstraction in Java core-library classes",
+  "info_language": "te-Latn",
+  "answer": "Core Java uses abstraction through both interfaces and abstract classes. InputStream defines the idea of reading bytes while subclasses such as ByteArrayInputStream provide a source-specific implementation; collections similarly use interfaces such as List and Map. Client code therefore depends on a stable operation while concrete storage or I/O mechanics remain hidden.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Abstraction in Java core-library classes",
+      "question": "Can you provide examples of how Abstraction is effectively used in Java's Core Libraries? Inspect the highlighted RuntimeLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `RuntimeLab` works with JDK reflection and proxy abstractions instead of hard-coding one generated implementation class, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`RuntimeLab` works with JDK reflection and proxy abstractions instead of hard-coding one generated implementation class; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Abstraction in Java core-library classes",
+      "question": "Create the temporary CoreLibraryAbstractionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: core-library abstractions give callers a stable type while concrete subclasses encapsulate source-specific or mechanism-specific work; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "core-library abstractions give callers a stable type while concrete subclasses encapsulate source-specific or mechanism-specific work; temporary CoreLibraryAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/CoreLibraryAbstractionDemo.java",
+          "language": "java",
+          "content": "import java.io.ByteArrayInputStream;\nimport java.io.InputStream;\npublic class CoreLibraryAbstractionDemo {\n    public static void main(String[] args) throws Exception {\n        InputStream input = new ByteArrayInputStream(new byte[]{65});\n        System.out.println(input.read());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Abstraction in Java core-library classes",
+      "question": "Run the focused Lesson 173 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"65\"; explain how that observed compiler or runtime behavior demonstrates that an `InputStream` reference reads from a `ByteArrayInputStream` without the reading code depending on that concrete source, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"65\" ani report chestundi; an `InputStream` reference reads from a `ByteArrayInputStream` without the reading code depending on that concrete source; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson173-demo labs/java/CoreLibraryAbstractionDemo.java; java -cp target/lesson173-demo CoreLibraryAbstractionDemo",
+          "output": "65"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Abstraction in Java core-library classes",
+      "question": "The temporary file labs/java/CoreLibraryAbstractionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent RuntimeLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] CoreLibraryAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent RuntimeLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/CoreLibraryAbstractionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 173 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Abstraction in Java core-library classes",
+      "question": "Return to the highlighted RuntimeLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that The same abstraction principle lets AeroTopo change data sources or adapters while preserving a stable calling contract, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "The same abstraction principle lets AeroTopo change data sources or adapters while preserving a stable calling contract; final interview answer lo RuntimeLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

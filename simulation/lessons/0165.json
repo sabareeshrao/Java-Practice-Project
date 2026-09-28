@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "lesson_number": 165,
+  "question_id": 165,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "When an abstract class is still preferable after Java 8",
+  "info_language": "te-Latn",
+  "answer": "Default and static interface methods did not replace abstract classes. Prefer an abstract class when related subclasses need shared instance state, constructors, protected helper methods, enforced initialization, or a controlled inheritance template. Prefer an interface when the main goal is a capability contract that many otherwise unrelated classes should implement, especially when multiple contracts are useful.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — When an abstract class is still preferable after Java 8",
+      "question": "Since Java 8 introduced default and static methods in Interfaces, when should we still prefer Abstract Classes? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Product` centralizes immutable fields, constructor boundaries, concrete operations, and one abstract extension point, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Product` centralizes immutable fields, constructor boundaries, concrete operations, and one abstract extension point; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — When an abstract class is still preferable after Java 8",
+      "question": "Create the temporary PreferAbstractClassDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: interface default methods can share behavior but cannot replace superclass constructors or ordinary inherited instance state; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "interface default methods can share behavior but cannot replace superclass constructors or ordinary inherited instance state; temporary PreferAbstractClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PreferAbstractClassDemo.java",
+          "language": "java",
+          "content": "abstract class StatefulProduct {\n    protected final String id;\n    StatefulProduct(String id) { this.id = id; validate(); }\n    protected void validate() { if (id.isBlank()) throw new IllegalArgumentException(); }\n    abstract String type();\n}\nclass StatefulOrtho extends StatefulProduct {\n    StatefulOrtho(String id) { super(id); }\n    String type() { return \"ortho\"; }\n}\npublic class PreferAbstractClassDemo {\n    public static void main(String[] args) { var p = new StatefulOrtho(\"O1\"); System.out.println(p.type() + \":\" + p.id); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — When an abstract class is still preferable after Java 8",
+      "question": "Run the focused Lesson 165 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"ortho:O1\"; explain how that observed compiler or runtime behavior demonstrates that the subclass reuses `id`, constructor initialization, and a protected validation helper before supplying only its type-specific method, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"ortho:O1\" ani report chestundi; the subclass reuses `id`, constructor initialization, and a protected validation helper before supplying only its type-specific method; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson165-demo labs/java/PreferAbstractClassDemo.java; java -cp target/lesson165-demo PreferAbstractClassDemo",
+          "output": "ortho:O1"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — When an abstract class is still preferable after Java 8",
+      "question": "The temporary file labs/java/PreferAbstractClassDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] PreferAbstractClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PreferAbstractClassDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 165 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — When an abstract class is still preferable after Java 8",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Use an abstract base when concrete variants are members of one stateful family with shared lifecycle rules, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Use an abstract base when concrete variants are members of one stateful family with shared lifecycle rules; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

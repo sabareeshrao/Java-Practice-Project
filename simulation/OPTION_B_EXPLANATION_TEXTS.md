@@ -3880,3 +3880,708 @@ Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruv
 ### Step 5 — Return to the project design — Designing a plug-in system with polymorphism
 
 Return to the project design Designing a plug-in system with polymorphism context lo PatternLab.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; PatternLab.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi.
+
+## Lesson 161 — Understanding Java interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Understanding Java interfaces
+
+`Exportable` and `Identified` define capabilities independently from the concrete survey-product classes; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Understanding Java interfaces
+
+an implementing class promises to provide the interface's abstract operations while callers can depend on the interface type; temporary InterfaceContractDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Understanding Java interfaces
+
+Terminal evidence "csv:tile-7" ani report chestundi; the `Exporter` reference invokes the `CsvExporter` implementation without the caller depending on that class; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Understanding Java interfaces
+
+[no highlight] InterfaceContractDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Understanding Java interfaces
+
+AeroTopo can expose stable capability contracts and swap implementations without changing callers; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 162 — Interface static methods versus default methods
+
+### Step 1 — Inspect the AeroTopo evidence — Interface static methods versus default methods
+
+`Exportable.mediaType()` is a default instance method while `Exportable.supports()` is a static interface utility; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Interface static methods versus default methods
+
+default methods participate in instance inheritance, whereas static interface methods are selected through the interface name; temporary InterfaceMethodKindsDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Interface static methods versus default methods
+
+Terminal evidence "text/plain true" ani report chestundi; the demo calls `media()` through an implementation instance and `supported(...)` through the interface type; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Interface static methods versus default methods
+
+[no highlight] InterfaceMethodKindsDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Interface static methods versus default methods
+
+Use default behavior for inheritable contract evolution and static behavior for interface-scoped utilities; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 163 — Constructors inside abstract classes
+
+### Step 1 — Inspect the AeroTopo evidence — Constructors inside abstract classes
+
+abstract `Product` owns state and protected constructors that `Orthomosaic` reaches through `super(...)`; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Constructors inside abstract classes
+
+an abstract superclass constructor runs as part of constructing a concrete subclass and initializes the superclass portion of that object; temporary AbstractConstructorDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Constructors inside abstract classes
+
+Terminal evidence "base:O1" ani report chestundi; construction prints the base initialization before the child initialization, showing superclass construction happens first; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Constructors inside abstract classes
+
+[no highlight] AbstractConstructorDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Constructors inside abstract classes
+
+Abstract constructors are appropriate when every concrete product must establish shared invariants before child-specific fields; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 164 — Abstract classes versus interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Abstract classes versus interfaces
+
+`Exportable` supplies a capability contract while abstract `Product` owns `id`, `tiles`, constructors, and shared implementation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Abstract classes versus interfaces
+
+abstract classes model shared identity and state in one class hierarchy, whereas interfaces model contracts that unrelated classes can implement together; temporary AbstractVsInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Abstract classes versus interfaces
+
+Terminal evidence "O1:0.05" ani report chestundi; the concrete class inherits state from the abstract base and simultaneously satisfies the separate export capability; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Abstract classes versus interfaces
+
+[no highlight] AbstractVsInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Abstract classes versus interfaces
+
+Choose the mechanism from the relationship you need: shared base state and lifecycle versus a reusable capability contract; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 165 — When an abstract class is still preferable after Java 8
+
+### Step 1 — Inspect the AeroTopo evidence — When an abstract class is still preferable after Java 8
+
+`Product` centralizes immutable fields, constructor boundaries, concrete operations, and one abstract extension point; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — When an abstract class is still preferable after Java 8
+
+interface default methods can share behavior but cannot replace superclass constructors or ordinary inherited instance state; temporary PreferAbstractClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — When an abstract class is still preferable after Java 8
+
+Terminal evidence "ortho:O1" ani report chestundi; the subclass reuses `id`, constructor initialization, and a protected validation helper before supplying only its type-specific method; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — When an abstract class is still preferable after Java 8
+
+[no highlight] PreferAbstractClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — When an abstract class is still preferable after Java 8
+
+Use an abstract base when concrete variants are members of one stateful family with shared lifecycle rules; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 166 — Abstraction in Java library APIs
+
+### Step 1 — Inspect the AeroTopo evidence — Abstraction in Java library APIs
+
+`LanguageLab` returns and accepts collection abstractions such as `List` instead of exposing a particular mutable implementation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Abstraction in Java library APIs
+
+library-facing code can declare an interface type while a concrete implementation remains replaceable behind that reference; temporary LibraryAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Abstraction in Java library APIs
+
+Terminal evidence "T1:ArrayList" ani report chestundi; a `List` reference operates normally even though the created object is specifically an `ArrayList`; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Abstraction in Java library APIs
+
+[no highlight] LibraryAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent LanguageLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Abstraction in Java library APIs
+
+Program to stable library abstractions when callers need behavior rather than knowledge of storage mechanics; final interview answer lo LanguageLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 167 — Meaning of abstraction in Java
+
+### Step 1 — Inspect the AeroTopo evidence — Meaning of abstraction in Java
+
+`ElevationStrategy` exposes only an elevation operation while `ImportTemplate` separates the public workflow from subclass parsing details; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Meaning of abstraction in Java
+
+abstraction deliberately limits what the caller must know, keeping implementation choices behind a contract or template; temporary AbstractionMeaningDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Meaning of abstraction in Java
+
+Terminal evidence "0.05" ani report chestundi; the caller asks a `ResolutionSource` for a value without knowing that the concrete implementation stores centimetres internally; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Meaning of abstraction in Java
+
+[no highlight] AbstractionMeaningDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Meaning of abstraction in Java
+
+Good abstraction reduces dependency on implementation decisions while keeping the behavior required by the caller explicit; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 168 — A real-world abstraction example
+
+### Step 1 — Inspect the AeroTopo evidence — A real-world abstraction example
+
+the strategy contract lets AeroTopo ask for an elevation result without exposing the strategy's internal calculation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — A real-world abstraction example
+
+a real-world control surface is an abstraction when it exposes meaningful operations and hides machinery that the user need not manage; temporary RealWorldAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — A real-world abstraction example
+
+Terminal evidence "flying:WP-7" ani report chestundi; the mission code calls `flyTo` through `DroneController` while the DJI-specific radio details remain inside the implementation; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — A real-world abstraction example
+
+[no highlight] RealWorldAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — A real-world abstraction example
+
+Design interfaces like useful control surfaces: reveal intent, hide replaceable mechanics, and avoid leaking device-specific details; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 169 — Declaring an abstract method inside a class
+
+### Step 1 — Inspect the AeroTopo evidence — Declaring an abstract method inside a class
+
+`ImportTemplate` is declared abstract because its `parse(...)` operation intentionally has no base implementation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Declaring an abstract method inside a class
+
+Java forbids a concrete class from declaring an abstract method because concrete instances must have implementations for their instance behavior; temporary ConcreteWithAbstractMethodDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Declaring an abstract method inside a class
+
+Terminal evidence "ConcreteWithAbstractMethodDemo.java:2: error: BadProduct is not abstract and does not override abstract method resolution()" ani report chestundi; `javac` rejects the deliberately concrete `BadProduct` as soon as it sees the body-less abstract `resolution()` declaration; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Declaring an abstract method inside a class
+
+[no highlight] ConcreteWithAbstractMethodDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Declaring an abstract method inside a class
+
+Mark the class abstract when it intentionally leaves required behavior for subclasses rather than pretending the base type is directly constructible; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 170 — Achieving abstraction with an abstract class
+
+### Step 1 — Inspect the AeroTopo evidence — Achieving abstraction with an abstract class
+
+`ImportTemplate.run(...)` exposes one stable workflow while the abstract `parse(...)` step is supplied by subclasses; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Achieving abstraction with an abstract class
+
+an abstract class can define the public abstraction boundary itself by combining concrete template behavior with abstract extension points; temporary AbstractClassOnlyDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Achieving abstraction with an abstract class
+
+Terminal evidence "A|B" ani report chestundi; the caller uses a `ReaderTemplate` reference and receives parsed data without depending on the concrete CSV parsing class; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Achieving abstraction with an abstract class
+
+[no highlight] AbstractClassOnlyDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Achieving abstraction with an abstract class
+
+An abstract class is sufficient when one inheritance family needs both shared workflow and hidden subclass-specific implementation; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 171 — Inherited abstract methods and concrete subclasses
+
+### Step 1 — Inspect the AeroTopo evidence — Inherited abstract methods and concrete subclasses
+
+the abstract parse contract in `ImportTemplate` creates an implementation obligation for subclasses; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Inherited abstract methods and concrete subclasses
+
+a subclass that inherits an unimplemented abstract operation cannot become concrete until it provides that operation; temporary InheritedAbstractMethodDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Inherited abstract methods and concrete subclasses
+
+Terminal evidence "InheritedAbstractMethodDemo.java:4: error: MiddleReader is not abstract and does not override abstract method load()" ani report chestundi; `javac` rejects `MiddleReader` because it extends an abstract base yet leaves `load()` unresolved while being declared concrete; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Inherited abstract methods and concrete subclasses
+
+[no highlight] InheritedAbstractMethodDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Inherited abstract methods and concrete subclasses
+
+Keep intermediate classes abstract when they intentionally defer part of the contract farther down the hierarchy; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 172 — Anonymous subclasses of abstract classes
+
+### Step 1 — Inspect the AeroTopo evidence — Anonymous subclasses of abstract classes
+
+`ImportTemplate` shows an abstract base whose missing behavior must be supplied before an instance can be usable; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Anonymous subclasses of abstract classes
+
+`new AbstractType(){...}` creates an unnamed subclass rather than an instance of the abstract class itself; temporary AnonymousAbstractClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Anonymous subclasses of abstract classes
+
+Terminal evidence "true" ani report chestundi; the anonymous `Rule` implementation supplies `test(...)` inline and the resulting object executes normally; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Anonymous subclasses of abstract classes
+
+[no highlight] AnonymousAbstractClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Anonymous subclasses of abstract classes
+
+Use anonymous subclasses for truly local behavior, but prefer named implementations when the logic has identity, tests, or reuse; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 173 — Abstraction in Java core-library classes
+
+### Step 1 — Inspect the AeroTopo evidence — Abstraction in Java core-library classes
+
+`RuntimeLab` works with JDK reflection and proxy abstractions instead of hard-coding one generated implementation class; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Abstraction in Java core-library classes
+
+core-library abstractions give callers a stable type while concrete subclasses encapsulate source-specific or mechanism-specific work; temporary CoreLibraryAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Abstraction in Java core-library classes
+
+Terminal evidence "65" ani report chestundi; an `InputStream` reference reads from a `ByteArrayInputStream` without the reading code depending on that concrete source; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Abstraction in Java core-library classes
+
+[no highlight] CoreLibraryAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent RuntimeLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Abstraction in Java core-library classes
+
+The same abstraction principle lets AeroTopo change data sources or adapters while preserving a stable calling contract; final interview answer lo RuntimeLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 174 — Abstract classes without abstract methods
+
+### Step 1 — Inspect the AeroTopo evidence — Abstract classes without abstract methods
+
+AeroTopo's template base demonstrates that an abstract class can contain substantial concrete behavior beyond its extension points; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Abstract classes without abstract methods
+
+the `abstract` modifier on the class controls instantiation independently from whether any method is abstract; temporary AbstractWithoutAbstractMethodsDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Abstract classes without abstract methods
+
+Terminal evidence "base" ani report chestundi; `SharedBase` has only a concrete method, yet callers must instantiate `ConcreteShared` because the base itself remains abstract; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Abstract classes without abstract methods
+
+[no highlight] AbstractWithoutAbstractMethodsDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Abstract classes without abstract methods
+
+Use an abstract-without-abstract-methods base only when preventing direct construction and defining a subclassing role are intentional constraints; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 175 — Refactoring between abstract classes and interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Refactoring between abstract classes and interfaces
+
+`Exportable` and `Product` sit side by side because the capability contract and the stateful base class have genuinely different responsibilities; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Refactoring between abstract classes and interfaces
+
+moving between interface and abstract class changes what can carry instance state, how construction works, and how many contracts a class may combine; temporary AbstractInterfaceRefactorDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Refactoring between abstract classes and interfaces
+
+Terminal evidence "export:O1" ani report chestundi; the demo separates state into an abstract base and keeps export as an interface instead of forcing one construct to imitate the other; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Refactoring between abstract classes and interfaces
+
+[no highlight] AbstractInterfaceRefactorDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Refactoring between abstract classes and interfaces
+
+Refactor only after deciding where state, construction, reusable behavior, and multiple capabilities should live; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 176 — Abstraction as a loose-coupling tool
+
+### Step 1 — Inspect the AeroTopo evidence — Abstraction as a loose-coupling tool
+
+`estimate(...)` depends on `ElevationStrategy` rather than constructing a specific elevation algorithm; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Abstraction as a loose-coupling tool
+
+dependency direction toward an abstraction prevents the consumer from knowing construction and implementation details it does not need; temporary LooseCouplingDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Abstraction as a loose-coupling tool
+
+Terminal evidence "db:42" ani report chestundi; the same `TileService` works with `DatabaseRepository` because its constructor accepts only the `TileRepository` contract; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Abstraction as a loose-coupling tool
+
+[no highlight] LooseCouplingDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Abstraction as a loose-coupling tool
+
+This boundary makes implementation replacement and testing cheaper because service code remains stable while collaborators vary; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 177 — Using interfaces for multiple inheritance of type
+
+### Step 1 — Inspect the AeroTopo evidence — Using interfaces for multiple inheritance of type
+
+abstract `Product` implements both `Exportable` and `Identified`, while `Units` separately combines two interface contracts; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Using interfaces for multiple inheritance of type
+
+interfaces allow one class to satisfy several independent type contracts while Java still preserves single inheritance for classes; temporary MultipleInterfaceInheritanceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Using interfaces for multiple inheritance of type
+
+Terminal evidence "fly map" ani report chestundi; `SurveyDrone` implements both `Flyable` and `Mappable`, so one object can be used through either contract; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Using interfaces for multiple inheritance of type
+
+[no highlight] MultipleInterfaceInheritanceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Using interfaces for multiple inheritance of type
+
+Use multiple interfaces to compose capabilities rather than using multiple concrete superclasses for unrelated behavior; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 178 — Why Java interfaces are useful
+
+### Step 1 — Inspect the AeroTopo evidence — Why Java interfaces are useful
+
+`Exportable` contains an abstract operation plus concrete default and static behavior, demonstrating a modern interface contract; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Why Java interfaces are useful
+
+an interface's main value is substitutable behavior through a contract rather than the absence of every concrete method body; temporary ModernInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Why Java interfaces are useful
+
+Terminal evidence "csv text/plain" ani report chestundi; the `CsvExport` implementation provides only `export()` and automatically receives the interface's default `mediaType()` behavior; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Why Java interfaces are useful
+
+[no highlight] ModernInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why Java interfaces are useful
+
+Keep the contract small and capability-focused so unrelated implementations can satisfy it without sharing class state; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 179 — Why an interface cannot be final
+
+### Step 1 — Inspect the AeroTopo evidence — Why an interface cannot be final
+
+AeroTopo interfaces exist specifically so concrete types can implement them or other interface types can combine their contracts; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Why an interface cannot be final
+
+`final` prohibits type extension while an interface is designed to be implemented or extended, making the modifiers incompatible; temporary FinalInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Why an interface cannot be final
+
+Terminal evidence "FinalInterfaceDemo.java:1: error: illegal combination of modifiers: interface and final" ani report chestundi; `javac` rejects the deliberately declared `final interface ExportableRule` before any implementation can be created; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Why an interface cannot be final
+
+[no highlight] FinalInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why an interface cannot be final
+
+Apply `final` to concrete classes when inheritance must stop, not to interface contracts intended for implementation; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 180 — Private nested interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Private nested interfaces
+
+`SurveyProducts` nests several interface types inside an enclosing class, illustrating that member-type access rules apply to them; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Private nested interfaces
+
+a nested interface is a member of its enclosing class and may therefore use member access control such as `private`; temporary PrivateNestedInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Private nested interfaces
+
+Terminal evidence "private-ok" ani report chestundi; the enclosing `Pipeline` privately declares `Step`, implements it with a nested class, and exposes only the final public result; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Private nested interfaces
+
+[no highlight] PrivateNestedInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Private nested interfaces
+
+Use a private nested interface when the contract is purely an internal implementation seam and should not become part of the public API; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 181 — Resolving conflicting interface default methods
+
+### Step 1 — Inspect the AeroTopo evidence — Resolving conflicting interface default methods
+
+`Units` implements `Left` and `Right` and resolves their competing `units()` defaults with an explicit override; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Resolving conflicting interface default methods
+
+Java requires an explicit most-specific choice when two unrelated inherited defaults have the same signature; temporary DefaultConflictResolutionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Resolving conflicting interface default methods
+
+Terminal evidence "m/metres" ani report chestundi; the overriding method legally calls both qualified defaults and combines them into one unambiguous result; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Resolving conflicting interface default methods
+
+[no highlight] DefaultConflictResolutionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Resolving conflicting interface default methods
+
+Resolve the conflict at the composition point so callers see one clear method contract instead of hidden precedence rules; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 182 — What happens when default-method conflicts are unresolved
+
+### Step 1 — Inspect the AeroTopo evidence — What happens when default-method conflicts are unresolved
+
+AeroTopo's `Units` override exists precisely because leaving the two `units()` defaults unresolved would be ambiguous; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — What happens when default-method conflicts are unresolved
+
+two unrelated equally specific default implementations create a compile-time conflict rather than a runtime winner; temporary UnresolvedDefaultConflictDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — What happens when default-method conflicts are unresolved
+
+Terminal evidence "UnresolvedDefaultConflictDemo.java:3: error: types MetricUnits and WordUnits are incompatible; class BrokenUnits inherits unrelated defaults for units()" ani report chestundi; the intentionally incomplete `BrokenUnits` class fails compilation because it inherits unrelated defaults for the same method; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — What happens when default-method conflicts are unresolved
+
+[no highlight] UnresolvedDefaultConflictDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — What happens when default-method conflicts are unresolved
+
+Treat the compiler error as a design prompt to define one explicit semantic meaning for the combined type; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 183 — Choosing an interface versus extending a class
+
+### Step 1 — Inspect the AeroTopo evidence — Choosing an interface versus extending a class
+
+`Orthomosaic` belongs to the stateful `Product` hierarchy while `Product` separately promises the `Exportable` and `Identified` capabilities; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Choosing an interface versus extending a class
+
+class inheritance should model one shared implementation lineage, while interfaces express orthogonal behaviors that can cross hierarchies; temporary InterfaceOrClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Choosing an interface versus extending a class
+
+Terminal evidence "csv:O1" ani report chestundi; the demo gets common `id` state from `ProductBaseType` and independently advertises `ExportRole` as a capability; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Choosing an interface versus extending a class
+
+[no highlight] InterfaceOrClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Choosing an interface versus extending a class
+
+Prefer the narrowest relationship that reflects the domain rather than choosing inheritance merely to reuse a few lines of code; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 184 — Why default and static interface methods were introduced
+
+### Step 1 — Inspect the AeroTopo evidence — Why default and static interface methods were introduced
+
+`Exportable` combines its core abstract operation with a default media type and a static support check; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Why default and static interface methods were introduced
+
+default methods support source-compatible interface evolution for existing implementors, while static methods group contract-specific utilities on the interface itself; temporary InterfaceEvolutionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Why default and static interface methods were introduced
+
+Terminal evidence "data text/plain true" ani report chestundi; `LegacyExporter` implements only the original abstract method yet can use the later default behavior without adding a new implementation; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Why default and static interface methods were introduced
+
+[no highlight] InterfaceEvolutionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why default and static interface methods were introduced
+
+Add defaults for sensible backward-compatible behavior and static methods for utilities that conceptually belong to the contract namespace; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 185 — Static methods inside Java interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Static methods inside Java interfaces
+
+`Exportable.supports(String)` is already a static method defined directly on an AeroTopo interface; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Static methods inside Java interfaces
+
+static interface methods are type-level operations and must be selected through the interface rather than through an implementing object; temporary InterfaceStaticMethodDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Static methods inside Java interfaces
+
+Terminal evidence "true false" ani report chestundi; the demo calls `FormatRules.supported(...)` directly and obtains the expected boolean without constructing any implementation; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Static methods inside Java interfaces
+
+[no highlight] InterfaceStaticMethodDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Static methods inside Java interfaces
+
+Use an interface static method when validation, factories, or utilities are tightly coupled to the contract but require no instance state; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 186 — Interfaces and the diamond problem
+
+### Step 1 — Inspect the AeroTopo evidence — Interfaces and the diamond problem
+
+`Left`, `Right`, and `Units` are a concrete AeroTopo example of a default-method diamond requiring an explicit decision; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Interfaces and the diamond problem
+
+a child interface can resolve competing parent defaults once, allowing implementing classes to inherit a single more-specific default; temporary InterfaceDiamondDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Interfaces and the diamond problem
+
+Terminal evidence "m" ani report chestundi; `MetricChoice` resolves the two parent defaults, so `MeasuredPoint` inherits one unambiguous `units()` implementation; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Interfaces and the diamond problem
+
+[no highlight] InterfaceDiamondDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Interfaces and the diamond problem
+
+Resolve interface diamonds at the narrowest shared abstraction that can define the correct semantic choice for downstream implementations; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 187 — Using static methods declared on interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Using static methods declared on interfaces
+
+AeroTopo has the contract-level idea represented by `Exportable.supports(...)` without requiring an exporter object; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Using static methods declared on interfaces
+
+interface static methods give related utility logic a clear namespace and do not participate in virtual dispatch; temporary UseInterfaceStaticDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Using static methods declared on interfaces
+
+Terminal evidence "true false" ani report chestundi; `ProductIds.valid(...)` evaluates identifiers through the interface name for two independent inputs; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Using static methods declared on interfaces
+
+[no highlight] UseInterfaceStaticDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Using static methods declared on interfaces
+
+Keep only utilities that genuinely describe the contract on the interface; unrelated helpers should remain elsewhere; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 188 — Why interfaces gained default, static, and private methods
+
+### Step 1 — Inspect the AeroTopo evidence — Why interfaces gained default, static, and private methods
+
+`Exportable` already demonstrates abstract, default, and static interface members before the experiment adds a private helper; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Why interfaces gained default, static, and private methods
+
+private interface methods provide internal code reuse among interface methods and are not inherited as part of the implementing class's public contract; temporary InterfaceMethodEvolutionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Why interfaces gained default, static, and private methods
+
+Terminal evidence "text/plain true" ani report chestundi; the default `mediaType()` delegates to a private helper while callers still see only the intended public behavior; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Why interfaces gained default, static, and private methods
+
+[no highlight] InterfaceMethodEvolutionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why interfaces gained default, static, and private methods
+
+Use private helpers to remove duplication inside a rich interface without expanding the external API surface; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 189 — Why interface default methods do not imply instance fields
+
+### Step 1 — Inspect the AeroTopo evidence — Why interface default methods do not imply instance fields
+
+`Exportable` supplies behavior without fields, while state such as `id` and `tiles` belongs to the abstract `Product` class; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Why interface default methods do not imply instance fields
+
+every interface field is a constant shared at the type level, so a default method cannot mutate it as object-specific state; temporary InterfaceStateDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Why interface default methods do not imply instance fields
+
+Terminal evidence "InterfaceStateDemo.java:3: error: cannot assign a value to final variable count" ani report chestundi; `javac` rejects incrementing `count` because the interface field is implicitly `public static final`; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Why interface default methods do not imply instance fields
+
+[no highlight] InterfaceStateDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why interface default methods do not imply instance fields
+
+Keep per-instance mutable data in implementing classes or composed state objects and let interface defaults operate through methods; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 190 — Designing Shape with abstraction and polymorphism
+
+### Step 1 — Inspect the AeroTopo evidence — Designing Shape with abstraction and polymorphism
+
+abstract `Product.resolutionMetres()` and the concrete `Orthomosaic` and `Dem` overrides already follow the same client-does-not-know-the-subtype pattern; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Designing Shape with abstraction and polymorphism
+
+the base abstraction declares the operation and dynamic dispatch selects the concrete implementation for each runtime object; temporary ShapeAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Designing Shape with abstraction and polymorphism
+
+Terminal evidence "7.14" ani report chestundi; one loop sums area through `Shape` references while Circle and Square supply different formulas without type checks; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Designing Shape with abstraction and polymorphism
+
+[no highlight] ShapeAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Designing Shape with abstraction and polymorphism
+
+Place common behavior in the abstraction and subtype-specific calculations behind overrides so new variants extend rather than modify client logic; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 191 — Extending one abstract class while implementing multiple interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — Extending one abstract class while implementing multiple interfaces
+
+`Product` implements two interfaces, while concrete subclasses extend that one abstract base and complete its abstract operation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — Extending one abstract class while implementing multiple interfaces
+
+Java combines single class inheritance with multiple interface implementation, so state lineage stays unambiguous while capabilities remain composable; temporary AbstractPlusInterfacesDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — Extending one abstract class while implementing multiple interfaces
+
+Terminal evidence "ortho:csv:0.05" ani report chestundi; `OrthoCombined` extends one abstract product base and directly implements both `ExportCap` and `NamedCap` successfully; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — Extending one abstract class while implementing multiple interfaces
+
+[no highlight] AbstractPlusInterfacesDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — Extending one abstract class while implementing multiple interfaces
+
+Use the abstract superclass for the true shared base and add independent interface contracts for orthogonal capabilities; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+
+## Lesson 192 — How Java recognizes marker interfaces
+
+### Step 1 — Inspect the AeroTopo evidence — How Java recognizes marker interfaces
+
+`Identified` is a behavior-bearing interface, giving a useful contrast before the experiment removes methods entirely to form a marker; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.
+
+### Step 2 — Create the focused rule experiment — How Java recognizes marker interfaces
+
+implementing even an empty interface changes the class's type metadata, so runtime type checks can detect participation without invoking any method; temporary MarkerInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.
+
+### Step 3 — Verify the compiler or runtime result — How Java recognizes marker interfaces
+
+Terminal evidence "true false" ani report chestundi; `instanceof Audited` returns true for `CheckedTile` and false for `PlainTile`, proving the marker is visible to the type system; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.
+
+### Step 4 — Remove the temporary experiment — How Java recognizes marker interfaces
+
+[no highlight] MarkerInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.
+
+### Step 5 — Connect the rule back to AeroTopo — How Java recognizes marker interfaces
+
+Use marker interfaces only when type membership itself has clear semantics; annotations are often better when metadata needs values or broader targeting; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
+

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 178,
+  "question_id": 178,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Why Java interfaces are useful",
+  "info_language": "te-Latn",
+  "answer": "An interface is useful because it defines a stable contract that callers can depend on while implementations vary. The old claim that an interface cannot contain concrete behavior is no longer accurate: modern interfaces can contain default, static, and private methods. Their central role remains expressing capabilities and enabling polymorphism without forcing classes into one implementation hierarchy.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Why Java interfaces are useful",
+      "question": "What is an interface in Java, and why do we use it if you cannot write anything concrete in it? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Exportable` contains an abstract operation plus concrete default and static behavior, demonstrating a modern interface contract, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Exportable` contains an abstract operation plus concrete default and static behavior, demonstrating a modern interface contract; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Why Java interfaces are useful",
+      "question": "Create the temporary ModernInterfaceDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: an interface's main value is substitutable behavior through a contract rather than the absence of every concrete method body; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "an interface's main value is substitutable behavior through a contract rather than the absence of every concrete method body; temporary ModernInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ModernInterfaceDemo.java",
+          "language": "java",
+          "content": "interface ExportCapability {\n    String export();\n    default String mediaType() { return \"text/plain\"; }\n}\nclass CsvExport implements ExportCapability {\n    public String export() { return \"csv\"; }\n}\npublic class ModernInterfaceDemo {\n    public static void main(String[] args) { ExportCapability e = new CsvExport(); System.out.println(e.export() + \" \" + e.mediaType()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Why Java interfaces are useful",
+      "question": "Run the focused Lesson 178 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"csv text/plain\"; explain how that observed compiler or runtime behavior demonstrates that the `CsvExport` implementation provides only `export()` and automatically receives the interface's default `mediaType()` behavior, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"csv text/plain\" ani report chestundi; the `CsvExport` implementation provides only `export()` and automatically receives the interface's default `mediaType()` behavior; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson178-demo labs/java/ModernInterfaceDemo.java; java -cp target/lesson178-demo ModernInterfaceDemo",
+          "output": "csv text/plain"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Why Java interfaces are useful",
+      "question": "The temporary file labs/java/ModernInterfaceDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] ModernInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ModernInterfaceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 178 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Why Java interfaces are useful",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Keep the contract small and capability-focused so unrelated implementations can satisfy it without sharing class state, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Keep the contract small and capability-focused so unrelated implementations can satisfy it without sharing class state; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

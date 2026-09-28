@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "lesson_number": 191,
+  "question_id": 191,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Extending one abstract class while implementing multiple interfaces",
+  "info_language": "te-Latn",
+  "answer": "Yes. A Java class may extend at most one class, including one abstract class, and implement multiple interfaces at the same time. The superclass supplies the single implementation and state inheritance chain, while interfaces add multiple contracts. The class must implement any abstract obligations that remain unresolved across all of those parents.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Extending one abstract class while implementing multiple interfaces",
+      "question": "Can a class implement multiple Interfaces while extending only one Abstract Class? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Product` implements two interfaces, while concrete subclasses extend that one abstract base and complete its abstract operation, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Product` implements two interfaces, while concrete subclasses extend that one abstract base and complete its abstract operation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          20,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Extending one abstract class while implementing multiple interfaces",
+      "question": "Create the temporary AbstractPlusInterfacesDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: Java combines single class inheritance with multiple interface implementation, so state lineage stays unambiguous while capabilities remain composable; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "Java combines single class inheritance with multiple interface implementation, so state lineage stays unambiguous while capabilities remain composable; temporary AbstractPlusInterfacesDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractPlusInterfacesDemo.java",
+          "language": "java",
+          "content": "abstract class ProductRoot { abstract double resolution(); }\ninterface ExportCap { String export(); }\ninterface NamedCap { String name(); }\nclass OrthoCombined extends ProductRoot implements ExportCap, NamedCap {\n    double resolution() { return 0.05; }\n    public String export() { return \"csv\"; }\n    public String name() { return \"ortho\"; }\n}\npublic class AbstractPlusInterfacesDemo {\n    public static void main(String[] args) { var o = new OrthoCombined(); System.out.println(o.name() + \":\" + o.export() + \":\" + o.resolution()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Extending one abstract class while implementing multiple interfaces",
+      "question": "Run the focused Lesson 191 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"ortho:csv:0.05\"; explain how that observed compiler or runtime behavior demonstrates that `OrthoCombined` extends one abstract product base and directly implements both `ExportCap` and `NamedCap` successfully, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"ortho:csv:0.05\" ani report chestundi; `OrthoCombined` extends one abstract product base and directly implements both `ExportCap` and `NamedCap` successfully; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson191-demo labs/java/AbstractPlusInterfacesDemo.java; java -cp target/lesson191-demo AbstractPlusInterfacesDemo",
+          "output": "ortho:csv:0.05"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Extending one abstract class while implementing multiple interfaces",
+      "question": "The temporary file labs/java/AbstractPlusInterfacesDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AbstractPlusInterfacesDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractPlusInterfacesDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 191 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Extending one abstract class while implementing multiple interfaces",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Use the abstract superclass for the true shared base and add independent interface contracts for orthogonal capabilities, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Use the abstract superclass for the true shared base and add independent interface contracts for orthogonal capabilities; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          20,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

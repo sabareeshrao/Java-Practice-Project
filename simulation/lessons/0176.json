@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "lesson_number": 176,
+  "question_id": 176,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Abstraction as a loose-coupling tool",
+  "info_language": "te-Latn",
+  "answer": "Abstraction promotes loose coupling when a consumer depends on a stable interface or abstract contract instead of a concrete implementation. Implementations can then be substituted, tested, or replaced with fewer changes to the consumer. Dependency injection commonly applies this principle by injecting a contract into a service while configuration decides which concrete implementation is used.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Abstraction as a loose-coupling tool",
+      "question": "How does abstraction help in achieving loose coupling in a software application? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `estimate(...)` depends on `ElevationStrategy` rather than constructing a specific elevation algorithm, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`estimate(...)` depends on `ElevationStrategy` rather than constructing a specific elevation algorithm; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Abstraction as a loose-coupling tool",
+      "question": "Create the temporary LooseCouplingDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: dependency direction toward an abstraction prevents the consumer from knowing construction and implementation details it does not need; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "dependency direction toward an abstraction prevents the consumer from knowing construction and implementation details it does not need; temporary LooseCouplingDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/LooseCouplingDemo.java",
+          "language": "java",
+          "content": "interface TileRepository { String find(String id); }\nclass DatabaseRepository implements TileRepository {\n    public String find(String id) { return \"db:\" + id; }\n}\nclass TileService {\n    private final TileRepository repository;\n    TileService(TileRepository repository) { this.repository = repository; }\n    String load(String id) { return repository.find(id); }\n}\npublic class LooseCouplingDemo {\n    public static void main(String[] args) { System.out.println(new TileService(new DatabaseRepository()).load(\"42\")); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Abstraction as a loose-coupling tool",
+      "question": "Run the focused Lesson 176 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"db:42\"; explain how that observed compiler or runtime behavior demonstrates that the same `TileService` works with `DatabaseRepository` because its constructor accepts only the `TileRepository` contract, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"db:42\" ani report chestundi; the same `TileService` works with `DatabaseRepository` because its constructor accepts only the `TileRepository` contract; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson176-demo labs/java/LooseCouplingDemo.java; java -cp target/lesson176-demo LooseCouplingDemo",
+          "output": "db:42"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Abstraction as a loose-coupling tool",
+      "question": "The temporary file labs/java/LooseCouplingDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] LooseCouplingDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/LooseCouplingDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 176 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Abstraction as a loose-coupling tool",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that This boundary makes implementation replacement and testing cheaper because service code remains stable while collaborators vary, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "This boundary makes implementation replacement and testing cheaper because service code remains stable while collaborators vary; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

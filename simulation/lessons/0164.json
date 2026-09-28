@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "lesson_number": 164,
+  "question_id": 164,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Abstract classes versus interfaces",
+  "info_language": "te-Latn",
+  "answer": "An abstract class is a partially implemented class: it can hold instance state, define constructors, expose concrete or abstract instance methods, and participate in single class inheritance. An interface primarily defines a capability contract and supports multiple implementation inheritance; it can also provide default, static, and private methods, but it does not provide ordinary per-object instance fields or constructors.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Abstract classes versus interfaces",
+      "question": "What's the difference between an abstract class and an interface? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Exportable` supplies a capability contract while abstract `Product` owns `id`, `tiles`, constructors, and shared implementation, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Exportable` supplies a capability contract while abstract `Product` owns `id`, `tiles`, constructors, and shared implementation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          16,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Abstract classes versus interfaces",
+      "question": "Create the temporary AbstractVsInterfaceDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: abstract classes model shared identity and state in one class hierarchy, whereas interfaces model contracts that unrelated classes can implement together; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "abstract classes model shared identity and state in one class hierarchy, whereas interfaces model contracts that unrelated classes can implement together; temporary AbstractVsInterfaceDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractVsInterfaceDemo.java",
+          "language": "java",
+          "content": "interface ExportableContract { String export(); }\nabstract class ProductState {\n    final String id;\n    ProductState(String id) { this.id = id; }\n    abstract double resolution();\n}\nclass OrthoState extends ProductState implements ExportableContract {\n    OrthoState(String id) { super(id); }\n    double resolution() { return 0.05; }\n    public String export() { return id + \":\" + resolution(); }\n}\npublic class AbstractVsInterfaceDemo {\n    public static void main(String[] args) { System.out.println(new OrthoState(\"O1\").export()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Abstract classes versus interfaces",
+      "question": "Run the focused Lesson 164 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"O1:0.05\"; explain how that observed compiler or runtime behavior demonstrates that the concrete class inherits state from the abstract base and simultaneously satisfies the separate export capability, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"O1:0.05\" ani report chestundi; the concrete class inherits state from the abstract base and simultaneously satisfies the separate export capability; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson164-demo labs/java/AbstractVsInterfaceDemo.java; java -cp target/lesson164-demo AbstractVsInterfaceDemo",
+          "output": "O1:0.05"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Abstract classes versus interfaces",
+      "question": "The temporary file labs/java/AbstractVsInterfaceDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AbstractVsInterfaceDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractVsInterfaceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 164 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Abstract classes versus interfaces",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Choose the mechanism from the relationship you need: shared base state and lifecycle versus a reusable capability contract, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Choose the mechanism from the relationship you need: shared base state and lifecycle versus a reusable capability contract; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          16,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

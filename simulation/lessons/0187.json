@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "lesson_number": 187,
+  "question_id": 187,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Using static methods declared on interfaces",
+  "info_language": "te-Latn",
+  "answer": "Use an interface static method by calling it with the interface name, such as Contract.validate(...). It is useful for contract-specific validation, factories, conversions, or helper logic that does not depend on an instance. Implementing classes do not inherit it as an instance method, which avoids confusing utility behavior with polymorphic instance behavior.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Using static methods declared on interfaces",
+      "question": "How can static methods in an Interface be used? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to AeroTopo has the contract-level idea represented by `Exportable.supports(...)` without requiring an exporter object, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "AeroTopo has the contract-level idea represented by `Exportable.supports(...)` without requiring an exporter object; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Using static methods declared on interfaces",
+      "question": "Create the temporary UseInterfaceStaticDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: interface static methods give related utility logic a clear namespace and do not participate in virtual dispatch; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "interface static methods give related utility logic a clear namespace and do not participate in virtual dispatch; temporary UseInterfaceStaticDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/UseInterfaceStaticDemo.java",
+          "language": "java",
+          "content": "interface ProductIds {\n    static boolean valid(String id) { return id != null && id.startsWith(\"P\"); }\n}\npublic class UseInterfaceStaticDemo {\n    public static void main(String[] args) {\n        System.out.println(ProductIds.valid(\"P1\") + \" \" + ProductIds.valid(\"X1\"));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Using static methods declared on interfaces",
+      "question": "Run the focused Lesson 187 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"true false\"; explain how that observed compiler or runtime behavior demonstrates that `ProductIds.valid(...)` evaluates identifiers through the interface name for two independent inputs, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"true false\" ani report chestundi; `ProductIds.valid(...)` evaluates identifiers through the interface name for two independent inputs; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson187-demo labs/java/UseInterfaceStaticDemo.java; java -cp target/lesson187-demo UseInterfaceStaticDemo",
+          "output": "true false"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Using static methods declared on interfaces",
+      "question": "The temporary file labs/java/UseInterfaceStaticDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] UseInterfaceStaticDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/UseInterfaceStaticDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 187 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Using static methods declared on interfaces",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Keep only utilities that genuinely describe the contract on the interface; unrelated helpers should remain elsewhere, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Keep only utilities that genuinely describe the contract on the interface; unrelated helpers should remain elsewhere; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

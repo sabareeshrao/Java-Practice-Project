@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 172,
+  "question_id": 172,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Anonymous subclasses of abstract classes",
+  "info_language": "te-Latn",
+  "answer": "You cannot instantiate an abstract class directly, but you can create an anonymous concrete subclass in the same expression and instantiate that subclass. The anonymous body must implement any remaining abstract methods. This is useful for small one-off implementations, although named classes or lambdas are often clearer when reuse or a functional interface applies.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Anonymous subclasses of abstract classes",
+      "question": "Can we create an Object of an Abstract Class using an Anonymous Class? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `ImportTemplate` shows an abstract base whose missing behavior must be supplied before an instance can be usable, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`ImportTemplate` shows an abstract base whose missing behavior must be supplied before an instance can be usable; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Anonymous subclasses of abstract classes",
+      "question": "Create the temporary AnonymousAbstractClassDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: `new AbstractType(){...}` creates an unnamed subclass rather than an instance of the abstract class itself; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "`new AbstractType(){...}` creates an unnamed subclass rather than an instance of the abstract class itself; temporary AnonymousAbstractClassDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AnonymousAbstractClassDemo.java",
+          "language": "java",
+          "content": "abstract class Rule {\n    abstract boolean test(int value);\n}\npublic class AnonymousAbstractClassDemo {\n    public static void main(String[] args) {\n        Rule positive = new Rule() {\n            boolean test(int value) { return value > 0; }\n        };\n        System.out.println(positive.test(7));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Anonymous subclasses of abstract classes",
+      "question": "Run the focused Lesson 172 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"true\"; explain how that observed compiler or runtime behavior demonstrates that the anonymous `Rule` implementation supplies `test(...)` inline and the resulting object executes normally, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"true\" ani report chestundi; the anonymous `Rule` implementation supplies `test(...)` inline and the resulting object executes normally; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson172-demo labs/java/AnonymousAbstractClassDemo.java; java -cp target/lesson172-demo AnonymousAbstractClassDemo",
+          "output": "true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Anonymous subclasses of abstract classes",
+      "question": "The temporary file labs/java/AnonymousAbstractClassDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AnonymousAbstractClassDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AnonymousAbstractClassDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 172 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Anonymous subclasses of abstract classes",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Use anonymous subclasses for truly local behavior, but prefer named implementations when the logic has identity, tests, or reuse, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Use anonymous subclasses for truly local behavior, but prefer named implementations when the logic has identity, tests, or reuse; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

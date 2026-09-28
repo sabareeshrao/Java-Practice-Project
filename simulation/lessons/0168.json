@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "lesson_number": 168,
+  "question_id": 168,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "A real-world abstraction example",
+  "info_language": "te-Latn",
+  "answer": "A real-world abstraction is a control panel or remote: the user presses a clear operation such as start, stop, or move without needing to know the motor-control electronics, communication protocol, or internal algorithm. In software, an interface can represent that visible control surface while concrete implementations hide device-specific details.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — A real-world abstraction example",
+      "question": "Can you provide a real-world example of abstraction outside Java? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to the strategy contract lets AeroTopo ask for an elevation result without exposing the strategy's internal calculation, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "the strategy contract lets AeroTopo ask for an elevation result without exposing the strategy's internal calculation; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — A real-world abstraction example",
+      "question": "Create the temporary RealWorldAbstractionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: a real-world control surface is an abstraction when it exposes meaningful operations and hides machinery that the user need not manage; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "a real-world control surface is an abstraction when it exposes meaningful operations and hides machinery that the user need not manage; temporary RealWorldAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/RealWorldAbstractionDemo.java",
+          "language": "java",
+          "content": "interface DroneController { String flyTo(String waypoint); }\nclass DjiController implements DroneController {\n    public String flyTo(String waypoint) { return \"flying:\" + waypoint; }\n}\npublic class RealWorldAbstractionDemo {\n    static String mission(DroneController controller) { return controller.flyTo(\"WP-7\"); }\n    public static void main(String[] args) { System.out.println(mission(new DjiController())); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — A real-world abstraction example",
+      "question": "Run the focused Lesson 168 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"flying:WP-7\"; explain how that observed compiler or runtime behavior demonstrates that the mission code calls `flyTo` through `DroneController` while the DJI-specific radio details remain inside the implementation, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"flying:WP-7\" ani report chestundi; the mission code calls `flyTo` through `DroneController` while the DJI-specific radio details remain inside the implementation; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson168-demo labs/java/RealWorldAbstractionDemo.java; java -cp target/lesson168-demo RealWorldAbstractionDemo",
+          "output": "flying:WP-7"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — A real-world abstraction example",
+      "question": "The temporary file labs/java/RealWorldAbstractionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] RealWorldAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/RealWorldAbstractionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 168 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — A real-world abstraction example",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Design interfaces like useful control surfaces: reveal intent, hide replaceable mechanics, and avoid leaking device-specific details, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Design interfaces like useful control surfaces: reveal intent, hide replaceable mechanics, and avoid leaking device-specific details; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

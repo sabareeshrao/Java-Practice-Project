@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 188,
+  "question_id": 188,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Why interfaces gained default, static, and private methods",
+  "info_language": "te-Latn",
+  "answer": "Default methods let an interface evolve with inheritable behavior; static methods let it host contract-related utilities; private methods let multiple default or static methods share internal implementation without exposing that helper as part of the public API. Together they improve interface evolution and organization while preserving the interface's primary role as a contract.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Why interfaces gained default, static, and private methods",
+      "question": "Why were Default, Static, and Private Methods introduced in Java Interfaces? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Exportable` already demonstrates abstract, default, and static interface members before the experiment adds a private helper, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Exportable` already demonstrates abstract, default, and static interface members before the experiment adds a private helper; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Why interfaces gained default, static, and private methods",
+      "question": "Create the temporary InterfaceMethodEvolutionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: private interface methods provide internal code reuse among interface methods and are not inherited as part of the implementing class's public contract; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "private interface methods provide internal code reuse among interface methods and are not inherited as part of the implementing class's public contract; temporary InterfaceMethodEvolutionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/InterfaceMethodEvolutionDemo.java",
+          "language": "java",
+          "content": "interface RichExport {\n    default String mediaType() { return normalized(\" TEXT/PLAIN \"); }\n    static boolean supported(String type) { return type != null && !type.isBlank(); }\n    private String normalized(String value) { return value.trim().toLowerCase(); }\n}\nclass RichExporter implements RichExport {}\npublic class InterfaceMethodEvolutionDemo {\n    public static void main(String[] args) { var e = new RichExporter(); System.out.println(e.mediaType() + \" \" + RichExport.supported(e.mediaType())); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Why interfaces gained default, static, and private methods",
+      "question": "Run the focused Lesson 188 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"text/plain true\"; explain how that observed compiler or runtime behavior demonstrates that the default `mediaType()` delegates to a private helper while callers still see only the intended public behavior, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"text/plain true\" ani report chestundi; the default `mediaType()` delegates to a private helper while callers still see only the intended public behavior; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson188-demo labs/java/InterfaceMethodEvolutionDemo.java; java -cp target/lesson188-demo InterfaceMethodEvolutionDemo",
+          "output": "text/plain true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Why interfaces gained default, static, and private methods",
+      "question": "The temporary file labs/java/InterfaceMethodEvolutionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] InterfaceMethodEvolutionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/InterfaceMethodEvolutionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 188 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Why interfaces gained default, static, and private methods",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Use private helpers to remove duplication inside a rich interface without expanding the external API surface, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Use private helpers to remove duplication inside a rich interface without expanding the external API surface; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

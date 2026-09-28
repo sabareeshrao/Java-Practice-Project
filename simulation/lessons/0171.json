@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "lesson_number": 171,
+  "question_id": 171,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Inherited abstract methods and concrete subclasses",
+  "info_language": "te-Latn",
+  "answer": "When a class inherits an abstract method and does not implement it, that subclass must also be declared abstract. The obligation travels down the inheritance chain until some concrete subclass supplies a compatible implementation. This differs from merely declaring an abstract method in the current class, but both rules ensure directly instantiable classes are behaviorally complete.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Inherited abstract methods and concrete subclasses",
+      "question": "What does it mean if a class contains an Abstract Method? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to the abstract parse contract in `ImportTemplate` creates an implementation obligation for subclasses, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "the abstract parse contract in `ImportTemplate` creates an implementation obligation for subclasses; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          39
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Inherited abstract methods and concrete subclasses",
+      "question": "Create the temporary InheritedAbstractMethodDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: a subclass that inherits an unimplemented abstract operation cannot become concrete until it provides that operation; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "a subclass that inherits an unimplemented abstract operation cannot become concrete until it provides that operation; temporary InheritedAbstractMethodDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/InheritedAbstractMethodDemo.java",
+          "language": "java",
+          "content": "abstract class ReaderBase {\n    abstract String load();\n}\nclass MiddleReader extends ReaderBase {\n}\npublic class InheritedAbstractMethodDemo {}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Inherited abstract methods and concrete subclasses",
+      "question": "Run the focused Lesson 171 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"InheritedAbstractMethodDemo.java:4: error: MiddleReader is not abstract and does not override abstract method load()\"; explain how that observed compiler or runtime behavior demonstrates that `javac` rejects `MiddleReader` because it extends an abstract base yet leaves `load()` unresolved while being declared concrete, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"InheritedAbstractMethodDemo.java:4: error: MiddleReader is not abstract and does not override abstract method load()\" ani report chestundi; `javac` rejects `MiddleReader` because it extends an abstract base yet leaves `load()` unresolved while being declared concrete; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 1,
+          "command": "javac -d target/lesson171-demo labs/java/InheritedAbstractMethodDemo.java",
+          "output": "InheritedAbstractMethodDemo.java:4: error: MiddleReader is not abstract and does not override abstract method load()"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Inherited abstract methods and concrete subclasses",
+      "question": "The temporary file labs/java/InheritedAbstractMethodDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] InheritedAbstractMethodDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/InheritedAbstractMethodDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 171 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Inherited abstract methods and concrete subclasses",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Keep intermediate classes abstract when they intentionally defer part of the contract farther down the hierarchy, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Keep intermediate classes abstract when they intentionally defer part of the contract farther down the hierarchy; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          39
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

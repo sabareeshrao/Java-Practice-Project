@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "lesson_number": 167,
+  "question_id": 167,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Meaning of abstraction in Java",
+  "info_language": "te-Latn",
+  "answer": "Abstraction means exposing the essential operations a caller needs while hiding implementation details that the caller should not depend on. In Java, interfaces and abstract classes are common tools for this. Client code works against a stable contract, while concrete classes decide the algorithm, state, resources, or platform-specific behavior behind that contract.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Meaning of abstraction in Java",
+      "question": "What does abstraction mean in Java? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `ElevationStrategy` exposes only an elevation operation while `ImportTemplate` separates the public workflow from subclass parsing details, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`ElevationStrategy` exposes only an elevation operation while `ImportTemplate` separates the public workflow from subclass parsing details; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Meaning of abstraction in Java",
+      "question": "Create the temporary AbstractionMeaningDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: abstraction deliberately limits what the caller must know, keeping implementation choices behind a contract or template; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "abstraction deliberately limits what the caller must know, keeping implementation choices behind a contract or template; temporary AbstractionMeaningDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractionMeaningDemo.java",
+          "language": "java",
+          "content": "interface ResolutionSource { double metres(); }\nclass CentimetreResolution implements ResolutionSource {\n    private final int centimetres = 5;\n    public double metres() { return centimetres / 100.0; }\n}\npublic class AbstractionMeaningDemo {\n    public static void main(String[] args) {\n        ResolutionSource source = new CentimetreResolution();\n        System.out.println(source.metres());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Meaning of abstraction in Java",
+      "question": "Run the focused Lesson 167 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"0.05\"; explain how that observed compiler or runtime behavior demonstrates that the caller asks a `ResolutionSource` for a value without knowing that the concrete implementation stores centimetres internally, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"0.05\" ani report chestundi; the caller asks a `ResolutionSource` for a value without knowing that the concrete implementation stores centimetres internally; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson167-demo labs/java/AbstractionMeaningDemo.java; java -cp target/lesson167-demo AbstractionMeaningDemo",
+          "output": "0.05"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Meaning of abstraction in Java",
+      "question": "The temporary file labs/java/AbstractionMeaningDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AbstractionMeaningDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractionMeaningDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 167 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Meaning of abstraction in Java",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Good abstraction reduces dependency on implementation decisions while keeping the behavior required by the caller explicit, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Good abstraction reduces dependency on implementation decisions while keeping the behavior required by the caller explicit; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

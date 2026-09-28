@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "lesson_number": 175,
+  "question_id": 175,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Refactoring between abstract classes and interfaces",
+  "info_language": "te-Latn",
+  "answer": "You can refactor an abstract class into an interface or an interface into an abstract class, but it is not a mechanical one-to-one conversion. Instance fields, constructors, protected state, and single-inheritance constraints belong naturally to classes; multiple contracts and capability composition belong naturally to interfaces. A conversion may therefore require moving state or behavior elsewhere and can change client inheritance choices.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Refactoring between abstract classes and interfaces",
+      "question": "Can you convert an Abstract Class to an Interface and vice versa? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Exportable` and `Product` sit side by side because the capability contract and the stateful base class have genuinely different responsibilities, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Exportable` and `Product` sit side by side because the capability contract and the stateful base class have genuinely different responsibilities; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Refactoring between abstract classes and interfaces",
+      "question": "Create the temporary AbstractInterfaceRefactorDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: moving between interface and abstract class changes what can carry instance state, how construction works, and how many contracts a class may combine; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "moving between interface and abstract class changes what can carry instance state, how construction works, and how many contracts a class may combine; temporary AbstractInterfaceRefactorDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractInterfaceRefactorDemo.java",
+          "language": "java",
+          "content": "interface ExportContract { String export(); }\nabstract class StatefulBase {\n    final String id;\n    StatefulBase(String id) { this.id = id; }\n}\nclass CombinedProduct extends StatefulBase implements ExportContract {\n    CombinedProduct(String id) { super(id); }\n    public String export() { return \"export:\" + id; }\n}\npublic class AbstractInterfaceRefactorDemo {\n    public static void main(String[] args) { System.out.println(new CombinedProduct(\"O1\").export()); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Refactoring between abstract classes and interfaces",
+      "question": "Run the focused Lesson 175 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"export:O1\"; explain how that observed compiler or runtime behavior demonstrates that the demo separates state into an abstract base and keeps export as an interface instead of forcing one construct to imitate the other, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"export:O1\" ani report chestundi; the demo separates state into an abstract base and keeps export as an interface instead of forcing one construct to imitate the other; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson175-demo labs/java/AbstractInterfaceRefactorDemo.java; java -cp target/lesson175-demo AbstractInterfaceRefactorDemo",
+          "output": "export:O1"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Refactoring between abstract classes and interfaces",
+      "question": "The temporary file labs/java/AbstractInterfaceRefactorDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AbstractInterfaceRefactorDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractInterfaceRefactorDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 175 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Refactoring between abstract classes and interfaces",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Refactor only after deciding where state, construction, reusable behavior, and multiple capabilities should live, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Refactor only after deciding where state, construction, reusable behavior, and multiple capabilities should live; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

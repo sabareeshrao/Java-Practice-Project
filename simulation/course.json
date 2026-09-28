@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 15
+      "chapterEnd": 16
     }
   ],
   "chapters": [
@@ -282,6 +282,45 @@
         "lessons/0158.json",
         "lessons/0159.json",
         "lessons/0160.json"
+      ]
+    },
+    {
+      "id": "chapter-016",
+      "title": "16: Abstraction, Abstract Classes & Interfaces",
+      "subtitle": "Build the complete abstraction sequence from interface contracts and abstract-class construction through library abstractions, loose coupling, multiple interface inheritance, default/static/private methods, diamond resolution, polymorphic shape design, and marker interfaces.",
+      "lessons": [
+        "lessons/0161.json",
+        "lessons/0162.json",
+        "lessons/0163.json",
+        "lessons/0164.json",
+        "lessons/0165.json",
+        "lessons/0166.json",
+        "lessons/0167.json",
+        "lessons/0168.json",
+        "lessons/0169.json",
+        "lessons/0170.json",
+        "lessons/0171.json",
+        "lessons/0172.json",
+        "lessons/0173.json",
+        "lessons/0174.json",
+        "lessons/0175.json",
+        "lessons/0176.json",
+        "lessons/0177.json",
+        "lessons/0178.json",
+        "lessons/0179.json",
+        "lessons/0180.json",
+        "lessons/0181.json",
+        "lessons/0182.json",
+        "lessons/0183.json",
+        "lessons/0184.json",
+        "lessons/0185.json",
+        "lessons/0186.json",
+        "lessons/0187.json",
+        "lessons/0188.json",
+        "lessons/0189.json",
+        "lessons/0190.json",
+        "lessons/0191.json",
+        "lessons/0192.json"
       ]
     }
   ],

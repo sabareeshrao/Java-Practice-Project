@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "lesson_number": 190,
+  "question_id": 190,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Designing Shape with abstraction and polymorphism",
+  "info_language": "te-Latn",
+  "answer": "Define a common abstraction such as an abstract Shape class or Shape interface with an area() operation, then let Circle and Square implement that operation. Client code accepts Shape references and calls area() without branching on concrete types. Runtime polymorphism selects each implementation, so adding another shape does not require rewriting the area-calculation client.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Designing Shape with abstraction and polymorphism",
+      "question": "Suppose you have a Shape class and subclasses Circle and Square. How would you design it so client code can calculate area without knowing the exact shape type? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to abstract `Product.resolutionMetres()` and the concrete `Orthomosaic` and `Dem` overrides already follow the same client-does-not-know-the-subtype pattern, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "abstract `Product.resolutionMetres()` and the concrete `Orthomosaic` and `Dem` overrides already follow the same client-does-not-know-the-subtype pattern; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Designing Shape with abstraction and polymorphism",
+      "question": "Create the temporary ShapeAbstractionDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: the base abstraction declares the operation and dynamic dispatch selects the concrete implementation for each runtime object; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "the base abstraction declares the operation and dynamic dispatch selects the concrete implementation for each runtime object; temporary ShapeAbstractionDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ShapeAbstractionDemo.java",
+          "language": "java",
+          "content": "abstract class Shape {\n    abstract double area();\n}\nclass Circle extends Shape {\n    private final double r; Circle(double r) { this.r = r; }\n    double area() { return Math.PI * r * r; }\n}\nclass Square extends Shape {\n    private final double side; Square(double side) { this.side = side; }\n    double area() { return side * side; }\n}\npublic class ShapeAbstractionDemo {\n    public static void main(String[] args) {\n        Shape[] shapes = { new Circle(1), new Square(2) };\n        double total = 0; for (Shape shape : shapes) total += shape.area();\n        System.out.printf(\"%.2f%n\", total);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Designing Shape with abstraction and polymorphism",
+      "question": "Run the focused Lesson 190 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"7.14\"; explain how that observed compiler or runtime behavior demonstrates that one loop sums area through `Shape` references while Circle and Square supply different formulas without type checks, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"7.14\" ani report chestundi; one loop sums area through `Shape` references while Circle and Square supply different formulas without type checks; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson190-demo labs/java/ShapeAbstractionDemo.java; java -cp target/lesson190-demo ShapeAbstractionDemo",
+          "output": "7.14"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Designing Shape with abstraction and polymorphism",
+      "question": "The temporary file labs/java/ShapeAbstractionDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] ShapeAbstractionDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ShapeAbstractionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 190 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Designing Shape with abstraction and polymorphism",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Place common behavior in the abstraction and subtype-specific calculations behind overrides so new variants extend rather than modify client logic, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Place common behavior in the abstraction and subtype-specific calculations behind overrides so new variants extend rather than modify client logic; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

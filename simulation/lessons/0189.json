@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "lesson_number": 189,
+  "question_id": 189,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Why interface default methods do not imply instance fields",
+  "info_language": "te-Latn",
+  "answer": "A default method is inheritable behavior, but an interface still does not own ordinary per-object instance state. Fields declared in an interface are implicitly public static final constants. Allowing mutable instance fields would require interface-defined object layout, construction, and state ownership, which would conflict with unrelated classes implementing the same contract while managing their own state.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Why interface default methods do not imply instance fields",
+      "question": "Why can an Interface contain Default Methods but not normal Instance Variables? Inspect the highlighted SurveyProducts.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `Exportable` supplies behavior without fields, while state such as `id` and `tiles` belongs to the abstract `Product` class, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`Exportable` supplies behavior without fields, while state such as `id` and `tiles` belongs to the abstract `Product` class; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Why interface default methods do not imply instance fields",
+      "question": "Create the temporary InterfaceStateDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: every interface field is a constant shared at the type level, so a default method cannot mutate it as object-specific state; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "every interface field is a constant shared at the type level, so a default method cannot mutate it as object-specific state; temporary InterfaceStateDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/InterfaceStateDemo.java",
+          "language": "java",
+          "content": "interface StatefulContract {\n    int count = 0;\n    default void increment() { count++; }\n}\npublic class InterfaceStateDemo {}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Why interface default methods do not imply instance fields",
+      "question": "Run the focused Lesson 189 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"InterfaceStateDemo.java:3: error: cannot assign a value to final variable count\"; explain how that observed compiler or runtime behavior demonstrates that `javac` rejects incrementing `count` because the interface field is implicitly `public static final`, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"InterfaceStateDemo.java:3: error: cannot assign a value to final variable count\" ani report chestundi; `javac` rejects incrementing `count` because the interface field is implicitly `public static final`; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 1,
+          "command": "javac -d target/lesson189-demo labs/java/InterfaceStateDemo.java",
+          "output": "InterfaceStateDemo.java:3: error: cannot assign a value to final variable count"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Why interface default methods do not imply instance fields",
+      "question": "The temporary file labs/java/InterfaceStateDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent SurveyProducts.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] InterfaceStateDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent SurveyProducts.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/InterfaceStateDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 189 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Why interface default methods do not imply instance fields",
+      "question": "Return to the highlighted SurveyProducts.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that Keep per-instance mutable data in implementing classes or composed state objects and let interface defaults operate through methods, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "Keep per-instance mutable data in implementing classes or composed state objects and let interface defaults operate through methods; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 170,
+  "question_id": 170,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Achieving abstraction with an abstract class",
+  "info_language": "te-Latn",
+  "answer": "Yes. An abstract class alone can provide abstraction by declaring one or more abstract operations and exposing concrete behavior that depends on them. Callers can use the abstract base type while subclasses provide the hidden implementation. Interfaces are another abstraction mechanism, but they are not mandatory when a single stateful class hierarchy is the right design.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Achieving abstraction with an abstract class",
+      "question": "Can we achieve abstraction by using only an Abstract Class? Inspect the highlighted PatternLab.java evidence before choosing an answer; identify exactly what contract, state, constructor, method kind, or inheritance relationship is visible there, connect that observation to `ImportTemplate.run(...)` exposes one stable workflow while the abstract `parse(...)` step is supplied by subclasses, and explain why this project evidence is a stronger starting point than memorizing a standalone definition.",
+      "why_te": "`ImportTemplate.run(...)` exposes one stable workflow while the abstract `parse(...)` step is supplied by subclasses; ee first step lo definition memorize cheyyadam kaadu, real AeroTopo code lo contract leda state boundary ekkada undo chustam; visible source fact ni later Java rule ki baseline ga use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Achieving abstraction with an abstract class",
+      "question": "Create the temporary AbstractClassOnlyDemo.java experiment and read the highlighted declarations without running them yet; predict whether compilation should succeed and, if it does, what behavior should appear, then justify the prediction from this rule: an abstract class can define the public abstraction boundary itself by combining concrete template behavior with abstract extension points; also identify which declaration in the small example carries the obligation or implementation being tested.",
+      "why_te": "an abstract class can define the public abstraction boundary itself by combining concrete template behavior with abstract extension points; temporary AbstractClassOnlyDemo.java lo ee point ni isolated ga petti run mundu prediction form chestam; ila project code ni marchakunda exact language rule meeda focus maintain avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractClassOnlyDemo.java",
+          "language": "java",
+          "content": "abstract class ReaderTemplate {\n    final String run(String input) { return parse(input).trim(); }\n    protected abstract String parse(String input);\n}\nclass CsvReaderTemplate extends ReaderTemplate {\n    protected String parse(String input) { return input.replace(\",\", \"|\"); }\n}\npublic class AbstractClassOnlyDemo {\n    public static void main(String[] args) { ReaderTemplate r = new CsvReaderTemplate(); System.out.println(r.run(\"A,B\")); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Achieving abstraction with an abstract class",
+      "question": "Run the focused Lesson 170 experiment and compare the terminal evidence with the prediction from the previous step; the first reported result is \"A|B\"; explain how that observed compiler or runtime behavior demonstrates that the caller uses a `ReaderTemplate` reference and receives parsed data without depending on the concrete CSV parsing class, and distinguish the verified rule from a similar interface or inheritance feature that would follow different selection semantics.",
+      "why_te": "Terminal evidence \"A|B\" ani report chestundi; the caller uses a `ReaderTemplate` reference and receives parsed data without depending on the concrete CSV parsing class; prediction tho actual result match avvadam valla ee lesson conclusion assumption kaakunda compiler leda runtime evidence meeda build avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson170-demo labs/java/AbstractClassOnlyDemo.java; java -cp target/lesson170-demo AbstractClassOnlyDemo",
+          "output": "A|B"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Achieving abstraction with an abstract class",
+      "question": "The temporary file labs/java/AbstractClassOnlyDemo.java has now produced the evidence needed for this lesson; explain why removing that file preserves the verified Java rule while preventing lesson-only examples from contaminating the continuously growing AeroTopo project, identify the permanent PatternLab.java source that remains authoritative, and state what replay or maintenance problem would occur if temporary demonstrations accumulated.",
+      "why_te": "[no highlight] AbstractClassOnlyDemo.java lesson-only experiment kabatti rule verify ayyaka delete chestam; permanent PatternLab.java untouched ga untundi, kabatti later lessons clean cumulative AeroTopo state nundi continue avvagalavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractClassOnlyDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 170 demonstration has finished and is removed to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Achieving abstraction with an abstract class",
+      "question": "Return to the highlighted PatternLab.java lines and build the final interview explanation from the complete evidence chain rather than repeating the opening observation; connect the project design to the language rule, include the practical consequence that An abstract class is sufficient when one inheritance family needs both shared workflow and hidden subclass-specific implementation, and make clear which part of the temporary experiment proved a compiler rule, a runtime rule, or an API-design choice.",
+      "why_te": "An abstract class is sufficient when one inheritance family needs both shared workflow and hidden subclass-specific implementation; final interview answer lo PatternLab.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
