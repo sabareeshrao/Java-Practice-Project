@@ -783,6 +783,10 @@ Every lesson step must declare a master-compatible `highlight` object. This is n
 Use one of:
 
 - `{"kind":"code","lines":[...]}` when the explanation asks the learner to inspect or reason about source code. Highlight the exact relevant line(s), not merely the file tab.
+- **Multi-target completeness is mandatory.** If the question or Telugu explanation discusses two or more distinct code lines, fields, methods, dependencies, signatures, rows, or controls, the same step must highlight the complete relevant set instead of only the first item.
+- For code, put every relevant line in `highlight.lines: [...]`. A step explaining web, validation, and test starters must highlight all three starter lines.
+- For multiple UI rows or controls, use `highlight.texts: [...]` or selectors with `multiple: true`. First-match highlighting is only valid when the lesson intentionally discusses one target.
+- Before publishing, compare the English question and Telugu explanation with the visible targets. Every item the learner is told to inspect must actually be highlighted.
 - `{"kind":"target","selectors":[...]}` or target text when the step points at a precise IntelliJ control, tool-window row, dialog, result, tab, or field.
 - `{"kind":"auto"}` only when the master runtime can resolve the final native/current target after the action completes, such as a freshly typed code range or terminal command.
 - `{"kind":"none","reason":"..."}` only when there is genuinely no visual target. In that case `why_te` must begin with `[no highlight]`.

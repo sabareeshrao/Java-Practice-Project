@@ -69,6 +69,8 @@ Line-based `highlightTarget` actions should carry `expected_text`. Generation ve
 Every lesson step must include `highlight` with one of `auto`, `code`, `target`, or `none`.
 
 - Use `code` for the exact source lines being discussed. Opening the right file without highlighting the relevant line is not sufficient.
+- When a step discusses multiple distinct code elements, include every relevant line in `highlight.lines`; do not highlight only the first named item.
+- For multiple UI items, use explicit multi-target text/selectors supported by the master runtime.
 - Use `target` for a precise UI control, row, dialog, tool window, result, field, or tab.
 - Use `auto` only when the master can resolve a precise native target after the action completes.
 - Use `none` only when no software-owned visual target exists; provide a reason and start `why_te` with `[no highlight]`.

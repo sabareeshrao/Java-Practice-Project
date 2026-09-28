@@ -920,3 +920,181 @@ Test run chesi result ni chudandi. IntelliJ JUnit green result current `numericC
 ### Step 8 — Review the passing conversion test
 
 Test run chesi result ni chudandi. Final answer lo `Integer.toString`/`String.valueOf`, `Integer.parseInt`/`Integer.valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi.
+
+## Lesson 26 — Java references instead of explicit pointers
+
+### Step 1 — Open Java's managed-reference example
+
+RuntimeLab.java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.
+
+### Step 2 — Inspect the ReferenceSet declaration
+
+Highlight ayina `ReferenceSet` declaration ni chudandi. Types anni normal Java classes. `int*` la pointer declarator ledu, raw memory address field kuda ledu.
+
+### Step 3 — Inspect an ordinary object reference parameter
+
+`Object point` object ni refer chestundi. Method ki object access istundi, kani raw address ni expose cheyyadu. Java lo normal object references tho work chestam.
+
+### Step 4 — Inspect WeakReference as a Java class
+
+IntelliJ symbol card lo `WeakReference` normal Java class ga kanipistundi. Idi garbage collector tho cooperate chese reference API. Raw pointer type la memory address arithmetic ivvadu.
+
+### Step 5 — Create a C-style pointer syntax experiment
+
+Temporary demo file lo C/C++ style `int* address` syntax try chestunnam. Java grammar ee pointer declaration ni support cheyyadu. Compiler syntax error istundi.
+
+### Step 6 — Compile the pointer syntax experiment
+
+`javac` temporary file ni compile chesthe `int* address` daggara syntax error vastundi. Ante ordinary Java source lo C/C++ pointer declaration valid kaadu ani direct ga prove avutundi.
+
+### Step 7 — Return to the managed reference code
+
+Malli RuntimeLab.java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.
+
+### Step 8 — Remove the temporary pointer experiment
+
+Temporary pointer demo ni remove chestunnam. Main point simple: Java object references use chestundi, kani explicit pointer declaration, raw address access mariyu pointer arithmetic ordinary Java lo levu.
+
+## Lesson 27 — Why Java avoids explicit C/C++-style pointers
+
+### Step 1 — Start from Java's existing reference method
+
+`Object point` method ki object reference istundi. Code object ni use cheyyagaladu, kani address ni read cheyyadam leda pointer arithmetic cheyyadam kanipinchadu.
+
+### Step 2 — Inspect managed reference creation
+
+Highlight ayina line lo managed reference objects create chestunnam. JVM and garbage collector ee references ni understand chestayi. Application code arbitrary memory address ni modify cheyyadu.
+
+### Step 3 — Inspect the JVM-managed memory role
+
+JVM memory ni manage chestundi, garbage collector unused objects ni clean chestundi. Ordinary code fixed raw addresses meeda depend kakapovadam valla runtime memory ni safer ga manage cheyyagaladu.
+
+### Step 4 — Create a normal reference identity experiment
+
+Temporary demo lo `second = first` same object reference ni copy chestundi. Raw address syntax avasaram ledu. `first == second` true vastundi endukante rendu same object ni refer chestayi.
+
+### Step 5 — Focus on reference assignment
+
+`Object second = first` reference ni copy chestundi. Rendu variables same object ni point chestayi ani cheppachu, kani Java raw memory address ni user code ki expose cheyyadu.
+
+### Step 6 — Run the reference identity experiment
+
+Program `true` print chestundi. Same object ni rendu references access chestunnayi ani idi prove chestundi. Pointer arithmetic lekapoyina object identity and sharing Java lo possible.
+
+### Step 7 — Return to RuntimeLab after the experiment
+
+RuntimeLab.java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.
+
+### Step 8 — Remove the reference identity demo
+
+Temporary reference demo ni remove chestunnam. Final answer lo safety, garbage collection, portability mariyu simple reference model mention cheyyali. Native memory access special APIs dwara separate ga untundi.
+
+## Lesson 28 — Primitive types cannot hold null
+
+### Step 1 — Open primitive variables in LanguageLab
+
+LanguageLab.java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.
+
+### Step 2 — Focus on an initialized int local variable
+
+Highlight ayina `int flags` primitive variable. Daaniki integer value assign chestam. `null` reference value kabatti `int` domain lo part kaadu.
+
+### Step 3 — Create an invalid primitive-null experiment
+
+Temporary demo lo `int count = null` try chestunnam. `null` reference value kabatti `int` ki assign cheyyadam invalid. Compiler idi accept cheyyadu.
+
+### Step 4 — Compile the invalid primitive-null assignment
+
+`javac` compile chesinappudu `int count = null` daggara type error vastundi. Program run avvakamunde primitive ki null assign cheyyalem ani compiler confirm chestundi.
+
+### Step 5 — Replace the primitive with its wrapper type
+
+Ippudu `int` place lo `Integer` wrapper use chestunnam. `Integer` reference type kabatti `null` store cheyyagaladu. Primitive `int` మాత్రం null ni accept cheyyadu.
+
+### Step 6 — Compile the nullable wrapper version
+
+Wrapper version compile success avutundi. `Integer` null ni store cheyyagaladu ani idi prove chestundi. Same concept `Long`, `Double`, `Boolean` la wrapper types ki kuda apply avutundi.
+
+### Step 7 — Compare primitive and wrapper overloads in real code
+
+LanguageLab lo `int number` and `Integer number` overloads pakkapakkana unnayi. `Integer` version null check chestundi. Primitive `int` version ki aa null state undadu.
+
+### Step 8 — Remove the primitive-null demo
+
+Temporary demo ni remove chestunnam. Final rule: primitives null store cheyyavu. Nullable value kavali ante wrapper/reference type use cheyyali, tarvata unboxing appudu null ni careful ga handle cheyyali.
+
+## Lesson 29 — Exceptions from invalid conversion and casting
+
+### Step 1 — Reopen Java's numeric conversion example
+
+LanguageLab.numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.
+
+### Step 2 — Inspect primitive narrowing without an exception
+
+`(int) metres` primitive narrowing cast. Fraction part lose avvachu, kani idi Java defined numeric conversion. `ClassCastException` unrelated object types cast chesinappudu vastundi.
+
+### Step 3 — Create two failing conversion examples
+
+Temporary demo lo rendu runtime failures compare chestunnam. Object cast wrong type ayithe oka exception, invalid numeric String parse ayithe vere exception vastundi. Rendini separate ga chuddam.
+
+### Step 4 — Focus on the invalid reference cast
+
+`Object` variable runtime lo String object ni hold cheyyachu. `(Integer) value` actual object type tho match kakapothe runtime check fail avutundi. Appudu `ClassCastException` vastundi.
+
+### Step 5 — Run the invalid reference cast
+
+Command run chesthe String object ni Integer ga cast cheyyadam fail avutundi. Output lo `ClassCastException` actual type mariyu requested type mismatch ni chupistundi.
+
+### Step 6 — Focus on text-to-number parsing
+
+`Integer.parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.
+
+### Step 7 — Run the invalid numeric parse
+
+Parsing branch run chesthe `258x` numeric format invalid ani runtime detect chestundi. Anduke `NumberFormatException` correct error. Object type mismatch ikkada problem kaadu.
+
+### Step 8 — Return to the real conversion method
+
+LanguageLab.java ki return ayyamu. Primitive cast information lose chesina exception raakapovachu. Parsing invalid text మాత్రం `NumberFormatException` istundi. Conversion type batti answer cheyyali.
+
+### Step 9 — Remove the invalid conversion demo
+
+Temporary conversion demo ni remove chestunnam. Final answer lo invalid reference cast ki `ClassCastException`, invalid numeric parsing ki `NumberFormatException`, primitive narrowing ki usually exception raadani clear ga cheppali.
+
+## Lesson 30 — Primitive null storage, defaults, and unboxing
+
+### Step 1 — Compare primitive and wrapper method parameters
+
+LanguageLab lo `int` and `Integer` overloads pakkapakkana unnayi. `int` direct primitive value expect chestundi. `Integer` reference type kabatti null state ni represent cheyyagaladu.
+
+### Step 2 — Focus on the primitive overload
+
+Highlight ayina method `int number` use chestundi. Primitive parameter null ni receive cheyyadu. Caller nundi actual integer value ravali.
+
+### Step 3 — Focus on the nullable wrapper overload
+
+`Integer number` wrapper reference kabatti `number == null` check valid. Null unte method `missing` text use chestundi. Primitive `int` ki ee state ledu.
+
+### Step 4 — Create a defaults and unboxing experiment
+
+Temporary demo lo `int[]` array create chestunnam. Primitive array elements default ga zero values pondutayi. `Integer boxed` reference type kabatti separate ga null hold cheyyagaladu.
+
+### Step 5 — Inspect primitive array default values
+
+`int[2]` array elements default ga `0` avutayi. Output `[0, 0]` ani chupistundi. Zero valid primitive value; adi null kaadu.
+
+### Step 6 — Inspect the null unboxing line
+
+`int primitive = boxed` auto-unboxing use chestundi. `boxed` null kabatti primitive value extract cheyyalem. Runtime lo `NullPointerException` vastundi.
+
+### Step 7 — Run the defaults and unboxing experiment
+
+Program first `[0, 0]` print chestundi. Tarvata null `Integer` ni `int` ga unbox chesthe `NullPointerException` vastundi. Rendu behaviors difference clear ga kanipistundi.
+
+### Step 8 — Return to the real overloads
+
+Malli LanguageLab overloads ni chudandi. `Integer` version null ni check chesi safe text return chestundi. `int` version ki null handling avasaram ledu.
+
+### Step 9 — Remove the primitive storage demo
+
+Temporary storage demo ni remove chestunnam. Final rule: primitive null store cheyyadu, defaults actual primitive values. Wrapper null undachu; null wrapper ni primitive ga unbox chesthe `NullPointerException` ravachu.
