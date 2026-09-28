@@ -3820,3 +3820,69 @@ Superclass parameter/reference compatible subclasses ni accept chestundi. `Succe
 ### Step 4 — State the interview answer — Passing subclass objects to superclass parameters
 
 Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
+
+## Lesson 158 — Overloading versus overriding across compile time and runtime
+
+### Step 1 — Open the AeroTopo baseline — Overloading versus overriding across compile time and runtime
+
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
+
+### Step 2 — Create the focused dispatch experiment — Overloading versus overriding across compile time and runtime
+
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
+
+### Step 3 — Run the dispatch experiment — Overloading versus overriding across compile time and runtime
+
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
+
+### Step 4 — Remove the temporary dispatch experiment — Overloading versus overriding across compile time and runtime
+
+[no highlight] First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
+
+### Step 5 — Return to the project design — Overloading versus overriding across compile time and runtime
+
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
+
+## Lesson 159 — Using super with overridden methods
+
+### Step 1 — Open the AeroTopo baseline — Using super with overridden methods
+
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
+
+### Step 2 — Create the focused dispatch experiment — Using super with overridden methods
+
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
+
+### Step 3 — Run the dispatch experiment — Using super with overridden methods
+
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
+
+### Step 4 — Remove the temporary dispatch experiment — Using super with overridden methods
+
+[no highlight] Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
+
+### Step 5 — Return to the project design — Using super with overridden methods
+
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
+
+## Lesson 160 — Designing a plug-in system with polymorphism
+
+### Step 1 — Open the AeroTopo baseline — Designing a plug-in system with polymorphism
+
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
+
+### Step 2 — Create the focused dispatch experiment — Designing a plug-in system with polymorphism
+
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
+
+### Step 3 — Run the dispatch experiment — Designing a plug-in system with polymorphism
+
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
+
+### Step 4 — Remove the temporary dispatch experiment — Designing a plug-in system with polymorphism
+
+[no highlight] Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
+
+### Step 5 — Return to the project design — Designing a plug-in system with polymorphism
+
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
