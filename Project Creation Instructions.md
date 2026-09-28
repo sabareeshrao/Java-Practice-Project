@@ -285,6 +285,18 @@ portable mariyu repeatable ga chestundi. Local machine mariyu
 CI rendu ade build model ni use cheyyagalavu.
 ```
 
+### Hard anti-redundancy guardrail
+
+- Scan the entire published curriculum before every lesson release.
+- Exact duplicate step questions are forbidden.
+- Reusing a complete `why_te` paragraph is forbidden.
+- Reusing a knowledge-bearing sentence across multiple `why_te` blocks is forbidden.
+- Reusing boilerplate English question sentences across lessons is forbidden.
+- The same UI/code target may appear again only when the new step contributes a different technical idea.
+- Telugu must be written with English characters only; Telugu Unicode script is a build failure.
+- Literal template leaks such as `undefined` are build failures.
+- `scripts/audit-lesson-redundancy.cjs` is a required CI gate.
+
 ### Option B — Very easy learner explanation contract
 
 This project uses **Option B — Very easy learner style** for every `why_te`.
@@ -309,7 +321,7 @@ Rules:
   - "screen/action lo kanipinche evidence ni question concept tho connect cheyyandi"
   - "reason cheyyandi" when a simpler sentence works.
 - If the learner can understand the point in a shorter simple sentence, prefer the shorter sentence.
-- Repeated simple explanations are allowed when the same UI concept genuinely repeats. Never add fake wording only to make explanations unique.
+- Do not repeat the same `why_te` paragraph or knowledge-bearing sentence across steps. Even when the same UI target reappears, each step must explain a different technical point, evidence, consequence, or verification. Simple wording is required; duplicate knowledge is forbidden.
 
 Preferred example:
 

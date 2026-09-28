@@ -54,7 +54,7 @@ Every `why_te` uses **Option B — Very easy learner style**.
 - Normally use 2–3 sentences.
 - Keep explanations between **15 and 55 words**.
 - Do not use lecture-style coaching, forced translations, motivational filler, or artificial padding.
-- Repeated simple explanations are allowed when the same UI concept genuinely repeats; do not make wording complex just to force uniqueness.
+- Do not reuse the same explanation paragraph or knowledge-bearing sentence. When a UI/code target repeats, explain a new technical point about it instead of repeating prior knowledge.
 - The living readable corpus is `simulation/OPTION_B_EXPLANATION_TEXTS.md`; future lesson batches must append their new explanation text there.
 
 ## Playback file coverage
@@ -78,3 +78,7 @@ Every lesson step must include `highlight` with one of `auto`, `code`, `target`,
 The generator rejects steps without this contract. If an automatic target fails at runtime, the master explanation card visibly marks the step with `[no highlight]` instead of pretending that something was highlighted.
 
 Code focus must keep the readable left side of the editor visible. Next/Previous/Replay must not push horizontal scroll to the far right.
+
+## Redundancy validation
+
+`node scripts/audit-lesson-redundancy.cjs` scans every published lesson. The build fails for exact question duplication, repeated Telugu paragraphs, repeated knowledge-bearing sentences, same-lesson explanation reuse, Telugu Unicode script, or leaked template tokens such as `undefined`.

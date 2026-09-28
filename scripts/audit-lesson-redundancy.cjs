@@ -125,6 +125,8 @@ const sameLesson=[...sameLessonTelugu.values()].filter(g=>g.length>1);
 console.log("\n## SAME-LESSON EXACT TELUGU REUSE ("+sameLesson.length+" groups)");
 for(const g of sameLesson) console.log(`${g.map(loc).join(", ")} :: ${g[0].telugu.replace(/\s+/g," ").slice(0,500)}`);
 
+const teluguScript=records.filter(r=>/[\u0C00-\u0C7F]/.test(r.question)||/[\u0C00-\u0C7F]/.test(r.telugu));
+const undefinedLeaks=records.filter(r=>/\bundefined\b/i.test(r.question)||/\bundefined\b/i.test(r.telugu));
 const summary={
  lessons:files.length,steps:records.length,
  exactQuestionGroups:exactQ.length,
@@ -133,6 +135,19 @@ const summary={
  repeatedTeluguSentenceGroups:sentT.length,
  nearQuestionPairs:nearQ.length,
  nearTeluguPairs:nearT.length,
- sameLessonExactTeluguGroups:sameLesson.length
+ sameLessonExactTeluguGroups:sameLesson.length,
+ teluguScriptSteps:teluguScript.length,
+ undefinedLeakSteps:undefinedLeaks.length
 };
+console.log("\n## TELUGU SCRIPT VIOLATIONS ("+teluguScript.length+")");
+for(const r of teluguScript)console.log(loc(r));
+console.log("\n## UNDEFINED LEAKS ("+undefinedLeaks.length+")");
+for(const r of undefinedLeaks)console.log(loc(r));
 console.log("\nAUDIT_SUMMARY "+JSON.stringify(summary));
+const hardFailures=
+ exactQ.length+exactT.length+sentQ.length+sentT.length+sameLesson.length+
+ teluguScript.length+undefinedLeaks.length;
+if(hardFailures){
+ console.error("\nREDUNDANCY_GUARD_FAIL hardFailures="+hardFailures);
+ process.exitCode=1;
+}
