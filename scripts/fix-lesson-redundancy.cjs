@@ -246,9 +246,26 @@ for(let pass=0;pass<4;pass++){
   }
 }
 
+function compactWhy(r){
+  const lt=plainTitle(r.lesson.title),st=plainTitle(r.step.title),a=anchor(r),k=actionKind(r);
+  let body;
+  if(k==="openFile") body=`${a} open chesi ${lt} ki real project baseline ni locate chestam; ${st} lo highlighted code next reasoning start ayye place ni clear ga chupistundi.`;
+  else if(k==="highlightTarget") body=`${st} lo highlighted ${a} declaration ${lt} rule ni direct ga prove chestundi; general concept repeat cheyyakunda exact syntax behavior ni inspect chestam.`;
+  else if(k==="createFile") body=`Temporary ${a} create chesi ${lt} edge case ni isolate chestam; ${st} lo compiler leda runtime result mundu prediction ni testable ga chestam.`;
+  else if(k==="typeTerminal") body=`Terminal lo ${st} run chesi ${lt} behavior ni actual result tho verify chestam; source expectation and output match ayina evidence ni next conclusion ki use chestam.`;
+  else if(k==="deleteResource") body=`[no highlight] Temporary ${a} remove chesi ${lt} kosam verified rule ni retain chestam; ${st} cleanup valla lesson-only code permanent project state lo remain avvadu.`;
+  else body=`${st} lo ${a} evidence ni use chesi ${lt} ki current step-specific conclusion ni establish chestam; previous info repeat cheyyakunda ee action purpose ni next reasoning tho connect chestam.`;
+  body=transliterateKnown(body).replace(/\s+/g," ").trim();
+  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(body))body="[no highlight] "+body;
+  return body;
+}
+
 for(const r of rows){
   r.step.question=String(r.step.question||"").replace(/\bundefined\s*/gi,"").replace(/\s+/g," ").trim();
   r.step.why_te=transliterateKnown(r.step.why_te).replace(/\s+/g," ").trim();
+  if(wc(r.step.why_te)>55)r.step.why_te=compactWhy(r);
+  if(wc(r.step.why_te)<15)r.step.why_te=(stripNo(r.step.why_te)+" Ee step visible evidence ni next technical reasoning ki direct base ga use chestundi.").trim();
+  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te))r.step.why_te="[no highlight] "+r.step.why_te;
   if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te))r.step.why_te="[no highlight] "+r.step.why_te;
   if(wc(r.step.question)<39)throw new Error(`${loc(r)} question words=${wc(r.step.question)}`);
   if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error(`${loc(r)} Telugu words=${wc(r.step.why_te)}`);
