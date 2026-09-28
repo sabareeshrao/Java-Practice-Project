@@ -3068,3 +3068,147 @@ AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda w
 ### Step 4 — State the interview rule — Static methods written in the AeroTopo project
 
 AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
+
+## Lesson 118 — Constructor chaining in inheritance
+
+### Step 1 — Open the inheritance evidence — Constructor chaining in inheritance
+
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
+
+### Step 2 — Trace the parent-child rule — Constructor chaining in inheritance
+
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
+
+### Step 3 — Evaluate the hierarchy design — Constructor chaining in inheritance
+
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
+
+### Step 4 — State the interview answer — Constructor chaining in inheritance
+
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
+
+## Lesson 119 — Hybrid inheritance in Java
+
+### Step 1 — Open the inheritance evidence — Hybrid inheritance in Java
+
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
+
+### Step 2 — Trace the parent-child rule — Hybrid inheritance in Java
+
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
+
+### Step 3 — Evaluate the hierarchy design — Hybrid inheritance in Java
+
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
+
+### Step 4 — State the interview answer — Hybrid inheritance in Java
+
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
+
+## Lesson 120 — The diamond problem and default-method conflict resolution
+
+### Step 1 — Open the inheritance evidence — The diamond problem and default-method conflict resolution
+
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
+
+### Step 2 — Trace the parent-child rule — The diamond problem and default-method conflict resolution
+
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
+
+### Step 3 — Evaluate the hierarchy design — The diamond problem and default-method conflict resolution
+
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
+
+### Step 4 — State the interview answer — The diamond problem and default-method conflict resolution
+
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
+
+## Lesson 121 — Composition over inheritance
+
+### Step 1 — Open the inheritance evidence — Composition over inheritance
+
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
+
+### Step 2 — Trace the parent-child rule — Composition over inheritance
+
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
+
+### Step 3 — Evaluate the hierarchy design — Composition over inheritance
+
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
+
+### Step 4 — State the interview answer — Composition over inheritance
+
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
+
+## Lesson 122 — Superclass constructor runs before subclass construction
+
+### Step 1 — Open the inheritance evidence — Superclass constructor runs before subclass construction
+
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
+
+### Step 2 — Trace the parent-child rule — Superclass constructor runs before subclass construction
+
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
+
+### Step 3 — Evaluate the hierarchy design — Superclass constructor runs before subclass construction
+
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
+
+### Step 4 — State the interview answer — Superclass constructor runs before subclass construction
+
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
+
+## Lesson 123 — Parent with only parameterized constructors
+
+### Step 1 — Open the inheritance evidence — Parent with only parameterized constructors
+
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
+
+### Step 2 — Trace the parent-child rule — Parent with only parameterized constructors
+
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
+
+### Step 3 — Evaluate the hierarchy design — Parent with only parameterized constructors
+
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
+
+### Step 4 — State the interview answer — Parent with only parameterized constructors
+
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
+
+## Lesson 124 — Why super() must be the first constructor statement
+
+### Step 1 — Open the inheritance evidence — Why super() must be the first constructor statement
+
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
+
+### Step 2 — Trace the parent-child rule — Why super() must be the first constructor statement
+
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
+
+### Step 3 — Evaluate the hierarchy design — Why super() must be the first constructor statement
+
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
+
+### Step 4 — State the interview answer — Why super() must be the first constructor statement
+
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
+
+## Lesson 125 — Effect of final methods on inheritance
+
+### Step 1 — Open the inheritance evidence — Effect of final methods on inheritance
+
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
+
+### Step 2 — Trace the parent-child rule — Effect of final methods on inheritance
+
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
+
+### Step 3 — Evaluate the hierarchy design — Effect of final methods on inheritance
+
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
+
+### Step 4 — State the interview answer — Effect of final methods on inheritance
+
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
