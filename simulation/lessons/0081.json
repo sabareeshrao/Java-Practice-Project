@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_number": 81,
+  "question_id": 81,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Return statements inside constructors",
+  "info_language": "te-Latn",
+  "answer": "A constructor may use a bare `return;` statement to end constructor execution early, but it cannot return a value because constructors have no return type. Any fields not explicitly assigned before the bare return keep the values established by default initialization or earlier initializers. Using early returns in constructors can make invariants harder to understand, so validation followed by clear initialization is usually preferable.",
+  "steps": [
+    {
+      "title": "Open the valid project baseline — Return statements inside constructors",
+      "question": "A bare return can exit a constructor, but a constructor cannot return a value is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Return statements inside constructors\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused experiment — Return statements inside constructors",
+      "question": "The edge case behind \"Return statements inside constructors\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
+      "why_te": "Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ConstructorReturnDemo.java",
+          "language": "java",
+          "content": "public class ConstructorReturnDemo {\n    int value;\n    ConstructorReturnDemo(boolean skip){ if(skip) return; value=7; }\n    public static void main(String[] args){\n        System.out.println(new ConstructorReturnDemo(true).value);\n        System.out.println(new ConstructorReturnDemo(false).value);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused experiment — Return statements inside constructors",
+      "question": "The temporary program for \"Return statements inside constructors\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
+      "why_te": "Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson81-demo labs/java/ConstructorReturnDemo.java; java -cp target/lesson81-demo ConstructorReturnDemo",
+          "output": "0\n7"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Return statements inside constructors",
+      "question": "The demonstration for \"Return statements inside constructors\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
+      "why_te": "[no highlight] Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ConstructorReturnDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary constructor experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to production code — Return statements inside constructors",
+      "question": "Now summarize \"Return statements inside constructors\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "lesson_number": 73,
+  "question_id": 73,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "What a Java constructor is",
+  "info_language": "te-Latn",
+  "answer": "A constructor is a special class member used to initialize a newly created object. It has the same name as the class and no return type, and it runs as part of a normal `new` object-creation expression after superclass initialization. Constructors can validate input and establish invariants before the caller receives the reference. In AeroTopo, the `Orthomosaic` constructor delegates common state to `Product`, validates GSD, and stores the instance value.",
+  "steps": [
+    {
+      "title": "Open the project evidence — What a Java constructor is",
+      "question": "A constructor initializes a new object and establishes its valid starting state is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"What a Java constructor is\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the Java rule — What a Java constructor is",
+      "question": "For \"What a Java constructor is\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect caller and object state — What a Java constructor is",
+      "question": "A practical explanation of \"What a Java constructor is\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — What a Java constructor is",
+      "question": "Now summarize \"What a Java constructor is\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

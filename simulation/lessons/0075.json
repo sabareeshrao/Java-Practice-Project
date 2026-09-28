@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "lesson_number": 75,
+  "question_id": 75,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Constructor overloading",
+  "info_language": "te-Latn",
+  "answer": "Yes. Constructors can be overloaded by declaring multiple constructors with different parameter lists. Overloading lets callers create the same class with different valid input sets while each constructor ultimately establishes a valid object. AeroTopo's abstract `Product` has both an id-only constructor and an id-plus-tiles constructor; the shorter constructor delegates to the fuller one with `this(id, List.of())`.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Constructor overloading",
+      "question": "Constructor overloading provides multiple parameter signatures for creating the same class is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Constructor overloading\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the Java rule — Constructor overloading",
+      "question": "For \"Constructor overloading\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect caller and object state — Constructor overloading",
+      "question": "A practical explanation of \"Constructor overloading\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Constructor overloading",
+      "question": "Now summarize \"Constructor overloading\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_number": 79,
+  "question_id": 79,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Whether constructors can be static, final, or abstract",
+  "info_language": "te-Latn",
+  "answer": "No. Constructors cannot be declared `static`, `final`, or `abstract`. They initialize instances, are not inherited or overridden, and must have an implementation when declared. Therefore `static` conflicts with instance construction, `final` is unnecessary because constructors cannot be overridden, and `abstract` conflicts with the requirement that construction execute concrete initialization logic.",
+  "steps": [
+    {
+      "title": "Open the valid project baseline — Whether constructors can be static, final, or abstract",
+      "question": "Constructor modifiers are restricted because construction is instance initialization, not an overridable method contract is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Whether constructors can be static, final, or abstract\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused experiment — Whether constructors can be static, final, or abstract",
+      "question": "The edge case behind \"Whether constructors can be static, final, or abstract\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
+      "why_te": "Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/IllegalConstructorModifiers.java",
+          "language": "java",
+          "content": "public class IllegalConstructorModifiers {\n    IllegalConstructorModifiers() {}\n    public static void main(String[] args){ System.out.println(new IllegalConstructorModifiers().getClass().getSimpleName()); }\n    // Constructors cannot be declared static, final, or abstract.\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused experiment — Whether constructors can be static, final, or abstract",
+      "question": "The temporary program for \"Whether constructors can be static, final, or abstract\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
+      "why_te": "Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson79-demo labs/java/IllegalConstructorModifiers.java; java -cp target/lesson79-demo IllegalConstructorModifiers",
+          "output": "IllegalConstructorModifiers"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Whether constructors can be static, final, or abstract",
+      "question": "The demonstration for \"Whether constructors can be static, final, or abstract\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
+      "why_te": "[no highlight] Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/IllegalConstructorModifiers.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary constructor experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to production code — Whether constructors can be static, final, or abstract",
+      "question": "Now summarize \"Whether constructors can be static, final, or abstract\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

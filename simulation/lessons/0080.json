@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 80,
+  "question_id": 80,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Constructor return types",
+  "info_language": "te-Latn",
+  "answer": "A constructor has no return type—not even `void`. Its name matches the class name, and a normal `new` expression produces the object reference after construction completes. If you write `void ClassName()`, that declaration is an ordinary method, not a constructor. When no constructor is declared, the compiler may provide a default no-argument constructor, which is why a class containing only such a void method can still be instantiated.",
+  "steps": [
+    {
+      "title": "Open the valid project baseline — Constructor return types",
+      "question": "A constructor is identified by the class name with no return type is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Constructor return types\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused experiment — Constructor return types",
+      "question": "The edge case behind \"Constructor return types\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
+      "why_te": "Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ConstructorReturnTypeDemo.java",
+          "language": "java",
+          "content": "public class ConstructorReturnTypeDemo {\n    void ConstructorReturnTypeDemo(){ System.out.println(\"ordinary method\"); }\n    public static void main(String[] args){\n        ConstructorReturnTypeDemo value = new ConstructorReturnTypeDemo();\n        value.ConstructorReturnTypeDemo();\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused experiment — Constructor return types",
+      "question": "The temporary program for \"Constructor return types\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
+      "why_te": "Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson80-demo labs/java/ConstructorReturnTypeDemo.java; java -cp target/lesson80-demo ConstructorReturnTypeDemo",
+          "output": "ordinary method"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Constructor return types",
+      "question": "The demonstration for \"Constructor return types\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
+      "why_te": "[no highlight] Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ConstructorReturnTypeDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary constructor experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to production code — Constructor return types",
+      "question": "Now summarize \"Constructor return types\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

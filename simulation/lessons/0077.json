@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 77,
+  "question_id": 77,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Calling super() and this() from constructors",
+  "info_language": "te-Latn",
+  "answer": "A constructor cannot explicitly invoke both `this(...)` and `super(...)` directly because an explicit constructor invocation must be the first statement, and only one such invocation can occupy that position. A constructor may call `this(...)`, and the target constructor can then call `super(...)`, producing an indirect chain. If neither is written where required, Java inserts an implicit `super()` when a compatible no-arg superclass constructor exists.",
+  "steps": [
+    {
+      "title": "Open the valid project baseline — Calling super() and this() from constructors",
+      "question": "Only one explicit constructor invocation can be the first statement of a constructor is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Calling super() and this() from constructors\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused experiment — Calling super() and this() from constructors",
+      "question": "The edge case behind \"Calling super() and this() from constructors\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
+      "why_te": "Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ConstructorInvocationDemo.java",
+          "language": "java",
+          "content": "class BaseCtor { BaseCtor(){ System.out.println(\"base\"); } }\npublic class ConstructorInvocationDemo extends BaseCtor {\n    ConstructorInvocationDemo(){ this(7); }\n    ConstructorInvocationDemo(int value){ super(); System.out.println(\"child=\" + value); }\n    public static void main(String[] args){ new ConstructorInvocationDemo(); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused experiment — Calling super() and this() from constructors",
+      "question": "The temporary program for \"Calling super() and this() from constructors\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
+      "why_te": "Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson77-demo labs/java/ConstructorInvocationDemo.java; java -cp target/lesson77-demo ConstructorInvocationDemo",
+          "output": "base\nchild=7"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Calling super() and this() from constructors",
+      "question": "The demonstration for \"Calling super() and this() from constructors\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
+      "why_te": "[no highlight] Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ConstructorInvocationDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary constructor experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to production code — Calling super() and this() from constructors",
+      "question": "Now summarize \"Calling super() and this() from constructors\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

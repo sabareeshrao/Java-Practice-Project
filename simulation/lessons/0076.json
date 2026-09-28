@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "lesson_number": 76,
+  "question_id": 76,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why classes provide different constructors",
+  "info_language": "te-Latn",
+  "answer": "Different constructors support different legitimate initialization scenarios while keeping invariants inside the class. One constructor may provide sensible defaults, while another accepts complete caller-supplied state. AeroTopo's `Product(String id)` supplies an empty tile list and delegates to `Product(String id, List<String> tiles)`, so callers can choose a concise default path or a more detailed creation path without duplicating initialization logic.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Why classes provide different constructors",
+      "question": "Different constructors let one class support multiple valid creation scenarios without duplicating initialization rules is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Why classes provide different constructors\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the Java rule — Why classes provide different constructors",
+      "question": "For \"Why classes provide different constructors\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect caller and object state — Why classes provide different constructors",
+      "question": "A practical explanation of \"Why classes provide different constructors\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Why classes provide different constructors",
+      "question": "Now summarize \"Why classes provide different constructors\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          29,
+          30
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
