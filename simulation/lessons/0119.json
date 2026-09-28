@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "lesson_number": 119,
+  "question_id": 119,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Hybrid inheritance in Java",
+  "info_language": "te-Latn",
+  "answer": "Hybrid inheritance means combining more than one inheritance pattern in the same design, such as hierarchical inheritance together with multiple interface inheritance. Java does not support multiple inheritance of classes, but a class can extend one superclass and implement multiple interfaces. AeroTopo has `Orthomosaic` and `Dem` extending `Product`, while `Product` implements both `Exportable` and `Identified`; this is a practical hybrid-style structure without multiple superclass inheritance.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Hybrid inheritance in Java",
+      "question": "Have you heard about Hybrid Inheritance? Start with the AeroTopo implementation instead of a memorized definition. The hierarchy combines one class chain with multiple interface contracts. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Hybrid inheritance in Java",
+      "question": "For \"Hybrid inheritance in Java\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Hybrid inheritance in Java",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Hybrid inheritance in Java\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Hybrid inheritance in Java",
+      "question": "Now answer the interview question \"Have you heard about Hybrid Inheritance?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

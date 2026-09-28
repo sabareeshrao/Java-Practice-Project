@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "lesson_number": 125,
+  "question_id": 125,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Effect of final methods on inheritance",
+  "info_language": "te-Latn",
+  "answer": "A final instance method is inherited and can be called normally, but subclasses cannot override it. This is useful when the superclass must preserve one behavior or invariant across the hierarchy. AeroTopo declares `Product.id()` as final, so every Product subtype exposes identity using the same implementation. The restriction improves consistency but reduces extension flexibility, so final should protect a deliberate design rule rather than be applied automatically.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Effect of final methods on inheritance",
+      "question": "What's the impact of declaring a method as final on inheritance? Start with the AeroTopo implementation instead of a memorized definition. Product.id() is final while subclasses still override other non-final behavior. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Effect of final methods on inheritance",
+      "question": "For \"Effect of final methods on inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Effect of final methods on inheritance",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Effect of final methods on inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Effect of final methods on inheritance",
+      "question": "Now answer the interview question \"What's the impact of declaring a method as final on inheritance?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

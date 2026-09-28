@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 132,
+  "question_id": 132,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Using super without an explicit superclass",
+  "info_language": "te-Latn",
+  "answer": "Every ordinary Java class that does not explicitly extend another class implicitly extends `java.lang.Object`. Therefore `super()` in such a class refers to Object's constructor, and inherited Object methods are available. You cannot use `super` from `Object` itself because Object has no superclass. The rule explains why even a simple class with no `extends` clause participates in a superclass chain.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo inheritance baseline — Using super without an explicit superclass",
+      "question": "What happens if you use the super keyword in a Class that does not explicitly have a Superclass? Before testing the edge case, inspect the valid AeroTopo hierarchy and identify the parent-child rule already being followed. Which highlighted declaration provides the baseline, and why should the unusual language case be isolated in a temporary file instead of altering the cumulative production model?",
+      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused inheritance experiment — Using super without an explicit superclass",
+      "question": "The temporary source for \"Using super without an explicit superclass\" isolates the exact inheritance rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result before execution. Which Java rule about superclass construction, implicit Object inheritance, or inheritance legality determines what should happen in this small example?",
+      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ImplicitObjectSuperDemo.java",
+          "language": "java",
+          "content": "public class ImplicitObjectSuperDemo {\n    ImplicitObjectSuperDemo(){ super(); }\n    public static void main(String[] args){\n        System.out.println(new ImplicitObjectSuperDemo().getClass().getSuperclass().getName());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the inheritance experiment — Using super without an explicit superclass",
+      "question": "The focused program for \"Using super without an explicit superclass\" now provides direct compiler or runtime evidence. Compare the result with the source and explain why Java produced that behavior. Which common misconception about constructors, superclasses, or inheritance does this observation remove, and how does it relate back to the valid AeroTopo hierarchy?",
+      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson132-demo labs/java/ImplicitObjectSuperDemo.java; java -cp target/lesson132-demo ImplicitObjectSuperDemo",
+          "output": "java.lang.Object"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary inheritance experiment — Using super without an explicit superclass",
+      "question": "The temporary example for \"Using super without an explicit superclass\" has proved the language rule and should not remain as duplicate lesson-only code. After deleting it, preserve the compiler or runtime behavior as evidence. Why is cleanup necessary for keeping later lessons on one cumulative AeroTopo project rather than accumulating artificial inheritance examples?",
+      "why_te": "[no highlight] Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ImplicitObjectSuperDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary inheritance experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production hierarchy — Using super without an explicit superclass",
+      "question": "With the temporary source removed, return to the AeroTopo hierarchy and answer \"What happens if you use the super keyword in a Class that does not explicitly have a Superclass?\" using both the production example and the focused experiment. How would you explain the rule, its practical consequence, and the reason AeroTopo's current inheritance design stays valid and maintainable?",
+      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          27
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

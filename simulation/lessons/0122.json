@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "lesson_number": 122,
+  "question_id": 122,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Superclass constructor runs before subclass construction",
+  "info_language": "te-Latn",
+  "answer": "When constructing an object of a subclass, Java initializes the superclass portion first. The subclass constructor begins by invoking a superclass constructor, explicitly with `super(...)` or implicitly with `super()` when legal. Only after superclass construction returns does the remaining subclass constructor body execute. In AeroTopo, creating an `Orthomosaic` invokes `Product(String,List)` before validating and assigning the `gsd` field.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Superclass constructor runs before subclass construction",
+      "question": "If class B extends class A and both have constructors, which constructor is called first when creating an object of B? Start with the AeroTopo implementation instead of a memorized definition. The constructor body visibly calls Product before the child field is assigned. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Superclass constructor runs before subclass construction",
+      "question": "For \"Superclass constructor runs before subclass construction\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Superclass constructor runs before subclass construction",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Superclass constructor runs before subclass construction\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Superclass constructor runs before subclass construction",
+      "question": "Now answer the interview question \"If class B extends class A and both have constructors, which constructor is called first when creating an object of B?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "lesson_number": 133,
+  "question_id": 133,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Inheritance versus composition",
+  "info_language": "te-Latn",
+  "answer": "Inheritance models an is-a relationship where a subtype extends a parent contract and may reuse or override behavior. Composition models a has-a relationship where one object owns or collaborates with another object without becoming its subtype. AeroTopo uses inheritance because `Orthomosaic` and `Dem` are Products; `Product` uses composition because it owns a list of tile IDs. Composition is often preferred when reuse does not require substitutability.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Inheritance versus composition",
+      "question": "Can you explain inheritance and composition in Java? Start with the AeroTopo implementation instead of a memorized definition. The Product model places inheritance and composition side by side. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Inheritance versus composition",
+      "question": "For \"Inheritance versus composition\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Inheritance versus composition",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Inheritance versus composition\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Inheritance versus composition",
+      "question": "Now answer the interview question \"Can you explain inheritance and composition in Java?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

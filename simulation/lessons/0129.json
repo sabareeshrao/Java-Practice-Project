@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "lesson_number": 129,
+  "question_id": 129,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "How inheritance works in AeroTopo",
+  "info_language": "te-Latn",
+  "answer": "A subclass declared with `extends` inherits accessible members from its superclass, can add new state, and can override eligible instance methods. The subclass object still contains and initializes the superclass portion first. AeroTopo's `Orthomosaic extends Product` inherits identity, tiles, export, equality, and hashing behavior, adds `gsd`, and overrides `resolutionMetres()`. `Dem` reuses the same Product abstraction with a different resolution implementation.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — How inheritance works in AeroTopo",
+      "question": "How does Inheritance work in Java? Provide an example as well. Start with the AeroTopo implementation instead of a memorized definition. The Product hierarchy directly demonstrates inherited behavior plus child specialization. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          27,
+          28,
+          34,
+          38,
+          39,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — How inheritance works in AeroTopo",
+      "question": "For \"How inheritance works in AeroTopo\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          27,
+          28,
+          34,
+          38,
+          39,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — How inheritance works in AeroTopo",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"How inheritance works in AeroTopo\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          27,
+          28,
+          34,
+          38,
+          39,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — How inheritance works in AeroTopo",
+      "question": "Now answer the interview question \"How does Inheritance work in Java? Provide an example as well.\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          27,
+          28,
+          34,
+          38,
+          39,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "lesson_number": 118,
+  "question_id": 118,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Constructor chaining in inheritance",
+  "info_language": "te-Latn",
+  "answer": "Constructor chaining is the sequence in which one constructor invokes another constructor in the same class with `this(...)` or invokes a superclass constructor with `super(...)`. In inheritance, superclass construction happens before the subclass constructor body completes. AeroTopo's `Orthomosaic` constructor calls `super(id, tiles)`, which initializes Product state first; Product's shorter constructor also delegates with `this(id, List.of())`. This establishes inherited state before child-specific GSD validation and assignment.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Constructor chaining in inheritance",
+      "question": "What is Constructor Chaining, and how is it handled in Inheritance? Start with the AeroTopo implementation instead of a memorized definition. Product and Orthomosaic show both same-class and superclass constructor chaining. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          16,
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Constructor chaining in inheritance",
+      "question": "For \"Constructor chaining in inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          16,
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Constructor chaining in inheritance",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Constructor chaining in inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          16,
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Constructor chaining in inheritance",
+      "question": "Now answer the interview question \"What is Constructor Chaining, and how is it handled in Inheritance?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          16,
+          17,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "lesson_number": 131,
+  "question_id": 131,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "When inheritance violates the parent contract",
+  "info_language": "te-Latn",
+  "answer": "Yes, that is a strong sign the inheritance relationship is being misused. A subtype should remain substitutable for its parent and honor the parent's behavioral contract; otherwise callers using the parent type can receive surprising or invalid behavior. This idea is commonly associated with the Liskov Substitution Principle. AeroTopo's Product contract says every product supplies a meaningful `resolutionMetres()` and export behavior, so subclasses must preserve those semantics rather than redefine them incompatibly.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — When inheritance violates the parent contract",
+      "question": "If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused? Start with the AeroTopo implementation instead of a memorized definition. The abstract Product contract is the semantic promise every subtype must preserve. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — When inheritance violates the parent contract",
+      "question": "For \"When inheritance violates the parent contract\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — When inheritance violates the parent contract",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"When inheritance violates the parent contract\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — When inheritance violates the parent contract",
+      "question": "Now answer the interview question \"If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

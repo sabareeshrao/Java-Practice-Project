@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "lesson_number": 121,
+  "question_id": 121,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Composition over inheritance",
+  "info_language": "te-Latn",
+  "answer": "Composition over inheritance means preferring has-a relationships and delegating to contained objects when reuse does not require a true is-a subtype relationship. Inheritance is appropriate for substitutable domain types, while composition avoids rigid coupling for owned collaborators or data. AeroTopo uses inheritance for `Orthomosaic is a Product`, but `Product has a List<String> tiles` through composition. This keeps tile ownership separate from the product type hierarchy.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — Composition over inheritance",
+      "question": "In Java, what does the principle \"Composition over Inheritance\" mean? Start with the AeroTopo implementation instead of a memorized definition. The same class model demonstrates both a legitimate is-a hierarchy and a has-a composition relationship. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — Composition over inheritance",
+      "question": "For \"Composition over inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — Composition over inheritance",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Composition over inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Composition over inheritance",
+      "question": "Now answer the interview question \"In Java, what does the principle \"Composition over Inheritance\" mean?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          17,
+          19,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

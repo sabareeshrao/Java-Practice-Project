@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "lesson_number": 120,
+  "question_id": 120,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "The diamond problem and default-method conflict resolution",
+  "info_language": "te-Latn",
+  "answer": "The diamond problem occurs when a type could inherit competing implementations of the same member through multiple inheritance paths. Java avoids multiple inheritance of classes, but two interfaces may provide the same default method. In that case the implementing class must resolve the conflict explicitly. AeroTopo's `Units` implements both `Left` and `Right`, each defining `units()`, and overrides `units()` to choose `Left.super.units()`.",
+  "steps": [
+    {
+      "title": "Open the inheritance evidence — The diamond problem and default-method conflict resolution",
+      "question": "What is the Diamond Problem in Java, and how can we address it? Start with the AeroTopo implementation instead of a memorized definition. The Left/Right/Units example is a direct default-method diamond conflict. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          62,
+          63,
+          64,
+          65
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the parent-child rule — The diamond problem and default-method conflict resolution",
+      "question": "For \"The diamond problem and default-method conflict resolution\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          62,
+          63,
+          64,
+          65
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the hierarchy design — The diamond problem and default-method conflict resolution",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"The diamond problem and default-method conflict resolution\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          62,
+          63,
+          64,
+          65
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — The diamond problem and default-method conflict resolution",
+      "question": "Now answer the interview question \"What is the Diamond Problem in Java, and how can we address it?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          62,
+          63,
+          64,
+          65
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
