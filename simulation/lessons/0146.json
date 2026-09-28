@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "lesson_number": 146,
+  "question_id": 146,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Null with String and Object overloads",
+  "info_language": "te-Latn",
+  "answer": "`getData(String)` is selected. The null literal is applicable to both reference-type overloads, but `String` is more specific than `Object`, so Java chooses the String overload. This differs from overloads on unrelated reference types, where passing null may be ambiguous. The decision is made at compile time based on overload specificity; it is not a runtime null dispatch rule.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Null with String and Object overloads",
+      "question": "You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused dispatch experiment — Null with String and Object overloads",
+      "question": "The temporary source for \"Null with String and Object overloads\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/NullSpecificityDemo.java",
+          "language": "java",
+          "content": "public class NullSpecificityDemo {\n    static String getData(Object value){ return \"Object\"; }\n    static String getData(String value){ return \"String\"; }\n    public static void main(String[] args){ System.out.println(getData(null)); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the dispatch experiment — Null with String and Object overloads",
+      "question": "The focused program for \"Null with String and Object overloads\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson146-demo labs/java/NullSpecificityDemo.java; java -cp target/lesson146-demo NullSpecificityDemo",
+          "output": "String"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary dispatch experiment — Null with String and Object overloads",
+      "question": "The isolated example for \"Null with String and Object overloads\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] `null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/NullSpecificityDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary dispatch experiment is removed after proving the Java rule."
+      }
+    },
+    {
+      "title": "Return to the project design — Null with String and Object overloads",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

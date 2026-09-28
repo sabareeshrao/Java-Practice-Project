@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "lesson_number": 149,
+  "question_id": 149,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "A practical benefit of polymorphism",
+  "info_language": "te-Latn",
+  "answer": "Polymorphism is useful when one workflow should process several implementations through a common contract. In AeroTopo, code can work with `Product` values without branching on whether each object is an Orthomosaic or DEM; calling `resolutionMetres()` or `export()` automatically uses subtype behavior. This makes new product types easier to add because callers can remain written against the stable Product or Exportable contract instead of accumulating type checks.",
+  "steps": [
+    {
+      "title": "Open the polymorphism evidence — A practical benefit of polymorphism",
+      "question": "Can you provide a real-life example where polymorphism is beneficial? Use the AeroTopo code as the starting point rather than answering from terminology alone. The Product hierarchy is a domain-specific example where callers can stay subtype-agnostic. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace method selection — A practical benefit of polymorphism",
+      "question": "For \"A practical benefit of polymorphism\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design contract — A practical benefit of polymorphism",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"A practical benefit of polymorphism\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — A practical benefit of polymorphism",
+      "question": "Now answer the interview question \"Can you provide a real-life example where polymorphism is beneficial?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "lesson_number": 155,
+  "question_id": 155,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Dynamic method dispatch",
+  "info_language": "te-Latn",
+  "answer": "Dynamic method dispatch is Java's runtime selection of an overridden instance method based on the actual object's class when the call is made through a superclass or interface reference. The reference type determines what members are accessible at compile time, while the runtime type determines which eligible override executes. AeroTopo's `Product.resolutionMetres()` contract dispatches to `Orthomosaic.resolutionMetres()` or `Dem.resolutionMetres()` depending on the Product object's actual subtype.",
+  "steps": [
+    {
+      "title": "Open the polymorphism evidence — Dynamic method dispatch",
+      "question": "Do you know about dynamic method dispatch in Java? Use the AeroTopo code as the starting point rather than answering from terminology alone. The same Product method call can dispatch to either concrete resolution implementation. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace method selection — Dynamic method dispatch",
+      "question": "For \"Dynamic method dispatch\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design contract — Dynamic method dispatch",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Dynamic method dispatch\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Dynamic method dispatch",
+      "question": "Now answer the interview question \"Do you know about dynamic method dispatch in Java?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

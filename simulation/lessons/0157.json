@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "lesson_number": 157,
+  "question_id": 157,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Passing subclass objects to superclass parameters",
+  "info_language": "te-Latn",
+  "answer": "Yes. A reference of a superclass type can refer to an object of any compatible subclass, so a method parameter declared as the superclass can receive subclass instances. The method can use the superclass contract, and overridden instance methods dispatch to the actual subtype. In AeroTopo, the `Success` record stores a `Product`; an `Orthomosaic` or `Dem` can be supplied because both extend Product, and later Product behavior remains polymorphic.",
+  "steps": [
+    {
+      "title": "Open the polymorphism evidence — Passing subclass objects to superclass parameters",
+      "question": "If you have a method that takes a superclass type as a parameter, can it work with objects of its subclass types? Use the AeroTopo code as the starting point rather than answering from terminology alone. Success(Product) is a concrete project API that can hold either Product subtype. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          38,
+          67,
+          68,
+          70,
+          71,
+          72
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace method selection — Passing subclass objects to superclass parameters",
+      "question": "For \"Passing subclass objects to superclass parameters\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          38,
+          67,
+          68,
+          70,
+          71,
+          72
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design contract — Passing subclass objects to superclass parameters",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Passing subclass objects to superclass parameters\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          38,
+          67,
+          68,
+          70,
+          71,
+          72
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Passing subclass objects to superclass parameters",
+      "question": "Now answer the interview question \"If you have a method that takes a superclass type as a parameter, can it work with objects of its subclass types?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          38,
+          67,
+          68,
+          70,
+          71,
+          72
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

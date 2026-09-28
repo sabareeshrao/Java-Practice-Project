@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "lesson_number": 153,
+  "question_id": 153,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Overridden method execution during construction",
+  "info_language": "te-Latn",
+  "answer": "If a superclass constructor calls an overridable instance method, normal dynamic dispatch can invoke the subclass override even before the subclass constructor body and field initializers have completed. Therefore the subclass method executes, but it may observe default values for subclass state. This is a major reason to avoid overridable method calls from constructors; construction should not expose partially initialized objects to subclass behavior.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Overridden method execution during construction",
+      "question": "What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused dispatch experiment — Overridden method execution during construction",
+      "question": "The temporary source for \"Overridden method execution during construction\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ConstructorOverrideDispatchDemo.java",
+          "language": "java",
+          "content": "class ParentBuild {\n    ParentBuild(){ System.out.println(status()); }\n    String status(){ return \"parent\"; }\n}\nclass ChildBuild extends ParentBuild {\n    private int ready = 7;\n    @Override String status(){ return \"child=\" + ready; }\n}\npublic class ConstructorOverrideDispatchDemo {\n    public static void main(String[] args){ new ChildBuild(); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the dispatch experiment — Overridden method execution during construction",
+      "question": "The focused program for \"Overridden method execution during construction\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson153-demo labs/java/ConstructorOverrideDispatchDemo.java; java -cp target/lesson153-demo ConstructorOverrideDispatchDemo",
+          "output": "child=0"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary dispatch experiment — Overridden method execution during construction",
+      "question": "The isolated example for \"Overridden method execution during construction\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ConstructorOverrideDispatchDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary dispatch experiment is removed after proving the Java rule."
+      }
+    },
+    {
+      "title": "Return to the project design — Overridden method execution during construction",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          29,
+          30,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

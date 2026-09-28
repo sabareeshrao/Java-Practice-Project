@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "lesson_number": 154,
+  "question_id": 154,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Constructors are not polymorphic",
+  "info_language": "te-Latn",
+  "answer": "Constructors are not polymorphic in the overriding sense because constructors are not inherited and cannot be overridden. Constructor overloading is possible within a class, and constructing a subclass triggers a constructor chain through its superclasses, but the selected constructor signatures are determined by the `new` expression and explicit or implicit constructor invocations. AeroTopo's `Orthomosaic` constructor calls Product construction, while `resolutionMetres()`—not the constructor—is polymorphically overridden.",
+  "steps": [
+    {
+      "title": "Open the polymorphism evidence — Constructors are not polymorphic",
+      "question": "Can a Constructor be polymorphic? Use the AeroTopo code as the starting point rather than answering from terminology alone. Constructors and overridden instance methods are visible side by side in the hierarchy. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          20,
+          27,
+          29,
+          30,
+          34,
+          38,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace method selection — Constructors are not polymorphic",
+      "question": "For \"Constructors are not polymorphic\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          20,
+          27,
+          29,
+          30,
+          34,
+          38,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design contract — Constructors are not polymorphic",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Constructors are not polymorphic\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          20,
+          27,
+          29,
+          30,
+          34,
+          38,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Constructors are not polymorphic",
+      "question": "Now answer the interview question \"Can a Constructor be polymorphic?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          20,
+          27,
+          29,
+          30,
+          34,
+          38,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

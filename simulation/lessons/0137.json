@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "lesson_number": 137,
+  "question_id": 137,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Calling overridable methods from constructors",
+  "info_language": "te-Latn",
+  "answer": "Yes, a constructor can call an overridable instance method, and normal dynamic dispatch can invoke the subclass override even while the superclass constructor is still running. The subclass's fields may not yet have completed their own initialization, so the override can observe default or inconsistent state. This is why constructors should generally avoid calling methods designed for overriding; use private, final, or static initialization helpers when appropriate.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Calling overridable methods from constructors",
+      "question": "Can a Constructor call an Overridable Instance Method, and what risk does that create? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused dispatch experiment — Calling overridable methods from constructors",
+      "question": "The temporary source for \"Calling overridable methods from constructors\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ConstructorDispatchRiskDemo.java",
+          "language": "java",
+          "content": "class ParentCtor {\n    ParentCtor(){ System.out.println(label()); }\n    String label(){ return \"parent\"; }\n}\nclass ChildCtor extends ParentCtor {\n    private String name = \"ready\";\n    @Override String label(){ return name; }\n}\npublic class ConstructorDispatchRiskDemo {\n    public static void main(String[] args){ new ChildCtor(); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the dispatch experiment — Calling overridable methods from constructors",
+      "question": "The focused program for \"Calling overridable methods from constructors\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson137-demo labs/java/ConstructorDispatchRiskDemo.java; java -cp target/lesson137-demo ConstructorDispatchRiskDemo",
+          "output": "null"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary dispatch experiment — Calling overridable methods from constructors",
+      "question": "The isolated example for \"Calling overridable methods from constructors\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ConstructorDispatchRiskDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary dispatch experiment is removed after proving the Java rule."
+      }
+    },
+    {
+      "title": "Return to the project design — Calling overridable methods from constructors",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"Can a Constructor call an Overridable Instance Method, and what risk does that create?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

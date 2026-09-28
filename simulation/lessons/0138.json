@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "lesson_number": 138,
+  "question_id": 138,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Inheritance and polymorphism working together",
+  "info_language": "te-Latn",
+  "answer": "Inheritance creates a subtype relationship and supplies the method contract that can be overridden; polymorphism allows code using the parent type to work with different child objects and receive child-specific overridden behavior at runtime. AeroTopo defines `Product.resolutionMetres()` abstractly and implements it differently in `Orthomosaic` and `Dem`. A Product reference can therefore represent either subtype while dynamic dispatch invokes the correct resolution implementation.",
+  "steps": [
+    {
+      "title": "Open the polymorphism evidence — Inheritance and polymorphism working together",
+      "question": "How do Inheritance and Polymorphism work together? Use the AeroTopo code as the starting point rather than answering from terminology alone. Product provides the shared contract and two subclasses provide different runtime implementations. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace method selection — Inheritance and polymorphism working together",
+      "question": "For \"Inheritance and polymorphism working together\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design contract — Inheritance and polymorphism working together",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Inheritance and polymorphism working together\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview answer — Inheritance and polymorphism working together",
+      "question": "Now answer the interview question \"How do Inheritance and Polymorphism work together?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          34,
+          38,
+          41,
+          52,
+          54,
+          55,
+          56,
+          57
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
