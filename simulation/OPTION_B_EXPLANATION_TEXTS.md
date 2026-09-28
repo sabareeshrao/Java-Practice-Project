@@ -1828,3 +1828,179 @@ Primitive `int` direct value; `Integer` wrapper object/reference type. Object AP
 ### Step 5 — Summarize why the mixed model is useful
 
 Final answer mixed model practical ani cheppali. Primitives simple/efficient values istayi; classes/interfaces strong OOP modeling istayi. Pure OOP kaakapovadam OOP weak ani meaning kaadu.
+
+## Lesson 58 — Code reusability in object-oriented programming
+
+### Step 1 — Open the reusable Product base abstraction
+
+Product common state and behavior oka place lo define chestundi. Subclasses same logic duplicate cheyyakunda reuse chestayi. Idi code reusability ki direct project example.
+
+### Step 2 — Inspect subclass specialization without duplication
+
+Orthomosaic id, tiles, export, equals, hashCode la common logic rewrite cheyyadu. Base Product nundi reuse chestundi. Shared change one place lo maintain cheyyachu.
+
+### Step 3 — Inspect interface-level reusable behavior
+
+Exportable interface common contract define chestundi. Default method shared implementation kuda istundi. Reuse inheritance class hierarchy matrame kaadu; interfaces dwara kuda possible.
+
+### Step 4 — Recognize composition as another reuse mechanism
+
+Product existing List behavior ni composition dwara reuse chestundi. Collection logic own ga implement cheyyadu. Genuine is-a relation lekapothe composition tighter inheritance coupling ni avoid chestundi.
+
+### Step 5 — Summarize reuse without overusing inheritance
+
+Final answer reuse ante existing behavior ni multiple places share cheyyadam. Inheritance, interface, composition options unnayi. Goal duplication tagginchadam; unnecessary hierarchy create cheyyadam kaadu.
+
+## Lesson 59 — A Java class can exist without methods or fields
+
+### Step 1 — Create the smallest useful empty class example
+
+Empty class lo explicit fields, methods, constructor levu. Compiler eligible case lo default no-arg constructor provide chestundi. Anduke object create cheyyachu.
+
+### Step 2 — Inspect the empty class declaration
+
+Empty class kuda distinct type create chestundi. Type identity marker, placeholder, test fixture, token la use avvachu. State/behavior compulsory kaadu.
+
+### Step 3 — Run the empty-class instantiation
+
+Output class name vastundi kabatti empty class compile ayi object create ayyindi. Explicit field/method requirement ledu. Runtime type identity valid ga undi.
+
+### Step 4 — Connect the empty type back to Object inheritance
+
+Empty class explicit members lekapoyina Object nundi methods inherit chestundi. `getClass` demo lo work chestundi. So source body empty ayina runtime type normal class hierarchy part.
+
+### Step 5 — Remove the empty-class demo and state the rule
+
+[no highlight] Temporary marker remove chestunnam. Final answer empty class legal, default constructor possible, Object methods inherit avutayi, kani real project lo clear purpose unte matrame empty type create cheyyali.
+
+## Lesson 60 — Classes and objects in Java
+
+### Step 1 — Open a concrete class in the project hierarchy
+
+Orthomosaic class blueprint laga fields, constructor rules, methods define chestundi. Prathi object same class structure follow chestundi, kani own instance values hold chestundi.
+
+### Step 2 — Inspect instance-specific state
+
+Class field structure define chestundi; object actual values hold chestundi. `gsd`, id, tiles each instance ki own state. Blueprint and runtime instance difference idi.
+
+### Step 3 — Open the test that creates a real object
+
+Test lo `new Orthomosaic(...)` runtime object create chestundi. ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi. Class already definition.
+
+### Step 4 — Contrast instance behavior with a class-level static member
+
+Static category class-level behavior. `resolutionMetres()` instance object state/type meeda depend avutundi. Class members and object members difference clear ga kanipistundi.
+
+### Step 5 — Summarize class versus object using AeroTopo
+
+Final answer class blueprint/type definition, object runtime instance ani cheppali. Same Orthomosaic class nundi different ids, tiles, gsd values tho many objects create cheyyachu.
+
+## Lesson 61 — Real-world class and object example
+
+### Step 1 — Use the project domain rather than an abstract car analogy
+
+Orthomosaic project domain ki real example. Class fields, validation rules, methods define chestundi. Specific id, tiles, gsd values matrame individual object ki belong avutayi.
+
+### Step 2 — Inspect how constructor parameters become one object's data
+
+Constructor supplied values ni object state ga set chestundi. Common id/tiles base class ki pass avutayi; gsd current instance lo store avutundi. Blueprint concrete object ga materialize avutundi.
+
+### Step 3 — Inspect an actual Orthomosaic object created in a test
+
+`SurveyProducts.Orthomosaic` class type. `ORTHO`, source list, `0.05` instance values. `new` expression one concrete object create chestundi.
+
+### Step 4 — Recognize that another object can use different state
+
+Same class multiple objects create cheyyagaladu. `copy` new id tho new Orthomosaic object create chestundi. Blueprint same, instances separate state/identity tho untayi.
+
+### Step 5 — Give the real-world explanation in project terms
+
+Project-specific example actual domain modeling ni show chestundi. Class reusable definition, object one real survey product instance. Interview lo job context tho explain cheyyadam stronger.
+
+## Lesson 62 — Create a Java object without calling its ordinary constructor
+
+### Step 1 — Create a Serializable class with a visible constructor counter
+
+Constructor counter visible evidence istundi. First normal object creation counter increase chestundi. Deserialize mundu reset chesi, afterwards counter unchanged unte ordinary constructor run avvaledu ani telustundi.
+
+### Step 2 — Inspect the constructor counter and reset
+
+Original `new` constructor call separate ga jarugutundi. Deserialize mundu counter zero reset chestam. Taruvata value change ayithe restoration time constructor call evidence avutundi.
+
+### Step 3 — Run deserialization and observe constructor execution
+
+`T1:0` restored state undi kani Tile constructor run avvaledu ani prove chestundi. Serializable hierarchy rules lo first non-serializable superclass constructor execute avvachu; overclaim cheyyakudadhu.
+
+### Step 4 — Contrast deserialization with reflection
+
+Reflection constructor ni invoke chestundi; deserialization Serializable class ordinary constructor ni bypass chestundi. Mechanism difference clear ga cheppali. All alternative creation methods same behavior kaavu.
+
+### Step 5 — Remove the serialization demo and state the qualified rule
+
+[no highlight] Temporary demo remove chestunnam. Final answer deserialization/clone constructor bypass examples; reflection Constructor call bypass kaadu; normal `new` constructor execute chestundi ani qualify cheyyali.
+
+## Lesson 63 — Java object lifecycle from creation to garbage collection
+
+### Step 1 — Open AeroTopo's explicit resource-owning object
+
+NativeBuffer constructor cleanup registration chestundi. Object reference active ga unna time use chestam. `close()` deterministic cleanup trigger chestundi. GC timing meeda depend kaadu.
+
+### Step 2 — Inspect construction and cleanup registration
+
+Object create ayinappudu cleanup state register chestundi. Cleaner eventual fallback matrame; exact GC timing guarantee ledu. Important resource ki explicit close better.
+
+### Step 3 — Inspect deterministic end-of-use cleanup
+
+`close()` caller control lo immediate cleanup trigger chestundi. Reference drop cheste object eligible matrame; GC eppudu run avutundo guarantee ledu. Deterministic resource cleanup separate.
+
+### Step 4 — Open the test that uses try-with-resources
+
+Try-with-resources scope end lo `close()` automatic ga call chestundi. Release predictable ga verify cheyyachu. GC-based cleanup exact time guarantee cheyyadu.
+
+### Step 5 — Summarize reachability and garbage-collection eligibility
+
+Final answer creation, initialization, reachable use, unreachable/GC eligible, eventual memory reclaim stages ni separate cheyyali. External resources ki explicit close use cheyyali; GC timing meeda depend kakudadhu.
+
+## Lesson 64 — Why object-oriented programming was introduced
+
+### Step 1 — Start from a real problem that OOP solves in the project
+
+Common logic prathi subclass lo copy chesthe duplication periguthundi. Change multiple files lo cheyyali. OOP common abstraction tho complexity and maintenance burden taggistundi.
+
+### Step 2 — Inspect abstraction as a complexity boundary
+
+Caller Product contract matrame use chestundi. Orthomosaic gsd or Dem cell details know cheyyalsina avasaram ledu. Stable boundary complexity ni localize chestundi.
+
+### Step 3 — Inspect encapsulated state that protects invariants
+
+Private state direct outside mutation ni prevent chestundi. Constructor validation and copies invariants protect chestayi. Internal representation later change chesina caller contract stable ga undachu.
+
+### Step 4 — Inspect reuse and substitution through the common base type
+
+Common Product type callers ki stable contract istundi. New subtype own implementation add chestundi; callers repeated type conditions rayalsina avasaram taggutundi. Extension easier.
+
+### Step 5 — Explain OOP as a maintainability strategy rather than four labels
+
+Final answer OOP purpose complexity manage cheyyadam ani start cheyyali. Modularity, reuse, maintainability, controlled change, clear contracts benefits ni explain cheyyali. Four pillars list matrame answer kaadu.
+
+## Lesson 65 — Java is not a 100 percent object-oriented language
+
+### Step 1 — Use primitive state as direct evidence
+
+LanguageLab int primitives direct evidence. Primitive value itself Integer object kaadu. Anduke Java lo every value object ani cheppalem.
+
+### Step 2 — Inspect static state that belongs to a class
+
+Static `batches` class-level shared state. Every instance own copy kaadu. Java object model strong ayina class-level members kuda support chestundi.
+
+### Step 3 — Open the rich OOP model Java still provides
+
+SurveyProducts interfaces, abstract class, inheritance, private fields, overriding use chestundi. Java pure OOP kaakapoyina application design ki full OOP capabilities provide chestundi.
+
+### Step 4 — Inspect the primitive-wrapper bridge
+
+`int` primitive; `Integer` wrapper object. Boxing bridge APIs ki useful, kani original primitive type object ga maradu ani language distinction remain avutundi.
+
+### Step 5 — Give a precise yes-or-no interview answer
+
+Final answer no, usually 100% OOP ani consider cheyyaru because primitives/static features. Kani classes/interfaces/polymorphism strong ga support chestundi. Mixed model practical.
