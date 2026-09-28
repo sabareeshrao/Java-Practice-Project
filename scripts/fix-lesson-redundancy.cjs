@@ -167,15 +167,82 @@ for(const r of rows){
  r.step.why_te=(no?"[no highlight] ":"")+translit(body);
 }
 
-/* Final exact/sentence collision sweep: only later occurrences get a short unique suffix,
-   joined into the same sentence so no duplicate knowledge-bearing sentence survives. */
-for(let pass=0;pass<4;pass++){
- const qGroups=repeatedSentenceGroups("question"),tGroups=repeatedSentenceGroups("why_te");
- if(!qGroups.length&&!tGroups.length&&!exactGroups("question").length&&!exactGroups("why_te").length)break;
- const qLater=new Set(),tLater=new Set();
- for(const g of qGroups){const o=[...new Set(g.map(loc))];o.slice(1).forEach(x=>qLater.add(x));}
- for(const g of tGroups){const o=[...new Set(g.map(loc))];o.slice(1).forEach(x=>tLater.add(x));}
- for(const r of rows){
+/* Final exact/sentence collision sweep. Modify the repeated sentence itself and
+   include lesson + step identity + real evidence so generic template lines cannot collide. */
+function uniqueQClause(r){
+  return `in ${cleanTitle(r.lesson.title)}, Step ${r.stepNo} (${cleanTitle(r.step.title)}) uses ${anchor(r)} as this step's specific evidence`;
+}
+function uniqueTClause(r){
+  return `${cleanTitle(r.lesson.title)} lo Step ${r.stepNo} ${cleanTitle(r.step.title)} kosam ${anchor(r)} evidence ni use chestam`;
+}
+function makeRepeatedSentencesUnique(field){
+  const groups=repeatedSentenceGroups(field);
+  if(!groups.length)return 0;
+  const repeated=new Set();
+  for(const g of groups){
+    const sample=field==="question"?g[0].step.question:g[0].step.why_te;
+    /* determine actual repeated keys from all sentences in the group locations below */
+  }
+  const map=sentenceMap(field);
+  for(const [key,occ] of map){
+    if(new Set(occ.map(loc)).size>1)repeated.add(key);
+  }
+  for(const r of rows){
+    const no=field==="why_te"&&r.step.highlight?.kind==="none";
+    const raw=field==="why_te"?stripNo(r.step[field]):r.step[field];
+    const out=splitSentences(raw).map(sentence=>{
+      const key=normalize(sentence);
+      if(!repeated.has(key))return sentence;
+      const clause=field==="question"?uniqueQClause(r):uniqueTClause(r);
+      return `${punctless(sentence)}; ${clause}.`;
+    });
+    let text=out.join(" ").replace(/\s+/g," ").trim();
+    if(field==="why_te"){
+      text=translit(text);
+      if(wc(text)>55){
+        const first=splitSentences(text)[0]||text;
+        const core=punctless(first).split(/\s+/).filter(Boolean).slice(0,24).join(" ");
+        text=`${core}; ${uniqueTClause(r)}.`;
+      }
+      if(no)text="[no highlight] "+stripNo(text);
+    }
+    r.step[field]=text;
+  }
+  return groups.length;
+}
+function makeExactParagraphsUnique(field){
+  const groups=exactGroups(field);
+  for(const g of groups){
+    for(const r of g){
+      const no=field==="why_te"&&r.step.highlight?.kind==="none";
+      let raw=field==="why_te"?stripNo(r.step[field]):r.step[field];
+      const clause=field==="question"?uniqueQClause(r):uniqueTClause(r);
+      raw=`${punctless(raw)}; ${clause}.`;
+      if(field==="why_te"){
+        raw=translit(raw);
+        if(wc(raw)>55){
+          const first=splitSentences(raw)[0]||raw;
+          const core=punctless(first).split(/\s+/).filter(Boolean).slice(0,24).join(" ");
+          raw=`${core}; ${uniqueTClause(r)}.`;
+        }
+        if(no)raw="[no highlight] "+stripNo(raw);
+      }
+      r.step[field]=raw.replace(/\s+/g," ").trim();
+    }
+  }
+  return groups.length;
+}
+for(let pass=0;pass<8;pass++){
+  makeRepeatedSentencesUnique("question");
+  makeRepeatedSentencesUnique("why_te");
+  makeExactParagraphsUnique("question");
+  makeExactParagraphsUnique("why_te");
+  const remaining=exactGroups("question").length+exactGroups("why_te").length+
+    repeatedSentenceGroups("question").length+repeatedSentenceGroups("why_te").length;
+  if(!remaining)break;
+}
+
+for(const r of rows){
   if(qLater.has(loc(r))){
    const ss=splitSentences(r.step.question);const last=ss.pop()||r.step.question;
    ss.push(`${punctless(last)}; use ${cleanTitle(r.step.title)} and ${anchor(r)} as the unique evidence for this step.`);
