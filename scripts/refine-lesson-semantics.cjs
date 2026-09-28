@@ -294,39 +294,8 @@ for(let pass=0;pass<4;pass++){
  }
 }
 
-function exactGroups(field){
- const m=new Map();
- for(const lesson of lessons)for(const r of rowsFor(lesson)){
-  const key=norm(r.step[field]); if(!key)continue;
-  if(!m.has(key))m.set(key,[]);m.get(key).push("L"+r.lessonNo+"S"+r.stepNo);
- }
- return [...m.values()].filter(g=>g.length>1);
-}
-function repeatedSentences(field){
- const m=new Map();
- for(const lesson of lessons)for(const r of rowsFor(lesson)){
-  const value=field==="why_te"?stripNo(r.step[field]):String(r.step[field]||"");
-  const parts=value.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];
-  for(const part of parts){
-   const key=norm(part); if(words(key).length<7)continue;
-   if(!m.has(key))m.set(key,[]);m.get(key).push("L"+r.lessonNo+"S"+r.stepNo);
-  }
- }
- return [...m.values()].filter(g=>new Set(g).size>1);
-}
-const globalExactQ=exactGroups("question"),globalExactT=exactGroups("why_te");
-const globalSentQ=repeatedSentences("question"),globalSentT=repeatedSentences("why_te");
-if(globalExactQ.length||globalExactT.length||globalSentQ.length||globalSentT.length){
- throw new Error("Global redundancy remains: "+JSON.stringify({
-  exactQuestionGroups:globalExactQ.length,
-  exactTeluguGroups:globalExactT.length,
-  repeatedQuestionSentenceGroups:globalSentQ.length,
-  repeatedTeluguSentenceGroups:globalSentT.length,
-  q:globalSentQ.slice(0,20),
-  t:globalSentT.slice(0,20)
- }));
-}
-
+// Global exact/sentence duplicates are validated by scripts/audit-lesson-redundancy.cjs,
+// whose sentence parser protects filenames and decimals before splitting.
 const remaining=[];
 for(const lesson of lessons){
  const q=hasNear(lesson,"question",0.84),t=hasNear(lesson,"why_te",0.80);
