@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "lesson_number": 66,
+  "question_id": 66,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Abstraction versus encapsulation",
+  "info_language": "te-Latn",
+  "answer": "Abstraction focuses on what a component promises to do while hiding unnecessary implementation details behind a contract. Encapsulation focuses on protecting an object's internal state and controlling access to that state through a defined boundary. In AeroTopo, `Product.resolutionMetres()` is an abstraction because callers depend on the operation without knowing how each subtype computes it. The private `id`, `tiles`, and `gsd` fields demonstrate encapsulation because their representation is hidden and updated only through controlled construction and methods.",
+  "steps": [
+    {
+      "title": "Open abstraction and encapsulation in one class hierarchy",
+      "question": "AeroTopo's Product model demonstrates both concepts in neighboring code: an abstract method defines what every product must provide, while private fields hide how state is stored. Which lines represent the public contract and which lines represent protected internal representation?",
+      "why_te": "Abstract method caller contract ni define chestundi. Private fields internal representation ni hide chestayi. Same hierarchy lo abstraction and encapsulation separate roles clear ga kanipistayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          18,
+          19,
+          20,
+          27,
+          28,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on abstraction as what rather than how",
+      "question": "`public abstract double resolutionMetres()` tells callers that every Product can provide a resolution but says nothing about whether the value comes from `gsd`, `cell`, a database, or a calculation. Why is this a clean example of abstraction rather than encapsulation alone?",
+      "why_te": "Method what operation available ani contract istundi, implementation how ani hide chestundi. Subclasses different internal logic use cheyyachu. Idi abstraction main purpose.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 20,
+            "expected_text": "public abstract double resolutionMetres();"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on encapsulation as controlled state access",
+      "question": "The private `id`, `tiles`, and `gsd` fields cannot be directly reassigned by arbitrary callers; construction and accessor methods control how values enter and leave the object boundary. Inspect those fields together. Why does this protection of representation and invariants demonstrate encapsulation rather than abstraction alone?",
+      "why_te": "Private fields outside direct access ni block chestayi. Constructor/accessor boundary dwara state control avutundi. Representation and invariants protect cheyyadam encapsulation.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          18,
+          19,
+          28,
+          29,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Compare the questions each concept answers",
+      "question": "Abstraction asks what capability a caller can rely on without needing implementation details, while encapsulation asks how internal state and implementation are protected from uncontrolled access. Using Product and Orthomosaic, how would you map each question to the exact project code that answers it?",
+      "why_te": "Product abstract method abstraction ki example. Private fields plus controlled constructor/accessors encapsulation ki example. Rendu related ayina same concept kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          20,
+          28,
+          31,
+          32,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the difference without reducing both to hiding",
+      "question": "Both concepts can involve hiding details, which is why interview answers often blur them together. How would you distinguish abstraction as exposing essential behavior from encapsulation as bundling and protecting internal state, while using `resolutionMetres` and private product fields as concrete evidence?",
+      "why_te": "Final answer abstraction essential contract expose chestundi; encapsulation internal state protect chestundi. `resolutionMetres` and private fields examples tho difference clear ga cheppali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          20,
+          28,
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

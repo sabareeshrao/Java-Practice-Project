@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "lesson_number": 72,
+  "question_id": 72,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why OOP concepts matter in development projects",
+  "info_language": "te-Latn",
+  "answer": "OOP concepts matter because they provide tools for controlling complexity as a codebase grows. Encapsulation protects invariants, abstraction creates stable contracts, inheritance can reuse genuinely shared behavior, polymorphism allows implementations to vary behind one interface, and composition assembles behavior without rigid inheritance. In AeroTopo these techniques keep product rules localized and make new product types easier to add and test. The value is maintainability and change isolation, not simply using classes everywhere.",
+  "steps": [
+    {
+      "title": "See several OOP concepts working together rather than separately",
+      "question": "AeroTopo's Product model combines private state, an abstract behavior contract, inherited common implementation, subtype overrides, interface contracts, and composed tile data. Why is the project value greater when these concepts work together to isolate change than when each concept is memorized independently as an interview definition?",
+      "why_te": "Real project lo concepts together work chestayi. State protect, contract define, behavior reuse, subtype variation, composition anni change isolation improve chestayi. Definitions separate ga memorize cheyyadam matrame enough kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          14,
+          15,
+          17,
+          20,
+          21,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect encapsulation to safer maintenance",
+      "question": "Because Product state is private and initialized through controlled constructors, developers know where important invariants are established and cannot casually replace internal data from anywhere in the codebase. How does that reduce the blast radius of changes and make debugging safer in a growing project?",
+      "why_te": "Private state access paths limited chestundi. Invariants ekkada establish avutayo clear. Change impact smaller ga reason cheyyachu. Debugging and maintenance safer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect abstraction and polymorphism to extension",
+      "question": "Common code can treat concrete products through the Product contract while runtime dispatch selects each subtype's `resolutionMetres()` implementation. Why does this make adding a new product type less disruptive than modifying many callers that contain hard-coded subtype conditions throughout the application codebase?",
+      "why_te": "Caller common Product contract use chestundi. New subtype own resolution implement chestundi. Existing callers many places change cheyyalsina need taggutundi. Extension easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect composition to flexible reuse",
+      "question": "The product owns a List of tile IDs through composition rather than subclassing a collection type, which keeps the domain relationship explicit and avoids inheriting unrelated collection behavior. Why is composition often a safer reuse tool when the relationship is has-a rather than is-a?",
+      "why_te": "Product has-a tiles relation. List ni subclass cheyyadam wrong abstraction avvachu. Composition needed behavior reuse chestundi without unnecessary inheritance coupling.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          17,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Summarize OOP importance as controlled change",
+      "question": "The strongest project-level benefit visible here is not that every file contains classes; it is that domain behavior, state rules, contracts, and variation have clear homes. How would you connect OOP to modularity, reuse, maintainability, testability, and safer evolution in one interview answer grounded in AeroTopo?",
+      "why_te": "Final answer OOP importance controlled change and complexity management ani explain cheyyali. Modularity, reuse, maintainability, testability, extension project examples tho connect cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          17,
+          20,
+          21,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

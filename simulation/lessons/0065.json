@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "lesson_number": 65,
+  "question_id": 65,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Java is not a 100 percent object-oriented language",
+  "info_language": "te-Latn",
+  "answer": "Java is not usually considered 100% object-oriented because primitive types such as `int`, `long`, `double`, `char`, and `boolean` are values rather than objects, and Java also supports static members associated with classes. At the same time, Java strongly supports OOP through classes, interfaces, inheritance, encapsulation, polymorphism, records, and object references. Wrapper classes such as `Integer` allow primitive values to participate in object-based APIs when necessary.",
+  "steps": [
+    {
+      "title": "Use primitive state as direct evidence",
+      "question": "AeroTopo's `LanguageLab` declares primitive `int` constants, fields, parameters, and local variables. These values are not instances of wrapper classes unless boxing occurs. Why does the existence of first-class primitive types prevent the claim that every Java value is an object?",
+      "why_te": "LanguageLab int primitives direct evidence. Primitive value itself Integer object kaadu. Anduke Java lo every value object ani cheppalem.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          14,
+          16
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect static state that belongs to a class",
+      "question": "The `batches` field is static, meaning one class-level value is shared rather than stored separately inside each LanguageLab object. How does class-level state provide another example of Java features that do not fit a simplistic model where all behavior and data must belong exclusively to individual objects?",
+      "why_te": "Static `batches` class-level shared state. Every instance own copy kaadu. Java object model strong ayina class-level members kuda support chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+            "line": 9,
+            "expected_text": "private static int batches;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Open the rich OOP model Java still provides",
+      "question": "Not being purely object-oriented does not mean Java lacks OOP. `SurveyProducts` uses interfaces, abstract classes, inheritance, private state, overriding, and polymorphic contracts. Which of these capabilities demonstrate that Java remains strongly object-oriented for application design despite primitives and static members?",
+      "why_te": "SurveyProducts interfaces, abstract class, inheritance, private fields, overriding use chestundi. Java pure OOP kaakapoyina application design ki full OOP capabilities provide chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          12,
+          13,
+          14,
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the primitive-wrapper bridge",
+      "question": "AeroTopo's `join` overloads accept both primitive `int` and wrapper `Integer`, showing how Java can move between value-oriented primitives and reference-oriented object APIs. Why is boxing useful without changing the fact that the primitive type itself is still not an object?",
+      "why_te": "`int` primitive; `Integer` wrapper object. Boxing bridge APIs ki useful, kani original primitive type object ga maradu ani language distinction remain avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Give a precise yes-or-no interview answer",
+      "question": "With primitives, static members, wrappers, and rich class hierarchies visible in the same project, how would you answer whether Java is 100% object-oriented while avoiding both extremes: calling Java purely object-oriented or implying that its OOP support is somehow incomplete for enterprise development?",
+      "why_te": "Final answer no, usually 100% OOP ani consider cheyyaru because primitives/static features. Kani classes/interfaces/polymorphism strong ga support chestundi. Mixed model practical.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

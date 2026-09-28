@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "lesson_number": 71,
+  "question_id": 71,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "How OOP is used in the AeroTopo project",
+  "info_language": "te-Latn",
+  "answer": "AeroTopo uses OOP directly in its domain and learning components. The `Product` abstraction encapsulates shared product state and behavior; `Orthomosaic` and `Dem` inherit common rules and override resolution behavior; interfaces such as `Exportable` define contracts; immutable copied collections provide composition; factories centralize creation; records model immutable data; and polymorphism lets common code work through shared types. These choices reduce duplicated logic and keep domain-specific behavior close to the data and invariants it governs.",
+  "steps": [
+    {
+      "title": "Inspect the shared Product abstraction used by concrete types",
+      "question": "The AeroTopo project places common product identity, tiles, export behavior, equality, and hashing in the abstract `Product` class. Which concrete duplication does this prevent across `Orthomosaic` and `Dem`, and how does that make project-specific OOP usage visible rather than theoretical?",
+      "why_te": "Project lo actual subclasses Product common behavior reuse chestayi. Identity/export/equality duplicate code taggutundi. OOP project usage direct evidence idi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect inheritance and overriding in real project code",
+      "question": "Both concrete product classes extend Product and implement `resolutionMetres()` differently using their own state. How does this demonstrate inheritance for shared structure and polymorphism for variable behavior, and why is that more maintainable than a large switch statement scattered across callers?",
+      "why_te": "Subclasses common Product structure inherit chestayi. Resolution implementation own state batti override chestayi. Caller common Product contract use cheyyachu; repeated switches taggutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          27,
+          28,
+          34,
+          38,
+          39,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect interface contracts and default behavior",
+      "question": "`Exportable` defines an export contract plus reusable default and static behavior, while Product implements the interface for all subclasses. How does this interface boundary let other code depend on an export capability rather than requiring knowledge of a particular concrete survey-product class?",
+      "why_te": "Exportable capability contract define chestundi. Caller concrete Orthomosaic/Dem type kakunda export capability meeda depend cheyyachu. Coupling taggutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect composition and factory-based creation",
+      "question": "Product composes an immutable tile list, while `ProductFactory` centralizes selection of concrete product types. How do these two project choices complement inheritance by keeping ownership and object-creation decisions explicit, rather than forcing every concern into a subclass relationship or scattering construction logic across callers?",
+      "why_te": "Tiles composition dwara own data relation model chestayi. Factory creation decision centralize chestundi. OOP inheritance matrame kaadu; multiple patterns together use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          17,
+          19,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Answer how OOP actually appears in this project",
+      "question": "Using Product, concrete subclasses, Exportable, copied tile collections, records, and the factory as evidence, how would you answer an interviewer asking how OOP plays an important role in AeroTopo without giving a generic textbook response disconnected from the codebase?",
+      "why_te": "Final answer actual project classes/interfaces examples tho cheppali. Shared behavior, encapsulated state, inheritance, polymorphism, composition, factory use chesi maintainability and reuse achieve chestunnam ani explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          17,
+          20,
+          27,
+          38,
+          52,
+          67,
+          68,
+          69
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

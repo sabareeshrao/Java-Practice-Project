@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "lesson_number": 69,
+  "question_id": 69,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "What happens internally when a Java object is created",
+  "info_language": "te-Latn",
+  "answer": "For a normal `new` expression, the JVM ensures the class is loaded and initialized as required, allocates memory for the object, initializes instance fields to default values, executes instance field initializers and initialization blocks in language-defined order, invokes the selected constructor with superclass construction occurring first, and finally returns a reference to the initialized object. Exact allocation details such as TLAB use are JVM implementation details, so interview answers should separate language/JVM guarantees from HotSpot-specific optimizations.",
+  "steps": [
+    {
+      "title": "Use Orthomosaic construction as the concrete path",
+      "question": "AeroTopo creates `Orthomosaic` through a normal constructor that delegates to the Product superclass before validating and storing subtype state. Inspect the constructor chain. Which lines show superclass initialization occurring before the subclass finishes validating and assigning its own `gsd` field?",
+      "why_te": "Orthomosaic constructor first `super(id,tiles)` call chestundi. Base Product state initialize ayyaka subclass validation and gsd assignment jarugutayi. Constructor chain order clear.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect superclass construction explicitly",
+      "question": "The first statement in the Orthomosaic constructor is `super(id,tiles)`, invoking Product's constructor before the subclass-specific field assignment completes. Why must superclass initialization occur before a subclass can be considered fully constructed, given that the subclass object includes inherited Product state?",
+      "why_te": "Subclass object inherited base state kuda contain chestundi. Base constructor first initialize avvali. Taruvata subclass own fields complete chestundi. Full object construction chain idi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 30,
+            "expected_text": "super(id,tiles);"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect validation before final subtype state assignment",
+      "question": "The constructor rejects non-finite or non-positive resolution before assigning `this.gsd`. How does constructor validation help ensure that the reference returned to ordinary application code points to an object whose required invariants have been established rather than an invalid partially configured domain object?",
+      "why_te": "Constructor validation invalid gsd ni reject chestundi. Successful construction taruvata object invariant valid ga untundi. Caller normal ga valid reference receive chestadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 31,
+            "expected_text": "if (!Double.isFinite(gsd) || gsd<=0) throw new IllegalArgumentException(\"Invalid GSD\");"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect source construction to JVM-level stages",
+      "question": "The source code exposes constructor order and field assignments, while the JVM also performs class initialization checks, object memory allocation, and default field initialization before constructor logic completes. Why should an interview answer describe those guaranteed stages without claiming a specific HotSpot allocation optimization such as TLAB use always occurs?",
+      "why_te": "Language/JVM guaranteed stages explain cheyyali. TLAB la allocation optimization specific JVM implementation detail. Every runtime same exact strategy use chestundi ani overclaim cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Summarize normal object creation from allocation to reference",
+      "question": "Using the constructor chain as evidence, how would you sequence class readiness, allocation, default field values, initializer and constructor execution including superclass construction, invariant validation, field assignment, and the final usable reference when explaining what happens internally for a normal `new` expression?",
+      "why_te": "Final answer class readiness, memory allocation, defaults, superclass/initializer/constructor order, validation, field assignment, usable reference sequence ga explain cheyyali. JVM-specific optimization separate ga mention cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          17,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

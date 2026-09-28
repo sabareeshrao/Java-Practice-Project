@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "lesson_number": 64,
+  "question_id": 64,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why object-oriented programming was introduced",
+  "info_language": "te-Latn",
+  "answer": "OOP was introduced to help structure growing software around cohesive objects that combine state and behavior, expose clear abstractions, hide implementation details, support modular change, and enable reuse and substitution. The goal is not merely to memorize four pillars; it is to make complex systems easier to understand, extend, test, and maintain. AeroTopo's product model demonstrates this by putting shared product behavior in one abstraction while allowing specialized product types to vary only where needed.",
+  "steps": [
+    {
+      "title": "Start from a real problem that OOP solves in the project",
+      "question": "AeroTopo has multiple survey product types that share identity, tiles, export behavior, equality, and common lifecycle rules but differ in product-specific resolution details. Inspect the `Product` abstraction and its subclasses. Why would copying all shared logic into every concrete product make the system harder to maintain as the codebase grows?",
+      "why_te": "Common logic prathi subclass lo copy chesthe duplication periguthundi. Change multiple files lo cheyyali. OOP common abstraction tho complexity and maintenance burden taggistundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect abstraction as a complexity boundary",
+      "question": "The abstract `resolutionMetres()` method says every Product must provide resolution without forcing callers to know each subtype's internal field layout. Why is this kind of stable contract one of the main practical reasons OOP helps large systems, beyond simply labeling the concept as abstraction?",
+      "why_te": "Caller Product contract matrame use chestundi. Orthomosaic gsd or Dem cell details know cheyyalsina avasaram ledu. Stable boundary complexity ni localize chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 20,
+            "expected_text": "public abstract double resolutionMetres();"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect encapsulated state that protects invariants",
+      "question": "Product fields are private and constructors validate required state before storing immutable copies. This keeps callers from directly replacing internal fields with invalid values. How does hiding representation and controlling updates make a large project safer to change than exposing every field publicly?",
+      "why_te": "Private state direct outside mutation ni prevent chestundi. Constructor validation and copies invariants protect chestayi. Internal representation later change chesina caller contract stable ga undachu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          30,
+          31,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect reuse and substitution through the common base type",
+      "question": "`Orthomosaic` and `Dem` are both Products, so common code can operate on the base abstraction while runtime dispatch provides the subtype-specific resolution implementation. Why does this reduce conditional type checking and help new product types integrate without rewriting every caller?",
+      "why_te": "Common Product type callers ki stable contract istundi. New subtype own implementation add chestundi; callers repeated type conditions rayalsina avasaram taggutundi. Extension easier.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          27,
+          34,
+          38,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Explain OOP as a maintainability strategy rather than four labels",
+      "question": "The project evidence shows modular boundaries, hidden state, shared behavior, and subtype substitution working together to control complexity. How would you answer why OOP was introduced by emphasizing maintainability, modularity, reuse, extension, and reasoning about large systems instead of merely reciting encapsulation, inheritance, abstraction, and polymorphism?",
+      "why_te": "Final answer OOP purpose complexity manage cheyyadam ani start cheyyali. Modularity, reuse, maintainability, controlled change, clear contracts benefits ni explain cheyyali. Four pillars list matrame answer kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          17,
+          20,
+          21,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

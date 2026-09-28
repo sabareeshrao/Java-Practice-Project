@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "lesson_number": 67,
+  "question_id": 67,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Practical benefits of Java's mixed object and primitive model",
+  "info_language": "te-Latn",
+  "answer": "Yes. Java's mixed model gives developers object-oriented structure where it helps design and maintainability while preserving primitive types for compact, direct numeric and boolean values. This avoids forcing every simple calculation into wrapper objects. Autoboxing and wrapper classes let primitives integrate with generic collections and nullable reference-based APIs when needed. The trade-off is that developers must understand primitive versus reference semantics, boxing costs, nullability, and equality differences.",
+  "steps": [
+    {
+      "title": "Revisit primitive work inside a strongly object-oriented application",
+      "question": "AeroTopo performs compact integer flag and counter operations in `LanguageLab` while the wider project uses classes, interfaces, records, and collections. Why is being able to choose a primitive representation for simple numeric state useful even inside an application designed largely around objects?",
+      "why_te": "Simple numeric state ki primitive direct and compact choice. Entire application object-oriented structure use chesina every small value wrapper object avasaram ledu. Mixed model practical flexibility istundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          14,
+          16,
+          17,
+          20
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect primitive arithmetic without wrapper ceremony",
+      "question": "The code increments primitive counters and combines primitive bit flags directly, which keeps arithmetic syntax simple and avoids nullable wrapper semantics for values that must always exist. Why can this reduce conceptual overhead for hot-path counters and basic calculations?",
+      "why_te": "Primitive counter always numeric value. Null checks or unboxing concerns levu. Arithmetic direct ga rayachu. Simple calculations ki code clear ga untundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+            "line": 15,
+            "expected_text": "batches++;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          16,
+          20
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect wrappers where nullable reference behavior is useful",
+      "question": "The neighboring `join` overloads show the trade-off directly: primitive `int` cannot represent null, while `Integer` can. How does this demonstrate that Java lets API designers select value semantics or reference/null semantics according to the requirement instead of forcing one model everywhere?",
+      "why_te": "`int` always value; `Integer` null state allow chestundi. API requirement batti primitive or wrapper choose cheyyachu. Mixed model flexibility idi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect primitives into generic object APIs through boxing",
+      "question": "Generic collections require reference types, so Java boxes primitive values when developers need them inside APIs such as `List<Integer>`. How does this bridge preserve convenient primitive syntax while still enabling object-based generic APIs, and what costs or semantic differences should experienced developers remember at that boundary?",
+      "why_te": "Boxing primitives ni generic object APIs lo use cheyyadaniki bridge istundi. Kani boxing/unboxing cost, null wrapper risk, equality semantics understand cheyyali. Free abstraction kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Summarize the benefit without overselling primitives",
+      "question": "AeroTopo uses primitives where direct values make sense and object abstractions where domain modeling needs richer behavior. How would you explain the benefit of that combination while noting that developers must consciously manage the boundary between primitive values and reference types?",
+      "why_te": "Final answer mixed model best tool per requirement istundi. Primitives simple values, objects rich domain behavior. Boundary lo boxing, nullability, semantics careful ga handle cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
