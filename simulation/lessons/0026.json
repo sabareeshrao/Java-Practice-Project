@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "lesson_number": 26,
+  "question_id": 26,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Java references instead of explicit pointers",
+  "info_language": "te-Latn",
+  "answer": "No. Java does not let ordinary source code declare C/C++-style pointer variables, use pointer declarators such as `int*`, perform pointer arithmetic, or explicitly dereference raw memory addresses. Java uses managed references for objects instead. A reference can refer to an object or be `null`, and Java lets you compare or pass references, but ordinary Java code does not expose the object's raw address for pointer arithmetic. APIs such as `WeakReference`, `SoftReference`, and `PhantomReference` are managed reference objects, not C-style pointers. Native-memory access is handled through specialized interop/runtime APIs rather than ordinary pointer syntax.",
+  "steps": [
+    {
+      "title": "Open Java's managed-reference example",
+      "question": "Java still needs a way for code to refer to objects even though the language does not expose C or C++ pointer syntax. In AeroTopo's RuntimeLab, the reference utilities use Java's managed reference APIs. What should you notice about these types before deciding whether Java has explicit pointers?",
+      "why_te": "RuntimeLab.java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the ReferenceSet declaration",
+      "question": "The `ReferenceSet` record stores three `java.lang.ref` reference objects and a reference queue, but there is no address type, star declarator, or dereference operator in the declaration. How does this line show the difference between a Java reference API and an explicit pointer declaration?",
+      "why_te": "Highlight ayina `ReferenceSet` declaration ni chudandi. Types anni normal Java classes. `int*` la pointer declarator ledu, raw memory address field kuda ledu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java",
+            "line": 34,
+            "expected_text": "public record ReferenceSet(WeakReference<Object> weak,SoftReference<Object> soft,PhantomReference<Object> phantom,ReferenceQueue<Object> queue) {}"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          34
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect an ordinary object reference parameter",
+      "question": "The method parameter `Object point` receives a reference to an object, and Java code can pass that reference without receiving the object's raw address. Why is an object reference useful for normal programming while still being different from a pointer that exposes address arithmetic and manual dereferencing?",
+      "why_te": "`Object point` object ni refer chestundi. Method ki object access istundi, kani raw address ni expose cheyyadu. Java lo normal object references tho work chestam.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java",
+            "line": 35,
+            "expected_text": "public ReferenceSet references(Object point) {"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect WeakReference as a Java class",
+      "question": "`WeakReference` can sound pointer-like because it indirectly refers to another object, but it is itself a normal Java class managed by the runtime. What does IntelliJ's symbol information reveal about the API model compared with a built-in raw-memory pointer type?",
+      "why_te": "IntelliJ symbol card lo `WeakReference` normal Java class ga kanipistundi. Idi garbage collector tho cooperate chese reference API. Raw pointer type la memory address arithmetic ivvadu.",
+      "software": "intellij",
+      "required_capability": "show-quick-documentation",
+      "feature_available": true,
+      "action": {
+        "action": "showQuickDocumentation",
+        "data": {
+          "uiState": "symbolCard",
+          "package": "java.lang.ref",
+          "className": "WeakReference",
+          "declaration": "public class WeakReference<T> extends Reference<T>"
+        }
+      },
+      "highlight": {
+        "kind": "target",
+        "selectors": [
+          ".ij-symbol-card"
+        ]
+      }
+    },
+    {
+      "title": "Create a C-style pointer syntax experiment",
+      "question": "A direct way to separate the two languages is to try syntax that would be meaningful in C or C++ but is not part of Java's grammar. If a temporary Java class declares `int* address`, what should the Java compiler do with that attempted pointer declaration?",
+      "why_te": "Temporary demo file lo C/C++ style `int* address` syntax try chestunnam. Java grammar ee pointer declaration ni support cheyyadu. Compiler syntax error istundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PointerSyntaxDemo.java",
+          "language": "java",
+          "content": "public class PointerSyntaxDemo {\n    int* address;\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Compile the pointer syntax experiment",
+      "question": "The source contains an explicit star-based pointer declaration rather than a Java reference variable. When `javac` parses this temporary file, why should compilation fail before runtime, and what does that failure establish about declaring explicit pointers in ordinary Java source?",
+      "why_te": "`javac` temporary file ni compile chesthe `int* address` daggara syntax error vastundi. Ante ordinary Java source lo C/C++ pointer declaration valid kaadu ani direct ga prove avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 1,
+          "command": "javac labs/java/PointerSyntaxDemo.java",
+          "output": "PointerSyntaxDemo.java:2: error: <identifier> expected\n    int* address;\n       ^\n1 error"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Return to the managed reference code",
+      "question": "The failed pointer syntax does not mean Java cannot refer to objects; it means the language uses a different abstraction. Returning to RuntimeLab, how do the `ReferenceSet` and `references(Object point)` lines summarize the supported model that Java developers actually use?",
+      "why_te": "Malli RuntimeLab.java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the temporary pointer experiment",
+      "question": "The compiler experiment has already proved that C/C++-style pointer declarations are not valid Java syntax, so the invalid sample should not remain in the cumulative project. After removing it, what concise distinction should you retain between Java object references and explicit pointers?",
+      "why_te": "Temporary pointer demo ni remove chestunnam. Main point simple: Java object references use chestundi, kani explicit pointer declaration, raw address access mariyu pointer arithmetic ordinary Java lo levu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PointerSyntaxDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

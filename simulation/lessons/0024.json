@@ -55,7 +55,8 @@
       "highlight": {
         "kind": "code",
         "lines": [
-          7
+          7,
+          8
         ],
         "preserveHorizontal": true
       }
@@ -109,6 +110,7 @@
       "highlight": {
         "kind": "code",
         "lines": [
+          9,
           10
         ],
         "preserveHorizontal": true

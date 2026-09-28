@@ -399,7 +399,7 @@ def load_lessons() -> tuple[dict, list[dict]]:
                         f"{highlight_kind!r}; expected one of {sorted(HIGHLIGHT_KINDS)}"
                     )
                 if highlight_kind == "target" and not (
-                    highlight.get("selectors") or highlight.get("text")
+                    highlight.get("selectors") or highlight.get("text") or highlight.get("texts")
                 ):
                     raise SystemExit(
                         f"Question {question_id}, step {step_index + 1} highlight kind=target "

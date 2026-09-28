@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 5
+      "chapterEnd": 6
     }
   ],
   "chapters": [
@@ -77,6 +77,18 @@
         "lessons/0023.json",
         "lessons/0024.json",
         "lessons/0025.json"
+      ]
+    },
+    {
+      "id": "chapter-006",
+      "title": "6: References, Pointers, Nullability & Conversion Failures",
+      "subtitle": "Contrast Java references with explicit pointers, prove primitive nullability rules, and distinguish ClassCastException, NumberFormatException, and null-unboxing failures with visible IntelliJ experiments.",
+      "lessons": [
+        "lessons/0026.json",
+        "lessons/0027.json",
+        "lessons/0028.json",
+        "lessons/0029.json",
+        "lessons/0030.json"
       ]
     }
   ],

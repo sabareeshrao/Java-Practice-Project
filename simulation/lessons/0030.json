@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "lesson_number": 30,
+  "question_id": 30,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Primitive null storage, defaults, and unboxing",
+  "info_language": "te-Latn",
+  "answer": "No. A Java primitive variable cannot store `null`; primitives always represent values from their own domains, such as numbers, `char`, or `boolean`. Primitive instance fields and array elements receive default values such as zero or false, while local variables must be assigned before use. Wrapper/reference types such as `Integer` can store `null`. A common trap is auto-unboxing: assigning a null `Integer` to an `int` compiles, but at runtime Java must extract the primitive value and throws `NullPointerException`. Use wrappers only when nullability is genuinely required and handle the null case before unboxing.",
+  "steps": [
+    {
+      "title": "Compare primitive and wrapper method parameters",
+      "question": "The clearest real-project contrast is already in `LanguageLab`: one overload accepts primitive `int`, while the neighboring overload accepts reference type `Integer` and checks for null. This side-by-side API makes nullability visible in the method signatures. What storage difference is encoded by those parameter types?",
+      "why_te": "LanguageLab lo `int` and `Integer` overloads pakkapakkana unnayi. `int` direct primitive value expect chestundi. `Integer` reference type kabatti null state ni represent cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on the primitive overload",
+      "question": "The `int number` parameter has no null state, so every caller must provide an actual integer value by the time the method executes. This is part of the method's type contract. Why does this primitive signature communicate a stronger non-null value requirement than the neighboring `Integer` overload?",
+      "why_te": "Highlight ayina method `int number` use chestundi. Primitive parameter null ni receive cheyyadu. Caller nundi actual integer value ravali.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+            "line": 81,
+            "expected_text": "public static String join(String prefix, int number) { return prefix + number; }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on the nullable wrapper overload",
+      "question": "The `Integer number` overload explicitly tests `number == null`, which only makes sense because `Integer` is a reference type. How does this method show that nullability belongs to the wrapper/reference model rather than to the underlying primitive `int` value domain?",
+      "why_te": "`Integer number` wrapper reference kabatti `number == null` check valid. Null unte method `missing` text use chestundi. Primitive `int` ki ee state ledu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+            "line": 82,
+            "expected_text": "public static String join(String prefix, Integer number) { return prefix + (number == null ? \"missing\" : number); }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a defaults and unboxing experiment",
+      "question": "A primitive array demonstrates default primitive storage, while a nullable wrapper demonstrates a separate reference state. The temporary program places both cases next to an auto-unboxing assignment so their behavior can be observed together. Why should a new `int[2]` contain zero values while `Integer boxed` can hold `null`?",
+      "why_te": "Temporary demo lo `int[]` array create chestunnam. Primitive array elements default ga zero values pondutayi. `Integer boxed` reference type kabatti separate ga null hold cheyyagaladu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PrimitiveStorageDemo.java",
+          "language": "java",
+          "content": "import java.util.Arrays;\npublic class PrimitiveStorageDemo {\n    public static void main(String[] args) {\n        int[] values = new int[2];\n        Integer boxed = null;\n        System.out.println(Arrays.toString(values));\n        int primitive = boxed;\n        System.out.println(primitive);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect primitive array default values",
+      "question": "Java initializes primitive array elements to the primitive type's default value rather than to null. When `values` is created with length two, what should the first output line show, and why does `[0, 0]` still not mean the elements are nullable?",
+      "why_te": "`int[2]` array elements default ga `0` avutayi. Output `[0, 0]` ani chupistundi. Zero valid primitive value; adi null kaadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/PrimitiveStorageDemo.java",
+            "line": 4,
+            "expected_text": "int[] values = new int[2];"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the null unboxing line",
+      "question": "The assignment `int primitive = boxed` is legal to compile because Java inserts auto-unboxing from `Integer` to `int`, but `boxed` currently contains null. What runtime failure should occur when Java tries to extract a primitive value from that null wrapper reference?",
+      "why_te": "`int primitive = boxed` auto-unboxing use chestundi. `boxed` null kabatti primitive value extract cheyyalem. Runtime lo `NullPointerException` vastundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/PrimitiveStorageDemo.java",
+            "line": 7,
+            "expected_text": "int primitive = boxed;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          5,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the defaults and unboxing experiment",
+      "question": "The combined execution first prints the primitive array's default contents and then reaches an auto-unboxing operation on a null wrapper reference. When the output shows `[0, 0]` followed by `NullPointerException`, how does that separate primitive default values from nullable wrapper state?",
+      "why_te": "Program first `[0, 0]` print chestundi. Tarvata null `Integer` ni `int` ga unbox chesthe `NullPointerException` vastundi. Rendu behaviors difference clear ga kanipistundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 1,
+          "command": "javac -d target/lesson30-demo labs/java/PrimitiveStorageDemo.java && java -cp target/lesson30-demo PrimitiveStorageDemo",
+          "output": "[0, 0]\nException in thread \"main\" java.lang.NullPointerException: Cannot invoke \"java.lang.Integer.intValue()\" because \"boxed\" is null"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Return to the real overloads",
+      "question": "The temporary experiment explains why production code often checks wrapper values before any unboxing can occur. Returning to the two `LanguageLab.join` overloads, how does the wrapper version handle a possible null safely while the primitive version stays simpler because a primitive null state cannot exist?",
+      "why_te": "Malli LanguageLab overloads ni chudandi. `Integer` version null ni check chesi safe text return chestundi. `int` version ki null handling avasaram ledu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the primitive storage demo",
+      "question": "The temporary file has now demonstrated primitive defaults, nullable wrappers, and the null-unboxing trap, so leaving it in the cumulative project would add unnecessary demo state. After removing it, what final distinction should you retain about primitive storage, wrapper nullability, and unboxing failures?",
+      "why_te": "Temporary storage demo ni remove chestunnam. Final rule: primitive null store cheyyadu, defaults actual primitive values. Wrapper null undachu; null wrapper ni primitive ga unbox chesthe `NullPointerException` ravachu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PrimitiveStorageDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

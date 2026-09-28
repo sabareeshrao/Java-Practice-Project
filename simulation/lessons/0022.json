@@ -172,7 +172,8 @@
       "highlight": {
         "kind": "code",
         "lines": [
-          6
+          6,
+          10
         ],
         "preserveHorizontal": true
       }

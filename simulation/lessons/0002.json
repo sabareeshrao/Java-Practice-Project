@@ -24,7 +24,11 @@
       "highlight": {
         "kind": "code",
         "lines": [
-          1
+          7,
+          15,
+          21,
+          25,
+          29
         ],
         "preserveHorizontal": true
       }

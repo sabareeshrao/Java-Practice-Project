@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "lesson_number": 28,
+  "question_id": 28,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Primitive types cannot hold null",
+  "info_language": "te-Latn",
+  "answer": "No. Java primitive types such as `byte`, `short`, `int`, `long`, `float`, `double`, `char`, and `boolean` cannot store `null`; `null` is a reference value. Primitive instance fields and primitive array elements receive type-specific default values such as `0`, `0.0`, `false`, or `\\u0000`, while local variables must be definitely assigned before use. If nullability is required, use the corresponding wrapper/reference type such as `Integer`, `Long`, `Double`, `Character`, or `Boolean`. Remember that later unboxing a null wrapper into a primitive can throw `NullPointerException`.",
+  "steps": [
+    {
+      "title": "Open primitive variables in LanguageLab",
+      "question": "Java primitives store direct values rather than nullable object references. In `LanguageLab.classify`, the method uses an `int[]` parameter, an `int flags` local variable, and an enhanced-for `int code` variable. What do these declarations tell you about the value-oriented primitive model?",
+      "why_te": "LanguageLab.java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Focus on an initialized int local variable",
+      "question": "The local variable `flags` is initialized with an integer expression before it is used, and Java's definite-assignment rules require local variables to receive a valid value first. Why is `null` not another possible `int` value alongside numbers such as zero or one?",
+      "why_te": "Highlight ayina `int flags` primitive variable. Daaniki integer value assign chestam. `null` reference value kabatti `int` domain lo part kaadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/LanguageLab.java",
+            "line": 16,
+            "expected_text": "int flags = VALID | GROUND;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create an invalid primitive-null experiment",
+      "question": "The most direct compiler check is to assign `null` to an `int` in a temporary class. Because `null` belongs to reference types rather than primitive numeric values, what should happen when Java tries to compile `int count = null`?",
+      "why_te": "Temporary demo lo `int count = null` try chestunnam. `null` reference value kabatti `int` ki assign cheyyadam invalid. Compiler idi accept cheyyadu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PrimitiveNullDemo.java",
+          "language": "java",
+          "content": "public class PrimitiveNullDemo {\n    static String label() {\n        int count = null;\n        return String.valueOf(count);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Compile the invalid primitive-null assignment",
+      "question": "This failure occurs at compile time rather than after the program starts, because the assignment itself violates Java's type rules. What does the compiler error establish about whether any primitive `int` variable can directly store the `null` reference value?",
+      "why_te": "`javac` compile chesinappudu `int count = null` daggara type error vastundi. Program run avvakamunde primitive ki null assign cheyyalem ani compiler confirm chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 1,
+          "command": "javac labs/java/PrimitiveNullDemo.java",
+          "output": "PrimitiveNullDemo.java:3: error: incompatible types: <null> cannot be converted to int\n        int count = null;\n                    ^\n1 error"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Replace the primitive with its wrapper type",
+      "question": "`Integer` is a reference type, so it can represent either an Integer object or `null`. If the temporary code changes only `int count` to `Integer count`, why does the same null assignment become legal even though the related primitive type cannot hold null?",
+      "why_te": "Ippudu `int` place lo `Integer` wrapper use chestunnam. `Integer` reference type kabatti `null` store cheyyagaladu. Primitive `int` మాత్రం null ni accept cheyyadu.",
+      "software": "intellij",
+      "required_capability": "replace-code",
+      "feature_available": true,
+      "action": {
+        "action": "replaceCode",
+        "data": {
+          "file": "labs/java/PrimitiveNullDemo.java",
+          "find": "int count = null;",
+          "replace": "Integer count = null;"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Compile the nullable wrapper version",
+      "question": "Changing the declaration to `Integer` moves the variable from the primitive value domain into the reference-type domain, where null is a permitted reference value. When this revised class compiles successfully, what distinction does that prove between primitive nullability and wrapper-class nullability in Java?",
+      "why_te": "Wrapper version compile success avutundi. `Integer` null ni store cheyyagaladu ani idi prove chestundi. Same concept `Long`, `Double`, `Boolean` la wrapper types ki kuda apply avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson28-demo labs/java/PrimitiveNullDemo.java",
+          "output": "Compilation successful"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Compare primitive and wrapper overloads in real code",
+      "question": "In production APIs, parameter types communicate whether a null state is even representable. AeroTopo already contains neighboring overloads where one accepts primitive `int` and the other accepts nullable `Integer` with an explicit null check. How do these signatures encode different nullability expectations?",
+      "why_te": "LanguageLab lo `int number` and `Integer number` overloads pakkapakkana unnayi. `Integer` version null check chestundi. Primitive `int` version ki aa null state undadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the primitive-null demo",
+      "question": "The temporary compiler experiment has served its purpose and should not become permanent application code. After removing it, what final rule should you remember about primitive values, wrapper types, and the special role of `null` in Java's type system?",
+      "why_te": "Temporary demo ni remove chestunnam. Final rule: primitives null store cheyyavu. Nullable value kavali ante wrapper/reference type use cheyyali, tarvata unboxing appudu null ni careful ga handle cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PrimitiveNullDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          81,
+          82
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
