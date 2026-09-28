@@ -2970,3 +2970,101 @@ Static context nundi instance member access possible, kani explicit object refer
 ### Step 5 — Return to the real AeroTopo code — Accessing non-static members inside a static method
 
 Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
+
+## Lesson 113 — Calling a static method through a null object reference
+
+### Step 1 — Open the AeroTopo baseline — Calling a static method through a null object reference
+
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
+
+### Step 2 — Create the focused static experiment — Calling a static method through a null object reference
+
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
+
+### Step 3 — Run the focused static experiment — Calling a static method through a null object reference
+
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
+
+### Step 4 — Remove the temporary static experiment — Calling a static method through a null object reference
+
+[no highlight] Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
+
+### Step 5 — Return to the real AeroTopo code — Calling a static method through a null object reference
+
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
+
+## Lesson 114 — Calling a non-static method directly from static main
+
+### Step 1 — Open the AeroTopo baseline — Calling a non-static method directly from static main
+
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
+
+### Step 2 — Create the focused static experiment — Calling a non-static method directly from static main
+
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
+
+### Step 3 — Run the focused static experiment — Calling a non-static method directly from static main
+
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
+
+### Step 4 — Remove the temporary static experiment — Calling a non-static method directly from static main
+
+[no highlight] `main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
+
+### Step 5 — Return to the real AeroTopo code — Calling a non-static method directly from static main
+
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
+
+## Lesson 115 — How final is used in the AeroTopo project
+
+### Step 1 — Open the project evidence — How final is used in the AeroTopo project
+
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
+
+### Step 2 — Trace binding and ownership — How final is used in the AeroTopo project
+
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
+
+### Step 3 — Evaluate the design choice — How final is used in the AeroTopo project
+
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
+
+### Step 4 — State the interview rule — How final is used in the AeroTopo project
+
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
+
+## Lesson 116 — A real project use case for final
+
+### Step 1 — Open the project evidence — A real project use case for final
+
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
+
+### Step 2 — Trace binding and ownership — A real project use case for final
+
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
+
+### Step 3 — Evaluate the design choice — A real project use case for final
+
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
+
+### Step 4 — State the interview rule — A real project use case for final
+
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
+
+## Lesson 117 — Static methods written in the AeroTopo project
+
+### Step 1 — Open the project evidence — Static methods written in the AeroTopo project
+
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
+
+### Step 2 — Trace binding and ownership — Static methods written in the AeroTopo project
+
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
+
+### Step 3 — Evaluate the design choice — Static methods written in the AeroTopo project
+
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
+
+### Step 4 — State the interview rule — Static methods written in the AeroTopo project
+
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
