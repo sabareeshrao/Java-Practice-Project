@@ -3668,3 +3668,155 @@ Common Product/Exportable contract use cheste callers subtype checks rayalsina n
 ### Step 4 — State the interview answer — A practical benefit of polymorphism
 
 Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
+
+## Lesson 150 — How Java implements runtime polymorphism
+
+### Step 1 — Open the polymorphism evidence — How Java implements runtime polymorphism
+
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
+
+### Step 2 — Trace method selection — How Java implements runtime polymorphism
+
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
+
+### Step 3 — Evaluate the design contract — How Java implements runtime polymorphism
+
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
+
+### Step 4 — State the interview answer — How Java implements runtime polymorphism
+
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
+
+## Lesson 151 — Method overloading versus overriding
+
+### Step 1 — Open the polymorphism evidence — Method overloading versus overriding
+
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
+
+### Step 2 — Trace method selection — Method overloading versus overriding
+
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
+
+### Step 3 — Evaluate the design contract — Method overloading versus overriding
+
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
+
+### Step 4 — State the interview answer — Method overloading versus overriding
+
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
+
+## Lesson 152 — Access modifiers and polymorphic overriding
+
+### Step 1 — Open the polymorphism evidence — Access modifiers and polymorphic overriding
+
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
+
+### Step 2 — Trace method selection — Access modifiers and polymorphic overriding
+
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
+
+### Step 3 — Evaluate the design contract — Access modifiers and polymorphic overriding
+
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
+
+### Step 4 — State the interview answer — Access modifiers and polymorphic overriding
+
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
+
+## Lesson 153 — Overridden method execution during construction
+
+### Step 1 — Open the AeroTopo baseline — Overridden method execution during construction
+
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
+
+### Step 2 — Create the focused dispatch experiment — Overridden method execution during construction
+
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
+
+### Step 3 — Run the dispatch experiment — Overridden method execution during construction
+
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
+
+### Step 4 — Remove the temporary dispatch experiment — Overridden method execution during construction
+
+[no highlight] Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
+
+### Step 5 — Return to the project design — Overridden method execution during construction
+
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
+
+## Lesson 154 — Constructors are not polymorphic
+
+### Step 1 — Open the polymorphism evidence — Constructors are not polymorphic
+
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
+
+### Step 2 — Trace method selection — Constructors are not polymorphic
+
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
+
+### Step 3 — Evaluate the design contract — Constructors are not polymorphic
+
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
+
+### Step 4 — State the interview answer — Constructors are not polymorphic
+
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
+
+## Lesson 155 — Dynamic method dispatch
+
+### Step 1 — Open the polymorphism evidence — Dynamic method dispatch
+
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
+
+### Step 2 — Trace method selection — Dynamic method dispatch
+
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
+
+### Step 3 — Evaluate the design contract — Dynamic method dispatch
+
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
+
+### Step 4 — State the interview answer — Dynamic method dispatch
+
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
+
+## Lesson 156 — Why fields are hidden rather than overridden
+
+### Step 1 — Open the AeroTopo baseline — Why fields are hidden rather than overridden
+
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
+
+### Step 2 — Create the focused dispatch experiment — Why fields are hidden rather than overridden
+
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
+
+### Step 3 — Run the dispatch experiment — Why fields are hidden rather than overridden
+
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
+
+### Step 4 — Remove the temporary dispatch experiment — Why fields are hidden rather than overridden
+
+[no highlight] Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
+
+### Step 5 — Return to the project design — Why fields are hidden rather than overridden
+
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
+
+## Lesson 157 — Passing subclass objects to superclass parameters
+
+### Step 1 — Open the polymorphism evidence — Passing subclass objects to superclass parameters
+
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
+
+### Step 2 — Trace method selection — Passing subclass objects to superclass parameters
+
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
+
+### Step 3 — Evaluate the design contract — Passing subclass objects to superclass parameters
+
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
+
+### Step 4 — State the interview answer — Passing subclass objects to superclass parameters
+
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
