@@ -138,23 +138,31 @@ Rules:
 - Books group logically related chapters.
 - Do not embed hardcoded lesson/question numbers inside the natural-language question text. Keep numbering as metadata/UI.
 
-Example:
+The requested batch size is only a delivery unit. It is never automatically a chapter boundary.
+
+If a batch ends while the same topic continues, keep that chapter open and append the later related lessons when they are created. Look ahead beyond the requested batch before deciding where a chapter ends.
+
+Current source-sequence example:
 
 ```text
-Chapter 1
-├── Lesson 1
-├── Lesson 2
-├── Lesson 3
-├── Lesson 4
-└── Lesson 5
+Project Methodology
+└── Lesson 36
 
-Chapter 2
-├── Lesson 6
-├── Lesson 7
-├── Lesson 8
-├── Lesson 9
-└── Lesson 10
+Array Algorithms
+├── Lesson 37
+├── Lesson 38
+├── Lesson 39
+├── Lesson 40
+├── Lesson 41
+└── Lesson 42
+
+Strings / StringBuilder / StringBuffer
+├── Lesson 43
+├── ...
+└── Lesson 55
 ```
+
+So a request for Lessons 37–40 must not close the Arrays chapter at Lesson 40, because Questions 41–42 are still Arrays. Likewise, an isolated topic such as Lesson 36 may legitimately form a one-lesson chapter.
 
 ---
 

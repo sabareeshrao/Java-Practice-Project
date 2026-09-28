@@ -115,5 +115,12 @@
         "lessons/0040.json"
       ]
     }
-  ]
+  ],
+  "chapter_policy": {
+    "mode": "logical-topic-continuity",
+    "fixed_lesson_limit": false,
+    "batch_size_is_not_chapter_boundary": true,
+    "lookahead_rule": "Inspect enough upcoming source questions to identify the genuine topic transition before closing or creating a chapter.",
+    "continuation_rule": "If the requested batch ends mid-topic, append later related lessons to the same chapter."
+  }
 }
