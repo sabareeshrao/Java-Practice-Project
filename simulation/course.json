@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 10
+      "chapterEnd": 13
     }
   ],
   "chapters": [
@@ -159,6 +159,72 @@
         "lessons/0070.json",
         "lessons/0071.json",
         "lessons/0072.json"
+      ]
+    },
+    {
+      "id": "chapter-011",
+      "title": "11: Constructors & Object Initialization",
+      "subtitle": "Keep the constructor sequence together: constructor purpose, access, overloading, chaining rules, inheritance boundaries, legal modifiers, return behavior, missing no-arg construction, and framework-oriented no-argument constructors.",
+      "lessons": [
+        "lessons/0073.json",
+        "lessons/0074.json",
+        "lessons/0075.json",
+        "lessons/0076.json",
+        "lessons/0077.json",
+        "lessons/0078.json",
+        "lessons/0079.json",
+        "lessons/0080.json",
+        "lessons/0081.json",
+        "lessons/0082.json",
+        "lessons/0083.json",
+        "lessons/0084.json"
+      ]
+    },
+    {
+      "id": "chapter-012",
+      "title": "12: Packages, Imports, Access Control & Encapsulation",
+      "subtitle": "Connect package naming and structure with imports, top-level and member visibility, encapsulated state, getters versus controlled mutation, package use cases, and name-collision resolution across namespaces.",
+      "lessons": [
+        "lessons/0085.json",
+        "lessons/0086.json",
+        "lessons/0087.json",
+        "lessons/0088.json",
+        "lessons/0089.json",
+        "lessons/0090.json",
+        "lessons/0091.json",
+        "lessons/0092.json",
+        "lessons/0093.json"
+      ]
+    },
+    {
+      "id": "chapter-013",
+      "title": "13: Static Initialization, final & static Semantics",
+      "subtitle": "Trace static blocks, class initialization, final variables/methods/classes, effective finality and immutability, initialization failures, static method binding and hiding, instance access from static context, and real AeroTopo uses of final and static members.",
+      "lessons": [
+        "lessons/0094.json",
+        "lessons/0095.json",
+        "lessons/0096.json",
+        "lessons/0097.json",
+        "lessons/0098.json",
+        "lessons/0099.json",
+        "lessons/0100.json",
+        "lessons/0101.json",
+        "lessons/0102.json",
+        "lessons/0103.json",
+        "lessons/0104.json",
+        "lessons/0105.json",
+        "lessons/0106.json",
+        "lessons/0107.json",
+        "lessons/0108.json",
+        "lessons/0109.json",
+        "lessons/0110.json",
+        "lessons/0111.json",
+        "lessons/0112.json",
+        "lessons/0113.json",
+        "lessons/0114.json",
+        "lessons/0115.json",
+        "lessons/0116.json",
+        "lessons/0117.json"
       ]
     }
   ],
