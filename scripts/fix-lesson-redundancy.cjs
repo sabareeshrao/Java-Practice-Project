@@ -1,3 +1,4 @@
+// one-time whole-project redundancy repair
 "use strict";
 const fs=require("node:fs");
 const path=require("node:path");
