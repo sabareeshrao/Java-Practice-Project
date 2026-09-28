@@ -72,6 +72,42 @@ function pickAtom(atoms,index){
 
 function qFor(r){
  const title=clean(r.lesson.title),stepTitle=clean(r.step.title),a=fullAnchor(r),line=lines(r),k=action(r),srcQ=sourceQ.get(r.lessonNo)||title;
+ const specials={
+  11:[
+   "STS uses Ctrl+Shift+R to open a resource by name. In IntelliJ, use Go to File on AeroTopoApplication.java and explain what is being indexed, why this works even when you do not know the package path, and how file-oriented navigation differs from class-oriented search in the next step.",
+   "STS uses Ctrl+Shift+T to find a Java type, while IntelliJ uses Go to Class. Search for AeroTopoApplication and explain why a type index is more precise than a file-name search when class names, nested types, or generated sources are involved, and when you would still prefer Go to File instead.",
+   "STS Quick Outline and IntelliJ File Structure both navigate inside the file already open. Use AeroTopoApplication.java to explain how fields, constructors, and methods are indexed within one source file, why this is faster than global search for local navigation, and what problem it solves once a class grows beyond a few methods.",
+   "STS F3 and IntelliJ Go to Declaration follow a selected symbol to its definition. Trace SpringApplication.run from AeroTopoApplication and explain how declaration navigation uses the resolved symbol rather than matching text, why that matters with overloaded methods or same-named symbols, and how it helps inspect framework APIs safely.",
+   "STS Ctrl+Shift+G and IntelliJ Find Usages answer the opposite question from Go to Declaration: they show who depends on a symbol. Use AeroTopoApplication as the target and explain why reviewing callers and references before a rename or signature change reduces refactoring risk across a multi-file enterprise project.",
+   "STS content assist and IntelliJ code completion use the current type context to suggest legal APIs. Open completion at the shown location and explain how compile-time type information narrows the suggestions, why this reduces memorization and typing mistakes, and how completion differs from a quick fix that reacts to a diagnosed problem.",
+   "STS Ctrl+1 Quick Fix and IntelliJ Alt+Enter are diagnostic-driven actions rather than general completion. Inspect the available intention actions and explain how the caret location and current inspection determine the offered fixes, why blindly accepting an action can still be risky, and when imports or exception fixes are appropriate.",
+   "STS formatting and IntelliJ Reformat Code apply configured code-style rules without changing program semantics. Reformat AeroTopoApplication.java and explain why consistent whitespace and layout reduce noisy diffs, how team style settings matter, and why formatting should be separated conceptually from refactoring or functional code changes.",
+   "STS Rename and IntelliJ safe Rename operate on symbol identity rather than raw text. Use the preview-only rename flow and explain how IDE usage analysis protects unrelated comments or same-text identifiers, why reviewing the preview is valuable before a project-wide change, and how semantic rename differs from Find Usages alone."
+  ],
+  14:[
+   "The JVM does not execute the Java source text directly. Open AeroTopoApplication.java and explain the boundary between the human-readable .java file and the bytecode eventually executed by the JVM, including which tool performs that translation and why separating compilation from execution matters for Java portability.",
+   "Before compiling AeroTopo, confirm the configured Java 21 SDK and language level. Explain how the compiler target influences class-file version and available language features, why a newer or older runtime may reject incompatible bytecode, and how checking the project SDK prevents confusing source-level and JVM-level compatibility problems.",
+   "Run the Maven compile phase and focus on the generated target/classes output. Explain what information a .class file contains, why successful compilation must happen before normal JVM execution, and how this step differs from class loading, verification, linking, and initialization that occur later inside the runtime.",
+   "Inspect the runtime classpath after compilation. Explain how the JVM uses classpath or module-path information to locate AeroTopo classes and required libraries, what happens when a referenced class cannot be resolved, and why locating bytecode is a separate concern from verifying or executing the bytecode once found.",
+   "Inspect the JVM stages for loading, verification, linking, initialization, interpretation, and JIT compilation. Describe the purpose of each stage in order, identify where structural safety checks occur, and explain why frequently executed bytecode may later become native machine code even though the application originally started from portable class files.",
+   "Now focus on JVM-managed services rather than the bytecode pipeline. Explain what heap and stack memory, garbage collection, threads, exception handling, and runtime diagnostics contribute while AeroTopo is running, and why these services are responsibilities of the managed runtime rather than extra compilation stages such as loading or JIT compilation.",
+   "Run java --version and use the OpenJDK 21 result to distinguish the JVM specification from a concrete runtime implementation. Explain why vendor, version, and implementation details matter when investigating performance, garbage collection, diagnostics, or compatibility issues even though Java bytecode targets the portable JVM model.",
+   "Launch AeroTopo through its main class and connect all prior steps into one execution path. Explain how compiled class files are located, loaded, verified, initialized, and executed before Spring Boot continues inside the same process, and what a successful startup proves about the complete source-to-running-JVM workflow."
+  ],
+  93:[
+   "Start from ProjectService.java and inspect its package declaration and imports before creating any demo classes. Explain how a package becomes part of a type's fully qualified identity, why Java does not require every class in an application to have a globally unique simple name, and what this real project baseline establishes for the collision experiment.",
+   "Create pkgone.Tile as the first temporary type. Explain the fully qualified name created by package pkgone, why there is no collision while only this Tile exists, and what a caller must import or write explicitly to refer to this exact class from a different package.",
+   "Add pkgtwo.Tile with the same simple class name. Explain why pkgone.Tile and pkgtwo.Tile are still distinct legal types, which portion of their names prevents a declaration collision, and why ambiguity appears only when a compilation unit tries to use both classes through the same unqualified simple name.",
+   "Create PackageNameCollisionDemo and inspect its mixed naming strategy. Explain why importing pkgone.Tile makes the unqualified Tile refer to that type, why pkgtwo.Tile is written with its fully qualified name, and how this avoids the ambiguity that would result from trying to import both same-simple-name classes normally.",
+   "Compile all three temporary files and run PackageNameCollisionDemo. The output is one:two. Explain how that result proves the two Tile objects came from different package-qualified classes, why package namespaces survive into type resolution, and what this demonstrates about using same simple class names safely.",
+   "Remove PackageNameCollisionDemo first, after the runtime proof is complete. Explain why deleting the caller does not invalidate the namespace result already observed, why reversing the experiment from dependent caller to type definitions keeps cleanup easy to reason about, and what temporary artifacts still remain at this point.",
+   "Remove pkgtwo.Tile next while leaving pkgone.Tile temporarily in place. Explain what namespace relationship disappears with this deletion, why the remaining pkgone.Tile no longer has a same-simple-name competitor in the temporary demo, and how deleting a type definition differs from deleting the caller that referenced it.",
+   "Remove pkgone.Tile as the final temporary type. Explain how this restores the project to the state before the namespace experiment, why the demonstrated fully qualified-name rule remains valid even though both demo classes are gone, and why lesson-only package examples should not remain in the cumulative AeroTopo project.",
+   "Return to ProjectService.java and summarize the package-collision rule using production structure instead of temporary files. Explain fully qualified type identity, import ambiguity, explicit disambiguation, and how packages provide scalable namespaces for large Java systems while allowing unrelated packages to reuse the same simple class name."
+  ]
+ };
+ if(specials[r.lessonNo]) return specials[r.lessonNo][r.stepNo-1];
+
  const prefix=r.stepNo===1?srcQ+" ":"";
  if(k==="createFile"){
   return prefix+"This step creates temporary "+a+" to isolate one edge case of "+title+" without changing production AeroTopo code. Before execution, inspect "+(line?"highlighted lines "+line:"the highlighted declarations")+" and predict the compiler or runtime result. Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome?";
@@ -104,6 +140,42 @@ function qFor(r){
 
 function teFor(r){
  const title=clean(r.lesson.title),st=clean(r.step.title),a=fullAnchor(r),base=shortAnchor(r),line=lines(r),k=action(r),out=result(r);
+ const specials={
+  11:[
+   "Go to File file peru meeda search chestundi; package tree manually expand cheyyalsina avasaram ledu. Ee step file-oriented navigation ni establish chestundi, class/type search next step lo separate ga compare chestam.",
+   "Go to Class Java type index ni use chestundi. File search kanna idi class identity meeda focus chestundi; nested types leda type-name navigation kavali ante ee workflow more direct ga untundi.",
+   "File Structure current source file lopala fields, constructors, methods list ni chupistundi. Global project search kaadu; already open class lo member ki fast ga jump cheyyadam ee step specific purpose.",
+   "Go to Declaration selected symbol resolved definition ki teesukeltundi. Plain text search kanna symbol identity use chestundi, kabatti overloaded methods leda same-name references unna appudu correct declaration ni inspect cheyyachu.",
+   "Find Usages declaration nundi reverse direction lo dependents ni chupistundi. Shared symbol refactor mundu callers ekkada unnayo chusi impact scope estimate cheyyadam ee step main engineering value.",
+   "Code completion current type context batti available APIs suggest chestundi. Developer memory meeda depend kakunda valid methods discover cheyyachu; diagnostic problem fix cheyyadam మాత్రం next intention-action workflow responsibility.",
+   "Alt+Enter current caret diagnostic ki context-specific intention actions istundi. Import, exception, refactor suggestions problem batti marutayi; completion laga general API list kaadu, kabatti action apply mundu reason check cheyyali.",
+   "Reformat Code configured style rules ni apply chestundi, program behavior ni మార్చదు. Consistent formatting valla team diffs logic changes meeda focus avutayi; functional refactor tho formatting ni mix cheyyakunda use cheyyadam better.",
+   "Safe Rename symbol references ni IDE model tho update chestundi. Raw text replace kanna unrelated occurrences protect avutayi; preview chusi affected usages verify cheyyadam production refactor lo final safety check."
+  ],
+  14:[
+   "AeroTopoApplication.java human-readable source matrame. Compiler ee source ni bytecode unna class file ga convert chestundi; JVM normal execution lo .java text ni direct ga run cheyyadu.",
+   "Project Java 21 SDK class-file target and available language features ni decide chestundi. Runtime compatibility discuss cheyyadaniki mundu compile target clear ga undali; wrong JDK setup source and bytecode errors create cheyyachu.",
+   "Maven compile successful ayithe target/classes lo .class files generate avutayi. Ee stage source-to-bytecode conversion; class loading leda JIT ఇంకా start kaaledu, kabatti compilation and runtime phases separate.",
+   "Classpath JVM ki required application and library classes ekkada search cheyyalo cheptundi. Needed class dorakakapothe resolution/startup fail avvachu; location problem bytecode execution problem kanna different.",
+   "JVM first classes load chesi bytecode verify, references link, classes initialize chestundi; taruvata interpretation and hot-code JIT native compilation jaragachu. Ee step execution pipeline order ni establish chestundi.",
+   "Heap, stacks, garbage collection, threads, exceptions, diagnostics running program ki managed services. Ivi class-loading stages kaavu; application execute avutunna time lo memory and concurrency lifecycle ni JVM handle chestundi.",
+   "java --version machine lo actual OpenJDK runtime ni identify chestundi. JVM specification portable model ayina vendor/version implementation details GC, diagnostics, performance debugging lo important ga marutayi.",
+   "AeroTopo launch previous stages anni kalipi prove chestundi: compiled classes locate ayi initialize avvutayi, main invoke avutundi, Spring Boot same JVM process lo continue avutundi. Ee step full execution chain ni close chestundi."
+  ],
+  93:[
+   "ProjectService.java package and imports real namespace baseline ni chupistayi. Java type identity lo package name part kabatti same simple class names different packages lo coexist avvagalavu.",
+   "pkgone.Tile first temporary type. Daani full identity pkgone.Tile; second Tile ఇంకా ledu kabatti ambiguity ledu. Vere package caller exact type ni import leda fully qualified name tho refer cheyyali.",
+   "pkgtwo.Tile second namespace ni add chestundi. pkgone.Tile and pkgtwo.Tile simple name same ayina full names different; declaration collision ledu, ambiguity caller unqualified Tile ni rendu types kosam use chesthe start avutundi.",
+   "PackageNameCollisionDemo pkgone.Tile ni import chesi pkgtwo.Tile ni full name tho use chestundi. Ee mixed notation exact type selection ni explicit ga chestundi and duplicate simple-name imports conflict ni avoid chestundi.",
+   "Demo one:two print chestundi. Runtime result rendu Tile objects different package-qualified classes nundi vachayani prove chestundi; package namespace compile-time type resolution ni correct ga separate chesindi.",
+   "[no highlight] PackageNameCollisionDemo first remove chestam. Caller delete ayina observed one:two evidence change avvadu; temporary Tile definitions ఇంకా exist chestayi, cleanup dependency order ni simple ga maintain chestam.",
+   "[no highlight] pkgtwo.Tile remove chesthe second temporary namespace disappear avutundi. pkgone.Tile matrame remain kabatti same-simple-name competition ఇక ఉండదు; idi caller cleanup kaakunda type-definition cleanup.",
+   "[no highlight] pkgone.Tile final temporary type ni remove chesi experiment complete chestam. Project original state ki return avutundi; fully qualified names collision ni avoid chestayi ane verified rule మాత్రం remain avutundi.",
+   "ProjectService.java ki return ayyi production package structure tho lesson ni close chestam. Final answer lo full type identity, import ambiguity, explicit disambiguation, scalable namespace purpose ni separate points ga explain cheyyali."
+  ]
+ };
+ if(specials[r.lessonNo]) return specials[r.lessonNo][r.stepNo-1];
+
  const atoms=lessonAtoms(r.lesson);
  const a0=pickAtom(atoms,0),a1=pickAtom(atoms,1),a2=pickAtom(atoms,2),a3=pickAtom(atoms,3);
  let t;
