@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "lesson_number": 115,
+  "question_id": 115,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "How final is used in the AeroTopo project",
+  "info_language": "te-Latn",
+  "answer": "Yes. AeroTopo uses `final` extensively where the design needs stable references or closed behavior. `SurveyProducts.Product` keeps `id` and `tiles` in final fields, `Product.id()` is a final method, concrete product classes such as `Orthomosaic` and `Dem` are final, and `Builder.tiles` is a final reference. These uses communicate that references, inheritance, or overriding should not change after the intended initialization boundary.",
+  "steps": [
+    {
+      "title": "Open the project evidence — How final is used in the AeroTopo project",
+      "question": "The AeroTopo code already provides direct evidence for \"How final is used in the AeroTopo project\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38,
+          39,
+          43,
+          46
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace binding and ownership — How final is used in the AeroTopo project",
+      "question": "For \"How final is used in the AeroTopo project\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38,
+          39,
+          43,
+          46
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design choice — How final is used in the AeroTopo project",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"How final is used in the AeroTopo project\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38,
+          39,
+          43,
+          46
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — How final is used in the AeroTopo project",
+      "question": "Now answer \"How final is used in the AeroTopo project\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38,
+          39,
+          43,
+          46
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

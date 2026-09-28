@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "lesson_number": 112,
+  "question_id": 112,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Accessing non-static members inside a static method",
+  "info_language": "te-Latn",
+  "answer": "Yes, a static method can access non-static members when it has an explicit object reference; what it cannot do is access them directly through an implicit `this`, because no current instance exists in static context. The static method may create an object, receive one as a parameter, or use another reference and then call that object's instance methods or fields according to normal access rules.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Accessing non-static members inside a static method",
+      "question": "Before testing \"Accessing non-static members inside a static method\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
+      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          10,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused static experiment — Accessing non-static members inside a static method",
+      "question": "The temporary class for \"Accessing non-static members inside a static method\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
+      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StaticWithInstanceDemo.java",
+          "language": "java",
+          "content": "public class StaticWithInstanceDemo {\n    private int accepted = 3;\n    int accepted(){ return accepted; }\n    static int read(StaticWithInstanceDemo lab){ return lab.accepted(); }\n    public static void main(String[] args){ System.out.println(read(new StaticWithInstanceDemo())); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused static experiment — Accessing non-static members inside a static method",
+      "question": "The program for \"Accessing non-static members inside a static method\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
+      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson112-demo labs/java/StaticWithInstanceDemo.java; java -cp target/lesson112-demo StaticWithInstanceDemo",
+          "output": "3"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary static experiment — Accessing non-static members inside a static method",
+      "question": "The focused source for \"Accessing non-static members inside a static method\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
+      "why_te": "[no highlight] Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StaticWithInstanceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static experiment is removed after proving the language behavior."
+      }
+    },
+    {
+      "title": "Return to the real AeroTopo code — Accessing non-static members inside a static method",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Accessing non-static members inside a static method\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
+      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          10,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 111,
+  "question_id": 111,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Static method hiding versus overriding",
+  "info_language": "te-Latn",
+  "answer": "A static method with the same signature in a subclass hides the parent method rather than overriding it. Calls are resolved using the qualifying type at compile time. If a `Parent` reference points to a `Child` object and `ref.label()` is a static call, Java chooses `Parent.label()` based on the declared reference type. This differs fundamentally from an overridden instance method, where runtime dispatch can choose the Child implementation.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Static method hiding versus overriding",
+      "question": "Before testing \"Static method hiding versus overriding\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused static experiment — Static method hiding versus overriding",
+      "question": "The temporary class for \"Static method hiding versus overriding\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StaticHidingDemo.java",
+          "language": "java",
+          "content": "class StaticParent { static String label(){ return \"parent\"; } }\nclass StaticChild extends StaticParent { static String label(){ return \"child\"; } }\npublic class StaticHidingDemo {\n    public static void main(String[] args){\n        StaticParent ref = new StaticChild();\n        System.out.println(ref.label());\n        System.out.println(StaticChild.label());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused static experiment — Static method hiding versus overriding",
+      "question": "The program for \"Static method hiding versus overriding\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson111-demo labs/java/StaticHidingDemo.java; java -cp target/lesson111-demo StaticHidingDemo",
+          "output": "parent\nchild"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary static experiment — Static method hiding versus overriding",
+      "question": "The focused source for \"Static method hiding versus overriding\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
+      "why_te": "[no highlight] Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StaticHidingDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static experiment is removed after proving the language behavior."
+      }
+    },
+    {
+      "title": "Return to the real AeroTopo code — Static method hiding versus overriding",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Static method hiding versus overriding\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "lesson_number": 107,
+  "question_id": 107,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "The static keyword in Java",
+  "info_language": "te-Latn",
+  "answer": "`static` associates a member with the class rather than with each object instance. Static fields hold shared class-level state, static methods can be called without an instance and cannot directly use instance state, and static initialization runs when the class is initialized. AeroTopo's `LanguageLab` shows static final constants, a mutable static counter, a static block, and static utility methods alongside the non-static `accepted` field, making the ownership difference visible.",
+  "steps": [
+    {
+      "title": "Open the project evidence — The static keyword in Java",
+      "question": "The AeroTopo code already provides direct evidence for \"The static keyword in Java\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace binding and ownership — The static keyword in Java",
+      "question": "For \"The static keyword in Java\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design choice — The static keyword in Java",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"The static keyword in Java\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — The static keyword in Java",
+      "question": "Now answer \"The static keyword in Java\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          28,
+          33
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

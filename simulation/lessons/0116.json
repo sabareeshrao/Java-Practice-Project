@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "lesson_number": 116,
+  "question_id": 116,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "A real project use case for final",
+  "info_language": "te-Latn",
+  "answer": "Constructor-injected dependencies are a practical final-reference use case. AeroTopo's `ProjectService` declares repository, GIS, configuration, and event-publisher dependencies as private final fields and assigns them once in the constructor. This prevents accidental reassignment after service construction and makes the dependency set stable for the object's lifetime. Final does not make those dependency objects themselves immutable; it only fixes which objects the fields reference.",
+  "steps": [
+    {
+      "title": "Open the project evidence — A real project use case for final",
+      "question": "The AeroTopo code already provides direct evidence for \"A real project use case for final\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace binding and ownership — A real project use case for final",
+      "question": "For \"A real project use case for final\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design choice — A real project use case for final",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"A real project use case for final\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — A real project use case for final",
+      "question": "Now answer \"A real project use case for final\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

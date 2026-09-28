@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "lesson_number": 110,
+  "question_id": 110,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why static methods are used",
+  "info_language": "te-Latn",
+  "answer": "Use a static method when the operation conceptually belongs to the class or utility and does not require per-object state. Static methods are common for pure calculations, factories, validators, and helper operations. AeroTopo's `SurveyAlgorithms` methods are static because calls such as `unique`, `mergeSorted`, and `binarySearch` operate entirely on supplied arguments and maintain no SurveyAlgorithms instance state. If behavior needs object-specific configuration or mutable state, an instance method is usually more appropriate.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Why static methods are used",
+      "question": "The AeroTopo code already provides direct evidence for \"Why static methods are used\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          7,
+          8,
+          9,
+          14,
+          19,
+          24,
+          25,
+          30,
+          37,
+          42,
+          56,
+          65,
+          70,
+          74,
+          83
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace binding and ownership — Why static methods are used",
+      "question": "For \"Why static methods are used\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          7,
+          8,
+          9,
+          14,
+          19,
+          24,
+          25,
+          30,
+          37,
+          42,
+          56,
+          65,
+          70,
+          74,
+          83
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design choice — Why static methods are used",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Why static methods are used\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          7,
+          8,
+          9,
+          14,
+          19,
+          24,
+          25,
+          30,
+          37,
+          42,
+          56,
+          65,
+          70,
+          74,
+          83
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Why static methods are used",
+      "question": "Now answer \"Why static methods are used\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          7,
+          8,
+          9,
+          14,
+          19,
+          24,
+          25,
+          30,
+          37,
+          42,
+          56,
+          65,
+          70,
+          74,
+          83
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

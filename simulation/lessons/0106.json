@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_number": 106,
+  "question_id": 106,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Printing without a main method in the initialized class",
+  "info_language": "te-Latn",
+  "answer": "A class can execute code such as a static initializer without declaring its own `main` method if some other entry point, framework, test, or reflective call causes that class to initialize. However, on a normal JDK 21 command-line launch, `java SomeClass` still requires an appropriate `main` method in the launched class. Therefore the accurate answer is that printing without `main` in that particular class is possible, but a standard standalone Java application still needs an entry point somewhere.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Printing without a main method in the initialized class",
+      "question": "Before testing \"Printing without a main method in the initialized class\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
+      "why_te": "Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused static experiment — Printing without a main method in the initialized class",
+      "question": "The temporary class for \"Printing without a main method in the initialized class\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
+      "why_te": "Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PrintWithoutOwnMainDemo.java",
+          "language": "java",
+          "content": "class PrinterWithoutMain {\n    static { System.out.println(\"printed by static initializer\"); }\n}\npublic class PrintWithoutOwnMainDemo {\n    public static void main(String[] args) throws Exception {\n        Class.forName(\"PrinterWithoutMain\");\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused static experiment — Printing without a main method in the initialized class",
+      "question": "The program for \"Printing without a main method in the initialized class\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
+      "why_te": "Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson106-demo labs/java/PrintWithoutOwnMainDemo.java; java -cp target/lesson106-demo PrintWithoutOwnMainDemo",
+          "output": "printed by static initializer"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary static experiment — Printing without a main method in the initialized class",
+      "question": "The focused source for \"Printing without a main method in the initialized class\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
+      "why_te": "[no highlight] Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PrintWithoutOwnMainDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static experiment is removed after proving the language behavior."
+      }
+    },
+    {
+      "title": "Return to the real AeroTopo code — Printing without a main method in the initialized class",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Printing without a main method in the initialized class\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
+      "why_te": "Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

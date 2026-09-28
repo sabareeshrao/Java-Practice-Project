@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "lesson_number": 108,
+  "question_id": 108,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Whether static methods can be overridden",
+  "info_language": "te-Latn",
+  "answer": "Static methods are not overridden because method overriding is runtime polymorphism on instance methods. When a subclass declares a static method with the same signature, it hides the superclass static method. Which method is selected depends on the qualifying class or the declared reference type, not on the runtime object. AeroTopo documents this directly with `Product.category()` and `Orthomosaic.category()`, where the subclass method hides rather than overrides the parent static method.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Whether static methods can be overridden",
+      "question": "The AeroTopo code already provides direct evidence for \"Whether static methods can be overridden\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace binding and ownership — Whether static methods can be overridden",
+      "question": "For \"Whether static methods can be overridden\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design choice — Whether static methods can be overridden",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Whether static methods can be overridden\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Whether static methods can be overridden",
+      "question": "Now answer \"Whether static methods can be overridden\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          22,
+          27,
+          35
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
