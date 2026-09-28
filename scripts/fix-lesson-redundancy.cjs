@@ -197,6 +197,12 @@ for(const r of rows){
  r.step.why_te=translit(r.step.why_te).replace(/\s+/g," ").trim();
  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te))r.step.why_te="[no highlight] "+r.step.why_te;
  if(wc(r.step.question)<39)r.step.question+=` Explain the conclusion using ${cleanTitle(r.step.title)} and the visible ${anchor(r)} evidence rather than repeating the lesson definition.`;
+ if(wc(r.step.why_te)>55){
+   const no=r.step.highlight?.kind==="none";
+   const first=splitSentences(stripNo(r.step.why_te))[0]||cleanTitle(r.lesson.title);
+   const coreWords=punctless(first).split(/\s+/).filter(Boolean).slice(0,28).join(" ");
+   r.step.why_te=(no?"[no highlight] ":"")+`${coreWords}; ${roleClauseT(r)}.`;
+ }
  if(wc(r.step.why_te)<15)r.step.why_te+=` Ee step visible evidence ni next technical reasoning ki direct base ga use chestundi.`;
  if(wc(r.step.why_te)>55)throw new Error(`${loc(r)} Telugu words=${wc(r.step.why_te)}`);
  if(/[\u0C00-\u0C7F]/.test(r.step.question+r.step.why_te))throw new Error(`${loc(r)} Telugu Unicode remains`);
