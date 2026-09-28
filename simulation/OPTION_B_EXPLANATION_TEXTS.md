@@ -2314,3 +2314,163 @@ Constructor declaration ki return type undadu. `void ClassName()` rayithe adi me
 ### Step 5 — Return to production code — Constructor return types
 
 Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
+
+## Lesson 81 — Return statements inside constructors
+
+### Step 1 — Open the valid project baseline — Return statements inside constructors
+
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
+
+### Step 2 — Create the focused experiment — Return statements inside constructors
+
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
+
+### Step 3 — Run the focused experiment — Return statements inside constructors
+
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
+
+### Step 4 — Remove the temporary experiment — Return statements inside constructors
+
+[no highlight] Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
+
+### Step 5 — Return to production code — Return statements inside constructors
+
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
+
+## Lesson 82 — Why a constructor has the same name as its class
+
+### Step 1 — Open the project evidence — Why a constructor has the same name as its class
+
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
+
+### Step 2 — Trace the Java rule — Why a constructor has the same name as its class
+
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
+
+### Step 3 — Connect caller and object state — Why a constructor has the same name as its class
+
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
+
+### Step 4 — State the interview rule — Why a constructor has the same name as its class
+
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
+
+## Lesson 83 — Using a no-argument call when only a parameterized constructor exists
+
+### Step 1 — Open the valid project baseline — Using a no-argument call when only a parameterized constructor exists
+
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
+
+### Step 2 — Create the focused experiment — Using a no-argument call when only a parameterized constructor exists
+
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
+
+### Step 3 — Run the focused experiment — Using a no-argument call when only a parameterized constructor exists
+
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
+
+### Step 4 — Remove the temporary experiment — Using a no-argument call when only a parameterized constructor exists
+
+[no highlight] Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
+
+### Step 5 — Return to production code — Using a no-argument call when only a parameterized constructor exists
+
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
+
+## Lesson 84 — No-argument constructors and why they matter
+
+### Step 1 — Open the project evidence — No-argument constructors and why they matter
+
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
+
+### Step 2 — Trace the Java rule — No-argument constructors and why they matter
+
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
+
+### Step 3 — Connect caller and object state — No-argument constructors and why they matter
+
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
+
+### Step 4 — State the interview rule — No-argument constructors and why they matter
+
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
+
+## Lesson 85 — Best practices for naming Java packages
+
+### Step 1 — Open the project evidence — Best practices for naming Java packages
+
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
+
+### Step 2 — Trace the boundary — Best practices for naming Java packages
+
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
+
+### Step 3 — Evaluate maintainability — Best practices for naming Java packages
+
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
+
+### Step 4 — State the interview rule — Best practices for naming Java packages
+
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
+
+## Lesson 86 — Static imports versus normal imports
+
+### Step 1 — Open the project evidence — Static imports versus normal imports
+
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
+
+### Step 2 — Trace the boundary — Static imports versus normal imports
+
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
+
+### Step 3 — Evaluate maintainability — Static imports versus normal imports
+
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
+
+### Step 4 — State the interview rule — Static imports versus normal imports
+
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
+
+## Lesson 87 — Whether a top-level class can be private or protected
+
+### Step 1 — Open the valid AeroTopo context — Whether a top-level class can be private or protected
+
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
+
+### Step 2 — Create labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected
+
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
+
+### Step 3 — Run the package/access experiment — Whether a top-level class can be private or protected
+
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
+
+### Step 4 — Remove labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected
+
+[no highlight] Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
+
+### Step 5 — Return to the real project structure — Whether a top-level class can be private or protected
+
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
+
+## Lesson 88 — Whether a method can be both private and protected
+
+### Step 1 — Open the valid AeroTopo context — Whether a method can be both private and protected
+
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
+
+### Step 2 — Create labs/java/MethodAccessDemo.java — Whether a method can be both private and protected
+
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
+
+### Step 3 — Run the package/access experiment — Whether a method can be both private and protected
+
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
+
+### Step 4 — Remove labs/java/MethodAccessDemo.java — Whether a method can be both private and protected
+
+[no highlight] Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
+
+### Step 5 — Return to the real project structure — Whether a method can be both private and protected
+
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
