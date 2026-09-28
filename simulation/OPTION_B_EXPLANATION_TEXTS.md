@@ -2474,3 +2474,175 @@ Method ki private and protected rendu same time valid kaavu. Access level okkate
 ### Step 5 — Return to the real project structure — Whether a method can be both private and protected
 
 Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
+
+## Lesson 89 — Structuring packages in a complex Java project
+
+### Step 1 — Open the project evidence — Structuring packages in a complex Java project
+
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
+
+### Step 2 — Trace the boundary — Structuring packages in a complex Java project
+
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
+
+### Step 3 — Evaluate maintainability — Structuring packages in a complex Java project
+
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
+
+### Step 4 — State the interview rule — Structuring packages in a complex Java project
+
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
+
+## Lesson 90 — How encapsulation improves software security and integrity
+
+### Step 1 — Open the project evidence — How encapsulation improves software security and integrity
+
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
+
+### Step 2 — Trace the boundary — How encapsulation improves software security and integrity
+
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
+
+### Step 3 — Evaluate maintainability — How encapsulation improves software security and integrity
+
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
+
+### Step 4 — State the interview rule — How encapsulation improves software security and integrity
+
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
+
+## Lesson 91 — Why getters and controlled methods are preferred over public fields
+
+### Step 1 — Open the project evidence — Why getters and controlled methods are preferred over public fields
+
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
+
+### Step 2 — Trace the boundary — Why getters and controlled methods are preferred over public fields
+
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
+
+### Step 3 — Evaluate maintainability — Why getters and controlled methods are preferred over public fields
+
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
+
+### Step 4 — State the interview rule — Why getters and controlled methods are preferred over public fields
+
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
+
+## Lesson 92 — Why Java packages are used
+
+### Step 1 — Open the project evidence — Why Java packages are used
+
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
+
+### Step 2 — Trace the boundary — Why Java packages are used
+
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
+
+### Step 3 — Evaluate maintainability — Why Java packages are used
+
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
+
+### Step 4 — State the interview rule — Why Java packages are used
+
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
+
+## Lesson 93 — What happens when two packages contain the same class name
+
+### Step 1 — Open the valid AeroTopo context — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 2 — Create labs/java/pkgone/Tile.java — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 3 — Create labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 4 — Create labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 5 — Run the package/access experiment — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 6 — Remove labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name
+
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 7 — Remove labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name
+
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 8 — Remove labs/java/pkgone/Tile.java — What happens when two packages contain the same class name
+
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+### Step 9 — Return to the real project structure — What happens when two packages contain the same class name
+
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
+
+## Lesson 94 — The purpose of a static block
+
+### Step 1 — Open the project evidence — The purpose of a static block
+
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
+
+### Step 2 — Trace lifecycle and restriction — The purpose of a static block
+
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
+
+### Step 3 — Evaluate the design effect — The purpose of a static block
+
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
+
+### Step 4 — State the interview rule — The purpose of a static block
+
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
+
+## Lesson 95 — Why a static block cannot replace a constructor
+
+### Step 1 — Open the AeroTopo baseline — Why a static block cannot replace a constructor
+
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
+
+### Step 2 — Create the focused language experiment — Why a static block cannot replace a constructor
+
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
+
+### Step 3 — Run the focused language experiment — Why a static block cannot replace a constructor
+
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
+
+### Step 4 — Remove the temporary experiment — Why a static block cannot replace a constructor
+
+[no highlight] Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
+
+### Step 5 — Return to the production example — Why a static block cannot replace a constructor
+
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
+
+## Lesson 96 — final, effectively final, and immutable values
+
+### Step 1 — Open the AeroTopo baseline — final, effectively final, and immutable values
+
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
+
+### Step 2 — Create the focused language experiment — final, effectively final, and immutable values
+
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
+
+### Step 3 — Run the focused language experiment — final, effectively final, and immutable values
+
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
+
+### Step 4 — Remove the temporary experiment — final, effectively final, and immutable values
+
+[no highlight] `final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
+
+### Step 5 — Return to the production example — final, effectively final, and immutable values
+
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
