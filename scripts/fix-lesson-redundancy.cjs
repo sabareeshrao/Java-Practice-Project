@@ -259,6 +259,19 @@ for(const r of rows){
  if(/\bundefined\b/i.test(r.step.question+r.step.why_te))throw new Error(`${loc(r)} undefined remains`);
 }
 const after=snapshot();
+function dumpRemaining(label,groups,field){
+  console.log("\n### "+label+" ("+groups.length+")");
+  groups.forEach((g,i)=>{
+    const uniq=[...new Map(g.map(r=>[loc(r),r])).values()];
+    console.log("GROUP "+(i+1)+": "+uniq.map(loc).join(", "));
+    const r=uniq[0];
+    console.log("TEXT: "+String(field==="question"?r.step.question:r.step.why_te).replace(/\s+/g," ").slice(0,800));
+  });
+}
+dumpRemaining("REMAINING EXACT QUESTIONS",exactGroups("question"),"question");
+dumpRemaining("REMAINING EXACT TELUGU",exactGroups("why_te"),"why_te");
+dumpRemaining("REMAINING REPEATED QUESTION SENTENCES",repeatedSentenceGroups("question"),"question");
+dumpRemaining("REMAINING REPEATED TELUGU SENTENCES",repeatedSentenceGroups("why_te"),"why_te");
 const hard=after.exactQuestionGroups+after.exactTeluguGroups+after.repeatedQuestionSentenceGroups+after.repeatedTeluguSentenceGroups+after.teluguScriptSteps+after.undefinedLeakSteps;
 if(hard)throw new Error("Targeted repair still has hard redundancy: "+JSON.stringify(after));
 
