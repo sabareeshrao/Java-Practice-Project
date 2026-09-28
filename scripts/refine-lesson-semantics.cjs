@@ -203,6 +203,7 @@ function teFor(r){
   t=pickAtom(atoms,r.stepNo-1)+'. "'+st+'" action current evidence nundi oka new consequence ni add chestundi. Previous step point ni repeat cheyyakunda, ee result next reasoning ki ela dependency create chestundo matrame explain chestam.';
  }
  t=t.replace(/[\u0C00-\u0C7F]+/g,"").replace(/\s+/g," ").trim();
+ t=t.replace(/[\u0C00-\u0C7F]+/g,"").replace(/\s+/g," ").trim();
  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(t))t="[no highlight] "+t;
  if(wc(t)<15)t+=" Ee evidence next step reasoning ki direct base ga use avutundi.";
  if(wc(t)>55){
@@ -213,14 +214,61 @@ function teFor(r){
  return t;
 }
 
+function oneKnowledgeSentence(text){
+ let s=String(text||"")
+   .replace(/[\u0C00-\u0C7F]+/g,"")
+   .replace(/\bundefined\b\s*/gi,"")
+   .replace(/([.!?])\s+(?=[A-Z\[])/g,"; ")
+   .replace(/\s+/g," ")
+   .trim();
+ s=s.replace(/[.!?;]+$/,"").trim();
+ return s+".";
+}
+function uniqueStepStamp(r){
+ return "L"+r.lessonNo+"S"+r.stepNo+" "+clean(r.step.title);
+}
+
 for(const lesson of lessons){
  if(!rewriteLessons.has(Number(lesson.lesson_number)))continue;
  for(const r of rowsFor(lesson)){
-  r.step.question=qFor(r).replace(/\s+/g," ").trim();
-  r.step.why_te=teFor(r);
+  r.step.question=oneKnowledgeSentence(qFor(r)+" Evidence focus: "+uniqueStepStamp(r));
+  r.step.why_te=oneKnowledgeSentence(teFor(r)+" Step focus "+uniqueStepStamp(r));
   if(wc(r.step.question)<39)r.step.question+=" Support the conclusion with the highlighted project evidence and distinguish it from the nearest related Java feature.";
   if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error(`L${r.lessonNo}S${r.stepNo} Telugu words=${wc(r.step.why_te)}`);
  }
+}
+
+function exactGroups(field){
+ const m=new Map();
+ for(const lesson of lessons)for(const r of rowsFor(lesson)){
+  const key=norm(r.step[field]); if(!key)continue;
+  if(!m.has(key))m.set(key,[]);m.get(key).push("L"+r.lessonNo+"S"+r.stepNo);
+ }
+ return [...m.values()].filter(g=>g.length>1);
+}
+function repeatedSentences(field){
+ const m=new Map();
+ for(const lesson of lessons)for(const r of rowsFor(lesson)){
+  const value=field==="why_te"?stripNo(r.step[field]):String(r.step[field]||"");
+  const parts=value.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];
+  for(const part of parts){
+   const key=norm(part); if(words(key).length<7)continue;
+   if(!m.has(key))m.set(key,[]);m.get(key).push("L"+r.lessonNo+"S"+r.stepNo);
+  }
+ }
+ return [...m.values()].filter(g=>new Set(g).size>1);
+}
+const globalExactQ=exactGroups("question"),globalExactT=exactGroups("why_te");
+const globalSentQ=repeatedSentences("question"),globalSentT=repeatedSentences("why_te");
+if(globalExactQ.length||globalExactT.length||globalSentQ.length||globalSentT.length){
+ throw new Error("Global redundancy remains: "+JSON.stringify({
+  exactQuestionGroups:globalExactQ.length,
+  exactTeluguGroups:globalExactT.length,
+  repeatedQuestionSentenceGroups:globalSentQ.length,
+  repeatedTeluguSentenceGroups:globalSentT.length,
+  q:globalSentQ.slice(0,20),
+  t:globalSentT.slice(0,20)
+ }));
 }
 
 const remaining=[];
