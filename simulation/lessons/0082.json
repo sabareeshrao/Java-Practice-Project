@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Why a constructor has the same name as its class",
-      "question": "The constructor name matches the class name so Java can identify the type's initialization member is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Why a constructor has the same name as its class\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.",
+      "question": "The constructor name matches the class name so Java can identify the type's initialization member is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Why a constructor has the same name as its class\" and connect the syntax to the initialization rule behind it. While working through \"Open the project evidence — Why a constructor has the\" in \"Why a constructor has the same name as its class\", which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Lesson 82 step 1 lo \"Open the project evidence — Why\" kosam SurveyProducts. Lesson 82 step 1 context lo, java ni use chesi \"Why a constructor has the same\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Trace the Java rule — Why a constructor has the same name as its class",
-      "question": "For \"Why a constructor has the same name as its class\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
-      "why_te": "Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.",
+      "question": "For \"Why a constructor has the same name as its class\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. While working through \"Trace the Java rule — Why a constructor has the\" in \"Why a constructor has the same name as its class\", examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. For the \"Why a constructor has the same name as its class\" lesson, use the \"Trace the Java rule — Why a constructor has the\" evidence, why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "Lesson 82 step 2 lo \"Trace the Java rule — Why\" kosam SurveyProducts. Lesson 82 step 2 context lo, java ni use chesi \"Why a constructor has the same\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Connect caller and object state — Why a constructor has the same name as its class",
-      "question": "A practical explanation of \"Why a constructor has the same name as its class\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
-      "why_te": "Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.",
+      "question": "A practical explanation of \"Why a constructor has the same name as its class\" should connect caller intent to what the class guarantees during initialization. For the \"Why a constructor has the same name as its class\" lesson, use the \"Connect caller and object state — Why a constructor has\" evidence, using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. At the \"Connect caller and object state — Why a constructor has\" stage of \"Why a constructor has the same name as its class\", how does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Lesson 82 step 3 lo \"Connect caller and object state —\" kosam SurveyProducts. Lesson 82 step 3 context lo, java ni use chesi \"Why a constructor has the same\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "State the interview rule — Why a constructor has the same name as its class",
-      "question": "Now summarize \"Why a constructor has the same name as its class\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.",
+      "question": "Now summarize \"Why a constructor has the same name as its class\" from the evidence instead of from memorized syntax. At the \"State the interview rule — Why a constructor has the\" stage of \"Why a constructor has the same name as its class\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Lesson 82 step 4 lo \"State the interview rule — Why\" kosam SurveyProducts. Lesson 82 step 4 context lo, java ni use chesi \"Why a constructor has the same\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

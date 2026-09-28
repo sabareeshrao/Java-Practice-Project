@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the binary-array partition method",
-      "question": "AeroTopo's `SurveyAlgorithms.binaryFlags` already solves the exact 0/1 arrangement problem in place. The method validates each element, counts how many zeros exist, then fills the left prefix with zeros and the remaining suffix with ones. Which lines implement validation, counting, and reconstruction of the partitioned array?",
-      "why_te": "SurveyAlgorithms.binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.",
+      "question": "AeroTopo's `SurveyAlgorithms. binaryFlags` already solves the exact 0/1 arrangement problem in place. The method validates each element, counts how many zeros exist, then fills the left prefix with zeros and the remaining suffix with ones. Which lines implement validation, counting, and reconstruction of the partitioned array?",
+      "why_te": "SurveyAlgorithms. binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,7 +62,7 @@
     },
     {
       "title": "Inspect how the partition is written back",
-      "question": "After the count is known, the first `Arrays.fill` writes zeros from index 0 up to the boundary, and the second fills the remainder with ones. Why can this reconstruction safely overwrite the original order when the problem cares only about grouping zeros left and ones right?",
+      "question": "After the count is known, the first `Arrays. fill` writes zeros from index 0 up to the boundary, and the second fills the remainder with ones. Why can this reconstruction safely overwrite the original order when the problem cares only about grouping zeros left and ones right?",
       "why_te": "Problem original 0/1 order preserve cheyyamani adagaledu. Zero count telisina taruvata prefix ni 0, suffix ni 1 ga fill cheyyachu. Grouping requirement complete avutundi.",
       "software": "intellij",
       "required_capability": "highlight-target",

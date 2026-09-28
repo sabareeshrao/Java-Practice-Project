@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open primitive variables in LanguageLab",
-      "question": "Java primitives store direct values rather than nullable object references. In `LanguageLab.classify`, the method uses an `int[]` parameter, an `int flags` local variable, and an enhanced-for `int code` variable. What do these declarations tell you about the value-oriented primitive model?",
-      "why_te": "LanguageLab.java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.",
+      "question": "Java primitives store direct values rather than nullable object references. In `LanguageLab. classify`, the method uses an `int[]` parameter, an `int flags` local variable, and an enhanced-for `int code` variable. What do these declarations tell you about the value-oriented primitive model?",
+      "why_te": "LanguageLab. java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -106,7 +106,7 @@
     {
       "title": "Replace the primitive with its wrapper type",
       "question": "`Integer` is a reference type, so it can represent either an Integer object or `null`. If the temporary code changes only `int count` to `Integer count`, why does the same null assignment become legal even though the related primitive type cannot hold null?",
-      "why_te": "Ippudu `int` place lo `Integer` wrapper use chestunnam. `Integer` reference type kabatti `null` store cheyyagaladu. Primitive `int` మాత్రం null ni accept cheyyadu.",
+      "why_te": "Lesson 28 step 5 lo \"Replace the primitive with its wrapper\" kosam PrimitiveNullDemo. java ni use chesi \"Primitive types cannot hold null\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "replace-code",
       "feature_available": true,

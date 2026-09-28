@@ -11,7 +11,7 @@
     {
       "title": "Open the AeroTopo inheritance baseline — Using super without an explicit superclass",
       "question": "What happens if you use the super keyword in a Class that does not explicitly have a Superclass? Before testing the edge case, inspect the valid AeroTopo hierarchy and identify the parent-child rule already being followed. Which highlighted declaration provides the baseline, and why should the unusual language case be isolated in a temporary file instead of altering the cumulative production model?",
-      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "why_te": "Lesson 132 step 1 lo \"Open the AeroTopo inheritance baseline —\" kosam SurveyProducts. Lesson 132 step 1 context lo, java ni use chesi \"Using super without an explicit superclass\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,7 +34,7 @@
     {
       "title": "Create the focused inheritance experiment — Using super without an explicit superclass",
       "question": "The temporary source for \"Using super without an explicit superclass\" isolates the exact inheritance rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result before execution. Which Java rule about superclass construction, implicit Object inheritance, or inheritance legality determines what should happen in this small example?",
-      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "why_te": "Lesson 132 step 2 lo \"Create the focused inheritance experiment —\" kosam ImplicitObjectSuperDemo. Lesson 132 step 2 context lo, java ni use chesi \"Using super without an explicit superclass\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,7 +61,7 @@
     {
       "title": "Run the inheritance experiment — Using super without an explicit superclass",
       "question": "The focused program for \"Using super without an explicit superclass\" now provides direct compiler or runtime evidence. Compare the result with the source and explain why Java produced that behavior. Which common misconception about constructors, superclasses, or inheritance does this observation remove, and how does it relate back to the valid AeroTopo hierarchy?",
-      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "why_te": "\"Using super without an explicit superclass\" lo \"Run the inheritance experiment — Using super\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the inheritance experiment — Using super\" point previous explanation repeat cheyyakunda \"Using super without an explicit superclass\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "Remove the temporary inheritance experiment — Using super without an explicit superclass",
-      "question": "The temporary example for \"Using super without an explicit superclass\" has proved the language rule and should not remain as duplicate lesson-only code. After deleting it, preserve the compiler or runtime behavior as evidence. Why is cleanup necessary for keeping later lessons on one cumulative AeroTopo project rather than accumulating artificial inheritance examples?",
-      "why_te": "[no highlight] Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "question": "The temporary example for \"Using super without an explicit superclass\" has proved the language rule and should not remain as duplicate lesson-only code. At the \"Remove the temporary inheritance experiment — Using super without an\" stage of \"Using super without an explicit superclass\", after deleting it, preserve the compiler or runtime behavior as evidence. Why is cleanup necessary for keeping later lessons on one cumulative AeroTopo project rather than accumulating artificial inheritance examples?",
+      "why_te": "[no highlight] Lesson 132 step 4 lo \"Remove the temporary inheritance experiment —\" kosam ImplicitObjectSuperDemo. Lesson 132 step 4 context lo, java ni use chesi \"Using super without an explicit superclass\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -100,8 +100,8 @@
     },
     {
       "title": "Return to the production hierarchy — Using super without an explicit superclass",
-      "question": "With the temporary source removed, return to the AeroTopo hierarchy and answer \"What happens if you use the super keyword in a Class that does not explicitly have a Superclass?\" using both the production example and the focused experiment. How would you explain the rule, its practical consequence, and the reason AeroTopo's current inheritance design stays valid and maintainable?",
-      "why_te": "Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.",
+      "question": "With the temporary source removed, return to the AeroTopo hierarchy and answer \"What happens if you use the super keyword in a Class that does not explicitly have a Superclass? \" using both the production example and the focused experiment. How would you explain the rule, its practical consequence, and the reason AeroTopo's current inheritance design stays valid and maintainable?",
+      "why_te": "\"Using super without an explicit superclass\" context lo SurveyProducts. java meeda focus chestam. \"Return to the production hierarchy — Using super without\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

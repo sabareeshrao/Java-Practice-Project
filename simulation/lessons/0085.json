@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Best practices for naming Java packages",
-      "question": "The AeroTopo source already contains a concrete example for \"Best practices for naming Java packages\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The package root and imported subpackages show a stable lowercase naming convention with responsibility-based boundaries. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.",
+      "question": "The AeroTopo source already contains a concrete example for \"Best practices for naming Java packages\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The package root and imported subpackages show a stable lowercase naming convention with responsibility-based boundaries. Using \"Open the project evidence — Best practices for naming Java\" as the concrete case for \"Best practices for naming Java packages\", which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
+      "why_te": "Lesson 85 step 1 lo \"Open the project evidence — Best\" kosam ProjectService. Lesson 85 step 1 context lo, java ni use chesi \"Best practices for naming Java packages\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the boundary — Best practices for naming Java packages",
-      "question": "A useful answer for \"Best practices for naming Java packages\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. Why is this arrangement safer than putting every class and field into one flat namespace?",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.",
+      "question": "A useful answer for \"Best practices for naming Java packages\" should explain both the Java rule and the maintainability reason behind it. Using \"Trace the boundary — Best practices for naming Java packages\" as the concrete case for \"Best practices for naming Java packages\", look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. From the \"Trace the boundary — Best practices for naming Java packages\" result in \"Best practices for naming Java packages\", why is this arrangement safer than putting every class and field into one flat namespace?",
+      "why_te": "Lesson 85 step 2 lo \"Trace the boundary — Best practices\" kosam ProjectService. Lesson 85 step 2 context lo, java ni use chesi \"Best practices for naming Java packages\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Evaluate maintainability — Best practices for naming Java packages",
-      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Best practices for naming Java packages\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.",
+      "question": "Using \"Evaluate maintainability — Best practices for naming Java packages\" as the concrete case for \"Best practices for naming Java packages\", enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Best practices for naming Java packages\", trace how one class reaches another or how state is protected across boundaries. While working through \"Evaluate maintainability — Best practices for naming Java packages\" in \"Best practices for naming Java packages\", what would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
+      "why_te": "Lesson 85 step 3 lo \"Evaluate maintainability — Best practices for\" kosam ProjectService. Lesson 85 step 3 context lo, java ni use chesi \"Best practices for naming Java packages\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview rule — Best practices for naming Java packages",
-      "question": "Now turn the project evidence for \"Best practices for naming Java packages\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.",
+      "question": "Now turn the project evidence for \"Best practices for naming Java packages\" into an interview answer. While working through \"State the interview rule — Best practices for naming Java\" in \"Best practices for naming Java packages\", how would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
+      "why_te": "Lesson 85 step 4 lo \"State the interview rule — Best\" kosam ProjectService. Lesson 85 step 4 context lo, java ni use chesi \"Best practices for naming Java packages\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

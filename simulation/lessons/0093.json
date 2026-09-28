@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid AeroTopo context — What happens when two packages contain the same class name",
-      "question": "Before testing the edge case behind \"What happens when two packages contain the same class name\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. What rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "Before testing the edge case behind \"What happens when two packages contain the same class name\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. While working through \"Open the valid AeroTopo context — What happens when two\" in \"What happens when two packages contain the same class name\", what rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
+      "why_te": "Lesson 93 step 1 lo \"Open the valid AeroTopo context —\" kosam ProjectService. Lesson 93 step 1 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Create labs/java/pkgone/Tile.java — What happens when two packages contain the same class name",
-      "question": "The temporary source labs/java/pkgone/Tile.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The temporary source labs/java/pkgone/Tile. For the \"What happens when two packages contain the same class name\" lesson, use the \"Create labs/java/pkgone/Tile. java — What happens when two packages contain the\" evidence, java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. At the \"Create labs/java/pkgone/Tile. java — What happens when two packages contain the\" stage of \"What happens when two packages contain the same class name\", read this declaration and predict how the compiler will interpret its visibility or name resolution. Using \"Create labs/java/pkgone/Tile. java — What happens when two packages contain the\" as the concrete case for \"What happens when two packages contain the same class name\", which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Lesson 93 step 2 lo \"Create labs/java/pkgone/Tile. Lesson 93 step 2 context lo, java — What happens when\" kosam Tile. Lesson 93 step 2 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Create labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name",
-      "question": "The temporary source labs/java/pkgtwo/Tile.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The temporary source labs/java/pkgtwo/Tile. At the \"Create labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" stage of \"What happens when two packages contain the same class name\", java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Using \"Create labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" as the concrete case for \"What happens when two packages contain the same class name\", read this declaration and predict how the compiler will interpret its visibility or name resolution. From the \"Create labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" result in \"What happens when two packages contain the same class name\", which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Lesson 93 step 3 lo \"Create labs/java/pkgtwo/Tile. Lesson 93 step 3 context lo, java — What happens when\" kosam Tile. Lesson 93 step 3 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Create labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name",
-      "question": "The temporary source labs/java/PackageNameCollisionDemo.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The temporary source labs/java/PackageNameCollisionDemo. Using \"Create labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" as the concrete case for \"What happens when two packages contain the same class name\", java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. From the \"Create labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" result in \"What happens when two packages contain the same class name\", read this declaration and predict how the compiler will interpret its visibility or name resolution. While working through \"Create labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" in \"What happens when two packages contain the same class name\", which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Lesson 93 step 4 lo \"Create labs/java/PackageNameCollisionDemo. Lesson 93 step 4 context lo, java — What happens when\" kosam PackageNameCollisionDemo. Lesson 93 step 4 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -109,8 +109,8 @@
     },
     {
       "title": "Run the package/access experiment — What happens when two packages contain the same class name",
-      "question": "The temporary sources for \"What happens when two packages contain the same class name\" are now compiled or executed together so the rule becomes observable rather than theoretical. Compare the result with the declarations you just inspected. What does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The temporary sources for \"What happens when two packages contain the same class name\" are now compiled or executed together so the rule becomes observable rather than theoretical. From the \"Run the package/access experiment — What happens when two packages\" result in \"What happens when two packages contain the same class name\", compare the result with the declarations you just inspected. While working through \"Run the package/access experiment — What happens when two packages\" in \"What happens when two packages contain the same class name\", what does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
+      "why_te": "\"Run the package/access experiment — What happens when two\" step result observation meeda focus chestundi. \"What happens when two packages contain the same\" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -131,8 +131,8 @@
     },
     {
       "title": "Remove labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name",
-      "question": "The labs/java/PackageNameCollisionDemo.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
-      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The labs/java/PackageNameCollisionDemo. While working through \"Remove labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" in \"What happens when two packages contain the same class name\", java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. For the \"What happens when two packages contain the same class name\" lesson, use the \"Remove labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" evidence, removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. At the \"Remove labs/java/PackageNameCollisionDemo. java — What happens when two packages contain the\" stage of \"What happens when two packages contain the same class name\", why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Lesson 93 step 6 lo \"Remove labs/java/PackageNameCollisionDemo. Lesson 93 step 6 context lo, java — What happens when\" kosam PackageNameCollisionDemo. Lesson 93 step 6 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -149,8 +149,8 @@
     },
     {
       "title": "Remove labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name",
-      "question": "The labs/java/pkgtwo/Tile.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
-      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The labs/java/pkgtwo/Tile. For the \"What happens when two packages contain the same class name\" lesson, use the \"Remove labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" evidence, java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. At the \"Remove labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" stage of \"What happens when two packages contain the same class name\", removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Using \"Remove labs/java/pkgtwo/Tile. java — What happens when two packages contain the\" as the concrete case for \"What happens when two packages contain the same class name\", why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Lesson 93 step 7 lo \"Remove labs/java/pkgtwo/Tile. Lesson 93 step 7 context lo, java — What happens when\" kosam Tile. Lesson 93 step 7 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -167,8 +167,8 @@
     },
     {
       "title": "Remove labs/java/pkgone/Tile.java — What happens when two packages contain the same class name",
-      "question": "The labs/java/pkgone/Tile.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
-      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "The labs/java/pkgone/Tile. At the \"Remove labs/java/pkgone/Tile. java — What happens when two packages contain the\" stage of \"What happens when two packages contain the same class name\", java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Using \"Remove labs/java/pkgone/Tile. java — What happens when two packages contain the\" as the concrete case for \"What happens when two packages contain the same class name\", removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. From the \"Remove labs/java/pkgone/Tile. java — What happens when two packages contain the\" result in \"What happens when two packages contain the same class name\", why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Lesson 93 step 8 lo \"Remove labs/java/pkgone/Tile. Lesson 93 step 8 context lo, java — What happens when\" kosam Tile. Lesson 93 step 8 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -185,8 +185,8 @@
     },
     {
       "title": "Return to the real project structure — What happens when two packages contain the same class name",
-      "question": "With every temporary source for \"What happens when two packages contain the same class name\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. How would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
-      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "question": "With every temporary source for \"What happens when two packages contain the same class name\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. Using \"Return to the real project structure — What happens when\" as the concrete case for \"What happens when two packages contain the same class name\", how would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
+      "why_te": "Lesson 93 step 9 lo \"Return to the real project structure\" kosam ProjectService. Lesson 93 step 9 context lo, java ni use chesi \"What happens when two packages contain\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

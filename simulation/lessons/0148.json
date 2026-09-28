@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — How Java achieves polymorphism",
-      "question": "How does Java achieve polymorphism? Use the AeroTopo code as the starting point rather than answering from terminology alone. Product supplies one parent contract with two overridden implementations. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.",
+      "question": "How does Java achieve polymorphism? While working through \"Open the polymorphism evidence — How Java achieves polymorphism\" in \"How Java achieves polymorphism\", use the AeroTopo code as the starting point rather than answering from terminology alone. Product supplies one parent contract with two overridden implementations. At the \"Open the polymorphism evidence — How Java achieves polymorphism\" stage of \"How Java achieves polymorphism\", inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "\"How Java achieves polymorphism\" lo \"Open the polymorphism evidence — How Java achieves\" context lo, \"How Java achieves polymorphism\" context lo SurveyProducts. java meeda focus chestam. \"Open the polymorphism evidence — How Java achieves polymorphism\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Trace method selection — How Java achieves polymorphism",
-      "question": "For \"How Java achieves polymorphism\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.",
+      "question": "For \"How Java achieves polymorphism\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. For the \"How Java achieves polymorphism\" lesson, use the \"Trace method selection — How Java achieves polymorphism\" evidence, which of those pieces controls method selection in this example, and which details do not participate? At the \"Trace method selection — How Java achieves polymorphism\" stage of \"How Java achieves polymorphism\", why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Lesson 148 step 2 lo \"Trace method selection — How Java\" kosam SurveyProducts. Lesson 148 step 2 context lo, java ni use chesi \"How Java achieves polymorphism\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Evaluate the design contract — How Java achieves polymorphism",
-      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"How Java achieves polymorphism\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.",
+      "question": "For the \"How Java achieves polymorphism\" lesson, use the \"Evaluate the design contract — How Java achieves polymorphism\" evidence, a production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"How Java achieves polymorphism\", explain what contract callers depend on and what implementations may vary. Using \"Evaluate the design contract — How Java achieves polymorphism\" as the concrete case for \"How Java achieves polymorphism\", what maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Lesson 148 step 3 lo \"Evaluate the design contract — How\" kosam SurveyProducts. Lesson 148 step 3 context lo, java ni use chesi \"How Java achieves polymorphism\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "State the interview answer — How Java achieves polymorphism",
-      "question": "Now answer the interview question \"How does Java achieve polymorphism?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.",
+      "question": "Now answer the interview question \"How does Java achieve polymorphism? \" directly from the evidence. From the \"State the interview answer — How Java achieves polymorphism\" result in \"How Java achieves polymorphism\", state the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. While working through \"State the interview answer — How Java achieves polymorphism\" in \"How Java achieves polymorphism\", how would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "\"How Java achieves polymorphism\" lo \"State the interview answer — How Java achieves\" context lo, \"How Java achieves polymorphism\" context lo SurveyProducts. java meeda focus chestam. \"State the interview answer — How Java achieves polymorphism\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

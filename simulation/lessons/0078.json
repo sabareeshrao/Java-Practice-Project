@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Why constructors are not overridden",
-      "question": "Constructors belong to their declaring class and are not inherited as overridable methods is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Why constructors are not overridden\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.",
+      "question": "Constructors belong to their declaring class and are not inherited as overridable methods is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Why constructors are not overridden\" and connect the syntax to the initialization rule behind it. For the \"Why constructors are not overridden\" lesson, use the \"Open the project evidence — Why constructors are not overridden\" evidence, which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Lesson 78 step 1 lo \"Open the project evidence — Why\" kosam SurveyProducts. Lesson 78 step 1 context lo, java ni use chesi \"Why constructors are not overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Trace the Java rule — Why constructors are not overridden",
-      "question": "For \"Why constructors are not overridden\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
-      "why_te": "Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.",
+      "question": "For \"Why constructors are not overridden\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. For the \"Why constructors are not overridden\" lesson, use the \"Trace the Java rule — Why constructors are not overridden\" evidence, examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. At the \"Trace the Java rule — Why constructors are not overridden\" stage of \"Why constructors are not overridden\", why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "\"Why constructors are not overridden\" context lo SurveyProducts. java meeda focus chestam. \"Trace the Java rule — Why constructors are not\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Connect caller and object state — Why constructors are not overridden",
-      "question": "A practical explanation of \"Why constructors are not overridden\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
-      "why_te": "Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.",
+      "question": "A practical explanation of \"Why constructors are not overridden\" should connect caller intent to what the class guarantees during initialization. At the \"Connect caller and object state — Why constructors are not\" stage of \"Why constructors are not overridden\", using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. Using \"Connect caller and object state — Why constructors are not\" as the concrete case for \"Why constructors are not overridden\", how does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Lesson 78 step 3 lo \"Connect caller and object state —\" kosam SurveyProducts. Lesson 78 step 3 context lo, java ni use chesi \"Why constructors are not overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "State the interview rule — Why constructors are not overridden",
-      "question": "Now summarize \"Why constructors are not overridden\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.",
+      "question": "Now summarize \"Why constructors are not overridden\" from the evidence instead of from memorized syntax. Using \"State the interview rule — Why constructors are not overridden\" as the concrete case for \"Why constructors are not overridden\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Lesson 78 step 4 lo \"State the interview rule — Why\" kosam SurveyProducts. Lesson 78 step 4 context lo, java ni use chesi \"Why constructors are not overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

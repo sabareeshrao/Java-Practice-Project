@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Superclass constructor runs before subclass construction",
-      "question": "If class B extends class A and both have constructors, which constructor is called first when creating an object of B? Start with the AeroTopo implementation instead of a memorized definition. The constructor body visibly calls Product before the child field is assigned. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "question": "If class B extends class A and both have constructors, which constructor is called first when creating an object of B? From the \"Open the inheritance evidence — Superclass constructor runs before subclass\" result in \"Superclass constructor runs before subclass construction\", start with the AeroTopo implementation instead of a memorized definition. The constructor body visibly calls Product before the child field is assigned. For the \"Superclass constructor runs before subclass construction\" lesson, use the \"Open the inheritance evidence — Superclass constructor runs before subclass\" evidence, inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. At the \"Open the inheritance evidence — Superclass constructor runs before subclass\" stage of \"Superclass constructor runs before subclass construction\", how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Lesson 122 step 1 lo \"Open the inheritance evidence — Superclass\" kosam SurveyProducts. Lesson 122 step 1 context lo, java ni use chesi \"Superclass constructor runs before subclass construction\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Trace the parent-child rule — Superclass constructor runs before subclass construction",
-      "question": "For \"Superclass constructor runs before subclass construction\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "question": "For \"Superclass constructor runs before subclass construction\", trace the relationship from the superclass or interface down to the concrete child. While working through \"Trace the parent-child rule — Superclass constructor runs before subclass\" in \"Superclass constructor runs before subclass construction\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? For the \"Superclass constructor runs before subclass construction\" lesson, use the \"Trace the parent-child rule — Superclass constructor runs before subclass\" evidence, why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Lesson 122 step 2 lo \"Trace the parent-child rule — Superclass\" kosam SurveyProducts. Lesson 122 step 2 context lo, java ni use chesi \"Superclass constructor runs before subclass construction\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Superclass constructor runs before subclass construction",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Superclass constructor runs before subclass construction\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "question": "While working through \"Evaluate the hierarchy design — Superclass constructor runs before subclass\" in \"Superclass constructor runs before subclass construction\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Superclass constructor runs before subclass construction\", explain what contract the parent establishes and what freedom the child retains. At the \"Evaluate the hierarchy design — Superclass constructor runs before subclass\" stage of \"Superclass constructor runs before subclass construction\", what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "\"Superclass constructor runs before subclass construction\" context lo SurveyProducts. java meeda focus chestam. \"Evaluate the hierarchy design — Superclass constructor runs before\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "State the interview answer — Superclass constructor runs before subclass construction",
-      "question": "Now answer the interview question \"If class B extends class A and both have constructors, which constructor is called first when creating an object of B?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.",
+      "question": "Now answer the interview question \"If class B extends class A and both have constructors, which constructor is called first when creating an object of B? \" from the project evidence. Using \"State the interview answer — Superclass constructor runs before subclass\" as the concrete case for \"Superclass constructor runs before subclass construction\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. From the \"State the interview answer — Superclass constructor runs before subclass\" result in \"Superclass constructor runs before subclass construction\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Lesson 122 step 4 lo \"State the interview answer — Superclass\" kosam SurveyProducts. Lesson 122 step 4 context lo, java ni use chesi \"Superclass constructor runs before subclass construction\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

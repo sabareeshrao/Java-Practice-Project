@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — Constructors are not polymorphic",
-      "question": "Can a Constructor be polymorphic? Use the AeroTopo code as the starting point rather than answering from terminology alone. Constructors and overridden instance methods are visible side by side in the hierarchy. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "question": "Can a Constructor be polymorphic? For the \"Constructors are not polymorphic\" lesson, use the \"Open the polymorphism evidence — Constructors are not polymorphic\" evidence, use the AeroTopo code as the starting point rather than answering from terminology alone. Constructors and overridden instance methods are visible side by side in the hierarchy. Using \"Open the polymorphism evidence — Constructors are not polymorphic\" as the concrete case for \"Constructors are not polymorphic\", inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "\"Constructors are not polymorphic\" lo \"Open the polymorphism evidence — Constructors are not\" context lo, \"Constructors are not polymorphic\" context lo SurveyProducts. java meeda focus chestam. \"Open the polymorphism evidence — Constructors are not polymorphic\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -40,8 +40,8 @@
     },
     {
       "title": "Trace method selection — Constructors are not polymorphic",
-      "question": "For \"Constructors are not polymorphic\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "question": "For \"Constructors are not polymorphic\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. At the \"Trace method selection — Constructors are not polymorphic\" stage of \"Constructors are not polymorphic\", which of those pieces controls method selection in this example, and which details do not participate? Using \"Trace method selection — Constructors are not polymorphic\" as the concrete case for \"Constructors are not polymorphic\", why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Lesson 154 step 2 lo \"Trace method selection — Constructors are\" kosam SurveyProducts. Lesson 154 step 2 context lo, java ni use chesi \"Constructors are not polymorphic\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -70,8 +70,8 @@
     },
     {
       "title": "Evaluate the design contract — Constructors are not polymorphic",
-      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Constructors are not polymorphic\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "question": "At the \"Evaluate the design contract — Constructors are not polymorphic\" stage of \"Constructors are not polymorphic\", a production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Constructors are not polymorphic\", explain what contract callers depend on and what implementations may vary. From the \"Evaluate the design contract — Constructors are not polymorphic\" result in \"Constructors are not polymorphic\", what maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Lesson 154 step 3 lo \"Evaluate the design contract — Constructors\" kosam SurveyProducts. Lesson 154 step 3 context lo, java ni use chesi \"Constructors are not polymorphic\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -100,8 +100,8 @@
     },
     {
       "title": "State the interview answer — Constructors are not polymorphic",
-      "question": "Now answer the interview question \"Can a Constructor be polymorphic?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.",
+      "question": "Now answer the interview question \"Can a Constructor be polymorphic? \" directly from the evidence. While working through \"State the interview answer — Constructors are not polymorphic\" in \"Constructors are not polymorphic\", state the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. For the \"Constructors are not polymorphic\" lesson, use the \"State the interview answer — Constructors are not polymorphic\" evidence, how would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "\"Constructors are not polymorphic\" lo \"State the interview answer — Constructors are not\" context lo, \"Constructors are not polymorphic\" context lo SurveyProducts. java meeda focus chestam. \"State the interview answer — Constructors are not polymorphic\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

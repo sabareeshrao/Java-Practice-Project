@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Multiple inheritance in Java",
-      "question": "Is Multiple Inheritance possible in Java? Start with the AeroTopo implementation instead of a memorized definition. Product and Units demonstrate legal multiple interface inheritance without multiple superclass inheritance. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.",
+      "question": "Is Multiple Inheritance possible in Java? While working through \"Open the inheritance evidence — Multiple inheritance in Java\" in \"Multiple inheritance in Java\", start with the AeroTopo implementation instead of a memorized definition. Product and Units demonstrate legal multiple interface inheritance without multiple superclass inheritance. At the \"Open the inheritance evidence — Multiple inheritance in Java\" stage of \"Multiple inheritance in Java\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. Using \"Open the inheritance evidence — Multiple inheritance in Java\" as the concrete case for \"Multiple inheritance in Java\", how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Lesson 128 step 1 lo \"Open the inheritance evidence — Multiple\" kosam SurveyProducts. Lesson 128 step 1 context lo, java ni use chesi \"Multiple inheritance in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the parent-child rule — Multiple inheritance in Java",
-      "question": "For \"Multiple inheritance in Java\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.",
+      "question": "For \"Multiple inheritance in Java\", trace the relationship from the superclass or interface down to the concrete child. For the \"Multiple inheritance in Java\" lesson, use the \"Trace the parent-child rule — Multiple inheritance in Java\" evidence, which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? At the \"Trace the parent-child rule — Multiple inheritance in Java\" stage of \"Multiple inheritance in Java\", why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Lesson 128 step 2 lo \"Trace the parent-child rule — Multiple\" kosam SurveyProducts. Lesson 128 step 2 context lo, java ni use chesi \"Multiple inheritance in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Multiple inheritance in Java",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Multiple inheritance in Java\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.",
+      "question": "For the \"Multiple inheritance in Java\" lesson, use the \"Evaluate the hierarchy design — Multiple inheritance in Java\" evidence, a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Multiple inheritance in Java\", explain what contract the parent establishes and what freedom the child retains. Using \"Evaluate the hierarchy design — Multiple inheritance in Java\" as the concrete case for \"Multiple inheritance in Java\", what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "\"Multiple inheritance in Java\" context lo SurveyProducts. java meeda focus chestam. \"Evaluate the hierarchy design — Multiple inheritance in Java\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview answer — Multiple inheritance in Java",
-      "question": "Now answer the interview question \"Is Multiple Inheritance possible in Java?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.",
+      "question": "Now answer the interview question \"Is Multiple Inheritance possible in Java? \" from the project evidence. From the \"State the interview answer — Multiple inheritance in Java\" result in \"Multiple inheritance in Java\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. While working through \"State the interview answer — Multiple inheritance in Java\" in \"Multiple inheritance in Java\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Lesson 128 step 4 lo \"State the interview answer — Multiple\" kosam SurveyProducts. Lesson 128 step 4 context lo, java ni use chesi \"Multiple inheritance in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid project baseline — Using a no-argument call when only a parameterized constructor exists",
-      "question": "Declaring a parameterized constructor suppresses the compiler-provided default no-argument constructor is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Using a no-argument call when only a parameterized constructor exists\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "Declaring a parameterized constructor suppresses the compiler-provided default no-argument constructor is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Using a no-argument call when only a parameterized constructor exists\" and connect the syntax to the initialization rule behind it. For the \"Using a no-argument call when only a parameterized constructor exists\" lesson, use the \"Open the valid project baseline — Using a no-argument call\" evidence, which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Lesson 83 step 1 lo \"Open the valid project baseline —\" kosam SurveyProducts. Lesson 83 step 1 context lo, java ni use chesi \"Using a no-argument call when only\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The edge case behind \"Using a no-argument call when only a parameterized constructor exists\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The edge case behind \"Using a no-argument call when only a parameterized constructor exists\" should be isolated from production code so the compiler or runtime result is unambiguous. For the \"Using a no-argument call when only a parameterized constructor exists\" lesson, use the \"Create the focused experiment — Using a no-argument call when\" evidence, read this temporary class and predict the result before execution. At the \"Create the focused experiment — Using a no-argument call when\" stage of \"Using a no-argument call when only a parameterized constructor exists\", which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
+      "why_te": "Lesson 83 step 2 lo \"Create the focused experiment — Using\" kosam ParameterizedOnlyDemo. Lesson 83 step 2 context lo, java ni use chesi \"Using a no-argument call when only\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -63,8 +63,8 @@
     },
     {
       "title": "Run the focused experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The temporary program for \"Using a no-argument call when only a parameterized constructor exists\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The temporary program for \"Using a no-argument call when only a parameterized constructor exists\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. At the \"Run the focused experiment — Using a no-argument call when\" stage of \"Using a no-argument call when only a parameterized constructor exists\", compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Using \"Run the focused experiment — Using a no-argument call when\" as the concrete case for \"Using a no-argument call when only a parameterized constructor exists\", which common interview misconception can be rejected because of this concrete behavior?",
+      "why_te": "\"Run the focused experiment — Using a no-argument call\" step result observation meeda focus chestundi. \"Using a no-argument call when only a parameterized\" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Remove the temporary experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The demonstration for \"Using a no-argument call when only a parameterized constructor exists\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
-      "why_te": "[no highlight] Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The demonstration for \"Using a no-argument call when only a parameterized constructor exists\" has served its purpose and should not remain as duplicate or intentionally unusual application code. Using \"Remove the temporary experiment — Using a no-argument call when\" as the concrete case for \"Using a no-argument call when only a parameterized constructor exists\", after deleting it, preserve only the learned rule and the observed evidence. From the \"Remove the temporary experiment — Using a no-argument call when\" result in \"Using a no-argument call when only a parameterized constructor exists\", why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
+      "why_te": "[no highlight] Lesson 83 step 4 lo \"Remove the temporary experiment — Using\" kosam ParameterizedOnlyDemo. Lesson 83 step 4 context lo, java ni use chesi \"Using a no-argument call when only\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "Return to production code — Using a no-argument call when only a parameterized constructor exists",
-      "question": "Now summarize \"Using a no-argument call when only a parameterized constructor exists\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "Now summarize \"Using a no-argument call when only a parameterized constructor exists\" from the evidence instead of from memorized syntax. From the \"Return to production code — Using a no-argument call when\" result in \"Using a no-argument call when only a parameterized constructor exists\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Lesson 83 step 5 lo \"Return to production code — Using\" kosam SurveyProducts. Lesson 83 step 5 context lo, java ni use chesi \"Using a no-argument call when only\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

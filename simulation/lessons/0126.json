@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Inheritance and its types in Java",
-      "question": "Can you please explain the concept of inheritance in Java and its types? Start with the AeroTopo implementation instead of a memorized definition. The Product hierarchy gives a concrete hierarchical inheritance example plus multiple interface contracts. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.",
+      "question": "Can you please explain the concept of inheritance in Java and its types? Using \"Open the inheritance evidence — Inheritance and its types in\" as the concrete case for \"Inheritance and its types in Java\", start with the AeroTopo implementation instead of a memorized definition. The Product hierarchy gives a concrete hierarchical inheritance example plus multiple interface contracts. While working through \"Open the inheritance evidence — Inheritance and its types in\" in \"Inheritance and its types in Java\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. For the \"Inheritance and its types in Java\" lesson, use the \"Open the inheritance evidence — Inheritance and its types in\" evidence, how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Lesson 126 step 1 lo \"Open the inheritance evidence — Inheritance\" kosam SurveyProducts. Lesson 126 step 1 context lo, java ni use chesi \"Inheritance and its types in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the parent-child rule — Inheritance and its types in Java",
-      "question": "For \"Inheritance and its types in Java\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.",
+      "question": "For \"Inheritance and its types in Java\", trace the relationship from the superclass or interface down to the concrete child. From the \"Trace the parent-child rule — Inheritance and its types in\" result in \"Inheritance and its types in Java\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? While working through \"Trace the parent-child rule — Inheritance and its types in\" in \"Inheritance and its types in Java\", why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "\"Inheritance and its types in Java\" context lo SurveyProducts. java meeda focus chestam. \"Trace the parent-child rule — Inheritance and its types\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Inheritance and its types in Java",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Inheritance and its types in Java\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.",
+      "question": "From the \"Evaluate the hierarchy design — Inheritance and its types in\" result in \"Inheritance and its types in Java\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Inheritance and its types in Java\", explain what contract the parent establishes and what freedom the child retains. For the \"Inheritance and its types in Java\" lesson, use the \"Evaluate the hierarchy design — Inheritance and its types in\" evidence, what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Lesson 126 step 3 lo \"Evaluate the hierarchy design — Inheritance\" kosam SurveyProducts. Lesson 126 step 3 context lo, java ni use chesi \"Inheritance and its types in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview answer — Inheritance and its types in Java",
-      "question": "Now answer the interview question \"Can you please explain the concept of inheritance in Java and its types?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.",
+      "question": "Now answer the interview question \"Can you please explain the concept of inheritance in Java and its types? \" from the project evidence. At the \"State the interview answer — Inheritance and its types in\" stage of \"Inheritance and its types in Java\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. Using \"State the interview answer — Inheritance and its types in\" as the concrete case for \"Inheritance and its types in Java\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Lesson 126 step 4 lo \"State the interview answer — Inheritance\" kosam SurveyProducts. Lesson 126 step 4 context lo, java ni use chesi \"Inheritance and its types in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

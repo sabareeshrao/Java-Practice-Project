@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Start from Java's existing reference method",
-      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses. In `RuntimeLab.references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code?",
+      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses. In `RuntimeLab. references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code?",
       "why_te": "`Object point` method ki object reference istundi. Code object ni use cheyyagaladu, kani address ni read cheyyadam leda pointer arithmetic cheyyadam kanipinchadu.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -162,7 +162,7 @@
     {
       "title": "Return to RuntimeLab after the experiment",
       "question": "Java's managed references support ordinary application work while allowing the runtime to enforce type and memory-safety rules. Returning to the real project method, which design benefits become clearer when you compare this model with unrestricted pointer arithmetic and manual dereferencing?",
-      "why_te": "RuntimeLab.java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.",
+      "why_te": "RuntimeLab. java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

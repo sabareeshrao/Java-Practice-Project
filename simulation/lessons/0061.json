@@ -68,8 +68,8 @@
     },
     {
       "title": "Inspect an actual Orthomosaic object created in a test",
-      "question": "The JUnit code creates an object with id `ORTHO`, one source tile, and resolution `0.05`, then asks that object for behavior such as equality and tile ownership. Which parts of the expression are class names and which parts are instance-specific values supplied to this one object?",
-      "why_te": "`SurveyProducts.Orthomosaic` class type. `ORTHO`, source list, `0.05` instance values. `new` expression one concrete object create chestundi.",
+      "question": "The JUnit code creates an object with id `ORTHO`, one source tile, and resolution `0. 05`, then asks that object for behavior such as equality and tile ownership. Which parts of the expression are class names and which parts are instance-specific values supplied to this one object?",
+      "why_te": "`SurveyProducts. Orthomosaic` class type. `ORTHO`, source list, `0. 05` instance values. `new` expression one concrete object create chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

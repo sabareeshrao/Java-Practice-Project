@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Effect of final methods on inheritance",
-      "question": "What's the impact of declaring a method as final on inheritance? Start with the AeroTopo implementation instead of a memorized definition. Product.id() is final while subclasses still override other non-final behavior. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "question": "What's the impact of declaring a method as final on inheritance? At the \"Open the inheritance evidence — Effect of final methods on\" stage of \"Effect of final methods on inheritance\", start with the AeroTopo implementation instead of a memorized definition. Product. id() is final while subclasses still override other non-final behavior. While working through \"Open the inheritance evidence — Effect of final methods on\" in \"Effect of final methods on inheritance\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. For the \"Effect of final methods on inheritance\" lesson, use the \"Open the inheritance evidence — Effect of final methods on\" evidence, how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Lesson 125 step 1 lo \"Open the inheritance evidence — Effect\" kosam SurveyProducts. Lesson 125 step 1 context lo, java ni use chesi \"Effect of final methods on inheritance\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the parent-child rule — Effect of final methods on inheritance",
-      "question": "For \"Effect of final methods on inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "question": "For \"Effect of final methods on inheritance\", trace the relationship from the superclass or interface down to the concrete child. Using \"Trace the parent-child rule — Effect of final methods on\" as the concrete case for \"Effect of final methods on inheritance\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? From the \"Trace the parent-child rule — Effect of final methods on\" result in \"Effect of final methods on inheritance\", why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Lesson 125 step 2 lo \"Trace the parent-child rule — Effect\" kosam SurveyProducts. Lesson 125 step 2 context lo, java ni use chesi \"Effect of final methods on inheritance\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Effect of final methods on inheritance",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Effect of final methods on inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "question": "Using \"Evaluate the hierarchy design — Effect of final methods on\" as the concrete case for \"Effect of final methods on inheritance\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Effect of final methods on inheritance\", explain what contract the parent establishes and what freedom the child retains. While working through \"Evaluate the hierarchy design — Effect of final methods on\" in \"Effect of final methods on inheritance\", what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "\"Effect of final methods on inheritance\" context lo SurveyProducts. java meeda focus chestam. \"Evaluate the hierarchy design — Effect of final methods\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview answer — Effect of final methods on inheritance",
-      "question": "Now answer the interview question \"What's the impact of declaring a method as final on inheritance?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.",
+      "question": "Now answer the interview question \"What's the impact of declaring a method as final on inheritance? \" from the project evidence. For the \"Effect of final methods on inheritance\" lesson, use the \"State the interview answer — Effect of final methods on\" evidence, state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. At the \"State the interview answer — Effect of final methods on\" stage of \"Effect of final methods on inheritance\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Lesson 125 step 4 lo \"State the interview answer — Effect\" kosam SurveyProducts. Lesson 125 step 4 context lo, java ni use chesi \"Effect of final methods on inheritance\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

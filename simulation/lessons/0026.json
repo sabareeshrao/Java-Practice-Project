@@ -11,7 +11,7 @@
     {
       "title": "Open Java's managed-reference example",
       "question": "Java still needs a way for code to refer to objects even though the language does not expose C or C++ pointer syntax. In AeroTopo's RuntimeLab, the reference utilities use Java's managed reference APIs. What should you notice about these types before deciding whether Java has explicit pointers?",
-      "why_te": "RuntimeLab.java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.",
+      "why_te": "RuntimeLab. java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,7 +34,7 @@
     },
     {
       "title": "Inspect the ReferenceSet declaration",
-      "question": "The `ReferenceSet` record stores three `java.lang.ref` reference objects and a reference queue, but there is no address type, star declarator, or dereference operator in the declaration. How does this line show the difference between a Java reference API and an explicit pointer declaration?",
+      "question": "The `ReferenceSet` record stores three `java. lang. ref` reference objects and a reference queue, but there is no address type, star declarator, or dereference operator in the declaration. How does this line show the difference between a Java reference API and an explicit pointer declaration?",
       "why_te": "Highlight ayina `ReferenceSet` declaration ni chudandi. Types anni normal Java classes. `int*` la pointer declarator ledu, raw memory address field kuda ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -155,7 +155,7 @@
     {
       "title": "Return to the managed reference code",
       "question": "The failed pointer syntax does not mean Java cannot refer to objects; it means the language uses a different abstraction. Returning to RuntimeLab, how do the `ReferenceSet` and `references(Object point)` lines summarize the supported model that Java developers actually use?",
-      "why_te": "Malli RuntimeLab.java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.",
+      "why_te": "Malli RuntimeLab. java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

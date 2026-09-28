@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Overloading ambiguity and maintenance risk",
-      "question": "Give a scenario where Method Overloading could lead to errors if it is not properly managed. Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.",
+      "question": "Give a scenario where Method Overloading could lead to errors if it is not properly managed. At the \"Open the AeroTopo baseline — Overloading ambiguity and maintenance risk\" stage of \"Overloading ambiguity and maintenance risk\", before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Using \"Open the AeroTopo baseline — Overloading ambiguity and maintenance risk\" as the concrete case for \"Overloading ambiguity and maintenance risk\", which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "\"Overloading ambiguity and maintenance risk\" context lo LanguageLab. java meeda focus chestam. \"Open the AeroTopo baseline — Overloading ambiguity and maintenance\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The temporary source for \"Overloading ambiguity and maintenance risk\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.",
+      "question": "The temporary source for \"Overloading ambiguity and maintenance risk\" isolates the exact Java dispatch or signature rule asked by the interview question. Using \"Create the focused dispatch experiment — Overloading ambiguity and maintenance\" as the concrete case for \"Overloading ambiguity and maintenance risk\", read the highlighted declarations and predict the compiler or runtime result. From the \"Create the focused dispatch experiment — Overloading ambiguity and maintenance\" result in \"Overloading ambiguity and maintenance risk\", which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Lesson 145 step 2 lo \"Create the focused dispatch experiment —\" kosam AmbiguousOverloadDemo. Lesson 145 step 2 context lo, java ni use chesi \"Overloading ambiguity and maintenance risk\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Run the dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The focused program for \"Overloading ambiguity and maintenance risk\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.",
+      "question": "The focused program for \"Overloading ambiguity and maintenance risk\" now gives direct compiler or runtime evidence. From the \"Run the dispatch experiment — Overloading ambiguity and maintenance risk\" result in \"Overloading ambiguity and maintenance risk\", compare the result with the declared reference types and method signatures rather than guessing from names. While working through \"Run the dispatch experiment — Overloading ambiguity and maintenance risk\" in \"Overloading ambiguity and maintenance risk\", what does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "\"Overloading ambiguity and maintenance risk\" lo \"Run the dispatch experiment — Overloading ambiguity\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the dispatch experiment — Overloading ambiguity\" point previous explanation repeat cheyyakunda \"Overloading ambiguity and maintenance risk\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The isolated example for \"Overloading ambiguity and maintenance risk\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.",
+      "question": "The isolated example for \"Overloading ambiguity and maintenance risk\" has established the Java rule and should not remain as lesson-only production code. While working through \"Remove the temporary dispatch experiment — Overloading ambiguity and maintenance\" in \"Overloading ambiguity and maintenance risk\", after deleting it, preserve the compiler or runtime behavior as evidence. For the \"Overloading ambiguity and maintenance risk\" lesson, use the \"Remove the temporary dispatch experiment — Overloading ambiguity and maintenance\" evidence, why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Lesson 145 step 4 lo \"Remove the temporary dispatch experiment —\" kosam AmbiguousOverloadDemo. Lesson 145 step 4 context lo, java ni use chesi \"Overloading ambiguity and maintenance risk\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Return to the project design — Overloading ambiguity and maintenance risk",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"Give a scenario where Method Overloading could lead to errors if it is not properly managed.\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"Give a scenario where Method Overloading could lead to errors if it is not properly managed. For the \"Overloading ambiguity and maintenance risk\" lesson, use the \"Return to the project design — Overloading ambiguity and maintenance\" evidence, \" using both the real project and the focused result. At the \"Return to the project design — Overloading ambiguity and maintenance\" stage of \"Overloading ambiguity and maintenance risk\", how would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "Lesson 145 step 5 lo \"Return to the project design —\" kosam LanguageLab. Lesson 145 step 5 context lo, java ni use chesi \"Overloading ambiguity and maintenance risk\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Why Java packages are used",
-      "question": "The AeroTopo source already contains a concrete example for \"Why Java packages are used\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The package declaration and imports demonstrate namespace, organization, and dependency boundaries in real source. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
-      "why_te": "Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.",
+      "question": "The AeroTopo source already contains a concrete example for \"Why Java packages are used\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The package declaration and imports demonstrate namespace, organization, and dependency boundaries in real source. While working through \"Open the project evidence — Why Java packages are used\" in \"Why Java packages are used\", which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
+      "why_te": "Lesson 92 step 1 lo \"Open the project evidence — Why\" kosam ProjectService. Lesson 92 step 1 context lo, java ni use chesi \"Why Java packages are used\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -38,8 +38,8 @@
     },
     {
       "title": "Trace the boundary — Why Java packages are used",
-      "question": "A useful answer for \"Why Java packages are used\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. Why is this arrangement safer than putting every class and field into one flat namespace?",
-      "why_te": "Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.",
+      "question": "A useful answer for \"Why Java packages are used\" should explain both the Java rule and the maintainability reason behind it. While working through \"Trace the boundary — Why Java packages are used\" in \"Why Java packages are used\", look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. For the \"Why Java packages are used\" lesson, use the \"Trace the boundary — Why Java packages are used\" evidence, why is this arrangement safer than putting every class and field into one flat namespace?",
+      "why_te": "Lesson 92 step 2 lo \"Trace the boundary — Why Java\" kosam ProjectService. Lesson 92 step 2 context lo, java ni use chesi \"Why Java packages are used\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -66,8 +66,8 @@
     },
     {
       "title": "Evaluate maintainability — Why Java packages are used",
-      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Why Java packages are used\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
-      "why_te": "Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.",
+      "question": "While working through \"Evaluate maintainability — Why Java packages are used\" in \"Why Java packages are used\", enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Why Java packages are used\", trace how one class reaches another or how state is protected across boundaries. At the \"Evaluate maintainability — Why Java packages are used\" stage of \"Why Java packages are used\", what would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
+      "why_te": "\"Why Java packages are used\" context lo ProjectService. java meeda focus chestam. \"Evaluate maintainability — Why Java packages are used\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -94,8 +94,8 @@
     },
     {
       "title": "State the interview rule — Why Java packages are used",
-      "question": "Now turn the project evidence for \"Why Java packages are used\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
-      "why_te": "Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.",
+      "question": "Now turn the project evidence for \"Why Java packages are used\" into an interview answer. At the \"State the interview rule — Why Java packages are used\" stage of \"Why Java packages are used\", how would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
+      "why_te": "Lesson 92 step 4 lo \"State the interview rule — Why\" kosam ProjectService. Lesson 92 step 4 context lo, java ni use chesi \"Why Java packages are used\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

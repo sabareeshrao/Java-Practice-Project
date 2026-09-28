@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Using super with overridden methods",
-      "question": "How does the super keyword play a role in polymorphism, especially in the context of method overriding? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.",
+      "question": "How does the super keyword play a role in polymorphism, especially in the context of method overriding? For the \"Using super with overridden methods\" lesson, use the \"Open the AeroTopo baseline — Using super with overridden methods\" evidence, before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. At the \"Open the AeroTopo baseline — Using super with overridden methods\" stage of \"Using super with overridden methods\", which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "Lesson 159 step 1 lo \"Open the AeroTopo baseline — Using\" kosam SurveyProducts. Lesson 159 step 1 context lo, java ni use chesi \"Using super with overridden methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Using super with overridden methods",
-      "question": "The temporary source for \"Using super with overridden methods\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.",
+      "question": "The temporary source for \"Using super with overridden methods\" isolates the exact Java dispatch or signature rule asked by the interview question. At the \"Create the focused dispatch experiment — Using super with overridden\" stage of \"Using super with overridden methods\", read the highlighted declarations and predict the compiler or runtime result. Using \"Create the focused dispatch experiment — Using super with overridden\" as the concrete case for \"Using super with overridden methods\", which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Lesson 159 step 2 lo \"Create the focused dispatch experiment —\" kosam SuperOverrideDemo. Lesson 159 step 2 context lo, java ni use chesi \"Using super with overridden methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -63,8 +63,8 @@
     },
     {
       "title": "Run the dispatch experiment — Using super with overridden methods",
-      "question": "The focused program for \"Using super with overridden methods\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.",
+      "question": "The focused program for \"Using super with overridden methods\" now gives direct compiler or runtime evidence. Using \"Run the dispatch experiment — Using super with overridden methods\" as the concrete case for \"Using super with overridden methods\", compare the result with the declared reference types and method signatures rather than guessing from names. From the \"Run the dispatch experiment — Using super with overridden methods\" result in \"Using super with overridden methods\", what does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "\"Using super with overridden methods\" lo \"Run the dispatch experiment — Using super\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the dispatch experiment — Using super\" point previous explanation repeat cheyyakunda \"Using super with overridden methods\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Using super with overridden methods",
-      "question": "The isolated example for \"Using super with overridden methods\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.",
+      "question": "The isolated example for \"Using super with overridden methods\" has established the Java rule and should not remain as lesson-only production code. From the \"Remove the temporary dispatch experiment — Using super with overridden\" result in \"Using super with overridden methods\", after deleting it, preserve the compiler or runtime behavior as evidence. While working through \"Remove the temporary dispatch experiment — Using super with overridden\" in \"Using super with overridden methods\", why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Lesson 159 step 4 lo \"Remove the temporary dispatch experiment —\" kosam SuperOverrideDemo. Lesson 159 step 4 context lo, java ni use chesi \"Using super with overridden methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "Return to the project design — Using super with overridden methods",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"How does the super keyword play a role in polymorphism, especially in the context of method overriding?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"How does the super keyword play a role in polymorphism, especially in the context of method overriding? While working through \"Return to the project design — Using super with overridden\" in \"Using super with overridden methods\", \" using both the real project and the focused result. For the \"Using super with overridden methods\" lesson, use the \"Return to the project design — Using super with overridden\" evidence, how would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "\"Using super with overridden methods\" context lo SurveyProducts. java meeda focus chestam. \"Return to the project design — Using super with\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

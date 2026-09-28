@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — When inheritance violates the parent contract",
-      "question": "If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused? Start with the AeroTopo implementation instead of a memorized definition. The abstract Product contract is the semantic promise every subtype must preserve. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "question": "If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused? Using \"Open the inheritance evidence — When inheritance violates the parent\" as the concrete case for \"When inheritance violates the parent contract\", start with the AeroTopo implementation instead of a memorized definition. The abstract Product contract is the semantic promise every subtype must preserve. While working through \"Open the inheritance evidence — When inheritance violates the parent\" in \"When inheritance violates the parent contract\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. For the \"When inheritance violates the parent contract\" lesson, use the \"Open the inheritance evidence — When inheritance violates the parent\" evidence, how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Lesson 131 step 1 lo \"Open the inheritance evidence — When\" kosam SurveyProducts. Lesson 131 step 1 context lo, java ni use chesi \"When inheritance violates the parent contract\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the parent-child rule — When inheritance violates the parent contract",
-      "question": "For \"When inheritance violates the parent contract\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "question": "For \"When inheritance violates the parent contract\", trace the relationship from the superclass or interface down to the concrete child. From the \"Trace the parent-child rule — When inheritance violates the parent\" result in \"When inheritance violates the parent contract\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? While working through \"Trace the parent-child rule — When inheritance violates the parent\" in \"When inheritance violates the parent contract\", why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Lesson 131 step 2 lo \"Trace the parent-child rule — When\" kosam SurveyProducts. Lesson 131 step 2 context lo, java ni use chesi \"When inheritance violates the parent contract\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — When inheritance violates the parent contract",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"When inheritance violates the parent contract\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "question": "From the \"Evaluate the hierarchy design — When inheritance violates the parent\" result in \"When inheritance violates the parent contract\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"When inheritance violates the parent contract\", explain what contract the parent establishes and what freedom the child retains. For the \"When inheritance violates the parent contract\" lesson, use the \"Evaluate the hierarchy design — When inheritance violates the parent\" evidence, what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "\"When inheritance violates the parent contract\" context lo SurveyProducts. java meeda focus chestam. \"Evaluate the hierarchy design — When inheritance violates the\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview answer — When inheritance violates the parent contract",
-      "question": "Now answer the interview question \"If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.",
+      "question": "Now answer the interview question \"If a Child Class completely changes the behavior of a Parent method so that it no longer fits the Parent's meaning, is Inheritance being misused? \" from the project evidence. At the \"State the interview answer — When inheritance violates the parent\" stage of \"When inheritance violates the parent contract\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. Using \"State the interview answer — When inheritance violates the parent\" as the concrete case for \"When inheritance violates the parent contract\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Lesson 131 step 4 lo \"State the interview answer — When\" kosam SurveyProducts. Lesson 131 step 4 context lo, java ni use chesi \"When inheritance violates the parent contract\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

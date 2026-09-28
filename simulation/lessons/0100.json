@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — What final means on a method",
-      "question": "The AeroTopo code already contains a concrete example for \"What final means on a method\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "The AeroTopo code already contains a concrete example for \"What final means on a method\". Within the \"Open the project evidence — What final means\" step for \"What final means on a method\", inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. Using \"Open the project evidence — What final means on a\" as the concrete case for \"What final means on a method\", what Java rule controls when this code can change, execute, or participate in inheritance?",
+      "why_te": "Lesson 100 step 1 lo \"Open the project evidence — What\" kosam SurveyProducts. Lesson 100 step 1 context lo, java ni use chesi \"What final means on a method\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace lifecycle and restriction — What final means on a method",
-      "question": "For \"What final means on a method\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "For \"What final means on a method\", the keyword alone does not explain lifecycle or design impact. Using \"Trace lifecycle and restriction — What final means on a\" as the concrete case for \"What final means on a method\", look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. From the \"Trace lifecycle and restriction — What final means on a\" result in \"What final means on a method\", why does that distinction matter in production code?",
+      "why_te": "Lesson 100 step 2 lo \"Trace lifecycle and restriction — What\" kosam SurveyProducts. Lesson 100 step 2 context lo, java ni use chesi \"What final means on a method\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the design effect — What final means on a method",
-      "question": "A strong interview answer for \"What final means on a method\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "A strong interview answer for \"What final means on a method\" should connect syntax to maintainability. From the \"Evaluate the design effect — What final means on a\" result in \"What final means on a method\", using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. While working through \"Evaluate the design effect — What final means on a\" in \"What final means on a method\", how could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
+      "why_te": "Lesson 100 step 3 lo \"Evaluate the design effect — What\" kosam SurveyProducts. Lesson 100 step 3 context lo, java ni use chesi \"What final means on a method\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview rule — What final means on a method",
-      "question": "Now convert the evidence for \"What final means on a method\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "Now convert the evidence for \"What final means on a method\" into a precise interview response. While working through \"State the interview rule — What final means on a\" in \"What final means on a method\", how would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
+      "why_te": "Lesson 100 step 4 lo \"State the interview rule — What\" kosam SurveyProducts. Lesson 100 step 4 context lo, java ni use chesi \"What final means on a method\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

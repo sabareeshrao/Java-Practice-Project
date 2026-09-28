@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Composition over inheritance",
-      "question": "In Java, what does the principle \"Composition over Inheritance\" mean? Start with the AeroTopo implementation instead of a memorized definition. The same class model demonstrates both a legitimate is-a hierarchy and a has-a composition relationship. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "question": "In Java, what does the principle \"Composition over Inheritance\" mean? Using \"Open the inheritance evidence — Composition over inheritance\" as the concrete case for \"Composition over inheritance\", start with the AeroTopo implementation instead of a memorized definition. The same class model demonstrates both a legitimate is-a hierarchy and a has-a composition relationship. While working through \"Open the inheritance evidence — Composition over inheritance\" in \"Composition over inheritance\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. For the \"Composition over inheritance\" lesson, use the \"Open the inheritance evidence — Composition over inheritance\" evidence, how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "\"Composition over inheritance\" context lo SurveyProducts. java meeda focus chestam. \"Open the inheritance evidence — Composition over inheritance\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the parent-child rule — Composition over inheritance",
-      "question": "For \"Composition over inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "question": "For \"Composition over inheritance\", trace the relationship from the superclass or interface down to the concrete child. From the \"Trace the parent-child rule — Composition over inheritance\" result in \"Composition over inheritance\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? While working through \"Trace the parent-child rule — Composition over inheritance\" in \"Composition over inheritance\", why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Lesson 121 step 2 lo \"Trace the parent-child rule — Composition\" kosam SurveyProducts. java ni use chesi \"Composition over inheritance\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Composition over inheritance",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Composition over inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "question": "From the \"Evaluate the hierarchy design — Composition over inheritance\" result in \"Composition over inheritance\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Composition over inheritance\", explain what contract the parent establishes and what freedom the child retains. For the \"Composition over inheritance\" lesson, use the \"Evaluate the hierarchy design — Composition over inheritance\" evidence, what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "\"Evaluate the hierarchy design — Composition over inheritance\" step lo SurveyProducts. java open chesi \"Composition over inheritance\" concept project code lo ela represent ayyindo identify chestam. \"Composition over inheritance\" lo \"Evaluate the hierarchy design — Composition over inheritance\" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview answer — Composition over inheritance",
-      "question": "Now answer the interview question \"In Java, what does the principle \"Composition over Inheritance\" mean?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.",
+      "question": "Now answer the interview question \"In Java, what does the principle \"Composition over Inheritance\" mean? \" from the project evidence. At the \"State the interview answer — Composition over inheritance\" stage of \"Composition over inheritance\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. Using \"State the interview answer — Composition over inheritance\" as the concrete case for \"Composition over inheritance\", how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "\"Composition over inheritance\" context lo SurveyProducts. java meeda focus chestam. \"State the interview answer — Composition over inheritance\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

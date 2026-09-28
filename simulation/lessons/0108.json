@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Whether static methods can be overridden",
-      "question": "The AeroTopo code already provides direct evidence for \"Whether static methods can be overridden\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "question": "The AeroTopo code already provides direct evidence for \"Whether static methods can be overridden\". While working through \"Open the project evidence — Whether static methods can be\" in \"Whether static methods can be overridden\", inspect the highlighted members and determine whether they belong to the class itself or to individual objects. For the \"Whether static methods can be overridden\" lesson, use the \"Open the project evidence — Whether static methods can be\" evidence, which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "Lesson 108 step 1 lo \"Open the project evidence — Whether\" kosam SurveyProducts. Lesson 108 step 1 context lo, java ni use chesi \"Whether static methods can be overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Trace binding and ownership — Whether static methods can be overridden",
-      "question": "For \"Whether static methods can be overridden\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "question": "For \"Whether static methods can be overridden\", the important distinction is not only syntax but binding and state ownership. For the \"Whether static methods can be overridden\" lesson, use the \"Trace binding and ownership — Whether static methods can be\" evidence, look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. At the \"Trace binding and ownership — Whether static methods can be\" stage of \"Whether static methods can be overridden\", why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "\"Whether static methods can be overridden\" context lo SurveyProducts. java meeda focus chestam. \"Trace binding and ownership — Whether static methods can\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Evaluate the design choice — Whether static methods can be overridden",
-      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Whether static methods can be overridden\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "question": "For the \"Whether static methods can be overridden\" lesson, use the \"Evaluate the design choice — Whether static methods can be\" evidence, experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Whether static methods can be overridden\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. Using \"Evaluate the design choice — Whether static methods can be\" as the concrete case for \"Whether static methods can be overridden\", what bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "Lesson 108 step 3 lo \"Evaluate the design choice — Whether\" kosam SurveyProducts. Lesson 108 step 3 context lo, java ni use chesi \"Whether static methods can be overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "State the interview rule — Whether static methods can be overridden",
-      "question": "Now answer \"Whether static methods can be overridden\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.",
+      "question": "Now answer \"Whether static methods can be overridden\" from the project evidence. Using \"State the interview rule — Whether static methods can be\" as the concrete case for \"Whether static methods can be overridden\", how would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "Lesson 108 step 4 lo \"State the interview rule — Whether\" kosam SurveyProducts. Lesson 108 step 4 context lo, java ni use chesi \"Whether static methods can be overridden\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

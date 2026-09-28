@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Inspect how the real service starts",
-      "question": "The AeroTopo application entry point contains `SpringApplication.run` but no explicit `System.exit`. A long-running Spring Boot service normally lets the framework and hosting environment control process lifecycle. What does this entry point suggest about whether business code should decide to kill the JVM during normal request processing?",
-      "why_te": "AeroTopo main method SpringApplication ni start chestundi; direct `System.exit` ledu. Long-running service lifecycle ni framework and deployment environment manage chestayi. Business request code whole JVM ni stop cheyyakudadhu.",
+      "question": "The AeroTopo application entry point contains `SpringApplication. run` but no explicit `System. exit`. A long-running Spring Boot service normally lets the framework and hosting environment control process lifecycle. What does this entry point suggest about whether business code should decide to kill the JVM during normal request processing?",
+      "why_te": "AeroTopo main method SpringApplication ni start chestundi; direct `System. exit` ledu. Long-running service lifecycle ni framework and deployment environment manage chestayi. Business request code whole JVM ni stop cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Search the real source tree for System.exit",
-      "question": "A project-experience answer should be based on evidence rather than inventing past usage. The IntelliJ terminal searches the repository's `src` tree for `System.exit` and reports no matches. How should this absence affect the way you answer whether AeroTopo actually uses explicit JVM termination in application code?",
-      "why_te": "Source tree search lo `System.exit` usage dorakaledu. Kabatti project lo use chesam ani claim cheyyakudadhu. Accurate answer actual code evidence meeda base avvali.",
+      "question": "A project-experience answer should be based on evidence rather than inventing past usage. The IntelliJ terminal searches the repository's `src` tree for `System. exit` and reports no matches. How should this absence affect the way you answer whether AeroTopo actually uses explicit JVM termination in application code?",
+      "why_te": "Source tree search lo `System. exit` usage dorakaledu. Kabatti project lo use chesam ani claim cheyyakudadhu. Accurate answer actual code evidence meeda base avvali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,7 +81,7 @@
     },
     {
       "title": "Focus on rollout and rollback responsibilities",
-      "question": "The highlighted runbook line treats startup, verification, traffic switching, and rollback as controlled operational steps. If one controller or service method called `System.exit`, it could bypass that coordinated lifecycle and terminate the whole process. Why is exception propagation or framework-managed failure handling usually safer inside a service?",
+      "question": "The highlighted runbook line treats startup, verification, traffic switching, and rollback as controlled operational steps. If one controller or service method called `System. exit`, it could bypass that coordinated lifecycle and terminate the whole process. Why is exception propagation or framework-managed failure handling usually safer inside a service?",
       "why_te": "Highlighted deployment line controlled rollout and rollback ni show chestundi. Controller/service direct exit chesthe whole process sudden ga stop avvachu. Exceptions and framework lifecycle handling service context lo safer.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -107,7 +107,7 @@
     },
     {
       "title": "Reconnect the operational rule to the application entry point",
-      "question": "Returning to `AeroTopoApplication`, the only process-level startup action is `SpringApplication.run`. The project contains no direct exit call in `src`, so a credible interview response should describe that fact and then explain where explicit exit codes could still make sense. What contexts would qualify without misrepresenting this service?",
+      "question": "Returning to `AeroTopoApplication`, the only process-level startup action is `SpringApplication. run`. The project contains no direct exit call in `src`, so a credible interview response should describe that fact and then explain where explicit exit codes could still make sense. What contexts would qualify without misrepresenting this service?",
       "why_te": "Malli application main ni chudandi. Project source lo direct exit usage ledu. Standalone CLI leda one-shot utility intentional ga process finish cheyyalsina case lo exit status useful avvachu.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -131,8 +131,8 @@
     },
     {
       "title": "State the project-experience answer without inventing history",
-      "question": "This question is about experience, so accuracy matters more than sounding impressive. The repository evidence says AeroTopo does not use `System.exit` in normal service code, while the earlier demos showed when the API can be appropriate. How would you answer the interviewer honestly while still demonstrating that you understand the API's legitimate use cases?",
-      "why_te": "Final answer actual project evidence ni follow cheyyali. AeroTopo service code lo `System.exit` use ledu ani cheppi, CLI or one-shot tool lo intentional process exit kosam use avvachu ani explain cheyyali.",
+      "question": "This question is about experience, so accuracy matters more than sounding impressive. The repository evidence says AeroTopo does not use `System. exit` in normal service code, while the earlier demos showed when the API can be appropriate. How would you answer the interviewer honestly while still demonstrating that you understand the API's legitimate use cases?",
+      "why_te": "Final answer actual project evidence ni follow cheyyali. AeroTopo service code lo `System. exit` use ledu ani cheppi, CLI or one-shot tool lo intentional process exit kosam use avvachu ani explain cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

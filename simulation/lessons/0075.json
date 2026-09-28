@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Constructor overloading",
-      "question": "Constructor overloading provides multiple parameter signatures for creating the same class is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Constructor overloading\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "question": "Constructor overloading provides multiple parameter signatures for creating the same class is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Constructor overloading\" and connect the syntax to the initialization rule behind it. Using \"Open the project evidence — Constructor overloading\" as the concrete case for \"Constructor overloading\", which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Lesson 75 step 1 lo \"Open the project evidence — Constructor\" kosam SurveyProducts. Lesson 75 step 1 context lo, java ni use chesi \"Constructor overloading\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the Java rule — Constructor overloading",
-      "question": "For \"Constructor overloading\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "question": "For \"Constructor overloading\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Using \"Trace the Java rule — Constructor overloading\" as the concrete case for \"Constructor overloading\", examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. From the \"Trace the Java rule — Constructor overloading\" result in \"Constructor overloading\", why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "\"Constructor overloading\" context lo SurveyProducts. java meeda focus chestam. \"Trace the Java rule — Constructor overloading\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Connect caller and object state — Constructor overloading",
-      "question": "A practical explanation of \"Constructor overloading\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "question": "A practical explanation of \"Constructor overloading\" should connect caller intent to what the class guarantees during initialization. From the \"Connect caller and object state — Constructor overloading\" result in \"Constructor overloading\", using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. While working through \"Connect caller and object state — Constructor overloading\" in \"Constructor overloading\", how does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Lesson 75 step 3 lo \"Connect caller and object state —\" kosam SurveyProducts. Lesson 75 step 3 context lo, java ni use chesi \"Constructor overloading\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview rule — Constructor overloading",
-      "question": "Now summarize \"Constructor overloading\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.",
+      "question": "Now summarize \"Constructor overloading\" from the evidence instead of from memorized syntax. While working through \"State the interview rule — Constructor overloading\" in \"Constructor overloading\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Lesson 75 step 4 lo \"State the interview rule — Constructor\" kosam SurveyProducts. Lesson 75 step 4 context lo, java ni use chesi \"Constructor overloading\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

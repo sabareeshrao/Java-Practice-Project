@@ -163,7 +163,7 @@
     {
       "title": "Summarize the methodology from the strongest project evidence",
       "question": "The Git/review section is the clearest concise project evidence: small focused changes are verified, reviewed, corrected, and retested. Combining that with incremental rollout and evidence-driven architecture, how would you answer whether AeroTopo follows Agile or Waterfall while clearly separating documented practices from assumptions about Scrum ceremonies?",
-      "why_te": "Final ga Git/review loop ni base chesi Agile-style iterative methodology ani cheppachu. Incremental rollout and evidence-based design kuda support chestayi. Scrum ceremonies మాత్రం repo prove cheyyadu ani clear ga separate cheyyali.",
+      "why_te": "\"Agile-style project methodology versus Waterfall\" lo \"Summarize the methodology from the strongest project\" step RUNBOOK. md ni direct evidence ga use chestundi. Ee \"Summarize the methodology from the strongest project\" point previous explanation repeat cheyyakunda \"Agile-style project methodology versus Waterfall\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

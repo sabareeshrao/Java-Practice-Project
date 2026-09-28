@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Designing a plug-in system with polymorphism",
-      "question": "How would you design a Plug-in-Based System using Polymorphism? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.",
+      "question": "How would you design a Plug-in-Based System using Polymorphism? At the \"Open the AeroTopo baseline — Designing a plug-in system with\" stage of \"Designing a plug-in system with polymorphism\", before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Using \"Open the AeroTopo baseline — Designing a plug-in system with\" as the concrete case for \"Designing a plug-in system with polymorphism\", which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "\"Designing a plug-in system with polymorphism\" context lo PatternLab. java meeda focus chestam. \"Open the AeroTopo baseline — Designing a plug-in system\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Designing a plug-in system with polymorphism",
-      "question": "The temporary source for \"Designing a plug-in system with polymorphism\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.",
+      "question": "The temporary source for \"Designing a plug-in system with polymorphism\" isolates the exact Java dispatch or signature rule asked by the interview question. Using \"Create the focused dispatch experiment — Designing a plug-in system\" as the concrete case for \"Designing a plug-in system with polymorphism\", read the highlighted declarations and predict the compiler or runtime result. From the \"Create the focused dispatch experiment — Designing a plug-in system\" result in \"Designing a plug-in system with polymorphism\", which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Lesson 160 step 2 lo \"Create the focused dispatch experiment —\" kosam PluginPolymorphismDemo. Lesson 160 step 2 context lo, java ni use chesi \"Designing a plug-in system with polymorphism\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Run the dispatch experiment — Designing a plug-in system with polymorphism",
-      "question": "The focused program for \"Designing a plug-in system with polymorphism\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.",
+      "question": "The focused program for \"Designing a plug-in system with polymorphism\" now gives direct compiler or runtime evidence. From the \"Run the dispatch experiment — Designing a plug-in system with\" result in \"Designing a plug-in system with polymorphism\", compare the result with the declared reference types and method signatures rather than guessing from names. While working through \"Run the dispatch experiment — Designing a plug-in system with\" in \"Designing a plug-in system with polymorphism\", what does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "\"Designing a plug-in system with polymorphism\" lo \"Run the dispatch experiment — Designing a\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the dispatch experiment — Designing a\" point previous explanation repeat cheyyakunda \"Designing a plug-in system with polymorphism\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -83,8 +83,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Designing a plug-in system with polymorphism",
-      "question": "The isolated example for \"Designing a plug-in system with polymorphism\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.",
+      "question": "The isolated example for \"Designing a plug-in system with polymorphism\" has established the Java rule and should not remain as lesson-only production code. While working through \"Remove the temporary dispatch experiment — Designing a plug-in system\" in \"Designing a plug-in system with polymorphism\", after deleting it, preserve the compiler or runtime behavior as evidence. For the \"Designing a plug-in system with polymorphism\" lesson, use the \"Remove the temporary dispatch experiment — Designing a plug-in system\" evidence, why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Lesson 160 step 4 lo \"Remove the temporary dispatch experiment —\" kosam PluginPolymorphismDemo. Lesson 160 step 4 context lo, java ni use chesi \"Designing a plug-in system with polymorphism\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -101,8 +101,8 @@
     },
     {
       "title": "Return to the project design — Designing a plug-in system with polymorphism",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"How would you design a Plug-in-Based System using Polymorphism?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"How would you design a Plug-in-Based System using Polymorphism? For the \"Designing a plug-in system with polymorphism\" lesson, use the \"Return to the project design — Designing a plug-in system\" evidence, \" using both the real project and the focused result. At the \"Return to the project design — Designing a plug-in system\" stage of \"Designing a plug-in system with polymorphism\", how would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "Lesson 160 step 5 lo \"Return to the project design —\" kosam PatternLab. Lesson 160 step 5 context lo, java ni use chesi \"Designing a plug-in system with polymorphism\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

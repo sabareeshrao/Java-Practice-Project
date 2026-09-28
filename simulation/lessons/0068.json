@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Start from composition-like ownership in Product",
-      "question": "AeroTopo's Product constructor copies the supplied tile list with `List.copyOf`, then keeps that private immutable representation as part of the product. Why does copying and owning the internal collection create stronger whole-part ownership than merely remembering an externally managed collection reference?",
+      "question": "AeroTopo's Product constructor copies the supplied tile list with `List. copyOf`, then keeps that private immutable representation as part of the product. Why does copying and owning the internal collection create stronger whole-part ownership than merely remembering an externally managed collection reference?",
       "why_te": "Product input list ni copy chesi own internal representation ga store chestundi. External caller list later change ayina Product state change kaadu. Strong ownership/composition-like relation clear.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -36,7 +36,7 @@
     {
       "title": "Create explicit association and aggregation examples",
       "question": "A temporary model uses a `Reviewer` that references a Product without owning it, and a `Portfolio` that groups Product objects supplied from outside. The same Product can survive even if these wrapper objects disappear. How do those relationships differ in ownership strength from Product's private copied tile representation?",
-      "why_te": "Reviewer simple association; Portfolio external Products ni aggregate chestundi. Products independent ga exist cheyyagalavu. Product internal tiles representation మాత్రం own copy ga maintain chestundi.",
+      "why_te": "\"Create explicit association and aggregation examples\" step lo RelationshipDemo. \"Association, aggregation, and composition\" lo \"Create explicit association and aggregation examples\" context lo, java lesson-only experiment ga add chestam. \"Association, aggregation, and composition\" rule ni one small example lo isolate cheyyadam valla framework noise lekunda compiler leda runtime behavior clear ga kanipistundi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,

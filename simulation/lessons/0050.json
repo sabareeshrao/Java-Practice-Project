@@ -11,7 +11,7 @@
     {
       "title": "Open the existing anagram-grouping method",
       "question": "AeroTopo already contains an `anagrams` method that groups tile labels by a canonical character signature, so no duplicate implementation is needed. Inspect the stream pipeline and identify where each original String is transformed into a sorted-character key before `groupingBy` collects matching Strings together.",
-      "why_te": "SurveyAlgorithms.anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.",
+      "why_te": "SurveyAlgorithms. anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
