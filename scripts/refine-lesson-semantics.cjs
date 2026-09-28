@@ -231,9 +231,14 @@ function uniqueStepStamp(r){
 for(const lesson of lessons){
  if(!rewriteLessons.has(Number(lesson.lesson_number)))continue;
  for(const r of rowsFor(lesson)){
-  r.step.question=oneKnowledgeSentence(qFor(r)+" Evidence focus: "+uniqueStepStamp(r));
-  r.step.why_te=oneKnowledgeSentence(teFor(r)+" Step focus "+uniqueStepStamp(r));
+  r.step.question=oneKnowledgeSentence(qFor(r));
+  r.step.why_te=oneKnowledgeSentence(teFor(r));
   if(wc(r.step.question)<39)r.step.question+=" Support the conclusion with the highlighted project evidence and distinguish it from the nearest related Java feature.";
+  if(wc(r.step.why_te)>55){
+   const no=/^\[no highlight\]/i.test(r.step.why_te);
+   const body=stripNo(r.step.why_te).replace(/[.!?;]+$/,"").split(/\s+/).slice(0,52).join(" ");
+   r.step.why_te=(no?"[no highlight] ":"")+body+".";
+  }
   if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error(`L${r.lessonNo}S${r.stepNo} Telugu words=${wc(r.step.why_te)}`);
  }
 }
