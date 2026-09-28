@@ -22,7 +22,7 @@ jobs:
           java-version: '21'
           cache: maven
       - name: Rewrite redundant lesson text
-        run: node scripts/fix-lesson-redundancy.cjs
+        run: node scripts/refine-lesson-semantics.cjs
       - name: Refresh generated question index
         run: python tools/build_question_index.py
       - name: Verify redundancy guard
@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add simulation/lessons simulation/OPTION_B_EXPLANATION_TEXTS.md simulation/REDUNDANCY_AUDIT_REPORT.md QUESTION_INDEX.html QUESTION_INDEX.md docs/COVERAGE.md interview/resolved-mappings.json
+          git add simulation/lessons simulation/OPTION_B_EXPLANATION_TEXTS.md simulation/REDUNDANCY_AUDIT_REPORT.md simulation/SEMANTIC_REDUNDANCY_REPORT.md QUESTION_INDEX.html QUESTION_INDEX.md docs/COVERAGE.md interview/resolved-mappings.json
           if git diff --cached --quiet; then
             echo "No curriculum changes to commit."
             exit 0

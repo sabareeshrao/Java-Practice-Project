@@ -155,7 +155,7 @@ for(const r of undefinedLeaks)console.log(loc(r));
 console.log("\nAUDIT_SUMMARY "+JSON.stringify(summary));
 const hardFailures=
  exactQ.length+exactT.length+sentQ.length+sentT.length+sameLesson.length+
- teluguScript.length+undefinedLeaks.length;
+ sameLessonNearQ.length+sameLessonNearT.length+teluguScript.length+undefinedLeaks.length;
 if(hardFailures){
  console.error("\nREDUNDANCY_GUARD_FAIL hardFailures="+hardFailures);
  process.exitCode=1;
