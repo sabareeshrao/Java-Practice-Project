@@ -1414,3 +1414,55 @@ Temporary driver ni remove chestunnam. Main points write pointer, in-place updat
 ### Step 8 — Return to the production moveZerosRight method
 
 Final method one scan plus one suffix fill use chestundi. Total O(n) time, O(1) space. Non-zero order preserve avutundi; swap-based approach design batti order preserve kakapovachu.
+
+## Lesson 41 — Sort an array using one explicit loop
+
+### Step 1 — Start from AeroTopo's normal sorting approach
+
+Existing code library sort ni use chestundi. Interview constraint మాత్రం one explicit loop possible aa ani adugutundi. Oka loop undadam automatically O(n) ani meaning kaadu; loop backtrack ayithe repeated work jaruguthundi.
+
+### Step 2 — Create a one-loop gnome-sort demonstration
+
+Temporary demo one `while` loop use chestundi. Adjacent values correct order lo unte index forward velthundi; wrong order ayithe swap chesi backward velthundi. Ila previous positions malli check avutayi.
+
+### Step 3 — Inspect how one loop moves both forward and backward
+
+Single while loop unna index forward and backward move avutundi. Swap taruvata old positions malli check chestam. Anduke explicit loop one ayina total comparisons repeated ga jarigi worst case O(n²) avvachu.
+
+### Step 4 — Run the single-loop sort on unsorted input
+
+Output sorted array ga vastundi kabatti one explicit loop solution feasible ani prove avutundi. Kani efficiency prove kaadu. Repeated backtracking valla production library sort kante slower avvachu.
+
+### Step 5 — Compare interview constraint with production readability
+
+Production code lo clear library sort maintain cheyyadam easy. One-loop trick interview constraint kosam useful, kani readability and optimized implementation important ayithe standard sorting API better choice.
+
+### Step 6 — Remove the temporary one-loop implementation
+
+Temporary class ni remove chestunnam. Final answer: one explicit loop possible, gnome-sort style backtracking use cheyyachu, worst case O(n²), production lo usually `Arrays.sort` leda proper library sort prefer chestam.
+
+## Lesson 42 — Remove duplicates from a sorted array in place
+
+### Step 1 — Open the existing in-place deduplication method
+
+SurveyAlgorithms.deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.
+
+### Step 2 — Inspect why sorted order makes one previous value sufficient
+
+Sorted input lo same values adjacent ga untayi. Last unique value tho compare cheste duplicate aa new value aa telustundi. Anduke Set la all seen values store cheyyalsina avasaram ledu.
+
+### Step 3 — Create a driver that exposes the logical array length
+
+Java array physical length same ga untundi. Method unique prefix length return chestundi. Demo returned length varaku copy chesi print chestundi; expected unique values `1,2,4` matrame.
+
+### Step 4 — Run the in-place duplicate removal
+
+Output logical length 3 ani show chestundi. First three positions unique values. Tail array physical storage matrame; old/stale values undavachu kabatti caller returned length ni respect cheyyali.
+
+### Step 5 — Review the O(n) and O(1) properties
+
+Each value once scan chestam kabatti O(n) time. Extra ga `write` integer matrame use chestam kabatti O(1) space. Same array storage reuse avutundi; capacity change kaadu.
+
+### Step 6 — Remove the temporary driver and retain the real algorithm
+
+Temporary driver remove chestunnam. Interview lo sorted values adjacent ani, write pointer unique prefix build chestundi ani, returned length valid range ani, tail ignore cheyyali ani explain cheyyali.
