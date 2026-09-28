@@ -127,7 +127,7 @@ function qFor(r){
    return prefix+"Open "+a+" and use "+(line?"highlighted lines "+line:"the highlighted code")+" to establish the real project baseline for "+title+". Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step?";
   }
   if(r.stepNo===r.total){
-   const quotedQuestion=srcQ.replace(/[?!]+$/,"");
+   const quotedQuestion=srcQ.replace(/[.?!]+$/,"");
    return 'Return to '+a+' after the earlier analysis and use the accumulated evidence to answer "'+quotedQuestion+'" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation?';
   }
   if(r.stepNo===2){

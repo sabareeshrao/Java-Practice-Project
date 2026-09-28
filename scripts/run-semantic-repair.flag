@@ -6,3 +6,4 @@ remove-artificial-stamps-1
 normalize-all-global-lines-1
 canonical-audit-authority-1
 quoted-question-tail-fix-1
+quoted-terminal-punctuation-fix-1
