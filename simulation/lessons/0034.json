@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "lesson_number": 34,
+  "question_id": 34,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "What happens internally when System.exit() is called",
+  "info_language": "te-Latn",
+  "answer": "At a high level, `System.exit(status)` delegates to the runtime to begin JVM shutdown with the supplied status. The JVM enters its shutdown sequence, starts registered shutdown-hook threads in an unspecified order, waits for those hooks to finish, and then terminates the VM with the requested status unless shutdown is forcibly halted. Normal execution does not continue after the exit call. Cleanup that must happen during JVM shutdown should use appropriate lifecycle mechanisms such as shutdown hooks or framework/container shutdown callbacks rather than assuming ordinary code after `System.exit` will run.",
+  "steps": [
+    {
+      "title": "Contrast JVM shutdown with deterministic resource cleanup",
+      "question": "AeroTopo's `RuntimeLab.NativeBuffer` uses `AutoCloseable` and a `Cleaner` so ordinary code can release a resource deliberately. JVM shutdown is a broader lifecycle event than closing one object. Why is it useful to separate per-resource cleanup from process-wide shutdown before examining what `System.exit` triggers internally?",
+      "why_te": "RuntimeLab NativeBuffer individual resource cleanup ni handle chestundi. `System.exit` మాత్రం complete JVM shutdown start chestundi. Resource close mariyu process termination rendu different lifecycle levels ani first separate ga understand cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a shutdown-hook demonstration",
+      "question": "A registered shutdown hook is code that the JVM starts during an orderly shutdown sequence. The temporary class registers a hook that prints a message, prints another message from `main`, and then calls `System.exit(5)`. Which ordering should you expect if the JVM actually runs registered hooks before final termination?",
+      "why_te": "Temporary demo shutdown hook register chestundi. Main first message print chesi `System.exit(5)` call chestundi. JVM shutdown sequence lo hook run ayi final termination mundu hook message kanipinchali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ShutdownHookDemo.java",
+          "language": "java",
+          "content": "public class ShutdownHookDemo {\n    public static void main(String[] args) {\n        Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println(\"shutdown hook\")));\n        System.out.println(\"before exit\");\n        System.exit(5);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect shutdown-hook registration",
+      "question": "The hook is registered through `Runtime.getRuntime().addShutdownHook`, which gives the JVM a thread to start when orderly shutdown begins. Why is this mechanism more appropriate for process-shutdown cleanup than placing important cleanup code after `System.exit`, where normal execution will never continue?",
+      "why_te": "`addShutdownHook` JVM shutdown time lo run cheyyalsina Thread ni register chestundi. `System.exit` taruvata normal statements run avvavu. Anduke shutdown-specific cleanup ki hook suitable mechanism.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/ShutdownHookDemo.java",
+            "line": 3,
+            "expected_text": "Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println(\"shutdown hook\")));"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the call that starts JVM shutdown",
+      "question": "The next highlighted line invokes `System.exit(5)`, so control leaves ordinary application execution and the JVM begins its shutdown sequence. How does this call connect the status value supplied by application code with the registered hook that the runtime will execute before the Java process finally ends?",
+      "why_te": "`System.exit(5)` JVM shutdown ni start chestundi. Status 5 process result ga carry avutundi; registered hook shutdown sequence lo run avutundi. Normal main flow ikkada continue kaadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/ShutdownHookDemo.java",
+            "line": 5,
+            "expected_text": "System.exit(5);"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the hook and exit sequence",
+      "question": "The demo now runs as a child Java process while PowerShell remains alive to read its exit status. If the output shows `before exit`, then `shutdown hook`, then `exit=5`, what sequence of runtime events can you infer without pretending that ordinary statements after the exit call resumed execution?",
+      "why_te": "Output order main message, shutdown hook, exit status ga vastundi. Ante exit request taruvata JVM hook ni run chesi process ni status 5 tho terminate chesindi. Normal main flow resume avvaledu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson34-demo labs/java/ShutdownHookDemo.java; java -cp target/lesson34-demo ShutdownHookDemo; Write-Output \"exit=$LASTEXITCODE\"",
+          "output": "before exit\nshutdown hook\nexit=5"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary shutdown-hook class",
+      "question": "The hook example exists only to make JVM shutdown behavior observable; AeroTopo does not need this artificial process-exit path in normal service code. After deleting the demo, why should production cleanup rely on explicit resource management and framework lifecycle hooks rather than scattering `System.exit` calls through business logic?",
+      "why_te": "Temporary shutdown demo ni remove chestunnam. Production code lo resource cleanup ki try-with-resources, close methods, framework lifecycle callbacks use cheyyadam better. Business logic nundi whole JVM exit cheyyadam avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ShutdownHookDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Return to AeroTopo's explicit resource lifecycle",
+      "question": "The real `NativeBuffer` example closes one resource without ending the JVM, which provides a useful contrast with the shutdown-hook experiment. Using both examples, how would you describe the internal `System.exit` sequence while also explaining why process termination and ordinary resource cleanup should remain separate design concerns?",
+      "why_te": "NativeBuffer close one resource ni clean chestundi; JVM alive ga untundi. `System.exit` మాత్రం shutdown sequence, hooks, final termination ni trigger chestundi. Interview answer lo ee lifecycle difference clear ga mention cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 6
+      "chapterEnd": 8
     }
   ],
   "chapters": [
@@ -89,6 +89,30 @@
         "lessons/0028.json",
         "lessons/0029.json",
         "lessons/0030.json"
+      ]
+    },
+    {
+      "id": "chapter-007",
+      "title": "7: Runtime Type Checks, Parameter Passing & JVM Exit",
+      "subtitle": "Use real AeroTopo language semantics and focused temporary demos to understand instanceof, Java pass-by-value behavior, System.exit, JVM shutdown, and when process termination belongs in project code.",
+      "lessons": [
+        "lessons/0031.json",
+        "lessons/0032.json",
+        "lessons/0033.json",
+        "lessons/0034.json",
+        "lessons/0035.json"
+      ]
+    },
+    {
+      "id": "chapter-008",
+      "title": "8: Project Methodology & Array Algorithms",
+      "subtitle": "Ground the project-methodology answer in repository evidence, then reuse AeroTopo's real SurveyAlgorithms implementations for duplicate removal, merge-and-sort, binary partitioning, and stable zero compaction.",
+      "lessons": [
+        "lessons/0036.json",
+        "lessons/0037.json",
+        "lessons/0038.json",
+        "lessons/0039.json",
+        "lessons/0040.json"
       ]
     }
   ],

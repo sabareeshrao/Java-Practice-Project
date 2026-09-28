@@ -1098,3 +1098,319 @@ Malli LanguageLab overloads ni chudandi. `Integer` version null ni check chesi s
 ### Step 9 — Remove the primitive storage demo
 
 Temporary storage demo ni remove chestunnam. Final rule: primitive null store cheyyadu, defaults actual primitive values. Wrapper null undachu; null wrapper ni primitive ga unbox chesthe `NullPointerException` ravachu.
+
+## Lesson 31 — Purpose of the instanceof operator
+
+### Step 1 — Start from type-based behavior already used in AeroTopo
+
+LanguageLab.format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.
+
+### Step 2 — Create a direct instanceof experiment
+
+Temporary demo lo String mariyu Integer kosam `instanceof` pattern use chestunnam. Condition true ayithe `label` leda `count` typed variable automatic ga available avutundi. Separate cast rayalsina avasaram taggutundi.
+
+### Step 3 — Inspect the String pattern variable
+
+Highlight ayina condition first runtime type ni check chestundi. Match true ayithe `label` already String type lo available avutundi. Wrong object ni direct ga String cast chese risk ikkada avoid avutundi.
+
+### Step 4 — Compare another type and the null fallback
+
+Integer object vaste second `instanceof` branch match avutundi. `null` అయితే String leda Integer branch match kaadu; condition false avutundi. Anduke null check fallback lo handle chestunnam.
+
+### Step 5 — Run String, Integer, and null through the operator
+
+Program three values ni same method ki pass chestundi. String and Integer correct branches select avutayi; null fallback ki velthundi. `instanceof` null meeda exception throw cheyyakunda false return chestundi.
+
+### Step 6 — Remove the temporary instanceof class
+
+Temporary demo ni remove chestunnam endukante concept already prove ayyindi. Main rule: broad reference vachinappudu type-specific logic mundu compatibility check cheyyachu. Unnecessary `instanceof` chains మాత్రం avoid cheyyali.
+
+### Step 7 — Connect instanceof back to the real project type dispatch
+
+Malli LanguageLab.format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.
+
+## Lesson 32 — Java is pass-by-value, including object references
+
+### Step 1 — Open the two methods that expose Java's parameter semantics
+
+LanguageLab lo `reassign` mariyu `mutate` methods same List type ni receive chestayi. Oka method local reference ni replace chestundi; inkoka method same object ni modify chestundi. Difference pass-by-value concept ni clear ga chupistundi.
+
+### Step 2 — Inspect parameter reassignment
+
+`reassign` lo parameter ki new ArrayList assign chestunnam. Java caller reference value copy ni method ki istundi. Local copy change ayina caller variable original List ne refer chestundi.
+
+### Step 3 — Inspect mutation through the copied reference
+
+`mutate` parameter reference copy same List object ni point chestundi. `add` object state ni change chestundi kabatti caller kuda change ni chustundi. Idi pass-by-reference kaadu; copied reference value dwara mutation.
+
+### Step 4 — Open the test that proves both outcomes
+
+JUnit test actual caller List ni use chestundi. `reassign` taruvata List unchanged ga untundi; `mutate` taruvata `GCP` add avutundi. Rendu outcomes same test lo direct ga verify avutayi.
+
+### Step 5 — Focus on the reassignment assertion
+
+`reassign` call taruvata test still `A` matrame expect chestundi. Caller variable replace avvaledu ani idi prove chestundi. Method local reference copy matrame new List ki marchindi.
+
+### Step 6 — Focus on the mutation assertion
+
+`mutate` same object state ni change chestundi kabatti caller List lo `GCP` kanipistundi. Reference itself by value copy ayyindi; object మాత్రం common ga undi. Anduke rule ki contradiction ledu.
+
+### Step 7 — Run the existing language-semantics test
+
+JUnit test pass ayithe rendu behaviors expected ga work chestunnayi ani confirm avutundi. Reference value copy avutundi; shared mutable object ni copied reference dwara modify cheyyachu. Caller variable మాత్రం reassign avvadu.
+
+### Step 8 — Return to the paired methods for the interview rule
+
+Final ga rendu methods ni pakkapakkana chudandi. Parameter reassign local ga untundi; object mutation caller ki kanipistundi. Java always pass-by-value, object case lo copied value reference ani answer cheyyali.
+
+## Lesson 33 — Understand System.exit() in Java
+
+### Step 1 — Start from AeroTopo's normal Spring Boot entry point
+
+AeroTopo main method `SpringApplication.run` tho application ni start chestundi. Normal service lifecycle ni Spring manage chestundi. `System.exit` మాత్రం complete JVM process ni terminate cheyyadaniki request chestundi.
+
+### Step 2 — Create a minimal System.exit experiment
+
+Temporary demo Spring Boot service ni touch cheyyakunda `System.exit` behavior chupistundi. First message print avutundi, exit status set avutundi. Exit call taruvata unna print execute avvakudadhu.
+
+### Step 3 — Focus on the exit request and status
+
+`System.exit(7)` process ki exit status 7 istundi. Shell leda automation process result ni status dwara check cheyyagaladu. Zero usually success, non-zero usually failure convention.
+
+### Step 4 — Inspect the statement after System.exit
+
+Compiler next line ni allow chestundi, kani runtime lo JVM exit start avutundi. Anduke `after exit` print execute avvadu. Process previous line daggare termination sequence ki velthundi.
+
+### Step 5 — Run the process and capture its exit status
+
+Run output lo `before exit` and `exit=7` kanipistayi. `after exit` ledu. Ante JVM terminate ayyindi mariyu caller shell ki status 7 return ayyindi.
+
+### Step 6 — Remove the process-termination demo from the project state
+
+Temporary exit demo ni remove chestunnam. Normal controller, service, library code lo `System.exit` use cheyyadam dangerous endukante whole JVM stop avutundi. Process termination intentional ga unna context lo matrame use cheyyali.
+
+### Step 7 — Return to the framework-managed application startup
+
+Malli AeroTopo main method ni chudandi. Long-running Spring service lifecycle framework ki leave chestam. Interview lo `System.exit` whole JVM terminate chestundi, status caller ki istundi, and careful ga use cheyyali ani cheppali.
+
+## Lesson 34 — What happens internally when System.exit() is called
+
+### Step 1 — Contrast JVM shutdown with deterministic resource cleanup
+
+RuntimeLab NativeBuffer individual resource cleanup ni handle chestundi. `System.exit` మాత్రం complete JVM shutdown start chestundi. Resource close mariyu process termination rendu different lifecycle levels ani first separate ga understand cheyyali.
+
+### Step 2 — Create a shutdown-hook demonstration
+
+Temporary demo shutdown hook register chestundi. Main first message print chesi `System.exit(5)` call chestundi. JVM shutdown sequence lo hook run ayi final termination mundu hook message kanipinchali.
+
+### Step 3 — Inspect shutdown-hook registration
+
+`addShutdownHook` JVM shutdown time lo run cheyyalsina Thread ni register chestundi. `System.exit` taruvata normal statements run avvavu. Anduke shutdown-specific cleanup ki hook suitable mechanism.
+
+### Step 4 — Inspect the call that starts JVM shutdown
+
+`System.exit(5)` JVM shutdown ni start chestundi. Status 5 process result ga carry avutundi; registered hook shutdown sequence lo run avutundi. Normal main flow ikkada continue kaadu.
+
+### Step 5 — Run the hook and exit sequence
+
+Output order main message, shutdown hook, exit status ga vastundi. Ante exit request taruvata JVM hook ni run chesi process ni status 5 tho terminate chesindi. Normal main flow resume avvaledu.
+
+### Step 6 — Remove the temporary shutdown-hook class
+
+Temporary shutdown demo ni remove chestunnam. Production code lo resource cleanup ki try-with-resources, close methods, framework lifecycle callbacks use cheyyadam better. Business logic nundi whole JVM exit cheyyadam avoid cheyyali.
+
+### Step 7 — Return to AeroTopo's explicit resource lifecycle
+
+NativeBuffer close one resource ni clean chestundi; JVM alive ga untundi. `System.exit` మాత్రం shutdown sequence, hooks, final termination ni trigger chestundi. Interview answer lo ee lifecycle difference clear ga mention cheyyali.
+
+## Lesson 35 — System.exit() usage in the AeroTopo project
+
+### Step 1 — Inspect how the real service starts
+
+AeroTopo main method SpringApplication ni start chestundi; direct `System.exit` ledu. Long-running service lifecycle ni framework and deployment environment manage chestayi. Business request code whole JVM ni stop cheyyakudadhu.
+
+### Step 2 — Search the real source tree for System.exit
+
+Source tree search lo `System.exit` usage dorakaledu. Kabatti project lo use chesam ani claim cheyyakudadhu. Accurate answer actual code evidence meeda base avvali.
+
+### Step 3 — Open the documented deployment and rollback lifecycle
+
+RUNBOOK deployment section rollout and rollback ni deployment process ga describe chestundi. Service lifecycle external operational controls tho manage avutundi. Domain/service code nundi sudden JVM exit ee model ki fit kaadu.
+
+### Step 4 — Focus on rollout and rollback responsibilities
+
+Highlighted deployment line controlled rollout and rollback ni show chestundi. Controller/service direct exit chesthe whole process sudden ga stop avvachu. Exceptions and framework lifecycle handling service context lo safer.
+
+### Step 5 — Reconnect the operational rule to the application entry point
+
+Malli application main ni chudandi. Project source lo direct exit usage ledu. Standalone CLI leda one-shot utility intentional ga process finish cheyyalsina case lo exit status useful avvachu.
+
+### Step 6 — State the project-experience answer without inventing history
+
+Final answer actual project evidence ni follow cheyyali. AeroTopo service code lo `System.exit` use ledu ani cheppi, CLI or one-shot tool lo intentional process exit kosam use avvachu ani explain cheyyali.
+
+## Lesson 36 — Agile-style project methodology versus Waterfall
+
+### Step 1 — Open the project's Git and review workflow
+
+RUNBOOK Git and review section small feature branch, focused commits, verification, PR, review ni describe chestundi. Work ni iterative ga deliver and validate cheyyadaniki ee practices useful. Waterfall la one final handoff matrame kaadu.
+
+### Step 2 — Focus on the short feedback loop
+
+Feature branch nundi verification, PR, review, tests varaku short feedback loop undi. Changes small ga validate chestam. Final phase varaku testing wait cheyyadam kante idi iterative Agile-style flow.
+
+### Step 3 — Inspect incremental deployment and rollback
+
+Deployment section one instance rollout, workflow test, traffic switch, rollback concerns ni mention chestundi. Change ni small controlled steps lo release cheyyachu. Idi iterative delivery mindset ni support chestundi.
+
+### Step 4 — Inspect how the project handles changing information
+
+RUNBOOK unfamiliar task appudu unknowns identify chesi bounded experiment run cheyyamani cheptundi. Evidence batti decision change cheyyachu. Learning and adaptation Agile-style working ki natural ga fit avutayi.
+
+### Step 5 — Check the architecture's evidence-before-scaling rule
+
+ARCHITECTURE lo first simple deployment start chesi observed bottlenecks benchmark cheyyamani undi. Evidence vachaka scale or split decisions chestam. Idi incremental architecture approach ni show chestundi.
+
+### Step 6 — Separate documented Agile-style practice from undocumented Scrum claims
+
+Repo iterative practices ni prove chestundi, kani sprint length, stand-up, story points la Scrum details document cheyyaledu. Interview lo unsupported ceremony details invent cheyyakunda actual workflow ni explain cheyyali.
+
+### Step 7 — Summarize the methodology from the strongest project evidence
+
+Final ga Git/review loop ni base chesi Agile-style iterative methodology ani cheppachu. Incremental rollout and evidence-based design kuda support chestayi. Scrum ceremonies మాత్రం repo prove cheyyadu ani clear ga separate cheyyali.
+
+## Lesson 37 — Remove duplicate integers from an array
+
+### Step 1 — Open the existing AeroTopo duplicate-removal method
+
+SurveyAlgorithms.unique already real implementation ni contain chestundi. `Arrays.stream`, `distinct`, `toArray` three stages kanipistayi. Duplicate production method create cheyyakunda existing code ni reuse chestam.
+
+### Step 2 — Focus on distinct encounter-order behavior
+
+`distinct()` first occurrence ni keep chesi later duplicates remove chestundi. Ordered IntStream kabatti encounter order preserve avutundi. Input `4,2,4,1,2` result `4,2,1` ga undali.
+
+### Step 3 — Create a temporary driver for a duplicated integer array
+
+Temporary driver real method ni call chestundi, production algorithm ni modify cheyyadu. Demo input/output separate ga untayi. Reusable method lo println add cheyyadam avoid chestam.
+
+### Step 4 — Inspect the input and real method call together
+
+Input and method call same demo lo clear ga kanipistayi. Result new array ga return avutundi. Output chusi duplicates remove ayyaya mariyu first order preserve ayyinda easy ga verify cheyyachu.
+
+### Step 5 — Run the duplicate-removal example
+
+Output `[4, 2, 1]` first occurrences ni preserve chestundi. Second 4 and second 2 remove ayyayi. Result length matrame kaadu, encounter order kuda verify avutundi.
+
+### Step 6 — Compare the array method with the reusable stream exercise
+
+SurveyAlgorithms array kosam `IntStream` use chestundi; StreamExercises List kosam object stream use chestundi. Duplicate removal concept same `distinct`. Final container type matrame different.
+
+### Step 7 — Remove the temporary driver and keep the real implementation
+
+Temporary driver ni remove chestunnam. Real one-line method project lo already undi. Interview lo readability plus encounter-order result cheppi, duplicates track cheyyadaniki extra state/memory use avutundi ani mention cheyyali.
+
+### Step 8 — Return to the production array solution
+
+Final ga `Arrays.stream → distinct → toArray` flow ni chudandi. First occurrence order preserve avutundi and new int array return avutundi. Alternative ga order important ayithe LinkedHashSet use cheyyachu.
+
+## Lesson 38 — Merge two unsorted arrays into one sorted array
+
+### Step 1 — Open the existing merge-and-sort implementation
+
+SurveyAlgorithms.mergeSorted exact task ni already solve chestundi. First and second arrays streams ga convert ayi concat avutayi, taruvata combined data sort ayi `toArray` tho result vastundi.
+
+### Step 2 — Focus on concatenate-then-sort order
+
+`concat` taruvata `sorted` whole combined values meeda run avutundi. Separate arrays ni sort chesi simple ga append chesthe second array small values first array large values taruvata ravachu. Global order guarantee kaadu.
+
+### Step 3 — Create two deliberately unsorted input arrays
+
+Demo rendu arrays intentionally unsorted ga petti method ni test chestundi. Output sorted ga vaste sorting method pipeline lone jarigindi ani clear. Already sorted inputs use chesthe proof weak ga untundi.
+
+### Step 4 — Inspect both inputs and the merge call
+
+First and second arrays values final order lo interleave avutayi. Correct output `1,2,3,4,5,6` ga undali. Idi concat plus global sort rendu work chestunnayi ani show chestundi.
+
+### Step 5 — Run the Stream API merge solution
+
+Output complete sorted sequence ga vastundi. Unsorted inputs correctly merge and sort ayyayi ani verify avutundi. Production line lo `sorted()` final global order ni create chestundi.
+
+### Step 6 — Compare with an imperative copy-then-sort pattern
+
+CollectionLab.sorted copy create chesi sort chestundi. Array alternative lo kuda first combined array create chesi values copy chesi `Arrays.sort` call cheyyachu. Concept copy/combine then sort.
+
+### Step 7 — Remove the temporary merge driver
+
+Temporary driver ni remove chestunnam. Interview lo Stream API `concat → sorted → toArray` approach cheppachu. Imperative ga combined array create chesi copy chesi `Arrays.sort` use cheyyachu.
+
+### Step 8 — Return to the one-line Stream API implementation
+
+Final line primitive IntStream use chestundi kabatti unnecessary boxing avoid avutundi. Combined `n+m` values sorting main cost. Interview lo roughly O((n+m) log(n+m)) time ani explain cheyyachu.
+
+## Lesson 39 — Move binary zeros left and ones right
+
+### Step 1 — Open the binary-array partition method
+
+SurveyAlgorithms.binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.
+
+### Step 2 — Inspect validation and zero counting in one pass
+
+Loop zeros matrame count chestundi. Array length nundi zero count subtract chesthe ones count automatic ga telustundi. Anduke separate ones counter avasaram ledu.
+
+### Step 3 — Inspect how the partition is written back
+
+Problem original 0/1 order preserve cheyyamani adagaledu. Zero count telisina taruvata prefix ni 0, suffix ni 1 ga fill cheyyachu. Grouping requirement complete avutundi.
+
+### Step 4 — Create a mixed binary input for verification
+
+Demo input lo three zeros and three ones mixed ga unnayi. Method in-place ga modify chestundi. Correct output left side three zeros, right side three ones ga undali.
+
+### Step 5 — Run the in-place binary partition
+
+Output expected partition ga vastundi. Zero count 3 kabatti boundary index 3 daggara set ayyindi. Oka integer counter matrame extra state kabatti O(1) additional space.
+
+### Step 6 — Review the full O(n) count-and-fill path
+
+One scan O(n), fills combined ga n positions matrame write chestayi. Total linear work kabatti O(n). Extra ga invalid value 0/1 kaakapothe method exception throw chestundi.
+
+### Step 7 — Remove the temporary binary driver
+
+Temporary driver ni remove chestunnam. Count-and-fill and two-pointer swap rendu O(n) time, O(1) extra space ga implement cheyyachu. Existing project count-and-fill approach use chestundi.
+
+### Step 8 — Return to the real binaryFlags solution
+
+Final method simple binary property ni use chestundi. Zeros count boundary decide chestundi, fills final arrangement create chestayi, invalid values reject avutayi. Interview lo O(n) time and O(1) space mention cheyyali.
+
+## Lesson 40 — Move zeros right while preserving nonzero order
+
+### Step 1 — Open the stable zero-compaction algorithm
+
+SurveyAlgorithms.moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.
+
+### Step 2 — Inspect the write-pointer compaction loop
+
+Loop original order lo values ni read chestundi. Non-zero value vachinappude next write position ki copy avutundi. Anduke non-zero elements order change kakunda front ki compact avutayi.
+
+### Step 3 — Inspect how trailing positions become zeros
+
+Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays.fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.
+
+### Step 4 — Create a mixed array with visible nonzero ordering
+
+Demo input lo non-zero order `5,2,7` clear ga undi. Method zeros ni right ki move chesina taruvata kuda `5,2,7` same order lo remain avvali.
+
+### Step 5 — Run the stable in-place compaction
+
+Output lo all zeros suffix ki vellayi. Non-zero sequence `5,2,7` original order lone undi. Ante method stable compaction and zero movement rendu satisfy chestundi.
+
+### Step 6 — Compare general zero compaction with binary partitioning
+
+binaryFlags lo only 0 and 1 kabatti zero count alone final array create cheyyagaladu. General array lo 5,2,7 la actual values preserve cheyyali. Anduke stable compaction necessary.
+
+### Step 7 — Remove the temporary zero-movement driver
+
+Temporary driver ni remove chestunnam. Main points write pointer, in-place update, non-zero stable order, O(1) extra space. Production method project lo unchanged ga remain avutundi.
+
+### Step 8 — Return to the production moveZerosRight method
+
+Final method one scan plus one suffix fill use chestundi. Total O(n) time, O(1) space. Non-zero order preserve avutundi; swap-based approach design batti order preserve kakapovachu.

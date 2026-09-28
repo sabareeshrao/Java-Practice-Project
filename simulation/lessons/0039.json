@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "lesson_number": 39,
+  "question_id": 39,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Move binary zeros left and ones right",
+  "info_language": "te-Latn",
+  "answer": "Because the array contains only 0 and 1, one simple O(n) approach is to count the number of zeros in one pass, then fill the first `zeroCount` positions with 0 and the remaining positions with 1. AeroTopo's `binaryFlags` method also validates that every input is either 0 or 1 before rearranging. This uses O(1) extra space and modifies the array in place. A two-pointer partition is another valid O(n), O(1) approach if you prefer swapping rather than counting and filling.",
+  "steps": [
+    {
+      "title": "Open the binary-array partition method",
+      "question": "AeroTopo's `SurveyAlgorithms.binaryFlags` already solves the exact 0/1 arrangement problem in place. The method validates each element, counts how many zeros exist, then fills the left prefix with zeros and the remaining suffix with ones. Which lines implement validation, counting, and reconstruction of the partitioned array?",
+      "why_te": "SurveyAlgorithms.binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect validation and zero counting in one pass",
+      "question": "The loop rejects any value other than 0 or 1 and increments `zero` only for actual zeros. That means the final count completely determines the partition boundary. Why does this work without counting ones separately, and how would array length let you derive the number of ones automatically?",
+      "why_te": "Loop zeros matrame count chestundi. Array length nundi zero count subtract chesthe ones count automatic ga telustundi. Anduke separate ones counter avasaram ledu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 21,
+            "expected_text": "for(int value:flags) { if(value!=0 && value!=1) throw new IllegalArgumentException(); if(value==0) zero++; }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          20,
+          21
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect how the partition is written back",
+      "question": "After the count is known, the first `Arrays.fill` writes zeros from index 0 up to the boundary, and the second fills the remainder with ones. Why can this reconstruction safely overwrite the original order when the problem cares only about grouping zeros left and ones right?",
+      "why_te": "Problem original 0/1 order preserve cheyyamani adagaledu. Zero count telisina taruvata prefix ni 0, suffix ni 1 ga fill cheyyachu. Grouping requirement complete avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 22,
+            "expected_text": "Arrays.fill(flags,0,zero,0); Arrays.fill(flags,zero,flags.length,1);"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          22
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a mixed binary input for verification",
+      "question": "The temporary driver uses `{1,0,1,0,0,1}`, which contains three zeros and three ones in alternating positions. It calls the real `binaryFlags` method and prints the same array afterward. What exact partitioned output should appear if the count-and-fill algorithm is correct?",
+      "why_te": "Demo input lo three zeros and three ones mixed ga unnayi. Method in-place ga modify chestundi. Correct output left side three zeros, right side three ones ga undali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/BinaryFlagsDemo.java",
+          "language": "java",
+          "content": "import java.util.Arrays;\nimport com.aerotopo.learning.SurveyAlgorithms;\npublic class BinaryFlagsDemo {\n    public static void main(String[] args) {\n        int[] flags = {1,0,1,0,0,1};\n        SurveyAlgorithms.binaryFlags(flags);\n        System.out.println(Arrays.toString(flags));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the in-place binary partition",
+      "question": "The example now executes against the real method. When the printed array becomes `[0, 0, 0, 1, 1, 1]`, what does that verify about the boundary computed from the zero count, and why does the algorithm need only constant extra working storage?",
+      "why_te": "Output expected partition ga vastundi. Zero count 3 kabatti boundary index 3 daggara set ayyindi. Oka integer counter matrame extra state kabatti O(1) additional space.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson39-demo labs/java/BinaryFlagsDemo.java; java -cp \"target/classes;target/lesson39-demo\" BinaryFlagsDemo",
+          "output": "[0, 0, 0, 1, 1, 1]"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Review the full O(n) count-and-fill path",
+      "question": "The complete method scans every value once and then performs two linear fills whose combined length is still the array length. Looking at the counter and fill lines together, why is the total running time O(n) rather than O(n²), and what input-validation benefit does this implementation add?",
+      "why_te": "One scan O(n), fills combined ga n positions matrame write chestayi. Total linear work kabatti O(n). Extra ga invalid value 0/1 kaakapothe method exception throw chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the temporary binary driver",
+      "question": "The production method is already present and verified, so the temporary caller can be deleted without losing project functionality. After cleanup, how would you compare this counting approach with a two-pointer swap solution while keeping the core interview requirements—O(n) time and O(1) extra space—clear?",
+      "why_te": "Temporary driver ni remove chestunnam. Count-and-fill and two-pointer swap rendu O(n) time, O(1) extra space ga implement cheyyachu. Existing project count-and-fill approach use chestundi.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/BinaryFlagsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Return to the real binaryFlags solution",
+      "question": "The final code shows a particularly simple solution because the input domain contains only two possible values. How would you explain the zero-count boundary, two fill operations, invalid-value guard, in-place behavior, and complexity in a concise interview answer without overcomplicating the algorithm?",
+      "why_te": "Final method simple binary property ni use chestundi. Zeros count boundary decide chestundi, fills final arrangement create chestayi, invalid values reject avutayi. Interview lo O(n) time and O(1) space mention cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

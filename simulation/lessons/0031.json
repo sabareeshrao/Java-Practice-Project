@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "lesson_number": 31,
+  "question_id": 31,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Purpose of the instanceof operator",
+  "info_language": "te-Latn",
+  "answer": "The `instanceof` operator checks whether an object reference is compatible with a specified reference type at runtime. It returns `true` when the object can be treated as that type and `false` otherwise; `null instanceof SomeType` is always `false`. It is commonly used before type-specific logic or casting. With modern Java pattern matching, `value instanceof String text` performs the type check and, when it succeeds, creates a safely typed pattern variable without a separate cast.",
+  "steps": [
+    {
+      "title": "Start from type-based behavior already used in AeroTopo",
+      "question": "AeroTopo already chooses behavior according to an object's runtime type inside `LanguageLab.format`, using Java's modern pattern-matching switch. Before introducing `instanceof` directly, inspect this method and identify why runtime type information matters when one `Object` parameter can receive Integer, String, null, or another object.",
+      "why_te": "LanguageLab.format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a direct instanceof experiment",
+      "question": "A direct `instanceof` example makes the operator's contract easier to see than a switch expression alone. The temporary class checks a String pattern, an Integer pattern, and then falls back for null or another object. Which part of this code proves that the operator can combine a runtime type test with a typed pattern variable?",
+      "why_te": "Temporary demo lo String mariyu Integer kosam `instanceof` pattern use chestunnam. Condition true ayithe `label` leda `count` typed variable automatic ga available avutundi. Separate cast rayalsina avasaram taggutundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/InstanceofDemo.java",
+          "language": "java",
+          "content": "public class InstanceofDemo {\n    static String describe(Object value) {\n        if (value instanceof String label) return \"String:\" + label.strip();\n        if (value instanceof Integer count) return \"Integer:\" + count;\n        return value == null ? \"null\" : \"Other\";\n    }\n    public static void main(String[] args) {\n        System.out.println(describe(\" tile-7 \"));\n        System.out.println(describe(42));\n        System.out.println(describe(null));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the String pattern variable",
+      "question": "The expression `value instanceof String label` first checks whether the runtime object is compatible with String and only then introduces `label` as a String. Why is this safer and clearer than performing an unchecked cast first, especially when the method accepts the broad `Object` type?",
+      "why_te": "Highlight ayina condition first runtime type ni check chestundi. Match true ayithe `label` already String type lo available avutundi. Wrong object ni direct ga String cast chese risk ikkada avoid avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/InstanceofDemo.java",
+            "line": 3,
+            "expected_text": "if (value instanceof String label) return \"String:\" + label.strip();"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Compare another type and the null fallback",
+      "question": "The next branch tests Integer, while the fallback explicitly handles null. Java defines every `null instanceof Type` expression as false, so null reaches the fallback instead of either pattern branch. How do these neighboring lines show both type compatibility testing and the operator's null-safe boolean behavior?",
+      "why_te": "Integer object vaste second `instanceof` branch match avutundi. `null` అయితే String leda Integer branch match kaadu; condition false avutundi. Anduke null check fallback lo handle chestunnam.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/InstanceofDemo.java",
+            "line": 4,
+            "expected_text": "if (value instanceof Integer count) return \"Integer:\" + count;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run String, Integer, and null through the operator",
+      "question": "One execution can now exercise three different runtime values through the same `Object` parameter. When the program prints a String result, an Integer result, and then `null`, what evidence does that give you about `instanceof` selecting only compatible type branches without throwing for the null reference?",
+      "why_te": "Program three values ni same method ki pass chestundi. String and Integer correct branches select avutayi; null fallback ki velthundi. `instanceof` null meeda exception throw cheyyakunda false return chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson31-demo labs/java/InstanceofDemo.java; java -cp target/lesson31-demo InstanceofDemo",
+          "output": "String:tile-7\nInteger:42\nnull"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary instanceof class",
+      "question": "The temporary class has demonstrated the operator directly, so keeping it would add duplicate teaching code beside the existing `LanguageLab.format` runtime-type example. After deleting the demo, return mentally to the production method: what reusable rule should guide `instanceof` usage when code receives a broad reference type?",
+      "why_te": "Temporary demo ni remove chestunnam endukante concept already prove ayyindi. Main rule: broad reference vachinappudu type-specific logic mundu compatibility check cheyyachu. Unnecessary `instanceof` chains మాత్రం avoid cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/InstanceofDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect instanceof back to the real project type dispatch",
+      "question": "AeroTopo's real method uses pattern matching in a switch rather than an `if` chain, but both approaches rely on runtime type information. Looking again at Integer and String branches, how would you explain the purpose of `instanceof`, its safe-casting role, pattern variables, and null behavior in one interview answer?",
+      "why_te": "Malli LanguageLab.format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
