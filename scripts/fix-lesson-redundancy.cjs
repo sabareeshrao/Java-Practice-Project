@@ -12,7 +12,13 @@ const stripNo=s=>String(s||"").replace(/^\[no highlight\]\s*/i,"").trim();
 const normalize=s=>stripNo(s).toLowerCase().replace(/[\`*_#>\[\](){},.:;!?'"“”‘’\/\\|+=<>-]/g," ").replace(/\s+/g," ").trim();
 const words=s=>normalize(s).split(" ").filter(Boolean);
 const wc=s=>String(s||"").trim().split(/\s+/).filter(Boolean).length;
-const splitSentences=s=>{const m=String(s||"").trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g);return m?m.map(x=>x.trim()).filter(Boolean):[];};
+const splitSentences=s=>{
+ const protectedText=String(s||"").trim()
+  .replace(/\.(java|json|xml|md|yml|yaml|properties|html|css|js|cjs|py|sql)\b/gi,"§$1")
+  .replace(/(\d+)\.(\d+)/g,"$1§$2");
+ const m=protectedText.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
+ return m?m.map(x=>x.replace(/§/g,".").trim()).filter(Boolean):[];
+};
 const loc=r=>`L${r.lessonNo}S${r.stepNo}`;
 const basename=p=>p?path.basename(String(p)):"";
 const short=(s,n=8)=>String(s||"").replace(/[\r\n]+/g," ").trim().split(/\s+/).filter(Boolean).slice(0,n).join(" ");
@@ -251,7 +257,7 @@ for(const r of rows){
    const no=r.step.highlight?.kind==="none";
    const first=splitSentences(stripNo(r.step.why_te))[0]||cleanTitle(r.lesson.title);
    const coreWords=punctless(first).split(/\s+/).filter(Boolean).slice(0,28).join(" ");
-   r.step.why_te=(no?"[no highlight] ":"")+`${coreWords}; ${roleClauseT(r)}.`;
+   r.step.why_te=(no?"[no highlight] ":"")+`${coreWords}; ${uniqueTClause(r)}.`;
  }
  if(wc(r.step.why_te)<15)r.step.why_te+=` Ee step visible evidence ni next technical reasoning ki direct base ga use chestundi.`;
  if(wc(r.step.why_te)>55)throw new Error(`${loc(r)} Telugu words=${wc(r.step.why_te)}`);

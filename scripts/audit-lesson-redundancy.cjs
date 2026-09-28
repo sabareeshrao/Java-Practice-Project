@@ -61,7 +61,12 @@ function sentenceGroups(field){
  const m=new Map();
  for(const r of records){
    const raw=String(r[field]||"").replace(/^\[no highlight\]\s*/i,"");
-   for(const sentence of raw.split(/(?<=[.!?])\s+|\n+/)){
+   const protectedText=raw
+     .replace(/\.(java|json|xml|md|yml|yaml|properties|html|css|js|cjs|py|sql)\b/gi,"§$1")
+     .replace(/(\d+)\.(\d+)/g,"$1§$2");
+   const sentenceList=(protectedText.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[])
+     .map(s=>s.replace(/§/g,".").trim());
+   for(const sentence of sentenceList){
      const n=normalize(sentence);
      if(words(n).length<7)continue;
      if(!m.has(n))m.set(n,[]);
