@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "lesson_number": 91,
+  "question_id": 91,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Why getters and controlled methods are preferred over public fields",
+  "info_language": "te-Latn",
+  "answer": "Public fields allow callers to read and mutate representation directly, making validation and future refactoring difficult. Getters expose information without granting arbitrary write access, while domain methods or carefully designed setters can validate changes and preserve invariants. AeroTopo's `SurveyProject` uses private fields, read-only getters, and named state-changing methods such as `transition`, `imported`, and `quality` instead of generic public setters, which makes allowed mutations explicit.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Why getters and controlled methods are preferred over public fields",
+      "question": "The AeroTopo source already contains a concrete example for \"Why getters and controlled methods are preferred over public fields\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The entity deliberately separates read accessors from domain-specific mutation methods rather than exposing public mutable fields. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
+      "why_te": "Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          34,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the boundary — Why getters and controlled methods are preferred over public fields",
+      "question": "A useful answer for \"Why getters and controlled methods are preferred over public fields\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. Why is this arrangement safer than putting every class and field into one flat namespace?",
+      "why_te": "Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          34,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate maintainability — Why getters and controlled methods are preferred over public fields",
+      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Why getters and controlled methods are preferred over public fields\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
+      "why_te": "Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          34,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Why getters and controlled methods are preferred over public fields",
+      "question": "Now turn the project evidence for \"Why getters and controlled methods are preferred over public fields\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
+      "why_te": "Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          34,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

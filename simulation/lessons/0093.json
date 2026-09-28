@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "lesson_number": 93,
+  "question_id": 93,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "What happens when two packages contain the same class name",
+  "info_language": "te-Latn",
+  "answer": "Java allows different packages to declare classes with the same simple name because their fully qualified names are different. A caller can import one simple name and refer to the other with its fully qualified name, or use fully qualified names for both. Importing two types with the same simple name into one compilation unit creates ambiguity, so the code must disambiguate. Packages therefore provide a namespace rather than requiring every class in an application to have a globally unique simple name.",
+  "steps": [
+    {
+      "title": "Open the valid AeroTopo context — What happens when two packages contain the same class name",
+      "question": "Before testing the edge case behind \"What happens when two packages contain the same class name\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. What rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create labs/java/pkgone/Tile.java — What happens when two packages contain the same class name",
+      "question": "The temporary source labs/java/pkgone/Tile.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/pkgone/Tile.java",
+          "language": "java",
+          "content": "package pkgone; public class Tile { public String id(){ return \"one\"; } }\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name",
+      "question": "The temporary source labs/java/pkgtwo/Tile.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/pkgtwo/Tile.java",
+          "language": "java",
+          "content": "package pkgtwo; public class Tile { public String id(){ return \"two\"; } }\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name",
+      "question": "The temporary source labs/java/PackageNameCollisionDemo.java is part of the focused experiment for \"What happens when two packages contain the same class name\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/PackageNameCollisionDemo.java",
+          "language": "java",
+          "content": "import pkgone.Tile;\npublic class PackageNameCollisionDemo {\n    public static void main(String[] args){\n        Tile one = new Tile();\n        pkgtwo.Tile two = new pkgtwo.Tile();\n        System.out.println(one.id() + \":\" + two.id());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the package/access experiment — What happens when two packages contain the same class name",
+      "question": "The temporary sources for \"What happens when two packages contain the same class name\" are now compiled or executed together so the rule becomes observable rather than theoretical. Compare the result with the declarations you just inspected. What does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson93-demo labs/java/pkgone/Tile.java labs/java/pkgtwo/Tile.java labs/java/PackageNameCollisionDemo.java; java -cp target/lesson93-demo PackageNameCollisionDemo",
+          "output": "one:two"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name",
+      "question": "The labs/java/PackageNameCollisionDemo.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/PackageNameCollisionDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "Temporary source labs/java/PackageNameCollisionDemo.java is removed after the experiment."
+      }
+    },
+    {
+      "title": "Remove labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name",
+      "question": "The labs/java/pkgtwo/Tile.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/pkgtwo/Tile.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "Temporary source labs/java/pkgtwo/Tile.java is removed after the experiment."
+      }
+    },
+    {
+      "title": "Remove labs/java/pkgone/Tile.java — What happens when two packages contain the same class name",
+      "question": "The labs/java/pkgone/Tile.java portion of the temporary experiment for \"What happens when two packages contain the same class name\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/pkgone/Tile.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "Temporary source labs/java/pkgone/Tile.java is removed after the experiment."
+      }
+    },
+    {
+      "title": "Return to the real project structure — What happens when two packages contain the same class name",
+      "question": "With every temporary source for \"What happens when two packages contain the same class name\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. How would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
+      "why_te": "Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/service/ProjectService.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

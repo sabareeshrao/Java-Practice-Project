@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "lesson_number": 90,
+  "question_id": 90,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "How encapsulation improves software security and integrity",
+  "info_language": "te-Latn",
+  "answer": "Encapsulation improves integrity by restricting direct state mutation and forcing changes through methods that can validate invariants, authorize operations, normalize input, or reject illegal transitions. It is not a complete security boundary against malicious code in the same process, but it reduces accidental misuse and narrows trusted mutation paths. AeroTopo's `SurveyProject` keeps fields private and exposes controlled operations such as `transition`, `imported`, and `quality`, protecting workflow state from arbitrary assignment.",
+  "steps": [
+    {
+      "title": "Open the project evidence — How encapsulation improves software security and integrity",
+      "question": "The AeroTopo source already contains a concrete example for \"How encapsulation improves software security and integrity\", so inspect the highlighted lines instead of treating the topic as isolated syntax. Private fields plus validated transition methods show encapsulation protecting domain integrity. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
+      "why_te": "SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace the boundary — How encapsulation improves software security and integrity",
+      "question": "A useful answer for \"How encapsulation improves software security and integrity\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. Why is this arrangement safer than putting every class and field into one flat namespace?",
+      "why_te": "SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate maintainability — How encapsulation improves software security and integrity",
+      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"How encapsulation improves software security and integrity\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
+      "why_te": "SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — How encapsulation improves software security and integrity",
+      "question": "Now turn the project evidence for \"How encapsulation improves software security and integrity\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
+      "why_te": "SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/persistence/SurveyProject.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
