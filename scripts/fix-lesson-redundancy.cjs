@@ -243,23 +243,6 @@ for(let pass=0;pass<8;pass++){
 }
 
 for(const r of rows){
-  if(qLater.has(loc(r))){
-   const ss=splitSentences(r.step.question);const last=ss.pop()||r.step.question;
-   ss.push(`${punctless(last)}; use ${cleanTitle(r.step.title)} and ${anchor(r)} as the unique evidence for this step.`);
-   r.step.question=ss.join(" ");
-  }
-  if(tLater.has(loc(r))){
-   const no=r.step.highlight?.kind==="none";
-   const ss=splitSentences(stripNo(r.step.why_te));const last=ss.pop()||stripNo(r.step.why_te);
-   ss.push(`${punctless(last)}; ${roleClauseT(r)}.`);
-   let body=ss.join(" ");
-   if(wc(body)>55)body=`${punctless(ss[0]||cleanTitle(r.lesson.title))}; ${roleClauseT(r)}.`;
-   r.step.why_te=(no?"[no highlight] ":"")+body;
-  }
- }
-}
-
-for(const r of rows){
  r.step.question=translit(r.step.question).replace(/\s+/g," ").trim();
  r.step.why_te=translit(r.step.why_te).replace(/\s+/g," ").trim();
  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te))r.step.why_te="[no highlight] "+r.step.why_te;
