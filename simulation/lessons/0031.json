@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Start from type-based behavior already used in AeroTopo",
-      "question": "AeroTopo already chooses behavior according to an object's runtime type inside `LanguageLab.format`, using Java's modern pattern-matching switch. Before introducing `instanceof` directly, inspect this method and identify why runtime type information matters when one `Object` parameter can receive Integer, String, null, or another object.",
-      "why_te": "LanguageLab.format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.",
+      "question": "AeroTopo already chooses behavior according to an object's runtime type inside `LanguageLab. format`, using Java's modern pattern-matching switch. Before introducing `instanceof` directly, inspect this method and identify why runtime type information matters when one `Object` parameter can receive Integer, String, null, or another object.",
+      "why_te": "LanguageLab. format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,7 +91,7 @@
     {
       "title": "Compare another type and the null fallback",
       "question": "The next branch tests Integer, while the fallback explicitly handles null. Java defines every `null instanceof Type` expression as false, so null reaches the fallback instead of either pattern branch. How do these neighboring lines show both type compatibility testing and the operator's null-safe boolean behavior?",
-      "why_te": "Integer object vaste second `instanceof` branch match avutundi. `null` అయితే String leda Integer branch match kaadu; condition false avutundi. Anduke null check fallback lo handle chestunnam.",
+      "why_te": "Integer object vaste second `instanceof` branch match avutundi. `null` ayithe String leda Integer branch match kaadu; condition false avutundi. Anduke null check fallback lo handle chestunnam.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -139,8 +139,8 @@
     },
     {
       "title": "Remove the temporary instanceof class",
-      "question": "The temporary class has demonstrated the operator directly, so keeping it would add duplicate teaching code beside the existing `LanguageLab.format` runtime-type example. After deleting the demo, return mentally to the production method: what reusable rule should guide `instanceof` usage when code receives a broad reference type?",
-      "why_te": "Temporary demo ni remove chestunnam endukante concept already prove ayyindi. Main rule: broad reference vachinappudu type-specific logic mundu compatibility check cheyyachu. Unnecessary `instanceof` chains మాత్రం avoid cheyyali.",
+      "question": "The temporary class has demonstrated the operator directly, so keeping it would add duplicate teaching code beside the existing `LanguageLab. format` runtime-type example. After deleting the demo, return mentally to the production method: what reusable rule should guide `instanceof` usage when code receives a broad reference type?",
+      "why_te": "Temporary demo ni remove chestunnam endukante concept already prove ayyindi. Main rule: broad reference vachinappudu type-specific logic mundu compatibility check cheyyachu. Unnecessary `instanceof` chains matrame avoid cheyyali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -168,7 +168,7 @@
     {
       "title": "Connect instanceof back to the real project type dispatch",
       "question": "AeroTopo's real method uses pattern matching in a switch rather than an `if` chain, but both approaches rely on runtime type information. Looking again at Integer and String branches, how would you explain the purpose of `instanceof`, its safe-casting role, pattern variables, and null behavior in one interview answer?",
-      "why_te": "Malli LanguageLab.format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.",
+      "why_te": "Malli LanguageLab. format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

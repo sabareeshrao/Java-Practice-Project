@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Why fields are hidden rather than overridden",
-      "question": "Why does Method Overriding not work with Fields in Java? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.",
+      "question": "Why does Method Overriding not work with Fields in Java? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present; in Open the AeroTopo baseline Why fields are hidden rather than overridden, use SurveyProducts.java to locate the concrete Why fields are hidden rather than overridden evidence for this specific step. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model; in Open the AeroTopo baseline Why fields are hidden rather than overridden, use SurveyProducts.java to locate the concrete Why fields are hidden rather than overridden evidence for this specific step.",
+      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu; Same-name child field parent field ni hide chestundi; Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi; SurveyProducts.java lo Open the AeroTopo baseline Why fields are hidden rather than overridden baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -33,8 +33,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Why fields are hidden rather than overridden",
-      "question": "The temporary source for \"Why fields are hidden rather than overridden\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.",
+      "question": "The temporary source for \"Why fields are hidden rather than overridden\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result; in Create the focused dispatch experiment Why fields are hidden rather than overridden, use temporary FieldHidingDemo.java to isolate and predict this edge case without changing production code. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome; in Create the focused dispatch experiment Why fields are hidden rather than overridden, use temporary FieldHidingDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu; Same-name child field parent field ni hide chestundi; Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi; temporary FieldHidingDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Run the dispatch experiment — Why fields are hidden rather than overridden",
-      "question": "The focused program for \"Why fields are hidden rather than overridden\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.",
+      "question": "The focused program for \"Why fields are hidden rather than overridden\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names; in Run the dispatch experiment Why fields are hidden rather than overridden, compare the terminal result with the source in javac -d target/lesson156-demo labs/java/FieldHidingDemo.java; java -cp so this step verifies rather than repeats the rule. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate; in Run the dispatch experiment Why fields are hidden rather than overridden, compare the terminal result with the source in javac -d target/lesson156-demo labs/java/FieldHidingDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu; Same-name child field parent field ni hide chestundi; Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi; Run the dispatch experiment Why fields are hidden rather than overridden terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -83,8 +83,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Why fields are hidden rather than overridden",
-      "question": "The isolated example for \"Why fields are hidden rather than overridden\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.",
+      "question": "The isolated example for \"Why fields are hidden rather than overridden\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence; in Remove the temporary dispatch experiment Why fields are hidden rather than overridden, remove temporary FieldHidingDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely; in Remove the temporary dispatch experiment Why fields are hidden rather than overridden, remove temporary FieldHidingDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] Fields virtual methods laga runtime dispatch use cheyyavu; Same-name child field parent field ni hide chestundi; Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi; temporary FieldHidingDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -101,8 +101,8 @@
     },
     {
       "title": "Return to the project design — Why fields are hidden rather than overridden",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"Why does Method Overriding not work with Fields in Java?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"Why does Method Overriding not work with Fields in Java? \" using both the real project and the focused result; in Return to the project design Why fields are hidden rather than overridden, use SurveyProducts.java to locate the concrete Why fields are hidden rather than overridden evidence for this specific step. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism; in Return to the project design Why fields are hidden rather than overridden, use SurveyProducts.java to locate the concrete Why fields are hidden rather than overridden evidence for this specific step.",
+      "why_te": "Fields virtual methods laga runtime dispatch use cheyyavu; Same-name child field parent field ni hide chestundi; Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi; SurveyProducts.java lo Return to the project design Why fields are hidden rather than overridden baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

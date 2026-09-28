@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Start from Java's existing reference method",
-      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses. In `RuntimeLab.references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code?",
+      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses. In `RuntimeLab. references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code?",
       "why_te": "`Object point` method ki object reference istundi. Code object ni use cheyyagaladu, kani address ni read cheyyadam leda pointer arithmetic cheyyadam kanipinchadu.",
       "software": "intellij",
       "required_capability": "open-file",

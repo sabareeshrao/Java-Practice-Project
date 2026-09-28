@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Calling a static method through a null object reference",
-      "question": "Before testing \"Calling a static method through a null object reference\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
-      "why_te": "Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.",
+      "question": "Before testing \"Calling a static method through a null object reference\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation; in Open the AeroTopo baseline Calling a static method through a null object reference, use SurveyProducts.java to locate the concrete Calling a static method through a null object reference evidence for this specific step.",
+      "why_te": "Static method class type batti resolve avutundi; Null reference syntax dwara call technically work avvachu, kani misleading; Class name tho call cheyyadam correct readable style; SurveyProducts.java lo Open the AeroTopo baseline Calling a static method through a null object reference baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused static experiment — Calling a static method through a null object reference",
-      "question": "The temporary class for \"Calling a static method through a null object reference\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
-      "why_te": "Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.",
+      "question": "The temporary class for \"Calling a static method through a null object reference\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution; in Create the focused static experiment Calling a static method through a null object reference, use temporary NullStaticCallDemo.java to isolate and predict this edge case without changing production code. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints; in Create the focused static experiment Calling a static method through a null object reference, use temporary NullStaticCallDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "Static method class type batti resolve avutundi; Null reference syntax dwara call technically work avvachu, kani misleading; Class name tho call cheyyadam correct readable style; temporary NullStaticCallDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Run the focused static experiment — Calling a static method through a null object reference",
-      "question": "The program for \"Calling a static method through a null object reference\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
-      "why_te": "Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.",
+      "question": "The program for \"Calling a static method through a null object reference\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object; in Run the focused static experiment Calling a static method through a null object reference, compare the terminal result with the source in javac -d target/lesson113-demo labs/java/NullStaticCallDemo.java; java -cp so this step verifies rather than repeats the rule. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct; in Run the focused static experiment Calling a static method through a null object reference, compare the terminal result with the source in javac -d target/lesson113-demo labs/java/NullStaticCallDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "Static method class type batti resolve avutundi; Null reference syntax dwara call technically work avvachu, kani misleading; Class name tho call cheyyadam correct readable style; Run the focused static experiment Calling a static method through a null object reference terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Remove the temporary static experiment — Calling a static method through a null object reference",
-      "question": "The focused source for \"Calling a static method through a null object reference\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
-      "why_te": "[no highlight] Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.",
+      "question": "The focused source for \"Calling a static method through a null object reference\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality; in Remove the temporary static experiment Calling a static method through a null object reference, remove temporary NullStaticCallDemo.java after the behavior is proved so the cumulative project state stays clean. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters; in Remove the temporary static experiment Calling a static method through a null object reference, remove temporary NullStaticCallDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] Static method class type batti resolve avutundi; Null reference syntax dwara call technically work avvachu, kani misleading; Class name tho call cheyyadam correct readable style; temporary NullStaticCallDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Return to the real AeroTopo code — Calling a static method through a null object reference",
-      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling a static method through a null object reference\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
-      "why_te": "Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling a static method through a null object reference\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead; in Return to the real AeroTopo code Calling a static method through a null object reference, use SurveyProducts.java to locate the concrete Calling a static method through a null object reference evidence for this specific step.",
+      "why_te": "Static method class type batti resolve avutundi; Null reference syntax dwara call technically work avvachu, kani misleading; Class name tho call cheyyadam correct readable style; SurveyProducts.java lo Return to the real AeroTopo code Calling a static method through a null object reference baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

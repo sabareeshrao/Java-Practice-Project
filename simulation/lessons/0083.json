@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid project baseline — Using a no-argument call when only a parameterized constructor exists",
-      "question": "Declaring a parameterized constructor suppresses the compiler-provided default no-argument constructor is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Using a no-argument call when only a parameterized constructor exists\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "Declaring a parameterized constructor suppresses the compiler-provided default no-argument constructor is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Using a no-argument call when only a parameterized constructor exists\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead; in Open the valid project baseline Using a no-argument call when only a parameterized constructor exists, use SurveyProducts.java to locate the concrete Using a no-argument call when only a parameterized constructor exists evidence for this specific step.",
+      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu; `new Type()` use cheyyali ante explicit no-arg constructor kavali; SurveyProducts.java lo Open the valid project baseline Using a no-argument call when only a parameterized constructor exists baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The edge case behind \"Using a no-argument call when only a parameterized constructor exists\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The edge case behind \"Using a no-argument call when only a parameterized constructor exists\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution; in Create the focused experiment Using a no-argument call when only a parameterized constructor exists, use temporary ParameterizedOnlyDemo.java to isolate and predict this edge case without changing production code. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call; in Create the focused experiment Using a no-argument call when only a parameterized constructor exists, use temporary ParameterizedOnlyDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu; `new Type()` use cheyyali ante explicit no-arg constructor kavali; temporary ParameterizedOnlyDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -63,8 +63,8 @@
     },
     {
       "title": "Run the focused experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The temporary program for \"Using a no-argument call when only a parameterized constructor exists\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization. Which common interview misconception can be rejected because of this concrete behavior?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The temporary program for \"Using a no-argument call when only a parameterized constructor exists\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization; in Run the focused experiment Using a no-argument call when only a parameterized constructor exists, compare the terminal result with the source in javac -d target/lesson83-demo labs/java/ParameterizedOnlyDemo.java; java -cp so this step verifies rather than repeats the rule. Which common interview misconception can be rejected because of this concrete behavior; in Run the focused experiment Using a no-argument call when only a parameterized constructor exists, compare the terminal result with the source in javac -d target/lesson83-demo labs/java/ParameterizedOnlyDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu; `new Type()` use cheyyali ante explicit no-arg constructor kavali; Run the focused experiment Using a no-argument call when only a parameterized constructor exists terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Remove the temporary experiment — Using a no-argument call when only a parameterized constructor exists",
-      "question": "The demonstration for \"Using a no-argument call when only a parameterized constructor exists\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons?",
-      "why_te": "[no highlight] Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "The demonstration for \"Using a no-argument call when only a parameterized constructor exists\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence; in Remove the temporary experiment Using a no-argument call when only a parameterized constructor exists, remove temporary ParameterizedOnlyDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons; in Remove the temporary experiment Using a no-argument call when only a parameterized constructor exists, remove temporary ParameterizedOnlyDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu; `new Type()` use cheyyali ante explicit no-arg constructor kavali; temporary ParameterizedOnlyDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "Return to production code — Using a no-argument call when only a parameterized constructor exists",
-      "question": "Now summarize \"Using a no-argument call when only a parameterized constructor exists\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.",
+      "question": "Now summarize \"Using a no-argument call when only a parameterized constructor exists\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer; in Return to production code Using a no-argument call when only a parameterized constructor exists, use SurveyProducts.java to locate the concrete Using a no-argument call when only a parameterized constructor exists evidence for this specific step.",
+      "why_te": "Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu; `new Type()` use cheyyali ante explicit no-arg constructor kavali; SurveyProducts.java lo Return to production code Using a no-argument call when only a parameterized constructor exists baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

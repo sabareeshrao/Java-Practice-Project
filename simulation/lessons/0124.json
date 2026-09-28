@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Why super() must be the first constructor statement",
-      "question": "Why must a super() Constructor call be the first statement in a Constructor? Start with the AeroTopo implementation instead of a memorized definition. The Orthomosaic constructor puts super(...) before validation and field assignment. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
+      "question": "Why must a super() Constructor call be the first statement in a Constructor? Start with the AeroTopo implementation instead of a memorized definition; in Open the inheritance evidence Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step. The Orthomosaic constructor puts super(... ) before validation and field assignment. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate; in Open the inheritance evidence Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed; in Open the inheritance evidence Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step.",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(; )` constructor first statement ga undali; Child code parent initialization mundu object state ni use cheyyakudadhu; SurveyProducts.java lo Open the inheritance evidence Why super() must be the first constructor statement baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the parent-child rule — Why super() must be the first constructor statement",
-      "question": "For \"Why super() must be the first constructor statement\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
+      "question": "For \"Why super() must be the first constructor statement\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime; in Trace the parent-child rule Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step. Why does that distinction matter for safe extension of the hierarchy; in Trace the parent-child rule Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step.",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(; )` constructor first statement ga undali; Child code parent initialization mundu object state ni use cheyyakudadhu; SurveyProducts.java lo Trace the parent-child rule Why super() must be the first constructor statement baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Why super() must be the first constructor statement",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Why super() must be the first constructor statement\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy; in Evaluate the hierarchy design Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step. Using the highlighted AeroTopo code for \"Why super() must be the first constructor statement\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance; in Evaluate the hierarchy design Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step.",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(; )` constructor first statement ga undali; Child code parent initialization mundu object state ni use cheyyakudadhu; SurveyProducts.java lo Evaluate the hierarchy design Why super() must be the first constructor statement baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview answer — Why super() must be the first constructor statement",
-      "question": "Now answer the interview question \"Why must a super() Constructor call be the first statement in a Constructor?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
+      "question": "Now answer the interview question \"Why must a super() Constructor call be the first statement in a Constructor? \" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence; in State the interview answer Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding; in State the interview answer Why super() must be the first constructor statement, use SurveyProducts.java to locate the concrete Why super() must be the first constructor statement evidence for this specific step.",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(; )` constructor first statement ga undali; Child code parent initialization mundu object state ni use cheyyakudadhu; SurveyProducts.java lo State the interview answer Why super() must be the first constructor statement baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

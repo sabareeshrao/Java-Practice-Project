@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Structuring packages in a complex Java project",
-      "question": "The AeroTopo source already contains a concrete example for \"Structuring packages in a complex Java project\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The imports reveal how the service layer coordinates several focused packages without collapsing them into one namespace. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators?",
-      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.",
+      "question": "The AeroTopo source already contains a concrete example for \"Structuring packages in a complex Java project\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The imports reveal how the service layer coordinates several focused packages without collapsing them into one namespace. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators; in Open the project evidence Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step.",
+      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi; Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu; ProjectService.java lo Open the project evidence Structuring packages in a complex Java project baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -43,8 +43,8 @@
     },
     {
       "title": "Trace the boundary — Structuring packages in a complex Java project",
-      "question": "A useful answer for \"Structuring packages in a complex Java project\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access. Why is this arrangement safer than putting every class and field into one flat namespace?",
-      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.",
+      "question": "A useful answer for \"Structuring packages in a complex Java project\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access; in Trace the boundary Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step. Why is this arrangement safer than putting every class and field into one flat namespace; in Trace the boundary Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step.",
+      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi; Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu; ProjectService.java lo Trace the boundary Structuring packages in a complex Java project baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -76,8 +76,8 @@
     },
     {
       "title": "Evaluate maintainability — Structuring packages in a complex Java project",
-      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse. Using the AeroTopo code for \"Structuring packages in a complex Java project\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently?",
-      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.",
+      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse; in Evaluate maintainability Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step. Using the AeroTopo code for \"Structuring packages in a complex Java project\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently; in Evaluate maintainability Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step.",
+      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi; Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu; ProjectService.java lo Evaluate maintainability Structuring packages in a complex Java project baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -109,8 +109,8 @@
     },
     {
       "title": "State the interview rule — Structuring packages in a complex Java project",
-      "question": "Now turn the project evidence for \"Structuring packages in a complex Java project\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition?",
-      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.",
+      "question": "Now turn the project evidence for \"Structuring packages in a complex Java project\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition; in State the interview rule Structuring packages in a complex Java project, use ProjectService.java to locate the concrete Structuring packages in a complex Java project evidence for this specific step.",
+      "why_te": "ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi; Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu; ProjectService.java lo State the interview rule Structuring packages in a complex Java project baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

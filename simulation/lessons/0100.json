@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — What final means on a method",
-      "question": "The AeroTopo code already contains a concrete example for \"What final means on a method\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "The AeroTopo code already contains a concrete example for \"What final means on a method\". Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member; in Open the project evidence What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step. What Java rule controls when this code can change, execute, or participate in inheritance; in Open the project evidence What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step.",
+      "why_te": "Product `id()` final method subclass override cheyyaledu; Identity behavior base class control lo consistent ga untundi; Final method genuine invariant protect cheyyadaniki use cheyyali; SurveyProducts.java lo Open the project evidence What final means on a method baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace lifecycle and restriction — What final means on a method",
-      "question": "For \"What final means on a method\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "For \"What final means on a method\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration; in Trace lifecycle and restriction What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step. Why does that distinction matter in production code; in Trace lifecycle and restriction What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step.",
+      "why_te": "Product `id()` final method subclass override cheyyaledu; Identity behavior base class control lo consistent ga untundi; Final method genuine invariant protect cheyyadaniki use cheyyali; SurveyProducts.java lo Trace lifecycle and restriction What final means on a method baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the design effect — What final means on a method",
-      "question": "A strong interview answer for \"What final means on a method\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "A strong interview answer for \"What final means on a method\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained; in Evaluate the design effect What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API; in Evaluate the design effect What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step.",
+      "why_te": "Product `id()` final method subclass override cheyyaledu; Identity behavior base class control lo consistent ga untundi; Final method genuine invariant protect cheyyadaniki use cheyyali; SurveyProducts.java lo Evaluate the design effect What final means on a method baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview rule — What final means on a method",
-      "question": "Now convert the evidence for \"What final means on a method\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
-      "why_te": "Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.",
+      "question": "Now convert the evidence for \"What final means on a method\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable; in State the interview rule What final means on a method, use SurveyProducts.java to locate the concrete What final means on a method evidence for this specific step.",
+      "why_te": "Product `id()` final method subclass override cheyyaledu; Identity behavior base class control lo consistent ga untundi; Final method genuine invariant protect cheyyadaniki use cheyyali; SurveyProducts.java lo State the interview rule What final means on a method baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -34,7 +34,7 @@
     },
     {
       "title": "Inspect the ReferenceSet declaration",
-      "question": "The `ReferenceSet` record stores three `java.lang.ref` reference objects and a reference queue, but there is no address type, star declarator, or dereference operator in the declaration. How does this line show the difference between a Java reference API and an explicit pointer declaration?",
+      "question": "The `ReferenceSet` record stores three `java. lang. ref` reference objects and a reference queue, but there is no address type, star declarator, or dereference operator in the declaration. How does this line show the difference between a Java reference API and an explicit pointer declaration?",
       "why_te": "Highlight ayina `ReferenceSet` declaration ni chudandi. Types anni normal Java classes. `int*` la pointer declarator ledu, raw memory address field kuda ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",

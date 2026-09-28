@@ -99,7 +99,7 @@
     },
     {
       "title": "Contrast deserialization with reflection",
-      "question": "Earlier object-creation examples using `Constructor.newInstance()` invoke the selected constructor, whereas this deserialization path reconstructs serializable object state without invoking `Tile(String)`. Why is distinguishing these two mechanisms important when answering whether Java objects can be created without calling their ordinary class constructor?",
+      "question": "Earlier object-creation examples using `Constructor. newInstance()` invoke the selected constructor, whereas this deserialization path reconstructs serializable object state without invoking `Tile(String)`. Why is distinguishing these two mechanisms important when answering whether Java objects can be created without calling their ordinary class constructor?",
       "why_te": "Reflection constructor ni invoke chestundi; deserialization Serializable class ordinary constructor ni bypass chestundi. Mechanism difference clear ga cheppali. All alternative creation methods same behavior kaavu.",
       "software": "intellij",
       "required_capability": "open-file",

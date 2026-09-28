@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Overloading versus overriding across compile time and runtime",
-      "question": "How does Java handle method overloading and overriding during runtime? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.",
+      "question": "How does Java handle method overloading and overriding during runtime? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present; in Open the AeroTopo baseline Overloading versus overriding across compile time and runtime, use SurveyProducts.java to locate the concrete Overloading versus overriding across compile time and runtime evidence for this specific step. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model; in Open the AeroTopo baseline Overloading versus overriding across compile time and runtime, use SurveyProducts.java to locate the concrete Overloading versus overriding across compile time and runtime evidence for this specific step.",
+      "why_te": "First compiler overload signature select chestundi; Selected method instance override ayithe runtime actual object implementation dispatch chestundi; Overloading and overriding two separate stages; SurveyProducts.java lo Open the AeroTopo baseline Overloading versus overriding across compile time and runtime baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Overloading versus overriding across compile time and runtime",
-      "question": "The temporary source for \"Overloading versus overriding across compile time and runtime\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.",
+      "question": "The temporary source for \"Overloading versus overriding across compile time and runtime\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result; in Create the focused dispatch experiment Overloading versus overriding across compile time and runtime, use temporary OverloadOverrideStagesDemo.java to isolate and predict this edge case without changing production code. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome; in Create the focused dispatch experiment Overloading versus overriding across compile time and runtime, use temporary OverloadOverrideStagesDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "First compiler overload signature select chestundi; Selected method instance override ayithe runtime actual object implementation dispatch chestundi; Overloading and overriding two separate stages; temporary OverloadOverrideStagesDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -68,8 +68,8 @@
     },
     {
       "title": "Run the dispatch experiment — Overloading versus overriding across compile time and runtime",
-      "question": "The focused program for \"Overloading versus overriding across compile time and runtime\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.",
+      "question": "The focused program for \"Overloading versus overriding across compile time and runtime\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names; in Run the dispatch experiment Overloading versus overriding across compile time and runtime, compare the terminal result with the source in javac -d target/lesson158-demo labs/java/OverloadOverrideStagesDemo.java; java -cp so this step verifies rather than repeats the rule. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate; in Run the dispatch experiment Overloading versus overriding across compile time and runtime, compare the terminal result with the source in javac -d target/lesson158-demo labs/java/OverloadOverrideStagesDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "First compiler overload signature select chestundi; Selected method instance override ayithe runtime actual object implementation dispatch chestundi; Overloading and overriding two separate stages; Run the dispatch experiment Overloading versus overriding across compile time and runtime terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -90,8 +90,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Overloading versus overriding across compile time and runtime",
-      "question": "The isolated example for \"Overloading versus overriding across compile time and runtime\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.",
+      "question": "The isolated example for \"Overloading versus overriding across compile time and runtime\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence; in Remove the temporary dispatch experiment Overloading versus overriding across compile time and runtime, remove temporary OverloadOverrideStagesDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely; in Remove the temporary dispatch experiment Overloading versus overriding across compile time and runtime, remove temporary OverloadOverrideStagesDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] First compiler overload signature select chestundi; Selected method instance override ayithe runtime actual object implementation dispatch chestundi; Overloading and overriding two separate stages; temporary OverloadOverrideStagesDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -108,8 +108,8 @@
     },
     {
       "title": "Return to the project design — Overloading versus overriding across compile time and runtime",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"How does Java handle method overloading and overriding during runtime?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"How does Java handle method overloading and overriding during runtime? \" using both the real project and the focused result; in Return to the project design Overloading versus overriding across compile time and runtime, use SurveyProducts.java to locate the concrete Overloading versus overriding across compile time and runtime evidence for this specific step. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism; in Return to the project design Overloading versus overriding across compile time and runtime, use SurveyProducts.java to locate the concrete Overloading versus overriding across compile time and runtime evidence for this specific step.",
+      "why_te": "First compiler overload signature select chestundi; Selected method instance override ayithe runtime actual object implementation dispatch chestundi; Overloading and overriding two separate stages; SurveyProducts.java lo Return to the project design Overloading versus overriding across compile time and runtime baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

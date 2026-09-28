@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid AeroTopo context — Whether a method can be both private and protected",
-      "question": "Before testing the edge case behind \"Whether a method can be both private and protected\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. What rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
-      "why_te": "Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.",
+      "question": "Before testing the edge case behind \"Whether a method can be both private and protected\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. What rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary; in Open the valid AeroTopo context Whether a method can be both private and protected, use SurveyProject.java to locate the concrete Whether a method can be both private and protected evidence for this specific step.",
+      "why_te": "Method ki private and protected rendu same time valid kaavu; Access level okkate choose cheyyali; Project lo state-changing methods public ga, internal details controlled visibility tho unnayi; SurveyProject.java lo Open the valid AeroTopo context Whether a method can be both private and protected baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -38,8 +38,8 @@
     },
     {
       "title": "Create labs/java/MethodAccessDemo.java — Whether a method can be both private and protected",
-      "question": "The temporary source labs/java/MethodAccessDemo.java is part of the focused experiment for \"Whether a method can be both private and protected\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
-      "why_te": "Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.",
+      "question": "The temporary source labs/java/MethodAccessDemo.java is part of the focused experiment for \"Whether a method can be both private and protected\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution; in Create labs/java/MethodAccessDemo.java Whether a method can be both private and protected, use temporary MethodAccessDemo.java to isolate and predict this edge case without changing production code. Which Java rule determines whether another source file can legally refer to this exact type or member; in Create labs/java/MethodAccessDemo.java Whether a method can be both private and protected, use temporary MethodAccessDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "Method ki private and protected rendu same time valid kaavu; Access level okkate choose cheyyali; Project lo state-changing methods public ga, internal details controlled visibility tho unnayi; temporary MethodAccessDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -65,8 +65,8 @@
     },
     {
       "title": "Run the package/access experiment — Whether a method can be both private and protected",
-      "question": "The temporary sources for \"Whether a method can be both private and protected\" are now compiled or executed together so the rule becomes observable rather than theoretical. Compare the result with the declarations you just inspected. What does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
-      "why_te": "Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.",
+      "question": "The temporary sources for \"Whether a method can be both private and protected\" are now compiled or executed together so the rule becomes observable rather than theoretical. Compare the result with the declarations you just inspected; in Run the package/access experiment Whether a method can be both private and protected, compare the terminal result with the source in javac -d target/lesson88-demo labs/java/MethodAccessDemo.java; java -cp so this step verifies rather than repeats the rule. What does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent; in Run the package/access experiment Whether a method can be both private and protected, compare the terminal result with the source in javac -d target/lesson88-demo labs/java/MethodAccessDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "Method ki private and protected rendu same time valid kaavu; Access level okkate choose cheyyali; Project lo state-changing methods public ga, internal details controlled visibility tho unnayi; Run the package/access experiment Whether a method can be both private and protected terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -87,8 +87,8 @@
     },
     {
       "title": "Remove labs/java/MethodAccessDemo.java — Whether a method can be both private and protected",
-      "question": "The labs/java/MethodAccessDemo.java portion of the temporary experiment for \"Whether a method can be both private and protected\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
-      "why_te": "[no highlight] Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.",
+      "question": "The labs/java/MethodAccessDemo.java portion of the temporary experiment for \"Whether a method can be both private and protected\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture; in Remove labs/java/MethodAccessDemo.java Whether a method can be both private and protected, remove temporary MethodAccessDemo.java after the behavior is proved so the cumulative project state stays clean. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning; in Remove labs/java/MethodAccessDemo.java Whether a method can be both private and protected, remove temporary MethodAccessDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] Method ki private and protected rendu same time valid kaavu; Access level okkate choose cheyyali; Project lo state-changing methods public ga, internal details controlled visibility tho unnayi; temporary MethodAccessDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -105,8 +105,8 @@
     },
     {
       "title": "Return to the real project structure — Whether a method can be both private and protected",
-      "question": "With every temporary source for \"Whether a method can be both private and protected\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. How would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
-      "why_te": "Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.",
+      "question": "With every temporary source for \"Whether a method can be both private and protected\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. How would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application; in Return to the real project structure Whether a method can be both private and protected, use SurveyProject.java to locate the concrete Whether a method can be both private and protected evidence for this specific step.",
+      "why_te": "Method ki private and protected rendu same time valid kaavu; Access level okkate choose cheyyali; Project lo state-changing methods public ga, internal details controlled visibility tho unnayi; SurveyProject.java lo Return to the real project structure Whether a method can be both private and protected baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

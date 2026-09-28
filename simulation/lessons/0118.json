@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Constructor chaining in inheritance",
-      "question": "What is Constructor Chaining, and how is it handled in Inheritance? Start with the AeroTopo implementation instead of a memorized definition. Product and Orthomosaic show both same-class and superclass constructor chaining. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "question": "What is Constructor Chaining, and how is it handled in Inheritance? Start with the AeroTopo implementation instead of a memorized definition; in Open the inheritance evidence Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step. Product and Orthomosaic show both same-class and superclass constructor chaining. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate; in Open the inheritance evidence Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed; in Open the inheritance evidence Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step.",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi; Product `this(; )` use chestundi; Orthomosaic `super(; )` use chestundi; Taruvata child-specific gsd validation and assignment complete avutayi; SurveyProducts.java lo Open the inheritance evidence Constructor chaining in inheritance baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -38,8 +38,8 @@
     },
     {
       "title": "Trace the parent-child rule — Constructor chaining in inheritance",
-      "question": "For \"Constructor chaining in inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "question": "For \"Constructor chaining in inheritance\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime; in Trace the parent-child rule Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step. Why does that distinction matter for safe extension of the hierarchy; in Trace the parent-child rule Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step.",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi; Product `this(; )` use chestundi; Orthomosaic `super(; )` use chestundi; Taruvata child-specific gsd validation and assignment complete avutayi; SurveyProducts.java lo Trace the parent-child rule Constructor chaining in inheritance baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -66,8 +66,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Constructor chaining in inheritance",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Constructor chaining in inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy; in Evaluate the hierarchy design Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step. Using the highlighted AeroTopo code for \"Constructor chaining in inheritance\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance; in Evaluate the hierarchy design Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step.",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi; Product `this(; )` use chestundi; Orthomosaic `super(; )` use chestundi; Taruvata child-specific gsd validation and assignment complete avutayi; SurveyProducts.java lo Evaluate the hierarchy design Constructor chaining in inheritance baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -94,8 +94,8 @@
     },
     {
       "title": "State the interview answer — Constructor chaining in inheritance",
-      "question": "Now answer the interview question \"What is Constructor Chaining, and how is it handled in Inheritance?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.",
+      "question": "Now answer the interview question \"What is Constructor Chaining, and how is it handled in Inheritance? \" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence; in State the interview answer Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding; in State the interview answer Constructor chaining in inheritance, use SurveyProducts.java to locate the concrete Constructor chaining in inheritance evidence for this specific step.",
+      "why_te": "Constructor chaining lo parent state first initialize avutundi; Product `this(; )` use chestundi; Orthomosaic `super(; )` use chestundi; Taruvata child-specific gsd validation and assignment complete avutayi; SurveyProducts.java lo State the interview answer Constructor chaining in inheritance baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

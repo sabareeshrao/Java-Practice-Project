@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — Overloading is resolved at compile time",
-      "question": "Can method overloading be determined at runtime? Use the AeroTopo code as the starting point rather than answering from terminology alone. The int and Integer join overloads are selected before execution. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.",
+      "question": "Can method overloading be determined at runtime? Use the AeroTopo code as the starting point rather than answering from terminology alone; in Open the polymorphism evidence Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step. The int and Integer join overloads are selected before execution. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime; in Open the polymorphism evidence Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step. What exact evidence supports that distinction?",
+      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi; Runtime object type overload ni malli choose cheyyadu; Overriding matrame selected instance signature meeda runtime dispatch use chestundi; LanguageLab.java lo Open the polymorphism evidence Overloading is resolved at compile time baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Trace method selection — Overloading is resolved at compile time",
-      "question": "For \"Overloading is resolved at compile time\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.",
+      "question": "For \"Overloading is resolved at compile time\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate; in Trace method selection Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step. Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly; in Trace method selection Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step.",
+      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi; Runtime object type overload ni malli choose cheyyadu; Overriding matrame selected instance signature meeda runtime dispatch use chestundi; LanguageLab.java lo Trace method selection Overloading is resolved at compile time baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -54,8 +54,8 @@
     },
     {
       "title": "Evaluate the design contract — Overloading is resolved at compile time",
-      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Overloading is resolved at compile time\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior; in Evaluate the design contract Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step. Using the highlighted AeroTopo implementation for \"Overloading is resolved at compile time\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules; in Evaluate the design contract Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step.",
+      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi; Runtime object type overload ni malli choose cheyyadu; Overriding matrame selected instance signature meeda runtime dispatch use chestundi; LanguageLab.java lo Evaluate the design contract Overloading is resolved at compile time baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -76,8 +76,8 @@
     },
     {
       "title": "State the interview answer — Overloading is resolved at compile time",
-      "question": "Now answer the interview question \"Can method overloading be determined at runtime?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.",
+      "question": "Now answer the interview question \"Can method overloading be determined at runtime? \" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods; in State the interview answer Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step. How would you keep the explanation precise enough for a five-year Java interview; in State the interview answer Overloading is resolved at compile time, use LanguageLab.java to locate the concrete Overloading is resolved at compile time evidence for this specific step.",
+      "why_te": "Overload selection compile time lo declared argument types batti jarugutundi; Runtime object type overload ni malli choose cheyyadu; Overriding matrame selected instance signature meeda runtime dispatch use chestundi; LanguageLab.java lo State the interview answer Overloading is resolved at compile time baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

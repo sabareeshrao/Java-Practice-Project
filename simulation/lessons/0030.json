@@ -186,7 +186,7 @@
     },
     {
       "title": "Return to the real overloads",
-      "question": "The temporary experiment explains why production code often checks wrapper values before any unboxing can occur. Returning to the two `LanguageLab.join` overloads, how does the wrapper version handle a possible null safely while the primitive version stays simpler because a primitive null state cannot exist?",
+      "question": "The temporary experiment explains why production code often checks wrapper values before any unboxing can occur. Returning to the two `LanguageLab. join` overloads, how does the wrapper version handle a possible null safely while the primitive version stays simpler because a primitive null state cannot exist?",
       "why_te": "Malli LanguageLab overloads ni chudandi. `Integer` version null ni check chesi safe text return chestundi. `int` version ki null handling avasaram ledu.",
       "software": "intellij",
       "required_capability": "open-file",

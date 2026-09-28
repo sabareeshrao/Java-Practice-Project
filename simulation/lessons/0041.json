@@ -11,7 +11,7 @@
     {
       "title": "Start from AeroTopo's normal sorting approach",
       "question": "AeroTopo normally relies on well-defined library sorting rather than forcing an artificial loop count, as shown by `mergeSorted`, which combines two streams and calls `sorted`. The interview question is specifically about whether one explicit loop is possible. Why should loop count be separated from algorithmic time complexity before implementing that constraint?",
-      "why_te": "Existing code library sort ni use chestundi. Interview constraint మాత్రం one explicit loop possible aa ani adugutundi. Oka loop undadam automatically O(n) ani meaning kaadu; loop backtrack ayithe repeated work jaruguthundi.",
+      "why_te": "Existing code library sort ni use chestundi. Interview constraint matrame one explicit loop possible aa ani adugutundi. Oka loop undadam automatically O(n) ani meaning kaadu; loop backtrack ayithe repeated work jaruguthundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -93,7 +93,7 @@
     },
     {
       "title": "Run the single-loop sort on unsorted input",
-      "question": "The demonstration uses `5,1,4,2,3`, which requires several backward corrections before the index can finally progress to the end. When the program prints `[1, 2, 3, 4, 5]`, what does that prove about feasibility, and what does it not prove about efficiency compared with `Arrays.sort`?",
+      "question": "The demonstration uses `5,1,4,2,3`, which requires several backward corrections before the index can finally progress to the end. When the program prints `[1, 2, 3, 4, 5]`, what does that prove about feasibility, and what does it not prove about efficiency compared with `Arrays. sort`?",
       "why_te": "Output sorted array ga vastundi kabatti one explicit loop solution feasible ani prove avutundi. Kani efficiency prove kaadu. Repeated backtracking valla production library sort kante slower avvachu.",
       "software": "intellij",
       "required_capability": "type-terminal",
@@ -137,7 +137,7 @@
     {
       "title": "Remove the temporary one-loop implementation",
       "question": "The one-loop class has answered the algorithm question and should not become duplicate project functionality beside the existing sorting methods. After deleting it, what precise interview conclusion should remain about one explicit loop, index backtracking, worst-case O(n²) behavior, and practical use of library sorting?",
-      "why_te": "Temporary class ni remove chestunnam. Final answer: one explicit loop possible, gnome-sort style backtracking use cheyyachu, worst case O(n²), production lo usually `Arrays.sort` leda proper library sort prefer chestam.",
+      "why_te": "Temporary class ni remove chestunnam. Final answer: one explicit loop possible, gnome-sort style backtracking use cheyyachu, worst case O(n²), production lo usually `Arrays. sort` leda proper library sort prefer chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

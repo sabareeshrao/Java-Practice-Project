@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Overridden method execution during construction",
-      "question": "What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "question": "What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present; in Open the AeroTopo baseline Overridden method execution during construction, use SurveyProducts.java to locate the concrete Overridden method execution during construction evidence for this specific step. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model; in Open the AeroTopo baseline Overridden method execution during construction, use SurveyProducts.java to locate the concrete Overridden method execution during construction evidence for this specific step.",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu; Child fields inka initialize kakapovadam dangerous; SurveyProducts.java lo Open the AeroTopo baseline Overridden method execution during construction baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Overridden method execution during construction",
-      "question": "The temporary source for \"Overridden method execution during construction\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "question": "The temporary source for \"Overridden method execution during construction\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result; in Create the focused dispatch experiment Overridden method execution during construction, use temporary ConstructorOverrideDispatchDemo.java to isolate and predict this edge case without changing production code. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome; in Create the focused dispatch experiment Overridden method execution during construction, use temporary ConstructorOverrideDispatchDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu; Child fields inka initialize kakapovadam dangerous; temporary ConstructorOverrideDispatchDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -66,8 +66,8 @@
     },
     {
       "title": "Run the dispatch experiment — Overridden method execution during construction",
-      "question": "The focused program for \"Overridden method execution during construction\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "question": "The focused program for \"Overridden method execution during construction\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names; in Run the dispatch experiment Overridden method execution during construction, compare the terminal result with the source in javac -d target/lesson153-demo labs/java/ConstructorOverrideDispatchDemo.java; java -cp so this step verifies rather than repeats the rule. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate; in Run the dispatch experiment Overridden method execution during construction, compare the terminal result with the source in javac -d target/lesson153-demo labs/java/ConstructorOverrideDispatchDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu; Child fields inka initialize kakapovadam dangerous; Run the dispatch experiment Overridden method execution during construction terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Overridden method execution during construction",
-      "question": "The isolated example for \"Overridden method execution during construction\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "question": "The isolated example for \"Overridden method execution during construction\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence; in Remove the temporary dispatch experiment Overridden method execution during construction, remove temporary ConstructorOverrideDispatchDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely; in Remove the temporary dispatch experiment Overridden method execution during construction, remove temporary ConstructorOverrideDispatchDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu; Child fields inka initialize kakapovadam dangerous; temporary ConstructorOverrideDispatchDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -106,8 +106,8 @@
     },
     {
       "title": "Return to the project design — Overridden method execution during construction",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"What happens if you call a non-static method inside a constructor and that method is overridden in a subclass? Which method will execute? \" using both the real project and the focused result; in Return to the project design Overridden method execution during construction, use SurveyProducts.java to locate the concrete Overridden method execution during construction evidence for this specific step. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism; in Return to the project design Overridden method execution during construction, use SurveyProducts.java to locate the concrete Overridden method execution during construction evidence for this specific step.",
+      "why_te": "Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu; Child fields inka initialize kakapovadam dangerous; SurveyProducts.java lo Return to the project design Overridden method execution during construction baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

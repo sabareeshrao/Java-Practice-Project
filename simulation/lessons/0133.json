@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Inheritance versus composition",
-      "question": "Can you explain inheritance and composition in Java? Start with the AeroTopo implementation instead of a memorized definition. The Product model places inheritance and composition side by side. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "question": "Can you explain inheritance and composition in Java? Start with the AeroTopo implementation instead of a memorized definition; in Open the inheritance evidence Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step. The Product model places inheritance and composition side by side. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate; in Open the inheritance evidence Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed; in Open the inheritance evidence Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step.",
+      "why_te": "Inheritance is-a relation; composition has-a relation; Orthomosaic Product subtype kabatti inheritance; Product tiles list ni own chestundi kabatti composition; Relationship meaning batti choice cheyyali; SurveyProducts.java lo Open the inheritance evidence Inheritance versus composition baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Trace the parent-child rule — Inheritance versus composition",
-      "question": "For \"Inheritance versus composition\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "question": "For \"Inheritance versus composition\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime; in Trace the parent-child rule Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step. Why does that distinction matter for safe extension of the hierarchy; in Trace the parent-child rule Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step.",
+      "why_te": "Inheritance is-a relation; composition has-a relation; Orthomosaic Product subtype kabatti inheritance; Product tiles list ni own chestundi kabatti composition; Relationship meaning batti choice cheyyali; SurveyProducts.java lo Trace the parent-child rule Inheritance versus composition baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Inheritance versus composition",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Inheritance versus composition\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy; in Evaluate the hierarchy design Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step. Using the highlighted AeroTopo code for \"Inheritance versus composition\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance; in Evaluate the hierarchy design Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step.",
+      "why_te": "Inheritance is-a relation; composition has-a relation; Orthomosaic Product subtype kabatti inheritance; Product tiles list ni own chestundi kabatti composition; Relationship meaning batti choice cheyyali; SurveyProducts.java lo Evaluate the hierarchy design Inheritance versus composition baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "State the interview answer — Inheritance versus composition",
-      "question": "Now answer the interview question \"Can you explain inheritance and composition in Java?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.",
+      "question": "Now answer the interview question \"Can you explain inheritance and composition in Java? \" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence; in State the interview answer Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding; in State the interview answer Inheritance versus composition, use SurveyProducts.java to locate the concrete Inheritance versus composition evidence for this specific step.",
+      "why_te": "Inheritance is-a relation; composition has-a relation; Orthomosaic Product subtype kabatti inheritance; Product tiles list ni own chestundi kabatti composition; Relationship meaning batti choice cheyyali; SurveyProducts.java lo State the interview answer Inheritance versus composition baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

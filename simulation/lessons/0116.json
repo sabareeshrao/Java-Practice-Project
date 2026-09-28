@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — A real project use case for final",
-      "question": "The AeroTopo code already provides direct evidence for \"A real project use case for final\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
-      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "question": "The AeroTopo code already provides direct evidence for \"A real project use case for final\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects; in Open the project evidence A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances; in Open the project evidence A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step.",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi; Constructor lo once assign ayyaka service lifetime lo references reassign kaavu; Dependency objects themselves automatic immutable kaavu; ProjectService.java lo Open the project evidence A real project use case for final baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -42,8 +42,8 @@
     },
     {
       "title": "Trace binding and ownership — A real project use case for final",
-      "question": "For \"A real project use case for final\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
-      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "question": "For \"A real project use case for final\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior; in Trace binding and ownership A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step. Why does this distinction matter when code is accessed through different references or subclasses; in Trace binding and ownership A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step.",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi; Constructor lo once assign ayyaka service lifetime lo references reassign kaavu; Dependency objects themselves automatic immutable kaavu; ProjectService.java lo Trace binding and ownership A real project use case for final baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -74,8 +74,8 @@
     },
     {
       "title": "Evaluate the design choice — A real project use case for final",
-      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"A real project use case for final\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
-      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts; in Evaluate the design choice A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step. Using the highlighted AeroTopo implementation for \"A real project use case for final\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable; in Evaluate the design choice A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step.",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi; Constructor lo once assign ayyaka service lifetime lo references reassign kaavu; Dependency objects themselves automatic immutable kaavu; ProjectService.java lo Evaluate the design choice A real project use case for final baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -106,8 +106,8 @@
     },
     {
       "title": "State the interview rule — A real project use case for final",
-      "question": "Now answer \"A real project use case for final\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
-      "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
+      "question": "Now answer \"A real project use case for final\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods; in State the interview rule A real project use case for final, use ProjectService.java to locate the concrete A real project use case for final evidence for this specific step.",
+      "why_te": "ProjectService injected dependencies private final fields ga unnayi; Constructor lo once assign ayyaka service lifetime lo references reassign kaavu; Dependency objects themselves automatic immutable kaavu; ProjectService.java lo State the interview rule A real project use case for final baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

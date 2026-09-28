@@ -71,7 +71,7 @@
     {
       "title": "Open the test that creates a real object",
       "question": "The project test constructs an `Orthomosaic` with id `ORTHO`, a tile list, and resolution `0.05`, then verifies object behavior. Why does this expression represent object creation rather than class definition, and which supplied values become the new instance's state?",
-      "why_te": "Test lo `new Orthomosaic(...)` runtime object create chestundi. ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi. Class already definition.",
+      "why_te": "Test lo `new Orthomosaic(... )` runtime object create chestundi. ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi. Class already definition.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -94,7 +94,7 @@
     },
     {
       "title": "Contrast instance behavior with a class-level static member",
-      "question": "`Product.category()` is static, while `resolutionMetres()` is an instance method implemented according to the concrete object type. How does this contrast help explain that some behavior belongs to the class context while other behavior depends on a particular runtime object?",
+      "question": "`Product. category()` is static, while `resolutionMetres()` is an instance method implemented according to the concrete object type. How does this contrast help explain that some behavior belongs to the class context while other behavior depends on a particular runtime object?",
       "why_te": "Static category class-level behavior. `resolutionMetres()` instance object state/type meeda depend avutundi. Class members and object members difference clear ga kanipistundi.",
       "software": "intellij",
       "required_capability": "open-file",

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Reopen Java's numeric conversion example",
-      "question": "Not every risky-looking conversion throws an exception in Java. `LanguageLab.numericConversions` performs a double-to-int narrowing cast, an int-to-byte narrowing cast, an int-to-long widening conversion, and String parsing. Which of these operations should you separate before naming an exception for an invalid conversion?",
-      "why_te": "LanguageLab.numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.",
+      "question": "Not every risky-looking conversion throws an exception in Java. `LanguageLab. numericConversions` performs a double-to-int narrowing cast, an int-to-byte narrowing cast, an int-to-long widening conversion, and String parsing. Which of these operations should you separate before naming an exception for an invalid conversion?",
+      "why_te": "LanguageLab. numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -133,8 +133,8 @@
     },
     {
       "title": "Focus on text-to-number parsing",
-      "question": "`Integer.parseInt` is not an object cast; it interprets characters as a base-10 integer representation. If the String contains `258x`, the object type is perfectly valid but its text is not a valid integer. Which exception represents that parsing failure?",
-      "why_te": "`Integer.parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.",
+      "question": "`Integer. parseInt` is not an object cast; it interprets characters as a base-10 integer representation. If the String contains `258x`, the object type is perfectly valid but its text is not a valid integer. Which exception represents that parsing failure?",
+      "why_te": "`Integer. parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -159,7 +159,7 @@
     },
     {
       "title": "Run the invalid numeric parse",
-      "question": "Unlike the previous object-casting branch, this execution reaches `Integer.parseInt` with a valid String object whose characters do not form a legal integer representation. The variable type itself is correct, so when `258x` is parsed, why is `NumberFormatException` the precise runtime failure instead of `ClassCastException`?",
+      "question": "Unlike the previous object-casting branch, this execution reaches `Integer. parseInt` with a valid String object whose characters do not form a legal integer representation. The variable type itself is correct, so when `258x` is parsed, why is `NumberFormatException` the precise runtime failure instead of `ClassCastException`?",
       "why_te": "Parsing branch run chesthe `258x` numeric format invalid ani runtime detect chestundi. Anduke `NumberFormatException` correct error. Object type mismatch ikkada problem kaadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
@@ -182,7 +182,7 @@
     {
       "title": "Return to the real conversion method",
       "question": "The same production method contains primitive narrowing, widening, and text parsing, which makes it a useful reminder that Java conversions do not share one failure rule. Looking again at these lines, why is answering with one universal casting exception incomplete for an interview?",
-      "why_te": "LanguageLab.java ki return ayyamu. Primitive cast information lose chesina exception raakapovachu. Parsing invalid text మాత్రం `NumberFormatException` istundi. Conversion type batti answer cheyyali.",
+      "why_te": "LanguageLab.java ki return ayyamu. Primitive cast information lose chesina exception raakapovachu. Parsing invalid text matrame `NumberFormatException` istundi. Conversion type batti answer cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

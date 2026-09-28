@@ -92,7 +92,7 @@
     },
     {
       "title": "Inspect reusable behavior with subtype specialization",
-      "question": "`Product.export()` is shared while `resolutionMetres()` is specialized by concrete subtypes, so common behavior stays consistent while domain-specific calculations vary. Why is this combination valuable when enterprise systems need both centralized rules and independent subtype evolution without duplicating the shared export logic?",
+      "question": "`Product. export()` is shared while `resolutionMetres()` is specialized by concrete subtypes, so common behavior stays consistent while domain-specific calculations vary. Why is this combination valuable when enterprise systems need both centralized rules and independent subtype evolution without duplicating the shared export logic?",
       "why_te": "Common export logic one place lo consistent ga untundi. Resolution subtype-specific ga vary avutundi. Shared and variable behavior clean ga separate chestam.",
       "software": "intellij",
       "required_capability": "open-file",

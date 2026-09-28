@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — A design scenario where final materially affects Java code",
-      "question": "The AeroTopo code already contains a concrete example for \"A design scenario where final materially affects Java code\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
-      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "question": "The AeroTopo code already contains a concrete example for \"A design scenario where final materially affects Java code\". Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member; in Open the project evidence A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step. What Java rule controls when this code can change, execute, or participate in inheritance; in Open the project evidence A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step.",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi; Design intent clear ga untundi; SurveyProducts.java lo Open the project evidence A design scenario where final materially affects Java code baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -41,8 +41,8 @@
     },
     {
       "title": "Trace lifecycle and restriction — A design scenario where final materially affects Java code",
-      "question": "For \"A design scenario where final materially affects Java code\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
-      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "question": "For \"A design scenario where final materially affects Java code\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration; in Trace lifecycle and restriction A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step. Why does that distinction matter in production code; in Trace lifecycle and restriction A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step.",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi; Design intent clear ga untundi; SurveyProducts.java lo Trace lifecycle and restriction A design scenario where final materially affects Java code baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -72,8 +72,8 @@
     },
     {
       "title": "Evaluate the design effect — A design scenario where final materially affects Java code",
-      "question": "A strong interview answer for \"A design scenario where final materially affects Java code\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
-      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "question": "A strong interview answer for \"A design scenario where final materially affects Java code\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained; in Evaluate the design effect A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API; in Evaluate the design effect A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step.",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi; Design intent clear ga untundi; SurveyProducts.java lo Evaluate the design effect A design scenario where final materially affects Java code baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "State the interview rule — A design scenario where final materially affects Java code",
-      "question": "Now convert the evidence for \"A design scenario where final materially affects Java code\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
-      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "question": "Now convert the evidence for \"A design scenario where final materially affects Java code\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable; in State the interview rule A design scenario where final materially affects Java code, use SurveyProducts.java to locate the concrete A design scenario where final materially affects Java code evidence for this specific step.",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi; Design intent clear ga untundi; SurveyProducts.java lo State the interview rule A design scenario where final materially affects Java code baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

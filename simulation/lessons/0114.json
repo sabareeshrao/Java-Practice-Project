@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Calling a non-static method directly from static main",
-      "question": "Before testing \"Calling a non-static method directly from static main\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
-      "why_te": "`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.",
+      "question": "Before testing \"Calling a non-static method directly from static main\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation; in Open the AeroTopo baseline Calling a non-static method directly from static main, use AeroTopoApplication.java to locate the concrete Calling a non-static method directly from static main evidence for this specific step.",
+      "why_te": "`main` static context lo implicit object ledu; Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali; Direct call compiler reject chestundi; AeroTopoApplication.java lo Open the AeroTopo baseline Calling a non-static method directly from static main baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused static experiment — Calling a non-static method directly from static main",
-      "question": "The temporary class for \"Calling a non-static method directly from static main\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
-      "why_te": "`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.",
+      "question": "The temporary class for \"Calling a non-static method directly from static main\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution; in Create the focused static experiment Calling a non-static method directly from static main, use temporary MainInstanceCallDemo.java to isolate and predict this edge case without changing production code. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints; in Create the focused static experiment Calling a non-static method directly from static main, use temporary MainInstanceCallDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "`main` static context lo implicit object ledu; Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali; Direct call compiler reject chestundi; temporary MainInstanceCallDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Run the focused static experiment — Calling a non-static method directly from static main",
-      "question": "The program for \"Calling a non-static method directly from static main\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
-      "why_te": "`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.",
+      "question": "The program for \"Calling a non-static method directly from static main\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object; in Run the focused static experiment Calling a non-static method directly from static main, compare the terminal result with the source in javac -d target/lesson114-demo labs/java/MainInstanceCallDemo.java; java -cp so this step verifies rather than repeats the rule. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct; in Run the focused static experiment Calling a non-static method directly from static main, compare the terminal result with the source in javac -d target/lesson114-demo labs/java/MainInstanceCallDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "`main` static context lo implicit object ledu; Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali; Direct call compiler reject chestundi; Run the focused static experiment Calling a non-static method directly from static main terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Remove the temporary static experiment — Calling a non-static method directly from static main",
-      "question": "The focused source for \"Calling a non-static method directly from static main\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
-      "why_te": "[no highlight] `main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.",
+      "question": "The focused source for \"Calling a non-static method directly from static main\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality; in Remove the temporary static experiment Calling a non-static method directly from static main, remove temporary MainInstanceCallDemo.java after the behavior is proved so the cumulative project state stays clean. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters; in Remove the temporary static experiment Calling a non-static method directly from static main, remove temporary MainInstanceCallDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] `main` static context lo implicit object ledu; Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali; Direct call compiler reject chestundi; temporary MainInstanceCallDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -102,8 +102,8 @@
     },
     {
       "title": "Return to the real AeroTopo code — Calling a non-static method directly from static main",
-      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling a non-static method directly from static main\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
-      "why_te": "`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling a non-static method directly from static main\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead; in Return to the real AeroTopo code Calling a non-static method directly from static main, use AeroTopoApplication.java to locate the concrete Calling a non-static method directly from static main evidence for this specific step.",
+      "why_te": "`main` static context lo implicit object ledu; Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali; Direct call compiler reject chestundi; AeroTopoApplication.java lo Return to the real AeroTopo code Calling a non-static method directly from static main baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

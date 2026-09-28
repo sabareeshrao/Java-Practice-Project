@@ -11,7 +11,7 @@
     {
       "title": "Open a real single-threaded StringBuilder use case",
       "question": "AeroTopo's `reverse` method creates a `StringBuilder` locally, reverses the supplied comment, and immediately converts the result back to String. The builder never escapes the method or becomes shared state. Why does this thread-confined usage make synchronization unnecessary and therefore favor `StringBuilder` over `StringBuffer`?",
-      "why_te": "SurveyAlgorithms.reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.",
+      "why_te": "SurveyAlgorithms. reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -92,7 +92,7 @@
     },
     {
       "title": "Inspect how repeated append operations build decoded output",
-      "question": "The `output.append(...)` call can execute many times while `expandRuns` builds one result, which is exactly the kind of repeated mutation that mutable text classes are designed for. Why would repeatedly concatenating immutable String objects inside this loop create unnecessary intermediate results compared with a local builder?",
+      "question": "The `output. append(... )` call can execute many times while `expandRuns` builds one result, which is exactly the kind of repeated mutation that mutable text classes are designed for. Why would repeatedly concatenating immutable String objects inside this loop create unnecessary intermediate results compared with a local builder?",
       "why_te": "Loop lo repeated append jarugutundi. Immutable String concatenation repeated ga intermediate values create cheyyachu. Local StringBuilder same mutable buffer lo content accumulate chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",

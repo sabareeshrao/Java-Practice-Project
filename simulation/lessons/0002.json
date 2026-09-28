@@ -35,7 +35,7 @@
     },
     {
       "title": "Check the declared Java baseline",
-      "question": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable. Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java.version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
+      "question": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable. Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java. version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
       "why": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -51,7 +51,7 @@
           }
         }
       },
-      "why_te": "Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.",
+      "why_te": "Highlight ayina `<java. version>21</java. version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.",
       "highlight": {
         "kind": "code",
         "lines": [
@@ -98,7 +98,7 @@
         "action": "showExternalLibraries",
         "data": {}
       },
-      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.",
+      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi; Project ki ye libraries available unnayo ikkada easy ga check cheyyachu; Dependency missing ayina leda wrong version unna, ee view useful clue istundi; Navigation and tests kuda ee resolved libraries ni use chestayi; Inspect resolved external libraries lo current visible evidence ni next conclusion tho connect chestam.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -150,7 +150,7 @@
           ]
         }
       },
-      "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.",
+      "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi; Project ela build avutundo ikkada easy ga check cheyyachu; Same Maven setup local machine and; Keeping up with the evolving Java ecosystem lo Step 5 Open the Maven tool window kosam visible code evidence ni use chestam.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -169,7 +169,7 @@
         "action": "openIntegratedTerminal",
         "data": {}
       },
-      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi.",
+      "why_te": "IntelliJ terminal ni open chesi commands run cheddam; Open IntelliJ's integrated terminal lo current visible evidence ni next conclusion tho connect chestam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -195,7 +195,7 @@
           "output": "openjdk 21"
         }
       },
-      "why_te": "Ee command run chesi output ni chudandi. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi.",
+      "why_te": "Ee command run chesi output ni chudandi; Verify the active JDK terminal result tho behavior ni verify chestam. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi.",
       "highlight": {
         "kind": "auto"
       }

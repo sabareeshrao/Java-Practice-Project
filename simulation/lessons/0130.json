@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Access visibility in subclasses",
-      "question": "Can you explain how Java handles access visibility in subclasses? Start with the AeroTopo implementation instead of a memorized definition. Private fields, protected constructors, and public methods show three visibility levels in one hierarchy. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.",
+      "question": "Can you explain how Java handles access visibility in subclasses? Start with the AeroTopo implementation instead of a memorized definition; in Open the inheritance evidence Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step. Private fields, protected constructors, and public methods show three visibility levels in one hierarchy. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate; in Open the inheritance evidence Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed; in Open the inheritance evidence Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step.",
+      "why_te": "Product fields private kabatti child direct ga access cheyyadu; Constructors protected kabatti subclasses use cheyyagalavu; Public methods controlled API boundary provide chestayi; SurveyProducts.java lo Open the inheritance evidence Access visibility in subclasses baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -39,8 +39,8 @@
     },
     {
       "title": "Trace the parent-child rule — Access visibility in subclasses",
-      "question": "For \"Access visibility in subclasses\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.",
+      "question": "For \"Access visibility in subclasses\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime; in Trace the parent-child rule Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step. Why does that distinction matter for safe extension of the hierarchy; in Trace the parent-child rule Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step.",
+      "why_te": "Product fields private kabatti child direct ga access cheyyadu; Constructors protected kabatti subclasses use cheyyagalavu; Public methods controlled API boundary provide chestayi; SurveyProducts.java lo Trace the parent-child rule Access visibility in subclasses baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -68,8 +68,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Access visibility in subclasses",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Access visibility in subclasses\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy; in Evaluate the hierarchy design Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step. Using the highlighted AeroTopo code for \"Access visibility in subclasses\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance; in Evaluate the hierarchy design Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step.",
+      "why_te": "Product fields private kabatti child direct ga access cheyyadu; Constructors protected kabatti subclasses use cheyyagalavu; Public methods controlled API boundary provide chestayi; SurveyProducts.java lo Evaluate the hierarchy design Access visibility in subclasses baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -97,8 +97,8 @@
     },
     {
       "title": "State the interview answer — Access visibility in subclasses",
-      "question": "Now answer the interview question \"Can you explain how Java handles access visibility in subclasses?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.",
+      "question": "Now answer the interview question \"Can you explain how Java handles access visibility in subclasses? \" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence; in State the interview answer Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding; in State the interview answer Access visibility in subclasses, use SurveyProducts.java to locate the concrete Access visibility in subclasses evidence for this specific step.",
+      "why_te": "Product fields private kabatti child direct ga access cheyyadu; Constructors protected kabatti subclasses use cheyyagalavu; Public methods controlled API boundary provide chestayi; SurveyProducts.java lo State the interview answer Access visibility in subclasses baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

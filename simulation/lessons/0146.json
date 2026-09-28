@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Null with String and Object overloads",
-      "question": "You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "question": "You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null; in Open the AeroTopo baseline Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step. Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present; in Open the AeroTopo baseline Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model; in Open the AeroTopo baseline Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step.",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable; String Object subtype kabatti more specific; compiler String overload choose chestundi; Unrelated types ayithe ambiguity possible; LanguageLab.java lo Open the AeroTopo baseline Null with String and Object overloads baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Null with String and Object overloads",
-      "question": "The temporary source for \"Null with String and Object overloads\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "question": "The temporary source for \"Null with String and Object overloads\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result; in Create the focused dispatch experiment Null with String and Object overloads, use temporary NullSpecificityDemo.java to isolate and predict this edge case without changing production code. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome; in Create the focused dispatch experiment Null with String and Object overloads, use temporary NullSpecificityDemo.java to isolate and predict this edge case without changing production code.",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable; String Object subtype kabatti more specific; compiler String overload choose chestundi; Unrelated types ayithe ambiguity possible; temporary NullSpecificityDemo.java demo tho edge case ni predict chestam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Run the dispatch experiment — Null with String and Object overloads",
-      "question": "The focused program for \"Null with String and Object overloads\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "question": "The focused program for \"Null with String and Object overloads\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names; in Run the dispatch experiment Null with String and Object overloads, compare the terminal result with the source in javac -d target/lesson146-demo labs/java/NullSpecificityDemo.java; java -cp so this step verifies rather than repeats the rule. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate; in Run the dispatch experiment Null with String and Object overloads, compare the terminal result with the source in javac -d target/lesson146-demo labs/java/NullSpecificityDemo.java; java -cp so this step verifies rather than repeats the rule.",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable; String Object subtype kabatti more specific; compiler String overload choose chestundi; Unrelated types ayithe ambiguity possible; Run the dispatch experiment Null with String and Object overloads terminal result tho behavior ni verify chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -80,8 +80,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Null with String and Object overloads",
-      "question": "The isolated example for \"Null with String and Object overloads\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] `null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "question": "The isolated example for \"Null with String and Object overloads\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence; in Remove the temporary dispatch experiment Null with String and Object overloads, remove temporary NullSpecificityDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely; in Remove the temporary dispatch experiment Null with String and Object overloads, remove temporary NullSpecificityDemo.java after the behavior is proved so the cumulative project state stays clean.",
+      "why_te": "[no highlight] `null` String and Object rendu reference overloads ki applicable; String Object subtype kabatti more specific; compiler String overload choose chestundi; Unrelated types ayithe ambiguity possible; temporary NullSpecificityDemo.java remove chesi clean project state ni maintain chestam.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -98,8 +98,8 @@
     },
     {
       "title": "Return to the project design — Null with String and Object overloads",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null; in Return to the project design Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step. \" using both the real project and the focused result; in Return to the project design Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism; in Return to the project design Null with String and Object overloads, use LanguageLab.java to locate the concrete Null with String and Object overloads evidence for this specific step.",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable; String Object subtype kabatti more specific; compiler String overload choose chestundi; Unrelated types ayithe ambiguity possible; LanguageLab.java lo Return to the project design Null with String and Object overloads baseline ni locate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
