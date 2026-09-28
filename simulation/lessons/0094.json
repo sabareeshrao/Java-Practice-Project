@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "lesson_number": 94,
+  "question_id": 94,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "The purpose of a static block",
+  "info_language": "te-Latn",
+  "answer": "A static initialization block runs once when the JVM initializes the class, before ordinary static use proceeds. It is useful when static state needs setup that cannot be expressed cleanly in a single field initializer, although simple field initializers are usually easier to read. AeroTopo's `LanguageLab` has `static { batches = 0; }`, which initializes class-level state. Static blocks should avoid expensive I/O and fragile side effects because initialization failure can make the class unusable.",
+  "steps": [
+    {
+      "title": "Open the project evidence — The purpose of a static block",
+      "question": "The AeroTopo code already contains a concrete example for \"The purpose of a static block\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
+      "why_te": "Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace lifecycle and restriction — The purpose of a static block",
+      "question": "For \"The purpose of a static block\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
+      "why_te": "Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design effect — The purpose of a static block",
+      "question": "A strong interview answer for \"The purpose of a static block\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
+      "why_te": "Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — The purpose of a static block",
+      "question": "Now convert the evidence for \"The purpose of a static block\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
+      "why_te": "Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

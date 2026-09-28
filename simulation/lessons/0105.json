@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "lesson_number": 105,
+  "question_id": 105,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Delaying static initialization until a method is called",
+  "info_language": "te-Latn",
+  "answer": "You cannot make the static block of an already initialized class wait until an arbitrary method call; static initialization occurs on the JVM's first active use that requires initialization. However, the initialization-on-demand holder idiom moves the expensive static field into a nested class that is not initialized until that nested class is actively used. AeroTopo's `HolderRegistry` does exactly this: `Holder.INSTANCE` is initialized when `HolderRegistry.instance()` first accesses the nested Holder class.",
+  "steps": [
+    {
+      "title": "Open the project evidence — Delaying static initialization until a method is called",
+      "question": "The AeroTopo code already contains a concrete example for \"Delaying static initialization until a method is called\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
+      "why_te": "Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace lifecycle and restriction — Delaying static initialization until a method is called",
+      "question": "For \"Delaying static initialization until a method is called\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
+      "why_te": "Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design effect — Delaying static initialization until a method is called",
+      "question": "A strong interview answer for \"Delaying static initialization until a method is called\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
+      "why_te": "Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — Delaying static initialization until a method is called",
+      "question": "Now convert the evidence for \"Delaying static initialization until a method is called\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
+      "why_te": "Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/PatternLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

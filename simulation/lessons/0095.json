@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 95,
+  "question_id": 95,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Why a static block cannot replace a constructor",
+  "info_language": "te-Latn",
+  "answer": "A static block and a constructor have different lifecycles. The static block runs once per class initialization and can initialize class-level state; a constructor runs for every new object and initializes instance state. Therefore a static block cannot replace constructors when each object needs its own validated fields. A class can use both, but they solve different problems.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Why a static block cannot replace a constructor",
+      "question": "Before isolating \"Why a static block cannot replace a constructor\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Why a static block cannot replace a constructor",
+      "question": "The temporary class for \"Why a static block cannot replace a constructor\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StaticVsConstructorDemo.java",
+          "language": "java",
+          "content": "public class StaticVsConstructorDemo {\n    static { System.out.println(\"static\"); }\n    StaticVsConstructorDemo(){ System.out.println(\"constructor\"); }\n    public static void main(String[] args){\n        new StaticVsConstructorDemo();\n        new StaticVsConstructorDemo();\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Why a static block cannot replace a constructor",
+      "question": "The temporary program for \"Why a static block cannot replace a constructor\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson95-demo labs/java/StaticVsConstructorDemo.java; java -cp target/lesson95-demo StaticVsConstructorDemo",
+          "output": "static\nconstructor\nconstructor"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Why a static block cannot replace a constructor",
+      "question": "The focused example for \"Why a static block cannot replace a constructor\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StaticVsConstructorDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Why a static block cannot replace a constructor",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Why a static block cannot replace a constructor\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          10,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

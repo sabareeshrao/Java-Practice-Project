@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "lesson_number": 101,
+  "question_id": 101,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "A design scenario where final materially affects Java code",
+  "info_language": "te-Latn",
+  "answer": "AeroTopo uses final to encode design intent at several levels. `Product.id` and product-specific resolution fields are assigned once, concrete product classes are final to close their inheritance hierarchy, and `Product.id()` is final so identity behavior cannot be redefined by subclasses. These restrictions make invariants easier to reason about, but final should be used where stability is intentional rather than applied everywhere by default.",
+  "steps": [
+    {
+      "title": "Open the project evidence — A design scenario where final materially affects Java code",
+      "question": "The AeroTopo code already contains a concrete example for \"A design scenario where final materially affects Java code\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          28,
+          32,
+          34,
+          38,
+          39,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace lifecycle and restriction — A design scenario where final materially affects Java code",
+      "question": "For \"A design scenario where final materially affects Java code\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          28,
+          32,
+          34,
+          38,
+          39,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design effect — A design scenario where final materially affects Java code",
+      "question": "A strong interview answer for \"A design scenario where final materially affects Java code\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          28,
+          32,
+          34,
+          38,
+          39,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — A design scenario where final materially affects Java code",
+      "question": "Now convert the evidence for \"A design scenario where final materially affects Java code\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
+      "why_te": "AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          18,
+          27,
+          28,
+          32,
+          34,
+          38,
+          39,
+          40,
+          41
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

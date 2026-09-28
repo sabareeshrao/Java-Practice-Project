@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 104,
+  "question_id": 104,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Why a static block runs before main",
+  "info_language": "te-Latn",
+  "answer": "Before the JVM invokes a class's static `main` method as the application entry point, that class must be initialized. Class initialization executes its static field initializers and static blocks first, so their effects are complete before `main` begins. This is why a static block in the main class prints before the first statement in `main`; it is class initialization order, not special priority given to the block.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Why a static block runs before main",
+      "question": "Before isolating \"Why a static block runs before main\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Why a static block runs before main",
+      "question": "The temporary class for \"Why a static block runs before main\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StaticBeforeMainDemo.java",
+          "language": "java",
+          "content": "public class StaticBeforeMainDemo {\n    static { System.out.println(\"static\"); }\n    public static void main(String[] args){ System.out.println(\"main\"); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Why a static block runs before main",
+      "question": "The temporary program for \"Why a static block runs before main\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson104-demo labs/java/StaticBeforeMainDemo.java; java -cp target/lesson104-demo StaticBeforeMainDemo",
+          "output": "static\nmain"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Why a static block runs before main",
+      "question": "The focused example for \"Why a static block runs before main\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StaticBeforeMainDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Why a static block runs before main",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Why a static block runs before main\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/AeroTopoApplication.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

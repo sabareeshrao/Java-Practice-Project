@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "lesson_number": 96,
+  "question_id": 96,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "final, effectively final, and immutable values",
+  "info_language": "te-Latn",
+  "answer": "`final` is a Java modifier that prevents a variable from being reassigned after initialization, while an effectively final local variable is not declared final but is never reassigned and can therefore be captured by a lambda. Immutability is an object-design property: the object's observable state cannot change after construction. A final reference can still point to a mutable object, so `final` and immutable are not synonyms.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — final, effectively final, and immutable values",
+      "question": "Before isolating \"final, effectively final, and immutable values\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          28,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — final, effectively final, and immutable values",
+      "question": "The temporary class for \"final, effectively final, and immutable values\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/FinalKindsDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class FinalKindsDemo {\n    public static void main(String[] args){\n        final List<String> ids = new ArrayList<>();\n        ids.add(\"T1\");\n        int limit = 1;\n        ids.removeIf(id -> id.length() < limit);\n        String immutable = \"ORTHO\";\n        System.out.println(ids + \":\" + immutable);\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — final, effectively final, and immutable values",
+      "question": "The temporary program for \"final, effectively final, and immutable values\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson96-demo labs/java/FinalKindsDemo.java; java -cp target/lesson96-demo FinalKindsDemo",
+          "output": "[T1]:ORTHO"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — final, effectively final, and immutable values",
+      "question": "The focused example for \"final, effectively final, and immutable values\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] `final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/FinalKindsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — final, effectively final, and immutable values",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"final, effectively final, and immutable values\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          28,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

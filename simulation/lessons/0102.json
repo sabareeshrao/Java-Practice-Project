@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "lesson_number": 102,
+  "question_id": 102,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Exceptions from a static block",
+  "info_language": "te-Latn",
+  "answer": "A static block may execute code that throws an unchecked exception. If class initialization fails, the JVM wraps the failure in `ExceptionInInitializerError` for the triggering use, and the class is not successfully initialized. Later uses can fail with `NoClassDefFoundError`. Static initialization should therefore avoid fragile operations and should not depend on recoverable external resources whenever simpler lazy initialization is possible.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Exceptions from a static block",
+      "question": "Before isolating \"Exceptions from a static block\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Exceptions from a static block",
+      "question": "The temporary class for \"Exceptions from a static block\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StaticFailureDemo.java",
+          "language": "java",
+          "content": "public class StaticFailureDemo {\n    static class Broken {\n        static { if(Boolean.parseBoolean(\"true\")) throw new RuntimeException(\"boom\"); }\n    }\n    public static void main(String[] args){\n        try { Class.forName(Broken.class.getName()); }\n        catch(Throwable failure){ System.out.println(failure.getClass().getSimpleName()); }\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Exceptions from a static block",
+      "question": "The temporary program for \"Exceptions from a static block\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson102-demo labs/java/StaticFailureDemo.java; java -cp target/lesson102-demo StaticFailureDemo",
+          "output": "ExceptionInInitializerError"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Exceptions from a static block",
+      "question": "The focused example for \"Exceptions from a static block\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StaticFailureDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Exceptions from a static block",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Exceptions from a static block\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          9,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

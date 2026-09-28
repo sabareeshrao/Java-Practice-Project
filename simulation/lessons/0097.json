@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "lesson_number": 97,
+  "question_id": 97,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Whether a class can be both final and abstract",
+  "info_language": "te-Latn",
+  "answer": "No. `abstract` means the class is incomplete and is intended to be subclassed so abstract behavior can be implemented, while `final` forbids subclassing. Those requirements conflict, so Java does not allow a class to be declared both `abstract` and `final`. AeroTopo appropriately uses abstract `Product` for extension and final concrete classes such as `Orthomosaic` when further subclassing is not intended.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Whether a class can be both final and abstract",
+      "question": "Before isolating \"Whether a class can be both final and abstract\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Whether a class can be both final and abstract",
+      "question": "The temporary class for \"Whether a class can be both final and abstract\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/AbstractFinalDemo.java",
+          "language": "java",
+          "content": "abstract class ExtensibleBase { abstract int value(); }\nfinal class ClosedType { int value(){ return 7; } }\npublic class AbstractFinalDemo {\n    public static void main(String[] args){ System.out.println(new ClosedType().value()); }\n    // abstract final class Invalid {} // illegal: contradictory modifiers\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Whether a class can be both final and abstract",
+      "question": "The temporary program for \"Whether a class can be both final and abstract\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson97-demo labs/java/AbstractFinalDemo.java; java -cp target/lesson97-demo AbstractFinalDemo",
+          "output": "7"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Whether a class can be both final and abstract",
+      "question": "The focused example for \"Whether a class can be both final and abstract\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/AbstractFinalDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Whether a class can be both final and abstract",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Whether a class can be both final and abstract\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          20,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 98,
+  "question_id": 98,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Mutating an object referenced by a final variable",
+  "info_language": "te-Latn",
+  "answer": "A final object reference cannot be reassigned to point to another object after initialization, but the referenced object's state can still change if that object is mutable. For example, a final `ArrayList` reference can still call `add`. Immutability depends on the object's design, not on the final modifier applied to the reference. Final therefore protects reference identity, not deep object state.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Mutating an object referenced by a final variable",
+      "question": "Before isolating \"Mutating an object referenced by a final variable\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          28,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Mutating an object referenced by a final variable",
+      "question": "The temporary class for \"Mutating an object referenced by a final variable\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/FinalReferenceDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class FinalReferenceDemo {\n    public static void main(String[] args){\n        final List<String> ids = new ArrayList<>();\n        ids.add(\"T1\");\n        System.out.println(ids);\n        // ids = new ArrayList<>(); // illegal reassignment\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Mutating an object referenced by a final variable",
+      "question": "The temporary program for \"Mutating an object referenced by a final variable\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson98-demo labs/java/FinalReferenceDemo.java; java -cp target/lesson98-demo FinalReferenceDemo",
+          "output": "[T1]"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Mutating an object referenced by a final variable",
+      "question": "The focused example for \"Mutating an object referenced by a final variable\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/FinalReferenceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Mutating an object referenced by a final variable",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Mutating an object referenced by a final variable\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          14,
+          15,
+          17,
+          28,
+          32
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

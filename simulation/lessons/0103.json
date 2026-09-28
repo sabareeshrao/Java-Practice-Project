@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 103,
+  "question_id": 103,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Multiple static blocks in one class",
+  "info_language": "te-Latn",
+  "answer": "Yes. A class can declare multiple static initialization blocks. During class initialization, static field initializers and static blocks execute once in textual order. Multiple blocks are legal but can make initialization harder to follow if logic is scattered, so cohesive initialization is usually clearer. The order is based on source order within the class, not on method-call order.",
+  "steps": [
+    {
+      "title": "Open the AeroTopo baseline — Multiple static blocks in one class",
+      "question": "Before isolating \"Multiple static blocks in one class\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused language experiment — Multiple static blocks in one class",
+      "question": "The temporary class for \"Multiple static blocks in one class\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/MultipleStaticBlocksDemo.java",
+          "language": "java",
+          "content": "public class MultipleStaticBlocksDemo {\n    static { System.out.println(\"first\"); }\n    static { System.out.println(\"second\"); }\n    public static void main(String[] args){ System.out.println(\"main\"); }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the focused language experiment — Multiple static blocks in one class",
+      "question": "The temporary program for \"Multiple static blocks in one class\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson103-demo labs/java/MultipleStaticBlocksDemo.java; java -cp target/lesson103-demo MultipleStaticBlocksDemo",
+          "output": "first\nsecond\nmain"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Multiple static blocks in one class",
+      "question": "The focused example for \"Multiple static blocks in one class\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/MultipleStaticBlocksDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary static/final experiment is removed after proving the rule."
+      }
+    },
+    {
+      "title": "Return to the production example — Multiple static blocks in one class",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Multiple static blocks in one class\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          11
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

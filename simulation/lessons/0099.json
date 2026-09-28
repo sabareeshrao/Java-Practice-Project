@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "lesson_number": 99,
+  "question_id": 99,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "The final keyword on variables, methods, and classes",
+  "info_language": "te-Latn",
+  "answer": "`final` has context-specific meaning. A final variable can be assigned only once; a final instance field must be definitely assigned during initialization. A final method cannot be overridden by subclasses, though it can be inherited. A final class cannot be extended. AeroTopo demonstrates all three forms: final fields such as `Product.id`, final method `Product.id()`, and final concrete class `Orthomosaic`. None of these automatically makes every reachable object immutable.",
+  "steps": [
+    {
+      "title": "Open the project evidence — The final keyword on variables, methods, and classes",
+      "question": "The AeroTopo code already contains a concrete example for \"The final keyword on variables, methods, and classes\". undefined Inspect the highlighted declaration and identify whether the behavior belongs to class initialization, an instance, a final member, or a static member. What Java rule controls when this code can change, execute, or participate in inheritance?",
+      "why_te": "SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Trace lifecycle and restriction — The final keyword on variables, methods, and classes",
+      "question": "For \"The final keyword on variables, methods, and classes\", the keyword alone does not explain lifecycle or design impact. Look at the same project lines again and trace whether the state exists once per class or once per object, whether reassignment or overriding is restricted, and when the JVM evaluates the declaration. Why does that distinction matter in production code?",
+      "why_te": "SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Evaluate the design effect — The final keyword on variables, methods, and classes",
+      "question": "A strong interview answer for \"The final keyword on variables, methods, and classes\" should connect syntax to maintainability. Using the highlighted AeroTopo example, explain what guarantee the class gives callers and what flexibility is intentionally removed or retained. How could choosing the wrong static or final design create hidden shared state, unsafe mutation, or an unnecessarily rigid API?",
+      "why_te": "SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the interview rule — The final keyword on variables, methods, and classes",
+      "question": "Now convert the evidence for \"The final keyword on variables, methods, and classes\" into a precise interview response. How would you explain the Java rule, when the behavior occurs, what is and is not allowed, and why AeroTopo uses this form here, while avoiding broad claims that every static or final declaration automatically makes code safe or immutable?",
+      "why_te": "SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          13,
+          14,
+          15,
+          18,
+          27,
+          28,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
