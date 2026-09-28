@@ -19,6 +19,8 @@ jobs:
           python-version: '3.12'
       - run: mvn -B -ntp verify
       - run: python tools/build_question_index.py --check
+      - name: Audit lesson redundancy
+        run: node scripts/audit-lesson-redundancy.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
