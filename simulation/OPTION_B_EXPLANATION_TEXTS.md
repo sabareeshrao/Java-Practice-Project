@@ -2158,3 +2158,159 @@ Product has-a tiles relation. List ni subclass cheyyadam wrong abstraction avvac
 ### Step 5 — Summarize OOP importance as controlled change
 
 Final answer OOP importance controlled change and complexity management ani explain cheyyali. Modularity, reuse, maintainability, testability, extension project examples tho connect cheyyali.
+
+## Lesson 73 — What a Java constructor is
+
+### Step 1 — Open the project evidence — What a Java constructor is
+
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
+
+### Step 2 — Trace the Java rule — What a Java constructor is
+
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
+
+### Step 3 — Connect caller and object state — What a Java constructor is
+
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
+
+### Step 4 — State the interview rule — What a Java constructor is
+
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
+
+## Lesson 74 — Private constructors
+
+### Step 1 — Open the project evidence — Private constructors
+
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
+
+### Step 2 — Trace the Java rule — Private constructors
+
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
+
+### Step 3 — Connect caller and object state — Private constructors
+
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
+
+### Step 4 — State the interview rule — Private constructors
+
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
+
+## Lesson 75 — Constructor overloading
+
+### Step 1 — Open the project evidence — Constructor overloading
+
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
+
+### Step 2 — Trace the Java rule — Constructor overloading
+
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
+
+### Step 3 — Connect caller and object state — Constructor overloading
+
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
+
+### Step 4 — State the interview rule — Constructor overloading
+
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
+
+## Lesson 76 — Why classes provide different constructors
+
+### Step 1 — Open the project evidence — Why classes provide different constructors
+
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
+
+### Step 2 — Trace the Java rule — Why classes provide different constructors
+
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
+
+### Step 3 — Connect caller and object state — Why classes provide different constructors
+
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
+
+### Step 4 — State the interview rule — Why classes provide different constructors
+
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
+
+## Lesson 77 — Calling super() and this() from constructors
+
+### Step 1 — Open the valid project baseline — Calling super() and this() from constructors
+
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
+
+### Step 2 — Create the focused experiment — Calling super() and this() from constructors
+
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
+
+### Step 3 — Run the focused experiment — Calling super() and this() from constructors
+
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
+
+### Step 4 — Remove the temporary experiment — Calling super() and this() from constructors
+
+[no highlight] Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
+
+### Step 5 — Return to production code — Calling super() and this() from constructors
+
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
+
+## Lesson 78 — Why constructors are not overridden
+
+### Step 1 — Open the project evidence — Why constructors are not overridden
+
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
+
+### Step 2 — Trace the Java rule — Why constructors are not overridden
+
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
+
+### Step 3 — Connect caller and object state — Why constructors are not overridden
+
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
+
+### Step 4 — State the interview rule — Why constructors are not overridden
+
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
+
+## Lesson 79 — Whether constructors can be static, final, or abstract
+
+### Step 1 — Open the valid project baseline — Whether constructors can be static, final, or abstract
+
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
+
+### Step 2 — Create the focused experiment — Whether constructors can be static, final, or abstract
+
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
+
+### Step 3 — Run the focused experiment — Whether constructors can be static, final, or abstract
+
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
+
+### Step 4 — Remove the temporary experiment — Whether constructors can be static, final, or abstract
+
+[no highlight] Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
+
+### Step 5 — Return to production code — Whether constructors can be static, final, or abstract
+
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
+
+## Lesson 80 — Constructor return types
+
+### Step 1 — Open the valid project baseline — Constructor return types
+
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
+
+### Step 2 — Create the focused experiment — Constructor return types
+
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
+
+### Step 3 — Run the focused experiment — Constructor return types
+
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
+
+### Step 4 — Remove the temporary experiment — Constructor return types
+
+[no highlight] Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
+
+### Step 5 — Return to production code — Constructor return types
+
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
