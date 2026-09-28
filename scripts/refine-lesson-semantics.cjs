@@ -44,100 +44,99 @@ function hasNear(lesson,field,threshold){
  return false;
 }
 const flaggedBefore=lessons.filter(l=>hasNear(l,"why_te",0.80)||hasNear(l,"question",0.84)).map(l=>Number(l.lesson_number));
-const rewriteLessons=new Set(flaggedBefore.filter(n=>n>=73));
+const rewriteLessons=new Set(flaggedBefore);
+
+
+function splitKnowledge(raw){
+ const text=String(raw||"")
+  .replace(/^\[no highlight\]\s*/i,"")
+  .replace(/[\u0C00-\u0C7F]+/g,"")
+  .replace(/\b(?:Step|step)\s+\d+\b[^.;]*/g,"");
+ return text.split(/[.;!?]+|\s*;\s*/).map(x=>x.trim()).filter(x=>wc(x)>=4);
+}
+function lessonAtoms(lesson){
+ const all=[];
+ for(const s of lesson.steps||[])for(const atom of splitKnowledge(s.why_te))all.push(atom);
+ const out=[],seen=new Set();
+ for(const atom of all){
+  const k=norm(atom);
+  if(!k||seen.has(k))continue;
+  seen.add(k);out.push(atom);
+ }
+ if(!out.length)out.push(clean(lesson.title)+" concept ni project evidence tho connect chestam");
+ return out;
+}
+function pickAtom(atoms,index){
+ return atoms[Math.min(index,atoms.length-1)]||atoms[0];
+}
 
 function qFor(r){
- const title=clean(r.lesson.title),stepTitle=clean(r.step.title),a=fullAnchor(r),line=lines(r),k=action(r),src=sourceQ.get(r.lessonNo)||title;
- if(r.lessonNo===93){
-  const special={
-   1:`${src} Start from the real ProjectService imports before creating any demo classes. Which package-qualified names are already visible, how does Java use the package declaration as part of a type's identity, and why is this production baseline necessary before testing two unrelated classes that deliberately share the same simple name?`,
-   2:`Create pkgone.Tile as the first half of the namespace experiment. At this point there is no collision yet: one public Tile type exists only under package pkgone. Which fully qualified name does this declaration create, and what must another source import or spell explicitly if it wants to use this first Tile type?`,
-   3:`Now add pkgtwo.Tile with the same simple class name but a different package declaration. Why can both source files compile in the same project even though both classes are named Tile, which part of each fully qualified name keeps them distinct, and what ambiguity would appear only when a caller tries to use both simple names together?`,
-   4:`Create PackageNameCollisionDemo and inspect how it imports pkgone.Tile while referring to pkgtwo.Tile with its fully qualified name. Why is this mixed notation necessary, which Tile does the unqualified identifier resolve to, and how does the explicit pkgtwo.Tile reference avoid an ambiguous pair of same-simple-name imports in one compilation unit?`,
-   5:`Compile all three temporary sources and run PackageNameCollisionDemo. The expected output is one:two. What does that result prove about package namespaces, how does each object retain the behavior of its own Tile class, and why would importing both Tile types by simple name be less precise than the source you just executed?`,
-   6:`The caller has already demonstrated how one imported Tile and one fully qualified Tile can coexist, so remove PackageNameCollisionDemo first. Why is deleting the caller before the two type definitions a clean reversal of the experiment, and which namespace fact has already been proved even though both temporary Tile classes still exist for the moment?`,
-   7:`Remove pkgtwo.Tile next while leaving pkgone.Tile temporarily in place. What changes after the second namespace disappears, why is there no longer any same-simple-name competition in the remaining temporary sources, and how does this cleanup step differ technically from deleting the caller that merely referenced the two types?`,
-   8:`Remove pkgone.Tile as the final temporary type in the namespace experiment. Why does deleting this last definition restore the project to its pre-demo state, what package-collision lesson remains valid after both classes are gone, and why should lesson-only namespace examples not survive into later cumulative AeroTopo lessons?`,
-   9:`Return to ProjectService after every temporary source has been removed. Using its real package declaration and imports, how would you answer what happens when two packages contain the same class name, including fully qualified-name identity, import ambiguity, explicit disambiguation, and the reason packages prevent a flat global class-name namespace?`
-  };
-  return special[r.stepNo];
- }
+ const title=clean(r.lesson.title),stepTitle=clean(r.step.title),a=fullAnchor(r),line=lines(r),k=action(r),srcQ=sourceQ.get(r.lessonNo)||title;
+ const prefix=r.stepNo===1?srcQ+" ":"";
  if(k==="createFile"){
-  return `The interview topic is "${src}". This step creates temporary ${a} only to isolate one edge case of ${title}; it is not production AeroTopo code. Before running anything, inspect ${line?"highlighted lines "+line:"the highlighted declarations"} and predict the compiler or runtime result. Which exact Java rule controls that prediction, and what would a different declaration change?`;
+  return prefix+"This step creates temporary "+a+" to isolate one edge case of "+title+" without changing production AeroTopo code. Before execution, inspect "+(line?"highlighted lines "+line:"the highlighted declarations")+" and predict the compiler or runtime result. Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome?";
  }
  if(k==="typeTerminal"){
   const out=result(r);
-  return `The previous step formed a prediction for ${title}; this step must verify it instead of explaining the definition again. Run the shown command and ${out?`compare the result beginning "${out}" with the source`:"compare the compiler or runtime result with the source"}. Which declaration explains the observed behavior, what rule has now been proved, and what competing interpretation can you reject?`;
+  return "The previous step formed a prediction for "+title+"; now verify it by running the shown command. "+(out?'The result begins with "'+out+'". ':"")+"Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule?";
  }
  if(k==="deleteResource"){
-  return `The temporary source ${a} has already served its purpose for ${title}. Why should this exact file be removed now, which verified Java behavior remains valid after deletion, and what continuity problem would occur if lesson-only experiments accumulated in the AeroTopo project before later lessons replay the same cumulative state?`;
+  return "The temporary source "+a+" has finished its job in the "+title+" experiment. Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state?";
  }
  if(k==="highlightTarget"){
-  return `For ${title}, the file location is already known, so this step narrows attention to one declaration rather than repeating the overview. Inspect ${line?"lines "+line:"the highlighted target"} in ${a}. Which keyword, signature, access level, constructor call, or expression is decisive, and how would changing only that element alter the Java rule being demonstrated?`;
+  return prefix+"The file location is already known, so focus only on "+(line?"lines "+line:"the highlighted target")+" in "+a+". Which keyword, signature, constructor call, access modifier, or expression is decisive for "+title+", what precise behavior does that syntax force, and what would change if only that highlighted element were replaced while surrounding code stayed the same?";
  }
  if(k==="openFile"){
   if(r.stepNo===1){
-   return `${src} Open ${a} and use ${line?"highlighted lines "+line:"the highlighted code"} to establish the real AeroTopo baseline. Which class, method, field, constructor, or interface relationship is relevant to ${title}, and what concrete fact can you identify here before making any broader conclusion about the language rule?`;
+   return prefix+"Open "+a+" and use "+(line?"highlighted lines "+line:"the highlighted code")+" to establish the real project baseline for "+title+". Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step?";
   }
   if(r.stepNo===r.total){
-   return `Return to ${a} and use the accumulated evidence to answer "${src}" as an interview response. Which project line is your concrete example, what Java rule does it support, and what limitation or design consequence must be included so the answer is more precise than the initial baseline observation?`;
+   return 'Return to '+a+' after the earlier analysis and use the accumulated evidence to answer "'+srcQ+'" as an interview response. Which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation?';
   }
   if(r.stepNo===2){
-   return `The baseline for ${title} is already visible in ${a}. Now trace the exact syntax and execution or access rule in ${line?"lines "+line:"the highlighted section"}. What happens first, what is inherited or selected, and which part is fixed by the compiler versus decided at runtime? Explain only this rule-level detail, not the earlier file overview.`;
+   return "The baseline for "+title+" is already visible in "+a+"; now trace the exact syntax and execution, access, or resolution rule in "+(line?"lines "+line:"the highlighted section")+". What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime? Explain this mechanism rather than repeating the file overview.";
   }
-  return `Move from syntax to consequence for ${title}. Using ${a}, trace how a caller, subclass, object, or method invocation is affected by the highlighted design. What invariant or substitutability guarantee does the code preserve, what misuse would break that guarantee, and why does this consequence matter in maintainable AeroTopo code?`;
+  return "Move from syntax to consequence for "+title+". Using "+a+", trace how the highlighted design affects a caller, subclass, object, build step, or method invocation. What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step?";
  }
- return `For the step "${stepTitle}" in ${title}, use ${a} as the current evidence and identify the one technical conclusion introduced by this action. How does it differ from the preceding step's purpose, what Java behavior does it establish, and what should the learner carry forward to the next step without repeating the lesson definition?`;
+ return 'For the step "'+stepTitle+'" in '+title+", use "+a+" as the current evidence and identify the one technical conclusion introduced by this action. What does this step add beyond the preceding step, which visible code or result proves that addition, and what should the learner carry into the next step without repeating the general lesson definition?";
 }
+
 
 function teFor(r){
  const title=clean(r.lesson.title),st=clean(r.step.title),a=fullAnchor(r),base=shortAnchor(r),line=lines(r),k=action(r),out=result(r);
- if(r.lessonNo===93){
-  const special={
-   1:"ProjectService.java lo package declaration and imports ni baseline ga chustam. Java type identity simple class name matrame kaadu; package name kuda identity lo part ani real project structure nundi start chestam.",
-   2:"pkgone/Tile.java first namespace ni create chestundi. Ippudu Tile ane simple name pkgone package lo matrame undi; fully qualified name pkgone.Tile ani form avutundi, kabatti caller aa exact type ni import cheyyagaladu.",
-   3:"pkgtwo/Tile.java second independent namespace ni add chestundi. Simple name rendu places lo Tile ayina pkgone.Tile and pkgtwo.Tile different types; ambiguity caller rendu simple names ni okesari use cheyyadaniki try chesinappude relevant avutundi.",
-   4:"PackageNameCollisionDemo.java pkgone.Tile ni import chestundi, second type ni pkgtwo.Tile ani fully qualify chestundi. Ee step actual disambiguation syntax ni chupistundi; rendu same simple imports add cheyyakunda caller exact type ni select chestadu.",
-   5:"Three files compile chesi demo run chesthe one:two output vastundi. Rendu Tile classes same project lo coexist avutunnayi ani runtime evidence confirm chestundi; package namespace class behavior ni separate ga preserve chestundi.",
-   6:"[no highlight] Caller demo complete kabatti PackageNameCollisionDemo.java first remove chestam. Namespace rule already prove ayyindi; ee cleanup references ni first clear chesi temporary type definitions ni next steps lo independently remove cheyyadaniki prepare chestundi.",
-   7:"[no highlight] pkgtwo/Tile.java remove chesthe second namespace temporary ga disappear avutundi. pkgone.Tile matrame remain avutundi, kabatti same-simple-name competition ఇక లేదు; idi caller cleanup kanna type-definition cleanup ani separate purpose.",
-   8:"[no highlight] pkgone/Tile.java kuda remove chesi namespace experiment ni completely close chestam. Temporary types rendu gone ayina fully qualified names collision ni avoid chestayi ane verified Java rule remain avutundi; project original state ki return avutundi.",
-   9:"ProjectService.java ki return ayyi real package/import design tho lesson ni close chestam. Interview answer lo fully qualified identity, import ambiguity, explicit disambiguation, package organization ane four points ni project evidence tho connect cheyyali."
-  };
-  let specialText=special[r.stepNo];
-  return specialText;
- }
+ const atoms=lessonAtoms(r.lesson);
+ const a0=pickAtom(atoms,0),a1=pickAtom(atoms,1),a2=pickAtom(atoms,2),a3=pickAtom(atoms,3);
  let t;
  if(k==="createFile"){
-  t=`Temporary ${base} production code kaadu. Ee step ${title} lo oka edge case ni isolate chestundi; highlighted declaration batti run mundu compiler leda runtime result predict cheyyadam matrame current purpose.`;
+  t=a1+". Temporary "+base+" create chesi ee rule edge case ni production code nundi separate ga isolate chestam. Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.";
  }else if(k==="typeTerminal"){
   t=out
-   ? `Ippudu prediction ni terminal evidence tho verify chestam. "${out}" result ${title} behavior actual ga ela kanipistundo confirm chestundi; source declaration and output madhya connection ni ee step establish chestundi.`
-   : `Ippudu command run chesi compiler leda runtime result ni source tho compare chestam. Ee verification ${title} gurinchi previous prediction correct aa kaada decide chestundi; definition repeat cheyyadam ee step purpose kaadu.`;
+   ? a2+'. Terminal run taruvata "'+out+'" result kanipistundi. Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption badulu verified result meeda conclusion build chestam.'
+   : a2+". Ippudu terminal command run chesi compiler leda runtime result ni previous prediction tho compare chestam. Ee verification current rule actual ga ela behave chestundo prove chestundi; definition repeat cheyyadam ee step purpose kaadu.";
  }else if(k==="deleteResource"){
-  t=`[no highlight] Temporary ${a} ni remove chestam because experiment already complete. Verified ${title} rule change avvadu; cleanup valla lesson-only file permanent AeroTopo state lo remain kakunda later lessons same clean project nundi continue avutayi.`;
+  t="[no highlight] Temporary "+base+" experiment complete ayyindi kabatti remove chestam. Verified "+title+" behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.";
  }else if(k==="highlightTarget"){
-  t=`${st} lo ${base} ${line?"lines "+line:"highlighted declaration"} meeda matrame focus chestam. Ee exact syntax ${title} rule ni control chestundi; previous step location chupinchindi, ippudu line-level evidence enduku decisive ani inspect chestam.`;
+  t=a1+'. "'+st+'" lo '+base+" "+(line?"lines "+line:"highlighted declaration")+" meeda matrame focus chestam. First step location chupinchindi; ippudu exact syntax behavior ni enduku control chestundo line-level evidence tho inspect chestam.";
  }else if(k==="openFile"){
   if(r.stepNo===1){
-   t=`${base} open chesi ${title} ki real project baseline ni locate chestam. ${line?"Highlighted lines "+line:"Highlighted code"} relevant class/member relationship ekkada undo chupistundi; ee step observation matrame, detailed rule analysis next step lo vastundi.`;
+   t=a0+". "+base+" open chesi "+title+" ki real project baseline ni locate chestam. Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.";
   }else if(r.stepNo===r.total){
-   t=`${base} ki return ayyi earlier evidence ni interview answer ga connect chestam. ${title} definition, real project example, important limitation ni separate ga cheppadam ee final step purpose; previous syntax explanation ni repeat cheyyamu.`;
+   t=a3+". "+base+" ki return ayyi earlier evidence ni interview answer ga connect chestam. Ippudu project example, Java rule, important limitation ni kalipi final explanation build chestam; previous syntax discussion ni malli repeat cheyyamu.";
   }else if(r.stepNo===2){
-   t=`Ippudu ${base} lo exact declaration order, keyword, signature leda access rule ni inspect chestam. ${title} behavior enduku ila untundo line evidence tho prove chestam; first step file location matrame establish chesindi.`;
+   t=a1+". Ippudu "+base+" lo exact keyword, signature, order leda access rule ni trace chestam. First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.";
   }else{
-   t=`Ee step ${title} syntax nundi design consequence ki move avutundi. Caller leda subclass meeda highlighted code effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.`;
+   t=a2+". Ee step "+title+" syntax nundi practical consequence ki move avutundi. Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.";
   }
  }else{
-  t=`${st} lo ${base} evidence ni use chesi ${title} ki oka new technical conclusion establish chestam. Previous step purpose ni repeat cheyyakunda current action result next reasoning ki ela connect avutundo matrame explain chestam.`;
+  t=pickAtom(atoms,r.stepNo-1)+'. "'+st+'" action current evidence nundi oka new consequence ni add chestundi. Previous step point ni repeat cheyyakunda, ee result next reasoning ki ela dependency create chestundo matrame explain chestam.';
  }
- t=t.replace(/\s+/g," ").trim();
+ t=t.replace(/[\u0C00-\u0C7F]+/g,"").replace(/\s+/g," ").trim();
  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(t))t="[no highlight] "+t;
- if(wc(t)<15)t+=" Ee point next step reasoning ki direct base ga use avutundi.";
+ if(wc(t)<15)t+=" Ee evidence next step reasoning ki direct base ga use avutundi.";
  if(wc(t)>55){
   const no=/^\[no highlight\]/i.test(t);
-  const core=stripNo(t).split(/\s+/).slice(0,42).join(" ");
-  t=(no?"[no highlight] ":"")+core+".";
+  const body=stripNo(t).split(/\s+/).slice(0,48).join(" ");
+  t=(no?"[no highlight] ":"")+body+".";
  }
  return t;
 }
@@ -157,8 +156,7 @@ for(const lesson of lessons){
  const q=hasNear(lesson,"question",0.84),t=hasNear(lesson,"why_te",0.80);
  if(q||t)remaining.push({lesson:Number(lesson.lesson_number),question:q,telugu:t});
 }
-const remainingLater=remaining.filter(x=>x.lesson>=73);
-if(remainingLater.length)throw new Error("Later semantic repetition remains: "+JSON.stringify(remainingLater.slice(0,100)));
+if(remaining.length)throw new Error("Semantic repetition remains: "+JSON.stringify(remaining.slice(0,160)));
 
 for(const lesson of lessons){
  const file=lesson.__file;delete lesson.__file;
