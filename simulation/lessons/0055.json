@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open a real StringBuilder use in AeroTopo",
-      "question": "AeroTopo's `expandRuns` builds output incrementally across a parsing loop, so it owns one local `StringBuilder` and repeatedly appends pieces before converting to String once at the end. Why is this a natural use case for mutable character storage instead of repeated immutable String concatenation inside the loop?",
-      "why_te": "expandRuns local builder ni repeated appends kosam use chestundi. Same mutable buffer update avutundi. Loop lo many immutable String results create cheyyadam avoid chestam.",
+      "question": "AeroTopo's `expandRuns` builds output incrementally across a parsing loop, so it owns one local `StringBuilder` and repeatedly appends pieces before converting to String once at the end; Why is this a natural use case for mutable character storage instead of repeated immutable String concatenation inside the loop.",
+      "why_te": "expandRuns local builder ni repeated appends kosam use chestundi; Same mutable buffer update avutundi; Loop lo many immutable String results create cheyyadam avoid chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Compare StringBuilder with StringBuffer behavior",
-      "question": "A temporary class appends the same pieces to a `StringBuilder` and a `StringBuffer` so their similar mutable APIs are visible side by side. The important semantic difference is synchronization, not the final text. Why does that make StringBuilder the common choice for method-local construction?",
-      "why_te": "StringBuilder and StringBuffer APIs similar. Main difference StringBuffer methods synchronized. Method-local single-threaded work ki synchronization usually unnecessary kabatti StringBuilder simpler and faster choice.",
+      "question": "A temporary class appends the same pieces to a `StringBuilder` and a `StringBuffer` so their similar mutable APIs are visible side by side; The important semantic difference is synchronization, not the final text; Why does that make StringBuilder the common choice for method-local construction.",
+      "why_te": "StringBuilder and StringBuffer APIs similar; Main difference StringBuffer methods synchronized; Method-local single-threaded work ki synchronization usually unnecessary kabatti StringBuilder simpler and faster choice.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Inspect the two mutable sequence declarations",
-      "question": "Both declarations produce the same visible text, but `StringBuffer` pays for synchronized method behavior intended for coordinated access, whereas `StringBuilder` does not synchronize each mutation. Why should thread safety be chosen from the actual sharing model rather than automatically selecting the synchronized class everywhere?",
-      "why_te": "Shared mutable access actual ga unda leda ani first decide cheyyali. Local buffer one thread use chesthe synchronized overhead avasaram ledu. Shared case lo kuda higher-level design evaluate cheyyali.",
+      "question": "Both declarations produce the same visible text, but `StringBuffer` pays for synchronized method behavior intended for coordinated access, whereas `StringBuilder` does not synchronize each mutation; Why should thread safety be chosen from the actual sharing model rather than automatically selecting the synchronized class everywhere.",
+      "why_te": "Shared mutable access actual ga unda leda ani first decide cheyyali; Local buffer one thread use chesthe synchronized overhead avasaram ledu; Shared case lo kuda higher-level design evaluate cheyyali.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -89,8 +89,8 @@
     },
     {
       "title": "Run both mutable implementations",
-      "question": "If both lines print `AeroTopo`, what does that show about their common character-building API, and what important difference does the output not reveal? Why must an interview answer still discuss synchronization and intended sharing even though functional results are identical in this single-threaded demo?",
-      "why_te": "Output rendu same text istayi. Functional API similar ani show chestundi, kani synchronization difference output lo kanipinchadu. Interview answer concurrency behavior ni separate ga explain cheyyali.",
+      "question": "If both lines print `AeroTopo`, what does that show about their common character-building API, and what important difference does the output not reveal; Why must an interview answer still discuss synchronization and intended sharing even though functional results are identical in this single-threaded demo.",
+      "why_te": "Output rendu same text istayi; Functional API similar ani show chestundi, kani synchronization difference output lo kanipinchadu; Interview answer concurrency behavior ni separate ga explain cheyyali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -111,8 +111,8 @@
     },
     {
       "title": "Remove the comparison class and return to the project choice",
-      "question": "The temporary comparison is complete and can be deleted. AeroTopo's real method keeps `StringBuilder` local to one call, so synchronization would add little value. How would you explain when to choose StringBuilder, when StringBuffer might be justified, and why neither should be selected purely by habit?",
-      "why_te": "Temporary demo remove chestunnam. AeroTopo local construction ki StringBuilder correct fit. StringBuffer actual shared synchronized mutable buffer requirement unte consider cheyyachu. Choice sharing model batti undali.",
+      "question": "The temporary comparison is complete and can be deleted; AeroTopo's real method keeps `StringBuilder` local to one call, so synchronization would add little value; How would you explain when to choose StringBuilder, when StringBuffer might be justified, and why neither should be selected purely by habit.",
+      "why_te": "Temporary demo remove chestunnam; AeroTopo local construction ki StringBuilder correct fit; StringBuffer actual shared synchronized mutable buffer requirement unte consider cheyyachu; Choice sharing model batti undali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

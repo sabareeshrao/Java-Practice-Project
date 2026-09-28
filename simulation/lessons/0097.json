@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Whether a class can be both final and abstract",
-      "question": "Before isolating \"Whether a class can be both final and abstract\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion; in Open the AeroTopo baseline Whether a class can be both final and abstract, use SurveyProducts.java to locate the concrete Whether a class can be both final and abstract evidence for this specific step.",
-      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi; Rendu same class ki contradictory; AeroTopo base Product abstract, concrete Orthomosaic final; SurveyProducts.java lo Open the AeroTopo baseline Whether a class can be both final and abstract baseline ni locate chestam.",
+      "question": "Can a Class be both final and abstract at the same time; Open src/main/java/com/aerotopo/learning/SurveyProducts.java and use highlighted lines 13, 20, 27, 38 to establish the real project baseline for Whether a class can be both final and abstract; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Abstract class extension require chestundi; SurveyProducts.java open chesi Whether a class can be both final and abstract ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused language experiment — Whether a class can be both final and abstract",
-      "question": "The temporary class for \"Whether a class can be both final and abstract\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path; in Create the focused language experiment Whether a class can be both final and abstract, use temporary AbstractFinalDemo.java to isolate and predict this edge case without changing production code. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here; in Create the focused language experiment Whether a class can be both final and abstract, use temporary AbstractFinalDemo.java to isolate and predict this edge case without changing production code.",
-      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi; Rendu same class ki contradictory; AeroTopo base Product abstract, concrete Orthomosaic final; temporary AbstractFinalDemo.java demo tho edge case ni predict chestam.",
+      "question": "This step creates temporary labs/java/AbstractFinalDemo.java to isolate one edge case of Whether a class can be both final and abstract without changing production AeroTopo code; Before execution, inspect highlighted lines 1, 2, 3, 4, 5 and predict the compiler or runtime result; Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome.",
+      "why_te": "java open chesi Whether a class can be both final and abstract ki real project baseline ni locate chestam; Temporary AbstractFinalDemo.java create chesi ee rule edge case ni production code nundi separate ga isolate chestam; Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Run the focused language experiment — Whether a class can be both final and abstract",
-      "question": "The temporary program for \"Whether a class can be both final and abstract\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced; in Run the focused language experiment Whether a class can be both final and abstract, compare the terminal result with the source in javac -d target/lesson97-demo labs/java/AbstractFinalDemo.java; java -cp so this step verifies rather than repeats the rule. Which common misunderstanding about static or final behavior does this example remove; in Run the focused language experiment Whether a class can be both final and abstract, compare the terminal result with the source in javac -d target/lesson97-demo labs/java/AbstractFinalDemo.java; java -cp so this step verifies rather than repeats the rule.",
-      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi; Rendu same class ki contradictory; AeroTopo base Product abstract, concrete Orthomosaic final; Run the focused language experiment Whether a class can be both final and abstract terminal result tho behavior ni verify chestam.",
+      "question": "The previous step formed a prediction for Whether a class can be both final and abstract; now verify it by running the shown command; The result begins with \"7\"; Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule.",
+      "why_te": "Run the focused language experiment Whether a class can be both final and abstract context lo visible code evidence ni specific ga use chestam; Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruvata \"7\" result kanipistundi; Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -83,8 +83,8 @@
     },
     {
       "title": "Remove the temporary experiment — Whether a class can be both final and abstract",
-      "question": "The focused example for \"Whether a class can be both final and abstract\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence; in Remove the temporary experiment Whether a class can be both final and abstract, remove temporary AbstractFinalDemo.java after the behavior is proved so the cumulative project state stays clean. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely; in Remove the temporary experiment Whether a class can be both final and abstract, remove temporary AbstractFinalDemo.java after the behavior is proved so the cumulative project state stays clean.",
-      "why_te": "[no highlight] Abstract class extension require chestundi; final class extension ni forbid chestundi; Rendu same class ki contradictory; AeroTopo base Product abstract, concrete Orthomosaic final; temporary AbstractFinalDemo.java remove chesi clean project state ni maintain chestam.",
+      "question": "The temporary source labs/java/AbstractFinalDemo.java has finished its job in the Whether a class can be both final and abstract experiment; Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state.",
+      "why_te": "[no highlight] Temporary AbstractFinalDemo.java experiment complete ayyindi kabatti remove chestam; Verified Whether a class can be both final and abstract behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -101,8 +101,8 @@
     },
     {
       "title": "Return to the production example — Whether a class can be both final and abstract",
-      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Whether a class can be both final and abstract\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here; in Return to the production example Whether a class can be both final and abstract, use SurveyProducts.java to locate the concrete Whether a class can be both final and abstract evidence for this specific step.",
-      "why_te": "Abstract class extension require chestundi; final class extension ni forbid chestundi; Rendu same class ki contradictory; AeroTopo base Product abstract, concrete Orthomosaic final; SurveyProducts.java lo Return to the production example Whether a class can be both final and abstract baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyProducts.java after the earlier analysis and use the accumulated evidence to answer \"Can a Class be both final and abstract at the same time\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "Return to the production example Whether a class can be both final and abstract context lo SurveyProducts.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyProducts.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

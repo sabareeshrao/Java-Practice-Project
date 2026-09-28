@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the existing in-place deduplication method",
-      "question": "AeroTopo already contains `deduplicateSorted`, which is designed specifically for a sorted primitive array. It uses a write index and one scan rather than allocating a second array. Which lines show the uniqueness comparison, the in-place write, and the logical length returned to the caller?",
-      "why_te": "SurveyAlgorithms. deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.",
+      "question": "AeroTopo already contains `deduplicateSorted`, which is designed specifically for a sorted primitive array; It uses a write index and one scan rather than allocating a second array; Which lines show the uniqueness comparison, the in-place write, and the logical length returned to the caller.",
+      "why_te": "SurveyAlgorithms; deduplicateSorted sorted array kosam already implement ayyindi; `write` next unique position ni track chestundi; Method same array prefix ni update chesi final logical length return chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Inspect why sorted order makes one previous value sufficient",
-      "question": "The loop compares each value with `values[write-1]`, the last unique value already stored in the prefix. Because the input is sorted, every duplicate appears next to the same value. Why does that ordering guarantee that one previous unique comparison is enough instead of requiring a Set of all values seen so far?",
-      "why_te": "Sorted input lo same values adjacent ga untayi. Last unique value tho compare cheste duplicate aa new value aa telustundi. Anduke Set la all seen values store cheyyalsina avasaram ledu.",
+      "question": "The loop compares each value with `values[write-1]`, the last unique value already stored in the prefix; Because the input is sorted, every duplicate appears next to the same value; Why does that ordering guarantee that one previous unique comparison is enough instead of requiring a Set of all values seen so far.",
+      "why_te": "Sorted input lo same values adjacent ga untayi; Last unique value tho compare cheste duplicate aa new value aa telustundi; Anduke Set la all seen values store cheyyalsina avasaram ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Create a driver that exposes the logical array length",
-      "question": "A Java array cannot shrink its physical length, so the method returns how many leading positions now contain valid unique values. The temporary driver starts with repeated sorted values, calls `deduplicateSorted`, and prints only the prefix up to the returned length. What result should that prefix contain?",
-      "why_te": "Java array physical length same ga untundi. Method unique prefix length return chestundi. Demo returned length varaku copy chesi print chestundi; expected unique values `1,2,4` matrame.",
+      "question": "A Java array cannot shrink its physical length, so the method returns how many leading positions now contain valid unique values; The temporary driver starts with repeated sorted values, calls `deduplicateSorted`, and prints only the prefix up to the returned length; What result should that prefix contain.",
+      "why_te": "Java array physical length same ga untundi; Method unique prefix length return chestundi; Demo returned length varaku copy chesi print chestundi; expected unique values `1,2,4` matrame.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -89,8 +89,8 @@
     },
     {
       "title": "Run the in-place duplicate removal",
-      "question": "The input contains seven physical positions but only three distinct sorted values. If the program prints `length=3` and `[1, 2, 4]`, what does that demonstrate about the valid prefix, and why should a caller avoid treating stale values beyond index two as part of the deduplicated result?",
-      "why_te": "Output logical length 3 ani show chestundi. First three positions unique values. Tail array physical storage matrame; old/stale values undavachu kabatti caller returned length ni respect cheyyali.",
+      "question": "The input contains seven physical positions but only three distinct sorted values; If the program prints `length=3` and `[1, 2, 4]`, what does that demonstrate about the valid prefix, and why should a caller avoid treating stale values beyond index two as part of the deduplicated result.",
+      "why_te": "Output logical length 3 ani show chestundi; First three positions unique values; Tail array physical storage matrame; old/stale values undavachu kabatti caller returned length ni respect cheyyali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -111,8 +111,8 @@
     },
     {
       "title": "Review the O(n) and O(1) properties",
-      "question": "The production method reads each input element once, keeps only one integer write index, and overwrites positions inside the same array. Looking at the complete method again, why is its running time linear and its additional memory constant even though the physical Java array keeps its original capacity?",
-      "why_te": "Each value once scan chestam kabatti O(n) time. Extra ga `write` integer matrame use chestam kabatti O(1) space. Same array storage reuse avutundi; capacity change kaadu.",
+      "question": "The production method reads each input element once, keeps only one integer write index, and overwrites positions inside the same array; Looking at the complete method again, why is its running time linear and its additional memory constant even though the physical Java array keeps its original capacity.",
+      "why_te": "Each value once scan chestam kabatti O(n) time; Extra ga `write` integer matrame use chestam kabatti O(1) space; Same array storage reuse avutundi; capacity change kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -135,8 +135,8 @@
     },
     {
       "title": "Remove the temporary driver and retain the real algorithm",
-      "question": "The driver has verified both the prefix contents and returned logical length, so it can be removed without changing the reusable implementation. How would you explain the sorted-input assumption, write-pointer technique, returned length, and stale tail positions clearly when answering this problem in an interview?",
-      "why_te": "Temporary driver remove chestunnam. Interview lo sorted values adjacent ani, write pointer unique prefix build chestundi ani, returned length valid range ani, tail ignore cheyyali ani explain cheyyali.",
+      "question": "The driver has verified both the prefix contents and returned logical length, so it can be removed without changing the reusable implementation; How would you explain the sorted-input assumption, write-pointer technique, returned length, and stale tail positions clearly when answering this problem in an interview.",
+      "why_te": "Temporary driver remove chestunnam; Interview lo sorted values adjacent ani, write pointer unique prefix build chestundi ani, returned length valid range ani, tail ignore cheyyali ani explain cheyyali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Overloading ambiguity and maintenance risk",
-      "question": "Give a scenario where Method Overloading could lead to errors if it is not properly managed. Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present; in Open the AeroTopo baseline Overloading ambiguity and maintenance risk, use LanguageLab.java to locate the concrete Overloading ambiguity and maintenance risk evidence for this specific step. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model; in Open the AeroTopo baseline Overloading ambiguity and maintenance risk, use LanguageLab.java to locate the concrete Overloading ambiguity and maintenance risk evidence for this specific step.",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; Caller ki selected method obvious ga undali; Otherwise compile errors or surprising behavior vastayi; LanguageLab.java lo Open the AeroTopo baseline Overloading ambiguity and maintenance risk baseline ni locate chestam.",
+      "question": "Give a scenario where Method Overloading could lead to errors if it is not properly managed; Open src/main/java/com/aerotopo/learning/LanguageLab.java and use highlighted lines 81, 82 to establish the real project baseline for Overloading ambiguity and maintenance risk; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; LanguageLab.java open chesi Overloading ambiguity and maintenance risk ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The temporary source for \"Overloading ambiguity and maintenance risk\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result; in Create the focused dispatch experiment Overloading ambiguity and maintenance risk, use temporary AmbiguousOverloadDemo.java to isolate and predict this edge case without changing production code. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome; in Create the focused dispatch experiment Overloading ambiguity and maintenance risk, use temporary AmbiguousOverloadDemo.java to isolate and predict this edge case without changing production code.",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; Caller ki selected method obvious ga undali; Otherwise compile errors or surprising behavior vastayi; temporary AmbiguousOverloadDemo.java demo tho edge case ni predict chestam.",
+      "question": "This step creates temporary labs/java/AmbiguousOverloadDemo.java to isolate one edge case of Overloading ambiguity and maintenance risk without changing production AeroTopo code; Before execution, inspect highlighted lines 1, 2, 3, 4, 5 and predict the compiler or runtime result; Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome.",
+      "why_te": "java open chesi Overloading ambiguity and maintenance risk ki real project baseline ni locate chestam; Temporary AmbiguousOverloadDemo.java create chesi ee rule edge case ni production code nundi separate ga isolate chestam; Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Run the dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The focused program for \"Overloading ambiguity and maintenance risk\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names; in Run the dispatch experiment Overloading ambiguity and maintenance risk, compare the terminal result with the source in javac -d target/lesson145-demo labs/java/AmbiguousOverloadDemo.java so this step verifies rather than repeats the rule. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate; in Run the dispatch experiment Overloading ambiguity and maintenance risk, compare the terminal result with the source in javac -d target/lesson145-demo labs/java/AmbiguousOverloadDemo.java so this step verifies rather than repeats the rule.",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; Caller ki selected method obvious ga undali; Otherwise compile errors or surprising behavior vastayi; Run the dispatch experiment Overloading ambiguity and maintenance risk terminal result tho behavior ni verify chestam.",
+      "question": "The previous step formed a prediction for Overloading ambiguity and maintenance risk; now verify it by running the shown command; The result begins with \"error: reference to process is ambiguous\"; Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruvata \"error: reference to process is ambiguous\" result kanipistundi; Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption badulu verified result meeda conclusion build chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Overloading ambiguity and maintenance risk",
-      "question": "The isolated example for \"Overloading ambiguity and maintenance risk\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence; in Remove the temporary dispatch experiment Overloading ambiguity and maintenance risk, remove temporary AmbiguousOverloadDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely; in Remove the temporary dispatch experiment Overloading ambiguity and maintenance risk, remove temporary AmbiguousOverloadDemo.java after the behavior is proved so the cumulative project state stays clean.",
-      "why_te": "[no highlight] Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; Caller ki selected method obvious ga undali; Otherwise compile errors or surprising behavior vastayi; temporary AmbiguousOverloadDemo.java remove chesi clean project state ni maintain chestam.",
+      "question": "The temporary source labs/java/AmbiguousOverloadDemo.java has finished its job in the Overloading ambiguity and maintenance risk experiment; Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state.",
+      "why_te": "[no highlight] Temporary AmbiguousOverloadDemo.java experiment complete ayyindi kabatti remove chestam; Verified Overloading ambiguity and maintenance risk behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Return to the project design — Overloading ambiguity and maintenance risk",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"Give a scenario where Method Overloading could lead to errors if it is not properly managed. \" using both the real project and the focused result; in Return to the project design Overloading ambiguity and maintenance risk, use LanguageLab.java to locate the concrete Overloading ambiguity and maintenance risk evidence for this specific step. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism; in Return to the project design Overloading ambiguity and maintenance risk, use LanguageLab.java to locate the concrete Overloading ambiguity and maintenance risk evidence for this specific step.",
-      "why_te": "Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu; Caller ki selected method obvious ga undali; Otherwise compile errors or surprising behavior vastayi; LanguageLab.java lo Return to the project design Overloading ambiguity and maintenance risk baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/LanguageLab.java after the earlier analysis and use the accumulated evidence to answer \"Give a scenario where Method Overloading could lead to errors if it is not properly managed\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "Return to the project design Overloading ambiguity and maintenance risk context lo LanguageLab.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; LanguageLab.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Best practices for naming Java packages",
-      "question": "The AeroTopo source already contains a concrete example for \"Best practices for naming Java packages\", so inspect the highlighted lines instead of treating the topic as isolated syntax. The package root and imported subpackages show a stable lowercase naming convention with responsibility-based boundaries. Which package, import, access boundary, or encapsulation decision is visible here, and why does that choice matter as the project grows across multiple modules and collaborators; in Open the project evidence Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step.",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi; Root stable ga `com; aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi; ProjectService.java lo Open the project evidence Best practices for naming Java packages baseline ni locate chestam.",
+      "question": "What are the best practices for naming Java Packages; Open src/main/java/com/aerotopo/service/ProjectService.java and use highlighted lines 1, 3, 4, 5, 6, 10, 12 to establish the real project baseline for Best practices for naming Java packages; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi; ProjectService.java open chesi Best practices for naming Java packages ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the boundary — Best practices for naming Java packages",
-      "question": "A useful answer for \"Best practices for naming Java packages\" should explain both the Java rule and the maintainability reason behind it. Look again at the highlighted project structure and identify what names are exposed, what implementation details are hidden, and how the compiler or caller resolves access; in Trace the boundary Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step. Why is this arrangement safer than putting every class and field into one flat namespace; in Trace the boundary Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step.",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi; Root stable ga `com; aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi; ProjectService.java lo Trace the boundary Best practices for naming Java packages baseline ni locate chestam.",
+      "question": "The baseline for Best practices for naming Java packages is already visible in src/main/java/com/aerotopo/service/ProjectService.java; now trace the exact syntax and execution, access, or resolution rule in lines 1, 3, 4, 5, 6, 10, 12; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi Best practices for naming Java packages ki real project baseline ni locate chestam; Ippudu ProjectService.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Evaluate maintainability — Best practices for naming Java packages",
-      "question": "Enterprise package and access decisions affect navigation, coupling, testability, and accidental misuse; in Evaluate maintainability Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step. Using the AeroTopo code for \"Best practices for naming Java packages\", trace how one class reaches another or how state is protected across boundaries. What would become harder to maintain if these boundaries were removed or if naming and visibility were chosen inconsistently; in Evaluate maintainability Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step.",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi; Root stable ga `com; aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi; ProjectService.java lo Evaluate maintainability Best practices for naming Java packages baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for Best practices for naming Java packages; Using src/main/java/com/aerotopo/service/ProjectService.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step Best practices for naming Java packages syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview rule — Best practices for naming Java packages",
-      "question": "Now turn the project evidence for \"Best practices for naming Java packages\" into an interview answer. How would you state the Java rule, the practical reason for using it, and the main limitation or conflict developers must remember, while pointing to this AeroTopo structure as a real example instead of giving only a textbook definition; in State the interview rule Best practices for naming Java packages, use ProjectService.java to locate the concrete Best practices for naming Java packages evidence for this specific step.",
-      "why_te": "AeroTopo package names lowercase ga clear responsibilities ni separate chestayi; Root stable ga `com; aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi; ProjectService.java lo State the interview rule Best practices for naming Java packages baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/service/ProjectService.java after the earlier analysis and use the accumulated evidence to answer \"What are the best practices for naming Java Packages\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "detailed Java rule ni next step lo separate ga analyze chestam; ProjectService.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final explanation build chestam; previous syntax discussion ni malli repeat cheyyamu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

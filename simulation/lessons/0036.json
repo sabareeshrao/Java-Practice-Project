@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project's Git and review workflow",
-      "question": "AeroTopo's runbook documents a development loop built around feature branches, focused commits, verification, pull requests, review, conflict resolution, and rerunning tests. These are iterative delivery practices rather than a single long phase sequence. Which parts of this workflow most strongly indicate an Agile-style way of working?",
-      "why_te": "RUNBOOK Git and review section small feature branch, focused commits, verification, PR, review ni describe chestundi. Work ni iterative ga deliver and validate cheyyadaniki ee practices useful. Waterfall la one final handoff matrame kaadu.",
+      "question": "AeroTopo's runbook documents a development loop built around feature branches, focused commits, verification, pull requests, review, conflict resolution, and rerunning tests; These are iterative delivery practices rather than a single long phase sequence; Which parts of this workflow most strongly indicate an Agile-style way of working.",
+      "why_te": "RUNBOOK Git and review section small feature branch, focused commits, verification, PR, review ni describe chestundi; Work ni iterative ga deliver and validate cheyyadaniki ee practices useful; Waterfall la one final handoff matrame kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -33,8 +33,8 @@
     },
     {
       "title": "Focus on the short feedback loop",
-      "question": "The highlighted line says to create a feature branch, keep commits focused, run verification, submit a PR, review correctness, and rerun relevant tests after resolving conflicts. Why does this repeated build-review-feedback loop fit an Agile-style development model better than waiting for one final testing phase at the end?",
-      "why_te": "Feature branch nundi verification, PR, review, tests varaku short feedback loop undi. Changes small ga validate chestam. Final phase varaku testing wait cheyyadam kante idi iterative Agile-style flow.",
+      "question": "The highlighted line says to create a feature branch, keep commits focused, run verification, submit a PR, review correctness, and rerun relevant tests after resolving conflicts; Why does this repeated build-review-feedback loop fit an Agile-style development model better than waiting for one final testing phase at the end.",
+      "why_te": "Feature branch nundi verification, PR, review, tests varaku short feedback loop undi; Changes small ga validate chestam; Final phase varaku testing wait cheyyadam kante idi iterative Agile-style flow.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Inspect incremental deployment and rollback",
-      "question": "Methodology also appears in how changes reach production. AeroTopo documents building a repeatable artifact, rolling out one instance, testing the workflow, then switching traffic while keeping rollback constraints visible. How does this incremental release strategy support frequent validated change instead of a single irreversible big-bang delivery?",
-      "why_te": "Deployment section one instance rollout, workflow test, traffic switch, rollback concerns ni mention chestundi. Change ni small controlled steps lo release cheyyachu. Idi iterative delivery mindset ni support chestundi.",
+      "question": "Methodology also appears in how changes reach production; AeroTopo documents building a repeatable artifact, rolling out one instance, testing the workflow, then switching traffic while keeping rollback constraints visible; How does this incremental release strategy support frequent validated change instead of a single irreversible big-bang delivery.",
+      "why_te": "Deployment section one instance rollout, workflow test, traffic switch, rollback concerns ni mention chestundi; Change ni small controlled steps lo release cheyyachu; Idi iterative delivery mindset ni support chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Inspect how the project handles changing information",
-      "question": "The leadership exercises say to reproduce behavior, compare alternatives using measurable criteria, identify unknowns, run bounded experiments, and communicate findings. Those practices assume that teams learn and adapt while work is underway. Why is that feedback-driven behavior more compatible with Agile than a rigid upfront plan that resists change?",
-      "why_te": "RUNBOOK unfamiliar task appudu unknowns identify chesi bounded experiment run cheyyamani cheptundi. Evidence batti decision change cheyyachu. Learning and adaptation Agile-style working ki natural ga fit avutayi.",
+      "question": "The leadership exercises say to reproduce behavior, compare alternatives using measurable criteria, identify unknowns, run bounded experiments, and communicate findings; Those practices assume that teams learn and adapt while work is underway; Why is that feedback-driven behavior more compatible with Agile than a rigid upfront plan that resists change.",
+      "why_te": "RUNBOOK unfamiliar task appudu unknowns identify chesi bounded experiment run cheyyamani cheptundi; Evidence batti decision change cheyyachu; Learning and adaptation Agile-style working ki natural ga fit avutayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -109,8 +109,8 @@
     },
     {
       "title": "Check the architecture's evidence-before-scaling rule",
-      "question": "AeroTopo's architecture says to start with one application instance and PostgreSQL, benchmark observed bottlenecks, and only then consider splitting services or changing scaling design. What does this evidence-first evolution tell you about incremental architecture compared with designing every future distributed component upfront before real feedback exists?",
-      "why_te": "ARCHITECTURE lo first simple deployment start chesi observed bottlenecks benchmark cheyyamani undi. Evidence vachaka scale or split decisions chestam. Idi incremental architecture approach ni show chestundi.",
+      "question": "AeroTopo's architecture says to start with one application instance and PostgreSQL, benchmark observed bottlenecks, and only then consider splitting services or changing scaling design; What does this evidence-first evolution tell you about incremental architecture compared with designing every future distributed component upfront before real feedback exists.",
+      "why_te": "ARCHITECTURE lo first simple deployment start chesi observed bottlenecks benchmark cheyyamani undi; Evidence vachaka scale or split decisions chestam; Idi incremental architecture approach ni show chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -134,8 +134,8 @@
     },
     {
       "title": "Separate documented Agile-style practice from undocumented Scrum claims",
-      "question": "The repository provides strong evidence for iterative branches, reviews, tests, rollout, rollback, experiments, and incremental architecture, but it does not document sprint length, daily stand-ups, story points, retrospectives, or a Scrum board. Why should an interview answer avoid inventing those ceremony details even when describing the workflow as Agile-style?",
-      "why_te": "Repo iterative practices ni prove chestundi, kani sprint length, stand-up, story points la Scrum details document cheyyaledu. Interview lo unsupported ceremony details invent cheyyakunda actual workflow ni explain cheyyali.",
+      "question": "The repository provides strong evidence for iterative branches, reviews, tests, rollout, rollback, experiments, and incremental architecture, but it does not document sprint length, daily stand-ups, story points, retrospectives, or a Scrum board; Why should an interview answer avoid inventing those ceremony details even when describing the workflow as Agile-style.",
+      "why_te": "Repo iterative practices ni prove chestundi, kani sprint length, stand-up, story points la Scrum details document cheyyaledu; Interview lo unsupported ceremony details invent cheyyakunda actual workflow ni explain cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -162,8 +162,8 @@
     },
     {
       "title": "Summarize the methodology from the strongest project evidence",
-      "question": "The Git/review section is the clearest concise project evidence: small focused changes are verified, reviewed, corrected, and retested. Combining that with incremental rollout and evidence-driven architecture, how would you answer whether AeroTopo follows Agile or Waterfall while clearly separating documented practices from assumptions about Scrum ceremonies?",
-      "why_te": "Final ga Git/review loop ni base chesi Agile-style iterative methodology ani cheppachu. Incremental rollout and evidence-based design kuda support chestayi. Scrum ceremonies matrame repo prove cheyyadu ani clear ga separate cheyyali.",
+      "question": "The Git/review section is the clearest concise project evidence: small focused changes are verified, reviewed, corrected, and retested; Combining that with incremental rollout and evidence-driven architecture, how would you answer whether AeroTopo follows Agile or Waterfall while clearly separating documented practices from assumptions about Scrum ceremonies.",
+      "why_te": "Final ga Git/review loop ni base chesi Agile-style iterative methodology ani cheppachu; Incremental rollout and evidence-based design kuda support chestayi; Scrum ceremonies matrame repo prove cheyyadu ani clear ga separate cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

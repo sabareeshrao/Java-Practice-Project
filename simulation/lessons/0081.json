@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid project baseline — Return statements inside constructors",
-      "question": "A bare return can exit a constructor, but a constructor cannot return a value is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Return statements inside constructors\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead; in Open the valid project baseline Return statements inside constructors, use SurveyProducts.java to locate the concrete Return statements inside constructors evidence for this specific step.",
-      "why_te": "Constructor lo plain `return;` legal; Value return cheyyalem; Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better; SurveyProducts.java lo Open the valid project baseline Return statements inside constructors baseline ni locate chestam.",
+      "question": "What happens if we put a return statement inside a Constructor; Open src/main/java/com/aerotopo/learning/SurveyProducts.java and use highlighted lines 29, 30, 31, 32 to establish the real project baseline for Return statements inside constructors; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Constructor lo plain `return; SurveyProducts.java open chesi Return statements inside constructors ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused experiment — Return statements inside constructors",
-      "question": "The edge case behind \"Return statements inside constructors\" should be isolated from production code so the compiler or runtime result is unambiguous. Read this temporary class and predict the result before execution; in Create the focused experiment Return statements inside constructors, use temporary ConstructorReturnDemo.java to isolate and predict this edge case without changing production code. Which specific Java constructor rule controls whether the example compiles, runs, or behaves differently from an ordinary method call; in Create the focused experiment Return statements inside constructors, use temporary ConstructorReturnDemo.java to isolate and predict this edge case without changing production code.",
-      "why_te": "Constructor lo plain `return;` legal; Value return cheyyalem; Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better; temporary ConstructorReturnDemo.java demo tho edge case ni predict chestam.",
+      "question": "This step creates temporary labs/java/ConstructorReturnDemo.java to isolate one edge case of Return statements inside constructors without changing production AeroTopo code; Before execution, inspect highlighted lines 1, 2, 3, 4, 5, 6 and predict the compiler or runtime result; Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome.",
+      "why_te": "java open chesi Return statements inside constructors ki real project baseline ni locate chestam; Temporary ConstructorReturnDemo.java create chesi ee rule edge case ni production code nundi separate ga isolate chestam; Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Run the focused experiment — Return statements inside constructors",
-      "question": "The temporary program for \"Return statements inside constructors\" now gives direct compiler or runtime evidence without altering AeroTopo's permanent source. Compare the observed result with your prediction and explain what it proves about constructor syntax or initialization; in Run the focused experiment Return statements inside constructors, compare the terminal result with the source in javac -d target/lesson81-demo labs/java/ConstructorReturnDemo.java; java -cp so this step verifies rather than repeats the rule. Which common interview misconception can be rejected because of this concrete behavior; in Run the focused experiment Return statements inside constructors, compare the terminal result with the source in javac -d target/lesson81-demo labs/java/ConstructorReturnDemo.java; java -cp so this step verifies rather than repeats the rule.",
-      "why_te": "Constructor lo plain `return;` legal; Value return cheyyalem; Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better; Run the focused experiment Return statements inside constructors terminal result tho behavior ni verify chestam.",
+      "question": "The previous step formed a prediction for Return statements inside constructors; now verify it by running the shown command; The result begins with \"0 7\"; Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruvata \"0 7\" result kanipistundi; Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption badulu verified result meeda conclusion build chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Remove the temporary experiment — Return statements inside constructors",
-      "question": "The demonstration for \"Return statements inside constructors\" has served its purpose and should not remain as duplicate or intentionally unusual application code. After deleting it, preserve only the learned rule and the observed evidence; in Remove the temporary experiment Return statements inside constructors, remove temporary ConstructorReturnDemo.java after the behavior is proved so the cumulative project state stays clean. Why does cleaning up temporary language experiments matter for maintaining the cumulative AeroTopo project state across later lessons; in Remove the temporary experiment Return statements inside constructors, remove temporary ConstructorReturnDemo.java after the behavior is proved so the cumulative project state stays clean.",
-      "why_te": "[no highlight] Constructor lo plain `return;` legal; Value return cheyyalem; Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better; temporary ConstructorReturnDemo.java remove chesi clean project state ni maintain chestam.",
+      "question": "The temporary source labs/java/ConstructorReturnDemo.java has finished its job in the Return statements inside constructors experiment; Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state.",
+      "why_te": "[no highlight] Temporary ConstructorReturnDemo.java experiment complete ayyindi kabatti remove chestam; Verified Return statements inside constructors behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -102,8 +102,8 @@
     },
     {
       "title": "Return to production code — Return statements inside constructors",
-      "question": "Now summarize \"Return statements inside constructors\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer; in Return to production code Return statements inside constructors, use SurveyProducts.java to locate the concrete Return statements inside constructors evidence for this specific step.",
-      "why_te": "Constructor lo plain `return;` legal; Value return cheyyalem; Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better; SurveyProducts.java lo Return to production code Return statements inside constructors baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyProducts.java after the earlier analysis and use the accumulated evidence to answer \"What happens if we put a return statement inside a Constructor\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "Return to production code Return statements inside constructors context lo SurveyProducts.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyProducts.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final explanation build.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

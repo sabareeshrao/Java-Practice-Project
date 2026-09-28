@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the stable zero-compaction algorithm",
-      "question": "Unlike the previous binary-only problem, this array can contain any non-zero integers, so the algorithm must keep all non-zero values while moving every zero to the right. AeroTopo's `moveZerosRight` uses a write index and a final fill. Which lines perform stable compaction and which line restores trailing zeros?",
-      "why_te": "SurveyAlgorithms. moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.",
+      "question": "Unlike the previous binary-only problem, this array can contain any non-zero integers, so the algorithm must keep all non-zero values while moving every zero to the right; AeroTopo's `moveZerosRight` uses a write index and a final fill; Which lines perform stable compaction and which line restores trailing zeros.",
+      "why_te": "SurveyAlgorithms; moveZerosRight any non-zero values ni handle chestundi; `write` index next non-zero position ni track chestundi; Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Inspect the write-pointer compaction loop",
-      "question": "The enhanced-for loop reads values in original left-to-right order and writes only non-zero values to the next `write` position. Because `write` increases only after a non-zero copy, why does this compact values toward the front while preserving their original relative order?",
-      "why_te": "Loop original order lo values ni read chestundi. Non-zero value vachinappude next write position ki copy avutundi. Anduke non-zero elements order change kakunda front ki compact avutayi.",
+      "question": "The enhanced-for loop reads values in original left-to-right order and writes only non-zero values to the next `write` position; Because `write` increases only after a non-zero copy, why does this compact values toward the front while preserving their original relative order.",
+      "why_te": "Loop original order lo values ni read chestundi; Non-zero value vachinappude next write position ki copy avutundi; Anduke non-zero elements order change kakunda front ki compact avutayi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Inspect how trailing positions become zeros",
-      "question": "After compaction, every index before `write` contains a non-zero value in stable order, but old values may still remain in later array slots. The final `Arrays. fill` overwrites exactly that suffix with zeros. Why is this cleanup step necessary even though zeros were skipped during the scan?",
-      "why_te": "Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays. fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.",
+      "question": "After compaction, every index before `write` contains a non-zero value in stable order, but old values may still remain in later array slots; The final `Arrays; fill` overwrites exactly that suffix with zeros; Why is this cleanup step necessary even though zeros were skipped during the scan.",
+      "why_te": "Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu; `Arrays; fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "Create a mixed array with visible nonzero ordering",
-      "question": "The temporary driver uses `{0,5,0,2,7,0}` so the non-zero sequence is visibly `5,2,7` with zeros interspersed around it. It calls the real method and prints the same array. What output should prove both zero movement and preservation of non-zero encounter order?",
-      "why_te": "Demo input lo non-zero order `5,2,7` clear ga undi. Method zeros ni right ki move chesina taruvata kuda `5,2,7` same order lo remain avvali.",
+      "question": "The temporary driver uses `{0,5,0,2,7,0}` so the non-zero sequence is visibly `5,2,7` with zeros interspersed around it; It calls the real method and prints the same array; What output should prove both zero movement and preservation of non-zero encounter order.",
+      "why_te": "Demo input lo non-zero order `5,2,7` clear ga undi; Method zeros ni right ki move chesina taruvata kuda `5,2,7` same order lo remain avvali.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -114,8 +114,8 @@
     },
     {
       "title": "Run the stable in-place compaction",
-      "question": "The driver now executes the real implementation. When the output is `[5, 2, 7, 0, 0, 0]`, how does that result verify two requirements simultaneously: every zero moved to the suffix, and the three non-zero values retained their original relative order?",
-      "why_te": "Output lo all zeros suffix ki vellayi. Non-zero sequence `5,2,7` original order lone undi. Ante method stable compaction and zero movement rendu satisfy chestundi.",
+      "question": "The driver now executes the real implementation; When the output is `[5, 2, 7, 0, 0, 0]`, how does that result verify two requirements simultaneously: every zero moved to the suffix, and the three non-zero values retained their original relative order.",
+      "why_te": "Output lo all zeros suffix ki vellayi; Non-zero sequence `5,2,7` original order lone undi; Ante method stable compaction and zero movement rendu satisfy chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -136,8 +136,8 @@
     },
     {
       "title": "Compare general zero compaction with binary partitioning",
-      "question": "The neighboring `binaryFlags` method can reconstruct the whole array from a zero count because only 0 and 1 are allowed, while `moveZerosRight` must preserve arbitrary non-zero values. Looking at both methods together, why is stable compaction necessary for the general case but unnecessary for the binary-only requirement?",
-      "why_te": "binaryFlags lo only 0 and 1 kabatti zero count alone final array create cheyyagaladu. General array lo 5,2,7 la actual values preserve cheyyali. Anduke stable compaction necessary.",
+      "question": "The neighboring `binaryFlags` method can reconstruct the whole array from a zero count because only 0 and 1 are allowed, while `moveZerosRight` must preserve arbitrary non-zero values; Looking at both methods together, why is stable compaction necessary for the general case but unnecessary for the binary-only requirement.",
+      "why_te": "binaryFlags lo only 0 and 1 kabatti zero count alone final array create cheyyagaladu; General array lo 5,2,7 la actual values preserve cheyyali; Anduke stable compaction necessary.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -166,8 +166,8 @@
     },
     {
       "title": "Remove the temporary zero-movement driver",
-      "question": "The temporary caller has verified the existing production algorithm, so it should be removed while leaving `SurveyAlgorithms. moveZerosRight` unchanged. After cleanup, what should you emphasize about the write pointer, in-place modification, stable non-zero ordering, and constant additional memory when explaining the solution?",
-      "why_te": "Temporary driver ni remove chestunnam. Main points write pointer, in-place update, non-zero stable order, O(1) extra space. Production method project lo unchanged ga remain avutundi.",
+      "question": "The temporary caller has verified the existing production algorithm, so it should be removed while leaving `SurveyAlgorithms; moveZerosRight` unchanged; After cleanup, what should you emphasize about the write pointer, in-place modification, stable non-zero ordering, and constant additional memory when explaining the solution.",
+      "why_te": "Temporary driver ni remove chestunnam; Main points write pointer, in-place update, non-zero stable order, O(1) extra space; Production method project lo unchanged ga remain avutundi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -191,8 +191,8 @@
     },
     {
       "title": "Return to the production moveZerosRight method",
-      "question": "The final method is a compact two-phase solution: one pass copies non-zero values forward, then one fill writes the zero suffix. How would you present its O(n) time, O(1) extra space, stability property, and difference from a swap-based two-pointer solution in an interview?",
-      "why_te": "Final method one scan plus one suffix fill use chestundi. Total O(n) time, O(1) space. Non-zero order preserve avutundi; swap-based approach design batti order preserve kakapovachu.",
+      "question": "The final method is a compact two-phase solution: one pass copies non-zero values forward, then one fill writes the zero suffix; How would you present its O(n) time, O(1) extra space, stability property, and difference from a swap-based two-pointer solution in an interview.",
+      "why_te": "Final method one scan plus one suffix fill use chestundi; Total O(n) time, O(1) space; Non-zero order preserve avutundi; swap-based approach design batti order preserve kakapovachu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

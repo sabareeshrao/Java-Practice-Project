@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open AeroTopo's explicit resource-owning object",
-      "question": "`RuntimeLab. NativeBuffer` provides a useful lifecycle example because its constructor registers cleanup state, the object is used while referenced, and `close()` triggers deterministic release. Inspect the constructor, cleaner registration, cleanable field, and close method. Which parts correspond to creation, active use, and explicit cleanup?",
-      "why_te": "NativeBuffer constructor cleanup registration chestundi. Object reference active ga unna time use chestam. `close()` deterministic cleanup trigger chestundi. GC timing meeda depend kaadu.",
+      "question": "`RuntimeLab; NativeBuffer` provides a useful lifecycle example because its constructor registers cleanup state, the object is used while referenced, and `close()` triggers deterministic release; Inspect the constructor, cleaner registration, cleanable field, and close method; Which parts correspond to creation, active use, and explicit cleanup.",
+      "why_te": "NativeBuffer constructor cleanup registration chestundi; Object reference active ga unna time use chestam; `close()` deterministic cleanup trigger chestundi; GC timing meeda depend kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -40,8 +40,8 @@
     },
     {
       "title": "Inspect construction and cleanup registration",
-      "question": "The constructor calls `CLEANER. register(this, new State(releases))`, associating cleanup state with the newly created object. Why does this registration happen during object initialization, and why should a cleaner be treated as a fallback rather than the primary way to release important external resources?",
-      "why_te": "Object create ayinappudu cleanup state register chestundi. Cleaner eventual fallback matrame; exact GC timing guarantee ledu. Important resource ki explicit close better.",
+      "question": "The constructor calls `CLEANER; register(this, new State(releases))`, associating cleanup state with the newly created object; Why does this registration happen during object initialization, and why should a cleaner be treated as a fallback rather than the primary way to release important external resources.",
+      "why_te": "Object create ayinappudu cleanup state register chestundi; Cleaner eventual fallback matrame; exact GC timing guarantee ledu; Important resource ki explicit close better.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -68,8 +68,8 @@
     },
     {
       "title": "Inspect deterministic end-of-use cleanup",
-      "question": "The `close()` method immediately delegates to the registered `Cleanable`, allowing callers to release the resource when they know it is no longer needed. How does this differ from merely dropping the last strong reference and waiting for an unspecified future garbage-collection cycle?",
-      "why_te": "`close()` caller control lo immediate cleanup trigger chestundi. Reference drop cheste object eligible matrame; GC eppudu run avutundo guarantee ledu. Deterministic resource cleanup separate.",
+      "question": "The `close()` method immediately delegates to the registered `Cleanable`, allowing callers to release the resource when they know it is no longer needed; How does this differ from merely dropping the last strong reference and waiting for an unspecified future garbage-collection cycle.",
+      "why_te": "`close()` caller control lo immediate cleanup trigger chestundi; Reference drop cheste object eligible matrame; GC eppudu run avutundo guarantee ledu; Deterministic resource cleanup separate.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -95,8 +95,8 @@
     },
     {
       "title": "Open the test that uses try-with-resources",
-      "question": "The project test creates `NativeBuffer` inside try-with-resources and verifies exactly one release after the block. Why is this stronger lifecycle management than assuming the garbage collector will notice an unreachable object promptly enough to release a resource at a predictable time?",
-      "why_te": "Try-with-resources scope end lo `close()` automatic ga call chestundi. Release predictable ga verify cheyyachu. GC-based cleanup exact time guarantee cheyyadu.",
+      "question": "The project test creates `NativeBuffer` inside try-with-resources and verifies exactly one release after the block; Why is this stronger lifecycle management than assuming the garbage collector will notice an unreachable object promptly enough to release a resource at a predictable time.",
+      "why_te": "Try-with-resources scope end lo `close()` automatic ga call chestundi; Release predictable ga verify cheyyachu; GC-based cleanup exact time guarantee cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -118,8 +118,8 @@
     },
     {
       "title": "Summarize reachability and garbage-collection eligibility",
-      "question": "The project demonstrates explicit cleanup, while Java's memory lifecycle adds another rule: once no strong reference can reach an ordinary object, it becomes eligible for GC but is not guaranteed to be collected immediately. How would you explain creation, reachability, eligibility, eventual reclamation, and deterministic resource cleanup as separate lifecycle stages?",
-      "why_te": "Final answer creation, initialization, reachable use, unreachable/GC eligible, eventual memory reclaim stages ni separate cheyyali. External resources ki explicit close use cheyyali; GC timing meeda depend kakudadhu.",
+      "question": "The project demonstrates explicit cleanup, while Java's memory lifecycle adds another rule: once no strong reference can reach an ordinary object, it becomes eligible for GC but is not guaranteed to be collected immediately; How would you explain creation, reachability, eligibility, eventual reclamation, and deterministic resource cleanup as separate lifecycle stages.",
+      "why_te": "Final answer creation, initialization, reachable use, unreachable/GC eligible, eventual memory reclaim stages ni separate cheyyali; External resources ki explicit close use cheyyali; GC timing meeda depend kakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

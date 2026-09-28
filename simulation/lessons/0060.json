@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open a concrete class in the project hierarchy",
-      "question": "`Orthomosaic` is a concrete class extending `Product`, declaring its own `gsd` state and constructor while inheriting common product behavior. Which parts of this declaration define the blueprint that every Orthomosaic object will follow when instances are created at runtime?",
-      "why_te": "Orthomosaic class blueprint laga fields, constructor rules, methods define chestundi. Prathi object same class structure follow chestundi, kani own instance values hold chestundi.",
+      "question": "`Orthomosaic` is a concrete class extending `Product`, declaring its own `gsd` state and constructor while inheriting common product behavior; Which parts of this declaration define the blueprint that every Orthomosaic object will follow when instances are created at runtime.",
+      "why_te": "Orthomosaic class blueprint laga fields, constructor rules, methods define chestundi; Prathi object same class structure follow chestundi, kani own instance values hold chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -39,8 +39,8 @@
     },
     {
       "title": "Inspect instance-specific state",
-      "question": "The `gsd` field is not static, so every Orthomosaic object carries its own resolution value, while inherited `id` and `tiles` also belong to the particular Product instance. How does this distinguish object state from the class definition that describes which fields and methods instances have?",
-      "why_te": "Class field structure define chestundi; object actual values hold chestundi. `gsd`, id, tiles each instance ki own state. Blueprint and runtime instance difference idi.",
+      "question": "The `gsd` field is not static, so every Orthomosaic object carries its own resolution value, while inherited `id` and `tiles` also belong to the particular Product instance; How does this distinguish object state from the class definition that describes which fields and methods instances have.",
+      "why_te": "Class field structure define chestundi; object actual values hold chestundi; `gsd`, id, tiles each instance ki own state; Blueprint and runtime instance difference idi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -70,8 +70,8 @@
     },
     {
       "title": "Open the test that creates a real object",
-      "question": "The project test constructs an `Orthomosaic` with id `ORTHO`, a tile list, and resolution `0.05`, then verifies object behavior. Why does this expression represent object creation rather than class definition, and which supplied values become the new instance's state?",
-      "why_te": "Test lo `new Orthomosaic(... )` runtime object create chestundi. ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi. Class already definition.",
+      "question": "The project test constructs an `Orthomosaic` with id `ORTHO`, a tile list, and resolution `0.05`, then verifies object behavior; Why does this expression represent object creation rather than class definition, and which supplied values become the new instance's state.",
+      "why_te": "Test lo `new Orthomosaic(; )` runtime object create chestundi; ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi; Class already definition.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -94,8 +94,8 @@
     },
     {
       "title": "Contrast instance behavior with a class-level static member",
-      "question": "`Product. category()` is static, while `resolutionMetres()` is an instance method implemented according to the concrete object type. How does this contrast help explain that some behavior belongs to the class context while other behavior depends on a particular runtime object?",
-      "why_te": "Static category class-level behavior. `resolutionMetres()` instance object state/type meeda depend avutundi. Class members and object members difference clear ga kanipistundi.",
+      "question": "`Product; category()` is static, while `resolutionMetres()` is an instance method implemented according to the concrete object type; How does this contrast help explain that some behavior belongs to the class context while other behavior depends on a particular runtime object.",
+      "why_te": "Static category class-level behavior; `resolutionMetres()` instance object state/type meeda depend avutundi; Class members and object members difference clear ga kanipistundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -120,8 +120,8 @@
     },
     {
       "title": "Summarize class versus object using AeroTopo",
-      "question": "Using `Orthomosaic` as the concrete example, how would you define a class as the reusable type description and an object as one runtime instance with identity and state, while also mentioning that many objects can be created from the same class with different values?",
-      "why_te": "Final answer class blueprint/type definition, object runtime instance ani cheppali. Same Orthomosaic class nundi different ids, tiles, gsd values tho many objects create cheyyachu.",
+      "question": "Using `Orthomosaic` as the concrete example, how would you define a class as the reusable type description and an object as one runtime instance with identity and state, while also mentioning that many objects can be created from the same class with different values.",
+      "why_te": "Final answer class blueprint/type definition, object runtime instance ani cheppali; Same Orthomosaic class nundi different ids, tiles, gsd values tho many objects create cheyyachu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

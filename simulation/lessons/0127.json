@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Why a class cannot extend itself",
-      "question": "Can a class extend itself? Start with the AeroTopo implementation instead of a memorized definition; in Open the inheritance evidence Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step. The repository already contains an executable compiler rule for self-inheritance. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate; in Open the inheritance evidence Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed; in Open the inheritance evidence Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step.",
-      "why_te": "Class self ni extend chesthe cyclic hierarchy create avutundi; Java compiler direct ga reject chestundi; CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi; CompilerRulesTest.java lo Open the inheritance evidence Why a class cannot extend itself baseline ni locate chestam.",
+      "question": "Can a class extend itself; Open src/test/java/com/aerotopo/CompilerRulesTest.java and use highlighted lines 10, 11, 23, 26, 27, 28, 29, 30, 31, 32, 33, 34 to establish the real project baseline for Why a class cannot extend itself; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Class self ni extend chesthe cyclic hierarchy create avutundi; CompilerRulesTest.java open chesi Why a class cannot extend itself ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -42,8 +42,8 @@
     },
     {
       "title": "Trace the parent-child rule — Why a class cannot extend itself",
-      "question": "For \"Why a class cannot extend itself\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime; in Trace the parent-child rule Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step. Why does that distinction matter for safe extension of the hierarchy; in Trace the parent-child rule Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step.",
-      "why_te": "Class self ni extend chesthe cyclic hierarchy create avutundi; Java compiler direct ga reject chestundi; CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi; CompilerRulesTest.java lo Trace the parent-child rule Why a class cannot extend itself baseline ni locate chestam.",
+      "question": "The baseline for Why a class cannot extend itself is already visible in src/test/java/com/aerotopo/CompilerRulesTest.java; now trace the exact syntax and execution, access, or resolution rule in lines 10, 11, 23, 26, 27, 28, 29, 30, 31, 32, 33, 34; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi Why a class cannot extend itself ki real project baseline ni locate chestam; Ippudu CompilerRulesTest.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -74,8 +74,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Why a class cannot extend itself",
-      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy; in Evaluate the hierarchy design Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step. Using the highlighted AeroTopo code for \"Why a class cannot extend itself\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance; in Evaluate the hierarchy design Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step.",
-      "why_te": "Class self ni extend chesthe cyclic hierarchy create avutundi; Java compiler direct ga reject chestundi; CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi; CompilerRulesTest.java lo Evaluate the hierarchy design Why a class cannot extend itself baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for Why a class cannot extend itself; Using src/test/java/com/aerotopo/CompilerRulesTest.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step Why a class cannot extend itself syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -106,8 +106,8 @@
     },
     {
       "title": "State the interview answer — Why a class cannot extend itself",
-      "question": "Now answer the interview question \"Can a class extend itself? \" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence; in State the interview answer Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding; in State the interview answer Why a class cannot extend itself, use CompilerRulesTest.java to locate the concrete Why a class cannot extend itself evidence for this specific step.",
-      "why_te": "Class self ni extend chesthe cyclic hierarchy create avutundi; Java compiler direct ga reject chestundi; CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi; CompilerRulesTest.java lo State the interview answer Why a class cannot extend itself baseline ni locate chestam.",
+      "question": "Return to src/test/java/com/aerotopo/CompilerRulesTest.java after the earlier analysis and use the accumulated evidence to answer \"Can a class extend itself\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "detailed Java rule ni next step lo separate ga analyze chestam; CompilerRulesTest.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final explanation build chestam; previous syntax discussion ni malli repeat cheyyamu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the two methods that expose Java's parameter semantics",
-      "question": "AeroTopo already contains two neighboring methods designed to separate parameter reassignment from object mutation. Both receive a `List<String>` reference, yet one replaces its local parameter and the other changes the referenced list. Why are these two methods a strong starting point for explaining Java's actual argument-passing rule?",
-      "why_te": "LanguageLab lo `reassign` mariyu `mutate` methods same List type ni receive chestayi. Oka method local reference ni replace chestundi; inkoka method same object ni modify chestundi. Difference pass-by-value concept ni clear ga chupistundi.",
+      "question": "AeroTopo already contains two neighboring methods designed to separate parameter reassignment from object mutation; Both receive a `List<String>` reference, yet one replaces its local parameter and the other changes the referenced list; Why are these two methods a strong starting point for explaining Java's actual argument-passing rule.",
+      "why_te": "LanguageLab lo `reassign` mariyu `mutate` methods same List type ni receive chestayi; Oka method local reference ni replace chestundi; inkoka method same object ni modify chestundi; Difference pass-by-value concept ni clear ga chupistundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Inspect parameter reassignment",
-      "question": "Inside `reassign`, the parameter variable is assigned a brand-new `ArrayList` and that new list receives `local`. Because Java copied the caller's reference value into the parameter, why does changing this local parameter variable fail to replace the caller's original `ids` variable?",
-      "why_te": "`reassign` lo parameter ki new ArrayList assign chestunnam. Java caller reference value copy ni method ki istundi. Local copy change ayina caller variable original List ne refer chestundi.",
+      "question": "Inside `reassign`, the parameter variable is assigned a brand-new `ArrayList` and that new list receives `local`; Because Java copied the caller's reference value into the parameter, why does changing this local parameter variable fail to replace the caller's original `ids` variable.",
+      "why_te": "`reassign` lo parameter ki new ArrayList assign chestunnam; Java caller reference value copy ni method ki istundi; Local copy change ayina caller variable original List ne refer chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Inspect mutation through the copied reference",
-      "question": "The `mutate` method does not reassign its parameter; it calls `add` through the copied reference. Both caller and callee reference values still identify the same mutable List object. Why can the caller observe `GCP` afterward even though Java is still pass-by-value rather than pass-by-reference?",
-      "why_te": "`mutate` parameter reference copy same List object ni point chestundi. `add` object state ni change chestundi kabatti caller kuda change ni chustundi. Idi pass-by-reference kaadu; copied reference value dwara mutation.",
+      "question": "The `mutate` method does not reassign its parameter; it calls `add` through the copied reference; Both caller and callee reference values still identify the same mutable List object; Why can the caller observe `GCP` afterward even though Java is still pass-by-value rather than pass-by-reference.",
+      "why_te": "`mutate` parameter reference copy same List object ni point chestundi; `add` object state ni change chestundi kabatti caller kuda change ni chustundi; Idi pass-by-reference kaadu; copied reference value dwara mutation.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Open the test that proves both outcomes",
-      "question": "The existing JUnit test creates one caller-owned list, invokes `reassign`, checks that the caller still contains only `A`, then invokes `mutate` and checks that `GCP` appears. How do these assertions distinguish parameter reassignment from mutation of the shared referenced object without relying only on theory?",
-      "why_te": "JUnit test actual caller List ni use chestundi. `reassign` taruvata List unchanged ga untundi; `mutate` taruvata `GCP` add avutundi. Rendu outcomes same test lo direct ga verify avutayi.",
+      "question": "The existing JUnit test creates one caller-owned list, invokes `reassign`, checks that the caller still contains only `A`, then invokes `mutate` and checks that `GCP` appears; How do these assertions distinguish parameter reassignment from mutation of the shared referenced object without relying only on theory.",
+      "why_te": "JUnit test actual caller List ni use chestundi; `reassign` taruvata List unchanged ga untundi; `mutate` taruvata `GCP` add avutundi; Rendu outcomes same test lo direct ga verify avutayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -108,8 +108,8 @@
     },
     {
       "title": "Focus on the reassignment assertion",
-      "question": "After `LanguageLab. reassign(ids)`, the assertion still expects only `A`. If Java passed the caller's variable itself by reference, assigning a new list inside the method could replace what the caller variable points to. Why does this unchanged assertion instead support Java's copy-of-reference-value model?",
-      "why_te": "`reassign` call taruvata test still `A` matrame expect chestundi. Caller variable replace avvaledu ani idi prove chestundi. Method local reference copy matrame new List ki marchindi.",
+      "question": "After `LanguageLab; reassign(ids)`, the assertion still expects only `A`; If Java passed the caller's variable itself by reference, assigning a new list inside the method could replace what the caller variable points to; Why does this unchanged assertion instead support Java's copy-of-reference-value model.",
+      "why_te": "`reassign` call taruvata test still `A` matrame expect chestundi; Caller variable replace avvaledu ani idi prove chestundi; Method local reference copy matrame new List ki marchindi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -134,8 +134,8 @@
     },
     {
       "title": "Focus on the mutation assertion",
-      "question": "The next assertion expects `A` and `GCP` after `LanguageLab. mutate(ids)`. The copied reference value still points to the same mutable object, so an `add` operation is visible to the caller. Why does this not contradict the statement that Java passes every argument by value?",
-      "why_te": "`mutate` same object state ni change chestundi kabatti caller List lo `GCP` kanipistundi. Reference itself by value copy ayyindi; object matrame common ga undi. Anduke rule ki contradiction ledu.",
+      "question": "The next assertion expects `A` and `GCP` after `LanguageLab; mutate(ids)`; The copied reference value still points to the same mutable object, so an `add` operation is visible to the caller; Why does this not contradict the statement that Java passes every argument by value.",
+      "why_te": "`mutate` same object state ni change chestundi kabatti caller List lo `GCP` kanipistundi; Reference itself by value copy ayyindi; object matrame common ga undi; Anduke rule ki contradiction ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -160,8 +160,8 @@
     },
     {
       "title": "Run the existing language-semantics test",
-      "question": "The source and assertions already describe the expected parameter behavior, but executing the JUnit method gives an additional verification point. When the test passes with both reassignment and mutation assertions intact, what does that tell you about the distinction between copying a reference value and sharing the referenced object?",
-      "why_te": "JUnit test pass ayithe rendu behaviors expected ga work chestunnayi ani confirm avutundi. Reference value copy avutundi; shared mutable object ni copied reference dwara modify cheyyachu. Caller variable matrame reassign avvadu.",
+      "question": "The source and assertions already describe the expected parameter behavior, but executing the JUnit method gives an additional verification point; When the test passes with both reassignment and mutation assertions intact, what does that tell you about the distinction between copying a reference value and sharing the referenced object.",
+      "why_te": "JUnit test pass ayithe rendu behaviors expected ga work chestunnayi ani confirm avutundi; Reference value copy avutundi; shared mutable object ni copied reference dwara modify cheyyachu; Caller variable matrame reassign avvadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -182,8 +182,8 @@
     },
     {
       "title": "Return to the paired methods for the interview rule",
-      "question": "With the passing test in mind, the two one-line methods summarize the entire interview distinction: reassigning the parameter stays local, while mutating through the copied reference affects the shared object. How would you state precisely why Java is pass-by-value even when object changes remain visible?",
-      "why_te": "Final ga rendu methods ni pakkapakkana chudandi. Parameter reassign local ga untundi; object mutation caller ki kanipistundi. Java always pass-by-value, object case lo copied value reference ani answer cheyyali.",
+      "question": "With the passing test in mind, the two one-line methods summarize the entire interview distinction: reassigning the parameter stays local, while mutating through the copied reference affects the shared object; How would you state precisely why Java is pass-by-value even when object changes remain visible.",
+      "why_te": "Final ga rendu methods ni pakkapakkana chudandi; Parameter reassign local ga untundi; object mutation caller ki kanipistundi; Java always pass-by-value, object case lo copied value reference ani answer cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

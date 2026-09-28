@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Constructor overloading",
-      "question": "Constructor overloading provides multiple parameter signatures for creating the same class is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"Constructor overloading\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead; in Open the project evidence Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step.",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi; Short constructor full constructor ki `this(; )` dwara delegate chestundi; Rendu valid Product initialization paths; SurveyProducts.java lo Open the project evidence Constructor overloading baseline ni locate chestam.",
+      "question": "Can a Constructor be overloaded; Open src/main/java/com/aerotopo/learning/SurveyProducts.java and use highlighted lines 13, 14, 15, 16, 17 to establish the real project baseline for Constructor overloading; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Product lo two constructors different parameter lists tho unnayi; SurveyProducts.java open chesi Constructor overloading ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the Java rule — Constructor overloading",
-      "question": "For \"Constructor overloading\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved; in Trace the Java rule Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step. Why does Java enforce this behavior during construction, and what mistake does the example prevent; in Trace the Java rule Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step.",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi; Short constructor full constructor ki `this(; )` dwara delegate chestundi; Rendu valid Product initialization paths; SurveyProducts.java lo Trace the Java rule Constructor overloading baseline ni locate chestam.",
+      "question": "The baseline for Constructor overloading is already visible in src/main/java/com/aerotopo/learning/SurveyProducts.java; now trace the exact syntax and execution, access, or resolution rule in lines 13, 14, 15, 16, 17; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi Constructor overloading ki real project baseline ni locate chestam; Ippudu SurveyProducts.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Connect caller and object state — Constructor overloading",
-      "question": "A practical explanation of \"Constructor overloading\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward; in Connect caller and object state Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step. How does this separation make object creation predictable while protecting the type's invariants; in Connect caller and object state Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step.",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi; Short constructor full constructor ki `this(; )` dwara delegate chestundi; Rendu valid Product initialization paths; SurveyProducts.java lo Connect caller and object state Constructor overloading baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for Constructor overloading; Using src/main/java/com/aerotopo/learning/SurveyProducts.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step Constructor overloading syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview rule — Constructor overloading",
-      "question": "Now summarize \"Constructor overloading\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer; in State the interview rule Constructor overloading, use SurveyProducts.java to locate the concrete Constructor overloading evidence for this specific step.",
-      "why_te": "Product lo two constructors different parameter lists tho unnayi; Short constructor full constructor ki `this(; )` dwara delegate chestundi; Rendu valid Product initialization paths; SurveyProducts.java lo State the interview rule Constructor overloading baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyProducts.java after the earlier analysis and use the accumulated evidence to answer \"Can a Constructor be overloaded\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "State the interview rule Constructor overloading context lo SurveyProducts.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyProducts.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final explanation build chestam; previous.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

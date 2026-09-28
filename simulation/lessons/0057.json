@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Inspect primitive and object-oriented features side by side",
-      "question": "AeroTopo's `LanguageLab` uses primitive `int` fields and parameters for compact numeric work, while `SurveyProducts` models domain concepts with classes and interfaces. Why does the coexistence of these two styles explain the practical meaning of calling Java partially rather than purely object-oriented?",
-      "why_te": "Java primitives direct values kosam useful. Classes/interfaces domain modeling kosam useful. Rendu language lo coexist avutayi kabatti Java pure OOP kaadu ani commonly cheptaru.",
+      "question": "AeroTopo's `LanguageLab` uses primitive `int` fields and parameters for compact numeric work, while `SurveyProducts` models domain concepts with classes and interfaces; Why does the coexistence of these two styles explain the practical meaning of calling Java partially rather than purely object-oriented.",
+      "why_te": "Java primitives direct values kosam useful; Classes/interfaces domain modeling kosam useful; Rendu language lo coexist avutayi kabatti Java pure OOP kaadu ani commonly cheptaru.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Focus on primitive efficiency in ordinary code",
-      "question": "The highlighted fields and locals use primitive `int` rather than requiring every numeric value to be a heap object wrapper. Why can that simpler representation be beneficial for arithmetic-heavy code, and why does the existence of primitives break the claim that every Java value is itself an object?",
-      "why_te": "Primitive int direct numeric representation istundi. Arithmetic simple ga untundi and wrapper object avasaram ledu. Primitive itself object kaadu kabatti every Java value object ani cheppalem.",
+      "question": "The highlighted fields and locals use primitive `int` rather than requiring every numeric value to be a heap object wrapper; Why can that simpler representation be beneficial for arithmetic-heavy code, and why does the existence of primitives break the claim that every Java value is itself an object.",
+      "why_te": "Primitive int direct numeric representation istundi; Arithmetic simple ga untundi and wrapper object avasaram ledu; Primitive itself object kaadu kabatti every Java value object ani cheppalem.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Open the object-oriented side of the same language",
-      "question": "`SurveyProducts. Product` is an abstract class implementing interfaces, owning private state, defining behavior, and allowing specialized subclasses such as `Orthomosaic` and `Dem`. Inspect those pieces together. Which object-oriented capabilities does this hierarchy provide that a primitive value alone cannot represent in a domain model?",
-      "why_te": "SurveyProducts hierarchy abstraction, encapsulated state, inheritance, polymorphic behavior provide chestundi. Primitive value simple data matrame; ee domain relationships represent cheyyadu.",
+      "question": "`SurveyProducts; Product` is an abstract class implementing interfaces, owning private state, defining behavior, and allowing specialized subclasses such as `Orthomosaic` and `Dem`; Inspect those pieces together; Which object-oriented capabilities does this hierarchy provide that a primitive value alone cannot represent in a domain model.",
+      "why_te": "SurveyProducts hierarchy abstraction, encapsulated state, inheritance, polymorphic behavior provide chestundi; Primitive value simple data matrame; ee domain relationships represent cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -96,8 +96,8 @@
     },
     {
       "title": "Inspect wrappers as the bridge into object APIs",
-      "question": "Java APIs sometimes require reference types, so primitive values can be represented by wrappers such as `Integer`; AeroTopo already has neighboring `int` and `Integer` overloads. How does this bridge let Java keep efficient primitive syntax while still participating in generic collections and nullable reference-based APIs when necessary?",
-      "why_te": "Primitive `int` direct value; `Integer` wrapper object/reference type. Object API requirement unte boxing bridge provide chestundi. Nullable state kuda wrapper lo possible.",
+      "question": "Java APIs sometimes require reference types, so primitive values can be represented by wrappers such as `Integer`; AeroTopo already has neighboring `int` and `Integer` overloads; How does this bridge let Java keep efficient primitive syntax while still participating in generic collections and nullable reference-based APIs when necessary.",
+      "why_te": "Primitive `int` direct value; `Integer` wrapper object/reference type; Object API requirement unte boxing bridge provide chestundi; Nullable state kuda wrapper lo possible.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -118,8 +118,8 @@
     },
     {
       "title": "Summarize why the mixed model is useful",
-      "question": "The project demonstrates both low-level primitive values and rich object models without forcing one representation everywhere. How would you explain the benefit of Java's mixed design in an interview while avoiding the misleading idea that being less than 100% object-oriented means Java lacks strong OOP capabilities?",
-      "why_te": "Final answer mixed model practical ani cheppali. Primitives simple/efficient values istayi; classes/interfaces strong OOP modeling istayi. Pure OOP kaakapovadam OOP weak ani meaning kaadu.",
+      "question": "The project demonstrates both low-level primitive values and rich object models without forcing one representation everywhere; How would you explain the benefit of Java's mixed design in an interview while avoiding the misleading idea that being less than 100% object-oriented means Java lacks strong OOP capabilities.",
+      "why_te": "Final answer mixed model practical ani cheppali; Primitives simple/efficient values istayi; classes/interfaces strong OOP modeling istayi; Pure OOP kaakapovadam OOP weak ani meaning kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

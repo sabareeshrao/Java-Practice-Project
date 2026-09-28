@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Start from Java's existing reference method",
-      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses. In `RuntimeLab. references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code?",
-      "why_te": "`Object point` method ki object reference istundi. Code object ni use cheyyagaladu, kani address ni read cheyyadam leda pointer arithmetic cheyyadam kanipinchadu.",
+      "question": "Java's design choice is easier to understand by starting with code that already refers to objects without exposing their addresses; In `RuntimeLab; references`, what does the `Object point` parameter let the method do, and what raw-memory operations are intentionally absent from this ordinary Java code.",
+      "why_te": "`Object point` method ki object reference istundi; Code object ni use cheyyagaladu, kani address ni read cheyyadam leda pointer arithmetic cheyyadam kanipinchadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -33,8 +33,8 @@
     },
     {
       "title": "Inspect managed reference creation",
-      "question": "The method creates weak, soft, and phantom references using constructors, so every reference still participates in Java's type system and runtime rules. Why is this managed object model easier for the JVM and garbage collector to control than application code manipulating arbitrary addresses directly?",
-      "why_te": "Highlight ayina line lo managed reference objects create chestunnam. JVM and garbage collector ee references ni understand chestayi. Application code arbitrary memory address ni modify cheyyadu.",
+      "question": "The method creates weak, soft, and phantom references using constructors, so every reference still participates in Java's type system and runtime rules; Why is this managed object model easier for the JVM and garbage collector to control than application code manipulating arbitrary addresses directly.",
+      "why_te": "Highlight ayina line lo managed reference objects create chestunnam; JVM and garbage collector ee references ni understand chestayi; Application code arbitrary memory address ni modify cheyyadu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Inspect the JVM-managed memory role",
-      "question": "One reason Java references do not behave like exposed addresses is that the JVM provides managed heap and garbage-collection services. If application code depended on fixed raw addresses everywhere, how would that conflict with a runtime that wants freedom to manage object memory safely?",
-      "why_te": "JVM memory ni manage chestundi, garbage collector unused objects ni clean chestundi. Ordinary code fixed raw addresses meeda depend kakapovadam valla runtime memory ni safer ga manage cheyyagaladu.",
+      "question": "One reason Java references do not behave like exposed addresses is that the JVM provides managed heap and garbage-collection services; If application code depended on fixed raw addresses everywhere, how would that conflict with a runtime that wants freedom to manage object memory safely.",
+      "why_te": "JVM memory ni manage chestundi, garbage collector unused objects ni clean chestundi; Ordinary code fixed raw addresses meeda depend kakapovadam valla runtime memory ni safer ga manage cheyyagaladu.",
       "software": "intellij",
       "required_capability": "show-jvm-runtime",
       "feature_available": true,
@@ -86,8 +86,8 @@
     },
     {
       "title": "Create a normal reference identity experiment",
-      "question": "Java lets two variables refer to the same object without copying or exposing a memory address. In a small temporary program, what should happen when `second = first` copies an object reference and the program compares the two variables with `==`?",
-      "why_te": "Temporary demo lo `second = first` same object reference ni copy chestundi. Raw address syntax avasaram ledu. `first == second` true vastundi endukante rendu same object ni refer chestayi.",
+      "question": "Java lets two variables refer to the same object without copying or exposing a memory address; In a small temporary program, what should happen when `second = first` copies an object reference and the program compares the two variables with `==`.",
+      "why_te": "Temporary demo lo `second = first` same object reference ni copy chestundi; Raw address syntax avasaram ledu; `first == second` true vastundi endukante rendu same object ni refer chestayi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -111,8 +111,8 @@
     },
     {
       "title": "Focus on reference assignment",
-      "question": "The assignment `Object second = first` copies the reference value in Java's managed model, not a user-visible address that can be incremented or dereferenced with pointer operators. How does this single statement preserve object identity while keeping raw-memory details hidden?",
-      "why_te": "`Object second = first` reference ni copy chestundi. Rendu variables same object ni point chestayi ani cheppachu, kani Java raw memory address ni user code ki expose cheyyadu.",
+      "question": "The assignment `Object second = first` copies the reference value in Java's managed model, not a user-visible address that can be incremented or dereferenced with pointer operators; How does this single statement preserve object identity while keeping raw-memory details hidden.",
+      "why_te": "`Object second = first` reference ni copy chestundi; Rendu variables same object ni point chestayi ani cheppachu, kani Java raw memory address ni user code ki expose cheyyadu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -139,8 +139,8 @@
     },
     {
       "title": "Run the reference identity experiment",
-      "question": "The program can prove that both variables identify the same object without printing or manipulating any raw address. When the output is `true`, what does that demonstrate about Java's ability to provide reference semantics without exposing explicit C/C++ pointer operations?",
-      "why_te": "Program `true` print chestundi. Same object ni rendu references access chestunnayi ani idi prove chestundi. Pointer arithmetic lekapoyina object identity and sharing Java lo possible.",
+      "question": "The program can prove that both variables identify the same object without printing or manipulating any raw address; When the output is `true`, what does that demonstrate about Java's ability to provide reference semantics without exposing explicit C/C++ pointer operations.",
+      "why_te": "Program `true` print chestundi; Same object ni rendu references access chestunnayi ani idi prove chestundi; Pointer arithmetic lekapoyina object identity and sharing Java lo possible.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -161,8 +161,8 @@
     },
     {
       "title": "Return to RuntimeLab after the experiment",
-      "question": "Java's managed references support ordinary application work while allowing the runtime to enforce type and memory-safety rules. Returning to the real project method, which design benefits become clearer when you compare this model with unrestricted pointer arithmetic and manual dereferencing?",
-      "why_te": "RuntimeLab.java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.",
+      "question": "Java's managed references support ordinary application work while allowing the runtime to enforce type and memory-safety rules; Returning to the real project method, which design benefits become clearer when you compare this model with unrestricted pointer arithmetic and manual dereferencing.",
+      "why_te": "RuntimeLab.java ki return ayyamu; Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu; Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -184,8 +184,8 @@
     },
     {
       "title": "Remove the reference identity demo",
-      "question": "The temporary program has shown that Java provides object identity and sharing without normal raw pointers, so it no longer needs to remain in the cumulative project. What should your final interview answer emphasize about safety, garbage collection, portability, and the separation of native-memory access from everyday Java references?",
-      "why_te": "Temporary reference demo ni remove chestunnam. Final answer lo safety, garbage collection, portability mariyu simple reference model mention cheyyali. Native memory access special APIs dwara separate ga untundi.",
+      "question": "The temporary program has shown that Java provides object identity and sharing without normal raw pointers, so it no longer needs to remain in the cumulative project; What should your final interview answer emphasize about safety, garbage collection, portability, and the separation of native-memory access from everyday Java references.",
+      "why_te": "Temporary reference demo ni remove chestunnam; Final answer lo safety, garbage collection, portability mariyu simple reference model mention cheyyali; Native memory access special APIs dwara separate ga untundi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

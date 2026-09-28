@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Whether static methods can be overridden",
-      "question": "The AeroTopo code already provides direct evidence for \"Whether static methods can be overridden\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects; in Open the project evidence Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances; in Open the project evidence Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step.",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi; Subclass method parent method ni override kaadu; hide chestundi; Static call compile-time class/reference batti resolve avutundi; SurveyProducts.java lo Open the project evidence Whether static methods can be overridden baseline ni locate chestam.",
+      "question": "Can you override static methods in Java; Open src/main/java/com/aerotopo/learning/SurveyProducts.java and use highlighted lines 13, 22, 27, 35 to establish the real project baseline for Whether static methods can be overridden; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi; SurveyProducts.java open chesi Whether static methods can be overridden ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Trace binding and ownership — Whether static methods can be overridden",
-      "question": "For \"Whether static methods can be overridden\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior; in Trace binding and ownership Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step. Why does this distinction matter when code is accessed through different references or subclasses; in Trace binding and ownership Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step.",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi; Subclass method parent method ni override kaadu; hide chestundi; Static call compile-time class/reference batti resolve avutundi; SurveyProducts.java lo Trace binding and ownership Whether static methods can be overridden baseline ni locate chestam.",
+      "question": "The baseline for Whether static methods can be overridden is already visible in src/main/java/com/aerotopo/learning/SurveyProducts.java; now trace the exact syntax and execution, access, or resolution rule in lines 13, 22, 27, 35; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi Whether static methods can be overridden ki real project baseline ni locate chestam; Ippudu SurveyProducts.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Evaluate the design choice — Whether static methods can be overridden",
-      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts; in Evaluate the design choice Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step. Using the highlighted AeroTopo implementation for \"Whether static methods can be overridden\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable; in Evaluate the design choice Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step.",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi; Subclass method parent method ni override kaadu; hide chestundi; Static call compile-time class/reference batti resolve avutundi; SurveyProducts.java lo Evaluate the design choice Whether static methods can be overridden baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for Whether static methods can be overridden; Using src/main/java/com/aerotopo/learning/SurveyProducts.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step Whether static methods can be overridden syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "State the interview rule — Whether static methods can be overridden",
-      "question": "Now answer \"Whether static methods can be overridden\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods; in State the interview rule Whether static methods can be overridden, use SurveyProducts.java to locate the concrete Whether static methods can be overridden evidence for this specific step.",
-      "why_te": "Product and Orthomosaic same static `category()` signature use chestayi; Subclass method parent method ni override kaadu; hide chestundi; Static call compile-time class/reference batti resolve avutundi; SurveyProducts.java lo State the interview rule Whether static methods can be overridden baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyProducts.java after the earlier analysis and use the accumulated evidence to answer \"Can you override static methods in Java\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "State the interview rule Whether static methods can be overridden context lo SurveyProducts.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyProducts.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

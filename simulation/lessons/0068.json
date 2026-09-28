@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Start from composition-like ownership in Product",
-      "question": "AeroTopo's Product constructor copies the supplied tile list with `List. copyOf`, then keeps that private immutable representation as part of the product. Why does copying and owning the internal collection create stronger whole-part ownership than merely remembering an externally managed collection reference?",
-      "why_te": "Product input list ni copy chesi own internal representation ga store chestundi. External caller list later change ayina Product state change kaadu. Strong ownership/composition-like relation clear.",
+      "question": "AeroTopo's Product constructor copies the supplied tile list with `List; copyOf`, then keeps that private immutable representation as part of the product; Why does copying and owning the internal collection create stronger whole-part ownership than merely remembering an externally managed collection reference.",
+      "why_te": "Product input list ni copy chesi own internal representation ga store chestundi; External caller list later change ayina Product state change kaadu; Strong ownership/composition-like relation clear.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Create explicit association and aggregation examples",
-      "question": "A temporary model uses a `Reviewer` that references a Product without owning it, and a `Portfolio` that groups Product objects supplied from outside. The same Product can survive even if these wrapper objects disappear. How do those relationships differ in ownership strength from Product's private copied tile representation?",
-      "why_te": "Reviewer simple association; Portfolio external Products ni aggregate chestundi. Products independent ga exist cheyyagalavu. Product internal tiles representation matrame own copy ga maintain chestundi.",
+      "question": "A temporary model uses a `Reviewer` that references a Product without owning it, and a `Portfolio` that groups Product objects supplied from outside; The same Product can survive even if these wrapper objects disappear; How do those relationships differ in ownership strength from Product's private copied tile representation.",
+      "why_te": "Reviewer simple association; Portfolio external Products ni aggregate chestundi; Products independent ga exist cheyyagalavu; Product internal tiles representation matrame own copy ga maintain chestundi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -65,8 +65,8 @@
     },
     {
       "title": "Inspect independent part lifetimes",
-      "question": "Both `Reviewer` and `Portfolio` receive an already-created `ProductRef`; neither creates or destroys that ProductRef. Why does this support association or aggregation semantics where the related object can exist independently, compared with stronger composition where the whole owns creation or internal representation more tightly?",
-      "why_te": "Related ProductRef first independent ga create ayyindi. Reviewer/Portfolio only reference chestayi. Wrapper disappear ayina ProductRef conceptually independent. Idi weaker relation.",
+      "question": "Both `Reviewer` and `Portfolio` receive an already-created `ProductRef`; neither creates or destroys that ProductRef; Why does this support association or aggregation semantics where the related object can exist independently, compared with stronger composition where the whole owns creation or internal representation more tightly.",
+      "why_te": "Related ProductRef first independent ga create ayyindi; Reviewer/Portfolio only reference chestayi; Wrapper disappear ayina ProductRef conceptually independent; Idi weaker relation.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -93,8 +93,8 @@
     },
     {
       "title": "Run the relationship demonstration",
-      "question": "The demo prints the same product id through both the direct reviewer association and the portfolio grouping, showing that one independently created part participates in multiple relationships. Why does Java not enforce association, aggregation, and composition as different syntax, leaving these distinctions to ownership and lifecycle design?",
-      "why_te": "Java separate keywords provide cheyyadu. Same references syntax use chestam. Relationship meaning ownership, lifecycle, copying, responsibility design batti decide avutundi.",
+      "question": "The demo prints the same product id through both the direct reviewer association and the portfolio grouping, showing that one independently created part participates in multiple relationships; Why does Java not enforce association, aggregation, and composition as different syntax, leaving these distinctions to ownership and lifecycle design.",
+      "why_te": "Java separate keywords provide cheyyadu; Same references syntax use chestam; Relationship meaning ownership, lifecycle, copying, responsibility design batti decide avutundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -115,8 +115,8 @@
     },
     {
       "title": "Remove the temporary relationship model and state the distinctions",
-      "question": "The temporary model has served its purpose and can be deleted. How would you define association as a general connection, aggregation as weak whole-part ownership with independent parts, and composition as strong ownership, while using Product's copied tile representation as the project example of stronger ownership?",
-      "why_te": "Temporary demo remove chestunnam. Association general link, aggregation independent part tho weak whole-part, composition strong ownership ani explain cheyyali. Product copied tiles stronger ownership example.",
+      "question": "The temporary model has served its purpose and can be deleted; How would you define association as a general connection, aggregation as weak whole-part ownership with independent parts, and composition as strong ownership, while using Product's copied tile representation as the project example of stronger ownership.",
+      "why_te": "Temporary demo remove chestunnam; Association general link, aggregation independent part tho weak whole-part, composition strong ownership ani explain cheyyali; Product copied tiles stronger ownership example.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

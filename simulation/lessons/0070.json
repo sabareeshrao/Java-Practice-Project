@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the domain hierarchy as an enterprise example",
-      "question": "AeroTopo models multiple survey products behind a common Product abstraction rather than scattering product-specific fields and conditionals throughout unrelated services. Inspect the base class, interfaces, and concrete product types. How does this structure create clear ownership of domain rules in an enterprise-sized codebase?",
-      "why_te": "Product hierarchy domain rules ni dedicated types lo organize chestundi. Common behavior base class lo, specific behavior subclasses lo untundi. Responsibilities clear ga separate avutayi.",
+      "question": "AeroTopo models multiple survey products behind a common Product abstraction rather than scattering product-specific fields and conditionals throughout unrelated services; Inspect the base class, interfaces, and concrete product types; How does this structure create clear ownership of domain rules in an enterprise-sized codebase.",
+      "why_te": "Product hierarchy domain rules ni dedicated types lo organize chestundi; Common behavior base class lo, specific behavior subclasses lo untundi; Responsibilities clear ga separate avutayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -39,8 +39,8 @@
     },
     {
       "title": "Inspect a stable contract callers can depend on",
-      "question": "The `Exportable` interface and Product base type let callers depend on operations such as `export` and `resolutionMetres` without knowing every concrete implementation. Why do stable abstractions reduce coupling between teams and components when enterprise systems add new implementations over time?",
-      "why_te": "Caller concrete subtype details know cheyyalsina avasaram taggutundi. Stable contract meeda depend chestundi. New implementation add chesina many callers rewrite cheyyalsina need taggutundi.",
+      "question": "The `Exportable` interface and Product base type let callers depend on operations such as `export` and `resolutionMetres` without knowing every concrete implementation; Why do stable abstractions reduce coupling between teams and components when enterprise systems add new implementations over time.",
+      "why_te": "Caller concrete subtype details know cheyyalsina avasaram taggutundi; Stable contract meeda depend chestundi; New implementation add chesina many callers rewrite cheyyalsina need taggutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -65,8 +65,8 @@
     },
     {
       "title": "Inspect protected state and invariants",
-      "question": "Private fields and constructor validation keep invalid product state from being freely modified by unrelated code. How does this encapsulation support enterprise maintainability by narrowing the places developers must inspect when reasoning about how an object's state can change?",
-      "why_te": "Private state mutation paths limited chestundi. Developer object invariant ekkada set/change avutundo easy ga trace cheyyagaladu. Maintenance and debugging simpler.",
+      "question": "Private fields and constructor validation keep invalid product state from being freely modified by unrelated code; How does this encapsulation support enterprise maintainability by narrowing the places developers must inspect when reasoning about how an object's state can change.",
+      "why_te": "Private state mutation paths limited chestundi; Developer object invariant ekkada set/change avutundo easy ga trace cheyyagaladu; Maintenance and debugging simpler.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -92,8 +92,8 @@
     },
     {
       "title": "Inspect reusable behavior with subtype specialization",
-      "question": "`Product. export()` is shared while `resolutionMetres()` is specialized by concrete subtypes, so common behavior stays consistent while domain-specific calculations vary. Why is this combination valuable when enterprise systems need both centralized rules and independent subtype evolution without duplicating the shared export logic?",
-      "why_te": "Common export logic one place lo consistent ga untundi. Resolution subtype-specific ga vary avutundi. Shared and variable behavior clean ga separate chestam.",
+      "question": "`Product; export()` is shared while `resolutionMetres()` is specialized by concrete subtypes, so common behavior stays consistent while domain-specific calculations vary; Why is this combination valuable when enterprise systems need both centralized rules and independent subtype evolution without duplicating the shared export logic.",
+      "why_te": "Common export logic one place lo consistent ga untundi; Resolution subtype-specific ga vary avutundi; Shared and variable behavior clean ga separate chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -118,8 +118,8 @@
     },
     {
       "title": "Explain enterprise value without claiming OOP solves everything",
-      "question": "AeroTopo shows how OOP supports modularity, contracts, reuse, encapsulation, and polymorphic extension, but enterprise systems also depend on functional, data-oriented, and procedural techniques where appropriate. How would you explain OOP's role as one design tool rather than a requirement to model every operation as a deep object hierarchy?",
-      "why_te": "Final answer OOP enterprise complexity manage cheyyadaniki important tool ani cheppali. Kani every problem deep hierarchy ga model cheyyalsina rule kaadu. Fit unna place lo use cheyyali.",
+      "question": "AeroTopo shows how OOP supports modularity, contracts, reuse, encapsulation, and polymorphic extension, but enterprise systems also depend on functional, data-oriented, and procedural techniques where appropriate; How would you explain OOP's role as one design tool rather than a requirement to model every operation as a deep object hierarchy.",
+      "why_te": "Final answer OOP enterprise complexity manage cheyyadaniki important tool ani cheppali; Kani every problem deep hierarchy ga model cheyyalsina rule kaadu; Fit unna place lo use cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

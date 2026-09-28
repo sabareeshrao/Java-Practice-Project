@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Reopen Java's numeric conversion example",
-      "question": "Not every risky-looking conversion throws an exception in Java. `LanguageLab. numericConversions` performs a double-to-int narrowing cast, an int-to-byte narrowing cast, an int-to-long widening conversion, and String parsing. Which of these operations should you separate before naming an exception for an invalid conversion?",
-      "why_te": "LanguageLab. numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.",
+      "question": "Not every risky-looking conversion throws an exception in Java; `LanguageLab; numericConversions` performs a double-to-int narrowing cast, an int-to-byte narrowing cast, an int-to-long widening conversion, and String parsing; Which of these operations should you separate before naming an exception for an invalid conversion.",
+      "why_te": "LanguageLab; numericConversions lo different conversion types unnayi; Primitive cast, widening conversion mariyu String parsing same rule follow avvavu; Exception answer conversion type batti change avutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Inspect primitive narrowing without an exception",
-      "question": "The cast `(int) metres` can discard a fractional part, yet Java defines that primitive narrowing behavior instead of throwing `ClassCastException`. Why is information loss in a numeric primitive cast different from an invalid reference cast between unrelated runtime object types?",
-      "why_te": "`(int) metres` primitive narrowing cast. Fraction part lose avvachu, kani idi Java defined numeric conversion. `ClassCastException` unrelated object types cast chesinappudu vastundi.",
+      "question": "The cast `(int) metres` can discard a fractional part, yet Java defines that primitive narrowing behavior instead of throwing `ClassCastException`; Why is information loss in a numeric primitive cast different from an invalid reference cast between unrelated runtime object types.",
+      "why_te": "`(int) metres` primitive narrowing cast; Fraction part lose avvachu, kani idi Java defined numeric conversion; `ClassCastException` unrelated object types cast chesinappudu vastundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Create two failing conversion examples",
-      "question": "To compare runtime failures directly, the temporary class contains one method that casts an `Object` to `Integer` and another that parses text as an integer. Both compile, but they validate different assumptions at runtime. Which exception category belongs to each operation?",
-      "why_te": "Temporary demo lo rendu runtime failures compare chestunnam. Object cast wrong type ayithe oka exception, invalid numeric String parse ayithe vere exception vastundi. Rendini separate ga chuddam.",
+      "question": "To compare runtime failures directly, the temporary class contains one method that casts an `Object` to `Integer` and another that parses text as an integer; Both compile, but they validate different assumptions at runtime; Which exception category belongs to each operation.",
+      "why_te": "Temporary demo lo rendu runtime failures compare chestunnam; Object cast wrong type ayithe oka exception, invalid numeric String parse ayithe vere exception vastundi; Rendini separate ga chuddam.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Focus on the invalid reference cast",
-      "question": "The method accepts any `Object`, so the compiler cannot guarantee that the runtime object is really an `Integer`. If a `String` object reaches `(Integer) value`, why does Java defer the check until runtime, and which exception should report that incompatible cast?",
-      "why_te": "`Object` variable runtime lo String object ni hold cheyyachu. `(Integer) value` actual object type tho match kakapothe runtime check fail avutundi. Appudu `ClassCastException` vastundi.",
+      "question": "The method accepts any `Object`, so the compiler cannot guarantee that the runtime object is really an `Integer`; If a `String` object reaches `(Integer) value`, why does Java defer the check until runtime, and which exception should report that incompatible cast.",
+      "why_te": "`Object` variable runtime lo String object ni hold cheyyachu; `(Integer) value` actual object type tho match kakapothe runtime check fail avutundi; Appudu `ClassCastException` vastundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -111,8 +111,8 @@
     },
     {
       "title": "Run the invalid reference cast",
-      "question": "The program passes a String object containing characters `258`, but textual content does not make the object an Integer instance. When the cast executes and fails, what does the `ClassCastException` message tell you about the actual source type and the requested target type?",
-      "why_te": "Command run chesthe String object ni Integer ga cast cheyyadam fail avutundi. Output lo `ClassCastException` actual type mariyu requested type mismatch ni chupistundi.",
+      "question": "The program passes a String object containing characters `258`, but textual content does not make the object an Integer instance; When the cast executes and fails, what does the `ClassCastException` message tell you about the actual source type and the requested target type.",
+      "why_te": "Command run chesthe String object ni Integer ga cast cheyyadam fail avutundi; Output lo `ClassCastException` actual type mariyu requested type mismatch ni chupistundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -133,8 +133,8 @@
     },
     {
       "title": "Focus on text-to-number parsing",
-      "question": "`Integer. parseInt` is not an object cast; it interprets characters as a base-10 integer representation. If the String contains `258x`, the object type is perfectly valid but its text is not a valid integer. Which exception represents that parsing failure?",
-      "why_te": "`Integer. parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.",
+      "question": "`Integer; parseInt` is not an object cast; it interprets characters as a base-10 integer representation; If the String contains `258x`, the object type is perfectly valid but its text is not a valid integer; Which exception represents that parsing failure.",
+      "why_te": "`Integer; parseInt` object cast kaadu; String content ni number ga parse chestundi; `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -159,8 +159,8 @@
     },
     {
       "title": "Run the invalid numeric parse",
-      "question": "Unlike the previous object-casting branch, this execution reaches `Integer. parseInt` with a valid String object whose characters do not form a legal integer representation. The variable type itself is correct, so when `258x` is parsed, why is `NumberFormatException` the precise runtime failure instead of `ClassCastException`?",
-      "why_te": "Parsing branch run chesthe `258x` numeric format invalid ani runtime detect chestundi. Anduke `NumberFormatException` correct error. Object type mismatch ikkada problem kaadu.",
+      "question": "Unlike the previous object-casting branch, this execution reaches `Integer; parseInt` with a valid String object whose characters do not form a legal integer representation; The variable type itself is correct, so when `258x` is parsed, why is `NumberFormatException` the precise runtime failure instead of `ClassCastException`.",
+      "why_te": "Parsing branch run chesthe `258x` numeric format invalid ani runtime detect chestundi; Anduke `NumberFormatException` correct error; Object type mismatch ikkada problem kaadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -181,8 +181,8 @@
     },
     {
       "title": "Return to the real conversion method",
-      "question": "The same production method contains primitive narrowing, widening, and text parsing, which makes it a useful reminder that Java conversions do not share one failure rule. Looking again at these lines, why is answering with one universal casting exception incomplete for an interview?",
-      "why_te": "LanguageLab.java ki return ayyamu. Primitive cast information lose chesina exception raakapovachu. Parsing invalid text matrame `NumberFormatException` istundi. Conversion type batti answer cheyyali.",
+      "question": "The same production method contains primitive narrowing, widening, and text parsing, which makes it a useful reminder that Java conversions do not share one failure rule; Looking again at these lines, why is answering with one universal casting exception incomplete for an interview.",
+      "why_te": "LanguageLab.java ki return ayyamu; Primitive cast information lose chesina exception raakapovachu; Parsing invalid text matrame `NumberFormatException` istundi; Conversion type batti answer cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -205,8 +205,8 @@
     },
     {
       "title": "Remove the invalid conversion demo",
-      "question": "The temporary failure class is no longer needed after comparing the two runtime exceptions. Once it is removed, what complete answer should you give that names `ClassCastException`, `NumberFormatException`, and the fact that ordinary primitive narrowing does not automatically throw either one?",
-      "why_te": "Temporary conversion demo ni remove chestunnam. Final answer lo invalid reference cast ki `ClassCastException`, invalid numeric parsing ki `NumberFormatException`, primitive narrowing ki usually exception raadani clear ga cheppali.",
+      "question": "The temporary failure class is no longer needed after comparing the two runtime exceptions; Once it is removed, what complete answer should you give that names `ClassCastException`, `NumberFormatException`, and the fact that ordinary primitive narrowing does not automatically throw either one.",
+      "why_te": "Temporary conversion demo ni remove chestunnam; Final answer lo invalid reference cast ki `ClassCastException`, invalid numeric parsing ki `NumberFormatException`, primitive narrowing ki usually exception raadani clear ga cheppali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

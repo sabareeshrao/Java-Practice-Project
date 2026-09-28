@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — No-argument constructors and why they matter",
-      "question": "A no-argument constructor supports default or framework-driven creation when no caller arguments are available is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"No-argument constructors and why they matter\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead; in Open the project evidence No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step.",
-      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi; Application normal creation public parameterized constructor use chestundi; No-arg visibility kuda intentionally limited; SurveyProject.java lo Open the project evidence No-argument constructors and why they matter baseline ni locate chestam.",
+      "question": "What is a No-Argument Constructor, and why is it important; Open src/main/java/com/aerotopo/persistence/SurveyProject.java and use highlighted lines 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27 to establish the real project baseline for No-argument constructors and why they matter; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi; SurveyProject.java open chesi No-argument constructors and why they matter ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -48,8 +48,8 @@
     },
     {
       "title": "Trace the Java rule — No-argument constructors and why they matter",
-      "question": "For \"No-argument constructors and why they matter\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved; in Trace the Java rule No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step. Why does Java enforce this behavior during construction, and what mistake does the example prevent; in Trace the Java rule No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step.",
-      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi; Application normal creation public parameterized constructor use chestundi; No-arg visibility kuda intentionally limited; SurveyProject.java lo Trace the Java rule No-argument constructors and why they matter baseline ni locate chestam.",
+      "question": "The baseline for No-argument constructors and why they matter is already visible in src/main/java/com/aerotopo/persistence/SurveyProject.java; now trace the exact syntax and execution, access, or resolution rule in lines 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi No-argument constructors and why they matter ki real project baseline ni locate chestam; Ippudu SurveyProject.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -86,8 +86,8 @@
     },
     {
       "title": "Connect caller and object state — No-argument constructors and why they matter",
-      "question": "A practical explanation of \"No-argument constructors and why they matter\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward; in Connect caller and object state No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step. How does this separation make object creation predictable while protecting the type's invariants; in Connect caller and object state No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step.",
-      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi; Application normal creation public parameterized constructor use chestundi; No-arg visibility kuda intentionally limited; SurveyProject.java lo Connect caller and object state No-argument constructors and why they matter baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for No-argument constructors and why they matter; Using src/main/java/com/aerotopo/persistence/SurveyProject.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step No-argument constructors and why they matter syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -124,8 +124,8 @@
     },
     {
       "title": "State the interview rule — No-argument constructors and why they matter",
-      "question": "Now summarize \"No-argument constructors and why they matter\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer; in State the interview rule No-argument constructors and why they matter, use SurveyProject.java to locate the concrete No-argument constructors and why they matter evidence for this specific step.",
-      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi; Application normal creation public parameterized constructor use chestundi; No-arg visibility kuda intentionally limited; SurveyProject.java lo State the interview rule No-argument constructors and why they matter baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/persistence/SurveyProject.java after the earlier analysis and use the accumulated evidence to answer \"What is a No-Argument Constructor, and why is it important\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "detailed Java rule ni next step lo separate ga analyze chestam; SurveyProject.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi final explanation build chestam; previous syntax discussion ni malli repeat cheyyamu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project's ordinary constructor and factory paths",
-      "question": "AeroTopo creates domain objects directly with constructors and also centralizes creation through `ProductFactory. create`. Inspect the factory switch and notice that it still ultimately calls constructors. Why should factories be described as an object-creation API pattern rather than a completely different JVM allocation mechanism?",
-      "why_te": "ProductFactory caller ki creation logic hide chestundi, kani inside `new Dem` or `new Orthomosaic` use chestundi. Factory API pattern; underlying normal object creation constructor dwara jarugutundi.",
+      "question": "AeroTopo creates domain objects directly with constructors and also centralizes creation through `ProductFactory; create`; Inspect the factory switch and notice that it still ultimately calls constructors; Why should factories be described as an object-creation API pattern rather than a completely different JVM allocation mechanism.",
+      "why_te": "ProductFactory caller ki creation logic hide chestundi, kani inside `new Dem` or `new Orthomosaic` use chestundi; Factory API pattern; underlying normal object creation constructor dwara jarugutundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -39,8 +39,8 @@
     },
     {
       "title": "Create a small reflection-based construction example",
-      "question": "A temporary class uses `Class. getDeclaredConstructor(). newInstance()` to create an object through reflection. This is still constructor-based creation, but the constructor is selected dynamically through metadata instead of a compile-time `new Demo()` expression. Why is that distinction useful when discussing frameworks and reflection?",
-      "why_te": "Reflection lo constructor metadata runtime lo select chestam. `newInstance` actual constructor ni invoke chestundi. Frameworks dynamic types handle cheyyadaniki ee mechanism useful.",
+      "question": "A temporary class uses `Class; getDeclaredConstructor(); newInstance()` to create an object through reflection; This is still constructor-based creation, but the constructor is selected dynamically through metadata instead of a compile-time `new Demo()` expression; Why is that distinction useful when discussing frameworks and reflection.",
+      "why_te": "Reflection lo constructor metadata runtime lo select chestam; `newInstance` actual constructor ni invoke chestundi; Frameworks dynamic types handle cheyyadaniki ee mechanism useful.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -66,8 +66,8 @@
     },
     {
       "title": "Inspect direct and reflective construction together",
-      "question": "The direct expression and reflective call both create `Tile` objects and both execute the constructor, even though one is statically written and the other is discovered at runtime. Why is it inaccurate to say that reflection creates a Java object without calling a constructor in this example?",
-      "why_te": "Direct `new` and reflective `newInstance` rendu constructor execute chestayi. Reflection dynamic invocation matrame; constructor bypass kaadu. Constructor-less creation separate mechanisms lo jaragachu.",
+      "question": "The direct expression and reflective call both create `Tile` objects and both execute the constructor, even though one is statically written and the other is discovered at runtime; Why is it inaccurate to say that reflection creates a Java object without calling a constructor in this example.",
+      "why_te": "Direct `new` and reflective `newInstance` rendu constructor execute chestayi; Reflection dynamic invocation matrame; constructor bypass kaadu; Constructor-less creation separate mechanisms lo jaragachu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -93,8 +93,8 @@
     },
     {
       "title": "Run both creation paths",
-      "question": "When the program prints `constructor` twice and then `true`, what does that prove about constructor execution and runtime type equality for these two creation paths? How would you contrast them with cloning or deserialization, where object state can be reproduced through different lifecycle rules?",
-      "why_te": "Constructor message twice vastundi kabatti direct and reflection both constructor call chestayi. Runtime classes same. Clone/deserialization lifecycle different ga object state create cheyyagalavu.",
+      "question": "When the program prints `constructor` twice and then `true`, what does that prove about constructor execution and runtime type equality for these two creation paths; How would you contrast them with cloning or deserialization, where object state can be reproduced through different lifecycle rules.",
+      "why_te": "Constructor message twice vastundi kabatti direct and reflection both constructor call chestayi; Runtime classes same; Clone/deserialization lifecycle different ga object state create cheyyagalavu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -115,8 +115,8 @@
     },
     {
       "title": "Remove the reflection demo and state the practical hierarchy",
-      "question": "The temporary class can now be deleted because the project already demonstrates constructors and factories. How would you list `new`, factories, reflection, cloning, and deserialization accurately while also explaining that explicit constructors or factories are usually preferable for readable production code?",
-      "why_te": "Temporary demo remove chestunnam. Final answer `new`, factory, reflection, cloning, deserialization mechanisms ni accurately separate cheyyali. Production lo clear constructors/factories usually preferred.",
+      "question": "The temporary class can now be deleted because the project already demonstrates constructors and factories; How would you list `new`, factories, reflection, cloning, and deserialization accurately while also explaining that explicit constructors or factories are usually preferable for readable production code.",
+      "why_te": "Temporary demo remove chestunnam; Final answer `new`, factory, reflection, cloning, deserialization mechanisms ni accurately separate cheyyali; Production lo clear constructors/factories usually preferred.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

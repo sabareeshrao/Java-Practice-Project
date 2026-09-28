@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the expand-around-center implementation",
-      "question": "AeroTopo's `longestPalindrome` method checks every position twice: once for odd-length palindromes and once for even-length palindromes. It expands two pointers outward while characters match and records the longest span. Which lines establish the two center types, expansion loop, best-range update, and final substring?",
-      "why_te": "Method prathi center ki odd and even parity check chestundi. Left/right pointers match ayina varaku expand avutayi. Longest range track chesi final substring return chestundi.",
+      "question": "AeroTopo's `longestPalindrome` method checks every position twice: once for odd-length palindromes and once for even-length palindromes; It expands two pointers outward while characters match and records the longest span; Which lines establish the two center types, expansion loop, best-range update, and final substring.",
+      "why_te": "Method prathi center ki odd and even parity check chestundi; Left/right pointers match ayina varaku expand avutayi; Longest range track chesi final substring return chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -39,8 +39,8 @@
     },
     {
       "title": "Inspect odd and even center handling",
-      "question": "The nested `parity` loop sets `right = center + parity`, so parity zero starts both pointers on one character and parity one starts them on adjacent characters. Why is checking both configurations necessary to find palindromes such as `racecar` and `abba` with the same algorithm?",
-      "why_te": "Parity 0 odd palindrome center one character. Parity 1 even palindrome center two adjacent positions madhya. Rendu check cheyyakapothe `racecar` leda `abba` type lo oka category miss avutundi.",
+      "question": "The nested `parity` loop sets `right = center + parity`, so parity zero starts both pointers on one character and parity one starts them on adjacent characters; Why is checking both configurations necessary to find palindromes such as `racecar` and `abba` with the same algorithm.",
+      "why_te": "Parity 0 odd palindrome center one character; Parity 1 even palindrome center two adjacent positions madhya; Rendu check cheyyakapothe `racecar` leda `abba` type lo oka category miss avutundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -67,8 +67,8 @@
     },
     {
       "title": "Create inputs with different palindrome shapes",
-      "question": "The temporary driver tests `babad`, where a length-three palindrome exists, and `cbbd`, where the longest answer is the even palindrome `bb`. Why do these two inputs together provide better coverage of the center-expansion logic than testing only one palindrome shape?",
-      "why_te": "`babad` odd-length result ni test chestundi; `cbbd` even-length `bb` ni test chestundi. Rendu together parity handling complete ga verify chestayi.",
+      "question": "The temporary driver tests `babad`, where a length-three palindrome exists, and `cbbd`, where the longest answer is the even palindrome `bb`; Why do these two inputs together provide better coverage of the center-expansion logic than testing only one palindrome shape.",
+      "why_te": "`babad` odd-length result ni test chestundi; `cbbd` even-length `bb` ni test chestundi; Rendu together parity handling complete ga verify chestayi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -92,8 +92,8 @@
     },
     {
       "title": "Run odd and even palindrome cases",
-      "question": "When the output is a length-three palindrome such as `bab` for the first input and `bb` for the second, what does that verify about the two parity paths? Why can multiple equally long answers for `babad` still be correct under the problem definition?",
-      "why_te": "First input lo `bab` or `aba` rendu length 3 valid longest answers. Second lo `bb` even case. Output parity paths correct ga work chestunnayi ani show chestundi.",
+      "question": "When the output is a length-three palindrome such as `bab` for the first input and `bb` for the second, what does that verify about the two parity paths; Why can multiple equally long answers for `babad` still be correct under the problem definition.",
+      "why_te": "First input lo `bab` or `aba` rendu length 3 valid longest answers; Second lo `bb` even case; Output parity paths correct ga work chestunnayi ani show chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -114,8 +114,8 @@
     },
     {
       "title": "Remove the driver and retain the center-expansion method",
-      "question": "The temporary examples have verified both palindrome shapes and can be deleted. How would you explain the n centers, two parity checks, outward matching, longest-range tracking, O(n²) worst-case time, and O(1) additional working memory in a concise interview response?",
-      "why_te": "Temporary driver remove chestunnam. Final answer every center, odd/even parity, outward expansion, longest range update, O(n²) time, O(1) working space ani explain cheyyali.",
+      "question": "The temporary examples have verified both palindrome shapes and can be deleted; How would you explain the n centers, two parity checks, outward matching, longest-range tracking, O(n²) worst-case time, and O(1) additional working memory in a concise interview response.",
+      "why_te": "Temporary driver remove chestunnam; Final answer every center, odd/even parity, outward expansion, longest range update, O(n²) time, O(1) working space ani explain cheyyali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

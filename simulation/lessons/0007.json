@@ -10,9 +10,9 @@
   "steps": [
     {
       "title": "Open the current AeroTopo workspace",
-      "question": "It ties the IDE choice directly to the codebase being discussed rather than giving a generic tooling answer. When an interviewer asks about your current project, the answer should connect the IDE to that project's real setup. Why does identifying AeroTopo inside IntelliJ make the response project-specific?",
+      "question": "It ties the IDE choice directly to the codebase being discussed rather than giving a generic tooling answer; When an interviewer asks about your current project, the answer should connect the IDE to that project's real setup; Why does identifying AeroTopo inside IntelliJ make the response project-specific.",
       "why": "It ties the IDE choice directly to the codebase being discussed rather than giving a generic tooling answer.",
-      "why_te": "AeroTopo project ni IntelliJ lo open chesi start cheddam; Open the current AeroTopo workspace lo current visible evidence ni next conclusion tho connect chestam. Current project gurinchi answer istunnappudu AeroTopo ni IntelliJ lo direct ga identify cheyyadam valla response generic kaakunda project-specific ga untundi.",
+      "why_te": "AeroTopo project ni IntelliJ lo open chesi start cheddam; Open the current AeroTopo workspace lo current visible evidence ni next conclusion tho connect chestam; Current project gurinchi answer istunnappudu AeroTopo ni IntelliJ lo direct ga identify cheyyadam valla response generic kaakunda project-specific ga untundi.",
       "software": "intellij",
       "required_capability": "open-project",
       "feature_available": true,
@@ -35,9 +35,9 @@
     },
     {
       "title": "Inspect the current project's Maven model",
-      "question": "The Maven descriptor shows that IntelliJ is working with a project-owned build definition rather than replacing it with IDE-only settings. A current-project IDE should expose the build configuration the team actually shares. Why is `pom.xml` important evidence when explaining how IntelliJ fits into AeroTopo?",
+      "question": "The Maven descriptor shows that IntelliJ is working with a project-owned build definition rather than replacing it with IDE-only settings; A current-project IDE should expose the build configuration the team actually shares; Why is `pom.xml` important evidence when explaining how IntelliJ fits into AeroTopo.",
       "why": "The Maven descriptor shows that IntelliJ is working with a project-owned build definition rather than replacing it with IDE-only settings.",
-      "why_te": "pom.xml ni open chesi relevant code ni chuddam; pom.xml lo Inspect the current project's Maven model baseline ni locate chestam. `pom.xml` project-owned build definition. IntelliJ danini use chestundi kani replace cheyyadu.",
+      "why_te": "pom.xml ni open chesi relevant code ni chuddam; pom.xml lo Inspect the current project's Maven model baseline ni locate chestam; `pom.xml` project-owned build definition; IntelliJ danini use chestundi kani replace cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -57,9 +57,9 @@
     },
     {
       "title": "Inspect the current application class",
-      "question": "Developers constantly move between configuration and source, so quick project navigation is part of the daily IDE workflow. Why should an IDE used on a Spring Boot project make it easy to move from build configuration to the Java application entry point?",
+      "question": "Developers constantly move between configuration and source, so quick project navigation is part of the daily IDE workflow; Why should an IDE used on a Spring Boot project make it easy to move from build configuration to the Java application entry point.",
       "why": "Developers constantly move between configuration and source, so quick project navigation is part of the daily IDE workflow.",
-      "why_te": "AeroTopoApplication.java ni open chesi relevant code ni chuddam; AeroTopoApplication.java lo Inspect the current application class baseline ni locate chestam. Spring Boot project lo configuration nundi Java source ki frequent ga move avvali. IntelliJ quick navigation daily workflow ni fast ga chestundi.",
+      "why_te": "AeroTopoApplication.java ni open chesi relevant code ni chuddam; AeroTopoApplication.java lo Inspect the current application class baseline ni locate chestam; Spring Boot project lo configuration nundi Java source ki frequent ga move avvali; IntelliJ quick navigation daily workflow ni fast ga chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -79,7 +79,7 @@
     },
     {
       "title": "Inspect resolved libraries",
-      "question": "It gives immediate visibility into the JDK and Maven libraries available to the current project for navigation and troubleshooting. The current project uses framework and test dependencies beyond the JDK. Why is IntelliJ's resolved External Libraries view useful during normal AeroTopo development?",
+      "question": "It gives immediate visibility into the JDK and Maven libraries available to the current project for navigation and troubleshooting; The current project uses framework and test dependencies beyond the JDK; Why is IntelliJ's resolved External Libraries view useful during normal AeroTopo development.",
       "why": "It gives immediate visibility into the JDK and Maven libraries available to the current project for navigation and troubleshooting.",
       "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi; Project ki ye libraries available unnayo ikkada easy ga check cheyyachu; Dependency missing ayina leda wrong; IDE used for the current AeroTopo project lo Step 4 Inspect resolved libraries kosam visible code evidence ni use chestam.",
       "software": "intellij",
@@ -98,7 +98,7 @@
     },
     {
       "title": "Inspect Git integration for the project",
-      "question": "Source-control context makes changes, branches, diffs, and history available alongside the files being edited. A current project is developed collaboratively rather than as isolated files. Why is Git visibility inside IntelliJ part of the IDE workflow you use on AeroTopo?",
+      "question": "Source-control context makes changes, branches, diffs, and history available alongside the files being edited; A current project is developed collaboratively rather than as isolated files; Why is Git visibility inside IntelliJ part of the IDE workflow you use on AeroTopo.",
       "why": "Source-control context makes changes, branches, diffs, and history available alongside the files being edited.",
       "why_te": "Git window lo changed files and current branch kanipistayi; Code lo em marchamo commit mundu ikkada check cheyyachu; Wrong change unte diff chusi easy ga identify cheyyachu; Inspect Git integration for the project lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Inspect Spring context for AeroTopo",
-      "question": "Spring-aware tooling helps connect ordinary Java classes to the framework relationships that exist around them at runtime. Why does the IDE choice matter more on a Spring Boot project once the application has beans, mappings, and framework-managed behavior? The Inspect Spring context for AeroTopo action exposes the relevant IntelliJ state directly, so the question stays tied to observable project behavior rather than generic interview wording.",
+      "question": "Spring-aware tooling helps connect ordinary Java classes to the framework relationships that exist around them at runtime; Why does the IDE choice matter more on a Spring Boot project once the application has beans, mappings, and framework-managed behavior; The Inspect Spring context for AeroTopo action exposes the relevant IntelliJ state directly, so the question stays tied to observable project behavior rather than generic interview wording.",
       "why": "Spring-aware tooling helps connect ordinary Java classes to the framework relationships that exist around them at runtime.",
       "why_te": "Spring view lo project beans kanipistayi; Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu; Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful; Inspect Spring context for AeroTopo lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -186,9 +186,9 @@
     },
     {
       "title": "Use the current project's terminal",
-      "question": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE. A project-specific IDE setup should still expose the real CLI environment. What does using IntelliJ's terminal add to the AeroTopo workflow?",
+      "question": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE; A project-specific IDE setup should still expose the real CLI environment; What does using IntelliJ's terminal add to the AeroTopo workflow.",
       "why": "It lets the developer run the same Java, Maven, Git, and diagnostic commands that matter outside the graphical IDE.",
-      "why_te": "IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu; Use the current project's terminal lo current visible evidence ni next conclusion tho connect chestam. Commands same project folder nundi run avutayi kabatti current project context clear ga untundi.",
+      "why_te": "IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu; Use the current project's terminal lo current visible evidence ni next conclusion tho connect chestam; Commands same project folder nundi run avutayi kabatti current project context clear ga untundi.",
       "software": "intellij",
       "required_capability": "open-integrated-terminal",
       "feature_available": true,
@@ -205,9 +205,9 @@
     },
     {
       "title": "Prove the current-project setup",
-      "question": "A successful Maven test run confirms that the current IntelliJ workspace and the repository build agree on the project environment. How do you demonstrate that IntelliJ is not just opening AeroTopo visually but is correctly connected to the project's actual build and tests?",
+      "question": "A successful Maven test run confirms that the current IntelliJ workspace and the repository build agree on the project environment; How do you demonstrate that IntelliJ is not just opening AeroTopo visually but is correctly connected to the project's actual build and tests.",
       "why": "A successful Maven test run confirms that the current IntelliJ workspace and the repository build agree on the project environment.",
-      "why_te": "Maven goal run chesi build result ni chudandi; Prove the current-project setup lo current visible evidence ni next conclusion tho connect chestam. Maven test success ayithe current IntelliJ workspace mariyu repository build project environment gurinchi same state lo unnayani confirm avutundi.",
+      "why_te": "Maven goal run chesi build result ni chudandi; Prove the current-project setup lo current visible evidence ni next conclusion tho connect chestam; Maven test success ayithe current IntelliJ workspace mariyu repository build project environment gurinchi same state lo unnayani confirm avutundi.",
       "software": "intellij",
       "required_capability": "run-maven-goal",
       "feature_available": true,

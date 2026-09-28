@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Static methods written in the AeroTopo project",
-      "question": "The AeroTopo code already provides direct evidence for \"Static methods written in the AeroTopo project\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects; in Open the project evidence Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances; in Open the project evidence Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step.",
-      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi; Input arguments meeda work chestayi and instance dependencies levu; Stateful service behavior matrame instance methods ga untundi; SurveyAlgorithms.java lo Open the project evidence Static methods written in the AeroTopo project baseline ni locate chestam.",
+      "question": "Have you written any static methods; Open src/main/java/com/aerotopo/learning/SurveyAlgorithms.java and use highlighted lines 6, 7, 8, 9, 14, 19, 24, 25, 30, 37, 42, 56, 65, 70, 74, 83 to establish the real project baseline for Static methods written in the AeroTopo project; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi; SurveyAlgorithms.java open chesi Static methods written in the AeroTopo project ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -46,8 +46,8 @@
     },
     {
       "title": "Trace binding and ownership — Static methods written in the AeroTopo project",
-      "question": "For \"Static methods written in the AeroTopo project\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior; in Trace binding and ownership Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step. Why does this distinction matter when code is accessed through different references or subclasses; in Trace binding and ownership Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step.",
-      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi; Input arguments meeda work chestayi and instance dependencies levu; Stateful service behavior matrame instance methods ga untundi; SurveyAlgorithms.java lo Trace binding and ownership Static methods written in the AeroTopo project baseline ni locate chestam.",
+      "question": "The baseline for Static methods written in the AeroTopo project is already visible in src/main/java/com/aerotopo/learning/SurveyAlgorithms.java; now trace the exact syntax and execution, access, or resolution rule in lines 6, 7, 8, 9, 14, 19, 24, 25, 30, 37, 42, 56, 65, 70, 74, 83; What happens first, what is inherited, selected, initialized, or restricted, and which part is determined by the compiler versus runtime; Explain this mechanism rather than repeating the file overview.",
+      "why_te": "java open chesi Static methods written in the AeroTopo project ki real project baseline ni locate chestam; Ippudu SurveyAlgorithms.java lo exact keyword, signature, order leda access rule ni trace chestam; First step baseline matrame establish chesindi; ee step mechanism enduku ila work avutundo source evidence tho prove chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "Evaluate the design choice — Static methods written in the AeroTopo project",
-      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts; in Evaluate the design choice Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step. Using the highlighted AeroTopo implementation for \"Static methods written in the AeroTopo project\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable; in Evaluate the design choice Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step.",
-      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi; Input arguments meeda work chestayi and instance dependencies levu; Stateful service behavior matrame instance methods ga untundi; SurveyAlgorithms.java lo Evaluate the design choice Static methods written in the AeroTopo project baseline ni locate chestam.",
+      "question": "Move from syntax to consequence for Static methods written in the AeroTopo project; Using src/main/java/com/aerotopo/learning/SurveyAlgorithms.java, trace how the highlighted design affects a caller, subclass, object, build step, or method invocation; What invariant or contract does the code preserve, what misuse would break that guarantee, and why does this consequence matter for maintainable AeroTopo code beyond the rule identified in the previous step.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Ee step Static methods written in the AeroTopo project syntax nundi practical consequence ki move avutundi; Caller leda subclass meeda effect enti, invariant ela preserve avutundi, wrong design valla em break avvachu ane connection ni project context lo trace chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -118,8 +118,8 @@
     },
     {
       "title": "State the interview rule — Static methods written in the AeroTopo project",
-      "question": "Now answer \"Static methods written in the AeroTopo project\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods; in State the interview rule Static methods written in the AeroTopo project, use SurveyAlgorithms.java to locate the concrete Static methods written in the AeroTopo project evidence for this specific step.",
-      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi; Input arguments meeda work chestayi and instance dependencies levu; Stateful service behavior matrame instance methods ga untundi; SurveyAlgorithms.java lo State the interview rule Static methods written in the AeroTopo project baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyAlgorithms.java after the earlier analysis and use the accumulated evidence to answer \"Have you written any static methods\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "State the interview rule Static methods written in the AeroTopo project context lo SurveyAlgorithms.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyAlgorithms.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

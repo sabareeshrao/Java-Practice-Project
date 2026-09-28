@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — final, effectively final, and immutable values",
-      "question": "Before isolating \"final, effectively final, and immutable values\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion; in Open the AeroTopo baseline final, effectively final, and immutable values, use SurveyProducts.java to locate the concrete final, effectively final, and immutable values evidence for this specific step.",
-      "why_te": "`final` reference reassignment ni stop chestundi; Effectively final local variable reassigned kaadu; Immutable object state itself change kaadu; three concepts separate; SurveyProducts.java lo Open the AeroTopo baseline final, effectively final, and immutable values baseline ni locate chestam.",
+      "question": "What is the difference between final, Effectively Final and Immutable; Open src/main/java/com/aerotopo/learning/SurveyProducts.java and use highlighted lines 14, 15, 17, 28, 32 to establish the real project baseline for final, effectively final, and immutable values; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "`final` reference reassignment ni stop chestundi; SurveyProducts.java open chesi final, effectively final, and immutable values ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Create the focused language experiment — final, effectively final, and immutable values",
-      "question": "The temporary class for \"final, effectively final, and immutable values\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path; in Create the focused language experiment final, effectively final, and immutable values, use temporary FinalKindsDemo.java to isolate and predict this edge case without changing production code. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here; in Create the focused language experiment final, effectively final, and immutable values, use temporary FinalKindsDemo.java to isolate and predict this edge case without changing production code.",
-      "why_te": "`final` reference reassignment ni stop chestundi; Effectively final local variable reassigned kaadu; Immutable object state itself change kaadu; three concepts separate; temporary FinalKindsDemo.java demo tho edge case ni predict chestam.",
+      "question": "This step creates temporary labs/java/FinalKindsDemo.java to isolate one edge case of final, effectively final, and immutable values without changing production AeroTopo code; Before execution, inspect highlighted lines 3, 4, 5, 6, 7, 8 and predict the compiler or runtime result; Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome.",
+      "why_te": "java open chesi final, effectively final, and immutable values ki real project baseline ni locate chestam; Temporary FinalKindsDemo.java create chesi ee rule edge case ni production code nundi separate ga isolate chestam; Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -63,8 +63,8 @@
     },
     {
       "title": "Run the focused language experiment — final, effectively final, and immutable values",
-      "question": "The temporary program for \"final, effectively final, and immutable values\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced; in Run the focused language experiment final, effectively final, and immutable values, compare the terminal result with the source in javac -d target/lesson96-demo labs/java/FinalKindsDemo.java; java -cp so this step verifies rather than repeats the rule. Which common misunderstanding about static or final behavior does this example remove; in Run the focused language experiment final, effectively final, and immutable values, compare the terminal result with the source in javac -d target/lesson96-demo labs/java/FinalKindsDemo.java; java -cp so this step verifies rather than repeats the rule.",
-      "why_te": "`final` reference reassignment ni stop chestundi; Effectively final local variable reassigned kaadu; Immutable object state itself change kaadu; three concepts separate; Run the focused language experiment final, effectively final, and immutable values terminal result tho behavior ni verify chestam.",
+      "question": "The previous step formed a prediction for final, effectively final, and immutable values; now verify it by running the shown command; The result begins with \"[T1]:ORTHO\"; Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruvata \"[T1]:ORTHO\" result kanipistundi; Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption badulu verified result meeda conclusion build chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Remove the temporary experiment — final, effectively final, and immutable values",
-      "question": "The focused example for \"final, effectively final, and immutable values\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence; in Remove the temporary experiment final, effectively final, and immutable values, remove temporary FinalKindsDemo.java after the behavior is proved so the cumulative project state stays clean. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely; in Remove the temporary experiment final, effectively final, and immutable values, remove temporary FinalKindsDemo.java after the behavior is proved so the cumulative project state stays clean.",
-      "why_te": "[no highlight] `final` reference reassignment ni stop chestundi; Effectively final local variable reassigned kaadu; Immutable object state itself change kaadu; three concepts separate; temporary FinalKindsDemo.java remove chesi clean project state ni maintain chestam.",
+      "question": "The temporary source labs/java/FinalKindsDemo.java has finished its job in the final, effectively final, and immutable values experiment; Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state.",
+      "why_te": "[no highlight] Temporary FinalKindsDemo.java experiment complete ayyindi kabatti remove chestam; Verified final, effectively final, and immutable values behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "Return to the production example — final, effectively final, and immutable values",
-      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"final, effectively final, and immutable values\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here; in Return to the production example final, effectively final, and immutable values, use SurveyProducts.java to locate the concrete final, effectively final, and immutable values evidence for this specific step.",
-      "why_te": "`final` reference reassignment ni stop chestundi; Effectively final local variable reassigned kaadu; Immutable object state itself change kaadu; three concepts separate; SurveyProducts.java lo Return to the production example final, effectively final, and immutable values baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/SurveyProducts.java after the earlier analysis and use the accumulated evidence to answer \"What is the difference between final, Effectively Final and Immutable\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "Return to the production example final, effectively final, and immutable values context lo SurveyProducts.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; SurveyProducts.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation ni kalipi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

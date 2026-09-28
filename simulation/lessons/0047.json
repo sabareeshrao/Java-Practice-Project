@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Inspect the project's first StringBuilder use",
-      "question": "AeroTopo's `reverse` method creates a builder, performs one reverse operation, converts to String, and returns immediately. The builder is local to the call and never stored in shared state. What concurrency requirement would `StringBuffer` satisfy here that this method does not actually have?",
-      "why_te": "reverse method builder local ga create avutundi and method lo ne finish avutundi. Multiple threads same builder object share cheyyavu. StringBuffer synchronization requirement ikkada ledu.",
+      "question": "AeroTopo's `reverse` method creates a builder, performs one reverse operation, converts to String, and returns immediately; The builder is local to the call and never stored in shared state; What concurrency requirement would `StringBuffer` satisfy here that this method does not actually have.",
+      "why_te": "reverse method builder local ga create avutundi and method lo ne finish avutundi; Multiple threads same builder object share cheyyavu; StringBuffer synchronization requirement ikkada ledu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -31,8 +31,8 @@
     },
     {
       "title": "Inspect the second project StringBuilder use",
-      "question": "`expandRuns` owns another local builder for one decoding operation and returns only the completed String. Because every invocation has its own builder instance, why does thread confinement make `StringBuilder` sufficient even if many application requests invoke this method concurrently on different threads?",
-      "why_te": "Each expandRuns call own StringBuilder create chestundi. Many requests parallel ga call chesina builders separate objects. Shared mutable buffer ledu kabatti internal synchronization avasaram ledu.",
+      "question": "`expandRuns` owns another local builder for one decoding operation and returns only the completed String; Because every invocation has its own builder instance, why does thread confinement make `StringBuilder` sufficient even if many application requests invoke this method concurrently on different threads.",
+      "why_te": "Each expandRuns call own StringBuilder create chestundi; Many requests parallel ga call chesina builders separate objects; Shared mutable buffer ledu kabatti internal synchronization avasaram ledu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -55,8 +55,8 @@
     },
     {
       "title": "Search the real source tree for StringBuffer usage",
-      "question": "A project-experience answer should reflect actual code, so the IntelliJ terminal searches `src` for `StringBuffer`. The search reports no matches. How should that evidence shape the answer so you explain why it is absent without falsely claiming that AeroTopo currently uses it somewhere else?",
-      "why_te": "Source search lo StringBuffer match ledu. Kabatti project lo use chestunnam ani claim cheyyakudadhu. Existing local builder design ki synchronization need ledu ani evidence-based answer ivvali.",
+      "question": "A project-experience answer should reflect actual code, so the IntelliJ terminal searches `src` for `StringBuffer`; The search reports no matches; How should that evidence shape the answer so you explain why it is absent without falsely claiming that AeroTopo currently uses it somewhere else.",
+      "why_te": "Source search lo StringBuffer match ledu; Kabatti project lo use chestunnam ani claim cheyyakudadhu; Existing local builder design ki synchronization need ledu ani evidence-based answer ivvali.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -77,8 +77,8 @@
     },
     {
       "title": "Search for the actual StringBuilder usage instead",
-      "question": "The companion search finds the project's builder calls in `SurveyAlgorithms`, giving positive evidence for the chosen mutable-text class rather than relying only on the absence of StringBuffer. Why is comparing both searches stronger than making a generic performance claim with no connection to the codebase?",
-      "why_te": "StringBuilder actual usages search lo kanipistayi. Positive usage plus StringBuffer absence rendu kalisi project choice ni prove chestayi. Generic claim kante code evidence stronger.",
+      "question": "The companion search finds the project's builder calls in `SurveyAlgorithms`, giving positive evidence for the chosen mutable-text class rather than relying only on the absence of StringBuffer; Why is comparing both searches stronger than making a generic performance claim with no connection to the codebase.",
+      "why_te": "StringBuilder actual usages search lo kanipistayi; Positive usage plus StringBuffer absence rendu kalisi project choice ni prove chestayi; Generic claim kante code evidence stronger.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Identify when the answer would change",
-      "question": "If future code introduced one mutable character buffer deliberately shared among multiple threads, synchronization would become a real requirement and `StringBuffer` could be considered. Why should that decision be driven by shared ownership and concurrency design rather than by a blanket rule that one mutable-string class is always better?",
-      "why_te": "Future lo same mutable buffer multiple threads share chesthe synchronization requirement real avvachu. Appudu StringBuffer consider cheyyachu. Decision actual ownership/concurrency batti undali, blanket rule kaadu.",
+      "question": "If future code introduced one mutable character buffer deliberately shared among multiple threads, synchronization would become a real requirement and `StringBuffer` could be considered; Why should that decision be driven by shared ownership and concurrency design rather than by a blanket rule that one mutable-string class is always better.",
+      "why_te": "Future lo same mutable buffer multiple threads share chesthe synchronization requirement real avvachu; Appudu StringBuffer consider cheyyachu; Decision actual ownership/concurrency batti undali, blanket rule kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -121,8 +121,8 @@
     },
     {
       "title": "State the project-specific interview answer",
-      "question": "The repository shows two method-local StringBuilder uses and zero StringBuffer uses in source. Combining those facts with the synchronization difference, how would you answer why AeroTopo does not use StringBuffer while still demonstrating that you know the situation in which it could be appropriate?",
-      "why_te": "Final answer project lo local StringBuilder enough ani cheppali. StringBuffer current usage ledu. Shared mutable text synchronization genuinely required ayithe StringBuffer appropriate avvachu ani add cheyyali.",
+      "question": "The repository shows two method-local StringBuilder uses and zero StringBuffer uses in source; Combining those facts with the synchronization difference, how would you answer why AeroTopo does not use StringBuffer while still demonstrating that you know the situation in which it could be appropriate.",
+      "why_te": "Final answer project lo local StringBuilder enough ani cheppali; StringBuffer current usage ledu; Shared mutable text synchronization genuinely required ayithe StringBuffer appropriate avvachu ani add cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Create a small mutable password-memory demonstration",
-      "question": "The project does not contain a real password buffer, so a temporary lab is safer than inventing production authentication code. The demo builds a password in a `char[]`, copies it once into a String only for contrast, then overwrites every array element. What security-relevant capability does the mutable array provide that String cannot provide in place?",
-      "why_te": "Project lo password buffer ledu kabatti temporary demo use chestunnam. `char[]` mutable kabatti use ayyaka characters overwrite cheyyachu. String immutable kabatti same object content ni direct ga clear cheyyalem.",
+      "question": "The project does not contain a real password buffer, so a temporary lab is safer than inventing production authentication code; The demo builds a password in a `char[]`, copies it once into a String only for contrast, then overwrites every array element; What security-relevant capability does the mutable array provide that String cannot provide in place.",
+      "why_te": "Project lo password buffer ledu kabatti temporary demo use chestunnam; `char[]` mutable kabatti use ayyaka characters overwrite cheyyachu; String immutable kabatti same object content ni direct ga clear cheyyalem.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -38,8 +38,8 @@
     },
     {
       "title": "Inspect the explicit char-array wipe",
-      "question": "`Arrays. fill(password, '\\0')` replaces every element of the mutable array with the null character after the sensitive value is no longer needed. Why does this give application code more control over the password's intended lifetime than an immutable String object whose character contents cannot be changed after construction?",
-      "why_te": "`Arrays. fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.",
+      "question": "`Arrays; fill(password, '\\0')` replaces every element of the mutable array with the null character after the sensitive value is no longer needed; Why does this give application code more control over the password's intended lifetime than an immutable String object whose character contents cannot be changed after construction.",
+      "why_te": "`Arrays; fill` original char array contents ni overwrite chestundi; Application sensitive value use ayyaka explicit ga clear cheyyagaladu; Immutable String ki alanti in-place wipe operation ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -66,8 +66,8 @@
     },
     {
       "title": "Run the mutable-versus-immutable comparison",
-      "question": "The demo prints whether the first char-array element was cleared and then prints the String copy created before the wipe. When the output is `true` followed by `secret`, what does that show about clearing the original mutable array and about the independent immutable copy that still exists?",
-      "why_te": "Output first `true` ante char array clear ayyindi. Taruvata String copy still `secret` print chestundi. Oka sari String copy create cheste array wipe aa separate immutable object ni erase cheyyadu.",
+      "question": "The demo prints whether the first char-array element was cleared and then prints the String copy created before the wipe; When the output is `true` followed by `secret`, what does that show about clearing the original mutable array and about the independent immutable copy that still exists.",
+      "why_te": "Output first `true` ante char array clear ayyindi; Taruvata String copy still `secret` print chestundi; Oka sari String copy create cheste array wipe aa separate immutable object ni erase cheyyadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -88,8 +88,8 @@
     },
     {
       "title": "Identify the limitation of converting passwords back to String",
-      "question": "The line `new String(password)` exists only to demonstrate the difference, and real security-sensitive code should avoid such unnecessary conversion because it creates another object whose contents cannot be explicitly overwritten. Why does choosing `char[]` help only when the surrounding code also avoids making extra String copies, logs, or interned values?",
-      "why_te": "`char[]` use chesina taruvata String copies create chesthe benefit reduce avutundi. Sensitive data logs, intern, unnecessary conversions avoid cheyyali. Mutable array control surrounding code discipline tho kalisi useful.",
+      "question": "The line `new String(password)` exists only to demonstrate the difference, and real security-sensitive code should avoid such unnecessary conversion because it creates another object whose contents cannot be explicitly overwritten; Why does choosing `char[]` help only when the surrounding code also avoids making extra String copies, logs, or interned values.",
+      "why_te": "`char[]` use chesina taruvata String copies create chesthe benefit reduce avutundi; Sensitive data logs, intern, unnecessary conversions avoid cheyyali; Mutable array control surrounding code discipline tho kalisi useful.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -116,8 +116,8 @@
     },
     {
       "title": "Remove the temporary password example",
-      "question": "The project has no authentication feature that needs this demonstration permanently, and leaving literal credentials in source would itself be poor practice. After deleting the lab, what balanced answer should you give that explains explicit wiping as an advantage without claiming that `char[]` guarantees complete removal of every runtime copy from memory?",
-      "why_te": "[no highlight] Temporary password demo source lo retain cheyyakudadhu. Final answer char array explicit wipe control istundi ani cheppali, kani JVM/library internal copies anni guaranteed ga erase avutayi ani overclaim cheyyakudadhu.",
+      "question": "The project has no authentication feature that needs this demonstration permanently, and leaving literal credentials in source would itself be poor practice; After deleting the lab, what balanced answer should you give that explains explicit wiping as an advantage without claiming that `char[]` guarantees complete removal of every runtime copy from memory.",
+      "why_te": "[no highlight] Temporary password demo source lo retain cheyyakudadhu; Final answer char array explicit wipe control istundi ani cheppali, kani JVM/library internal copies anni guaranteed ga erase avutayi ani overclaim cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

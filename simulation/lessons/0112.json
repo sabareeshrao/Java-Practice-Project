@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Accessing non-static members inside a static method",
-      "question": "Before testing \"Accessing non-static members inside a static method\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation; in Open the AeroTopo baseline Accessing non-static members inside a static method, use LanguageLab.java to locate the concrete Accessing non-static members inside a static method evidence for this specific step.",
-      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali; Direct `accepted` access possible kaadu because implicit `this` ledu; LanguageLab.java lo Open the AeroTopo baseline Accessing non-static members inside a static method baseline ni locate chestam.",
+      "question": "Is it possible to access Non-Static Members from inside a Static Method; Open src/main/java/com/aerotopo/learning/LanguageLab.java and use highlighted lines 9, 10, 28, 33 to establish the real project baseline for Accessing non-static members inside a static method; Which class, method, field, constructor, interface, or dependency is relevant here, what concrete fact can you observe before drawing a language-level conclusion, and why is that fact the correct starting point for the next step.",
+      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali; LanguageLab.java open chesi Accessing non-static members inside a static method ki real project baseline ni locate chestam; Ee step relevant class/member ekkada undo identify chestundi; detailed Java rule ni next step lo separate ga analyze chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused static experiment — Accessing non-static members inside a static method",
-      "question": "The temporary class for \"Accessing non-static members inside a static method\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution; in Create the focused static experiment Accessing non-static members inside a static method, use temporary StaticWithInstanceDemo.java to isolate and predict this edge case without changing production code. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints; in Create the focused static experiment Accessing non-static members inside a static method, use temporary StaticWithInstanceDemo.java to isolate and predict this edge case without changing production code.",
-      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali; Direct `accepted` access possible kaadu because implicit `this` ledu; temporary StaticWithInstanceDemo.java demo tho edge case ni predict chestam.",
+      "question": "This step creates temporary labs/java/StaticWithInstanceDemo.java to isolate one edge case of Accessing non-static members inside a static method without changing production AeroTopo code; Before execution, inspect highlighted lines 1, 2, 3, 4, 5 and predict the compiler or runtime result; Which exact Java rule controls that prediction, what evidence in this file supports it, and what different declaration would change the outcome.",
+      "why_te": "java open chesi Accessing non-static members inside a static method ki real project baseline ni locate chestam; Temporary StaticWithInstanceDemo.java create chesi ee rule edge case ni production code nundi separate ga isolate chestam; Ippudu run cheyyakunda source chusi expected compiler leda runtime result predict cheyyadam matrame current step purpose.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Run the focused static experiment — Accessing non-static members inside a static method",
-      "question": "The program for \"Accessing non-static members inside a static method\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object; in Run the focused static experiment Accessing non-static members inside a static method, compare the terminal result with the source in javac -d target/lesson112-demo labs/java/StaticWithInstanceDemo.java; java -cp so this step verifies rather than repeats the rule. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct; in Run the focused static experiment Accessing non-static members inside a static method, compare the terminal result with the source in javac -d target/lesson112-demo labs/java/StaticWithInstanceDemo.java; java -cp so this step verifies rather than repeats the rule.",
-      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali; Direct `accepted` access possible kaadu because implicit `this` ledu; Run the focused static experiment Accessing non-static members inside a static method terminal result tho behavior ni verify chestam.",
+      "question": "The previous step formed a prediction for Accessing non-static members inside a static method; now verify it by running the shown command; The result begins with \"3\"; Which source declaration explains that result, what rule has now been proved by execution rather than assumption, and which nearby Java feature would look similar but follow a different selection or initialization rule.",
+      "why_te": "Ee step relevant class/member ekkada undo identify chestundi; Terminal run taruvata \"3\" result kanipistundi; Ee output source prediction ni actual behavior tho compare cheyyadaniki evidence istundi; ippudu assumption badulu verified result meeda conclusion build chestam.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -83,8 +83,8 @@
     },
     {
       "title": "Remove the temporary static experiment — Accessing non-static members inside a static method",
-      "question": "The focused source for \"Accessing non-static members inside a static method\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality; in Remove the temporary static experiment Accessing non-static members inside a static method, remove temporary StaticWithInstanceDemo.java after the behavior is proved so the cumulative project state stays clean. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters; in Remove the temporary static experiment Accessing non-static members inside a static method, remove temporary StaticWithInstanceDemo.java after the behavior is proved so the cumulative project state stays clean.",
-      "why_te": "[no highlight] Static context nundi instance member access possible, kani explicit object reference through cheyyali; Direct `accepted` access possible kaadu because implicit `this` ledu; temporary StaticWithInstanceDemo.java remove chesi clean project state ni maintain chestam.",
+      "question": "The temporary source labs/java/StaticWithInstanceDemo.java has finished its job in the Accessing non-static members inside a static method experiment; Why can this exact file be removed now without losing the verified language behavior, which permanent AeroTopo source remains as the real project reference, and what continuity problem would appear if lesson-only demo files accumulated before later lessons replay the project state.",
+      "why_te": "[no highlight] Temporary StaticWithInstanceDemo.java experiment complete ayyindi kabatti remove chestam; Verified Accessing non-static members inside a static method behavior change avvadu; cleanup valla lesson-only source permanent project state lo remain kakunda later lessons same clean AeroTopo baseline nundi continue avutayi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -101,8 +101,8 @@
     },
     {
       "title": "Return to the real AeroTopo code — Accessing non-static members inside a static method",
-      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Accessing non-static members inside a static method\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead; in Return to the real AeroTopo code Accessing non-static members inside a static method, use LanguageLab.java to locate the concrete Accessing non-static members inside a static method evidence for this specific step.",
-      "why_te": "Static context nundi instance member access possible, kani explicit object reference through cheyyali; Direct `accepted` access possible kaadu because implicit `this` ledu; LanguageLab.java lo Return to the real AeroTopo code Accessing non-static members inside a static method baseline ni locate chestam.",
+      "question": "Return to src/main/java/com/aerotopo/learning/LanguageLab.java after the earlier analysis and use the accumulated evidence to answer \"Is it possible to access Non-Static Members from inside a Static Method\" as an interview response; which project line is the concrete example, what Java rule does it support, what limitation or design consequence must be included, and how does the final answer differ from the initial baseline observation.",
+      "why_te": "Return to the real AeroTopo code Accessing non-static members inside a static method context lo LanguageLab.java evidence ni specific ga use chestam; detailed Java rule ni next step lo separate ga analyze chestam; LanguageLab.java ki return ayyi earlier evidence ni interview answer ga connect chestam; Ippudu project example, Java rule, important limitation.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

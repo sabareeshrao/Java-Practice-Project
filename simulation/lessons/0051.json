@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the manual substring-search implementation",
-      "question": "AeroTopo's `SurveyAlgorithms. indexOf` intentionally searches without calling String's built-in substring-checking methods. It tries every legal start position and compares characters one by one. Inspect the method and identify the outer candidate-start loop, inner character comparison, successful return path, and final not-found result.",
-      "why_te": "SurveyAlgorithms. indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.",
+      "question": "AeroTopo's `SurveyAlgorithms; indexOf` intentionally searches without calling String's built-in substring-checking methods; It tries every legal start position and compares characters one by one; Inspect the method and identify the outer candidate-start loop, inner character comparison, successful return path, and final not-found result.",
+      "why_te": "SurveyAlgorithms; indexOf manual substring search ni implement chestundi; Outer loop possible starts check chestundi; inner loop characters compare chestundi; Match complete ayithe index return, lekapothe -1.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -36,8 +36,8 @@
     },
     {
       "title": "Inspect the mismatch shortcut",
-      "question": "The inner comparison uses a labeled `continue outer` when one character differs, immediately abandoning the current candidate start. Why does this avoid unnecessary comparisons after a known mismatch while still ensuring that the next possible starting position in the main String is tested correctly?",
-      "why_te": "Mismatch vachina current start already fail ayyindi. `continue outer` remaining inner comparisons skip chesi next start position ki velthundi. Search coverage miss avvadu.",
+      "question": "The inner comparison uses a labeled `continue outer` when one character differs, immediately abandoning the current candidate start; Why does this avoid unnecessary comparisons after a known mismatch while still ensuring that the next possible starting position in the main String is tested correctly.",
+      "why_te": "Mismatch vachina current start already fail ayyindi; `continue outer` remaining inner comparisons skip chesi next start position ki velthundi; Search coverage miss avvadu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Create a caller with a visible middle match",
-      "question": "The temporary driver searches for `topo` inside `aerotopo-service`, where the match begins after several earlier characters instead of at index zero. What index should the real method return, and why does this input demonstrate that the outer loop advances through candidate positions rather than checking only a prefix?",
-      "why_te": "`aerotopo-service` lo `topo` index 4 daggara start avutundi. Demo outer loop multiple candidate positions cross chesi correct middle match find chestunda ani verify chestundi.",
+      "question": "The temporary driver searches for `topo` inside `aerotopo-service`, where the match begins after several earlier characters instead of at index zero; What index should the real method return, and why does this input demonstrate that the outer loop advances through candidate positions rather than checking only a prefix.",
+      "why_te": "`aerotopo-service` lo `topo` index 4 daggara start avutundi; Demo outer loop multiple candidate positions cross chesi correct middle match find chestunda ani verify chestundi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -89,8 +89,8 @@
     },
     {
       "title": "Run matching and not-found cases",
-      "question": "The driver checks both a successful middle match and a missing substring. If the program prints `4` and `-1`, what does that establish about the method's success contract and its not-found contract, and how do those results mirror the conventional behavior of String indexing APIs?",
-      "why_te": "First output 4 correct start index ni show chestundi. Second -1 not-found result. Manual method built-in index contract la behave chestundi, kani search logic own loops tho implement ayyindi.",
+      "question": "The driver checks both a successful middle match and a missing substring; If the program prints `4` and `-1`, what does that establish about the method's success contract and its not-found contract, and how do those results mirror the conventional behavior of String indexing APIs.",
+      "why_te": "First output 4 correct start index ni show chestundi; Second -1 not-found result; Manual method built-in index contract la behave chestundi, kani search logic own loops tho implement ayyindi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -111,8 +111,8 @@
     },
     {
       "title": "Remove the driver and summarize the scanning algorithm",
-      "question": "The temporary class has verified both outcomes and can now be deleted without changing the reusable algorithm. How would you describe the candidate-start scan, character-by-character comparison, early mismatch skip, O(nm) worst-case time, and constant extra space when answering this question?",
-      "why_te": "Temporary driver remove chestunnam. Final answer outer start scan, inner char comparison, mismatch early skip, match index return, worst-case O(nm), O(1) extra space ani explain cheyyali.",
+      "question": "The temporary class has verified both outcomes and can now be deleted without changing the reusable algorithm; How would you describe the candidate-start scan, character-by-character comparison, early mismatch skip, O(nm) worst-case time, and constant extra space when answering this question.",
+      "why_te": "Temporary driver remove chestunnam; Final answer outer start scan, inner char comparison, mismatch early skip, match index return, worst-case O(nm), O(1) extra space ani explain cheyyali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,

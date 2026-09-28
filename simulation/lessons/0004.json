@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Inspect the project SDK",
-      "question": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable. A Spring Boot project can behave differently when developers use different JDKs. Why should your preferred development environment begin with an explicit project SDK and language level instead of relying on a machine default?",
+      "question": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable; A Spring Boot project can behave differently when developers use different JDKs; Why should your preferred development environment begin with an explicit project SDK and language level instead of relying on a machine default.",
       "why": "The IDE should match the Java baseline expected by the build and CI so local compilation, language features, and diagnostics remain predictable.",
       "why_te": "Project SDK ikkada kanipistundi; AeroTopo Java 21 use chestunda ani easy ga check cheyyachu; IntelliJ wrong JDK use chesthe compile errors leda wrong language features kanipinchachu; Inspect the project SDK lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Inspect the Maven tool window",
-      "question": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce. A reliable Spring Boot setup needs a build that behaves the same outside the IDE. Why is Maven part of the preferred tool set even when IntelliJ can compile and run Java directly?",
+      "question": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce; A reliable Spring Boot setup needs a build that behaves the same outside the IDE; Why is Maven part of the preferred tool set even when IntelliJ can compile and run Java directly.",
       "why": "Maven defines dependencies, plugins, lifecycle goals, tests, and packaging in a shared build model that local machines and CI can reproduce.",
       "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi; Project ela build avutundo ikkada easy ga check cheyyachu; Same Maven setup local machine and CI lo use avutundi; Inspect the Maven tool window lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Inspect Spring support inside IntelliJ",
-      "question": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand. Spring Boot adds framework concepts such as beans, mappings, configuration, and application lifecycle. Why is Spring-aware tooling useful in the IDE instead of treating the project as only a collection of plain Java files?",
+      "question": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand; Spring Boot adds framework concepts such as beans, mappings, configuration, and application lifecycle; Why is Spring-aware tooling useful in the IDE instead of treating the project as only a collection of plain Java files.",
       "why": "Framework-aware views connect Java source to Spring concepts, which improves navigation and makes a growing application easier to understand.",
       "why_te": "Spring view lo project beans kanipistayi; Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu; Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful; Inspect Spring support inside IntelliJ lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -153,7 +153,7 @@
     },
     {
       "title": "Inspect Git integration",
-      "question": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace. Enterprise Spring Boot development is collaborative, so source history and review matter as much as local editing. Why should Git integration be part of the normal development environment?",
+      "question": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace; Enterprise Spring Boot development is collaborative, so source history and review matter as much as local editing; Why should Git integration be part of the normal development environment.",
       "why": "Git provides traceable changes, branches, diffs, commits, and collaboration workflows while IntelliJ keeps those operations visible inside the project workspace.",
       "why_te": "Git window lo changed files and current branch kanipistayi; Code lo em marchamo commit mundu ikkada check cheyyachu; Wrong change unte diff chusi easy ga identify cheyyachu; Inspect Git integration lo current visible evidence ni next conclusion tho connect chestam.",
       "software": "intellij",
@@ -172,9 +172,9 @@
     },
     {
       "title": "Open the integrated terminal",
-      "question": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools. Even with rich IDE tooling, Java developers still need direct access to Java, Maven, Git, and diagnostic commands. Why is an integrated terminal part of a practical Spring Boot environment?",
+      "question": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools; Even with rich IDE tooling, Java developers still need direct access to Java, Maven, Git, and diagnostic commands; Why is an integrated terminal part of a practical Spring Boot environment.",
       "why": "The terminal keeps command-line verification in the same project context and makes it easy to compare IDE behavior with the real build tools.",
-      "why_te": "IntelliJ terminal ni open chesi commands run cheddam; Open the integrated terminal lo current visible evidence ni next conclusion tho connect chestam. Integrated terminal command-line verification ni same project context lo unchutundi. IDE behavior ni real Java, Maven mariyu Git commands tho compare cheyyadam easy avutundi.",
+      "why_te": "IntelliJ terminal ni open chesi commands run cheddam; Open the integrated terminal lo current visible evidence ni next conclusion tho connect chestam; Integrated terminal command-line verification ni same project context lo unchutundi; IDE behavior ni real Java, Maven mariyu Git commands tho compare cheyyadam easy avutundi.",
       "software": "intellij",
       "required_capability": "open-integrated-terminal",
       "feature_available": true,
@@ -191,9 +191,9 @@
     },
     {
       "title": "Verify the active Java runtime",
-      "question": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference. An IDE can be configured for one JDK while its terminal resolves another from PATH. Why should a developer verify `java --version` as part of environment setup?",
+      "question": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference; An IDE can be configured for one JDK while its terminal resolves another from PATH; Why should a developer verify `java --version` as part of environment setup.",
       "why": "Checking the actual executable catches local version drift before it becomes a confusing compilation or runtime difference.",
-      "why_te": "Ee command run chesi output ni chudandi; Verify the active Java runtime terminal result tho behavior ni verify chestam. Actual executable version ni check chesthe local version drift mundhe dorukutundi. Leka pothe compilation leda runtime difference confusing ga kanipinchachu.",
+      "why_te": "Ee command run chesi output ni chudandi; Verify the active Java runtime terminal result tho behavior ni verify chestam; Actual executable version ni check chesthe local version drift mundhe dorukutundi; Leka pothe compilation leda runtime difference confusing ga kanipinchachu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -214,9 +214,9 @@
     },
     {
       "title": "Verify Maven from the same workspace",
-      "question": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed. A preferred tool set is useful only when the build tool and JDK agree on the execution environment. What does `mvn -version` help you verify before running a Spring Boot build?",
+      "question": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed; A preferred tool set is useful only when the build tool and JDK agree on the execution environment; What does `mvn -version` help you verify before running a Spring Boot build.",
       "why": "Maven reports its own version and the Java runtime it is using, so toolchain mismatches can be detected before a build failure is misdiagnosed.",
-      "why_te": "Ee command run chesi output ni chudandi; Verify Maven from the same workspace terminal result tho behavior ni verify chestam. Maven tana version tho paatu adi use chestunna Java runtime ni report chestundi. Dini valla toolchain mismatch build failure laga confuse avvakunda mundhe identify cheyyachu.",
+      "why_te": "Ee command run chesi output ni chudandi; Verify Maven from the same workspace terminal result tho behavior ni verify chestam; Maven tana version tho paatu adi use chestunna Java runtime ni report chestundi; Dini valla toolchain mismatch build failure laga confuse avvakunda mundhe identify cheyyachu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -237,9 +237,9 @@
     },
     {
       "title": "Prove the environment with tests",
-      "question": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects. The final proof of a development environment is not that the IDE opens successfully; it is that the project builds and tests reproducibly. Why should your preferred Spring Boot tool set finish with a Maven test gate?",
+      "question": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects; The final proof of a development environment is not that the IDE opens successfully; it is that the project builds and tests reproducibly; Why should your preferred Spring Boot tool set finish with a Maven test gate.",
       "why": "A successful test gate confirms that the JDK, Maven model, dependencies, and test tooling work together as the repository expects.",
-      "why_te": "Maven goal run chesi build result ni chudandi; Prove the environment with tests lo current visible evidence ni next conclusion tho connect chestam. Successful Maven test gate JDK, Maven model, dependencies mariyu test tooling repository expect chesina vidhamga kalisi work chestunnayi ani confirm chestundi.",
+      "why_te": "Maven goal run chesi build result ni chudandi; Prove the environment with tests lo current visible evidence ni next conclusion tho connect chestam; Successful Maven test gate JDK, Maven model, dependencies mariyu test tooling repository expect chesina vidhamga kalisi work chestunnayi ani confirm chestundi.",
       "software": "intellij",
       "required_capability": "run-maven-goal",
       "feature_available": true,
