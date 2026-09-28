@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "lesson_number": 59,
+  "question_id": 59,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "A Java class can exist without methods or fields",
+  "info_language": "te-Latn",
+  "answer": "Yes. A Java class can legally declare no fields and no methods. The compiler still creates a class type, and if no constructor is declared, it provides a default no-argument constructor when allowed by the class definition. Such empty classes can be used as marker types, placeholders, test fixtures, or simple type tokens, although marker annotations are often clearer for metadata-style use cases. An empty class still implicitly extends `Object` unless another superclass is specified.",
+  "steps": [
+    {
+      "title": "Create the smallest useful empty class example",
+      "question": "A temporary class named `SurveyMarker` contains no explicit fields, methods, or constructors, while another class instantiates it and prints its class name. What should the Java compiler provide implicitly so `new SurveyMarker()` can compile even though the class body itself is empty?",
+      "why_te": "Empty class lo explicit fields, methods, constructor levu. Compiler eligible case lo default no-arg constructor provide chestundi. Anduke object create cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/EmptyClassDemo.java",
+          "language": "java",
+          "content": "class SurveyMarker {}\npublic class EmptyClassDemo {\n    public static void main(String[] args) {\n        SurveyMarker marker = new SurveyMarker();\n        System.out.println(marker.getClass().getSimpleName());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the empty class declaration",
+      "question": "The declaration `class SurveyMarker {}` contains no explicit members, yet it still defines a distinct Java reference type and implicitly participates in the normal class hierarchy. Why can type identity itself be useful even when a class does not currently carry state or behavior?",
+      "why_te": "Empty class kuda distinct type create chestundi. Type identity marker, placeholder, test fixture, token la use avvachu. State/behavior compulsory kaadu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/EmptyClassDemo.java",
+            "line": 1,
+            "expected_text": "class SurveyMarker {}"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the empty-class instantiation",
+      "question": "If the program prints `SurveyMarker`, what does that prove about compilation, implicit construction, and runtime type identity for a source declaration with no explicit members? Why does this directly answer whether a Java class must declare at least one method or field in order to exist?",
+      "why_te": "Output class name vastundi kabatti empty class compile ayi object create ayyindi. Explicit field/method requirement ledu. Runtime type identity valid ga undi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson59-demo labs/java/EmptyClassDemo.java; java -cp target/lesson59-demo EmptyClassDemo",
+          "output": "SurveyMarker"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Connect the empty type back to Object inheritance",
+      "question": "Even without explicit members, `SurveyMarker` still inherits methods such as `getClass`, `toString`, `equals`, and `hashCode` from `Object`. The demo calls `getClass` successfully. How does this inherited baseline explain why an apparently empty class is not literally behaviorless at runtime?",
+      "why_te": "Empty class explicit members lekapoyina Object nundi methods inherit chestundi. `getClass` demo lo work chestundi. So source body empty ayina runtime type normal class hierarchy part.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/EmptyClassDemo.java",
+            "line": 5,
+            "expected_text": "System.out.println(marker.getClass().getSimpleName());"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the empty-class demo and state the rule",
+      "question": "The temporary marker has answered the language question and should not remain as unused project code. After deleting it, how would you explain that empty classes are legal, default construction may be supplied, Object methods are inherited, and real projects should still create such types only when the type identity has a clear purpose?",
+      "why_te": "[no highlight] Temporary marker remove chestunnam. Final answer empty class legal, default constructor possible, Object methods inherit avutayi, kani real project lo clear purpose unte matrame empty type create cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/EmptyClassDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The temporary empty class is deleted; no permanent AeroTopo empty marker type exists to highlight."
+      }
+    }
+  ]
+}

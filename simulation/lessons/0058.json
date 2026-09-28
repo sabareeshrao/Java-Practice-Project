@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "lesson_number": 58,
+  "question_id": 58,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "Code reusability in object-oriented programming",
+  "info_language": "te-Latn",
+  "answer": "Code reusability means designing behavior so multiple types or features can use existing logic instead of copying it. In OOP this can come from inheritance, interfaces with shared contracts or default methods, composition, helper classes, and polymorphism. AeroTopo's `Product` base class centralizes identity, tile storage, export behavior, equality, hashing, and string representation, while `Orthomosaic` and `Dem` reuse that implementation and provide only their specific resolution logic. Reuse should reduce duplication without creating unnecessary inheritance coupling.",
+  "steps": [
+    {
+      "title": "Open the reusable Product base abstraction",
+      "question": "AeroTopo's abstract `Product` class centralizes fields and methods that every survey product needs, while subclasses only provide specialized details. Inspect the shared identity, tile storage, export logic, equality, hashing, and string representation. Why is this a concrete example of code reuse rather than simple code organization?",
+      "why_te": "Product common state and behavior oka place lo define chestundi. Subclasses same logic duplicate cheyyakunda reuse chestayi. Idi code reusability ki direct project example.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24,
+          25
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect subclass specialization without duplication",
+      "question": "`Orthomosaic` extends `Product`, calls the shared base constructor, and only adds its `gsd` validation and resolution implementation. Which inherited responsibilities no longer need to be rewritten in this subclass, and how does that reduce maintenance when shared behavior changes later?",
+      "why_te": "Orthomosaic id, tiles, export, equals, hashCode la common logic rewrite cheyyadu. Base Product nundi reuse chestundi. Shared change one place lo maintain cheyyachu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 27,
+            "expected_text": "public static final class Orthomosaic extends Product {"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect interface-level reusable behavior",
+      "question": "The `Exportable` interface defines a shared contract and even a default `mediaType` implementation that implementing classes can inherit unless they need different behavior. How does this demonstrate reuse through an interface contract rather than through concrete class inheritance alone?",
+      "why_te": "Exportable interface common contract define chestundi. Default method shared implementation kuda istundi. Reuse inheritance class hierarchy matrame kaadu; interfaces dwara kuda possible.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Recognize composition as another reuse mechanism",
+      "question": "The Product class owns a copied `List<String>` of tile IDs instead of reimplementing collection behavior itself. Why is composing an existing List abstraction also a form of reuse, and why should good OOP design prefer composition when inheritance does not represent a genuine is-a relationship?",
+      "why_te": "Product existing List behavior ni composition dwara reuse chestundi. Collection logic own ga implement cheyyadu. Genuine is-a relation lekapothe composition tighter inheritance coupling ni avoid chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java",
+            "line": 17,
+            "expected_text": "protected Product(String id, List<String> tiles) { this.id=Objects.requireNonNull(id); this.tiles=List.copyOf(tiles); }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          15,
+          17,
+          19
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Summarize reuse without overusing inheritance",
+      "question": "AeroTopo combines inheritance, interfaces, composition, and common helper behavior rather than copying logic across each product subtype. How would you define code reusability in an interview while also explaining that reuse should reduce duplication and coupling, not force unrelated classes into an artificial inheritance hierarchy?",
+      "why_te": "Final answer reuse ante existing behavior ni multiple places share cheyyadam. Inheritance, interface, composition options unnayi. Goal duplication tagginchadam; unnecessary hierarchy create cheyyadam kaadu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyProducts.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          13,
+          17,
+          21,
+          27,
+          38
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

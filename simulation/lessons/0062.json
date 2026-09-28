@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "lesson_number": 62,
+  "question_id": 62,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Create a Java object without calling its ordinary constructor",
+  "info_language": "te-Latn",
+  "answer": "Yes, certain mechanisms can create an object without executing that class's ordinary constructor during the new object's creation. Java deserialization is a standard example for `Serializable` classes: the serializable class's constructors are not run when its state is restored, though the first non-serializable superclass constructor is invoked. Cloning can also create a new object without running the class constructor in the normal way. Reflection with `Constructor.newInstance()` does invoke a constructor, so it is not an example of constructor bypass.",
+  "steps": [
+    {
+      "title": "Create a Serializable class with a visible constructor counter",
+      "question": "A temporary serializable class increments a static counter inside its constructor, then the demo serializes one instance, resets the counter, and deserializes the bytes. Which observation will let us determine whether the serializable class's ordinary constructor executes while the new deserialized object is reconstructed?",
+      "why_te": "Constructor counter visible evidence istundi. First normal object creation counter increase chestundi. Deserialize mundu reset chesi, afterwards counter unchanged unte ordinary constructor run avvaledu ani telustundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/DeserializationConstructorDemo.java",
+          "language": "java",
+          "content": "import java.io.*;\npublic class DeserializationConstructorDemo {\n    static class Tile implements Serializable {\n        static int constructorCalls;\n        String id;\n        Tile(String id) { constructorCalls++; this.id=id; }\n    }\n    public static void main(String[] args) throws Exception {\n        Tile original = new Tile(\"T1\");\n        ByteArrayOutputStream bytes = new ByteArrayOutputStream();\n        try(ObjectOutputStream out = new ObjectOutputStream(bytes)) { out.writeObject(original); }\n        Tile.constructorCalls = 0;\n        try(ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(bytes.toByteArray()))) {\n            Tile restored = (Tile) in.readObject();\n            System.out.println(restored.id + \":\" + Tile.constructorCalls);\n        }\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect the constructor counter and reset",
+      "question": "The constructor increments `constructorCalls`, so normal `new Tile(\"T1\")` makes the counter one. The demo then resets the counter to zero immediately before deserialization. Why does this setup isolate constructor activity caused specifically by object restoration rather than by the original object creation?",
+      "why_te": "Original `new` constructor call separate ga jarugutundi. Deserialize mundu counter zero reset chestam. Taruvata value change ayithe restoration time constructor call evidence avutundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/DeserializationConstructorDemo.java",
+            "line": 12,
+            "expected_text": "Tile.constructorCalls = 0;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          5,
+          6,
+          9,
+          12,
+          13,
+          14,
+          15
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run deserialization and observe constructor execution",
+      "question": "If the output is `T1:0`, the restored object has the serialized field value but the static constructor counter remained zero. What does that prove about the serializable class constructor during deserialization, and why should you still avoid claiming that absolutely no constructor anywhere in the hierarchy executes?",
+      "why_te": "`T1:0` restored state undi kani Tile constructor run avvaledu ani prove chestundi. Serializable hierarchy rules lo first non-serializable superclass constructor execute avvachu; overclaim cheyyakudadhu.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson62-demo labs/java/DeserializationConstructorDemo.java; java -cp target/lesson62-demo DeserializationConstructorDemo",
+          "output": "T1:0"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Contrast deserialization with reflection",
+      "question": "Earlier object-creation examples using `Constructor.newInstance()` invoke the selected constructor, whereas this deserialization path reconstructs serializable object state without invoking `Tile(String)`. Why is distinguishing these two mechanisms important when answering whether Java objects can be created without calling their ordinary class constructor?",
+      "why_te": "Reflection constructor ni invoke chestundi; deserialization Serializable class ordinary constructor ni bypass chestundi. Mechanism difference clear ga cheppali. All alternative creation methods same behavior kaavu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/RuntimeLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the serialization demo and state the qualified rule",
+      "question": "The temporary class has demonstrated constructor bypass and can now be deleted. How would you answer that deserialization and cloning can create object state without executing the class's ordinary constructor, while reflection through a Constructor still invokes one and normal `new` always follows constructor initialization?",
+      "why_te": "[no highlight] Temporary demo remove chestunnam. Final answer deserialization/clone constructor bypass examples; reflection Constructor call bypass kaadu; normal `new` constructor execute chestundi ani qualify cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/DeserializationConstructorDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The constructor-bypass example is intentionally temporary and is removed after the demonstration."
+      }
+    }
+  ]
+}
