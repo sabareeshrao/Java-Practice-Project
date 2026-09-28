@@ -48,6 +48,20 @@ const rewriteLessons=new Set(flaggedBefore.filter(n=>n>=73));
 
 function qFor(r){
  const title=clean(r.lesson.title),stepTitle=clean(r.step.title),a=fullAnchor(r),line=lines(r),k=action(r),src=sourceQ.get(r.lessonNo)||title;
+ if(r.lessonNo===93){
+  const special={
+   1:`${src} Start from the real ProjectService imports before creating any demo classes. Which package-qualified names are already visible, how does Java use the package declaration as part of a type's identity, and why is this production baseline necessary before testing two unrelated classes that deliberately share the same simple name?`,
+   2:`Create pkgone.Tile as the first half of the namespace experiment. At this point there is no collision yet: one public Tile type exists only under package pkgone. Which fully qualified name does this declaration create, and what must another source import or spell explicitly if it wants to use this first Tile type?`,
+   3:`Now add pkgtwo.Tile with the same simple class name but a different package declaration. Why can both source files compile in the same project even though both classes are named Tile, which part of each fully qualified name keeps them distinct, and what ambiguity would appear only when a caller tries to use both simple names together?`,
+   4:`Create PackageNameCollisionDemo and inspect how it imports pkgone.Tile while referring to pkgtwo.Tile with its fully qualified name. Why is this mixed notation necessary, which Tile does the unqualified identifier resolve to, and how does the explicit pkgtwo.Tile reference avoid an ambiguous pair of same-simple-name imports in one compilation unit?`,
+   5:`Compile all three temporary sources and run PackageNameCollisionDemo. The expected output is one:two. What does that result prove about package namespaces, how does each object retain the behavior of its own Tile class, and why would importing both Tile types by simple name be less precise than the source you just executed?`,
+   6:`The caller has already demonstrated how one imported Tile and one fully qualified Tile can coexist, so remove PackageNameCollisionDemo first. Why is deleting the caller before the two type definitions a clean reversal of the experiment, and which namespace fact has already been proved even though both temporary Tile classes still exist for the moment?`,
+   7:`Remove pkgtwo.Tile next while leaving pkgone.Tile temporarily in place. What changes after the second namespace disappears, why is there no longer any same-simple-name competition in the remaining temporary sources, and how does this cleanup step differ technically from deleting the caller that merely referenced the two types?`,
+   8:`Remove pkgone.Tile as the final temporary type in the namespace experiment. Why does deleting this last definition restore the project to its pre-demo state, what package-collision lesson remains valid after both classes are gone, and why should lesson-only namespace examples not survive into later cumulative AeroTopo lessons?`,
+   9:`Return to ProjectService after every temporary source has been removed. Using its real package declaration and imports, how would you answer what happens when two packages contain the same class name, including fully qualified-name identity, import ambiguity, explicit disambiguation, and the reason packages prevent a flat global class-name namespace?`
+  };
+  return special[r.stepNo];
+ }
  if(k==="createFile"){
   return `The interview topic is "${src}". This step creates temporary ${a} only to isolate one edge case of ${title}; it is not production AeroTopo code. Before running anything, inspect ${line?"highlighted lines "+line:"the highlighted declarations"} and predict the compiler or runtime result. Which exact Java rule controls that prediction, and what would a different declaration change?`;
  }
@@ -78,6 +92,21 @@ function qFor(r){
 
 function teFor(r){
  const title=clean(r.lesson.title),st=clean(r.step.title),a=fullAnchor(r),base=shortAnchor(r),line=lines(r),k=action(r),out=result(r);
+ if(r.lessonNo===93){
+  const special={
+   1:"ProjectService.java lo package declaration and imports ni baseline ga chustam. Java type identity simple class name matrame kaadu; package name kuda identity lo part ani real project structure nundi start chestam.",
+   2:"pkgone/Tile.java first namespace ni create chestundi. Ippudu Tile ane simple name pkgone package lo matrame undi; fully qualified name pkgone.Tile ani form avutundi, kabatti caller aa exact type ni import cheyyagaladu.",
+   3:"pkgtwo/Tile.java second independent namespace ni add chestundi. Simple name rendu places lo Tile ayina pkgone.Tile and pkgtwo.Tile different types; ambiguity caller rendu simple names ni okesari use cheyyadaniki try chesinappude relevant avutundi.",
+   4:"PackageNameCollisionDemo.java pkgone.Tile ni import chestundi, second type ni pkgtwo.Tile ani fully qualify chestundi. Ee step actual disambiguation syntax ni chupistundi; rendu same simple imports add cheyyakunda caller exact type ni select chestadu.",
+   5:"Three files compile chesi demo run chesthe one:two output vastundi. Rendu Tile classes same project lo coexist avutunnayi ani runtime evidence confirm chestundi; package namespace class behavior ni separate ga preserve chestundi.",
+   6:"[no highlight] Caller demo complete kabatti PackageNameCollisionDemo.java first remove chestam. Namespace rule already prove ayyindi; ee cleanup references ni first clear chesi temporary type definitions ni next steps lo independently remove cheyyadaniki prepare chestundi.",
+   7:"[no highlight] pkgtwo/Tile.java remove chesthe second namespace temporary ga disappear avutundi. pkgone.Tile matrame remain avutundi, kabatti same-simple-name competition ఇక లేదు; idi caller cleanup kanna type-definition cleanup ani separate purpose.",
+   8:"[no highlight] pkgone/Tile.java kuda remove chesi namespace experiment ni completely close chestam. Temporary types rendu gone ayina fully qualified names collision ni avoid chestayi ane verified Java rule remain avutundi; project original state ki return avutundi.",
+   9:"ProjectService.java ki return ayyi real package/import design tho lesson ni close chestam. Interview answer lo fully qualified identity, import ambiguity, explicit disambiguation, package organization ane four points ni project evidence tho connect cheyyali."
+  };
+  let specialText=special[r.stepNo];
+  return specialText;
+ }
  let t;
  if(k==="createFile"){
   t=`Temporary ${base} production code kaadu. Ee step ${title} lo oka edge case ni isolate chestundi; highlighted declaration batti run mundu compiler leda runtime result predict cheyyadam matrame current purpose.`;
