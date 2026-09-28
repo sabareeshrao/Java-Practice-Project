@@ -3360,3 +3360,155 @@ Inheritance is-a relation; composition has-a relation. Orthomosaic Product subty
 ### Step 4 — State the interview answer — Inheritance versus composition
 
 Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
+
+## Lesson 134 — Interfaces as Java's multiple-inheritance solution
+
+### Step 1 — Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution
+
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
+
+### Step 2 — Trace the parent-child rule — Interfaces as Java's multiple-inheritance solution
+
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
+
+### Step 3 — Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance solution
+
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
+
+### Step 4 — State the interview answer — Interfaces as Java's multiple-inheritance solution
+
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
+
+## Lesson 135 — Static methods in parent and child classes
+
+### Step 1 — Open the inheritance evidence — Static methods in parent and child classes
+
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
+
+### Step 2 — Trace the parent-child rule — Static methods in parent and child classes
+
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
+
+### Step 3 — Evaluate the hierarchy design — Static methods in parent and child classes
+
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
+
+### Step 4 — State the interview answer — Static methods in parent and child classes
+
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
+
+## Lesson 136 — Covariant return types
+
+### Step 1 — Open the AeroTopo baseline — Covariant return types
+
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
+
+### Step 2 — Create the focused dispatch experiment — Covariant return types
+
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
+
+### Step 3 — Run the dispatch experiment — Covariant return types
+
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
+
+### Step 4 — Remove the temporary dispatch experiment — Covariant return types
+
+[no highlight] Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
+
+### Step 5 — Return to the project design — Covariant return types
+
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
+
+## Lesson 137 — Calling overridable methods from constructors
+
+### Step 1 — Open the AeroTopo baseline — Calling overridable methods from constructors
+
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
+
+### Step 2 — Create the focused dispatch experiment — Calling overridable methods from constructors
+
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
+
+### Step 3 — Run the dispatch experiment — Calling overridable methods from constructors
+
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
+
+### Step 4 — Remove the temporary dispatch experiment — Calling overridable methods from constructors
+
+[no highlight] Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
+
+### Step 5 — Return to the project design — Calling overridable methods from constructors
+
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
+
+## Lesson 138 — Inheritance and polymorphism working together
+
+### Step 1 — Open the polymorphism evidence — Inheritance and polymorphism working together
+
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
+
+### Step 2 — Trace method selection — Inheritance and polymorphism working together
+
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
+
+### Step 3 — Evaluate the design contract — Inheritance and polymorphism working together
+
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
+
+### Step 4 — State the interview answer — Inheritance and polymorphism working together
+
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
+
+## Lesson 139 — Method overloading
+
+### Step 1 — Open the polymorphism evidence — Method overloading
+
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
+
+### Step 2 — Trace method selection — Method overloading
+
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
+
+### Step 3 — Evaluate the design contract — Method overloading
+
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
+
+### Step 4 — State the interview answer — Method overloading
+
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
+
+## Lesson 140 — Overloading is resolved at compile time
+
+### Step 1 — Open the polymorphism evidence — Overloading is resolved at compile time
+
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
+
+### Step 2 — Trace method selection — Overloading is resolved at compile time
+
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
+
+### Step 3 — Evaluate the design contract — Overloading is resolved at compile time
+
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
+
+### Step 4 — State the interview answer — Overloading is resolved at compile time
+
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
+
+## Lesson 141 — How Java resolves overloaded methods
+
+### Step 1 — Open the polymorphism evidence — How Java resolves overloaded methods
+
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
+
+### Step 2 — Trace method selection — How Java resolves overloaded methods
+
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
+
+### Step 3 — Evaluate the design contract — How Java resolves overloaded methods
+
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
+
+### Step 4 — State the interview answer — How Java resolves overloaded methods
+
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
