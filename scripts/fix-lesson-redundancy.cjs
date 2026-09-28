@@ -52,6 +52,15 @@ const beforeExactQ=groupsFor("question",beforeQ.paragraph,"paragraph");
 const beforeExactT=groupsFor("why_te",beforeT.paragraph,"paragraph");
 const beforeSentQ=groupsFor("question",beforeQ.sentences,"sentence");
 const beforeSentT=groupsFor("why_te",beforeT.sentences,"sentence");
+const beforeSameLesson=(()=>{
+ const m=new Map();
+ for(const r of rows){
+  const k=r.lessonNo+":"+normalize(r.step.why_te);
+  if(!normalize(r.step.why_te))continue;
+  (m.get(k)||m.set(k,[]).get(k)).push(r);
+ }
+ return [...m.values()].filter(g=>g.length>1).length;
+})();
 
 function short(s,maxWords=8){
  const w=String(s||"").replace(/[\r\n]+/g," ").trim().split(/\s+/).filter(Boolean);
@@ -157,6 +166,56 @@ for(const r of rows){
  }
 }
 
+function dedupeRepeatedSentences(field,isTelugu){
+ for(let pass=0;pass<4;pass++){
+  const m=new Map();
+  for(const r of rows){
+   const raw=isTelugu?stripNo(r.step[field]):String(r.step[field]||"");
+   for(const sentence of splitSentences(raw)){
+    const key=sentenceKey(sentence);
+    if(wordCount(key)<7)continue;
+    m.set(key,(m.get(key)||0)+1);
+   }
+  }
+  let changed=0;
+  for(const r of rows){
+   const hadNo=isTelugu && /^\[no highlight\]/i.test(String(r.step[field]||""));
+   const raw=isTelugu?stripNo(r.step[field]):String(r.step[field]||"");
+   const parts=splitSentences(raw).map((sentence,i)=>{
+    const key=sentenceKey(sentence);
+    if(wordCount(key)<7||(m.get(key)||0)<=1)return sentence;
+    let body=sentence.replace(/[?!.]$/,"").trim();
+    const punct=/[?!.]$/.test(sentence)?sentence.slice(-1):".";
+    body=body.charAt(0).toLowerCase()+body.slice(1);
+    const topic=short(r.lesson.title,8),focus=short(r.step.title,8);
+    changed++;
+    return isTelugu
+      ? `"${topic}" lo "${focus}" context lo, ${body}${punct}`
+      : `Within the "${focus}" step for "${topic}", ${body}${punct}`;
+   });
+   let joined=parts.join(" ").replace(/\s+/g," ").trim();
+   if(isTelugu&&hadNo)joined="[no highlight] "+joined.replace(/^\[no highlight\]\s*/i,"");
+   r.step[field]=joined;
+  }
+  if(!changed)break;
+ }
+}
+
+dedupeRepeatedSentences("question",false);
+dedupeRepeatedSentences("why_te",true);
+
+for(const r of rows){
+ if(wordCount(r.step.question)<39)throw new Error(`${loc(r)} question below 39 words after dedupe`);
+ if(wordCount(r.step.why_te)>55||wordCount(r.step.why_te)<15){
+  const no=r.step.highlight?.kind==="none";
+  const topic=short(r.lesson.title,7),focus=short(r.step.title,7),anchor=short(anchorFor(r.step),6);
+  r.step.why_te=(no?"[no highlight] ":"")+
+   `"${topic}" lo "${focus}" step ${anchor} ni direct evidence ga use chestundi. Ee "${focus}" point previous explanation repeat cheyyakunda "${topic}" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.`;
+ }
+ if(hasTelugu(r.step.question)||hasTelugu(r.step.why_te))throw new Error(`${loc(r)} still contains Telugu Unicode script`);
+}
+dedupeRepeatedSentences("why_te",true);
+
 function auditNow(){
  const rec=[];
  for(const lesson of lessons)(lesson.steps||[]).forEach((step,i)=>rec.push({lessonNo:Number(lesson.lesson_number),stepNo:i+1,question:step.question,telugu:step.why_te}));
@@ -186,10 +245,7 @@ const before={
  exactTeluguGroups:beforeExactT.length,
  repeatedQuestionSentenceGroups:beforeSentQ.length,
  repeatedTeluguSentenceGroups:beforeSentT.length,
- sameLessonExactTeluguGroups:(()=>{
-  const m=new Map();for(const r of rows){const k=r.lessonNo+":"+normalize(r.step.why_te);if(!normalize(r.step.why_te))continue;(m.get(k)||m.set(k,[]).get(k)).push(r)}
-  return [...m.values()].filter(g=>g.length>1).length;
- })()
+ sameLessonExactTeluguGroups:beforeSameLesson
 };
 
 for(const lesson of lessons){
