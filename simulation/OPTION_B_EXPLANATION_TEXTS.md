@@ -1652,3 +1652,179 @@ Temporary concat demo remove chestunnam. Final answer modern Java runtime concat
 ### Step 7 — Return to the real repeated-construction example
 
 Final project example repeated construction ki builder use chestundi. Simple expressions ki `+` readable; loop across many appends ki explicit builder intent and mutable state clear ga untayi.
+
+## Lesson 50 — Group strings by character similarity
+
+### Step 1 — Open the existing anagram-grouping method
+
+SurveyAlgorithms.anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.
+
+### Step 2 — Focus on canonical-key creation
+
+`eat`, `tea`, `ate` chars sort cheste same key vastundi. Original order different ayina character multiset same. Anduke same key use chesi anagrams ni oka group lo collect cheyyachu.
+
+### Step 3 — Create a driver with two anagram families
+
+Demo input lo `eat/tea/ate` oka group, `tan/nat` second group, `bat` single group. Real method output map lo ee grouping clear ga kanipinchali.
+
+### Step 4 — Run the anagram grouping example
+
+Output groups original Strings ni retain chestayi. Sorted key grouping kosam matrame use avutundi. Same key values together vastayi, kani user data original form lo group list lo untundi.
+
+### Step 5 — Remove the driver and retain the reusable grouping method
+
+Temporary driver ni remove chestunnam. Final answer sorted-character key, Map grouping, original values retention, mariyu per-string sorting cost gurinchi explain cheyyali. Existing project method reusable ga remain avutundi.
+
+## Lesson 51 — Find a substring without built-in contains or indexOf
+
+### Step 1 — Open the manual substring-search implementation
+
+SurveyAlgorithms.indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.
+
+### Step 2 — Inspect the mismatch shortcut
+
+Mismatch vachina current start already fail ayyindi. `continue outer` remaining inner comparisons skip chesi next start position ki velthundi. Search coverage miss avvadu.
+
+### Step 3 — Create a caller with a visible middle match
+
+`aerotopo-service` lo `topo` index 4 daggara start avutundi. Demo outer loop multiple candidate positions cross chesi correct middle match find chestunda ani verify chestundi.
+
+### Step 4 — Run matching and not-found cases
+
+First output 4 correct start index ni show chestundi. Second -1 not-found result. Manual method built-in index contract la behave chestundi, kani search logic own loops tho implement ayyindi.
+
+### Step 5 — Remove the driver and summarize the scanning algorithm
+
+Temporary driver remove chestunnam. Final answer outer start scan, inner char comparison, mismatch early skip, match index return, worst-case O(nm), O(1) extra space ani explain cheyyali.
+
+## Lesson 52 — Find the first non-repeating character in a String
+
+### Step 1 — Open the Unicode-aware first-unique implementation
+
+Method LinkedHashMap use chesi encounter order preserve chestundi. First pass counts build chestundi; second stream count 1 unna first entry ni select chestundi. Code points use chestundi.
+
+### Step 2 — Inspect ordered frequency counting
+
+Counts matrame saripovu; first unique kavali kabatti original encounter order kuda kavali. LinkedHashMap insertion order preserve chestundi. Anduke first count-1 entry correct answer avutundi.
+
+### Step 3 — Create a driver with repeated prefixes
+
+Input repeated prefix tho start avutundi kabatti algorithm counts and order rendu correctly use chestunda ani test avutundi. First unique character `c` avvali.
+
+### Step 4 — Run the ordered-frequency solution
+
+Output `c` count and encounter order rendu correct ani prove chestundi. Plain HashMap iteration original order guarantee cheyyadu. First unique requirement ki ordered map suitable.
+
+### Step 5 — Remove the driver and retain the reusable code-point solution
+
+Temporary driver remove chestunnam. Final answer two-pass frequency approach, LinkedHashMap order, Unicode code points, O(n) expected time, O(k) distinct-character memory ani explain cheyyali.
+
+## Lesson 53 — Expand encoded runs such as 3a2b
+
+### Step 1 — Open the existing run-expansion parser
+
+expandRuns count digits ni accumulate chestundi, symbol vachinappudu repeat append chestundi, state reset chestundi. Invalid or oversized input ki checks kuda unnayi. Existing method direct ga reuse chestam.
+
+### Step 2 — Inspect count accumulation and overflow protection
+
+`count*10 + digit` multi-digit numbers build chestundi. Exact arithmetic overflow ayithe exception istundi. Silent wraparound valla wrong repeat count ravadaniki chance taggutundi.
+
+### Step 3 — Create a driver for 3a2b and a multi-digit run
+
+`3a2b` output `aaabb` avvali. `12x` twelve x characters produce cheyyali. Rendu cases parser count build and reset behavior ni verify chestayi.
+
+### Step 4 — Run both encoded examples
+
+First output basic requirement satisfy chestundi. Second output `12` ni single count ga parse chestundi ani prove chestundi. Digits separate counts ga handle cheyyadam ledu.
+
+### Step 5 — Remove the driver and summarize the validated parser
+
+Temporary driver remove chestunnam. Final answer count parse, builder append, reset, validation, maxLength protection, and input plus produced-output proportional work gurinchi explain cheyyali.
+
+## Lesson 54 — Find the longest palindromic substring
+
+### Step 1 — Open the expand-around-center implementation
+
+Method prathi center ki odd and even parity check chestundi. Left/right pointers match ayina varaku expand avutayi. Longest range track chesi final substring return chestundi.
+
+### Step 2 — Inspect odd and even center handling
+
+Parity 0 odd palindrome center one character. Parity 1 even palindrome center two adjacent positions madhya. Rendu check cheyyakapothe `racecar` leda `abba` type lo oka category miss avutundi.
+
+### Step 3 — Create inputs with different palindrome shapes
+
+`babad` odd-length result ni test chestundi; `cbbd` even-length `bb` ni test chestundi. Rendu together parity handling complete ga verify chestayi.
+
+### Step 4 — Run odd and even palindrome cases
+
+First input lo `bab` or `aba` rendu length 3 valid longest answers. Second lo `bb` even case. Output parity paths correct ga work chestunnayi ani show chestundi.
+
+### Step 5 — Remove the driver and retain the center-expansion method
+
+Temporary driver remove chestunnam. Final answer every center, odd/even parity, outward expansion, longest range update, O(n²) time, O(1) working space ani explain cheyyali.
+
+## Lesson 55 — StringBuilder and StringBuffer in practical Java code
+
+### Step 1 — Open a real StringBuilder use in AeroTopo
+
+expandRuns local builder ni repeated appends kosam use chestundi. Same mutable buffer update avutundi. Loop lo many immutable String results create cheyyadam avoid chestam.
+
+### Step 2 — Compare StringBuilder with StringBuffer behavior
+
+StringBuilder and StringBuffer APIs similar. Main difference StringBuffer methods synchronized. Method-local single-threaded work ki synchronization usually unnecessary kabatti StringBuilder simpler and faster choice.
+
+### Step 3 — Inspect the two mutable sequence declarations
+
+Shared mutable access actual ga unda leda ani first decide cheyyali. Local buffer one thread use chesthe synchronized overhead avasaram ledu. Shared case lo kuda higher-level design evaluate cheyyali.
+
+### Step 4 — Run both mutable implementations
+
+Output rendu same text istayi. Functional API similar ani show chestundi, kani synchronization difference output lo kanipinchadu. Interview answer concurrency behavior ni separate ga explain cheyyali.
+
+### Step 5 — Remove the comparison class and return to the project choice
+
+Temporary demo remove chestunnam. AeroTopo local construction ki StringBuilder correct fit. StringBuffer actual shared synchronized mutable buffer requirement unte consider cheyyachu. Choice sharing model batti undali.
+
+## Lesson 56 — Ways to create objects in Java
+
+### Step 1 — Open the project's ordinary constructor and factory paths
+
+ProductFactory caller ki creation logic hide chestundi, kani inside `new Dem` or `new Orthomosaic` use chestundi. Factory API pattern; underlying normal object creation constructor dwara jarugutundi.
+
+### Step 2 — Create a small reflection-based construction example
+
+Reflection lo constructor metadata runtime lo select chestam. `newInstance` actual constructor ni invoke chestundi. Frameworks dynamic types handle cheyyadaniki ee mechanism useful.
+
+### Step 3 — Inspect direct and reflective construction together
+
+Direct `new` and reflective `newInstance` rendu constructor execute chestayi. Reflection dynamic invocation matrame; constructor bypass kaadu. Constructor-less creation separate mechanisms lo jaragachu.
+
+### Step 4 — Run both creation paths
+
+Constructor message twice vastundi kabatti direct and reflection both constructor call chestayi. Runtime classes same. Clone/deserialization lifecycle different ga object state create cheyyagalavu.
+
+### Step 5 — Remove the reflection demo and state the practical hierarchy
+
+Temporary demo remove chestunnam. Final answer `new`, factory, reflection, cloning, deserialization mechanisms ni accurately separate cheyyali. Production lo clear constructors/factories usually preferred.
+
+## Lesson 57 — Benefits of Java being partially object-oriented
+
+### Step 1 — Inspect primitive and object-oriented features side by side
+
+Java primitives direct values kosam useful. Classes/interfaces domain modeling kosam useful. Rendu language lo coexist avutayi kabatti Java pure OOP kaadu ani commonly cheptaru.
+
+### Step 2 — Focus on primitive efficiency in ordinary code
+
+Primitive int direct numeric representation istundi. Arithmetic simple ga untundi and wrapper object avasaram ledu. Primitive itself object kaadu kabatti every Java value object ani cheppalem.
+
+### Step 3 — Open the object-oriented side of the same language
+
+SurveyProducts hierarchy abstraction, encapsulated state, inheritance, polymorphic behavior provide chestundi. Primitive value simple data matrame; ee domain relationships represent cheyyadu.
+
+### Step 4 — Inspect wrappers as the bridge into object APIs
+
+Primitive `int` direct value; `Integer` wrapper object/reference type. Object API requirement unte boxing bridge provide chestundi. Nullable state kuda wrapper lo possible.
+
+### Step 5 — Summarize why the mixed model is useful
+
+Final answer mixed model practical ani cheppali. Primitives simple/efficient values istayi; classes/interfaces strong OOP modeling istayi. Pure OOP kaakapovadam OOP weak ani meaning kaadu.
