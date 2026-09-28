@@ -744,3 +744,9 @@ Scanned **160 lessons** and **879 steps**.
 - undefinedLeakSteps: 0
 
 Exact duplicate paragraphs and repeated knowledge-bearing sentences are hard failures. Near-duplicate similarity is reported for review because closely related Java topics can legitimately share terminology.
+
+## Published repair baseline
+
+- Repaired curriculum commit: `468d43e5d2a40b49b41e6e057471735c3fae7abd`
+- The repair workflow passed its canonical redundancy audit, generated-content check, and Maven Java verification before publishing this commit.
+
