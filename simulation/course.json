@@ -21,8 +21,8 @@
   "chapters": [
     {
       "id": "chapter-001",
-      "title": "1: Java Foundations — Enterprise Context",
-      "subtitle": "Java enterprise context, ecosystem evolution, IntelliJ/Maven setup, Spring Boot development environment, and core Java developer tooling.",
+      "title": "1: Java Enterprise Context & Tooling",
+      "subtitle": "Establish Java enterprise-development context, ecosystem evolution, Lombok, Spring Boot development setup, and the core tools used by a Java developer.",
       "lessons": [
         "lessons/0001.json",
         "lessons/0002.json",
@@ -33,88 +33,87 @@
     },
     {
       "id": "chapter-002",
-      "title": "2: IntelliJ IDEA — Editor Choice & Keyboard Productivity",
-      "subtitle": "Use IntelliJ as the project-standard Java IDE, understand why it fits the current project, and build fast navigation/refactoring habits with keyboard shortcuts.",
+      "title": "2: IDE Choice, IntelliJ & Productivity",
+      "subtitle": "Keep the complete IDE sequence together: editor choice, project-standard IntelliJ usage, keyboard productivity, and translation of familiar STS shortcut concepts into the IntelliJ-only workflow.",
       "lessons": [
         "lessons/0006.json",
         "lessons/0007.json",
         "lessons/0008.json",
         "lessons/0009.json",
-        "lessons/0010.json"
+        "lessons/0010.json",
+        "lessons/0011.json"
       ]
     },
     {
       "id": "chapter-003",
-      "title": "3: IDE Equivalents & JVM Foundations",
-      "subtitle": "Translate familiar STS shortcut concepts into the IntelliJ-only workflow, then trace JDK/JVM selection, bytecode portability, JVM internals, and a complete Hello World execution path.",
+      "title": "3: JVM, JDK, JRE & Java Execution",
+      "subtitle": "Trace platform independence, multiple JDK installations, JVM internals, Hello World execution, and the distinct responsibilities of JDK, JRE, and JVM.",
       "lessons": [
-        "lessons/0011.json",
         "lessons/0012.json",
         "lessons/0013.json",
         "lessons/0014.json",
-        "lessons/0015.json"
+        "lessons/0015.json",
+        "lessons/0016.json"
       ]
     },
     {
       "id": "chapter-004",
-      "title": "4: JDK/JRE/JVM & Java Main Method",
-      "subtitle": "Separate the JDK, runtime environment, and JVM responsibilities, then build and evolve a real main-method lab covering the entry-point signature, overloading, non-static failure, and the public/static launch contract.",
+      "title": "4: Java main() Method",
+      "subtitle": "Treat the complete main-method sequence as one topic: signature terms, overloading, static/public requirements, hiding versus overriding, and JVM selection of the launch entry point.",
       "lessons": [
-        "lessons/0016.json",
         "lessons/0017.json",
         "lessons/0018.json",
         "lessons/0019.json",
-        "lessons/0020.json"
+        "lessons/0020.json",
+        "lessons/0021.json",
+        "lessons/0022.json"
       ]
     },
     {
       "id": "chapter-005",
-      "title": "5: Main Dispatch, Type Casting & Static State",
-      "subtitle": "Finish the Java main-method dispatch rules, then use the existing AeroTopo LanguageLab and JUnit tests to study type casting, shared static state, and Integer/String conversions without duplicating project code.",
+      "title": "5: Java Types, References & Parameter Semantics",
+      "subtitle": "Connect type casting, static state, conversions, Java references versus pointers, primitive nullability, conversion failures, instanceof, and Java pass-by-value semantics.",
       "lessons": [
-        "lessons/0021.json",
-        "lessons/0022.json",
         "lessons/0023.json",
         "lessons/0024.json",
-        "lessons/0025.json"
-      ]
-    },
-    {
-      "id": "chapter-006",
-      "title": "6: References, Pointers, Nullability & Conversion Failures",
-      "subtitle": "Contrast Java references with explicit pointers, prove primitive nullability rules, and distinguish ClassCastException, NumberFormatException, and null-unboxing failures with visible IntelliJ experiments.",
-      "lessons": [
+        "lessons/0025.json",
         "lessons/0026.json",
         "lessons/0027.json",
         "lessons/0028.json",
         "lessons/0029.json",
-        "lessons/0030.json"
+        "lessons/0030.json",
+        "lessons/0031.json",
+        "lessons/0032.json"
       ]
     },
     {
-      "id": "chapter-007",
-      "title": "7: Runtime Type Checks, Parameter Passing & JVM Exit",
-      "subtitle": "Use real AeroTopo language semantics and focused temporary demos to understand instanceof, Java pass-by-value behavior, System.exit, JVM shutdown, and when process termination belongs in project code.",
+      "id": "chapter-006",
+      "title": "6: System.exit() & JVM Shutdown",
+      "subtitle": "Keep process termination together: System.exit behavior, JVM shutdown hooks and sequencing, exit statuses, and whether explicit process termination belongs in the AeroTopo service.",
       "lessons": [
-        "lessons/0031.json",
-        "lessons/0032.json",
         "lessons/0033.json",
         "lessons/0034.json",
         "lessons/0035.json"
       ]
     },
     {
-      "id": "chapter-008",
-      "title": "8: Project Methodology & Array Algorithms",
-      "subtitle": "Ground the project-methodology answer in repository evidence, then reuse AeroTopo's real SurveyAlgorithms implementations for duplicate removal, merge-and-sort, binary partitioning, and stable zero compaction.",
+      "id": "chapter-007",
+      "title": "7: Project Methodology",
+      "subtitle": "Ground the Agile-versus-Waterfall answer in AeroTopo's documented development, review, deployment, rollback, experimentation, and evidence-driven architecture practices.",
       "lessons": [
-        "lessons/0036.json",
+        "lessons/0036.json"
+      ]
+    },
+    {
+      "id": "chapter-008",
+      "title": "8: Array Algorithms",
+      "subtitle": "Keep the contiguous array-problem sequence together: uniqueness, merge-and-sort, binary partitioning, moving zeros, one-loop sorting, and in-place duplicate removal for sorted arrays.",
+      "lessons": [
         "lessons/0037.json",
         "lessons/0038.json",
         "lessons/0039.json",
         "lessons/0040.json"
       ]
     }
-  ],
-  "max_lessons_per_chapter": 5
+  ]
 }

@@ -130,10 +130,11 @@ Rules:
 
 - **One source interview question = one lesson.**
 - A lesson may contain many simulator steps.
-- **Maximum 5 lessons per chapter.**
-- If a chapter already contains 5 lessons, the next lesson starts a new chapter.
-- This limit is mandatory because the sidebar must remain easy to scan without excessive scrolling.
-- The build/generator must reject a chapter containing more than 5 lessons.
+- **Chapter size is determined by conceptual continuity, not by a fixed lesson count.**
+- Before creating or closing a chapter, inspect enough upcoming source questions to see where the current topic genuinely ends.
+- Keep a continuous topic in one chapter even when it contains more than 5 lessons.
+- A one-lesson chapter is valid when the source sequence contains an isolated topic.
+- Never mix unrelated topics merely to make a chapter larger, and never split a topic merely to keep a chapter small.
 - Books group logically related chapters.
 - Do not embed hardcoded lesson/question numbers inside the natural-language question text. Keep numbering as metadata/UI.
 
@@ -815,7 +816,7 @@ Check:
 - Telugu-in-English-font explanation present,
 - English final answer present,
 - Answer appears only on the final step,
-- chapter contains no more than 5 lessons,
+- chapter membership follows the inspected logical topic boundary,
 - forbidden Java IDEs are not used.
 
 ### Action validation
@@ -872,7 +873,7 @@ perform this sequence:
 2. Read this instruction file
 3. Read MASTER_SOFTWARE_REF
 4. Inspect current master state/history
-5. Load exact source Questions 1–5
+5. Load the requested source questions plus enough upcoming questions to identify logical chapter boundaries
 6. Inspect original project state
 7. Inspect existing course/chapters/lessons
 8. Read required master capability JSON files
@@ -881,7 +882,7 @@ perform this sequence:
 11. Write why_te for each step
 12. Keep final interview answer in English
 13. Put full answer only on each lesson's last step
-14. Keep max 5 lessons in the chapter
+14. Inspect upcoming source questions and place lessons in the correct logical chapter; do not use a fixed lesson-count boundary
 15. Preserve/replay cumulative permanent project state
 16. Prevent empty UI surfaces
 17. Build/generate player data
@@ -973,7 +974,7 @@ Always preserve these rules:
 
 - original project stays the cumulative real project,
 - one source question = one lesson,
-- maximum 5 lessons per chapter,
+- chapter boundaries follow logical topic continuity after looking ahead in the source sequence,
 - every simulator step has a unique English #Q1 question that is never shorter than the Lesson 1 / Step 1 baseline,
 - explanation beneath the question uses Option B — very easy learner Telugu-in-English style, normally 15–55 words,
 - only the final step gets the English Answer block,

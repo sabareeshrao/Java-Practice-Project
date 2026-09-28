@@ -7,7 +7,7 @@ Rules:
 - There are 2,308 source interview questions.
 - The target is exactly one lesson per source question.
 - A lesson may contain multiple simulator steps.
-- A chapter may contain **at most 5 lessons**. A sixth lesson must start a new chapter; the build rejects chapters above this limit to avoid excessive sidebar scrolling.
+- Chapters have **no fixed lesson-count limit**. Before creating or closing a chapter, inspect enough upcoming source questions to identify the real topic boundary. Keep one continuous topic together, allow a one-lesson chapter when a topic is genuinely isolated, and never mix unrelated topics merely to fill a chapter.
 - Every simulator step must define its own unique `question` using the **#Q1** style: that step's question first teaches the relevant concept/context and then asks the learner to reason about it.
 - Step questions must be unique across the published curriculum. Duplicate step-question text is a build error.
 - Every lesson must set `info_language` to `te-Latn` for the explanatory text.

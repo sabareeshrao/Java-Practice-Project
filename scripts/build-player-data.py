@@ -11,7 +11,7 @@ QUESTIONS_FILE = ROOT / "interview" / "questions.json"
 COURSE_FILE = SIM_ROOT / "course.json"
 
 FORBIDDEN_IDES = {"eclipse", "vscode"}
-MAX_LESSONS_PER_CHAPTER = 5
+CHAPTER_POLICY = "logical-topic-continuity"
 MIN_SIMPLE_EXPLANATION_WORDS = 15
 MAX_SIMPLE_EXPLANATION_WORDS = 55
 HIGHLIGHT_KINDS = {"auto", "code", "target", "none"}
@@ -293,16 +293,6 @@ def load_lessons() -> tuple[dict, list[dict]]:
     questions_doc = read_json(QUESTIONS_FILE)
     by_id = {int(item["id"]): item for item in questions_doc["questions"]}
     course_cfg = read_json(COURSE_FILE)
-    configured_max = int(course_cfg.get("max_lessons_per_chapter", MAX_LESSONS_PER_CHAPTER))
-    if configured_max != MAX_LESSONS_PER_CHAPTER:
-        raise SystemExit(f"max_lessons_per_chapter must remain {MAX_LESSONS_PER_CHAPTER}")
-    for chapter in course_cfg["chapters"]:
-        lesson_count = len(chapter.get("lessons", []))
-        if lesson_count > MAX_LESSONS_PER_CHAPTER:
-            raise SystemExit(
-                f"{chapter.get('id', 'chapter')} has {lesson_count} lessons; maximum is {MAX_LESSONS_PER_CHAPTER}"
-            )
-
     min_step_question_words = minimum_step_question_words()
     stages = []
     seen_question_ids: set[int] = set()
@@ -703,7 +693,7 @@ def main() -> None:
         "published_lesson_count": published_lesson_count,
         "published_step_count": published_step_count,
         "ide_policy": "IntelliJ only; Eclipse and VS Code forbidden",
-        "max_lessons_per_chapter": MAX_LESSONS_PER_CHAPTER,
+        "chapter_policy": CHAPTER_POLICY,
         "min_step_question_words": minimum_step_question_words(),
         "explanation_style": "Option B — Very easy learner style",
         "min_simple_explanation_words": MIN_SIMPLE_EXPLANATION_WORDS,
