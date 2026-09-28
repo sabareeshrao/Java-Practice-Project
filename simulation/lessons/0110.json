@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the project evidence — Why static methods are used",
-      "question": "The AeroTopo code already provides direct evidence for \"Why static methods are used\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "question": "The AeroTopo code already provides direct evidence for \"Why static methods are used\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
       "why_te": "SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",

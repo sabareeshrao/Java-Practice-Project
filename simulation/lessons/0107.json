@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the project evidence — The static keyword in Java",
-      "question": "The AeroTopo code already provides direct evidence for \"The static keyword in Java\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "question": "The AeroTopo code already provides direct evidence for \"The static keyword in Java\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
       "why_te": "LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.",
       "software": "intellij",
       "required_capability": "open-file",

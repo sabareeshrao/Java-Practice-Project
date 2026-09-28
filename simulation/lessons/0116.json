@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the project evidence — A real project use case for final",
-      "question": "The AeroTopo code already provides direct evidence for \"A real project use case for final\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "question": "The AeroTopo code already provides direct evidence for \"A real project use case for final\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
       "why_te": "ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.",
       "software": "intellij",
       "required_capability": "open-file",

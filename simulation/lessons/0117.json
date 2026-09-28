@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the project evidence — Static methods written in the AeroTopo project",
-      "question": "The AeroTopo code already provides direct evidence for \"Static methods written in the AeroTopo project\". undefined Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "question": "The AeroTopo code already provides direct evidence for \"Static methods written in the AeroTopo project\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
       "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.",
       "software": "intellij",
       "required_capability": "open-file",
