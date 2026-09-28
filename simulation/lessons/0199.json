@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 199,
+  "question_id": 199,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Which executes first: hashCode or equals",
+  "info_language": "te-Latn",
+  "answer": "In a typical HashMap lookup, hashCode() is evaluated first to identify a candidate bucket; equals() is only needed when candidate entries must be compared. Do not memorize that both always run; the collection first hashes, and equals() depends on whether matching bucket candidates exist.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Which executes first: hashCode or equals",
+      "question": "While learning Which executes first: hashCode or equals, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. SurveyPoint follows the same hash-based collection mechanics if it is used as a HashMap key. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "SurveyPoint follows the same hash-based collection mechanics if it is used as a HashMap key. Ee step lo project source nundi visible evidence ni identify chesi Which executes first: hashCode or equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Which executes first: hashCode or equals",
+      "question": "For Which executes first: hashCode or equals, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. In a typical HashMap lookup, hashCode() is evaluated first to identify a candidate bucket; equals() is only needed when candidate entries must be compared. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "In a typical HashMap lookup, hashCode() is evaluated first to identify a candidate bucket; equals() is only needed when candidate entries must be compared. Temporary HashThenEqualsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/HashThenEqualsDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class HashThenEqualsDemo {\n  public static void main(String[] args) {\n    class Key { String id; Key(String id){this.id=id;} public int hashCode(){System.out.print(\"H\");return 7;} public boolean equals(Object o){System.out.print(\"E\");return o instanceof Key k && id.equals(k.id);} }\n    var m=new java.util.HashMap<Key,Integer>(); m.put(new Key(\"A\"),1); System.out.print(\"|\"); m.get(new Key(\"A\"));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Which executes first: hashCode or equals",
+      "question": "Run the Which executes first: hashCode or equals experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"H|HE\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"H|HE\" ani vastundi. Ee result Which executes first: hashCode or equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson199-demo labs/java/HashThenEqualsDemo.java; java -cp target/lesson199-demo HashThenEqualsDemo",
+          "output": "H|HE"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Which executes first: hashCode or equals",
+      "question": "The Which executes first: hashCode or equals experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] HashThenEqualsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/HashThenEqualsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 199 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Which executes first: hashCode or equals",
+      "question": "Return to the highlighted AeroTopo source for Which executes first: hashCode or equals and assemble the interview answer from project evidence plus the verified language rule. Do not memorize that both always run; the collection first hashes, and equals() depends on whether matching bucket candidates exist. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Do not memorize that both always run; the collection first hashes, and equals() depends on whether matching bucket candidates exist. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 204,
+  "question_id": 204,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Steps for overriding equals and hashCode",
+  "info_language": "te-Latn",
+  "answer": "A safe manual implementation checks identity, null/type compatibility, compares every equality field, and computes hashCode() from the same fields. The checklist is identity fast-path, compatible type, equality fields, same fields in hashCode(), then tests for the full contract.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Steps for overriding equals and hashCode",
+      "question": "While learning Steps for overriding equals and hashCode, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. SurveyPoint record generation is a useful reference because the compiler performs the same conceptual alignment across its components. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "SurveyPoint record generation is a useful reference because the compiler performs the same conceptual alignment across its components. Ee step lo project source nundi visible evidence ni identify chesi Steps for overriding equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Steps for overriding equals and hashCode",
+      "question": "For Steps for overriding equals and hashCode, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. A safe manual implementation checks identity, null/type compatibility, compares every equality field, and computes hashCode() from the same fields. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "A safe manual implementation checks identity, null/type compatibility, compares every equality field, and computes hashCode() from the same fields. Temporary ManualEqualityStepsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ManualEqualityStepsDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class ManualEqualityStepsDemo {\n  public static void main(String[] args) {\n    class Key { final String id; final int srid; Key(String i,int s){id=i;srid=s;} public boolean equals(Object o){if(this==o)return true; if(!(o instanceof Key k))return false; return srid==k.srid && java.util.Objects.equals(id,k.id);} public int hashCode(){return java.util.Objects.hash(id,srid);} }\n    var a=new Key(\"P1\",32614); var b=new Key(\"P1\",32614); System.out.println(a.equals(b)+\" \"+(a.hashCode()==b.hashCode()));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Steps for overriding equals and hashCode",
+      "question": "Run the Steps for overriding equals and hashCode experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"true true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"true true\" ani vastundi. Ee result Steps for overriding equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson204-demo labs/java/ManualEqualityStepsDemo.java; java -cp target/lesson204-demo ManualEqualityStepsDemo",
+          "output": "true true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Steps for overriding equals and hashCode",
+      "question": "The Steps for overriding equals and hashCode experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] ManualEqualityStepsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ManualEqualityStepsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 204 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Steps for overriding equals and hashCode",
+      "question": "Return to the highlighted AeroTopo source for Steps for overriding equals and hashCode and assemble the interview answer from project evidence plus the verified language rule. The checklist is identity fast-path, compatible type, equality fields, same fields in hashCode(), then tests for the full contract. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "The checklist is identity fast-path, compatible type, equality fields, same fields in hashCode(), then tests for the full contract. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

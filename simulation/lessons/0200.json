@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 200,
+  "question_id": 200,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Do hashCode and equals always both execute",
+  "info_language": "te-Latn",
+  "answer": "Hash-based operations can call hashCode() without calling equals() when the selected bucket has no candidate requiring equality comparison. Collection behavior is conditional: hashing narrows the search, while equals() is invoked only when candidate comparison is necessary.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Do hashCode and equals always both execute",
+      "question": "While learning Do hashCode and equals always both execute, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. SurveyPoint equality may never be invoked during a lookup when its hash points to an empty bucket. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "SurveyPoint equality may never be invoked during a lookup when its hash points to an empty bucket. Ee step lo project source nundi visible evidence ni identify chesi Do hashCode and equals always both execute rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Do hashCode and equals always both execute",
+      "question": "For Do hashCode and equals always both execute, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. Hash-based operations can call hashCode() without calling equals() when the selected bucket has no candidate requiring equality comparison. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "Hash-based operations can call hashCode() without calling equals() when the selected bucket has no candidate requiring equality comparison. Temporary HashWithoutEqualsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/HashWithoutEqualsDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class HashWithoutEqualsDemo {\n  public static void main(String[] args) {\n    class Key { public int hashCode(){System.out.print(\"H\");return 99;} public boolean equals(Object o){System.out.print(\"E\");return true;} }\n    var m=new java.util.HashMap<Key,Integer>(); m.get(new Key());\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Do hashCode and equals always both execute",
+      "question": "Run the Do hashCode and equals always both execute experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"H\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"H\" ani vastundi. Ee result Do hashCode and equals always both execute gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson200-demo labs/java/HashWithoutEqualsDemo.java; java -cp target/lesson200-demo HashWithoutEqualsDemo",
+          "output": "H"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Do hashCode and equals always both execute",
+      "question": "The Do hashCode and equals always both execute experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] HashWithoutEqualsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/HashWithoutEqualsDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 200 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Do hashCode and equals always both execute",
+      "question": "Return to the highlighted AeroTopo source for Do hashCode and equals always both execute and assemble the interview answer from project evidence plus the verified language rule. Collection behavior is conditional: hashing narrows the search, while equals() is invoked only when candidate comparison is necessary. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Collection behavior is conditional: hashing narrows the search, while equals() is invoked only when candidate comparison is necessary. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

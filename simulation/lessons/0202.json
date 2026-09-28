@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 202,
+  "question_id": 202,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Importance of equals and hashCode",
+  "info_language": "te-Latn",
+  "answer": "equals() defines logical sameness while hashCode() enables efficient hash-based grouping consistent with that sameness; together they make value objects predictable in sets and maps. Treat the methods as domain semantics plus collection mechanics: equals() states what sameness means, hashCode() makes hash collections honor it efficiently.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Importance of equals and hashCode",
+      "question": "While learning Importance of equals and hashCode, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. AeroTopo's SurveyPoint record benefits from stable value equality when observations are compared, deduplicated, or keyed. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "AeroTopo's SurveyPoint record benefits from stable value equality when observations are compared, deduplicated, or keyed. Ee step lo project source nundi visible evidence ni identify chesi Importance of equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Importance of equals and hashCode",
+      "question": "For Importance of equals and hashCode, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. equals() defines logical sameness while hashCode() enables efficient hash-based grouping consistent with that sameness; together they make value objects predictable in sets and maps. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "equals() defines logical sameness while hashCode() enables efficient hash-based grouping consistent with that sameness; together they make value objects predictable in sets and maps. Temporary EqualityImportanceDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/EqualityImportanceDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class EqualityImportanceDemo {\n  public static void main(String[] args) {\n    record PointId(String value) {}\n    var a=new PointId(\"P9\"); var b=new PointId(\"P9\");\n    System.out.println(a.equals(b)+\" \"+(a.hashCode()==b.hashCode()));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Importance of equals and hashCode",
+      "question": "Run the Importance of equals and hashCode experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"true true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"true true\" ani vastundi. Ee result Importance of equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson202-demo labs/java/EqualityImportanceDemo.java; java -cp target/lesson202-demo EqualityImportanceDemo",
+          "output": "true true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Importance of equals and hashCode",
+      "question": "The Importance of equals and hashCode experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] EqualityImportanceDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/EqualityImportanceDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 202 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Importance of equals and hashCode",
+      "question": "Return to the highlighted AeroTopo source for Importance of equals and hashCode and assemble the interview answer from project evidence plus the verified language rule. Treat the methods as domain semantics plus collection mechanics: equals() states what sameness means, hashCode() makes hash collections honor it efficiently. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Treat the methods as domain semantics plus collection mechanics: equals() states what sameness means, hashCode() makes hash collections honor it efficiently. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

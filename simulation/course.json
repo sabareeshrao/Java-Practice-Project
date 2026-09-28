@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 16
+      "chapterEnd": 17
     }
   ],
   "chapters": [
@@ -321,6 +321,35 @@
         "lessons/0190.json",
         "lessons/0191.json",
         "lessons/0192.json"
+      ]
+    },
+    {
+      "id": "chapter-017",
+      "title": "17: Object, equals() & hashCode()",
+      "subtitle": "Build the complete equality sequence from Object's common methods and root-type role through custom value equality, the equals/hashCode contract, HashMap lookup behavior, reference versus value equality, String comparison, and real AeroTopo project usage.",
+      "lessons": [
+        "lessons/0193.json",
+        "lessons/0194.json",
+        "lessons/0195.json",
+        "lessons/0196.json",
+        "lessons/0197.json",
+        "lessons/0198.json",
+        "lessons/0199.json",
+        "lessons/0200.json",
+        "lessons/0201.json",
+        "lessons/0202.json",
+        "lessons/0203.json",
+        "lessons/0204.json",
+        "lessons/0205.json",
+        "lessons/0206.json",
+        "lessons/0207.json",
+        "lessons/0208.json",
+        "lessons/0209.json",
+        "lessons/0210.json",
+        "lessons/0211.json",
+        "lessons/0212.json",
+        "lessons/0213.json",
+        "lessons/0214.json"
       ]
     }
   ],

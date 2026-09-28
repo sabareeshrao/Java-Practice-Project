@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 210,
+  "question_id": 210,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "How String equals differs from ==",
+  "info_language": "te-Latn",
+  "answer": "String.equals() compares character content, while == compares String reference identity; interning can make == appear true for some literals and therefore makes reference comparison misleading. Never infer String content equality from an observed == success because pooling and interning affect identity without changing the semantic rule.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — How String equals differs from ==",
+      "question": "While learning How String equals differs from ==, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. LanguageLab uses String labels as values, so content semantics—not allocation identity—are the meaningful comparison rule. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "LanguageLab uses String labels as values, so content semantics—not allocation identity—are the meaningful comparison rule. Ee step lo project source nundi visible evidence ni identify chesi How String equals differs from == rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          11,
+          12
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — How String equals differs from ==",
+      "question": "For How String equals differs from ==, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. String.equals() compares character content, while == compares String reference identity; interning can make == appear true for some literals and therefore makes reference comparison misleading. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "String.equals() compares character content, while == compares String reference identity; interning can make == appear true for some literals and therefore makes reference comparison misleading. Temporary StringEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StringEqualityDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class StringEqualityDemo {\n  public static void main(String[] args) {\n    String a=\"tile\"; String b=\"tile\"; String c=new String(\"tile\");\n    System.out.println((a==b)+\" \"+(a==c)+\" \"+a.equals(c));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — How String equals differs from ==",
+      "question": "Run the How String equals differs from == experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"true false true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"true false true\" ani vastundi. Ee result How String equals differs from == gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson210-demo labs/java/StringEqualityDemo.java; java -cp target/lesson210-demo StringEqualityDemo",
+          "output": "true false true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — How String equals differs from ==",
+      "question": "The How String equals differs from == experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] StringEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StringEqualityDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 210 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — How String equals differs from ==",
+      "question": "Return to the highlighted AeroTopo source for How String equals differs from == and assemble the interview answer from project evidence plus the verified language rule. Never infer String content equality from an observed == success because pooling and interning affect identity without changing the semantic rule. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Never infer String content equality from an observed == success because pooling and interning affect identity without changing the semantic rule. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          11,
+          12
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

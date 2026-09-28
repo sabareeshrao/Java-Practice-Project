@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "lesson_number": 211,
+  "question_id": 211,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Credential comparison: == versus equals",
+  "info_language": "te-Latn",
+  "answer": "Using == for credential strings can reject equal text stored in different String objects, creating incorrect authentication behavior even when the characters match exactly. For security-sensitive secrets, a dedicated constant-time comparison may also be appropriate; == is still the wrong content test.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Credential comparison: == versus equals",
+      "question": "While learning Credential comparison: == versus equals, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. The same rule applies to any AeroTopo textual identifier or token: logical text comparison must not depend on whether two references share storage. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "The same rule applies to any AeroTopo textual identifier or token: logical text comparison must not depend on whether two references share storage. Ee step lo project source nundi visible evidence ni identify chesi Credential comparison: == versus equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          11,
+          12
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Credential comparison: == versus equals",
+      "question": "For Credential comparison: == versus equals, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. Using == for credential strings can reject equal text stored in different String objects, creating incorrect authentication behavior even when the characters match exactly. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "Using == for credential strings can reject equal text stored in different String objects, creating incorrect authentication behavior even when the characters match exactly. Temporary CredentialEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/CredentialEqualityDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class CredentialEqualityDemo {\n  public static void main(String[] args) {\n    String supplied=new String(\"token-7\"); String stored=new String(\"token-7\");\n    System.out.println((supplied==stored)+\" \"+supplied.equals(stored));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Credential comparison: == versus equals",
+      "question": "Run the Credential comparison: == versus equals experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"false true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"false true\" ani vastundi. Ee result Credential comparison: == versus equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson211-demo labs/java/CredentialEqualityDemo.java; java -cp target/lesson211-demo CredentialEqualityDemo",
+          "output": "false true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Credential comparison: == versus equals",
+      "question": "The Credential comparison: == versus equals experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] CredentialEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/CredentialEqualityDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 211 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Credential comparison: == versus equals",
+      "question": "Return to the highlighted AeroTopo source for Credential comparison: == versus equals and assemble the interview answer from project evidence plus the verified language rule. For security-sensitive secrets, a dedicated constant-time comparison may also be appropriate; == is still the wrong content test. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "For security-sensitive secrets, a dedicated constant-time comparison may also be appropriate; == is still the wrong content test. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/LanguageLab.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          4,
+          5,
+          11,
+          12
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

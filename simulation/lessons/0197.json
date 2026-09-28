@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "lesson_number": 197,
+  "question_id": 197,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "How equals and hashCode work in collections",
+  "info_language": "te-Latn",
+  "answer": "Hash-based collections use hashCode() to narrow the search to a bucket and equals() to confirm whether candidate keys are logically the same. Think of hashCode() as candidate-location selection and equals() as final logical-identity confirmation, not as competing equality mechanisms.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — How equals and hashCode work in collections",
+      "question": "While learning How equals and hashCode work in collections, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. SurveyPoint can act as a value key because its record-generated hashCode() and equals() cooperate on the same component state. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "SurveyPoint can act as a value key because its record-generated hashCode() and equals() cooperate on the same component state. Ee step lo project source nundi visible evidence ni identify chesi How equals and hashCode work in collections rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — How equals and hashCode work in collections",
+      "question": "For How equals and hashCode work in collections, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. Hash-based collections use hashCode() to narrow the search to a bucket and equals() to confirm whether candidate keys are logically the same. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "Hash-based collections use hashCode() to narrow the search to a bucket and equals() to confirm whether candidate keys are logically the same. Temporary HashCollectionLookupDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/HashCollectionLookupDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class HashCollectionLookupDemo {\n  public static void main(String[] args) {\n    record Key(String id) {}\n    var set = new java.util.HashSet<Key>(); set.add(new Key(\"P1\"));\n    System.out.println(set.contains(new Key(\"P1\")));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — How equals and hashCode work in collections",
+      "question": "Run the How equals and hashCode work in collections experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"true\" ani vastundi. Ee result How equals and hashCode work in collections gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson197-demo labs/java/HashCollectionLookupDemo.java; java -cp target/lesson197-demo HashCollectionLookupDemo",
+          "output": "true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — How equals and hashCode work in collections",
+      "question": "The How equals and hashCode work in collections experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] HashCollectionLookupDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/HashCollectionLookupDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 197 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — How equals and hashCode work in collections",
+      "question": "Return to the highlighted AeroTopo source for How equals and hashCode work in collections and assemble the interview answer from project evidence plus the verified language rule. Think of hashCode() as candidate-location selection and equals() as final logical-identity confirmation, not as competing equality mechanisms. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Think of hashCode() as candidate-location selection and equals() as final logical-identity confirmation, not as competing equality mechanisms. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

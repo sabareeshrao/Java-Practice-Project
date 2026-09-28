@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 214,
+  "question_id": 214,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Project use of == and equals",
+  "info_language": "te-Latn",
+  "answer": "AeroTopo should use equals() when comparing logical domain values or textual identifiers and reserve == for primitives, enum identity, or deliberate same-object checks. Explain the operator choice from intent: identity comparison differs from value comparison, and the wrong one can silently produce incorrect business logic.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Project use of == and equals",
+      "question": "While learning Project use of == and equals, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. The SurveyPoint example gives a project-specific contrast: separate record instances are different references but equal domain values. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "The SurveyPoint example gives a project-specific contrast: separate record instances are different references but equal domain values. Ee step lo project source nundi visible evidence ni identify chesi Project use of == and equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Project use of == and equals",
+      "question": "For Project use of == and equals, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. AeroTopo should use equals() when comparing logical domain values or textual identifiers and reserve == for primitives, enum identity, or deliberate same-object checks. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "AeroTopo should use equals() when comparing logical domain values or textual identifiers and reserve == for primitives, enum identity, or deliberate same-object checks. Temporary ProjectReferenceEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ProjectReferenceEqualityDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class ProjectReferenceEqualityDemo {\n  public static void main(String[] args) {\n    var a=new com.aerotopo.domain.SurveyPoint(\"P1\",10,20,30,32614); var b=new com.aerotopo.domain.SurveyPoint(\"P1\",10,20,30,32614);\n    System.out.println((a==b)+\" \"+a.equals(b));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Project use of == and equals",
+      "question": "Run the Project use of == and equals experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"false true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"false true\" ani vastundi. Ee result Project use of == and equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson214-demo labs/java/ProjectReferenceEqualityDemo.java; java -cp target/lesson214-demo ProjectReferenceEqualityDemo",
+          "output": "false true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Project use of == and equals",
+      "question": "The Project use of == and equals experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] ProjectReferenceEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ProjectReferenceEqualityDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 214 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Project use of == and equals",
+      "question": "Return to the highlighted AeroTopo source for Project use of == and equals and assemble the interview answer from project evidence plus the verified language rule. Explain the operator choice from intent: identity comparison differs from value comparison, and the wrong one can silently produce incorrect business logic. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Explain the operator choice from intent: identity comparison differs from value comparison, and the wrong one can silently produce incorrect business logic. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

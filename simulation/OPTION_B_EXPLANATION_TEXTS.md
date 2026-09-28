@@ -4585,3 +4585,486 @@ Terminal evidence "true false" ani report chestundi; `instanceof Audited` return
 
 Use marker interfaces only when type membership itself has clear semantics; annotations are often better when metadata needs values or broader targeting; final interview answer lo SurveyProducts.java project evidence, temporary experiment result, mariyu exact Java rule ni oka clear connection ga kalipi cheppali, opening step ni repeat cheyyakunda consequence ni emphasize cheyyali.
 
+## Lesson 193 — Object class methods in Java
+
+### Step 1 — Inspect the AeroTopo evidence — Object class methods in Java
+
+SurveyPoint is a concrete AeroTopo value object and ultimately participates in Java's Object-based type hierarchy. Ee step lo project source nundi visible evidence ni identify chesi Object class methods in Java rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Object class methods in Java
+
+Every Java object inherits core operations such as toString(), equals(), hashCode(), getClass(), wait(), notify(), and notifyAll() from Object; clone() has protected access and finalize() is obsolete/deprecated for cleanup. Temporary ObjectMethodsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Object class methods in Java
+
+Terminal evidence "Object true true" ani vastundi. Ee result Object class methods in Java gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Object class methods in Java
+
+[no highlight] ObjectMethodsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Object class methods in Java
+
+Use Object methods as a universal object protocol, but override value-oriented methods only when semantic identity requires it. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 194 — Why Object is the superclass of Java classes
+
+### Step 1 — Inspect the AeroTopo evidence — Why Object is the superclass of Java classes
+
+SurveyPoint can be passed anywhere an Object is accepted because ordinary Java classes ultimately share Object as their root. Ee step lo project source nundi visible evidence ni identify chesi Why Object is the superclass of Java classes rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Why Object is the superclass of Java classes
+
+Object gives ordinary reference types a common root so generic APIs can hold, inspect, compare, synchronize on, and stringify values through one minimum contract. Temporary ObjectSuperclassDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Why Object is the superclass of Java classes
+
+Terminal evidence "true" ani vastundi. Ee result Why Object is the superclass of Java classes gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Why Object is the superclass of Java classes
+
+[no highlight] ObjectSuperclassDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why Object is the superclass of Java classes
+
+The common root enables uniform APIs, while specific behavior still comes from the runtime class and declared contracts. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 195 — Comparing content equality of custom objects
+
+### Step 1 — Inspect the AeroTopo evidence — Comparing content equality of custom objects
+
+SurveyPoint is a record, so Java supplies component-based value equality for observations with the same components. Ee step lo project source nundi visible evidence ni identify chesi Comparing content equality of custom objects rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Comparing content equality of custom objects
+
+Custom content equality requires equals() to compare the fields that define logical identity rather than relying on reference identity. Temporary CustomEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Comparing content equality of custom objects
+
+Terminal evidence "false true" ani vastundi. Ee result Comparing content equality of custom objects gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Comparing content equality of custom objects
+
+[no highlight] CustomEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Comparing content equality of custom objects
+
+Choose equality fields from domain identity and keep equals() symmetric, transitive, consistent, null-safe, and aligned with hashCode(). Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 196 — Why hashCode must match equals
+
+### Step 1 — Inspect the AeroTopo evidence — Why hashCode must match equals
+
+SurveyPoint's record-generated equals() and hashCode() are derived from the same components, preserving the required contract automatically. Ee step lo project source nundi visible evidence ni identify chesi Why hashCode must match equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Why hashCode must match equals
+
+Whenever equals() says two objects are equal, hashCode() must return the same value so hash-based collections place and search those keys consistently. Temporary EqualsHashCodeContractDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Why hashCode must match equals
+
+Terminal evidence "true true" ani vastundi. Ee result Why hashCode must match equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Why hashCode must match equals
+
+[no highlight] EqualsHashCodeContractDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why hashCode must match equals
+
+If equals() changes logical identity, hashCode() must be updated from the same identity fields before the object is safely used as a hash key. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 197 — How equals and hashCode work in collections
+
+### Step 1 — Inspect the AeroTopo evidence — How equals and hashCode work in collections
+
+SurveyPoint can act as a value key because its record-generated hashCode() and equals() cooperate on the same component state. Ee step lo project source nundi visible evidence ni identify chesi How equals and hashCode work in collections rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — How equals and hashCode work in collections
+
+Hash-based collections use hashCode() to narrow the search to a bucket and equals() to confirm whether candidate keys are logically the same. Temporary HashCollectionLookupDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — How equals and hashCode work in collections
+
+Terminal evidence "true" ani vastundi. Ee result How equals and hashCode work in collections gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — How equals and hashCode work in collections
+
+[no highlight] HashCollectionLookupDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — How equals and hashCode work in collections
+
+Think of hashCode() as candidate-location selection and equals() as final logical-identity confirmation, not as competing equality mechanisms. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 198 — Problems when equals is overridden without hashCode
+
+### Step 1 — Inspect the AeroTopo evidence — Problems when equals is overridden without hashCode
+
+SurveyPoint avoids this defect because record generation keeps equals() and hashCode() synchronized. Ee step lo project source nundi visible evidence ni identify chesi Problems when equals is overridden without hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Problems when equals is overridden without hashCode
+
+If equals() is overridden but hashCode() remains identity-based, logically equal keys can land in different buckets and HashMap lookups may fail. Temporary BrokenHashKeyDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Problems when equals is overridden without hashCode
+
+Terminal evidence "null" ani vastundi. Ee result Problems when equals is overridden without hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Problems when equals is overridden without hashCode
+
+[no highlight] BrokenHashKeyDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Problems when equals is overridden without hashCode
+
+A class used as a hash key must treat equals() and hashCode() as one design decision; overriding only one violates the collection contract. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 199 — Which executes first: hashCode or equals
+
+### Step 1 — Inspect the AeroTopo evidence — Which executes first: hashCode or equals
+
+SurveyPoint follows the same hash-based collection mechanics if it is used as a HashMap key. Ee step lo project source nundi visible evidence ni identify chesi Which executes first: hashCode or equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Which executes first: hashCode or equals
+
+In a typical HashMap lookup, hashCode() is evaluated first to identify a candidate bucket; equals() is only needed when candidate entries must be compared. Temporary HashThenEqualsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Which executes first: hashCode or equals
+
+Terminal evidence "H|HE" ani vastundi. Ee result Which executes first: hashCode or equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Which executes first: hashCode or equals
+
+[no highlight] HashThenEqualsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Which executes first: hashCode or equals
+
+Do not memorize that both always run; the collection first hashes, and equals() depends on whether matching bucket candidates exist. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 200 — Do hashCode and equals always both execute
+
+### Step 1 — Inspect the AeroTopo evidence — Do hashCode and equals always both execute
+
+SurveyPoint equality may never be invoked during a lookup when its hash points to an empty bucket. Ee step lo project source nundi visible evidence ni identify chesi Do hashCode and equals always both execute rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Do hashCode and equals always both execute
+
+Hash-based operations can call hashCode() without calling equals() when the selected bucket has no candidate requiring equality comparison. Temporary HashWithoutEqualsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Do hashCode and equals always both execute
+
+Terminal evidence "H" ani vastundi. Ee result Do hashCode and equals always both execute gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Do hashCode and equals always both execute
+
+[no highlight] HashWithoutEqualsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Do hashCode and equals always both execute
+
+Collection behavior is conditional: hashing narrows the search, while equals() is invoked only when candidate comparison is necessary. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 201 — Why overriding equals alone is unsafe in HashMap
+
+### Step 1 — Inspect the AeroTopo evidence — Why overriding equals alone is unsafe in HashMap
+
+SurveyPoint's generated pair is the safer pattern for domain values that may appear in maps or sets. Ee step lo project source nundi visible evidence ni identify chesi Why overriding equals alone is unsafe in HashMap rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Why overriding equals alone is unsafe in HashMap
+
+Overriding only equals() makes the logical equality rule disagree with the hashing rule, so a HashMap can miss a key that the class itself considers equal. Temporary EqualsOnlyHashMapDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Why overriding equals alone is unsafe in HashMap
+
+Terminal evidence "true false" ani vastundi. Ee result Why overriding equals alone is unsafe in HashMap gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Why overriding equals alone is unsafe in HashMap
+
+[no highlight] EqualsOnlyHashMapDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Why overriding equals alone is unsafe in HashMap
+
+The defect is not merely performance; it can produce incorrect key retrieval because equal objects are searched in different hash locations. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 202 — Importance of equals and hashCode
+
+### Step 1 — Inspect the AeroTopo evidence — Importance of equals and hashCode
+
+AeroTopo's SurveyPoint record benefits from stable value equality when observations are compared, deduplicated, or keyed. Ee step lo project source nundi visible evidence ni identify chesi Importance of equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Importance of equals and hashCode
+
+equals() defines logical sameness while hashCode() enables efficient hash-based grouping consistent with that sameness; together they make value objects predictable in sets and maps. Temporary EqualityImportanceDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Importance of equals and hashCode
+
+Terminal evidence "true true" ani vastundi. Ee result Importance of equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Importance of equals and hashCode
+
+[no highlight] EqualityImportanceDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Importance of equals and hashCode
+
+Treat the methods as domain semantics plus collection mechanics: equals() states what sameness means, hashCode() makes hash collections honor it efficiently. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 203 — When to override equals and hashCode
+
+### Step 1 — Inspect the AeroTopo evidence — When to override equals and hashCode
+
+SurveyPoint is this kind of value-oriented domain type: equal component values can reasonably mean the same observation value. Ee step lo project source nundi visible evidence ni identify chesi When to override equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — When to override equals and hashCode
+
+Override equals() and hashCode() when separate instances should represent the same logical domain value, such as two independently loaded keys with the same stable identifier. Temporary EqualityScenarioDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — When to override equals and hashCode
+
+Terminal evidence "1" ani vastundi. Ee result When to override equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — When to override equals and hashCode
+
+[no highlight] EqualityScenarioDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — When to override equals and hashCode
+
+Do not override them automatically for every entity; first decide whether object identity or value identity matches the domain requirement. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 204 — Steps for overriding equals and hashCode
+
+### Step 1 — Inspect the AeroTopo evidence — Steps for overriding equals and hashCode
+
+SurveyPoint record generation is a useful reference because the compiler performs the same conceptual alignment across its components. Ee step lo project source nundi visible evidence ni identify chesi Steps for overriding equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Steps for overriding equals and hashCode
+
+A safe manual implementation checks identity, null/type compatibility, compares every equality field, and computes hashCode() from the same fields. Temporary ManualEqualityStepsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Steps for overriding equals and hashCode
+
+Terminal evidence "true true" ani vastundi. Ee result Steps for overriding equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Steps for overriding equals and hashCode
+
+[no highlight] ManualEqualityStepsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Steps for overriding equals and hashCode
+
+The checklist is identity fast-path, compatible type, equality fields, same fields in hashCode(), then tests for the full contract. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 205 — Can equal objects have different hash codes
+
+### Step 1 — Inspect the AeroTopo evidence — Can equal objects have different hash codes
+
+SurveyPoint's generated methods satisfy this implication for equal records. Ee step lo project source nundi visible evidence ni identify chesi Can equal objects have different hash codes rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Can equal objects have different hash codes
+
+No: the Object contract requires any two objects that are equal according to equals() to return the same hash code during the same relevant execution state. Temporary EqualObjectsHashDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Can equal objects have different hash codes
+
+Terminal evidence "true / true" ani vastundi. Ee result Can equal objects have different hash codes gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Can equal objects have different hash codes
+
+[no highlight] EqualObjectsHashDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Can equal objects have different hash codes
+
+The reverse is not required: unequal objects may share a hash code, so hash collisions are legal and equals() resolves them. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 206 — The equals and hashCode contract
+
+### Step 1 — Inspect the AeroTopo evidence — The equals and hashCode contract
+
+SurveyPoint's compiler-generated record equality gives the project a concrete contract-compliant value type. Ee step lo project source nundi visible evidence ni identify chesi The equals and hashCode contract rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — The equals and hashCode contract
+
+equals() must be reflexive, symmetric, transitive, consistent, and false for null; equal objects must also have equal hash codes, while unequal objects may collide. Temporary EqualityContractDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — The equals and hashCode contract
+
+Terminal evidence "true true true true" ani vastundi. Ee result The equals and hashCode contract gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — The equals and hashCode contract
+
+[no highlight] EqualityContractDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — The equals and hashCode contract
+
+When manually overriding, test the behavioral laws rather than checking only one happy-path comparison. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 207 — How to override equals correctly
+
+### Step 1 — Inspect the AeroTopo evidence — How to override equals correctly
+
+SurveyPoint shows an alternative: records generate a component-based equals() automatically when every component belongs to value identity. Ee step lo project source nundi visible evidence ni identify chesi How to override equals correctly rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — How to override equals correctly
+
+A correct equals() implementation normally performs a same-reference fast path, rejects incompatible values, then compares exactly the fields chosen to define logical identity. Temporary OverrideEqualsDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — How to override equals correctly
+
+Terminal evidence "true" ani vastundi. Ee result How to override equals correctly gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — How to override equals correctly
+
+[no highlight] OverrideEqualsDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — How to override equals correctly
+
+Keep equals() free of mutable identity fields when possible, and always revisit hashCode() at the same time. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 208 — Difference between == and equals in Java
+
+### Step 1 — Inspect the AeroTopo evidence — Difference between == and equals in Java
+
+Two separately created SurveyPoint values can be equals()-equal even though their references are not identical. Ee step lo project source nundi visible evidence ni identify chesi Difference between == and equals in Java rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Difference between == and equals in Java
+
+For object references, == asks whether two references point to the exact same object, whereas equals() asks for logical equality as defined by the class implementation. Temporary ReferenceVsValueEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Difference between == and equals in Java
+
+Terminal evidence "false true true" ani vastundi. Ee result Difference between == and equals in Java gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Difference between == and equals in Java
+
+[no highlight] ReferenceVsValueEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Difference between == and equals in Java
+
+Use == for primitive value comparison and intentional reference-identity checks; use equals() for object content or domain-value comparison. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 209 — Scenario where == is true but equals is false
+
+### Step 1 — Inspect the AeroTopo evidence — Scenario where == is true but equals is false
+
+SurveyPoint does not behave this way because record equality is reflexive and contract-compliant. Ee step lo project source nundi visible evidence ni identify chesi Scenario where == is true but equals is false rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Scenario where == is true but equals is false
+
+A class can syntactically define equals() differently from reference identity, so the same reference can return false from a deliberately broken equals() implementation; that violates reflexivity. Temporary IdentityTrueEqualsFalseDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Scenario where == is true but equals is false
+
+Terminal evidence "true false" ani vastundi. Ee result Scenario where == is true but equals is false gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Scenario where == is true but equals is false
+
+[no highlight] IdentityTrueEqualsFalseDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Scenario where == is true but equals is false
+
+This demonstrates what code can be written, not a valid equals design; a correct equals() must return true for self-comparison. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 210 — How String equals differs from ==
+
+### Step 1 — Inspect the AeroTopo evidence — How String equals differs from ==
+
+LanguageLab uses String labels as values, so content semantics—not allocation identity—are the meaningful comparison rule. Ee step lo project source nundi visible evidence ni identify chesi How String equals differs from == rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — How String equals differs from ==
+
+String.equals() compares character content, while == compares String reference identity; interning can make == appear true for some literals and therefore makes reference comparison misleading. Temporary StringEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — How String equals differs from ==
+
+Terminal evidence "true false true" ani vastundi. Ee result How String equals differs from == gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — How String equals differs from ==
+
+[no highlight] StringEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — How String equals differs from ==
+
+Never infer String content equality from an observed == success because pooling and interning affect identity without changing the semantic rule. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 211 — Credential comparison: == versus equals
+
+### Step 1 — Inspect the AeroTopo evidence — Credential comparison: == versus equals
+
+The same rule applies to any AeroTopo textual identifier or token: logical text comparison must not depend on whether two references share storage. Ee step lo project source nundi visible evidence ni identify chesi Credential comparison: == versus equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Credential comparison: == versus equals
+
+Using == for credential strings can reject equal text stored in different String objects, creating incorrect authentication behavior even when the characters match exactly. Temporary CredentialEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Credential comparison: == versus equals
+
+Terminal evidence "false true" ani vastundi. Ee result Credential comparison: == versus equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Credential comparison: == versus equals
+
+[no highlight] CredentialEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Credential comparison: == versus equals
+
+For security-sensitive secrets, a dedicated constant-time comparison may also be appropriate; == is still the wrong content test. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 212 — Implementing equals and hashCode manually
+
+### Step 1 — Inspect the AeroTopo evidence — Implementing equals and hashCode manually
+
+SurveyPoint avoids manual boilerplate through record semantics, but the same identity-field decision still matters conceptually. Ee step lo project source nundi visible evidence ni identify chesi Implementing equals and hashCode manually rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Implementing equals and hashCode manually
+
+Manual equality starts by defining identity fields, then implementing equals() from those fields and hashCode() from the exact same field set, followed by contract-focused tests. Temporary ManualEqualsHashCodeDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Implementing equals and hashCode manually
+
+Terminal evidence "true true" ani vastundi. Ee result Implementing equals and hashCode manually gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Implementing equals and hashCode manually
+
+[no highlight] ManualEqualsHashCodeDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Implementing equals and hashCode manually
+
+Prefer records or generated methods for simple value carriers, then review the fields against actual domain identity rather than trusting generation blindly. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 213 — Project use of equals and hashCode
+
+### Step 1 — Inspect the AeroTopo evidence — Project use of equals and hashCode
+
+This is direct project evidence rather than a hypothetical class: SurveyPoint is a record used as a domain observation. Ee step lo project source nundi visible evidence ni identify chesi Project use of equals and hashCode rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Project use of equals and hashCode
+
+In AeroTopo, value equality is useful through record-based domain types such as SurveyPoint, where component equality supports comparison and hash-based collection behavior without handwritten boilerplate. Temporary ProjectEqualityUseDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Project use of equals and hashCode
+
+Terminal evidence "true true" ani vastundi. Ee result Project use of equals and hashCode gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Project use of equals and hashCode
+
+[no highlight] ProjectEqualityUseDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Project use of equals and hashCode
+
+In an interview, describe the actual value-object use, why value equality is appropriate, and how record generation keeps the pair consistent. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.
+
+## Lesson 214 — Project use of == and equals
+
+### Step 1 — Inspect the AeroTopo evidence — Project use of == and equals
+
+The SurveyPoint example gives a project-specific contrast: separate record instances are different references but equal domain values. Ee step lo project source nundi visible evidence ni identify chesi Project use of == and equals rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.
+
+### Step 2 — Create the focused rule experiment — Project use of == and equals
+
+AeroTopo should use equals() when comparing logical domain values or textual identifiers and reserve == for primitives, enum identity, or deliberate same-object checks. Temporary ProjectReferenceEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.
+
+### Step 3 — Verify the compiler or runtime result — Project use of == and equals
+
+Terminal evidence "false true" ani vastundi. Ee result Project use of == and equals gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.
+
+### Step 4 — Remove the temporary experiment — Project use of == and equals
+
+[no highlight] ProjectReferenceEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.
+
+### Step 5 — Connect the rule back to AeroTopo — Project use of == and equals
+
+Explain the operator choice from intent: identity comparison differs from value comparison, and the wrong one can silently produce incorrect business logic. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.

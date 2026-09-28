@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "lesson_number": 208,
+  "question_id": 208,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Difference between == and equals in Java",
+  "info_language": "te-Latn",
+  "answer": "For object references, == asks whether two references point to the exact same object, whereas equals() asks for logical equality as defined by the class implementation. Use == for primitive value comparison and intentional reference-identity checks; use equals() for object content or domain-value comparison.",
+  "steps": [
+    {
+      "title": "Inspect the AeroTopo evidence — Difference between == and equals in Java",
+      "question": "While learning Difference between == and equals in Java, inspect the highlighted AeroTopo source and reason from what the code actually models instead of starting from a memorized definition. Two separately created SurveyPoint values can be equals()-equal even though their references are not identical. Explain which visible type or value semantics matter here, how that observation prepares the language rule tested next, and what incorrect conclusion a developer could reach by confusing object identity with logical equality.",
+      "why_te": "Two separately created SurveyPoint values can be equals()-equal even though their references are not identical. Ee step lo project source nundi visible evidence ni identify chesi Difference between == and equals in Java rule ki baseline set chestam; same topic ni repeat cheyyakunda domain meaning meeda focus chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create the focused rule experiment — Difference between == and equals in Java",
+      "question": "For Difference between == and equals in Java, create the temporary focused experiment shown in the editor and read every highlighted declaration before running it. For object references, == asks whether two references point to the exact same object, whereas equals() asks for logical equality as defined by the class implementation. Predict the exact compiler or runtime behavior, identify which expression is exercising the rule, and explain why isolating this case in a disposable file is safer than changing production AeroTopo classes merely to demonstrate a language edge case.",
+      "why_te": "For object references, == asks whether two references point to the exact same object, whereas equals() asks for logical equality as defined by the class implementation. Temporary ReferenceVsValueEqualityDemo.java lo ee rule ni isolate chesi run mundu exact result predict chestam; production AeroTopo code ni disturb cheyyakunda language behavior ni separate ga verify cheyyachu.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ReferenceVsValueEqualityDemo.java",
+          "language": "java",
+          "content": "import java.util.*;\npublic class ReferenceVsValueEqualityDemo {\n  public static void main(String[] args) {\n    var a=new String(\"tile\"); var b=new String(\"tile\"); var c=a;\n    System.out.println((a==b)+\" \"+a.equals(b)+\" \"+(a==c));\n  }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Verify the compiler or runtime result — Difference between == and equals in Java",
+      "question": "Run the Difference between == and equals in Java experiment and compare the terminal result with the prediction from the previous step. The expected first result is \"false true true\". Explain what the observed output proves, which part is guaranteed by Java's Object or collection contract, and which part depends on the class's own equals or hashCode implementation rather than on reference identity alone.",
+      "why_te": "Terminal evidence \"false true true\" ani vastundi. Ee result Difference between == and equals in Java gurinchi previous prediction ni concrete compiler/runtime evidence tho check chestundi; ippudu conclusion assumption kaadu, observed behavior meeda base avutundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson208-demo labs/java/ReferenceVsValueEqualityDemo.java; java -cp target/lesson208-demo ReferenceVsValueEqualityDemo",
+          "output": "false true true"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Remove the temporary experiment — Difference between == and equals in Java",
+      "question": "The Difference between == and equals in Java experiment has produced its evidence and the temporary file is now removed. Explain why cleanup preserves the verified conclusion while preventing lesson-only classes from polluting the continuously growing AeroTopo project, and state why this step intentionally has no code highlight even though the deletion itself is an important continuity action.",
+      "why_te": "[no highlight] ReferenceVsValueEqualityDemo.java lesson-only experiment kabatti evidence vachaka delete chestam; verified rule alage untundi kani cumulative AeroTopo project lo temporary source pollution remain avvadu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ReferenceVsValueEqualityDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The Lesson 208 demonstration is removed after verification to preserve cumulative project continuity."
+      }
+    },
+    {
+      "title": "Connect the rule back to AeroTopo — Difference between == and equals in Java",
+      "question": "Return to the highlighted AeroTopo source for Difference between == and equals in Java and assemble the interview answer from project evidence plus the verified language rule. Use == for primitive value comparison and intentional reference-identity checks; use equals() for object content or domain-value comparison. Distinguish identity, logical equality, and hash-based lookup where relevant, mention the most important contract or limitation, and finish with the practical design consequence without simply repeating the opening observation.",
+      "why_te": "Use == for primitive value comparison and intentional reference-identity checks; use equals() for object content or domain-value comparison. Final answer lo AeroTopo evidence, temporary experiment result, mariyu exact Java contract ni connect chestam; opening step ni repeat cheyyakunda practical consequence tho close chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/domain/SurveyPoint.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
