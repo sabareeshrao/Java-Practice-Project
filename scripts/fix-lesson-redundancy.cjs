@@ -256,7 +256,7 @@ for(const r of rows){
  if(wc(r.step.why_te)>55){
    const no=r.step.highlight?.kind==="none";
    const first=splitSentences(stripNo(r.step.why_te))[0]||cleanTitle(r.lesson.title);
-   const coreWords=punctless(first).split(/\s+/).filter(Boolean).slice(0,28).join(" ");
+   const coreWords=punctless(first).split(/\s+/).filter(Boolean).slice(0,16).join(" ");
    r.step.why_te=(no?"[no highlight] ":"")+`${coreWords}; ${uniqueTClause(r)}.`;
  }
  if(wc(r.step.why_te)<15)r.step.why_te+=` Ee step visible evidence ni next technical reasoning ki direct base ga use chestundi.`;
