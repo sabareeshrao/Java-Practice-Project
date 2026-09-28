@@ -3512,3 +3512,159 @@ Compiler applicable overloads identify chesi most specific signature choose ches
 ### Step 4 — State the interview answer — How Java resolves overloaded methods
 
 Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
+
+## Lesson 142 — Return type alone cannot overload a method
+
+### Step 1 — Open the polymorphism evidence — Return type alone cannot overload a method
+
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
+
+### Step 2 — Trace method selection — Return type alone cannot overload a method
+
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
+
+### Step 3 — Evaluate the design contract — Return type alone cannot overload a method
+
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
+
+### Step 4 — State the interview answer — Return type alone cannot overload a method
+
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
+
+## Lesson 143 — Choosing between int and Integer overloads
+
+### Step 1 — Open the polymorphism evidence — Choosing between int and Integer overloads
+
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
+
+### Step 2 — Trace method selection — Choosing between int and Integer overloads
+
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
+
+### Step 3 — Evaluate the design contract — Choosing between int and Integer overloads
+
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
+
+### Step 4 — State the interview answer — Choosing between int and Integer overloads
+
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
+
+## Lesson 144 — Why return type is not enough for overloading
+
+### Step 1 — Open the polymorphism evidence — Why return type is not enough for overloading
+
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
+
+### Step 2 — Trace method selection — Why return type is not enough for overloading
+
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
+
+### Step 3 — Evaluate the design contract — Why return type is not enough for overloading
+
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
+
+### Step 4 — State the interview answer — Why return type is not enough for overloading
+
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
+
+## Lesson 145 — Overloading ambiguity and maintenance risk
+
+### Step 1 — Open the AeroTopo baseline — Overloading ambiguity and maintenance risk
+
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
+
+### Step 2 — Create the focused dispatch experiment — Overloading ambiguity and maintenance risk
+
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
+
+### Step 3 — Run the dispatch experiment — Overloading ambiguity and maintenance risk
+
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
+
+### Step 4 — Remove the temporary dispatch experiment — Overloading ambiguity and maintenance risk
+
+[no highlight] Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
+
+### Step 5 — Return to the project design — Overloading ambiguity and maintenance risk
+
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
+
+## Lesson 146 — Null with String and Object overloads
+
+### Step 1 — Open the AeroTopo baseline — Null with String and Object overloads
+
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
+
+### Step 2 — Create the focused dispatch experiment — Null with String and Object overloads
+
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
+
+### Step 3 — Run the dispatch experiment — Null with String and Object overloads
+
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
+
+### Step 4 — Remove the temporary dispatch experiment — Null with String and Object overloads
+
+[no highlight] `null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
+
+### Step 5 — Return to the project design — Null with String and Object overloads
+
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
+
+## Lesson 147 — Overriding cannot reduce method visibility
+
+### Step 1 — Open the AeroTopo baseline — Overriding cannot reduce method visibility
+
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
+
+### Step 2 — Create the focused dispatch experiment — Overriding cannot reduce method visibility
+
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
+
+### Step 3 — Run the dispatch experiment — Overriding cannot reduce method visibility
+
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
+
+### Step 4 — Remove the temporary dispatch experiment — Overriding cannot reduce method visibility
+
+[no highlight] Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
+
+### Step 5 — Return to the project design — Overriding cannot reduce method visibility
+
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
+
+## Lesson 148 — How Java achieves polymorphism
+
+### Step 1 — Open the polymorphism evidence — How Java achieves polymorphism
+
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
+
+### Step 2 — Trace method selection — How Java achieves polymorphism
+
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
+
+### Step 3 — Evaluate the design contract — How Java achieves polymorphism
+
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
+
+### Step 4 — State the interview answer — How Java achieves polymorphism
+
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
+
+## Lesson 149 — A practical benefit of polymorphism
+
+### Step 1 — Open the polymorphism evidence — A practical benefit of polymorphism
+
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
+
+### Step 2 — Trace method selection — A practical benefit of polymorphism
+
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
+
+### Step 3 — Evaluate the design contract — A practical benefit of polymorphism
+
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
+
+### Step 4 — State the interview answer — A practical benefit of polymorphism
+
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
