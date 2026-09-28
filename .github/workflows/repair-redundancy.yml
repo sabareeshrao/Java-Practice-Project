@@ -22,6 +22,21 @@ jobs:
         run: python tools/build_question_index.py
       - name: Verify redundancy guard
         run: node scripts/audit-lesson-redundancy.cjs
-      - name: Preview rewritten lessons
+      - name: Verify generated content and Java
         run: |
-          node -e 'for (const n of [4,12,73,93,118,145,160]) { const f=`simulation/lessons/${String(n).padStart(4,"0")}.json`; const l=require(`./${f}`); console.log(`=== L${n} ${l.title} ===`); l.steps.forEach((s,i)=>console.log(`S${i+1}\nQ: ${s.question}\nTE: ${s.why_te}\n`)); }'
+          python tools/build_question_index.py --check
+          mvn -B -ntp verify
+      - name: Preview representative repaired lessons
+        run: |
+          node -e 'for (const n of [4,12,73,93,118,145,160]) { const f=`simulation/lessons/${String(n).padStart(4,"0")}.json`; const l=require(`./${f}`); console.log(`=== L${n} ${l.title} ===`); l.steps.forEach((s,i)=>console.log(`S${i+1}\\nQ: ${s.question}\\nTE: ${s.why_te}\\n`)); }'
+      - name: Commit repaired curriculum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add simulation/lessons simulation/OPTION_B_EXPLANATION_TEXTS.md simulation/REDUNDANCY_AUDIT_REPORT.md interview/question_index.json
+          if git diff --cached --quiet; then
+            echo "No curriculum changes to commit."
+            exit 0
+          fi
+          git commit -m "Repair redundant lesson questions and explanations"
+          git push origin HEAD:main

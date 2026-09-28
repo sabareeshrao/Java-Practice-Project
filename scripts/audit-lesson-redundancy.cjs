@@ -89,6 +89,8 @@ function nearPairs(field,threshold){
 const exactQ=exactGroups("question"),exactT=exactGroups("telugu");
 const sentQ=sentenceGroups("question"),sentT=sentenceGroups("telugu");
 const nearQ=nearPairs("question",0.82),nearT=nearPairs("telugu",0.78);
+const sameLessonNearQ=nearQ.filter(p=>p.a.lesson===p.b.lesson&&p.score>=0.86);
+const sameLessonNearT=nearT.filter(p=>p.a.lesson===p.b.lesson&&p.score>=0.86);
 
 function loc(r){return `L${r.lesson}S${r.step}`;}
 function printGroups(label,groups,field,limit=250){
@@ -136,6 +138,8 @@ const summary={
  nearQuestionPairs:nearQ.length,
  nearTeluguPairs:nearT.length,
  sameLessonExactTeluguGroups:sameLesson.length,
+ sameLessonNearQuestionPairs:sameLessonNearQ.length,
+ sameLessonNearTeluguPairs:sameLessonNearT.length,
  teluguScriptSteps:teluguScript.length,
  undefinedLeakSteps:undefinedLeaks.length
 };
@@ -146,7 +150,7 @@ for(const r of undefinedLeaks)console.log(loc(r));
 console.log("\nAUDIT_SUMMARY "+JSON.stringify(summary));
 const hardFailures=
  exactQ.length+exactT.length+sentQ.length+sentT.length+sameLesson.length+
- teluguScript.length+undefinedLeaks.length;
+ sameLessonNearQ.length+sameLessonNearT.length+teluguScript.length+undefinedLeaks.length;
 if(hardFailures){
  console.error("\nREDUNDANCY_GUARD_FAIL hardFailures="+hardFailures);
  process.exitCode=1;

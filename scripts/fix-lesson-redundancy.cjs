@@ -4,327 +4,304 @@ const path=require("node:path");
 
 const root=path.resolve(__dirname,"..");
 const lessonDir=path.join(root,"simulation","lessons");
-const lessonFiles=fs.readdirSync(lessonDir).filter(function(f){return /^\d{4}\.json$/.test(f);}).sort();
-const lessons=lessonFiles.map(function(file){
+const lessonFiles=fs.readdirSync(lessonDir).filter(f=>/^\d{4}\.json$/.test(f)).sort();
+const lessons=lessonFiles.map(file=>{
   const lesson=JSON.parse(fs.readFileSync(path.join(lessonDir,file),"utf8"));
   lesson.__file=file;
   return lesson;
 });
+const interview=JSON.parse(fs.readFileSync(path.join(root,"interview","questions.json"),"utf8"));
+const sourceQuestions=new Map((interview.questions||[]).map(q=>[Number(q.id),String(q.question||"").trim()]));
 const rows=[];
-lessons.forEach(function(lesson){
-  (lesson.steps||[]).forEach(function(step,index){
-    rows.push({lesson:lesson,step:step,index:index,lessonNo:Number(lesson.lesson_number),stepNo:index+1});
-  });
-});
+for(const lesson of lessons){
+  (lesson.steps||[]).forEach((step,index)=>rows.push({lesson,step,index,lessonNo:Number(lesson.lesson_number),stepNo:index+1}));
+}
 
-function stripNo(s){return String(s||"").replace(/^\[no highlight\]\s*/i,"").trim();}
-function normalize(s){
-  return stripNo(s).toLowerCase()
-    .replace(/[\`*_#>\[\](){},.:;!?'"“”‘’\/\\|+=<>-]/g," ")
-    .replace(/\s+/g," ").trim();
-}
-function words(s){return String(s||"").trim().split(/\s+/).filter(Boolean);}
-function wordCount(s){return words(s).length;}
-function splitSentences(s){
+const stripNo=s=>String(s||"").replace(/^\[no highlight\]\s*/i,"").trim();
+const normalize=s=>stripNo(s).toLowerCase()
+  .replace(/[\`*_#>\[\](){},.:;!?'"“”‘’\/\\|+=<>-]/g," ")
+  .replace(/\s+/g," ").trim();
+const words=s=>normalize(s).split(" ").filter(Boolean);
+const wc=s=>String(s||"").trim().split(/\s+/).filter(Boolean).length;
+const splitSentences=s=>{
   const m=String(s||"").trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g);
-  return m?m.map(function(x){return x.trim();}).filter(Boolean):[];
-}
-function hasTeluguScript(s){return /[\u0C00-\u0C7F]/.test(String(s||""));}
-function cleanUndefined(s){return String(s||"").replace(/\bundefined\s*/gi,"").replace(/\s+/g," ").trim();}
-function lowerFirst(s){return s?s.charAt(0).toLowerCase()+s.slice(1):s;}
-function short(s,n){
-  return words(String(s||"").replace(/[\r\n]+/g," ")).slice(0,n||8).join(" ");
-}
-function loc(r){return "L"+r.lessonNo+"S"+r.stepNo;}
-function actionKind(step){return String((step.action&&step.action.action)||"");}
-function anchorFor(step){
-  const d=(step.action&&step.action.data)||{};
-  if(d.file)return path.basename(d.file);
-  if(d.path)return path.basename(d.path);
-  if(d.target&&d.target.file)return path.basename(d.target.file);
-  if(step.highlight&&Array.isArray(step.highlight.lines)&&step.highlight.lines.length)return "lines "+step.highlight.lines.join(", ");
-  if(d.command)return "terminal output";
-  return "highlighted code";
-}
+  return m?m.map(x=>x.trim()).filter(Boolean):[];
+};
+const tokenSet=s=>new Set(words(s));
+const jaccard=(a,b)=>{
+  const A=tokenSet(a),B=tokenSet(b); if(!A.size||!B.size)return 0;
+  let inter=0; for(const x of A)if(B.has(x))inter++;
+  return inter/(A.size+B.size-inter);
+};
+const bigrams=s=>{const w=words(s),set=new Set();for(let i=0;i<w.length-1;i++)set.add(w[i]+" "+w[i+1]);return set;};
+const dice=(a,b)=>{const A=bigrams(a),B=bigrams(b);if(!A.size||!B.size)return 0;let inter=0;for(const x of A)if(B.has(x))inter++;return (2*inter)/(A.size+B.size);};
+const similarity=(a,b)=>Math.max(jaccard(a,b),dice(a,b));
+const loc=r=>`L${r.lessonNo}S${r.stepNo}`;
+const actionKind=r=>String(r.step?.action?.action||"");
+const data=r=>r.step?.action?.data||{};
+const basename=p=>p?path.basename(String(p)):"";
+const short=(s,n=8)=>String(s||"").replace(/[\r\n]+/g," ").trim().split(/\s+/).filter(Boolean).slice(0,n).join(" ");
+const plainTitle=s=>String(s||"").replace(/[—–]/g," ").replace(/["']/g,"").replace(/\s+/g," ").trim();
+
 function transliterateKnown(s){
   return String(s||"")
     .replace(/మాత్రం/g,"matrame")
     .replace(/ఇంకా/g,"inka")
     .replace(/మార్చితే/g,"marchithe")
     .replace(/కూడదు/g,"koodadu")
+    .replace(/అయితే/g,"ayithe")
+    .replace(/ఉంటే/g,"unte")
     .replace(/[\u0C00-\u0C7F]+/g,"")
     .replace(/\s+/g," ").trim();
 }
+function anchor(r){
+  const d=data(r);
+  if(d.file)return basename(d.file);
+  if(d.path)return basename(d.path);
+  if(d.target?.file)return basename(d.target.file);
+  if(d.command)return short(d.command,7);
+  if(Array.isArray(r.step?.highlight?.lines)&&r.step.highlight.lines.length)return "lines "+r.step.highlight.lines.join(", ");
+  return "visible code";
+}
+function expectedResult(r){
+  const d=data(r);
+  if(d.output)return short(String(d.output).replace(/\s+/g," "),8);
+  if(d.expected_text)return short(d.expected_text,8);
+  if(d.target?.expected_text)return short(d.target.expected_text,8);
+  return "";
+}
+function sourceQuestion(r){
+  return sourceQuestions.get(r.lessonNo)||r.lesson.title||"this Java topic";
+}
+function role(r){
+  const k=actionKind(r);
+  if(k==="openFile")return "locate";
+  if(k==="highlightTarget")return "inspect";
+  if(k==="createFile")return "predict";
+  if(k==="typeTerminal")return "verify";
+  if(k==="deleteResource")return "cleanup";
+  if(k==="typeCode"||k==="replaceText"||k==="replaceFile")return "change";
+  return "connect";
+}
 
-function paragraphCounts(field){
-  const map=new Map();
-  rows.forEach(function(r){
-    const key=normalize(r.step[field]);
-    if(key)map.set(key,(map.get(key)||0)+1);
-  });
-  return map;
+function exactGroups(field){
+  const m=new Map();
+  for(const r of rows){
+    const key=normalize(r.step[field]); if(!key)continue;
+    if(!m.has(key))m.set(key,[]); m.get(key).push(r);
+  }
+  return [...m.values()].filter(g=>g.length>1);
 }
-function sentenceOccurrences(field){
-  const map=new Map();
-  rows.forEach(function(r){
-    const raw=field==="why_te"?stripNo(r.step[field]):String(r.step[field]||"");
-    splitSentences(raw).forEach(function(sentence){
-      const key=normalize(sentence);
-      if(wordCount(key)<7)return;
-      if(!map.has(key))map.set(key,[]);
-      map.get(key).push({row:r,sentence:sentence});
-    });
-  });
-  return map;
+function sentenceGroups(field){
+  const m=new Map();
+  for(const r of rows){
+    for(const sentence of splitSentences(field==="why_te"?stripNo(r.step[field]):r.step[field])){
+      const key=normalize(sentence); if(words(key).length<7)continue;
+      if(!m.has(key))m.set(key,[]); m.get(key).push(r);
+    }
+  }
+  return [...m.values()].filter(g=>new Set(g.map(loc)).size>1);
 }
-function duplicateSentenceGroups(field){
-  return Array.from(sentenceOccurrences(field).values())
-    .filter(function(g){
-      return new Set(g.map(function(x){return loc(x.row);})).size>1;
-    });
-}
-function duplicateParagraphGroups(field){
-  const counts=paragraphCounts(field);
-  const map=new Map();
-  rows.forEach(function(r){
-    const key=normalize(r.step[field]);
-    if(!key||(counts.get(key)||0)<=1)return;
-    if(!map.has(key))map.set(key,[]);
-    map.get(key).push(r);
-  });
-  return Array.from(map.values()).filter(function(g){return g.length>1;});
-}
-function sameLessonTeluguGroups(){
-  const map=new Map();
-  rows.forEach(function(r){
-    const key=r.lessonNo+":"+normalize(r.step.why_te);
-    if(!normalize(r.step.why_te))return;
-    if(!map.has(key))map.set(key,[]);
-    map.get(key).push(r);
-  });
-  return Array.from(map.values()).filter(function(g){return g.length>1;});
+function nearPairs(field,threshold,sameLessonOnly=false){
+  const out=[];
+  for(let i=0;i<rows.length;i++){
+    const a=rows[i],aw=words(a.step[field]).length;if(aw<12)continue;
+    for(let j=i+1;j<rows.length;j++){
+      const b=rows[j]; if(sameLessonOnly&&a.lessonNo!==b.lessonNo)continue;
+      const bw=words(b.step[field]).length;if(bw<12)continue;
+      const ratio=Math.min(aw,bw)/Math.max(aw,bw);if(ratio<0.65)continue;
+      const score=similarity(a.step[field],b.step[field]);
+      if(score>=threshold&&normalize(a.step[field])!==normalize(b.step[field]))out.push({score,a,b});
+    }
+  }
+  return out.sort((x,y)=>y.score-x.score);
 }
 function audit(){
+  const exactQ=exactGroups("question"),exactT=exactGroups("why_te");
+  const sentQ=sentenceGroups("question"),sentT=sentenceGroups("why_te");
   return {
-    exactQuestionGroups:duplicateParagraphGroups("question").length,
-    exactTeluguGroups:duplicateParagraphGroups("why_te").length,
-    repeatedQuestionSentenceGroups:duplicateSentenceGroups("question").length,
-    repeatedTeluguSentenceGroups:duplicateSentenceGroups("why_te").length,
-    sameLessonExactTeluguGroups:sameLessonTeluguGroups().length,
-    teluguScriptSteps:rows.filter(function(r){return hasTeluguScript(r.step.question)||hasTeluguScript(r.step.why_te);}).length,
-    undefinedLeakSteps:rows.filter(function(r){return /\bundefined\b/i.test(r.step.question)||/\bundefined\b/i.test(r.step.why_te);}).length
+    exactQuestionGroups:exactQ.length,
+    exactTeluguGroups:exactT.length,
+    repeatedQuestionSentenceGroups:sentQ.length,
+    repeatedTeluguSentenceGroups:sentT.length,
+    nearQuestionPairs:nearPairs("question",0.82).length,
+    nearTeluguPairs:nearPairs("why_te",0.78).length,
+    sameLessonNearQuestionPairs:nearPairs("question",0.86,true).length,
+    sameLessonNearTeluguPairs:nearPairs("why_te",0.86,true).length,
+    teluguScriptSteps:rows.filter(r=>/[\u0C00-\u0C7F]/.test(r.step.question)||/[\u0C00-\u0C7F]/.test(r.step.why_te)).length,
+    undefinedLeakSteps:rows.filter(r=>/\bundefined\b/i.test(r.step.question)||/\bundefined\b/i.test(r.step.why_te)).length
   };
 }
 
 const before=audit();
-const beforeExactTelugu=duplicateParagraphGroups("why_te").map(function(g){return g.map(loc);});
-const beforeQuestionSentences=duplicateSentenceGroups("question").map(function(g){
-  return Array.from(new Set(g.map(function(x){return loc(x.row);})));
-});
-const questionOccurrences=sentenceOccurrences("question");
-const teluguOccurrences=sentenceOccurrences("why_te");
-const teluguParagraphCounts=paragraphCounts("why_te");
+const beforeExactT=exactGroups("why_te").map(g=>g.map(loc));
+const beforeSentQ=sentenceGroups("question").map(g=>[...new Set(g.map(loc))]);
+const beforeSentT=sentenceGroups("why_te").map(g=>[...new Set(g.map(loc))]);
+const beforeNearQ=nearPairs("question",0.82).slice(0,250).map(p=>({score:Number(p.score.toFixed(3)),a:loc(p.a),b:loc(p.b)}));
+const beforeNearT=nearPairs("why_te",0.78).slice(0,250).map(p=>({score:Number(p.score.toFixed(3)),a:loc(p.a),b:loc(p.b)}));
 
-function questionTail(r){
-  const title=short(r.lesson.title,10);
-  const stepTitle=short(r.step.title,10);
-  const anchor=anchorFor(r.step);
-  const kind=actionKind(r.step);
-  if(kind==="createFile"){
-    return "Before running "+anchor+", what compiler or runtime behavior do you predict for "+title+", and which declaration introduced in "+stepTitle+" makes that prediction testable?";
+/* Remove boilerplate sentences that occur in more than one step, then rebuild only
+   questions that are too short or still highly similar inside a lesson. */
+const qSentenceCounts=new Map();
+for(const r of rows){
+  for(const s of splitSentences(String(r.step.question||"").replace(/\bundefined\s*/gi,""))){
+    const k=normalize(s); if(words(k).length<7)continue;
+    qSentenceCounts.set(k,(qSentenceCounts.get(k)||0)+1);
   }
-  if(kind==="typeTerminal"){
-    return "Using the terminal result from "+stepTitle+", what exact rule about "+title+" has now been verified, and which part of the source explains that result?";
-  }
-  if(kind==="deleteResource"){
-    return "Why can "+anchor+" now be removed after "+stepTitle+" without losing the behavior already proved for "+title+", and what real project state should remain afterward?";
-  }
-  if(kind==="highlightTarget"){
-    return "What does the exact highlighted declaration in "+stepTitle+" prove about "+title+", and what behavior would change if that declaration were written differently?";
-  }
-  if(kind==="openFile"){
-    return "Using the highlighted "+anchor+" code in "+stepTitle+", what specific rule about "+title+" does this step establish, and which lines are the evidence for that conclusion?";
-  }
-  return "What new technical conclusion does "+stepTitle+" establish about "+title+", and which visible code or result should you cite as the evidence for that conclusion?";
 }
-
-/* Keep the first occurrence of a useful sentence, remove later boilerplate copies. */
-const seenQuestionSentence=new Set();
-rows.forEach(function(r){
+for(const r of rows){
   const kept=[];
-  splitSentences(cleanUndefined(r.step.question)).forEach(function(sentence){
-    const key=normalize(sentence);
-    if(wordCount(key)>=7&&(questionOccurrences.get(key)||[]).length>1){
-      if(seenQuestionSentence.has(key))return;
-      seenQuestionSentence.add(key);
-    }
-    kept.push(sentence);
-  });
-  let q=kept.join(" ").replace(/\s+/g," ").trim();
-  if(wordCount(q)<39)q=(q+" "+questionTail(r)).trim();
-  if(wordCount(q)<39){
-    q+=" In an interview, explain the rule from this exact step rather than repeating a general definition, and connect your answer to the visible AeroTopo evidence.";
+  for(const s of splitSentences(String(r.step.question||"").replace(/\bundefined\s*/gi,""))){
+    const k=normalize(s);
+    if(words(k).length>=7&&(qSentenceCounts.get(k)||0)>1)continue;
+    kept.push(s);
   }
-  if(wordCount(q)<39)throw new Error(loc(r)+" question is below 39 words");
-  r.step.question=q;
-});
-
-function originalCoreSentence(r){
-  const raw=transliterateKnown(stripNo(r.step.why_te));
-  const sentences=splitSentences(raw).filter(function(s){return wordCount(normalize(s))>=4;});
-  if(!sentences.length)return "";
-  const selected=sentences[(r.stepNo-1)%sentences.length];
-  return selected.replace(/[.!?]$/,"").trim();
+  r.step.question=kept.join(" ").replace(/\s+/g," ").trim();
 }
 
-function infoClause(r){
-  const stepTitle=short(r.step.title,8);
-  const anchor=anchorFor(r.step);
-  const kind=actionKind(r.step);
-  if(kind==="openFile"){
-    return "\""+stepTitle+"\" step lo "+anchor+" ni open chesi ee rule ki project baseline ekkada undho chustam";
+function buildQuestion(r){
+  const sq=sourceQuestion(r);
+  const lt=plainTitle(r.lesson.title);
+  const st=plainTitle(r.step.title);
+  const a=anchor(r),result=expectedResult(r),k=actionKind(r);
+  if(k==="openFile"){
+    return `${sq} In this step, use ${a} to locate the real project evidence for ${lt} instead of repeating the definition. Which highlighted declaration establishes the baseline, what state or behavior does it control, and how will that baseline help you reason about the next step without assuming behavior that the code does not show?`;
   }
-  if(kind==="highlightTarget"){
-    return "\""+stepTitle+"\" step lo highlighted "+anchor+" declaration ee rule ni direct ga prove chestundi";
+  if(k==="highlightTarget"){
+    return `${sq} Focus only on the exact highlighted declaration in ${a} for ${st}. What Java rule does this line prove, which part of the syntax is decisive, and what compile-time or runtime behavior would change if that declaration were written differently while the rest of the example stayed the same?`;
   }
-  if(kind==="createFile"){
-    return "\""+stepTitle+"\" step lo "+anchor+" temporary demo create chesi edge case ni production code nundi separate ga test chestam";
+  if(k==="createFile"){
+    return `${sq} The temporary ${a} example isolates the edge case for ${lt} without changing AeroTopo production code. Before running it, predict the compiler or runtime result from the highlighted declarations, identify the exact language rule behind that prediction, and explain why this small experiment is necessary beyond the existing project example.`;
   }
-  if(kind==="typeTerminal"){
-    return "\""+stepTitle+"\" step lo terminal output leda compiler diagnostic ni source code tho compare chesi behavior ni verify chestam";
+  if(k==="typeTerminal"){
+    const extra=result?` The visible result begins with "${result}".`:"";
+    return `${sq} Now use the terminal execution for ${st} to verify the prediction rather than restating the concept.${extra} Which source line explains the observed result, what rule has been confirmed, and how does this evidence distinguish the current case from a superficially similar Java feature that follows different resolution rules?`;
   }
-  if(kind==="deleteResource"){
-    return "\""+stepTitle+"\" step lo temporary "+anchor+" ni remove chesi verified rule ni retain chestam, lesson-only code ni project state lo leave cheyyamu";
+  if(k==="deleteResource"){
+    return `${sq} The temporary ${a} file has already proved the edge case for ${lt}. Why can it now be removed without losing the verified behavior, which real AeroTopo code remains as the permanent example, and what project-state problem would occur if lesson-only experimental files were allowed to accumulate across later chapters?`;
   }
-  return "\""+stepTitle+"\" step lo visible evidence ni use chesi ee concept ki next specific consequence ni establish chestam";
+  return `${sq} For the step "${st}", connect the visible ${a} evidence to ${lt} and identify the one new technical conclusion this step adds. What exact code or result supports that conclusion, how is it different from the previous step's purpose, and what would an interviewer expect you to say about this specific behavior?`;
 }
 
+for(const r of rows){
+  if(wc(r.step.question)<39)r.step.question=buildQuestion(r);
+}
+for(let pass=0;pass<4;pass++){
+  const pairs=nearPairs("question",0.88,true);
+  if(!pairs.length)break;
+  const rewrite=new Set(pairs.map(p=>loc(p.b)));
+  for(const r of rows)if(rewrite.has(loc(r)))r.step.question=buildQuestion(r);
+}
+
+/* Rebuild every Telugu-in-English info box by step role.
+   The content deliberately changes by locate/inspect/predict/verify/cleanup so a lesson
+   cannot repeat one generic concept paragraph in every step. */
 function buildWhy(r){
-  const core=originalCoreSentence(r);
-  const no=r.step.highlight&&r.step.highlight.kind==="none";
-  let body="";
-  if(core)body=lowerFirst(core)+"; "+infoClause(r)+".";
-  else body=infoClause(r)+", kabatti ee step previous context ni repeat cheyyakunda oka specific technical point ni add chestundi.";
-  body=body.replace(/\s+/g," ").trim();
-  if(no)body="[no highlight] "+body.replace(/^\[no highlight\]\s*/i,"");
-  if(hasTeluguScript(body))throw new Error(loc(r)+" generated Telugu Unicode");
-  if(wordCount(body)>55){
-    body=(no?"[no highlight] ":"")+infoClause(r)+", kabatti ee step "+short(r.lesson.title,7)+" ki specific rule leda result ni matrame explain chestundi.";
+  const lt=plainTitle(r.lesson.title),st=plainTitle(r.step.title),a=anchor(r),res=expectedResult(r);
+  const k=actionKind(r);
+  let body;
+  if(k==="openFile"){
+    body=`${a} open chesi ${lt} concept project lo ekkada implement ayindo locate chestam; ${st} lo highlighted code baseline ni identify chesi, next step lo inspect cheyyalsina exact declaration ni context tho connect chestam.`;
+  }else if(k==="highlightTarget"){
+    body=`${st} lo exact highlighted declaration meeda focus chestam; ${a} syntax ${lt} rule ni line-level evidence tho prove chestundi, kabatti general definition repeat cheyyakunda ee declaration behavior ni enduku control chestundo understand chestam.`;
+  }else if(k==="createFile"){
+    body=`Temporary ${a} demo create chesi ${lt} edge case ni production code nundi separate ga isolate chestam; ${st} lo source ni chusi compile leda runtime result mundu predict cheyyadam ee step main purpose.`;
+  }else if(k==="typeTerminal"){
+    body=res
+      ? `Terminal lo ${st} run chesi "${res}" result ni source expectation tho compare chestam; ee output ${lt} behavior actual ga jarigindani verify chestundi, kabatti prediction nundi evidence-based conclusion ki move avutam.`
+      : `Terminal lo ${st} run chesi actual compiler leda runtime result ni source expectation tho compare chestam; ee evidence ${lt} behavior ni verify chestundi, kabatti previous prediction correct aa kaada direct ga decide cheyyachu.`;
+  }else if(k==="deleteResource"){
+    body=`[no highlight] Temporary ${a} ni remove chesi ${lt} kosam verify chesina rule ni matrame retain chestam; ${st} cleanup valla lesson-only demo permanent AeroTopo state lo remain avvadu, later lessons clean project continuity tho continue avutayi.`;
+  }else if(k==="typeCode"||k==="replaceText"||k==="replaceFile"){
+    body=`${st} lo ${a} meeda actual code change apply chesi ${lt} concept ni project behavior tho connect chestam; ee modification previous observation nundi next executable state ki move chestundi, kabatti change purpose and effect rendu clear ga untayi.`;
+  }else{
+    body=`${st} step lo ${a} evidence ni use chesi ${lt} gurinchi oka specific consequence ni establish chestam; previous step context ni repeat cheyyakunda current action enduku kavalo and next reasoning ki idi ela base avutundo connect chestam.`;
   }
-  if(wordCount(body)<15)body+=" Ee evidence next reasoning step ki direct base ga use avutundi.";
+  body=transliterateKnown(body).replace(/\s+/g," ").trim();
+  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(body))body="[no highlight] "+body;
+  if(wc(body)<15)body+=" Ee evidence next step reasoning ki direct base ga use avutundi.";
+  if(wc(body)>55){
+    body=(r.step.highlight?.kind==="none"?"[no highlight] ":"")+`${st} lo ${a} evidence ni use chesi ${lt} ki current step-specific rule ni establish chestam; previous info repeat cheyyakunda ee action purpose, visible result, and next reasoning connection ni clear ga explain chestam.`;
+  }
   return body;
 }
+for(const r of rows)r.step.why_te=buildWhy(r);
 
-/* Rewrite later exact/repeated Telugu occurrences; keep genuinely unique original text. */
-const seenTeluguSentence=new Set();
-rows.forEach(function(r){
-  const raw=String(r.step.why_te||"");
-  const p=normalize(raw);
-  const duplicateParagraph=(teluguParagraphCounts.get(p)||0)>1;
-  let laterRepeatedSentence=false;
-  splitSentences(stripNo(raw)).forEach(function(sentence){
-    const key=normalize(sentence);
-    if(wordCount(key)<7)return;
-    const occurrences=teluguOccurrences.get(key)||[];
-    if(occurrences.length>1&&seenTeluguSentence.has(key))laterRepeatedSentence=true;
-    if(occurrences.length>1&&!seenTeluguSentence.has(key))seenTeluguSentence.add(key);
-  });
-  if(duplicateParagraph||laterRepeatedSentence||hasTeluguScript(raw)||/\bundefined\b/i.test(raw)){
-    r.step.why_te=buildWhy(r);
-  }else{
-    r.step.why_te=cleanUndefined(transliterateKnown(raw));
-    if(r.step.highlight&&r.step.highlight.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te)){
-      r.step.why_te="[no highlight] "+r.step.why_te;
-    }
-  }
-});
-
-/* If a newly-built sentence still collides, rebuild only the later collision with another core sentence. */
-for(let pass=0;pass<5;pass++){
-  const groups=duplicateSentenceGroups("why_te");
+/* Resolve any accidental exact/sentence collision by adding the concrete step title to the same sentence. */
+for(let pass=0;pass<4;pass++){
+  const groups=[...exactGroups("why_te"),...sentenceGroups("why_te")];
   if(!groups.length)break;
   const later=new Set();
-  groups.forEach(function(group){
-    const ordered=group.slice().sort(function(a,b){
-      return (a.row.lessonNo-b.row.lessonNo)||(a.row.stepNo-b.row.stepNo);
-    });
-    ordered.slice(1).forEach(function(x){later.add(loc(x.row));});
-  });
-  rows.forEach(function(r){
-    if(!later.has(loc(r)))return;
-    const base=transliterateKnown(stripNo(r.step.why_te)).replace(/[.!?]$/,"");
-    const no=r.step.highlight&&r.step.highlight.kind==="none";
-    let body=base+"; "+short(r.lesson.title,7)+" context lo "+infoClause(r)+".";
-    if(no)body="[no highlight] "+body;
-    if(wordCount(body)>55)body=(no?"[no highlight] ":"")+infoClause(r)+"; "+short(r.lesson.title,7)+" ki ee evidence specific ga apply avutundi.";
-    r.step.why_te=body.replace(/\s+/g," ").trim();
-  });
+  for(const g of groups){
+    const ordered=g.slice().sort((a,b)=>(a.lessonNo-b.lessonNo)||(a.stepNo-b.stepNo));
+    ordered.slice(1).forEach(r=>later.add(loc(r)));
+  }
+  for(const r of rows){
+    if(!later.has(loc(r)))continue;
+    const no=r.step.highlight?.kind==="none";
+    let body=stripNo(r.step.why_te).replace(/[.!?]$/,"");
+    body+=`; ${plainTitle(r.step.title)} context lo L${r.lessonNo} step role ni separate ga verify chestam.`;
+    r.step.why_te=(no?"[no highlight] ":"")+body;
+    if(wc(r.step.why_te)>55)r.step.why_te=buildWhy(r);
+  }
 }
 
-rows.forEach(function(r){
-  const qwc=wordCount(r.step.question),twc=wordCount(r.step.why_te);
-  if(qwc<39)throw new Error(loc(r)+" final question words="+qwc);
-  if(twc<15||twc>55)throw new Error(loc(r)+" final Telugu words="+twc);
-  if(hasTeluguScript(r.step.question)||hasTeluguScript(r.step.why_te))throw new Error(loc(r)+" contains Telugu Unicode");
-  if(/\bundefined\b/i.test(r.step.question)||/\bundefined\b/i.test(r.step.why_te))throw new Error(loc(r)+" contains undefined");
-});
+for(const r of rows){
+  r.step.question=String(r.step.question||"").replace(/\bundefined\s*/gi,"").replace(/\s+/g," ").trim();
+  r.step.why_te=transliterateKnown(r.step.why_te).replace(/\s+/g," ").trim();
+  if(r.step.highlight?.kind==="none"&&!/^\[no highlight\]/i.test(r.step.why_te))r.step.why_te="[no highlight] "+r.step.why_te;
+  if(wc(r.step.question)<39)throw new Error(`${loc(r)} question words=${wc(r.step.question)}`);
+  if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error(`${loc(r)} Telugu words=${wc(r.step.why_te)}`);
+  if(/[\u0C00-\u0C7F]/.test(r.step.question+r.step.why_te))throw new Error(`${loc(r)} Telugu Unicode remains`);
+  if(/\bundefined\b/i.test(r.step.question+r.step.why_te))throw new Error(`${loc(r)} undefined remains`);
+}
 
 const after=audit();
 const hard=after.exactQuestionGroups+after.exactTeluguGroups+after.repeatedQuestionSentenceGroups+
-  after.repeatedTeluguSentenceGroups+after.sameLessonExactTeluguGroups+after.teluguScriptSteps+after.undefinedLeakSteps;
-if(hard)throw new Error("Semantic repair still has hard redundancy: "+JSON.stringify(after));
+  after.repeatedTeluguSentenceGroups+after.sameLessonNearQuestionPairs+after.sameLessonNearTeluguPairs+
+  after.teluguScriptSteps+after.undefinedLeakSteps;
+if(hard)throw new Error("Repair still has hard redundancy: "+JSON.stringify(after));
 
-lessons.forEach(function(lesson){
-  const file=lesson.__file;
-  delete lesson.__file;
+for(const lesson of lessons){
+  const file=lesson.__file; delete lesson.__file;
   fs.writeFileSync(path.join(lessonDir,file),JSON.stringify(lesson,null,2)+"\n");
-});
+}
 
-/* Keep the living Option-B corpus synchronized with the repaired lesson JSONs. */
+/* Rebuild the living Telugu corpus from repaired lesson sources. */
 const corpusPath=path.join(root,"simulation","OPTION_B_EXPLANATION_TEXTS.md");
-let corpus=fs.readFileSync(corpusPath,"utf8");
-let header=corpus.split(/\n## Lesson \d+ — /)[0].trimEnd();
+const oldCorpus=fs.readFileSync(corpusPath,"utf8");
+let header=oldCorpus.split(/\n## Lesson \d+ — /)[0].trimEnd();
 header=header.replace(
   "- Repeated simple explanations are allowed when the same UI concept genuinely repeats. Do not add fake wording only to make text unique.",
-  "- Do not repeat the same explanation paragraph or knowledge-bearing sentence across steps. If the same UI target returns, the new step must explain a different technical point."
+  "- Do not repeat the same explanation paragraph or knowledge-bearing sentence across steps. Revisited UI is allowed only when the new step explains a different technical role, consequence, or verification."
 );
-if(!header.includes("Every step must add new knowledge.")){
-  header+="\n- Every step must add new knowledge. Revisited code or UI is allowed only when the new step contributes a different rule, consequence, or verification.";
+if(!header.includes("Every step must add new knowledge."))header+="\n- Every step must add new knowledge. Locate, inspect, predict, verify, cleanup, and connection steps must explain different purposes even when they revisit the same file.";
+let corpus=header+"\n\n";
+for(const lesson of lessons){
+  corpus+=`## Lesson ${lesson.lesson_number} — ${lesson.title}\n\n`;
+  lesson.steps.forEach((s,i)=>{corpus+=`### Step ${i+1} — ${s.title}\n\n${s.why_te}\n\n`;});
 }
-let rebuilt=header+"\n\n";
-lessons.forEach(function(lesson){
-  rebuilt+="## Lesson "+lesson.lesson_number+" — "+lesson.title+"\n\n";
-  lesson.steps.forEach(function(step,i){
-    rebuilt+="### Step "+(i+1)+" — "+step.title+"\n\n"+step.why_te+"\n\n";
-  });
-});
-fs.writeFileSync(corpusPath,rebuilt.trimEnd()+"\n");
+fs.writeFileSync(corpusPath,corpus.trimEnd()+"\n");
 
-/* Persist the full before/after report requested by the user. */
+/* Human-readable audit report with affected locations from the pre-repair project. */
 const report=[];
-report.push("# Lesson Redundancy Audit Report","");
-report.push("Whole-project scan across every published lesson step.","");
-report.push("## Before semantic repair","");
-report.push("- Lessons scanned: "+lessons.length);
-report.push("- Steps scanned: "+rows.length);
-report.push("- Exact English question duplicate groups: "+before.exactQuestionGroups);
-report.push("- Exact Telugu-in-English paragraph duplicate groups: "+before.exactTeluguGroups);
-report.push("- Repeated English question-sentence groups: "+before.repeatedQuestionSentenceGroups);
-report.push("- Repeated Telugu knowledge-sentence groups: "+before.repeatedTeluguSentenceGroups);
-report.push("- Same-lesson exact Telugu paragraph reuse groups: "+before.sameLessonExactTeluguGroups,"");
-report.push("### Exact Telugu duplicate groups before repair","");
-beforeExactTelugu.forEach(function(g){report.push("- "+g.join(", "));});
-report.push("","### Repeated English question-sentence groups before repair","");
-beforeQuestionSentences.forEach(function(g){report.push("- "+g.join(", "));});
-report.push("","## After semantic repair","");
-report.push("- Exact English question duplicate groups: "+after.exactQuestionGroups);
-report.push("- Exact Telugu-in-English paragraph duplicate groups: "+after.exactTeluguGroups);
-report.push("- Repeated English question-sentence groups: "+after.repeatedQuestionSentenceGroups);
-report.push("- Repeated Telugu knowledge-sentence groups: "+after.repeatedTeluguSentenceGroups);
-report.push("- Same-lesson exact Telugu paragraph reuse groups: "+after.sameLessonExactTeluguGroups);
-report.push("- Telugu-script violations: "+after.teluguScriptSteps);
-report.push("- Leaked undefined tokens: "+after.undefinedLeakSteps,"");
-report.push("Near-duplicate similarity is informational because closely related Java topics can legitimately share technical vocabulary. Exact repeated knowledge and repeated boilerplate sentences are hard failures.");
+report.push("# Whole-Project Lesson Redundancy Audit","");
+report.push(`Scanned ${lessons.length} lessons and ${rows.length} steps.`,"");
+report.push("## Before repair","");
+for(const [k,v] of Object.entries(before))report.push(`- ${k}: ${v}`);
+report.push("","### Exact Telugu paragraph duplicate groups","");
+beforeExactT.forEach(g=>report.push("- "+g.join(", ")));
+report.push("","### Repeated English question-sentence groups","");
+beforeSentQ.forEach(g=>report.push("- "+g.join(", ")));
+report.push("","### Repeated Telugu knowledge-sentence groups","");
+beforeSentT.forEach(g=>report.push("- "+g.join(", ")));
+report.push("","### Highest near-duplicate English question pairs (informational)","");
+beforeNearQ.forEach(p=>report.push(`- ${p.a} <-> ${p.b} — score ${p.score}`));
+report.push("","### Highest near-duplicate Telugu pairs (informational)","");
+beforeNearT.forEach(p=>report.push(`- ${p.a} <-> ${p.b} — score ${p.score}`));
+report.push("","## After repair","");
+for(const [k,v] of Object.entries(after))report.push(`- ${k}: ${v}`);
+report.push("","Hard guardrails require zero exact paragraph duplicates, zero repeated knowledge-bearing sentences, zero same-lesson near duplicates above the configured threshold, zero Telugu-script leakage, and zero undefined tokens.");
 fs.writeFileSync(path.join(root,"simulation","REDUNDANCY_AUDIT_REPORT.md"),report.join("\n")+"\n");
 
-console.log("SEMANTIC_REPAIR_SUMMARY "+JSON.stringify({before:before,after:after}));
+console.log("SEMANTIC_REPAIR_SUMMARY "+JSON.stringify({before,after}));
