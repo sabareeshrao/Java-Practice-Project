@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open AeroTopo's explicit resource-owning object",
-      "question": "`RuntimeLab. NativeBuffer` provides a useful lifecycle example because its constructor registers cleanup state, the object is used while referenced, and `close()` triggers deterministic release. Inspect the constructor, cleaner registration, cleanable field, and close method. Which parts correspond to creation, active use, and explicit cleanup?",
+      "question": "`RuntimeLab.NativeBuffer` provides a useful lifecycle example because its constructor registers cleanup state, the object is used while referenced, and `close()` triggers deterministic release. Inspect the constructor, cleaner registration, cleanable field, and close method. Which parts correspond to creation, active use, and explicit cleanup?",
       "why_te": "NativeBuffer constructor cleanup registration chestundi. Object reference active ga unna time use chestam. `close()` deterministic cleanup trigger chestundi. GC timing meeda depend kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -40,7 +40,7 @@
     },
     {
       "title": "Inspect construction and cleanup registration",
-      "question": "The constructor calls `CLEANER. register(this, new State(releases))`, associating cleanup state with the newly created object. Why does this registration happen during object initialization, and why should a cleaner be treated as a fallback rather than the primary way to release important external resources?",
+      "question": "The constructor calls `CLEANER.register(this, new State(releases))`, associating cleanup state with the newly created object. Why does this registration happen during object initialization, and why should a cleaner be treated as a fallback rather than the primary way to release important external resources?",
       "why_te": "Object create ayinappudu cleanup state register chestundi. Cleaner eventual fallback matrame; exact GC timing guarantee ledu. Important resource ki explicit close better.",
       "software": "intellij",
       "required_capability": "highlight-target",

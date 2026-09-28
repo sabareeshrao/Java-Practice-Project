@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Covariant return types",
-      "question": "What is a Covariant Return Type? Using \"Open the AeroTopo baseline — Covariant return types\" as the concrete case for \"Covariant return types\", before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. From the \"Open the AeroTopo baseline — Covariant return types\" result in \"Covariant return types\", which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "\"Covariant return types\" context lo SurveyProducts. java meeda focus chestam. \"Open the AeroTopo baseline — Covariant return types\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "What is a Covariant Return Type? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Covariant return types",
-      "question": "The temporary source for \"Covariant return types\" isolates the exact Java dispatch or signature rule asked by the interview question. From the \"Create the focused dispatch experiment — Covariant return types\" result in \"Covariant return types\", read the highlighted declarations and predict the compiler or runtime result. While working through \"Create the focused dispatch experiment — Covariant return types\" in \"Covariant return types\", which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Lesson 136 step 2 lo \"Create the focused dispatch experiment —\" kosam CovariantReturnDemo. Lesson 136 step 2 context lo, java ni use chesi \"Covariant return types\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary source for \"Covariant return types\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Run the dispatch experiment — Covariant return types",
-      "question": "The focused program for \"Covariant return types\" now gives direct compiler or runtime evidence. While working through \"Run the dispatch experiment — Covariant return types\" in \"Covariant return types\", compare the result with the declared reference types and method signatures rather than guessing from names. For the \"Covariant return types\" lesson, use the \"Run the dispatch experiment — Covariant return types\" evidence, what does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "\"Covariant return types\" kosam \"Run the dispatch experiment — Covariant return types\" step terminal evidence ni use chestundi. \"Covariant return types\" lo \"Run the dispatch experiment — Covariant return types\" context lo, terminal result result ni source code tho compare chesi, rule compile time lo apply ayyinda leda runtime lo execute ayyinda ani distinguish chestam.",
+      "question": "The focused program for \"Covariant return types\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Covariant return types",
-      "question": "The isolated example for \"Covariant return types\" has established the Java rule and should not remain as lesson-only production code. For the \"Covariant return types\" lesson, use the \"Remove the temporary dispatch experiment — Covariant return types\" evidence, after deleting it, preserve the compiler or runtime behavior as evidence. At the \"Remove the temporary dispatch experiment — Covariant return types\" stage of \"Covariant return types\", why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] \"Covariant return types\" experiment complete ayyaka \"Remove the temporary dispatch experiment — Covariant return types\" step CovariantReturnDemo. java ni delete chestundi. \"Covariant return types\" lo \"Remove the temporary dispatch experiment — Covariant return\" context lo, ila temporary teaching code project architecture lo mix avvadu, kani verified Java rule lesson knowledge ga remain avutundi.",
+      "question": "The isolated example for \"Covariant return types\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -100,8 +100,8 @@
     },
     {
       "title": "Return to the project design — Covariant return types",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"What is a Covariant Return Type? At the \"Return to the project design — Covariant return types\" stage of \"Covariant return types\", \" using both the real project and the focused result. Using \"Return to the project design — Covariant return types\" as the concrete case for \"Covariant return types\", how would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Lesson 136 step 5 lo \"Return to the project design —\" kosam SurveyProducts. Lesson 136 step 5 context lo, java ni use chesi \"Covariant return types\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"What is a Covariant Return Type?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

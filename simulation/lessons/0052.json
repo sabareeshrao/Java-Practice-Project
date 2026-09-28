@@ -35,7 +35,7 @@
     },
     {
       "title": "Inspect ordered frequency counting",
-      "question": "The expression `label. codePoints(). forEach(c -> counts. merge(c,1,Integer::sum))` increments the frequency for each Unicode code point while `LinkedHashMap` remembers first insertion order. Why is preserving encounter order essential if the requirement asks for the first non-repeating character rather than any non-repeating character?",
+      "question": "The expression `label.codePoints().forEach(c -> counts.merge(c,1,Integer::sum))` increments the frequency for each Unicode code point while `LinkedHashMap` remembers first insertion order. Why is preserving encounter order essential if the requirement asks for the first non-repeating character rather than any non-repeating character?",
       "why_te": "Counts matrame saripovu; first unique kavali kabatti original encounter order kuda kavali. LinkedHashMap insertion order preserve chestundi. Anduke first count-1 entry correct answer avutundi.",
       "software": "intellij",
       "required_capability": "highlight-target",

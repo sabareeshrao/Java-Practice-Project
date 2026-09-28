@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — No-argument constructors and why they matter",
-      "question": "A no-argument constructor supports default or framework-driven creation when no caller arguments are available is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"No-argument constructors and why they matter\" and connect the syntax to the initialization rule behind it. At the \"Open the project evidence — No-argument constructors and why they\" stage of \"No-argument constructors and why they matter\", which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Lesson 84 step 1 lo \"Open the project evidence — No-argument\" kosam SurveyProject. Lesson 84 step 1 context lo, java ni use chesi \"No-argument constructors and why they matter\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A no-argument constructor supports default or framework-driven creation when no caller arguments are available is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"No-argument constructors and why they matter\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -48,8 +48,8 @@
     },
     {
       "title": "Trace the Java rule — No-argument constructors and why they matter",
-      "question": "For \"No-argument constructors and why they matter\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. At the \"Trace the Java rule — No-argument constructors and why they\" stage of \"No-argument constructors and why they matter\", examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Using \"Trace the Java rule — No-argument constructors and why they\" as the concrete case for \"No-argument constructors and why they matter\", why does Java enforce this behavior during construction, and what mistake does the example prevent?",
-      "why_te": "\"No-argument constructors and why they matter\" context lo SurveyProject. java meeda focus chestam. \"Trace the Java rule — No-argument constructors and why\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "For \"No-argument constructors and why they matter\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -86,8 +86,8 @@
     },
     {
       "title": "Connect caller and object state — No-argument constructors and why they matter",
-      "question": "A practical explanation of \"No-argument constructors and why they matter\" should connect caller intent to what the class guarantees during initialization. Using \"Connect caller and object state — No-argument constructors and why\" as the concrete case for \"No-argument constructors and why they matter\", using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. From the \"Connect caller and object state — No-argument constructors and why\" result in \"No-argument constructors and why they matter\", how does this separation make object creation predictable while protecting the type's invariants?",
-      "why_te": "Lesson 84 step 3 lo \"Connect caller and object state —\" kosam SurveyProject. Lesson 84 step 3 context lo, java ni use chesi \"No-argument constructors and why they matter\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A practical explanation of \"No-argument constructors and why they matter\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -124,8 +124,8 @@
     },
     {
       "title": "State the interview rule — No-argument constructors and why they matter",
-      "question": "Now summarize \"No-argument constructors and why they matter\" from the evidence instead of from memorized syntax. From the \"State the interview rule — No-argument constructors and why they\" result in \"No-argument constructors and why they matter\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Lesson 84 step 4 lo \"State the interview rule — No-argument\" kosam SurveyProject. Lesson 84 step 4 context lo, java ni use chesi \"No-argument constructors and why they matter\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now summarize \"No-argument constructors and why they matter\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

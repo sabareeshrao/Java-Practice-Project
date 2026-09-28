@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Why a static block runs before main",
-      "question": "Before isolating \"Why a static block runs before main\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. For the \"Why a static block runs before main\" lesson, use the \"Open the AeroTopo baseline — Why a static block runs\" evidence, what lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
-      "why_te": "Lesson 104 step 1 lo \"Open the AeroTopo baseline — Why\" kosam AeroTopoApplication. Lesson 104 step 1 context lo, java ni use chesi \"Why a static block runs before\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Before isolating \"Why a static block runs before main\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused language experiment — Why a static block runs before main",
-      "question": "The temporary class for \"Why a static block runs before main\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. At the \"Create the focused language experiment — Why a static block\" stage of \"Why a static block runs before main\", read the highlighted lines and predict the output or failure path. Using \"Create the focused language experiment — Why a static block\" as the concrete case for \"Why a static block runs before main\", which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
-      "why_te": "Lesson 104 step 2 lo \"Create the focused language experiment —\" kosam StaticBeforeMainDemo. Lesson 104 step 2 context lo, java ni use chesi \"Why a static block runs before\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary class for \"Why a static block runs before main\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Run the focused language experiment — Why a static block runs before main",
-      "question": "The temporary program for \"Why a static block runs before main\" now provides direct runtime or compiler evidence. Using \"Run the focused language experiment — Why a static block\" as the concrete case for \"Why a static block runs before main\", compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. From the \"Run the focused language experiment — Why a static block\" result in \"Why a static block runs before main\", which common misunderstanding about static or final behavior does this example remove?",
-      "why_te": "Lesson 104 step 3 lo \"Run the focused language experiment —\" kosam terminal result ni use chesi \"Why a static block runs before\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary program for \"Why a static block runs before main\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Remove the temporary experiment — Why a static block runs before main",
-      "question": "The focused example for \"Why a static block runs before main\" has established the rule and should not become permanent AeroTopo functionality. From the \"Remove the temporary experiment — Why a static block runs\" result in \"Why a static block runs before main\", after deleting the temporary source, keep only the verified behavior as lesson evidence. While working through \"Remove the temporary experiment — Why a static block runs\" in \"Why a static block runs before main\", why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
-      "why_te": "[no highlight] Lesson 104 step 4 lo \"Remove the temporary experiment — Why\" kosam StaticBeforeMainDemo. Lesson 104 step 4 context lo, java ni use chesi \"Why a static block runs before\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The focused example for \"Why a static block runs before main\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Return to the production example — Why a static block runs before main",
-      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Why a static block runs before main\" and connect the observed rule back to project design. While working through \"Return to the production example — Why a static block\" in \"Why a static block runs before main\", how would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
-      "why_te": "Lesson 104 step 5 lo \"Return to the production example —\" kosam AeroTopoApplication. Lesson 104 step 5 context lo, java ni use chesi \"Why a static block runs before\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Why a static block runs before main\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

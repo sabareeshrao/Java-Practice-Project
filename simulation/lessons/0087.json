@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the valid AeroTopo context — Whether a top-level class can be private or protected",
-      "question": "Before testing the edge case behind \"Whether a top-level class can be private or protected\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. From the \"Open the valid AeroTopo context — Whether a top-level class\" result in \"Whether a top-level class can be private or protected\", what rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
-      "why_te": "Lesson 87 step 1 lo \"Open the valid AeroTopo context —\" kosam SurveyProducts. Lesson 87 step 1 context lo, java ni use chesi \"Whether a top-level class can be\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Before testing the edge case behind \"Whether a top-level class can be private or protected\", inspect the highlighted AeroTopo code and identify the package or access pattern that already compiles cleanly. What rule is the project following here, and why is this valid baseline useful before experimenting with a temporary class that intentionally approaches the language boundary?",
+      "why_te": "Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected",
-      "question": "The temporary source labs/java/TopLevelAccessDemo. java is part of the focused experiment for \"Whether a top-level class can be private or protected\" and isolates one package or access-control rule without changing production code. For the \"Whether a top-level class can be private or protected\" lesson, use the \"Create labs/java/TopLevelAccessDemo. java — Whether a top-level class can be private\" evidence, read this declaration and predict how the compiler will interpret its visibility or name resolution. At the \"Create labs/java/TopLevelAccessDemo. java — Whether a top-level class can be private\" stage of \"Whether a top-level class can be private or protected\", which Java rule determines whether another source file can legally refer to this exact type or member?",
-      "why_te": "Lesson 87 step 2 lo \"Create labs/java/TopLevelAccessDemo. Lesson 87 step 2 context lo, java — Whether a top-level\" kosam TopLevelAccessDemo. Lesson 87 step 2 context lo, java ni use chesi \"Whether a top-level class can be\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary source labs/java/TopLevelAccessDemo.java is part of the focused experiment for \"Whether a top-level class can be private or protected\" and isolates one package or access-control rule without changing production code. Read this declaration and predict how the compiler will interpret its visibility or name resolution. Which Java rule determines whether another source file can legally refer to this exact type or member?",
+      "why_te": "Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Run the package/access experiment — Whether a top-level class can be private or protected",
-      "question": "The temporary sources for \"Whether a top-level class can be private or protected\" are now compiled or executed together so the rule becomes observable rather than theoretical. For the \"Whether a top-level class can be private or protected\" lesson, use the \"Run the package/access experiment — Whether a top-level class can\" evidence, compare the result with the declarations you just inspected. At the \"Run the package/access experiment — Whether a top-level class can\" stage of \"Whether a top-level class can be private or protected\", what does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
-      "why_te": "Lesson 87 step 3 lo \"Run the package/access experiment — Whether\" kosam terminal result ni use chesi \"Whether a top-level class can be\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary sources for \"Whether a top-level class can be private or protected\" are now compiled or executed together so the rule becomes observable rather than theoretical. Compare the result with the declarations you just inspected. What does this evidence prove about Java package naming, imports, or access modifiers, and what ambiguity or illegal access does the rule prevent?",
+      "why_te": "Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Remove labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected",
-      "question": "The labs/java/TopLevelAccessDemo. java portion of the temporary experiment for \"Whether a top-level class can be private or protected\" is no longer needed after the rule has been demonstrated. Using \"Remove labs/java/TopLevelAccessDemo. java — Whether a top-level class can be private\" as the concrete case for \"Whether a top-level class can be private or protected\", removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. From the \"Remove labs/java/TopLevelAccessDemo. java — Whether a top-level class can be private\" result in \"Whether a top-level class can be private or protected\", why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
-      "why_te": "[no highlight] Lesson 87 step 4 lo \"Remove labs/java/TopLevelAccessDemo. Lesson 87 step 4 context lo, java — Whether a top-level\" kosam TopLevelAccessDemo. Lesson 87 step 4 context lo, java ni use chesi \"Whether a top-level class can be\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The labs/java/TopLevelAccessDemo.java portion of the temporary experiment for \"Whether a top-level class can be private or protected\" is no longer needed after the rule has been demonstrated. Removing this exact file prevents lesson-only examples from becoming permanent AeroTopo architecture. Why does this cleanup preserve cumulative continuity while still allowing isolated compiler and namespace experiments during learning?",
+      "why_te": "[no highlight] Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -102,8 +102,8 @@
     },
     {
       "title": "Return to the real project structure — Whether a top-level class can be private or protected",
-      "question": "With every temporary source for \"Whether a top-level class can be private or protected\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. Using \"Return to the real project structure — Whether a top-level\" as the concrete case for \"Whether a top-level class can be private or protected\", how would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
-      "why_te": "\"Whether a top-level class can be private or\" context lo SurveyProducts. java meeda focus chestam. \"Return to the real project structure — Whether a\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "With every temporary source for \"Whether a top-level class can be private or protected\" removed, revisit the valid AeroTopo code and connect the observed rule back to production design. How would you explain the Java rule and the maintainability reason together, including how naming, imports, access modifiers, or encapsulated state prevent collisions and uncontrolled coupling in a larger application?",
+      "why_te": "Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

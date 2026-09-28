@@ -10,7 +10,7 @@
   "steps": [
     {
       "title": "Open the project's ordinary constructor and factory paths",
-      "question": "AeroTopo creates domain objects directly with constructors and also centralizes creation through `ProductFactory. create`. Inspect the factory switch and notice that it still ultimately calls constructors. Why should factories be described as an object-creation API pattern rather than a completely different JVM allocation mechanism?",
+      "question": "AeroTopo creates domain objects directly with constructors and also centralizes creation through `ProductFactory.create`. Inspect the factory switch and notice that it still ultimately calls constructors. Why should factories be described as an object-creation API pattern rather than a completely different JVM allocation mechanism?",
       "why_te": "ProductFactory caller ki creation logic hide chestundi, kani inside `new Dem` or `new Orthomosaic` use chestundi. Factory API pattern; underlying normal object creation constructor dwara jarugutundi.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Create a small reflection-based construction example",
-      "question": "A temporary class uses `Class. getDeclaredConstructor(). newInstance()` to create an object through reflection. This is still constructor-based creation, but the constructor is selected dynamically through metadata instead of a compile-time `new Demo()` expression. Why is that distinction useful when discussing frameworks and reflection?",
+      "question": "A temporary class uses `Class.getDeclaredConstructor().newInstance()` to create an object through reflection. This is still constructor-based creation, but the constructor is selected dynamically through metadata instead of a compile-time `new Demo()` expression. Why is that distinction useful when discussing frameworks and reflection?",
       "why_te": "Reflection lo constructor metadata runtime lo select chestam. `newInstance` actual constructor ni invoke chestundi. Frameworks dynamic types handle cheyyadaniki ee mechanism useful.",
       "software": "intellij",
       "required_capability": "create-file",

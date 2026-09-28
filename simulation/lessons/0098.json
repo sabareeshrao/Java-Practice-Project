@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Mutating an object referenced by a final variable",
-      "question": "Before isolating \"Mutating an object referenced by a final variable\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. While working through \"Open the AeroTopo baseline — Mutating an object referenced by\" in \"Mutating an object referenced by a final variable\", what lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
-      "why_te": "Lesson 98 step 1 lo \"Open the AeroTopo baseline — Mutating\" kosam SurveyProducts. Lesson 98 step 1 context lo, java ni use chesi \"Mutating an object referenced by a\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Before isolating \"Mutating an object referenced by a final variable\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Create the focused language experiment — Mutating an object referenced by a final variable",
-      "question": "The temporary class for \"Mutating an object referenced by a final variable\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. For the \"Mutating an object referenced by a final variable\" lesson, use the \"Create the focused language experiment — Mutating an object referenced\" evidence, read the highlighted lines and predict the output or failure path. At the \"Create the focused language experiment — Mutating an object referenced\" stage of \"Mutating an object referenced by a final variable\", which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
-      "why_te": "Lesson 98 step 2 lo \"Create the focused language experiment —\" kosam FinalReferenceDemo. Lesson 98 step 2 context lo, java ni use chesi \"Mutating an object referenced by a\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary class for \"Mutating an object referenced by a final variable\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Run the focused language experiment — Mutating an object referenced by a final variable",
-      "question": "The temporary program for \"Mutating an object referenced by a final variable\" now provides direct runtime or compiler evidence. At the \"Run the focused language experiment — Mutating an object referenced\" stage of \"Mutating an object referenced by a final variable\", compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Using \"Run the focused language experiment — Mutating an object referenced\" as the concrete case for \"Mutating an object referenced by a final variable\", which common misunderstanding about static or final behavior does this example remove?",
-      "why_te": "\"Run the focused language experiment — Mutating an object\" step result observation meeda focus chestundi. \"Mutating an object referenced by a final variable\" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.",
+      "question": "The temporary program for \"Mutating an object referenced by a final variable\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -84,8 +84,8 @@
     },
     {
       "title": "Remove the temporary experiment — Mutating an object referenced by a final variable",
-      "question": "The focused example for \"Mutating an object referenced by a final variable\" has established the rule and should not become permanent AeroTopo functionality. Using \"Remove the temporary experiment — Mutating an object referenced by\" as the concrete case for \"Mutating an object referenced by a final variable\", after deleting the temporary source, keep only the verified behavior as lesson evidence. From the \"Remove the temporary experiment — Mutating an object referenced by\" result in \"Mutating an object referenced by a final variable\", why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
-      "why_te": "[no highlight] Lesson 98 step 4 lo \"Remove the temporary experiment — Mutating\" kosam FinalReferenceDemo. Lesson 98 step 4 context lo, java ni use chesi \"Mutating an object referenced by a\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The focused example for \"Mutating an object referenced by a final variable\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -102,8 +102,8 @@
     },
     {
       "title": "Return to the production example — Mutating an object referenced by a final variable",
-      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Mutating an object referenced by a final variable\" and connect the observed rule back to project design. From the \"Return to the production example — Mutating an object referenced\" result in \"Mutating an object referenced by a final variable\", how would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
-      "why_te": "Lesson 98 step 5 lo \"Return to the production example —\" kosam SurveyProducts. Lesson 98 step 5 context lo, java ni use chesi \"Mutating an object referenced by a\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Mutating an object referenced by a final variable\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

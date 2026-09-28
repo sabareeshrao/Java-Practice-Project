@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — Choosing between int and Integer overloads",
-      "question": "How will Java choose which overloaded method to call if one method takes int and the other takes Integer? While working through \"Open the polymorphism evidence — Choosing between int and Integer\" in \"Choosing between int and Integer overloads\", use the AeroTopo code as the starting point rather than answering from terminology alone. LanguageLab exposes exactly the int and Integer overload pair from the question. At the \"Open the polymorphism evidence — Choosing between int and Integer\" stage of \"Choosing between int and Integer overloads\", inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Lesson 143 step 1 lo \"Open the polymorphism evidence — Choosing\" kosam LanguageLab. Lesson 143 step 1 context lo, java ni use chesi \"Choosing between int and Integer overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "How will Java choose which overloaded method to call if one method takes int and the other takes Integer? Use the AeroTopo code as the starting point rather than answering from terminology alone. LanguageLab exposes exactly the int and Integer overload pair from the question. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Trace method selection — Choosing between int and Integer overloads",
-      "question": "For \"Choosing between int and Integer overloads\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. For the \"Choosing between int and Integer overloads\" lesson, use the \"Trace method selection — Choosing between int and Integer overloads\" evidence, which of those pieces controls method selection in this example, and which details do not participate? At the \"Trace method selection — Choosing between int and Integer overloads\" stage of \"Choosing between int and Integer overloads\", why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "Lesson 143 step 2 lo \"Trace method selection — Choosing between\" kosam LanguageLab. Lesson 143 step 2 context lo, java ni use chesi \"Choosing between int and Integer overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "For \"Choosing between int and Integer overloads\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -54,8 +54,8 @@
     },
     {
       "title": "Evaluate the design contract — Choosing between int and Integer overloads",
-      "question": "For the \"Choosing between int and Integer overloads\" lesson, use the \"Evaluate the design contract — Choosing between int and Integer\" evidence, a production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Choosing between int and Integer overloads\", explain what contract callers depend on and what implementations may vary. Using \"Evaluate the design contract — Choosing between int and Integer\" as the concrete case for \"Choosing between int and Integer overloads\", what maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "\"Choosing between int and Integer overloads\" context lo LanguageLab. java meeda focus chestam. \"Evaluate the design contract — Choosing between int and\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Choosing between int and Integer overloads\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -76,8 +76,8 @@
     },
     {
       "title": "State the interview answer — Choosing between int and Integer overloads",
-      "question": "Now answer the interview question \"How will Java choose which overloaded method to call if one method takes int and the other takes Integer? \" directly from the evidence. From the \"State the interview answer — Choosing between int and Integer\" result in \"Choosing between int and Integer overloads\", state the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. While working through \"State the interview answer — Choosing between int and Integer\" in \"Choosing between int and Integer overloads\", how would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Lesson 143 step 4 lo \"State the interview answer — Choosing\" kosam LanguageLab. Lesson 143 step 4 context lo, java ni use chesi \"Choosing between int and Integer overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer the interview question \"How will Java choose which overloaded method to call if one method takes int and the other takes Integer?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

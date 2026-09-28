@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Start from AeroTopo's normal Spring Boot entry point",
-      "question": "AeroTopo's real `main` method hands control to `SpringApplication. run` and does not explicitly terminate the JVM. Before experimenting with `System. exit`, inspect this normal service startup path. Why is returning lifecycle control to Spring fundamentally different from asking Java to terminate the entire process immediately?",
-      "why_te": "Lesson 33 step 1 lo \"Start from AeroTopo's normal Spring Boot\" kosam AeroTopoApplication. java ni use chesi \"Understand System. exit() in Java\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "AeroTopo's real `main` method hands control to `SpringApplication.run` and does not explicitly terminate the JVM. Before experimenting with `System.exit`, inspect this normal service startup path. Why is returning lifecycle control to Spring fundamentally different from asking Java to terminate the entire process immediately?",
+      "why_te": "AeroTopo main method `SpringApplication.run` tho application ni start chestundi. Normal service lifecycle ni Spring manage chestundi. `System.exit` మాత్రం complete JVM process ni terminate cheyyadaniki request chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create a minimal System.exit experiment",
-      "question": "A temporary command-line class can demonstrate `System. exit` without placing process-termination behavior inside the Spring Boot application. The program prints one message, calls `System. exit(7)`, and contains another print afterward. Which two observable results should distinguish JVM termination from an ordinary method return?",
-      "why_te": "Temporary demo Spring Boot service ni touch cheyyakunda `System. exit` behavior chupistundi. First message print avutundi, exit status set avutundi. Exit call taruvata unna print execute avvakudadhu.",
+      "question": "A temporary command-line class can demonstrate `System.exit` without placing process-termination behavior inside the Spring Boot application. The program prints one message, calls `System.exit(7)`, and contains another print afterward. Which two observable results should distinguish JVM termination from an ordinary method return?",
+      "why_te": "Temporary demo Spring Boot service ni touch cheyyakunda `System.exit` behavior chupistundi. First message print avutundi, exit status set avutundi. Exit call taruvata unna print execute avvakudadhu.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Focus on the exit request and status",
-      "question": "The highlighted statement passes integer status `7` to `System. exit`. Java does not interpret every non-zero value identically, but operating systems and scripts conventionally treat zero as success and non-zero as failure. Why can this status be useful to a parent shell even though the JVM itself is terminating?",
-      "why_te": "`System. exit(7)` process ki exit status 7 istundi. Shell leda automation process result ni status dwara check cheyyagaladu. Zero usually success, non-zero usually failure convention.",
+      "question": "The highlighted statement passes integer status `7` to `System.exit`. Java does not interpret every non-zero value identically, but operating systems and scripts conventionally treat zero as success and non-zero as failure. Why can this status be useful to a parent shell even though the JVM itself is terminating?",
+      "why_te": "`System.exit(7)` process ki exit status 7 istundi. Shell leda automation process result ni status dwara check cheyyagaladu. Zero usually success, non-zero usually failure convention.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -86,7 +86,7 @@
     },
     {
       "title": "Inspect the statement after System.exit",
-      "question": "The Java compiler allows a statement after `System. exit` because the method's declared return type is `void`, but the running JVM begins shutdown instead of continuing normally. What should happen to `System. out. println(\"after exit\")` when this program actually executes and the process terminates at the previous line?",
+      "question": "The Java compiler allows a statement after `System.exit` because the method's declared return type is `void`, but the running JVM begins shutdown instead of continuing normally. What should happen to `System.out.println(\"after exit\")` when this program actually executes and the process terminates at the previous line?",
       "why_te": "Compiler next line ni allow chestundi, kani runtime lo JVM exit start avutundi. Anduke `after exit` print execute avvadu. Process previous line daggare termination sequence ki velthundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -136,7 +136,7 @@
     {
       "title": "Remove the process-termination demo from the project state",
       "question": "The temporary class intentionally terminates its JVM, so it should not become part of AeroTopo's ordinary service code or cumulative project state. After deleting it, what usage rule should prevent a request handler, service method, or reusable library from unexpectedly shutting down the entire application process?",
-      "why_te": "Temporary exit demo ni remove chestunnam. Normal controller, service, library code lo `System. exit` use cheyyadam dangerous endukante whole JVM stop avutundi. Process termination intentional ga unna context lo matrame use cheyyali.",
+      "why_te": "Temporary exit demo ni remove chestunnam. Normal controller, service, library code lo `System.exit` use cheyyadam dangerous endukante whole JVM stop avutundi. Process termination intentional ga unna context lo matrame use cheyyali.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -157,8 +157,8 @@
     },
     {
       "title": "Return to the framework-managed application startup",
-      "question": "AeroTopo's entry point again shows the normal long-running service pattern: start Spring and allow the framework or hosting environment to manage lifecycle. With the experiment completed, how would you explain what `System. exit(status)` does, what the status communicates, and why application code should use it sparingly?",
-      "why_te": "Malli AeroTopo main method ni chudandi. Long-running Spring service lifecycle framework ki leave chestam. Interview lo `System. exit` whole JVM terminate chestundi, status caller ki istundi, and careful ga use cheyyali ani cheppali.",
+      "question": "AeroTopo's entry point again shows the normal long-running service pattern: start Spring and allow the framework or hosting environment to manage lifecycle. With the experiment completed, how would you explain what `System.exit(status)` does, what the status communicates, and why application code should use it sparingly?",
+      "why_te": "Malli AeroTopo main method ni chudandi. Long-running Spring service lifecycle framework ki leave chestam. Interview lo `System.exit` whole JVM terminate chestundi, status caller ki istundi, and careful ga use cheyyali ani cheppali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

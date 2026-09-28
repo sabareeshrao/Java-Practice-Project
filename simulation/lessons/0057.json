@@ -64,7 +64,7 @@
     },
     {
       "title": "Open the object-oriented side of the same language",
-      "question": "`SurveyProducts. Product` is an abstract class implementing interfaces, owning private state, defining behavior, and allowing specialized subclasses such as `Orthomosaic` and `Dem`. Inspect those pieces together. Which object-oriented capabilities does this hierarchy provide that a primitive value alone cannot represent in a domain model?",
+      "question": "`SurveyProducts.Product` is an abstract class implementing interfaces, owning private state, defining behavior, and allowing specialized subclasses such as `Orthomosaic` and `Dem`. Inspect those pieces together. Which object-oriented capabilities does this hierarchy provide that a primitive value alone cannot represent in a domain model?",
       "why_te": "SurveyProducts hierarchy abstraction, encapsulated state, inheritance, polymorphic behavior provide chestundi. Primitive value simple data matrame; ee domain relationships represent cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",

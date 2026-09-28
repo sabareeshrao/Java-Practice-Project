@@ -69,7 +69,7 @@
     },
     {
       "title": "Inspect validation before final subtype state assignment",
-      "question": "The constructor rejects non-finite or non-positive resolution before assigning `this. gsd`. How does constructor validation help ensure that the reference returned to ordinary application code points to an object whose required invariants have been established rather than an invalid partially configured domain object?",
+      "question": "The constructor rejects non-finite or non-positive resolution before assigning `this.gsd`. How does constructor validation help ensure that the reference returned to ordinary application code points to an object whose required invariants have been established rather than an invalid partially configured domain object?",
       "why_te": "Constructor validation invalid gsd ni reject chestundi. Successful construction taruvata object invariant valid ga untundi. Caller normal ga valid reference receive chestadu.",
       "software": "intellij",
       "required_capability": "highlight-target",

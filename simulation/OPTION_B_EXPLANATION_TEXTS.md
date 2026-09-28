@@ -21,7 +21,7 @@ Rules:
 - Usually keep the explanation between **15 and 55 words**.
 - Two or three short sentences are normally enough.
 - The explanation should simply tell the learner what is happening and why it matters.
-- Do not repeat the same explanation paragraph or knowledge-bearing sentence across steps. Every step must add a distinct piece of knowledge, evidence, consequence, or verification.
+- Repeated simple explanations are allowed when the same UI concept genuinely repeats. Do not add fake wording only to make text unique.
 
 ### Preferred example
 
@@ -42,17 +42,16 @@ enduku matter avutundo reason cheyyandi.
 ---
 
 # Lessons 1–5
-- Every step must add new knowledge. A repeated UI target may be revisited only when the step explains a different technical point about it.
 
 ## Lesson 1 — Java for enterprise development
 
 ### Step 1 — Open the AeroTopo project in IntelliJ
 
-"Java for enterprise development" lesson lo "Open the AeroTopo project in IntelliJ" step separate knowledge point ni explain chestundi. "Java for enterprise development" lo "Open the AeroTopo project in IntelliJ" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. Manam build cheyyaboye real AeroTopo project nundi discussion start chestunnam. Ee course lo IDE ga IntelliJ matrame use chestam.
 
 ### Step 2 — Inspect the Maven project descriptor
 
-Lesson 1 step 2 lo "Inspect the Maven project descriptor" kosam pom. xml ni use chesi "Java for enterprise development" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+pom.xml ni open chesi relevant code ni chuddam. Java enterprise project lo syntax matrame kaadu. Tools and libraries kuda important.
 
 ### Step 3 — Focus on the Spring Boot parent
 
@@ -64,11 +63,11 @@ Highlight ayina starter dependencies ni chudandi. Web starter REST API build che
 
 ### Step 5 — Open IntelliJ External Libraries
 
-"Java for enterprise development" lo "Open IntelliJ External Libraries" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open IntelliJ External Libraries" point previous explanation repeat cheyyakunda "Java for enterprise development" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.
 
 ### Step 6 — Inspect the Java application entry point
 
-"Inspect the Java application entry point" step lo AeroTopoApplication. java open chesi "Java for enterprise development" concept project code lo ela represent ayyindo identify chestam. "Java for enterprise development" lo "Inspect the Java application entry point" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+AeroTopoApplication.java ni open chesi relevant code ni chuddam. Application normal Java `main` method nundi start ayi tarvata Spring Boot ki control istundi. Java entry point easy ga kanipistundi.
 
 ### Step 7 — Focus on the Spring Boot application declaration
 
@@ -76,7 +75,7 @@ Highlight ayina `@SpringBootApplication` ni chudandi. Ee annotation Spring Boot 
 
 ### Step 8 — Open IntelliJ's integrated terminal
 
-"Java for enterprise development" lo "Open IntelliJ's integrated terminal" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open IntelliJ's integrated terminal" point previous explanation repeat cheyyakunda "Java for enterprise development" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Separate terminal ki switch avvalsina avasaram taggutundi. Same project folder lo commands run avvadam valla work easy ga untundi.
 
 ### Step 9 — Confirm the Java runtime from IntelliJ
 
@@ -86,11 +85,11 @@ Highlight ayina `@SpringBootApplication` ni chudandi. Ee annotation Spring Boot 
 
 ### Step 1 — Open the project build baseline
 
-pom. xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.
+pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.
 
 ### Step 2 — Check the declared Java baseline
 
-Highlight ayina `<java. version>21</java. version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.
+Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.
 
 ### Step 3 — Check the Spring Boot baseline
 
@@ -98,19 +97,19 @@ Highlight ayina line ni chudandi. Enterprise upgrade oka versions anni kalisi wo
 
 ### Step 4 — Inspect resolved external libraries
 
-"Keeping up with the evolving Java ecosystem" lo "Inspect resolved external libraries" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect resolved external libraries" point previous explanation repeat cheyyakunda "Keeping up with the evolving Java ecosystem" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.
 
 ### Step 5 — Open the Maven tool window
 
-"Keeping up with the evolving Java ecosystem" lo "Open the Maven tool window" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the Maven tool window" point previous explanation repeat cheyyakunda "Keeping up with the evolving Java ecosystem" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 6 — Open IntelliJ's integrated terminal
 
-"Keeping up with the evolving Java ecosystem" lesson lo "Open IntelliJ's integrated terminal" step separate knowledge point ni explain chestundi. "Keeping up with the evolving Java ecosystem" lo "Open IntelliJ's integrated terminal" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi.
 
 ### Step 7 — Verify the active JDK
 
-"Verify the active JDK" step lo terminal result ni run chesi "Keeping up with the evolving Java ecosystem" rule ni actual result tho verify chestam. "Keeping up with the evolving Java ecosystem" lo "Verify the active JDK" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.
+Ee command run chesi output ni chudandi. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi.
 
 ### Step 8 — Verify Maven's toolchain view
 
@@ -124,15 +123,15 @@ Maven tests run chesi application expected ga work chestunda check chestam. Upgr
 
 ### Step 1 — Open IntelliJ Settings
 
-"Open IntelliJ Settings" step "Add Lombok in IntelliJ" concept lo next distinct point ni cover chestundi. "Add Lombok in IntelliJ" lo "Open IntelliJ Settings" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+IntelliJ Settings lo ee option ni check cheddam. IDE ki Lombok support lekapothe Maven compiler code ni process chesina kuda generated getters, setters, constructors leda builders meeda false errors chupinchachu. Kabatti munduga IDE awareness ni verify cheyyadam useful.
 
 ### Step 2 — Install the Lombok plugin
 
-"Add Lombok in IntelliJ" lesson lo "Install the Lombok plugin" step separate knowledge point ni explain chestundi. "Add Lombok in IntelliJ" lo "Install the Lombok plugin" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+IntelliJ Settings lo ee option ni check cheddam. Plugin editor analysis mariyu navigation ki help chestundi. Kani build ki Lombok dependency leda build setup lo undali.
 
 ### Step 3 — Open the Maven descriptor
 
-"Add Lombok in IntelliJ" lo "Open the Maven descriptor" step pom. "Add Lombok in IntelliJ" lo "Open the Maven descriptor" context lo, xml ni direct evidence ga use chestundi. Ee "Open the Maven descriptor" point previous explanation repeat cheyyakunda "Add Lombok in IntelliJ" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+pom.xml ni open chesi relevant code ni chuddam. Project build file local development, CI mariyu vere developers andariki common main config. Lombok oka developer IntelliJ lo matrame undakunda build model lo kuda represent avvali.
 
 ### Step 4 — Add the Lombok Maven dependency
 
@@ -140,7 +139,7 @@ Add the Lombok Maven dependency ni simple ga chuddam. Maven dependency Lombok ni
 
 ### Step 5 — Open the Maven tool window
 
-"Add Lombok in IntelliJ" lesson lo "Open the Maven tool window" step separate knowledge point ni explain chestundi. "Add Lombok in IntelliJ" lo "Open the Maven tool window" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 6 — Reload the Maven project
 
@@ -148,11 +147,11 @@ Maven reload chesaka IntelliJ updated dependencies ni malli read chestundi. New 
 
 ### Step 7 — Inspect resolved libraries
 
-"Inspect resolved libraries" step "Add Lombok in IntelliJ" concept lo next distinct point ni cover chestundi. "Add Lombok in IntelliJ" lo "Inspect resolved libraries" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.
 
 ### Step 8 — Verify the build after Lombok setup
 
-"Add Lombok in IntelliJ" lesson lo "Verify the build after Lombok setup" step separate knowledge point ni explain chestundi. "Add Lombok in IntelliJ" lo "Verify the build after Lombok setup" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Maven goal run chesi build result ni chudandi. Successful Maven build shared build path Lombok ni resolve mariyu process cheyyagaladani prove chestundi. local editor support okkate proof kaadu.
 
 ### Step 9 — Remove the temporary Lombok dependency
 
@@ -162,171 +161,173 @@ Remove the temporary Lombok dependency ni simple ga chuddam. Dini valla cumulati
 
 ### Step 1 — Inspect the project SDK
 
-"Preferred Spring Boot development environment and tool" lo "Inspect the project SDK" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the project SDK" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors leda wrong language features kanipinchachu.
 
 ### Step 2 — Inspect the Maven tool window
 
-"Preferred Spring Boot development environment and tool" lo "Inspect the Maven tool window" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the Maven tool window" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 3 — Inspect Spring support inside IntelliJ
 
-"Preferred Spring Boot development environment and tool" lo "Inspect Spring support inside IntelliJ" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect Spring support inside IntelliJ" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Spring view lo project beans kanipistayi. Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu. Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful.
 
 ### Step 4 — Inspect Git integration
 
-"Preferred Spring Boot development environment and tool set" lesson lo "Inspect Git integration" step separate knowledge point ni explain chestundi. "Preferred Spring Boot development environment and tool set" lo "Inspect Git integration" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Git window lo changed files and current branch kanipistayi. Code lo em marchamo commit mundu ikkada check cheyyachu. Wrong change unte diff chusi easy ga identify cheyyachu.
 
 ### Step 5 — Open the integrated terminal
 
-"Preferred Spring Boot development environment and tool" lo "Open the integrated terminal" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the integrated terminal" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal command-line verification ni same project context lo unchutundi. IDE behavior ni real Java, Maven mariyu Git commands tho compare cheyyadam easy avutundi.
 
 ### Step 6 — Verify the active Java runtime
 
-"Preferred Spring Boot development environment and tool" lo "Verify the active Java runtime" step terminal result ni direct evidence ga use chestundi. Ee "Verify the active Java runtime" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. Actual executable version ni check chesthe local version drift mundhe dorukutundi. Leka pothe compilation leda runtime difference confusing ga kanipinchachu.
 
 ### Step 7 — Verify Maven from the same workspace
 
-"Verify Maven from the same workspace" step result observation meeda focus chestundi. "Preferred Spring Boot development environment and tool set" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. Maven tana version tho paatu adi use chestunna Java runtime ni report chestundi. Dini valla toolchain mismatch build failure laga confuse avvakunda mundhe identify cheyyachu.
 
 ### Step 8 — Prove the environment with tests
 
-"Preferred Spring Boot development environment and tool" lo "Prove the environment with tests" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Prove the environment with tests" point previous explanation repeat cheyyakunda "Preferred Spring Boot development environment and tool" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Successful Maven test gate JDK, Maven model, dependencies mariyu test tooling repository expect chesina vidhamga kalisi work chestunnayi ani confirm chestundi.
 
 ## Lesson 5 — Java developer tools used in day-to-day work
 
 ### Step 1 — Start with IntelliJ IDEA
 
-"Java developer tools used in day-to-day work" lo "Start with IntelliJ IDEA" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Start with IntelliJ IDEA" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. IntelliJ source navigation, safe refactoring, inspections, debugging, Spring awareness, build integration mariyu terminal access ni oka workspace lo istundi. Anduke Java development lo IDE central tool ga useful.
 
 ### Step 2 — Inspect the configured JDK
 
-"Java developer tools used in day-to-day work" lo "Inspect the configured JDK" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the configured JDK" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors leda wrong language features kanipinchachu.
 
 ### Step 3 — Use Maven for the build
 
-"Java developer tools used in day-to-day work" lo "Use Maven for the build" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use Maven for the build" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 4 — Use Git for source control
 
-"Java developer tools used in day-to-day work" lo "Use Git for source control" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use Git for source control" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Git window lo changed files and current branch kanipistayi. Code lo em marchamo commit mundu ikkada check cheyyachu. Wrong change unte diff chusi easy ga identify cheyyachu.
 
 ### Step 5 — Inspect Spring-aware tooling
 
-"Inspect Spring-aware tooling" step "Java developer tools used in day-to-day work" concept lo next distinct point ni cover chestundi. "Java developer tools used in day-to-day work" lo "Inspect Spring-aware tooling" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+Spring view lo project beans kanipistayi. Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu. Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful.
 
 ### Step 6 — Use the integrated terminal
 
-"Java developer tools used in day-to-day work" lesson lo "Use the integrated terminal" step separate knowledge point ni explain chestundi. "Java developer tools used in day-to-day work" lo "Use the integrated terminal" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+IntelliJ terminal ni open chesi commands run cheddam. Terminal nundi direct commands run chesthe CI use chese real tools tho same behavior verify cheyyachu. Environment, build mariyu troubleshooting problems ni diagnose cheyyadam kuda easy avutundi.
 
 ### Step 7 — Check Java from the terminal
 
-"Java developer tools used in day-to-day work" lo "Check Java from the terminal" step terminal result ni direct evidence ga use chestundi. Ee "Check Java from the terminal" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `java --version` current terminal actual ga ye Java runtime use chestundo confirm chestundi. Version drift ni source-code issue laga confuse avvakunda help chestundi.
 
 ### Step 8 — Check Maven from the terminal
 
-"Java developer tools used in day-to-day work" lo "Check Maven from the terminal" step terminal result ni direct evidence ga use chestundi. Ee "Check Maven from the terminal" point previous explanation repeat cheyyakunda "Java developer tools used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `mvn -version` Maven version mariyu Maven use chestunna Java runtime renditini chupistundi. Local build-tool mismatch ni mundhe identify cheyyadaniki idi useful.
 
 ### Step 9 — Check Git from the terminal
 
-"Check Git from the terminal" step result observation meeda focus chestundi. "Java developer tools used in day-to-day work" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `git --version` underlying Git client IDE integration ki separate ga available undani confirm chestundi. Scripts, hooks mariyu CI-style workflows lo idi important.
 
 ### Step 10 — Finish with automated verification
 
 Maven tests pass ayithe JDK, dependencies, compiled code and tests kalisi correct ga work chestunnayi ani confirm avutundi. Tools install ayyayani chudatam kanna actual build pass avvadam better check.
 
+# Lessons 6–10
+
 ## Lesson 6 — The editor used for Java development
 
 ### Step 1 — Open the Java project in IntelliJ
 
-"The editor used for Java development" lo "Open the Java project in IntelliJ" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the Java project in IntelliJ" point previous explanation repeat cheyyakunda "The editor used for Java development" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. Real AeroTopo workspace ni IntelliJ lo open cheyyadam valla idi just preference kaadani, actual project development environment ani clear avutundi.
 
 ### Step 2 — Confirm the project JDK
 
-"The editor used for Java development" lesson lo "Confirm the project JDK" step separate knowledge point ni explain chestundi. "The editor used for Java development" lo "Confirm the project JDK" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors leda wrong language features kanipinchachu.
 
 ### Step 3 — Open the application entry point
 
-Lesson 6 step 3 lo "Open the application entry point" kosam AeroTopoApplication. java ni use chesi "The editor used for Java development" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopoApplication.java ni open chesi relevant code ni chuddam. IntelliJ Java source ni plain text laga kaakunda packages, types, imports mariyu annotations tho structured code ga understand chestundi.
 
 ### Step 4 — Inspect Maven integration
 
-"Inspect Maven integration" step "The editor used for Java development" concept lo next distinct point ni cover chestundi. "The editor used for Java development" lo "Inspect Maven integration" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 5 — Inspect Spring support
 
-"The editor used for Java development" lesson lo "Inspect Spring support" step separate knowledge point ni explain chestundi. "The editor used for Java development" lo "Inspect Spring support" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Spring view lo project beans kanipistayi. Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu. Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful.
 
 ### Step 6 — Open the integrated terminal
 
-"The editor used for Java development" lo "Open the integrated terminal" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the integrated terminal" point previous explanation repeat cheyyakunda "The editor used for Java development" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Same project folder lo commands run avvadam valla IDE buttons meeda matrame depend avvalsina avasaram undadu.
 
 ### Step 7 — Verify the workspace with Maven tests
 
-"The editor used for Java development" lo "Verify the workspace with Maven tests" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Verify the workspace with Maven tests" point previous explanation repeat cheyyakunda "The editor used for Java development" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Maven tests success ayithe IntelliJ environment, JDK, dependencies mariyu project build okate configuration meeda correct ga work chestunnayani practical proof vastundi.
 
 ## Lesson 7 — IDE used for the current AeroTopo project
 
 ### Step 1 — Open the current AeroTopo workspace
 
-"IDE used for the current AeroTopo project" lo "Open the current AeroTopo workspace" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the current AeroTopo workspace" point previous explanation repeat cheyyakunda "IDE used for the current AeroTopo project" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. Current project gurinchi answer istunnappudu AeroTopo ni IntelliJ lo direct ga identify cheyyadam valla response generic kaakunda project-specific ga untundi.
 
 ### Step 2 — Inspect the current project's Maven model
 
-Lesson 7 step 2 lo "Inspect the current project's Maven model" kosam pom. xml ni use chesi "IDE used for the current AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+pom.xml ni open chesi relevant code ni chuddam. `pom.xml` project-owned build definition. IntelliJ danini use chestundi kani replace cheyyadu.
 
 ### Step 3 — Inspect the current application class
 
-"Inspect the current application class" step lo AeroTopoApplication. java open chesi "IDE used for the current AeroTopo project" concept project code lo ela represent ayyindo identify chestam. "IDE used for the current AeroTopo project" lo "Inspect the current application class" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+AeroTopoApplication.java ni open chesi relevant code ni chuddam. Spring Boot project lo configuration nundi Java source ki frequent ga move avvali. IntelliJ quick navigation daily workflow ni fast ga chestundi.
 
 ### Step 4 — Inspect resolved libraries
 
-"IDE used for the current AeroTopo project" lesson lo "Inspect resolved libraries" step separate knowledge point ni explain chestundi. "IDE used for the current AeroTopo project" lo "Inspect resolved libraries" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.
 
 ### Step 5 — Inspect Git integration for the project
 
-"IDE used for the current AeroTopo project" lo "Inspect Git integration for the project" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect Git integration for the project" point previous explanation repeat cheyyakunda "IDE used for the current AeroTopo project" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Git window lo changed files and current branch kanipistayi. Code lo em marchamo commit mundu ikkada check cheyyachu. Wrong change unte diff chusi easy ga identify cheyyachu.
 
 ### Step 6 — Inspect Spring context for AeroTopo
 
-"IDE used for the current AeroTopo project" lo "Inspect Spring context for AeroTopo" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect Spring context for AeroTopo" point previous explanation repeat cheyyakunda "IDE used for the current AeroTopo project" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Spring view lo project beans kanipistayi. Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu. Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful.
 
 ### Step 7 — Use the current project's terminal
 
-"IDE used for the current AeroTopo project" lo "Use the current project's terminal" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use the current project's terminal" point previous explanation repeat cheyyakunda "IDE used for the current AeroTopo project" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal lo Java, Maven and Git commands direct ga run cheyyachu. Commands same project folder nundi run avutayi kabatti current project context clear ga untundi.
 
 ### Step 8 — Prove the current-project setup
 
-"IDE used for the current AeroTopo project" lo "Prove the current-project setup" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Prove the current-project setup" point previous explanation repeat cheyyakunda "IDE used for the current AeroTopo project" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Maven test success ayithe current IntelliJ workspace mariyu repository build project environment gurinchi same state lo unnayani confirm avutundi.
 
 ## Lesson 8 — Choosing IntelliJ as the project-standard IDE
 
 ### Step 1 — Use the project-standard IDE
 
-"Choosing IntelliJ as the project-standard IDE" lo "Use the project-standard IDE" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use the project-standard IDE" point previous explanation repeat cheyyakunda "Choosing IntelliJ as the project-standard IDE" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+AeroTopo project ni IntelliJ lo open chesi start cheddam. Same IDE use chesthe navigation and shortcuts consistent ga untayi. Maven build IntelliJ bayata kuda run avvachu.
 
 ### Step 2 — Open IntelliJ settings
 
-"Open IntelliJ settings" step "Choosing IntelliJ as the project-standard IDE" concept lo next distinct point ni cover chestundi. "Choosing IntelliJ as the project-standard IDE" lo "Open IntelliJ settings" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+IntelliJ Settings lo ee option ni check cheddam. IntelliJ Settings lo plugins, editor preferences, keymaps, inspections lanti developer configuration untundi. IDE choice lo ee environment kuda important.
 
 ### Step 3 — Verify project-level Java configuration
 
-"Choosing IntelliJ as the project-standard IDE" lesson lo "Verify project-level Java configuration" step separate knowledge point ni explain chestundi. "Choosing IntelliJ as the project-standard IDE" lo "Verify project-level Java configuration" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors leda wrong language features kanipinchachu.
 
 ### Step 4 — Verify Maven remains the build authority
 
-"Choosing IntelliJ as the project-standard IDE" lo "Verify Maven remains the build authority" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Verify Maven remains the build authority" point previous explanation repeat cheyyakunda "Choosing IntelliJ as the project-standard IDE" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.
 
 ### Step 5 — Use IntelliJ's Spring awareness
 
-"Use IntelliJ's Spring awareness" step "Choosing IntelliJ as the project-standard IDE" concept lo next distinct point ni cover chestundi. "Choosing IntelliJ as the project-standard IDE" lo "Use IntelliJ's Spring awareness" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+Spring view lo project beans kanipistayi. Java class Spring manage chestunna object ga runtime lo load ayinda ani ikkada check cheyyachu. Project grow ayina appudu bean ekkada undi ani find cheyyadaniki ee view useful.
 
 ### Step 6 — Keep version control integrated
 
-"Choosing IntelliJ as the project-standard IDE" lesson lo "Keep version control integrated" step separate knowledge point ni explain chestundi. "Choosing IntelliJ as the project-standard IDE" lo "Keep version control integrated" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Git window lo changed files and current branch kanipistayi. Code lo em marchamo commit mundu ikkada check cheyyachu. Wrong change unte diff chusi easy ga identify cheyyachu.
 
 ### Step 7 — Keep direct CLI access available
 
-"Choosing IntelliJ as the project-standard IDE" lo "Keep direct CLI access available" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Keep direct CLI access available" point previous explanation repeat cheyyakunda "Choosing IntelliJ as the project-standard IDE" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal ni open chesi commands run cheddam. Direct CLI access valla project hidden IDE behavior meeda depend kaadani prove avutundi. Troubleshooting kuda CI mariyu production workflow ki daggara ga untundi.
 
 ### Step 8 — Validate the standardized IDE workflow
 
@@ -336,61 +337,61 @@ Maven tests pass ayithe IntelliJ use chestunna kuda project build Maven dwara co
 
 ### Step 1 — Use Search Everywhere — double Shift
 
-"A few useful IntelliJ shortcuts" lo "Use Search Everywhere — double Shift" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use Search Everywhere — double Shift" point previous explanation repeat cheyyakunda "A few useful IntelliJ shortcuts" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Search Everywhere target ekkada undo exact ga teliyakapoina class, file, symbol, setting leda action peru nundi direct ga search start cheyyadaniki help chestundi.
 
 ### Step 2 — Use Go to File — Ctrl+Shift+N
 
-"A few useful IntelliJ shortcuts" lesson lo "Use Go to File — Ctrl+Shift+N" step separate knowledge point ni explain chestundi. "A few useful IntelliJ shortcuts" lo "Use Go to File — Ctrl+Shift+N" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Filename teliste Ctrl+Shift+N tho folder tree manually expand cheyyakunda direct ga target file ki vellachu.
 
 ### Step 3 — Use Recent Files — Ctrl+E
 
-"A few useful IntelliJ shortcuts" lo "Use Recent Files — Ctrl+E" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Use Recent Files — Ctrl+E" point previous explanation repeat cheyyakunda "A few useful IntelliJ shortcuts" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Recent Files recent ga use chesina files ni immediate ga chupistundi. Same files ni malli project tree lo search cheyyalsina avasaram taggutundi.
 
 ### Step 4 — Use Go to Declaration — Ctrl+B
 
-Lesson 9 step 4 lo "Use Go to Declaration — Ctrl+B" kosam AeroTopoApplication. Lesson 9 step 4 context lo, java ni use chesi "A few useful IntelliJ shortcuts" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Ctrl+B symbol reference nundi declaration ki direct ga teesukeltundi. Typed Java code lo implementation context fast ga understand cheyyadaniki idi useful.
 
 ### Step 5 — Use Find Usages — Alt+F7
 
-"A few useful IntelliJ shortcuts" lesson lo "Use Find Usages — Alt+F7" step separate knowledge point ni explain chestundi. AeroTopoApplication. "A few useful IntelliJ shortcuts" lo "Use Find Usages — Alt+F7" context lo, java tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Class leda method marchadaniki mundu usages chusthe change impact entha undo telustundi. Current file matrame chusi assumption cheyyadam kanna idi safer.
 
 ### Step 6 — Use File Structure — Ctrl+F12
 
-Lesson 9 step 6 lo "Use File Structure — Ctrl+F12" kosam AeroTopoApplication. Lesson 9 step 6 context lo, java ni use chesi "A few useful IntelliJ shortcuts" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Ctrl+F12 current file lo methods, fields mariyu symbols list chupistundi. Long file ni full ga scroll cheyyakunda required member ki jump cheyyachu.
 
 ### Step 7 — Use Quick Documentation — Ctrl+Q
 
-"Use Quick Documentation — Ctrl+Q" step "A few useful IntelliJ shortcuts" concept lo next distinct point ni cover chestundi. "A few useful IntelliJ shortcuts" lo "Use Quick Documentation — Ctrl+Q" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+IntelliJ current code context batti useful information chupistundi. Ctrl+Q API documentation ni editor pakkane chupistundi. Chinna API doubts kosam external browser ki switch avvalsina avasaram taggutundi.
 
 ### Step 8 — Use intention actions — Alt+Enter
 
-"A few useful IntelliJ shortcuts" lesson lo "Use intention actions — Alt+Enter" step separate knowledge point ni explain chestundi. "A few useful IntelliJ shortcuts" lo "Use intention actions — Alt+Enter" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+IntelliJ current code context batti useful information chupistundi. Alt+Enter current caret context ki relevant fixes, imports leda improvements ni direct ga chupistundi. Problem unna place nundi action start cheyyachu.
 
 ## Lesson 10 — IntelliJ shortcuts commonly used in day-to-day work
 
 ### Step 1 — Jump to a class — Ctrl+N
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Jump to a class — Ctrl+N" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Jump to a class — Ctrl+N" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Large Java project lo chala classes untayi. Ctrl+N class name nundi direct ga search chestundi kabatti package tree repeatedly expand cheyyalsina avasaram taggutundi.
 
 ### Step 2 — Jump to any symbol — Ctrl+Alt+Shift+N
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Jump to any symbol — Ctrl+Alt+Shift+N" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Jump to any symbol — Ctrl+Alt+Shift+N" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Method leda field peru telisi class peru teliyakapoina Go to Symbol project-wide members ni search chestundi. Location kanna behavior gurthunte idi useful.
 
 ### Step 3 — Search project text — Ctrl+Shift+F
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Search project text — Ctrl+Shift+F" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Search project text — Ctrl+Shift+F" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Symbol exact ga teliyakapoina string, property leda code fragment gurthunte Ctrl+Shift+F project files anni search chestundi.
 
 ### Step 4 — Show parameter information — Ctrl+P
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Show parameter information — Ctrl+P" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Show parameter information — Ctrl+P" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. Overloaded method call rasetappudu Ctrl+P expected parameter signatures ni current place lo chupistundi. Documentation kosam flow break cheyyalsina avasaram taggutundi.
 
 ### Step 5 — Invoke code completion — Ctrl+Space
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Invoke code completion — Ctrl+Space" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Invoke code completion — Ctrl+Space" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. Ctrl+Space typed project context nundi relevant members mariyu APIs suggest chestundi. Memorization burden mariyu typing mistakes taggutayi.
 
 ### Step 6 — Open context actions — Alt+Enter
 
-"IntelliJ shortcuts commonly used in day-to-day work" lo "Open context actions — Alt+Enter" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open context actions — Alt+Enter" point previous explanation repeat cheyyakunda "IntelliJ shortcuts commonly used in day-to-day work" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. Experienced developer ki kuda Alt+Enter useful endukante imports, quick fixes, inspections mariyu transformations current caret context batti marutayi.
 
 ### Step 7 — Use safe Rename — Shift+F6
 
@@ -404,35 +405,37 @@ Ikkada code lo required change chestunnam. Code change ayyaka unused imports acc
 
 Ikkada code lo required change chestunnam. Ctrl+Alt+L configured code style ni consistent ga apply chestundi. Review lo whitespace differences kanna actual logic meeda focus cheyyadaniki help chestundi.
 
+# Lessons 11–15
+
 ## Lesson 11 — STS shortcuts and their IntelliJ workflow equivalents
 
 ### Step 1 — Map STS Open Resource to IntelliJ Go to File
 
-Lesson 11 step 1 lo "Map STS Open Resource to IntelliJ" kosam highlighted project evidence ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. STS lo Ctrl+Shift+R file/resource peru nundi direct navigation ki use avutundi. Ee project IntelliJ-only kabatti ade concept ni Go to File tho demonstrate chestam.
 
 ### Step 2 — Map STS Open Type to IntelliJ Go to Class
 
-Lesson 11 step 2 lo "Map STS Open Type to IntelliJ" kosam highlighted project evidence ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. STS Ctrl+Shift+T type peru nundi class ni find cheyyadaniki use avutundi. IntelliJ lo Go to Class Java type behavior ni use chesi ade developer goal ni satisfy chestundi.
 
 ### Step 3 — Map STS Quick Outline to IntelliJ File Structure
 
-Lesson 11 step 3 lo "Map STS Quick Outline to IntelliJ" kosam AeroTopoApplication. Lesson 11 step 3 context lo, java ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. STS Ctrl+O current class lo fields, constructors mariyu methods madhya fast navigation istundi. IntelliJ File Structure kuda same concept ni provide chestundi kabatti long Java file ni line-by-line scroll cheyyalsina avasaram taggutundi.
 
 ### Step 4 — Map STS F3 declaration navigation to IntelliJ
 
-Lesson 11 step 4 lo "Map STS F3 declaration navigation to" kosam AeroTopoApplication. Lesson 11 step 4 context lo, java ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Enterprise Java lo reference nundi declaration ki direct ga velladam code relationships ni fast ga understand cheyyadaniki important. IntelliJ declaration navigation STS F3 concept ki equivalent workflow ni istundi.
 
 ### Step 5 — Map STS reference search to IntelliJ Find Usages
 
-Lesson 11 step 5 lo "Map STS reference search to IntelliJ" kosam AeroTopoApplication. Lesson 11 step 5 context lo, java ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. STS reference search laga IntelliJ Find Usages selected symbol ekkada use ayindo chupistundi. Shared code refactor cheyyadaniki mundu impact scope telusukovadam safer development ki important.
 
 ### Step 6 — Map STS content assist to IntelliJ code completion
 
-Lesson 11 step 6 lo "Map STS content assist to IntelliJ" kosam highlighted project evidence ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+IntelliJ current code context batti useful information chupistundi. STS Ctrl+Space content assist current context batti APIs suggest chestundi. IntelliJ completion kuda typed Java model nundi valid methods mariyu symbols ni suggest chesi typing mistakes mariyu memorization burden ni taggistundi.
 
 ### Step 7 — Map STS Quick Fix to IntelliJ intention actions
 
-Lesson 11 step 7 lo "Map STS Quick Fix to IntelliJ" kosam highlighted project evidence ni use chesi "STS shortcuts and their IntelliJ workflow" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+IntelliJ current code context batti useful information chupistundi. STS Ctrl+1 Quick Fix current problem context ki suggestions istundi. IntelliJ Alt+Enter kuda caret daggara unna inspection, import leda correction ki relevant actions ni direct ga surface chestundi.
 
 ### Step 8 — Map STS formatting to IntelliJ Reformat Code
 
@@ -446,11 +449,11 @@ Ikkada code lo required change chestunnam. STS Alt+Shift+R code meaning based re
 
 ### Step 1 — Start from platform-neutral Java source
 
-"Start from platform-neutral Java source" step lo AeroTopoApplication. java open chesi "How the JVM makes Java platform-independent" concept project code lo ela represent ayyindo identify chestam. "How the JVM makes Java platform-independent" lo "Start from platform-neutral Java source" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+AeroTopoApplication.java ni open chesi relevant code ni chuddam. Source Java high-level language rules meeda untundi. Windows leda Linux machine instructions direct ga source lo rayamu.
 
 ### Step 2 — Confirm the Java language and SDK baseline
 
-"How the JVM makes Java platform-independent" lo "Confirm the Java language and SDK baseline" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Confirm the Java language and SDK baseline" point previous explanation repeat cheyyakunda "How the JVM makes Java platform-independent" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors kanipinchachu.
 
 ### Step 3 — Open the build terminal before compilation
 
@@ -458,15 +461,15 @@ IntelliJ terminal lo compile and run commands separate ga chudachu. First code c
 
 ### Step 4 — Compile AeroTopo into JVM bytecode
 
-Maven compile Java source ni `. class` bytecode ga marchutundi. Ee bytecode ni JVM run chestundi. Anduke same compiled classes supported operating systems lo run avvagalavu.
+Maven compile Java source ni `.class` bytecode ga marchutundi. Ee bytecode ni JVM run chestundi. Anduke same compiled classes supported operating systems lo run avvagalavu.
 
 ### Step 5 — Inspect the runtime classpath
 
-"How the JVM makes Java platform-independent" lesson lo "Inspect the runtime classpath" step separate knowledge point ni explain chestundi. "How the JVM makes Java platform-independent" lo "Inspect the runtime classpath" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Classpath lo application classes and required libraries ekkada unnayo kanipistayi. Dependency missing ayithe program start avvakapovachu.
 
 ### Step 6 — Inspect the JVM runtime layer
 
-"How the JVM makes Java platform-independent" lo "Inspect the JVM runtime layer" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM runtime layer" point previous explanation repeat cheyyakunda "How the JVM makes Java platform-independent" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Verify the installed runtime implementation
 
@@ -484,57 +487,57 @@ Installed JDK versions ikkada kanipistayi. Machine lo multiple JDKs undachu. Kan
 
 ### Step 2 — Inspect AeroTopo's selected Project SDK
 
-"Multiple JDK and JRE versions on one" lo "Inspect AeroTopo's selected Project SDK" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect AeroTopo's selected Project SDK" point previous explanation repeat cheyyakunda "Multiple JDK and JRE versions on one" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors kanipinchachu.
 
 ### Step 3 — Open the terminal to inspect PATH selection
 
-Lesson 13 step 3 lo "Open the terminal to inspect PATH" kosam highlighted project evidence ni use chesi "Multiple JDK and JRE versions on" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+IntelliJ terminal ni open chesi commands run cheddam. IDE SDK setting mariyu shell PATH/JAVA_HOME independent configuration paths avvachu. Anduke terminal actual ga ye executable resolve chestundo separate ga verify cheyyali.
 
 ### Step 4 — Check the active Java runtime
 
-"Check the active Java runtime" step result observation meeda focus chestundi. "Multiple JDK and JRE versions on one machine" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `java --version` current PATH/JAVA_HOME resolution dwara active ayina runtime ni chupistundi. Machine lo vere JDKs installed unna kuda current process ee selected runtime meeda start avutundi.
 
 ### Step 5 — Check the active Java compiler
 
-"Multiple JDK and JRE versions on one" lo "Check the active Java compiler" step terminal result ni direct evidence ga use chestundi. Ee "Check the active Java compiler" point previous explanation repeat cheyyakunda "Multiple JDK and JRE versions on one" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. Runtime `java` mariyu compiler `javac` PATH configuration valla different installations nundi resolve avvachu. Renditini verify chesthe mixed toolchain issue mundhe identify cheyyachu.
 
 ### Step 6 — Check which JVM Maven is using
 
-"Multiple JDK and JRE versions on one" lo "Check which JVM Maven is using" step terminal result ni direct evidence ga use chestundi. Ee "Check which JVM Maven is using" point previous explanation repeat cheyyakunda "Multiple JDK and JRE versions on one" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `mvn -version` Maven version tho paatu build process use chestunna Java runtime ni report chestundi. Multiple JDK machine lo build tool correct Java 21 meeda undani confirm cheyyadaniki idi important.
 
 ### Step 7 — Inspect the selected JVM runtime details
 
-"Multiple JDK and JRE versions on one" lo "Inspect the selected JVM runtime details" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the selected JVM runtime details" point previous explanation repeat cheyyakunda "Multiple JDK and JRE versions on one" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Verify the chosen version with the project build
 
-Lesson 13 step 8 lo "Verify the chosen version with the" kosam highlighted project evidence ni use chesi "Multiple JDK and JRE versions on" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Maven goal run chesi build result ni chudandi. Final test gate IDE/project configuration mariyu command-line toolchain actual ga same Java current version tho work chestunnayo prove chestundi. Version checks isolated ga correct unna kuda build integration verify cheyyali.
 
 ## Lesson 14 — What the JVM is and how it works
 
 ### Step 1 — Open the Java source the JVM will eventually execute
 
-Lesson 14 step 1 lo "Open the Java source the JVM" kosam AeroTopoApplication. java ni use chesi "What the JVM is and how" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopoApplication.java ni open chesi relevant code ni chuddam. Developer `.java` source human-readable code. JVM direct ga source text execute cheyyadu.
 
 ### Step 2 — Confirm the target Java level before compilation
 
-Lesson 14 step 2 lo "Confirm the target Java level before" kosam highlighted project evidence ni use chesi "What the JVM is and how" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani easy ga check cheyyachu. IntelliJ wrong JDK use chesthe compile errors kanipinchachu.
 
 ### Step 3 — Compile the project into class files
 
-"What the JVM is and how it" lo "Compile the project into class files" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Compile the project into class files" point previous explanation repeat cheyyakunda "What the JVM is and how it" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Compile phase Java source nundi `.class` files create chestundi. Ee files lo JVM bytecode untundi.
 
 ### Step 4 — Inspect the JVM classpath
 
-"What the JVM is and how it" lo "Inspect the JVM classpath" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM classpath" point previous explanation repeat cheyyakunda "What the JVM is and how it" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Classpath lo application classes and required libraries ekkada unnayo kanipistayi. Dependency missing ayithe program start avvakapovachu.
 
 ### Step 5 — Inspect JVM loading and execution stages
 
-"What the JVM is and how it" lo "Inspect JVM loading and execution stages" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect JVM loading and execution stages" point previous explanation repeat cheyyakunda "What the JVM is and how it" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 6 — Inspect JVM-managed runtime services
 
-"What the JVM is and how it" lo "Inspect JVM-managed runtime services" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect JVM-managed runtime services" point previous explanation repeat cheyyakunda "What the JVM is and how it" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Verify the concrete JVM implementation
 
@@ -552,31 +555,33 @@ Ikkada code lo required change chestunnam. Learning lab isolated ga unte JVM bas
 
 ### Step 2 — Auto-type the complete Hello World source
 
-Ikkada code lo required change chestunnam. Class declaration, `public static void main(String[] args)` entry point mariyu `System. out. println` statement source code lo execution intent ni define chestayi. Next stages lo compiler bytecode create chestundi, JVM aa bytecode execute chestundi.
+Ikkada code lo required change chestunnam. Class declaration, `public static void main(String[] args)` entry point mariyu `System.out.println` statement source code lo execution intent ni define chestayi. Next stages lo compiler bytecode create chestundi, JVM aa bytecode execute chestundi.
 
 ### Step 3 — Inspect the typed class structure
 
-Lesson 15 step 3 lo "Inspect the typed class structure" kosam HelloWorld. java ni use chesi "Trace JVM execution with a Hello" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. IntelliJ source model navigation mariyu inspections ki use avutundi. JVM మాత్రం compiled bytecode execute chestundi.
 
 ### Step 4 — Open the terminal for the compile-and-run path
 
-Lesson 15 step 4 lo "Open the terminal for the compile-and-run" kosam highlighted project evidence ni use chesi "Trace JVM execution with a Hello" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+IntelliJ terminal ni open chesi commands run cheddam. Terminal lo `javac`, `javap` mariyu `java` stages separate ga visible avutayi. Dini valla source-to-bytecode-to-runtime flow clear ga understand cheyyachu.
 
 ### Step 5 — Compile HelloWorld into a class file
 
-`javac` Java source ni `HelloWorld. class` ga compile chestundi. JVM `. java` file ni direct ga run cheyyadu. Compiled `. class` bytecode ni load chesi execute chestundi.
+`javac` Java source ni `HelloWorld.class` ga compile chestundi. JVM `.java` file ni direct ga run cheyyadu. Compiled `.class` bytecode ni load chesi execute chestundi.
 
 ### Step 6 — Inspect the generated JVM bytecode
 
-"Trace JVM execution with a Hello World" lo "Inspect the generated JVM bytecode" step terminal result ni direct evidence ga use chestundi. Ee "Inspect the generated JVM bytecode" point previous explanation repeat cheyyakunda "Trace JVM execution with a Hello World" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `javap -c` class file lo JVM bytecode instructions ni readable form lo chupistundi. Ee intermediate instruction set host CPU native code kaadu.
 
 ### Step 7 — Inspect the JVM responsibilities before launch
 
-"Trace JVM execution with a Hello World" lo "Inspect the JVM responsibilities before launch" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM responsibilities before launch" point previous explanation repeat cheyyakunda "Trace JVM execution with a Hello World" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Run HelloWorld on the selected JVM
 
-"Run HelloWorld on the selected JVM" step result observation meeda focus chestundi. "Trace JVM execution with a Hello World Java" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. Ippudu source file nundi `javac` compilation, class-file bytecode, JVM loading/verification, main invocation mariyu output varaku full execution chain visible ga complete ayindi.
+
+# Lessons 16–20
 
 ## Lesson 16 — Understand the difference between JDK, JRE, and JVM
 
@@ -590,33 +595,33 @@ Project SDK ikkada kanipistundi. AeroTopo Java 21 use chestunda ani check cheyya
 
 ### Step 3 — Open the terminal
 
-"Understand the difference between JDK, JRE, and" lo "Open the terminal" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Open the terminal" point previous explanation repeat cheyyakunda "Understand the difference between JDK, JRE, and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ terminal ni open chesi commands run cheddam. Terminal lo `javac` mariyu `java` separate commands ga run chesthe development toolchain mariyu runtime responsibilities clear ga kanipistayi. JDK, JRE, JVM concepts okate thing kaadani practical ga observe cheyyachu.
 
 ### Step 4 — Verify javac
 
-"Verify javac" step result observation meeda focus chestundi. "Understand the difference between JDK, JRE, and JVM" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `javac --version` compiler tool actual ga install ayindani mariyu ye JDK version source compilation kosam use avutundo confirm chestundi. JVM runtime version chudatam okkate compiler availability ni prove cheyyadu.
 
 ### Step 5 — Verify java runtime
 
-"Verify java runtime" step lo terminal result ni run chesi "Understand the difference between JDK, JRE, and JVM" rule ni actual result tho verify chestam. "Understand the difference between JDK, JRE, and JVM" lo "Verify java runtime" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.
+Ee command run chesi output ni chudandi. `java --version` current shell nundi application run cheyyadaniki use ayye runtime version ni chupistundi. Idi source compile chese `javac` responsibility kaadu.
 
 ### Step 6 — Inspect the JVM
 
-"Understand the difference between JDK, JRE, and" lo "Inspect the JVM" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM" point previous explanation repeat cheyyakunda "Understand the difference between JDK, JRE, and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Inspect runtime libraries
 
-"Understand the difference between JDK, JRE, and JVM" lesson lo "Inspect runtime libraries" step separate knowledge point ni explain chestundi. "Understand the difference between JDK, JRE, and JVM" lo "Inspect runtime libraries" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Classpath lo application classes and required libraries ekkada unnayo kanipistayi. Dependency missing ayithe program start avvakapovachu.
 
 ### Step 8 — Verify the full stack
 
-"Understand the difference between JDK, JRE, and" lo "Verify the full stack" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Verify the full stack" point previous explanation repeat cheyyakunda "Understand the difference between JDK, JRE, and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Maven test run compilation mariyu runtime stages renditini same project toolchain lo exercise chestundi. JDK tools, runtime/JVM mariyu dependencies practical ga kalisi work chestunnayi ani final evidence vastundi.
 
 ## Lesson 17 — Understand public static void main(String[] args)
 
 ### Step 1 — Create MainMethodLab
 
-Ikkada code lo required change chestunnam. Separate `MainMethodLab. java` create chesthe previous HelloWorld lab untouched ga untundi. Main-method related future lessons same file ni cumulative ga extend cheyyachu kabatti continuity clear ga maintain avutundi.
+Ikkada code lo required change chestunnam. Separate `MainMethodLab.java` create chesthe previous HelloWorld lab untouched ga untundi. Main-method related future lessons same file ni cumulative ga extend cheyyachu kabatti continuity clear ga maintain avutundi.
 
 ### Step 2 — Type the standard main method
 
@@ -624,7 +629,7 @@ Ikkada code lo required change chestunnam. `public static void main(String[] arg
 
 ### Step 3 — Inspect the class structure
 
-"Understand public static void main(String[] args)" lesson lo "Inspect the class structure" step separate knowledge point ni explain chestundi. MainMethodLab. "Understand public static void main(String[] args)" lo "Inspect the class structure" context lo, java tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. File Structure view lo `main(String[])` class member ga kanipistundi. IDE source structure ni runtime start kakamunde understand chestundi.
 
 ### Step 4 — Explain public
 
@@ -640,21 +645,21 @@ Highlight ayina line ni chudandi. `void` method return value ivvadani indicate c
 
 ### Step 7 — Explain String array args
 
-"Understand public static void main(String[] args)" lo "Explain String array args" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Explain String array args" point previous explanation repeat cheyyakunda "Understand public static void main(String[] args)" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. `String[] args` command line nundi vachina arguments ni Java String array ga main method ki istundi. Arguments ivvakapothe array empty ga undachu, kani standard parameter shape same ga untundi.
 
 ### Step 8 — Compile the lab
 
-"Understand public static void main(String[] args)" kosam "Compile the lab" step terminal evidence ni use chestundi. "Understand public static void main(String[] args)" lo "Compile the lab" context lo, terminal result result ni source code tho compare chesi, rule compile time lo apply ayyinda leda runtime lo execute ayyinda ani distinguish chestam.
+Ee command run chesi output ni chudandi. Compile step source signature valid Java ani prove chestundi mariyu `MainMethodLab.class` create chestundi. Runtime launcher source text kaakunda compiled class file meeda work chestundi.
 
 ### Step 9 — Run the standard main
 
-"Run the standard main" step result observation meeda focus chestundi. "Understand public static void main(String[] args)" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `standard main` output vachindante launcher compiled class ni load chesi correct public static main signature ni identify chesi object create cheyyakunda invoke chesindani prove avutundi.
 
 ## Lesson 18 — Overload the Java main method
 
 ### Step 1 — Open the existing lab
 
-"Open the existing lab" step lo MainMethodLab. java open chesi "Overload the Java main method" concept project code lo ela represent ayyindo identify chestam. "Overload the Java main method" lo "Open the existing lab" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+MainMethodLab.java ni open chesi relevant code ni chuddam. Previous lesson lo create chesina same `MainMethodLab.java` ni reuse chesthe standard main mariyu overloaded main methods side-by-side compare cheyyachu. Separate toy class create cheyyakunda continuity maintain avutundi.
 
 ### Step 2 — Add overloaded main methods
 
@@ -662,7 +667,7 @@ Ikkada code lo required change chestunnam. Java overloading rule parameter list 
 
 ### Step 3 — Inspect overloads
 
-"Overload the Java main method" lo "Inspect overloads" step MainMethodLab. "Overload the Java main method" lo "Inspect overloads" context lo, java ni direct evidence ga use chestundi. Ee "Inspect overloads" point previous explanation repeat cheyyakunda "Overload the Java main method" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. File Structure lo `main(String[])`, `main(int)` mariyu `main(String)` separate signatures ga kanipistayi. Same method name unna kuda parameter lists different kabatti Java valid overloads ga treat chestundi.
 
 ### Step 4 — Compile the overloads
 
@@ -670,19 +675,19 @@ Compile success ayithe three main overloads legal Java methods ani telustundi. K
 
 ### Step 5 — Inspect compiled signatures
 
-"Inspect compiled signatures" step result observation meeda focus chestundi. "Overload the Java main method" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `javap` compiled class lo multiple `main` method descriptors ni chupistundi. IDE display matrame kaadani, overloads actual bytecode members ga class file lo store ayyayani verify cheyyachu.
 
 ### Step 6 — Launch the class normally
 
-"Launch the class normally" step lo terminal result ni run chesi "Overload the Java main method" rule ni actual result tho verify chestam. "Overload the Java main method" lo "Launch the class normally" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.
+Ee command run chesi output ni chudandi. Normal `java MainMethodLab` launch appudu JVM launcher standard `main(String[])` signature ni matrame entry point ga use chestundi. Vere overloads legal ayina automatic ga select cheyyadu.
 
 ### Step 7 — Separate legality from entry-point selection
 
-"Separate legality from entry-point selection" step "Overload the Java main method" concept lo next distinct point ni cover chestundi. "Overload the Java main method" lo "Separate legality from entry-point selection" context lo, highlighted project evidence ni evidence ga use chesi, previous step lo establish chesina baseline nundi new behavior leda design consequence ni understand chestam.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 8 — Verify the project
 
-"Overload the Java main method" lesson lo "Verify the project" step separate knowledge point ni explain chestundi. "Overload the Java main method" lo "Verify the project" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+Maven goal run chesi build result ni chudandi. Educational lab change small aina kuda repo lo permanent ga add avutundi. Project-level Maven test success ayithe new source existing AeroTopo build ni break cheyyaledani confirm chestundi.
 
 ## Lesson 19 — Observe what happens when main is not static
 
@@ -696,29 +701,29 @@ Ikkada code lo required change chestunnam. Ee example lo `public`, `void`, `main
 
 ### Step 3 — Inspect the instance method
 
-Lesson 19 step 3 lo "Inspect the instance method" kosam NonStaticMainDemo. java ni use chesi "Observe what happens when main is" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. File Structure method ni valid Java member ga chupinchachu, kani valid member undadam standalone launcher entry point avvadam tho same kaadu. Static modifier launch contract lo separate requirement.
 
 ### Step 4 — Compile the non-static class
 
-"Compile the non-static class" step result observation meeda focus chestundi. "Observe what happens when main is not static" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. Non-static `main` ordinary instance method ga Java lo legal kabatti compile success avvachu. Compile stage success ayyaka launch stage fail ayithe problem syntax kaadani, entry point contract ani clear ga telustundi.
 
 ### Step 5 — Launch and observe the error
 
-"Observe what happens when main is not" lo "Launch and observe the error" step terminal result ni direct evidence ga use chestundi. Ee "Launch and observe the error" point previous explanation repeat cheyyakunda "Observe what happens when main is not" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. Normal launcher `public void main(String[] args)` ni object lekunda invoke cheyyaledu. Kabatti required static main entry point ledu ani runtime launch error report cheyyali.
 
 ### Step 6 — Connect the error to JVM startup
 
-"Observe what happens when main is not" lo "Connect the error to JVM startup" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Connect the error to JVM startup" point previous explanation repeat cheyyakunda "Observe what happens when main is not" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Delete the temporary demo
 
-Delete the temporary demo ni simple ga chuddam. Demo purpose complete ayyaka temporary `NonStaticMainDemo. java` ni delete cheyyali. Leka pothe later cumulative replay lo unnecessary file permanent state laga survive avvachu.
+Delete the temporary demo ni simple ga chuddam. Demo purpose complete ayyaka temporary `NonStaticMainDemo.java` ni delete cheyyali. Leka pothe later cumulative replay lo unnecessary file permanent state laga survive avvachu.
 
 ## Lesson 20 — Why the main method is public and static
 
 ### Step 1 — Reopen the permanent main lab
 
-Lesson 20 step 1 lo "Reopen the permanent main lab" kosam MainMethodLab. java ni use chesi "Why the main method is public" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+MainMethodLab.java ni open chesi relevant code ni chuddam. Temporary demo cleanup ayyaka permanent `MainMethodLab` correct standard main ni retain chestundi. Public mariyu static responsibilities ni stable working signature meeda explain cheyyadam clearer ga untundi.
 
 ### Step 2 — Focus on the entry-point line
 
@@ -726,15 +731,15 @@ Highlight ayina line ni chudandi. `public` launcher ki method access allow chest
 
 ### Step 3 — Explain public accessibility
 
-"Why the main method is public and static" lesson lo "Explain public accessibility" step separate knowledge point ni explain chestundi. "Why the main method is public and static" lo "Explain public accessibility" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.
+IntelliJ current code context batti useful information chupistundi. Launcher application class bayata nundi entry method ni access chestundi. `public` visibility valla class boundary bayata nundi main ni call cheyyadaniki access restriction remove avutundi.
 
 ### Step 4 — Explain static startup
 
-"Why the main method is public and" lo "Explain static startup" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Explain static startup" point previous explanation repeat cheyyakunda "Why the main method is public and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. `static` method class ki belong avutundi, specific object ki kaadu. Kabatti launcher `new MainMethodLab()` create cheyyakunda direct ga entry point ni invoke cheyyagaladu.
 
 ### Step 5 — Inspect the JVM launch contract
 
-"Why the main method is public and" lo "Inspect the JVM launch contract" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM launch contract" point previous explanation repeat cheyyakunda "Why the main method is public and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 6 — Inspect compiled modifiers
 
@@ -742,11 +747,13 @@ Highlight ayina line ni chudandi. `public` launcher ki method access allow chest
 
 ### Step 7 — Run the working entry point
 
-"Why the main method is public and" lo "Run the working entry point" step terminal result ni direct evidence ga use chestundi. Ee "Run the working entry point" point previous explanation repeat cheyyakunda "Why the main method is public and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `standard main` output standard public static String-array signature launcher dwara successful ga select ayindani confirm chestundi. Overloads exist ayina startup contract exact entry point ni choose chestundi.
 
 ### Step 8 — Verify the chapter result
 
-"Why the main method is public and" lo "Verify the chapter result" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Verify the chapter result" point previous explanation repeat cheyyakunda "Why the main method is public and" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Maven goal run chesi build result ni chudandi. Chapter lo permanent lab add chesam, overloads extend chesam, temporary broken demo cleanup chesam. Maven tests pass ayithe cumulative repo clean ga build avvutundi ani confirm chesi next fundamentals ki safe ga move avvachu.
+
+# Lessons 21–25
 
 ## Lesson 21 — Why static main methods are hidden rather than overridden
 
@@ -760,7 +767,7 @@ Ikkada code lo required change chestunnam. Parent mariyu child lo same static ma
 
 ### Step 3 — Compile and observe the override error
 
-"Why static main methods are hidden rather" lo "Compile and observe the override error" step terminal result ni direct evidence ga use chestundi. Ee "Compile and observe the override error" point previous explanation repeat cheyyakunda "Why static main methods are hidden rather" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `javac` `@Override` ni reject chesthe child static main parent static main ni override cheyyatledu ani direct compiler evidence vastundi. Same signature unna kuda relationship hiding matrame.
 
 ### Step 4 — Remove only the invalid Override annotation
 
@@ -768,7 +775,7 @@ Ikkada code lo required change chestunnam. `@Override` matrame remove chesthe sa
 
 ### Step 5 — Compile the valid static hiding example
 
-"Compile the valid static hiding example" step result observation meeda focus chestundi. "Why static main methods are hidden rather than" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. Annotation remove chesaka compile success avvadam parent static main ni child same-signature static main hide cheyyagaladani prove chestundi. Idi override kaadu, kani legal hiding behavior.
 
 ### Step 6 — Launch the parent class directly
 
@@ -776,37 +783,37 @@ Ikkada code lo required change chestunnam. `@Override` matrame remove chesthe sa
 
 ### Step 7 — Launch the child class directly
 
-"Why static main methods are hidden rather" lo "Launch the child class directly" step terminal result ni direct evidence ga use chestundi. Ee "Launch the child class directly" point previous explanation repeat cheyyakunda "Why static main methods are hidden rather" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `java ChildMain` appudu child main output vastundi. Idi parent method runtime override ayindani kaadu.
 
 ### Step 8 — Delete the temporary hiding experiment
 
-Delete the temporary hiding experiment ni simple ga chuddam. Concept prove ayyaka temporary `MainOverrideDemo. java` later lessons lo unnecessary state ga survive avvakudadhu. clear delete valla temporary demo clean ga end avutundi mariyu permanent project continuity clutter lekunda untundi.
+Delete the temporary hiding experiment ni simple ga chuddam. Concept prove ayyaka temporary `MainOverrideDemo.java` later lessons lo unnecessary state ga survive avvakudadhu. clear delete valla temporary demo clean ga end avutundi mariyu permanent project continuity clutter lekunda untundi.
 
 ## Lesson 22 — Why the JVM does not directly execute an overloaded main
 
 ### Step 1 — Open the existing overloaded main lab
 
-"Why the JVM does not directly execute an" context lo MainMethodLab. java meeda focus chestam. "Open the existing overloaded main lab" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+MainMethodLab.java ni open chesi relevant code ni chuddam. `MainMethodLab.java` lo standard `main(String[])` tho paatu `main(int)` mariyu `main(String)` overloads already unnayi. Launcher behavior test cheyyadaniki mundu ee three signatures source lo visible ga confirm cheyyali.
 
 ### Step 2 — Inspect all main signatures together
 
-Lesson 22 step 2 lo "Inspect all main signatures together" kosam MainMethodLab. java ni use chesi "Why the JVM does not directly" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. File Structure three main signatures ni separate members ga chupistundi. Overloads legal ga exist avvadam oka fact.
 
 ### Step 3 — Compile all overloads into one class file
 
-Lesson 22 step 3 lo "Compile all overloads into one class" kosam terminal result ni use chesi "Why the JVM does not directly" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee command run chesi output ni chudandi. Compile success three main methods kuda legal Java overloads ani prove chestundi. Runtime launcher selection ni discuss cheyyadaniki mundu class file lo all signatures valid ga exist avutayi.
 
 ### Step 4 — Inspect the compiled overload descriptors
 
-"Inspect the compiled overload descriptors" step result observation meeda focus chestundi. "Why the JVM does not directly execute an" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Ee command run chesi output ni chudandi. `javap` output lo `main(String[])`, `main(int)`, `main(String)` anni kanipistayi. Kabatti overloaded methods bytecode lo missing kaavu.
 
 ### Step 5 — Launch with a numeric-looking argument
 
-"Why the JVM does not directly execute" lo "Launch with a numeric-looking argument" step terminal result ni direct evidence ga use chestundi. Ee "Launch with a numeric-looking argument" point previous explanation repeat cheyyakunda "Why the JVM does not directly execute" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Ee command run chesi output ni chudandi. `42` command line lo numeric laga kanipinchina Java launcher danini String argument ga `String[] args` lo pass chestundi. `main(int)` overload ni automatic ga choose cheyyadu.
 
 ### Step 6 — Inspect the JVM entry-point rule
 
-"Why the JVM does not directly execute" lo "Inspect the JVM entry-point rule" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Inspect the JVM entry-point rule" point previous explanation repeat cheyyakunda "Why the JVM does not directly execute" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+JVM view lo class loading, bytecode verification and JIT steps kanipistayi. Java program run ayye time lo JVM ee work chestundi.
 
 ### Step 7 — Relate the result to explicit method calls
 
@@ -816,11 +823,11 @@ Highlight ayina line ni chudandi. Overloaded main methods valid methods kabatti 
 
 ### Step 1 — Open the existing numeric conversion lab
 
-Lesson 23 step 1 lo "Open the existing numeric conversion lab" kosam LanguageLab. Lesson 23 step 1 context lo, java ni use chesi "Understand widening and narrowing type casting" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LanguageLab.java ni open chesi relevant code ni chuddam. `LanguageLab.numericConversions` already casting examples ni contain chestundi. `double -> int`, `int -> byte`, `int -> long` mariyu Integer/String conversion patterns same real project method lo observe cheyyachu.
 
 ### Step 2 — Focus on double to int narrowing
 
-Highlight ayina line ni chudandi. `(int) metres` narrowing conversion fractional `. 9` part ni discard chestundi. `258. 9` value `258` ga truncate avutundi.
+Highlight ayina line ni chudandi. `(int) metres` narrowing conversion fractional `.9` part ni discard chestundi. `258.9` value `258` ga truncate avutundi.
 
 ### Step 3 — Focus on int to byte narrowing
 
@@ -832,7 +839,7 @@ Highlight ayina line ni chudandi. `long` range `int` kanna wider kabatti every i
 
 ### Step 5 — Open the regression test for conversions
 
-Lesson 23 step 5 lo "Open the regression test for conversions" kosam LearningLabTest. Lesson 23 step 5 context lo, java ni use chesi "Understand widening and narrowing type casting" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LearningLabTest.java ni open chesi relevant code ni chuddam. Test assertion conversion rules ki actual output values ni attach chestundi. `258.9` input ki expected list `[258, 2, 258, 258]` undadam valla casting behavior concrete ga verify avutundi.
 
 ### Step 6 — Inspect the expected conversion values
 
@@ -840,7 +847,7 @@ Highlight ayina line ni chudandi. First `258` double-to-int truncation, second `
 
 ### Step 7 — Run the language semantics JUnit test
 
-Test run chesi result ni chudandi. JUnit `languageSemantics` pass ayithe current `LanguageLab. numericConversions` expected narrowing, wrapping, widening results ni produce chestundani IntelliJ test runner lo direct evidence vastundi.
+Test run chesi result ni chudandi. JUnit `languageSemantics` pass ayithe current `LanguageLab.numericConversions` expected narrowing, wrapping, widening results ni produce chestundani IntelliJ test runner lo direct evidence vastundi.
 
 ### Step 8 — Review the passing test result
 
@@ -850,7 +857,7 @@ Test run chesi result ni chudandi. Test result evidence batti widening conversio
 
 ### Step 1 — Open the class containing static and instance fields
 
-Lesson 24 step 1 lo "Open the class containing static and" kosam LanguageLab. Lesson 24 step 1 context lo, java ni use chesi "Understand static variables through LanguageLab state" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LanguageLab.java ni open chesi relevant code ni chuddam. `LanguageLab` lo `VALID`, `GROUND`, `batches` static fields. `accepted` instance field.
 
 ### Step 2 — Inspect static final constants
 
@@ -878,29 +885,29 @@ Highlight ayina line ni chudandi. `Snapshot` lo shared `batches` mariyu object k
 
 ### Step 8 — Review all usages of the static field
 
-Lesson 24 step 8 lo "Review all usages of the static" kosam LanguageLab. Lesson 24 step 8 context lo, java ni use chesi "Understand static variables through LanguageLab state" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ee IntelliJ action target code ni fast ga reach cheyyadaniki help chestundi. Find Usages `batches` declaration, static initializer, increment, snapshot return locations ni show chestundi. shared changing state scope small ga unda leda widespread ga unda ani developer quickly assess cheyyachu.
 
 ## Lesson 25 — Convert Integer values to String and String values to Integer
 
 ### Step 1 — Reopen the numeric conversion method
 
-"Convert Integer values to String and String values" context lo LanguageLab. java meeda focus chestam. "Reopen the numeric conversion method" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+LanguageLab.java ni open chesi relevant code ni chuddam. `LanguageLab.numericConversions` return line lo `Integer.toString(truncated)` integer value ni String ga convert chestundi. outer `Integer.parseInt(...)` aa numeric String ni malli primitive int ga parse chestundi.
 
 ### Step 2 — Focus on Integer to String conversion
 
-Highlight ayina line ni chudandi. `Integer. toString` integer value ni String ga marchutundi. Example 258 value `"258"` text ga avutundi. Logging leda text output kosam idi useful.
+Highlight ayina line ni chudandi. `Integer.toString` integer value ni String ga marchutundi. Example 258 value `"258"` text ga avutundi. Logging leda text output kosam idi useful.
 
 ### Step 3 — Focus on String to int parsing
 
-Highlight ayina line ni chudandi. `Integer. parseInt` valid numeric text expect chestundi. User/file/HTTP input invalid ga unte `NumberFormatException` ravachu.
+Highlight ayina line ni chudandi. `Integer.parseInt` valid numeric text expect chestundi. User/file/HTTP input invalid ga unte `NumberFormatException` ravachu.
 
 ### Step 4 — Compare parseInt with valueOf
 
-"Convert Integer values to String and String" lo "Compare parseInt with valueOf" step highlighted project evidence ni direct evidence ga use chestundi. Ee "Compare parseInt with valueOf" point previous explanation repeat cheyyakunda "Convert Integer values to String and String" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+IntelliJ current code context batti useful information chupistundi. `parseInt` primitive `int` return chestundi. `Integer.valueOf` wrapper `Integer` object return chestundi.
 
 ### Step 5 — Open the regression test covering the round trip
 
-Lesson 25 step 5 lo "Open the regression test covering the" kosam LearningLabTest. java ni use chesi "Convert Integer values to String and" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LearningLabTest.java ni open chesi relevant code ni chuddam. Existing test final expected `258` value Integer-to-String-to-int round trip correct ga work chestundani guard chestundi. Later code changes conversion behavior ni silently break cheyyakunda test evidence istundi.
 
 ### Step 6 — Inspect the expected final conversion value
 
@@ -912,13 +919,13 @@ Test run chesi result ni chudandi. IntelliJ JUnit green result current `numericC
 
 ### Step 8 — Review the passing conversion test
 
-Test run chesi result ni chudandi. Final answer lo `Integer. toString`/`String. valueOf`, `Integer. parseInt`/`Integer. valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi.
+Test run chesi result ni chudandi. Final answer lo `Integer.toString`/`String.valueOf`, `Integer.parseInt`/`Integer.valueOf`, primitive-vs-wrapper return difference mariyu invalid text ki `NumberFormatException` mention cheyyadam complete practical explanation istundi.
 
 ## Lesson 26 — Java references instead of explicit pointers
 
 ### Step 1 — Open Java's managed-reference example
 
-RuntimeLab. java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.
+RuntimeLab.java lo Java managed reference APIs kanipistayi. `WeakReference`, `SoftReference` mariyu `PhantomReference` objects ni refer chestayi. Kani avi C/C++ style raw pointers kaavu.
 
 ### Step 2 — Inspect the ReferenceSet declaration
 
@@ -942,7 +949,7 @@ Temporary demo file lo C/C++ style `int* address` syntax try chestunnam. Java gr
 
 ### Step 7 — Return to the managed reference code
 
-Malli RuntimeLab. java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.
+Malli RuntimeLab.java ki vacham. Java objects ni managed references dwara access chestam. `ReferenceSet` special reference classes use chestundi, kani raw pointers ni declare cheyyadu.
 
 ### Step 8 — Remove the temporary pointer experiment
 
@@ -976,7 +983,7 @@ Program `true` print chestundi. Same object ni rendu references access chestunna
 
 ### Step 7 — Return to RuntimeLab after the experiment
 
-RuntimeLab. java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.
+RuntimeLab.java ki return ayyamu. Managed references valla type safety, garbage collection mariyu portability easy ga maintain cheyyachu. Ordinary code arbitrary memory ni corrupt cheyyadam chance taggutundi.
 
 ### Step 8 — Remove the reference identity demo
 
@@ -986,7 +993,7 @@ Temporary reference demo ni remove chestunnam. Final answer lo safety, garbage c
 
 ### Step 1 — Open primitive variables in LanguageLab
 
-LanguageLab. java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.
+LanguageLab.java lo `int[]`, `int flags` mariyu `int code` declarations kanipistayi. `int` primitive direct numeric value store chestundi. Primitive variable ki `null` assign cheyyalem.
 
 ### Step 2 — Focus on an initialized int local variable
 
@@ -1002,7 +1009,7 @@ Temporary demo lo `int count = null` try chestunnam. `null` reference value kaba
 
 ### Step 5 — Replace the primitive with its wrapper type
 
-Lesson 28 step 5 lo "Replace the primitive with its wrapper" kosam PrimitiveNullDemo. java ni use chesi "Primitive types cannot hold null" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Ippudu `int` place lo `Integer` wrapper use chestunnam. `Integer` reference type kabatti `null` store cheyyagaladu. Primitive `int` మాత్రం null ni accept cheyyadu.
 
 ### Step 6 — Compile the nullable wrapper version
 
@@ -1020,7 +1027,7 @@ Temporary demo ni remove chestunnam. Final rule: primitives null store cheyyavu.
 
 ### Step 1 — Reopen Java's numeric conversion example
 
-LanguageLab. numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.
+LanguageLab.numericConversions lo different conversion types unnayi. Primitive cast, widening conversion mariyu String parsing same rule follow avvavu. Exception answer conversion type batti change avutundi.
 
 ### Step 2 — Inspect primitive narrowing without an exception
 
@@ -1040,7 +1047,7 @@ Command run chesthe String object ni Integer ga cast cheyyadam fail avutundi. Ou
 
 ### Step 6 — Focus on text-to-number parsing
 
-`Integer. parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.
+`Integer.parseInt` object cast kaadu. String content ni number ga parse chestundi. `258x` valid integer text kaadu kabatti `NumberFormatException` vastundi.
 
 ### Step 7 — Run the invalid numeric parse
 
@@ -1048,7 +1055,7 @@ Parsing branch run chesthe `258x` numeric format invalid ani runtime detect ches
 
 ### Step 8 — Return to the real conversion method
 
-"Return to the real conversion method" step lo LanguageLab. java open chesi "Exceptions from invalid conversion and casting" concept project code lo ela represent ayyindo identify chestam. "Exceptions from invalid conversion and casting" lo "Return to the real conversion method" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+LanguageLab.java ki return ayyamu. Primitive cast information lose chesina exception raakapovachu. Parsing invalid text మాత్రం `NumberFormatException` istundi. Conversion type batti answer cheyyali.
 
 ### Step 9 — Remove the invalid conversion demo
 
@@ -1096,7 +1103,7 @@ Temporary storage demo ni remove chestunnam. Final rule: primitive null store ch
 
 ### Step 1 — Start from type-based behavior already used in AeroTopo
 
-LanguageLab. format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.
+LanguageLab.format lo `Object` value runtime type batti different branch select avutundi. Integer, String, null ki separate behavior undi. `instanceof` kuda runtime type compatibility ni check cheyyadaniki use avutundi.
 
 ### Step 2 — Create a direct instanceof experiment
 
@@ -1108,7 +1115,7 @@ Highlight ayina condition first runtime type ni check chestundi. Match true ayit
 
 ### Step 4 — Compare another type and the null fallback
 
-Lesson 31 step 4 lo "Compare another type and the null" kosam InstanceofDemo. java ni use chesi "Purpose of the instanceof operator" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Integer object vaste second `instanceof` branch match avutundi. `null` అయితే String leda Integer branch match kaadu; condition false avutundi. Anduke null check fallback lo handle chestunnam.
 
 ### Step 5 — Run String, Integer, and null through the operator
 
@@ -1116,11 +1123,11 @@ Program three values ni same method ki pass chestundi. String and Integer correc
 
 ### Step 6 — Remove the temporary instanceof class
 
-"Remove the temporary instanceof class" step InstanceofDemo. java cleanup chestundi. "Purpose of the instanceof operator" behavior previous step lo prove ayyindi, kabatti temporary demo ni retain cheyyalsina avasaram ledu. "Purpose of the instanceof operator" lo "Remove the temporary instanceof class" context lo, real project files matrame next lesson ki carry avutayi.
+Temporary demo ni remove chestunnam endukante concept already prove ayyindi. Main rule: broad reference vachinappudu type-specific logic mundu compatibility check cheyyachu. Unnecessary `instanceof` chains మాత్రం avoid cheyyali.
 
 ### Step 7 — Connect instanceof back to the real project type dispatch
 
-Malli LanguageLab. format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.
+Malli LanguageLab.format ni chudandi. Switch pattern and `instanceof` rendu runtime type ni use chestayi. Interview answer lo type check, safe type-specific logic, pattern variable, mariyu null false behavior clear ga cheppali.
 
 ## Lesson 32 — Java is pass-by-value, including object references
 
@@ -1146,11 +1153,11 @@ JUnit test actual caller List ni use chestundi. `reassign` taruvata List unchang
 
 ### Step 6 — Focus on the mutation assertion
 
-"Focus on the mutation assertion" step LearningLabTest. java ni close ga inspect chestundi. "Java is pass-by-value, including object references" concept lo syntax, ownership, leda dispatch decision ee target tho connect avutundi. "Java is pass-by-value, including object references" lo "Focus on the mutation assertion" context lo, next step lo result ni ee evidence tho compare chestam.
+`mutate` same object state ni change chestundi kabatti caller List lo `GCP` kanipistundi. Reference itself by value copy ayyindi; object మాత్రం common ga undi. Anduke rule ki contradiction ledu.
 
 ### Step 7 — Run the existing language-semantics test
 
-"Run the existing language-semantics test" step lo terminal result ni run chesi "Java is pass-by-value, including object references" rule ni actual result tho verify chestam. "Java is pass-by-value, including object references" lo "Run the existing language-semantics test" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.
+JUnit test pass ayithe rendu behaviors expected ga work chestunnayi ani confirm avutundi. Reference value copy avutundi; shared mutable object ni copied reference dwara modify cheyyachu. Caller variable మాత్రం reassign avvadu.
 
 ### Step 8 — Return to the paired methods for the interview rule
 
@@ -1160,15 +1167,15 @@ Final ga rendu methods ni pakkapakkana chudandi. Parameter reassign local ga unt
 
 ### Step 1 — Start from AeroTopo's normal Spring Boot entry point
 
-Lesson 33 step 1 lo "Start from AeroTopo's normal Spring Boot" kosam AeroTopoApplication. java ni use chesi "Understand System. exit() in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo main method `SpringApplication.run` tho application ni start chestundi. Normal service lifecycle ni Spring manage chestundi. `System.exit` మాత్రం complete JVM process ni terminate cheyyadaniki request chestundi.
 
 ### Step 2 — Create a minimal System.exit experiment
 
-Temporary demo Spring Boot service ni touch cheyyakunda `System. exit` behavior chupistundi. First message print avutundi, exit status set avutundi. Exit call taruvata unna print execute avvakudadhu.
+Temporary demo Spring Boot service ni touch cheyyakunda `System.exit` behavior chupistundi. First message print avutundi, exit status set avutundi. Exit call taruvata unna print execute avvakudadhu.
 
 ### Step 3 — Focus on the exit request and status
 
-`System. exit(7)` process ki exit status 7 istundi. Shell leda automation process result ni status dwara check cheyyagaladu. Zero usually success, non-zero usually failure convention.
+`System.exit(7)` process ki exit status 7 istundi. Shell leda automation process result ni status dwara check cheyyagaladu. Zero usually success, non-zero usually failure convention.
 
 ### Step 4 — Inspect the statement after System.exit
 
@@ -1180,29 +1187,29 @@ Run output lo `before exit` and `exit=7` kanipistayi. `after exit` ledu. Ante JV
 
 ### Step 6 — Remove the process-termination demo from the project state
 
-Temporary exit demo ni remove chestunnam. Normal controller, service, library code lo `System. exit` use cheyyadam dangerous endukante whole JVM stop avutundi. Process termination intentional ga unna context lo matrame use cheyyali.
+Temporary exit demo ni remove chestunnam. Normal controller, service, library code lo `System.exit` use cheyyadam dangerous endukante whole JVM stop avutundi. Process termination intentional ga unna context lo matrame use cheyyali.
 
 ### Step 7 — Return to the framework-managed application startup
 
-Malli AeroTopo main method ni chudandi. Long-running Spring service lifecycle framework ki leave chestam. Interview lo `System. exit` whole JVM terminate chestundi, status caller ki istundi, and careful ga use cheyyali ani cheppali.
+Malli AeroTopo main method ni chudandi. Long-running Spring service lifecycle framework ki leave chestam. Interview lo `System.exit` whole JVM terminate chestundi, status caller ki istundi, and careful ga use cheyyali ani cheppali.
 
 ## Lesson 34 — What happens internally when System.exit() is called
 
 ### Step 1 — Contrast JVM shutdown with deterministic resource cleanup
 
-"What happens internally when System. exit() is called" context lo RuntimeLab. java meeda focus chestam. "Contrast JVM shutdown with deterministic resource cleanup" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+RuntimeLab NativeBuffer individual resource cleanup ni handle chestundi. `System.exit` మాత్రం complete JVM shutdown start chestundi. Resource close mariyu process termination rendu different lifecycle levels ani first separate ga understand cheyyali.
 
 ### Step 2 — Create a shutdown-hook demonstration
 
-Temporary demo shutdown hook register chestundi. Main first message print chesi `System. exit(5)` call chestundi. JVM shutdown sequence lo hook run ayi final termination mundu hook message kanipinchali.
+Temporary demo shutdown hook register chestundi. Main first message print chesi `System.exit(5)` call chestundi. JVM shutdown sequence lo hook run ayi final termination mundu hook message kanipinchali.
 
 ### Step 3 — Inspect shutdown-hook registration
 
-`addShutdownHook` JVM shutdown time lo run cheyyalsina Thread ni register chestundi. `System. exit` taruvata normal statements run avvavu. Anduke shutdown-specific cleanup ki hook suitable mechanism.
+`addShutdownHook` JVM shutdown time lo run cheyyalsina Thread ni register chestundi. `System.exit` taruvata normal statements run avvavu. Anduke shutdown-specific cleanup ki hook suitable mechanism.
 
 ### Step 4 — Inspect the call that starts JVM shutdown
 
-`System. exit(5)` JVM shutdown ni start chestundi. Status 5 process result ga carry avutundi; registered hook shutdown sequence lo run avutundi. Normal main flow ikkada continue kaadu.
+`System.exit(5)` JVM shutdown ni start chestundi. Status 5 process result ga carry avutundi; registered hook shutdown sequence lo run avutundi. Normal main flow ikkada continue kaadu.
 
 ### Step 5 — Run the hook and exit sequence
 
@@ -1214,17 +1221,17 @@ Temporary shutdown demo ni remove chestunnam. Production code lo resource cleanu
 
 ### Step 7 — Return to AeroTopo's explicit resource lifecycle
 
-"What happens internally when System. exit() is called" context lo RuntimeLab. java meeda focus chestam. "Return to AeroTopo's explicit resource lifecycle" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+NativeBuffer close one resource ni clean chestundi; JVM alive ga untundi. `System.exit` మాత్రం shutdown sequence, hooks, final termination ni trigger chestundi. Interview answer lo ee lifecycle difference clear ga mention cheyyali.
 
 ## Lesson 35 — System.exit() usage in the AeroTopo project
 
 ### Step 1 — Inspect how the real service starts
 
-AeroTopo main method SpringApplication ni start chestundi; direct `System. exit` ledu. Long-running service lifecycle ni framework and deployment environment manage chestayi. Business request code whole JVM ni stop cheyyakudadhu.
+AeroTopo main method SpringApplication ni start chestundi; direct `System.exit` ledu. Long-running service lifecycle ni framework and deployment environment manage chestayi. Business request code whole JVM ni stop cheyyakudadhu.
 
 ### Step 2 — Search the real source tree for System.exit
 
-Source tree search lo `System. exit` usage dorakaledu. Kabatti project lo use chesam ani claim cheyyakudadhu. Accurate answer actual code evidence meeda base avvali.
+Source tree search lo `System.exit` usage dorakaledu. Kabatti project lo use chesam ani claim cheyyakudadhu. Accurate answer actual code evidence meeda base avvali.
 
 ### Step 3 — Open the documented deployment and rollback lifecycle
 
@@ -1240,7 +1247,7 @@ Malli application main ni chudandi. Project source lo direct exit usage ledu. St
 
 ### Step 6 — State the project-experience answer without inventing history
 
-Final answer actual project evidence ni follow cheyyali. AeroTopo service code lo `System. exit` use ledu ani cheppi, CLI or one-shot tool lo intentional process exit kosam use avvachu ani explain cheyyali.
+Final answer actual project evidence ni follow cheyyali. AeroTopo service code lo `System.exit` use ledu ani cheppi, CLI or one-shot tool lo intentional process exit kosam use avvachu ani explain cheyyali.
 
 ## Lesson 36 — Agile-style project methodology versus Waterfall
 
@@ -1270,13 +1277,13 @@ Repo iterative practices ni prove chestundi, kani sprint length, stand-up, story
 
 ### Step 7 — Summarize the methodology from the strongest project evidence
 
-"Agile-style project methodology versus Waterfall" lo "Summarize the methodology from the strongest project" step RUNBOOK. md ni direct evidence ga use chestundi. Ee "Summarize the methodology from the strongest project" point previous explanation repeat cheyyakunda "Agile-style project methodology versus Waterfall" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Final ga Git/review loop ni base chesi Agile-style iterative methodology ani cheppachu. Incremental rollout and evidence-based design kuda support chestayi. Scrum ceremonies మాత్రం repo prove cheyyadu ani clear ga separate cheyyali.
 
 ## Lesson 37 — Remove duplicate integers from an array
 
 ### Step 1 — Open the existing AeroTopo duplicate-removal method
 
-SurveyAlgorithms. unique already real implementation ni contain chestundi. `Arrays. stream`, `distinct`, `toArray` three stages kanipistayi. Duplicate production method create cheyyakunda existing code ni reuse chestam.
+SurveyAlgorithms.unique already real implementation ni contain chestundi. `Arrays.stream`, `distinct`, `toArray` three stages kanipistayi. Duplicate production method create cheyyakunda existing code ni reuse chestam.
 
 ### Step 2 — Focus on distinct encounter-order behavior
 
@@ -1304,13 +1311,13 @@ Temporary driver ni remove chestunnam. Real one-line method project lo already u
 
 ### Step 8 — Return to the production array solution
 
-Final ga `Arrays. stream → distinct → toArray` flow ni chudandi. First occurrence order preserve avutundi and new int array return avutundi. Alternative ga order important ayithe LinkedHashSet use cheyyachu.
+Final ga `Arrays.stream → distinct → toArray` flow ni chudandi. First occurrence order preserve avutundi and new int array return avutundi. Alternative ga order important ayithe LinkedHashSet use cheyyachu.
 
 ## Lesson 38 — Merge two unsorted arrays into one sorted array
 
 ### Step 1 — Open the existing merge-and-sort implementation
 
-SurveyAlgorithms. mergeSorted exact task ni already solve chestundi. First and second arrays streams ga convert ayi concat avutayi, taruvata combined data sort ayi `toArray` tho result vastundi.
+SurveyAlgorithms.mergeSorted exact task ni already solve chestundi. First and second arrays streams ga convert ayi concat avutayi, taruvata combined data sort ayi `toArray` tho result vastundi.
 
 ### Step 2 — Focus on concatenate-then-sort order
 
@@ -1330,11 +1337,11 @@ Output complete sorted sequence ga vastundi. Unsorted inputs correctly merge and
 
 ### Step 6 — Compare with an imperative copy-then-sort pattern
 
-CollectionLab. sorted copy create chesi sort chestundi. Array alternative lo kuda first combined array create chesi values copy chesi `Arrays. sort` call cheyyachu. Concept copy/combine then sort.
+CollectionLab.sorted copy create chesi sort chestundi. Array alternative lo kuda first combined array create chesi values copy chesi `Arrays.sort` call cheyyachu. Concept copy/combine then sort.
 
 ### Step 7 — Remove the temporary merge driver
 
-Temporary driver ni remove chestunnam. Interview lo Stream API `concat → sorted → toArray` approach cheppachu. Imperative ga combined array create chesi copy chesi `Arrays. sort` use cheyyachu.
+Temporary driver ni remove chestunnam. Interview lo Stream API `concat → sorted → toArray` approach cheppachu. Imperative ga combined array create chesi copy chesi `Arrays.sort` use cheyyachu.
 
 ### Step 8 — Return to the one-line Stream API implementation
 
@@ -1344,7 +1351,7 @@ Final line primitive IntStream use chestundi kabatti unnecessary boxing avoid av
 
 ### Step 1 — Open the binary-array partition method
 
-SurveyAlgorithms. binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.
+SurveyAlgorithms.binaryFlags exact binary partition logic ni contain chestundi. Loop values 0 or 1 ani validate chesi zeros count chestundi. Taruvata two fill calls left zeros and right ones create chestayi.
 
 ### Step 2 — Inspect validation and zero counting in one pass
 
@@ -1378,7 +1385,7 @@ Final method simple binary property ni use chestundi. Zeros count boundary decid
 
 ### Step 1 — Open the stable zero-compaction algorithm
 
-SurveyAlgorithms. moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.
+SurveyAlgorithms.moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.
 
 ### Step 2 — Inspect the write-pointer compaction loop
 
@@ -1386,7 +1393,7 @@ Loop original order lo values ni read chestundi. Non-zero value vachinappude nex
 
 ### Step 3 — Inspect how trailing positions become zeros
 
-Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays. fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.
+Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays.fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.
 
 ### Step 4 — Create a mixed array with visible nonzero ordering
 
@@ -1412,7 +1419,7 @@ Final method one scan plus one suffix fill use chestundi. Total O(n) time, O(1) 
 
 ### Step 1 — Start from AeroTopo's normal sorting approach
 
-Lesson 41 step 1 lo "Start from AeroTopo's normal sorting approach" kosam SurveyAlgorithms. java ni use chesi "Sort an array using one explicit" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Existing code library sort ni use chestundi. Interview constraint మాత్రం one explicit loop possible aa ani adugutundi. Oka loop undadam automatically O(n) ani meaning kaadu; loop backtrack ayithe repeated work jaruguthundi.
 
 ### Step 2 — Create a one-loop gnome-sort demonstration
 
@@ -1432,13 +1439,13 @@ Production code lo clear library sort maintain cheyyadam easy. One-loop trick in
 
 ### Step 6 — Remove the temporary one-loop implementation
 
-Temporary class ni remove chestunnam. Final answer: one explicit loop possible, gnome-sort style backtracking use cheyyachu, worst case O(n²), production lo usually `Arrays. sort` leda proper library sort prefer chestam.
+Temporary class ni remove chestunnam. Final answer: one explicit loop possible, gnome-sort style backtracking use cheyyachu, worst case O(n²), production lo usually `Arrays.sort` leda proper library sort prefer chestam.
 
 ## Lesson 42 — Remove duplicates from a sorted array in place
 
 ### Step 1 — Open the existing in-place deduplication method
 
-SurveyAlgorithms. deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.
+SurveyAlgorithms.deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.
 
 ### Step 2 — Inspect why sorted order makes one previous value sufficient
 
@@ -1468,7 +1475,7 @@ Project lo password buffer ledu kabatti temporary demo use chestunnam. `char[]` 
 
 ### Step 2 — Inspect the explicit char-array wipe
 
-`Arrays. fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.
+`Arrays.fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.
 
 ### Step 3 — Run the mutable-versus-immutable comparison
 
@@ -1490,7 +1497,7 @@ Temporary demo String pool basic identity behavior ni chupistundi. Same literals
 
 ### Step 2 — Inspect literal sharing versus explicit allocation
 
-Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `. equals()` content compare chestundi.
+Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `.equals()` content compare chestundi.
 
 ### Step 3 — Inspect what intern() actually requests
 
@@ -1512,7 +1519,7 @@ Mostly unique dynamic values lo duplicates almost levu. Intern lookup/manage wor
 
 ### Step 1 — Open a real single-threaded StringBuilder use case
 
-SurveyAlgorithms. reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.
+SurveyAlgorithms.reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.
 
 ### Step 2 — Inspect a second local accumulation scenario
 
@@ -1590,7 +1597,7 @@ Final answer project lo local StringBuilder enough ani cheppali. StringBuffer cu
 
 ### Step 1 — Open the real AeroTopo reverse implementation
 
-SurveyAlgorithms. reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.
+SurveyAlgorithms.reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.
 
 ### Step 2 — Inspect why a mutable builder fits reversal
 
@@ -1650,7 +1657,7 @@ Final project example repeated construction ki builder use chestundi. Simple exp
 
 ### Step 1 — Open the existing anagram-grouping method
 
-SurveyAlgorithms. anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.
+SurveyAlgorithms.anagrams existing implementation ni use chestundi. Prathi String chars sort chesi canonical key create chestundi. Same sorted key unna Strings oka group lo collect avutayi.
 
 ### Step 2 — Focus on canonical-key creation
 
@@ -1672,7 +1679,7 @@ Temporary driver ni remove chestunnam. Final answer sorted-character key, Map gr
 
 ### Step 1 — Open the manual substring-search implementation
 
-SurveyAlgorithms. indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.
+SurveyAlgorithms.indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.
 
 ### Step 2 — Inspect the mismatch shortcut
 
@@ -1878,7 +1885,7 @@ Class field structure define chestundi; object actual values hold chestundi. `gs
 
 ### Step 3 — Open the test that creates a real object
 
-Test lo `new Orthomosaic(... )` runtime object create chestundi. ORTHO id, source tiles, 0. 05 gsd aa instance state ga store avutayi. Class already definition.
+Test lo `new Orthomosaic(...)` runtime object create chestundi. ORTHO id, source tiles, 0.05 gsd aa instance state ga store avutayi. Class already definition.
 
 ### Step 4 — Contrast instance behavior with a class-level static member
 
@@ -1900,7 +1907,7 @@ Constructor supplied values ni object state ga set chestundi. Common id/tiles ba
 
 ### Step 3 — Inspect an actual Orthomosaic object created in a test
 
-`SurveyProducts. Orthomosaic` class type. `ORTHO`, source list, `0. 05` instance values. `new` expression one concrete object create chestundi.
+`SurveyProducts.Orthomosaic` class type. `ORTHO`, source list, `0.05` instance values. `new` expression one concrete object create chestundi.
 
 ### Step 4 — Recognize that another object can use different state
 
@@ -2050,7 +2057,7 @@ Product input list ni copy chesi own internal representation ga store chestundi.
 
 ### Step 2 — Create explicit association and aggregation examples
 
-"Create explicit association and aggregation examples" step lo RelationshipDemo. "Association, aggregation, and composition" lo "Create explicit association and aggregation examples" context lo, java lesson-only experiment ga add chestam. "Association, aggregation, and composition" rule ni one small example lo isolate cheyyadam valla framework noise lekunda compiler leda runtime behavior clear ga kanipistundi.
+Reviewer simple association; Portfolio external Products ni aggregate chestundi. Products independent ga exist cheyyagalavu. Product internal tiles representation మాత్రం own copy ga maintain chestundi.
 
 ### Step 3 — Inspect independent part lifetimes
 
@@ -2156,1726 +2163,1726 @@ Final answer OOP importance controlled change and complexity management ani expl
 
 ### Step 1 — Open the project evidence — What a Java constructor is
 
-Lesson 73 step 1 lo "Open the project evidence — What" kosam SurveyProducts. Lesson 73 step 1 context lo, java ni use chesi "What a Java constructor is" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
 
 ### Step 2 — Trace the Java rule — What a Java constructor is
 
-Lesson 73 step 2 lo "Trace the Java rule — What" kosam SurveyProducts. Lesson 73 step 2 context lo, java ni use chesi "What a Java constructor is" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
 
 ### Step 3 — Connect caller and object state — What a Java constructor is
 
-Lesson 73 step 3 lo "Connect caller and object state —" kosam SurveyProducts. Lesson 73 step 3 context lo, java ni use chesi "What a Java constructor is" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
 
 ### Step 4 — State the interview rule — What a Java constructor is
 
-Lesson 73 step 4 lo "State the interview rule — What" kosam SurveyProducts. Lesson 73 step 4 context lo, java ni use chesi "What a Java constructor is" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.
 
 ## Lesson 74 — Private constructors
 
 ### Step 1 — Open the project evidence — Private constructors
 
-Lesson 74 step 1 lo "Open the project evidence — Private" kosam PatternLab. Lesson 74 step 1 context lo, java ni use chesi "Private constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
 
 ### Step 2 — Trace the Java rule — Private constructors
 
-"Trace the Java rule — Private constructors" step lo PatternLab. java open chesi "Private constructors" concept project code lo ela represent ayyindo identify chestam. "Private constructors" lo "Trace the Java rule — Private constructors" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
 
 ### Step 3 — Connect caller and object state — Private constructors
 
-"Private constructors" context lo PatternLab. java meeda focus chestam. "Connect caller and object state — Private constructors" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
 
 ### Step 4 — State the interview rule — Private constructors
 
-Lesson 74 step 4 lo "State the interview rule — Private" kosam PatternLab. Lesson 74 step 4 context lo, java ni use chesi "Private constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+PatternLab registries private constructors use chestayi. Outside code direct `new` cheyyaledu; `instance()` method controlled creation/access provide chestundi.
 
 ## Lesson 75 — Constructor overloading
 
 ### Step 1 — Open the project evidence — Constructor overloading
 
-Lesson 75 step 1 lo "Open the project evidence — Constructor" kosam SurveyProducts. Lesson 75 step 1 context lo, java ni use chesi "Constructor overloading" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
 
 ### Step 2 — Trace the Java rule — Constructor overloading
 
-"Constructor overloading" context lo SurveyProducts. java meeda focus chestam. "Trace the Java rule — Constructor overloading" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
 
 ### Step 3 — Connect caller and object state — Constructor overloading
 
-Lesson 75 step 3 lo "Connect caller and object state —" kosam SurveyProducts. Lesson 75 step 3 context lo, java ni use chesi "Constructor overloading" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
 
 ### Step 4 — State the interview rule — Constructor overloading
 
-Lesson 75 step 4 lo "State the interview rule — Constructor" kosam SurveyProducts. Lesson 75 step 4 context lo, java ni use chesi "Constructor overloading" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product lo two constructors different parameter lists tho unnayi. Short constructor full constructor ki `this(...)` dwara delegate chestundi. Rendu valid Product initialization paths.
 
 ## Lesson 76 — Why classes provide different constructors
 
 ### Step 1 — Open the project evidence — Why classes provide different constructors
 
-Lesson 76 step 1 lo "Open the project evidence — Why" kosam SurveyProducts. Lesson 76 step 1 context lo, java ni use chesi "Why classes provide different constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
 
 ### Step 2 — Trace the Java rule — Why classes provide different constructors
 
-Lesson 76 step 2 lo "Trace the Java rule — Why" kosam SurveyProducts. Lesson 76 step 2 context lo, java ni use chesi "Why classes provide different constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
 
 ### Step 3 — Connect caller and object state — Why classes provide different constructors
 
-Lesson 76 step 3 lo "Connect caller and object state —" kosam SurveyProducts. Lesson 76 step 3 context lo, java ni use chesi "Why classes provide different constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
 
 ### Step 4 — State the interview rule — Why classes provide different constructors
 
-Lesson 76 step 4 lo "State the interview rule — Why" kosam SurveyProducts. Lesson 76 step 4 context lo, java ni use chesi "Why classes provide different constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Short Product constructor default empty tiles use chestundi; full constructor supplied tiles accept chestundi. Different caller needs support chestayi, common initialization duplicate kaadu.
 
 ## Lesson 77 — Calling super() and this() from constructors
 
 ### Step 1 — Open the valid project baseline — Calling super() and this() from constructors
 
-Lesson 77 step 1 lo "Open the valid project baseline —" kosam SurveyProducts. Lesson 77 step 1 context lo, java ni use chesi "Calling super() and this() from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
 
 ### Step 2 — Create the focused experiment — Calling super() and this() from constructors
 
-Lesson 77 step 2 lo "Create the focused experiment — Calling" kosam ConstructorInvocationDemo. Lesson 77 step 2 context lo, java ni use chesi "Calling super() and this() from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
 
 ### Step 3 — Run the focused experiment — Calling super() and this() from constructors
 
-"Run the focused experiment — Calling super() and this()" step result observation meeda focus chestundi. "Calling super() and this() from constructors" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
 
 ### Step 4 — Remove the temporary experiment — Calling super() and this() from constructors
 
-[no highlight] Lesson 77 step 4 lo "Remove the temporary experiment — Calling" kosam ConstructorInvocationDemo. Lesson 77 step 4 context lo, java ni use chesi "Calling super() and this() from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
 
 ### Step 5 — Return to production code — Calling super() and this() from constructors
 
-Lesson 77 step 5 lo "Return to production code — Calling" kosam SurveyProducts. Lesson 77 step 5 context lo, java ni use chesi "Calling super() and this() from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor first statement ga `this(...)` leda `super(...)` okkate direct ga undagaladu. `this(...)` target constructor taruvata `super(...)` call cheyyachu; indirect chain valid.
 
 ## Lesson 78 — Why constructors are not overridden
 
 ### Step 1 — Open the project evidence — Why constructors are not overridden
 
-Lesson 78 step 1 lo "Open the project evidence — Why" kosam SurveyProducts. Lesson 78 step 1 context lo, java ni use chesi "Why constructors are not overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
 
 ### Step 2 — Trace the Java rule — Why constructors are not overridden
 
-"Why constructors are not overridden" context lo SurveyProducts. java meeda focus chestam. "Trace the Java rule — Why constructors are not" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
 
 ### Step 3 — Connect caller and object state — Why constructors are not overridden
 
-Lesson 78 step 3 lo "Connect caller and object state —" kosam SurveyProducts. Lesson 78 step 3 context lo, java ni use chesi "Why constructors are not overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
 
 ### Step 4 — State the interview rule — Why constructors are not overridden
 
-Lesson 78 step 4 lo "State the interview rule — Why" kosam SurveyProducts. Lesson 78 step 4 context lo, java ni use chesi "Why constructors are not overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product constructors subclass ki inherit kaavu. Orthomosaic own constructor declare chesi `super(...)` tho base initialization call chestundi. Idi overriding kaadu.
 
 ## Lesson 79 — Whether constructors can be static, final, or abstract
 
 ### Step 1 — Open the valid project baseline — Whether constructors can be static, final, or abstract
 
-"Whether constructors can be static, final, or abstract" context lo SurveyProducts. java meeda focus chestam. "Open the valid project baseline — Whether constructors can" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
 
 ### Step 2 — Create the focused experiment — Whether constructors can be static, final, or abstract
 
-Lesson 79 step 2 lo "Create the focused experiment — Whether" kosam IllegalConstructorModifiers. Lesson 79 step 2 context lo, java ni use chesi "Whether constructors can be static, final," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
 
 ### Step 3 — Run the focused experiment — Whether constructors can be static, final, or abstract
 
-Lesson 79 step 3 lo "Run the focused experiment — Whether" kosam terminal result ni use chesi "Whether constructors can be static, final," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
 
 ### Step 4 — Remove the temporary experiment — Whether constructors can be static, final, or abstract
 
-[no highlight] Lesson 79 step 4 lo "Remove the temporary experiment — Whether" kosam IllegalConstructorModifiers. Lesson 79 step 4 context lo, java ni use chesi "Whether constructors can be static, final," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
 
 ### Step 5 — Return to production code — Whether constructors can be static, final, or abstract
 
-Lesson 79 step 5 lo "Return to production code — Whether" kosam SurveyProducts. Lesson 79 step 5 context lo, java ni use chesi "Whether constructors can be static, final," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Valid constructor ki static/final/abstract modifiers levu. Constructor instance initialization kosam. Override avvadu kabatti final need ledu; abstract implementation-less construction possible kaadu.
 
 ## Lesson 80 — Constructor return types
 
 ### Step 1 — Open the valid project baseline — Constructor return types
 
-Lesson 80 step 1 lo "Open the valid project baseline —" kosam SurveyProducts. Lesson 80 step 1 context lo, java ni use chesi "Constructor return types" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
 
 ### Step 2 — Create the focused experiment — Constructor return types
 
-"Create the focused experiment — Constructor return types" step lo ConstructorReturnTypeDemo. "Constructor return types" lo "Create the focused experiment — Constructor return types" context lo, java lesson-only experiment ga add chestam. "Constructor return types" rule ni one small example lo isolate cheyyadam valla framework noise lekunda compiler leda runtime behavior clear ga kanipistundi.
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
 
 ### Step 3 — Run the focused experiment — Constructor return types
 
-"Run the focused experiment — Constructor return types" step result observation meeda focus chestundi. "Constructor return types" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
 
 ### Step 4 — Remove the temporary experiment — Constructor return types
 
-[no highlight] Lesson 80 step 4 lo "Remove the temporary experiment — Constructor" kosam ConstructorReturnTypeDemo. Lesson 80 step 4 context lo, java ni use chesi "Constructor return types" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
 
 ### Step 5 — Return to production code — Constructor return types
 
-"Return to production code — Constructor return types" step lo SurveyProducts. java open chesi "Constructor return types" concept project code lo ela represent ayyindo identify chestam. "Constructor return types" lo "Return to production code — Constructor return types" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+Constructor declaration ki return type undadu. `void ClassName()` rayithe adi method. Real constructor class name tho return type lekunda untundi.
 
 ## Lesson 81 — Return statements inside constructors
 
 ### Step 1 — Open the valid project baseline — Return statements inside constructors
 
-Lesson 81 step 1 lo "Open the valid project baseline —" kosam SurveyProducts. Lesson 81 step 1 context lo, java ni use chesi "Return statements inside constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
 
 ### Step 2 — Create the focused experiment — Return statements inside constructors
 
-Lesson 81 step 2 lo "Create the focused experiment — Return" kosam ConstructorReturnDemo. Lesson 81 step 2 context lo, java ni use chesi "Return statements inside constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
 
 ### Step 3 — Run the focused experiment — Return statements inside constructors
 
-"Return statements inside constructors" lo "Run the focused experiment — Return statements" step terminal result ni direct evidence ga use chestundi. Ee "Run the focused experiment — Return statements" point previous explanation repeat cheyyakunda "Return statements inside constructors" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
 
 ### Step 4 — Remove the temporary experiment — Return statements inside constructors
 
-[no highlight] Lesson 81 step 4 lo "Remove the temporary experiment — Return" kosam ConstructorReturnDemo. Lesson 81 step 4 context lo, java ni use chesi "Return statements inside constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
 
 ### Step 5 — Return to production code — Return statements inside constructors
 
-"Return statements inside constructors" context lo SurveyProducts. java meeda focus chestam. "Return to production code — Return statements inside constructors" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Constructor lo plain `return;` legal. Value return cheyyalem. Early return mundu assign kani fields default values tho remain avvachu, kabatti clear initialization better.
 
 ## Lesson 82 — Why a constructor has the same name as its class
 
 ### Step 1 — Open the project evidence — Why a constructor has the same name as its class
 
-Lesson 82 step 1 lo "Open the project evidence — Why" kosam SurveyProducts. Lesson 82 step 1 context lo, java ni use chesi "Why a constructor has the same" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
 
 ### Step 2 — Trace the Java rule — Why a constructor has the same name as its class
 
-Lesson 82 step 2 lo "Trace the Java rule — Why" kosam SurveyProducts. Lesson 82 step 2 context lo, java ni use chesi "Why a constructor has the same" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
 
 ### Step 3 — Connect caller and object state — Why a constructor has the same name as its class
 
-Lesson 82 step 3 lo "Connect caller and object state —" kosam SurveyProducts. Lesson 82 step 3 context lo, java ni use chesi "Why a constructor has the same" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
 
 ### Step 4 — State the interview rule — Why a constructor has the same name as its class
 
-Lesson 82 step 4 lo "State the interview rule — Why" kosam SurveyProducts. Lesson 82 step 4 context lo, java ni use chesi "Why a constructor has the same" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic constructor class name same ga undi and return type ledu. `resolutionMetres` and `copy` methods separate names/return types tho ordinary methods.
 
 ## Lesson 83 — Using a no-argument call when only a parameterized constructor exists
 
 ### Step 1 — Open the valid project baseline — Using a no-argument call when only a parameterized constructor exists
 
-Lesson 83 step 1 lo "Open the valid project baseline —" kosam SurveyProducts. Lesson 83 step 1 context lo, java ni use chesi "Using a no-argument call when only" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
 
 ### Step 2 — Create the focused experiment — Using a no-argument call when only a parameterized constructor exists
 
-Lesson 83 step 2 lo "Create the focused experiment — Using" kosam ParameterizedOnlyDemo. Lesson 83 step 2 context lo, java ni use chesi "Using a no-argument call when only" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
 
 ### Step 3 — Run the focused experiment — Using a no-argument call when only a parameterized constructor exists
 
-"Run the focused experiment — Using a no-argument call" step result observation meeda focus chestundi. "Using a no-argument call when only a parameterized" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
 
 ### Step 4 — Remove the temporary experiment — Using a no-argument call when only a parameterized constructor exists
 
-[no highlight] Lesson 83 step 4 lo "Remove the temporary experiment — Using" kosam ParameterizedOnlyDemo. Lesson 83 step 4 context lo, java ni use chesi "Using a no-argument call when only" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
 
 ### Step 5 — Return to production code — Using a no-argument call when only a parameterized constructor exists
 
-Lesson 83 step 5 lo "Return to production code — Using" kosam SurveyProducts. Lesson 83 step 5 context lo, java ni use chesi "Using a no-argument call when only" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class own parameterized constructor declare cheste compiler automatic no-arg constructor add cheyyadu. `new Type()` use cheyyali ante explicit no-arg constructor kavali.
 
 ## Lesson 84 — No-argument constructors and why they matter
 
 ### Step 1 — Open the project evidence — No-argument constructors and why they matter
 
-Lesson 84 step 1 lo "Open the project evidence — No-argument" kosam SurveyProject. Lesson 84 step 1 context lo, java ni use chesi "No-argument constructors and why they matter" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
 
 ### Step 2 — Trace the Java rule — No-argument constructors and why they matter
 
-"No-argument constructors and why they matter" context lo SurveyProject. java meeda focus chestam. "Trace the Java rule — No-argument constructors and why" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
 
 ### Step 3 — Connect caller and object state — No-argument constructors and why they matter
 
-Lesson 84 step 3 lo "Connect caller and object state —" kosam SurveyProject. Lesson 84 step 3 context lo, java ni use chesi "No-argument constructors and why they matter" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
 
 ### Step 4 — State the interview rule — No-argument constructors and why they matter
 
-Lesson 84 step 4 lo "State the interview rule — No-argument" kosam SurveyProject. Lesson 84 step 4 context lo, java ni use chesi "No-argument constructors and why they matter" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject protected no-arg constructor JPA instantiation kosam undi. Application normal creation public parameterized constructor use chestundi. No-arg visibility kuda intentionally limited.
 
 ## Lesson 85 — Best practices for naming Java packages
 
 ### Step 1 — Open the project evidence — Best practices for naming Java packages
 
-Lesson 85 step 1 lo "Open the project evidence — Best" kosam ProjectService. Lesson 85 step 1 context lo, java ni use chesi "Best practices for naming Java packages" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
 
 ### Step 2 — Trace the boundary — Best practices for naming Java packages
 
-Lesson 85 step 2 lo "Trace the boundary — Best practices" kosam ProjectService. Lesson 85 step 2 context lo, java ni use chesi "Best practices for naming Java packages" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
 
 ### Step 3 — Evaluate maintainability — Best practices for naming Java packages
 
-Lesson 85 step 3 lo "Evaluate maintainability — Best practices for" kosam ProjectService. Lesson 85 step 3 context lo, java ni use chesi "Best practices for naming Java packages" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
 
 ### Step 4 — State the interview rule — Best practices for naming Java packages
 
-Lesson 85 step 4 lo "State the interview rule — Best" kosam ProjectService. Lesson 85 step 4 context lo, java ni use chesi "Best practices for naming Java packages" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo package names lowercase ga clear responsibilities ni separate chestayi. Root stable ga `com.aerotopo`; domain, service, persistence la subpackages navigation and ownership easy chestayi.
 
 ## Lesson 86 — Static imports versus normal imports
 
 ### Step 1 — Open the project evidence — Static imports versus normal imports
 
-Lesson 86 step 1 lo "Open the project evidence — Static" kosam LearningLabTest. Lesson 86 step 1 context lo, java ni use chesi "Static imports versus normal imports" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
 
 ### Step 2 — Trace the boundary — Static imports versus normal imports
 
-Lesson 86 step 2 lo "Trace the boundary — Static imports" kosam LearningLabTest. Lesson 86 step 2 context lo, java ni use chesi "Static imports versus normal imports" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
 
 ### Step 3 — Evaluate maintainability — Static imports versus normal imports
 
-"Static imports versus normal imports" context lo LearningLabTest. java meeda focus chestam. "Evaluate maintainability — Static imports versus normal imports" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
 
 ### Step 4 — State the interview rule — Static imports versus normal imports
 
-Lesson 86 step 4 lo "State the interview rule — Static" kosam LearningLabTest. Lesson 86 step 4 context lo, java ni use chesi "Static imports versus normal imports" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Normal import type name ni scope lo teesukostundi. Static import static methods/constants ni class prefix lekunda use cheyyadaniki allow chestundi. Test lo AssertJ assertions direct ga call chestam.
 
 ## Lesson 87 — Whether a top-level class can be private or protected
 
 ### Step 1 — Open the valid AeroTopo context — Whether a top-level class can be private or protected
 
-Lesson 87 step 1 lo "Open the valid AeroTopo context —" kosam SurveyProducts. Lesson 87 step 1 context lo, java ni use chesi "Whether a top-level class can be" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
 
 ### Step 2 — Create labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected
 
-Lesson 87 step 2 lo "Create labs/java/TopLevelAccessDemo. Lesson 87 step 2 context lo, java — Whether a top-level" kosam TopLevelAccessDemo. Lesson 87 step 2 context lo, java ni use chesi "Whether a top-level class can be" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
 
 ### Step 3 — Run the package/access experiment — Whether a top-level class can be private or protected
 
-Lesson 87 step 3 lo "Run the package/access experiment — Whether" kosam terminal result ni use chesi "Whether a top-level class can be" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
 
 ### Step 4 — Remove labs/java/TopLevelAccessDemo.java — Whether a top-level class can be private or protected
 
-[no highlight] Lesson 87 step 4 lo "Remove labs/java/TopLevelAccessDemo. Lesson 87 step 4 context lo, java — Whether a top-level" kosam TopLevelAccessDemo. Lesson 87 step 4 context lo, java ni use chesi "Whether a top-level class can be" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
 
 ### Step 5 — Return to the real project structure — Whether a top-level class can be private or protected
 
-"Whether a top-level class can be private or" context lo SurveyProducts. java meeda focus chestam. "Return to the real project structure — Whether a" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Top-level class ki public leda package-private access valid. private/protected top-level declarations Java allow cheyyadu. Nested/member types ki aa modifiers meaning untundi.
 
 ## Lesson 88 — Whether a method can be both private and protected
 
 ### Step 1 — Open the valid AeroTopo context — Whether a method can be both private and protected
 
-"Whether a method can be both private and" context lo SurveyProject. java meeda focus chestam. "Open the valid AeroTopo context — Whether a method" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
 
 ### Step 2 — Create labs/java/MethodAccessDemo.java — Whether a method can be both private and protected
 
-Lesson 88 step 2 lo "Create labs/java/MethodAccessDemo. Lesson 88 step 2 context lo, java — Whether a method" kosam MethodAccessDemo. Lesson 88 step 2 context lo, java ni use chesi "Whether a method can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
 
 ### Step 3 — Run the package/access experiment — Whether a method can be both private and protected
 
-Lesson 88 step 3 lo "Run the package/access experiment — Whether" kosam terminal result ni use chesi "Whether a method can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
 
 ### Step 4 — Remove labs/java/MethodAccessDemo.java — Whether a method can be both private and protected
 
-[no highlight] Lesson 88 step 4 lo "Remove labs/java/MethodAccessDemo. Lesson 88 step 4 context lo, java — Whether a method" kosam MethodAccessDemo. Lesson 88 step 4 context lo, java ni use chesi "Whether a method can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
 
 ### Step 5 — Return to the real project structure — Whether a method can be both private and protected
 
-Lesson 88 step 5 lo "Return to the real project structure" kosam SurveyProject. Lesson 88 step 5 context lo, java ni use chesi "Whether a method can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Method ki private and protected rendu same time valid kaavu. Access level okkate choose cheyyali. Project lo state-changing methods public ga, internal details controlled visibility tho unnayi.
 
 ## Lesson 89 — Structuring packages in a complex Java project
 
 ### Step 1 — Open the project evidence — Structuring packages in a complex Java project
 
-Lesson 89 step 1 lo "Open the project evidence — Structuring" kosam ProjectService. Lesson 89 step 1 context lo, java ni use chesi "Structuring packages in a complex Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
 
 ### Step 2 — Trace the boundary — Structuring packages in a complex Java project
 
-Lesson 89 step 2 lo "Trace the boundary — Structuring packages" kosam ProjectService. Lesson 89 step 2 context lo, java ni use chesi "Structuring packages in a complex Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
 
 ### Step 3 — Evaluate maintainability — Structuring packages in a complex Java project
 
-"Structuring packages in a complex Java project" context lo ProjectService. java meeda focus chestam. "Evaluate maintainability — Structuring packages in a complex Java" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
 
 ### Step 4 — State the interview rule — Structuring packages in a complex Java project
 
-Lesson 89 step 4 lo "State the interview rule — Structuring" kosam ProjectService. Lesson 89 step 4 context lo, java ni use chesi "Structuring packages in a complex Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService imports domain, gis, persistence, config boundaries ni clear ga show chestundi. Package structure responsibility batti organize ayithe coupling and navigation easy ga understand cheyyachu.
 
 ## Lesson 90 — How encapsulation improves software security and integrity
 
 ### Step 1 — Open the project evidence — How encapsulation improves software security and integrity
 
-Lesson 90 step 1 lo "Open the project evidence — How" kosam SurveyProject. Lesson 90 step 1 context lo, java ni use chesi "How encapsulation improves software security and" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
 
 ### Step 2 — Trace the boundary — How encapsulation improves software security and integrity
 
-"How encapsulation improves software security and integrity" context lo SurveyProject. java meeda focus chestam. "Trace the boundary — How encapsulation improves software security" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
 
 ### Step 3 — Evaluate maintainability — How encapsulation improves software security and integrity
 
-Lesson 90 step 3 lo "Evaluate maintainability — How encapsulation improves" kosam SurveyProject. Lesson 90 step 3 context lo, java ni use chesi "How encapsulation improves software security and" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
 
 ### Step 4 — State the interview rule — How encapsulation improves software security and integrity
 
-Lesson 90 step 4 lo "State the interview rule — How" kosam SurveyProject. Lesson 90 step 4 context lo, java ni use chesi "How encapsulation improves software security and" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProject fields private ga unnayi. State changes controlled methods dwara jarugutayi; invalid transition reject avutundi. Encapsulation accidental corruption ni tagginchi invariants protect chestundi.
 
 ## Lesson 91 — Why getters and controlled methods are preferred over public fields
 
 ### Step 1 — Open the project evidence — Why getters and controlled methods are preferred over public fields
 
-Lesson 91 step 1 lo "Open the project evidence — Why" kosam SurveyProject. Lesson 91 step 1 context lo, java ni use chesi "Why getters and controlled methods are" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
 
 ### Step 2 — Trace the boundary — Why getters and controlled methods are preferred over public fields
 
-Lesson 91 step 2 lo "Trace the boundary — Why getters" kosam SurveyProject. Lesson 91 step 2 context lo, java ni use chesi "Why getters and controlled methods are" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
 
 ### Step 3 — Evaluate maintainability — Why getters and controlled methods are preferred over public fields
 
-Lesson 91 step 3 lo "Evaluate maintainability — Why getters and" kosam SurveyProject. Lesson 91 step 3 context lo, java ni use chesi "Why getters and controlled methods are" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
 
 ### Step 4 — State the interview rule — Why getters and controlled methods are preferred over public fields
 
-Lesson 91 step 4 lo "State the interview rule — Why" kosam SurveyProject. Lesson 91 step 4 context lo, java ni use chesi "Why getters and controlled methods are" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields private ga unnayi; getters read access istayi. Generic setters badulu domain methods state changes control chestayi. Validation and invariants clear ga remain avutayi.
 
 ## Lesson 92 — Why Java packages are used
 
 ### Step 1 — Open the project evidence — Why Java packages are used
 
-Lesson 92 step 1 lo "Open the project evidence — Why" kosam ProjectService. Lesson 92 step 1 context lo, java ni use chesi "Why Java packages are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
 
 ### Step 2 — Trace the boundary — Why Java packages are used
 
-Lesson 92 step 2 lo "Trace the boundary — Why Java" kosam ProjectService. Lesson 92 step 2 context lo, java ni use chesi "Why Java packages are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
 
 ### Step 3 — Evaluate maintainability — Why Java packages are used
 
-"Why Java packages are used" context lo ProjectService. java meeda focus chestam. "Evaluate maintainability — Why Java packages are used" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
 
 ### Step 4 — State the interview rule — Why Java packages are used
 
-Lesson 92 step 4 lo "State the interview rule — Why" kosam ProjectService. Lesson 92 step 4 context lo, java ni use chesi "Why Java packages are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Packages namespace and organization provide chestayi. AeroTopo responsibilities separate packages lo unnayi. Same project lo dependencies and ownership easier ga trace cheyyachu.
 
 ## Lesson 93 — What happens when two packages contain the same class name
 
 ### Step 1 — Open the valid AeroTopo context — What happens when two packages contain the same class name
 
-Lesson 93 step 1 lo "Open the valid AeroTopo context —" kosam ProjectService. Lesson 93 step 1 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 2 — Create labs/java/pkgone/Tile.java — What happens when two packages contain the same class name
 
-Lesson 93 step 2 lo "Create labs/java/pkgone/Tile. Lesson 93 step 2 context lo, java — What happens when" kosam Tile. Lesson 93 step 2 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 3 — Create labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name
 
-Lesson 93 step 3 lo "Create labs/java/pkgtwo/Tile. Lesson 93 step 3 context lo, java — What happens when" kosam Tile. Lesson 93 step 3 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 4 — Create labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name
 
-Lesson 93 step 4 lo "Create labs/java/PackageNameCollisionDemo. Lesson 93 step 4 context lo, java — What happens when" kosam PackageNameCollisionDemo. Lesson 93 step 4 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 5 — Run the package/access experiment — What happens when two packages contain the same class name
 
-"Run the package/access experiment — What happens when two" step result observation meeda focus chestundi. "What happens when two packages contain the same" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 6 — Remove labs/java/PackageNameCollisionDemo.java — What happens when two packages contain the same class name
 
-[no highlight] Lesson 93 step 6 lo "Remove labs/java/PackageNameCollisionDemo. Lesson 93 step 6 context lo, java — What happens when" kosam PackageNameCollisionDemo. Lesson 93 step 6 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 7 — Remove labs/java/pkgtwo/Tile.java — What happens when two packages contain the same class name
 
-[no highlight] Lesson 93 step 7 lo "Remove labs/java/pkgtwo/Tile. Lesson 93 step 7 context lo, java — What happens when" kosam Tile. Lesson 93 step 7 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 8 — Remove labs/java/pkgone/Tile.java — What happens when two packages contain the same class name
 
-[no highlight] Lesson 93 step 8 lo "Remove labs/java/pkgone/Tile. Lesson 93 step 8 context lo, java — What happens when" kosam Tile. Lesson 93 step 8 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ### Step 9 — Return to the real project structure — What happens when two packages contain the same class name
 
-Lesson 93 step 9 lo "Return to the real project structure" kosam ProjectService. Lesson 93 step 9 context lo, java ni use chesi "What happens when two packages contain" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Different packages same simple class name ni allow chestayi because fully qualified names different. Caller ambiguous names ni import/FQN tho disambiguate cheyyali.
 
 ## Lesson 94 — The purpose of a static block
 
 ### Step 1 — Open the project evidence — The purpose of a static block
 
-Lesson 94 step 1 lo "Open the project evidence — The" kosam LanguageLab. Lesson 94 step 1 context lo, java ni use chesi "The purpose of a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
 
 ### Step 2 — Trace lifecycle and restriction — The purpose of a static block
 
-Lesson 94 step 2 lo "Trace lifecycle and restriction — The" kosam LanguageLab. Lesson 94 step 2 context lo, java ni use chesi "The purpose of a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
 
 ### Step 3 — Evaluate the design effect — The purpose of a static block
 
-Lesson 94 step 3 lo "Evaluate the design effect — The" kosam LanguageLab. Lesson 94 step 3 context lo, java ni use chesi "The purpose of a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
 
 ### Step 4 — State the interview rule — The purpose of a static block
 
-Lesson 94 step 4 lo "State the interview rule — The" kosam LanguageLab. Lesson 94 step 4 context lo, java ni use chesi "The purpose of a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class initialization time lo once execute chestundi. LanguageLab shared `batches` state initialize chestundi. Simple field initializer possible ayithe adi usually clearer.
 
 ## Lesson 95 — Why a static block cannot replace a constructor
 
 ### Step 1 — Open the AeroTopo baseline — Why a static block cannot replace a constructor
 
-Lesson 95 step 1 lo "Open the AeroTopo baseline — Why" kosam LanguageLab. Lesson 95 step 1 context lo, java ni use chesi "Why a static block cannot replace" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
 
 ### Step 2 — Create the focused language experiment — Why a static block cannot replace a constructor
 
-Lesson 95 step 2 lo "Create the focused language experiment —" kosam StaticVsConstructorDemo. Lesson 95 step 2 context lo, java ni use chesi "Why a static block cannot replace" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
 
 ### Step 3 — Run the focused language experiment — Why a static block cannot replace a constructor
 
-Lesson 95 step 3 lo "Run the focused language experiment —" kosam terminal result ni use chesi "Why a static block cannot replace" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
 
 ### Step 4 — Remove the temporary experiment — Why a static block cannot replace a constructor
 
-[no highlight] Lesson 95 step 4 lo "Remove the temporary experiment — Why" kosam StaticVsConstructorDemo. Lesson 95 step 4 context lo, java ni use chesi "Why a static block cannot replace" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
 
 ### Step 5 — Return to the production example — Why a static block cannot replace a constructor
 
-Lesson 95 step 5 lo "Return to the production example —" kosam LanguageLab. Lesson 95 step 5 context lo, java ni use chesi "Why a static block cannot replace" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block class ki once; constructor prathi object creation ki run avutundi. Shared class initialization and per-instance initialization same responsibility kaavu.
 
 ## Lesson 96 — final, effectively final, and immutable values
 
 ### Step 1 — Open the AeroTopo baseline — final, effectively final, and immutable values
 
-Lesson 96 step 1 lo "Open the AeroTopo baseline — final," kosam SurveyProducts. Lesson 96 step 1 context lo, java ni use chesi "final, effectively final, and immutable values" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
 
 ### Step 2 — Create the focused language experiment — final, effectively final, and immutable values
 
-Lesson 96 step 2 lo "Create the focused language experiment —" kosam FinalKindsDemo. Lesson 96 step 2 context lo, java ni use chesi "final, effectively final, and immutable values" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
 
 ### Step 3 — Run the focused language experiment — final, effectively final, and immutable values
 
-"final, effectively final, and immutable values" lo "Run the focused language experiment — final," step terminal result ni direct evidence ga use chestundi. Ee "Run the focused language experiment — final," point previous explanation repeat cheyyakunda "final, effectively final, and immutable values" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
 
 ### Step 4 — Remove the temporary experiment — final, effectively final, and immutable values
 
-[no highlight] Lesson 96 step 4 lo "Remove the temporary experiment — final," kosam FinalKindsDemo. Lesson 96 step 4 context lo, java ni use chesi "final, effectively final, and immutable values" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] `final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
 
 ### Step 5 — Return to the production example — final, effectively final, and immutable values
 
-"final, effectively final, and immutable values" context lo SurveyProducts. java meeda focus chestam. "Return to the production example — final, effectively final," step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+`final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
 
 ## Lesson 97 — Whether a class can be both final and abstract
 
 ### Step 1 — Open the AeroTopo baseline — Whether a class can be both final and abstract
 
-"Whether a class can be both final and" context lo SurveyProducts. java meeda focus chestam. "Open the AeroTopo baseline — Whether a class can" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
 
 ### Step 2 — Create the focused language experiment — Whether a class can be both final and abstract
 
-Lesson 97 step 2 lo "Create the focused language experiment —" kosam AbstractFinalDemo. Lesson 97 step 2 context lo, java ni use chesi "Whether a class can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
 
 ### Step 3 — Run the focused language experiment — Whether a class can be both final and abstract
 
-Lesson 97 step 3 lo "Run the focused language experiment —" kosam terminal result ni use chesi "Whether a class can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
 
 ### Step 4 — Remove the temporary experiment — Whether a class can be both final and abstract
 
-[no highlight] Lesson 97 step 4 lo "Remove the temporary experiment — Whether" kosam AbstractFinalDemo. Lesson 97 step 4 context lo, java ni use chesi "Whether a class can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
 
 ### Step 5 — Return to the production example — Whether a class can be both final and abstract
 
-Lesson 97 step 5 lo "Return to the production example —" kosam SurveyProducts. Lesson 97 step 5 context lo, java ni use chesi "Whether a class can be both" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
 
 ## Lesson 98 — Mutating an object referenced by a final variable
 
 ### Step 1 — Open the AeroTopo baseline — Mutating an object referenced by a final variable
 
-Lesson 98 step 1 lo "Open the AeroTopo baseline — Mutating" kosam SurveyProducts. Lesson 98 step 1 context lo, java ni use chesi "Mutating an object referenced by a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
 
 ### Step 2 — Create the focused language experiment — Mutating an object referenced by a final variable
 
-Lesson 98 step 2 lo "Create the focused language experiment —" kosam FinalReferenceDemo. Lesson 98 step 2 context lo, java ni use chesi "Mutating an object referenced by a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
 
 ### Step 3 — Run the focused language experiment — Mutating an object referenced by a final variable
 
-"Run the focused language experiment — Mutating an object" step result observation meeda focus chestundi. "Mutating an object referenced by a final variable" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
 
 ### Step 4 — Remove the temporary experiment — Mutating an object referenced by a final variable
 
-[no highlight] Lesson 98 step 4 lo "Remove the temporary experiment — Mutating" kosam FinalReferenceDemo. Lesson 98 step 4 context lo, java ni use chesi "Mutating an object referenced by a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
 
 ### Step 5 — Return to the production example — Mutating an object referenced by a final variable
 
-Lesson 98 step 5 lo "Return to the production example —" kosam SurveyProducts. Lesson 98 step 5 context lo, java ni use chesi "Mutating an object referenced by a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
 
 ## Lesson 99 — The final keyword on variables, methods, and classes
 
 ### Step 1 — Open the project evidence — The final keyword on variables, methods, and classes
 
-Lesson 99 step 1 lo "Open the project evidence — The" kosam SurveyProducts. Lesson 99 step 1 context lo, java ni use chesi "The final keyword on variables, methods," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
 
 ### Step 2 — Trace lifecycle and restriction — The final keyword on variables, methods, and classes
 
-"The final keyword on variables, methods, and classes" context lo SurveyProducts. java meeda focus chestam. "Trace lifecycle and restriction — The final keyword on" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
 
 ### Step 3 — Evaluate the design effect — The final keyword on variables, methods, and classes
 
-Lesson 99 step 3 lo "Evaluate the design effect — The" kosam SurveyProducts. Lesson 99 step 3 context lo, java ni use chesi "The final keyword on variables, methods," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
 
 ### Step 4 — State the interview rule — The final keyword on variables, methods, and classes
 
-Lesson 99 step 4 lo "State the interview rule — The" kosam SurveyProducts. Lesson 99 step 4 context lo, java ni use chesi "The final keyword on variables, methods," ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
 
 ## Lesson 100 — What final means on a method
 
 ### Step 1 — Open the project evidence — What final means on a method
 
-Lesson 100 step 1 lo "Open the project evidence — What" kosam SurveyProducts. Lesson 100 step 1 context lo, java ni use chesi "What final means on a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
 
 ### Step 2 — Trace lifecycle and restriction — What final means on a method
 
-Lesson 100 step 2 lo "Trace lifecycle and restriction — What" kosam SurveyProducts. Lesson 100 step 2 context lo, java ni use chesi "What final means on a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
 
 ### Step 3 — Evaluate the design effect — What final means on a method
 
-Lesson 100 step 3 lo "Evaluate the design effect — What" kosam SurveyProducts. Lesson 100 step 3 context lo, java ni use chesi "What final means on a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
 
 ### Step 4 — State the interview rule — What final means on a method
 
-Lesson 100 step 4 lo "State the interview rule — What" kosam SurveyProducts. Lesson 100 step 4 context lo, java ni use chesi "What final means on a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
 
 ## Lesson 101 — A design scenario where final materially affects Java code
 
 ### Step 1 — Open the project evidence — A design scenario where final materially affects Java code
 
-Lesson 101 step 1 lo "Open the project evidence — A" kosam SurveyProducts. Lesson 101 step 1 context lo, java ni use chesi "A design scenario where final materially" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
 
 ### Step 2 — Trace lifecycle and restriction — A design scenario where final materially affects Java code
 
-Lesson 101 step 2 lo "Trace lifecycle and restriction — A" kosam SurveyProducts. Lesson 101 step 2 context lo, java ni use chesi "A design scenario where final materially" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
 
 ### Step 3 — Evaluate the design effect — A design scenario where final materially affects Java code
 
-"A design scenario where final materially affects Java" context lo SurveyProducts. java meeda focus chestam. "Evaluate the design effect — A design scenario where" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
 
 ### Step 4 — State the interview rule — A design scenario where final materially affects Java code
 
-Lesson 101 step 4 lo "State the interview rule — A" kosam SurveyProducts. Lesson 101 step 4 context lo, java ni use chesi "A design scenario where final materially" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
 
 ## Lesson 102 — Exceptions from a static block
 
 ### Step 1 — Open the AeroTopo baseline — Exceptions from a static block
 
-Lesson 102 step 1 lo "Open the AeroTopo baseline — Exceptions" kosam LanguageLab. Lesson 102 step 1 context lo, java ni use chesi "Exceptions from a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
 
 ### Step 2 — Create the focused language experiment — Exceptions from a static block
 
-Lesson 102 step 2 lo "Create the focused language experiment —" kosam StaticFailureDemo. Lesson 102 step 2 context lo, java ni use chesi "Exceptions from a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
 
 ### Step 3 — Run the focused language experiment — Exceptions from a static block
 
-"Exceptions from a static block" lo "Run the focused language experiment — Exceptions" step terminal result ni direct evidence ga use chestundi. Ee "Run the focused language experiment — Exceptions" point previous explanation repeat cheyyakunda "Exceptions from a static block" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
 
 ### Step 4 — Remove the temporary experiment — Exceptions from a static block
 
-[no highlight] Lesson 102 step 4 lo "Remove the temporary experiment — Exceptions" kosam StaticFailureDemo. Lesson 102 step 4 context lo, java ni use chesi "Exceptions from a static block" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
 
 ### Step 5 — Return to the production example — Exceptions from a static block
 
-"Exceptions from a static block" context lo LanguageLab. java meeda focus chestam. "Return to the production example — Exceptions from a" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
 
 ## Lesson 103 — Multiple static blocks in one class
 
 ### Step 1 — Open the AeroTopo baseline — Multiple static blocks in one class
 
-"Multiple static blocks in one class" context lo LanguageLab. java meeda focus chestam. "Open the AeroTopo baseline — Multiple static blocks in" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
 
 ### Step 2 — Create the focused language experiment — Multiple static blocks in one class
 
-Lesson 103 step 2 lo "Create the focused language experiment —" kosam MultipleStaticBlocksDemo. Lesson 103 step 2 context lo, java ni use chesi "Multiple static blocks in one class" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
 
 ### Step 3 — Run the focused language experiment — Multiple static blocks in one class
 
-"Multiple static blocks in one class" lo "Run the focused language experiment — Multiple" step terminal result ni direct evidence ga use chestundi. Ee "Run the focused language experiment — Multiple" point previous explanation repeat cheyyakunda "Multiple static blocks in one class" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
 
 ### Step 4 — Remove the temporary experiment — Multiple static blocks in one class
 
-[no highlight] Lesson 103 step 4 lo "Remove the temporary experiment — Multiple" kosam MultipleStaticBlocksDemo. Lesson 103 step 4 context lo, java ni use chesi "Multiple static blocks in one class" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
 
 ### Step 5 — Return to the production example — Multiple static blocks in one class
 
-Lesson 103 step 5 lo "Return to the production example —" kosam LanguageLab. Lesson 103 step 5 context lo, java ni use chesi "Multiple static blocks in one class" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
 
 ## Lesson 104 — Why a static block runs before main
 
 ### Step 1 — Open the AeroTopo baseline — Why a static block runs before main
 
-Lesson 104 step 1 lo "Open the AeroTopo baseline — Why" kosam AeroTopoApplication. Lesson 104 step 1 context lo, java ni use chesi "Why a static block runs before" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
 
 ### Step 2 — Create the focused language experiment — Why a static block runs before main
 
-Lesson 104 step 2 lo "Create the focused language experiment —" kosam StaticBeforeMainDemo. Lesson 104 step 2 context lo, java ni use chesi "Why a static block runs before" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
 
 ### Step 3 — Run the focused language experiment — Why a static block runs before main
 
-Lesson 104 step 3 lo "Run the focused language experiment —" kosam terminal result ni use chesi "Why a static block runs before" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
 
 ### Step 4 — Remove the temporary experiment — Why a static block runs before main
 
-[no highlight] Lesson 104 step 4 lo "Remove the temporary experiment — Why" kosam StaticBeforeMainDemo. Lesson 104 step 4 context lo, java ni use chesi "Why a static block runs before" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
 
 ### Step 5 — Return to the production example — Why a static block runs before main
 
-Lesson 104 step 5 lo "Return to the production example —" kosam AeroTopoApplication. Lesson 104 step 5 context lo, java ni use chesi "Why a static block runs before" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
 
 ## Lesson 105 — Delaying static initialization until a method is called
 
 ### Step 1 — Open the project evidence — Delaying static initialization until a method is called
 
-Lesson 105 step 1 lo "Open the project evidence — Delaying" kosam PatternLab. Lesson 105 step 1 context lo, java ni use chesi "Delaying static initialization until a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
 
 ### Step 2 — Trace lifecycle and restriction — Delaying static initialization until a method is called
 
-"Delaying static initialization until a method is called" context lo PatternLab. java meeda focus chestam. "Trace lifecycle and restriction — Delaying static initialization until" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
 
 ### Step 3 — Evaluate the design effect — Delaying static initialization until a method is called
 
-Lesson 105 step 3 lo "Evaluate the design effect — Delaying" kosam PatternLab. Lesson 105 step 3 context lo, java ni use chesi "Delaying static initialization until a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
 
 ### Step 4 — State the interview rule — Delaying static initialization until a method is called
 
-Lesson 105 step 4 lo "State the interview rule — Delaying" kosam PatternLab. Lesson 105 step 4 context lo, java ni use chesi "Delaying static initialization until a method" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Holder idiom nested class static initialization ni first `instance()` access varaku defer chestundi. Outer class static block ni arbitrary ga delay cheyyadam kaadu; separate class initialization boundary use chestam.
 
 ## Lesson 106 — Printing without a main method in the initialized class
 
 ### Step 1 — Open the AeroTopo baseline — Printing without a main method in the initialized class
 
-"Printing without a main method in the initialized" context lo AeroTopoApplication. java meeda focus chestam. "Open the AeroTopo baseline — Printing without a main" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
 
 ### Step 2 — Create the focused static experiment — Printing without a main method in the initialized class
 
-Lesson 106 step 2 lo "Create the focused static experiment —" kosam PrintWithoutOwnMainDemo. Lesson 106 step 2 context lo, java ni use chesi "Printing without a main method in" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
 
 ### Step 3 — Run the focused static experiment — Printing without a main method in the initialized class
 
-Lesson 106 step 3 lo "Run the focused static experiment —" kosam terminal result ni use chesi "Printing without a main method in" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
 
 ### Step 4 — Remove the temporary static experiment — Printing without a main method in the initialized class
 
-[no highlight] Lesson 106 step 4 lo "Remove the temporary static experiment —" kosam PrintWithoutOwnMainDemo. Lesson 106 step 4 context lo, java ni use chesi "Printing without a main method in" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
 
 ### Step 5 — Return to the real AeroTopo code — Printing without a main method in the initialized class
 
-Lesson 106 step 5 lo "Return to the real AeroTopo code" kosam AeroTopoApplication. Lesson 106 step 5 context lo, java ni use chesi "Printing without a main method in" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Oka class own `main` lekunda static block print cheyyachu if another entry point aa class ni initialize chestundi. Standalone `java Class` launch ki normal ga main entry point kavali.
 
 ## Lesson 107 — The static keyword in Java
 
 ### Step 1 — Open the project evidence — The static keyword in Java
 
-Lesson 107 step 1 lo "Open the project evidence — The" kosam LanguageLab. Lesson 107 step 1 context lo, java ni use chesi "The static keyword in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
 
 ### Step 2 — Trace binding and ownership — The static keyword in Java
 
-Lesson 107 step 2 lo "Trace binding and ownership — The" kosam LanguageLab. Lesson 107 step 2 context lo, java ni use chesi "The static keyword in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
 
 ### Step 3 — Evaluate the design choice — The static keyword in Java
 
-"The static keyword in Java" context lo LanguageLab. java meeda focus chestam. "Evaluate the design choice — The static keyword in" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
 
 ### Step 4 — State the interview rule — The static keyword in Java
 
-Lesson 107 step 4 lo "State the interview rule — The" kosam LanguageLab. Lesson 107 step 4 context lo, java ni use chesi "The static keyword in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+LanguageLab static constants, static shared counter, static block, static methods examples ni show chestundi. `accepted` మాత్రం per-object instance field. Class-level versus object-level difference clear.
 
 ## Lesson 108 — Whether static methods can be overridden
 
 ### Step 1 — Open the project evidence — Whether static methods can be overridden
 
-Lesson 108 step 1 lo "Open the project evidence — Whether" kosam SurveyProducts. Lesson 108 step 1 context lo, java ni use chesi "Whether static methods can be overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
 
 ### Step 2 — Trace binding and ownership — Whether static methods can be overridden
 
-"Whether static methods can be overridden" context lo SurveyProducts. java meeda focus chestam. "Trace binding and ownership — Whether static methods can" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
 
 ### Step 3 — Evaluate the design choice — Whether static methods can be overridden
 
-Lesson 108 step 3 lo "Evaluate the design choice — Whether" kosam SurveyProducts. Lesson 108 step 3 context lo, java ni use chesi "Whether static methods can be overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
 
 ### Step 4 — State the interview rule — Whether static methods can be overridden
 
-Lesson 108 step 4 lo "State the interview rule — Whether" kosam SurveyProducts. Lesson 108 step 4 context lo, java ni use chesi "Whether static methods can be overridden" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product and Orthomosaic same static `category()` signature use chestayi. Subclass method parent method ni override kaadu; hide chestundi. Static call compile-time class/reference batti resolve avutundi.
 
 ## Lesson 109 — Calling instance members from a static method
 
 ### Step 1 — Open the AeroTopo baseline — Calling instance members from a static method
 
-"Calling instance members from a static method" context lo LanguageLab. java meeda focus chestam. "Open the AeroTopo baseline — Calling instance members from" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
 
 ### Step 2 — Create the focused static experiment — Calling instance members from a static method
 
-Lesson 109 step 2 lo "Create the focused static experiment —" kosam StaticInstanceAccessDemo. Lesson 109 step 2 context lo, java ni use chesi "Calling instance members from a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
 
 ### Step 3 — Run the focused static experiment — Calling instance members from a static method
 
-Lesson 109 step 3 lo "Run the focused static experiment —" kosam terminal result ni use chesi "Calling instance members from a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
 
 ### Step 4 — Remove the temporary static experiment — Calling instance members from a static method
 
-[no highlight] Lesson 109 step 4 lo "Remove the temporary static experiment —" kosam StaticInstanceAccessDemo. Lesson 109 step 4 context lo, java ni use chesi "Calling instance members from a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
 
 ### Step 5 — Return to the real AeroTopo code — Calling instance members from a static method
 
-Lesson 109 step 5 lo "Return to the real AeroTopo code" kosam LanguageLab. Lesson 109 step 5 context lo, java ni use chesi "Calling instance members from a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.
 
 ## Lesson 110 — Why static methods are used
 
 ### Step 1 — Open the project evidence — Why static methods are used
 
-Lesson 110 step 1 lo "Open the project evidence — Why" kosam SurveyAlgorithms. Lesson 110 step 1 context lo, java ni use chesi "Why static methods are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
 
 ### Step 2 — Trace binding and ownership — Why static methods are used
 
-Lesson 110 step 2 lo "Trace binding and ownership — Why" kosam SurveyAlgorithms. Lesson 110 step 2 context lo, java ni use chesi "Why static methods are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
 
 ### Step 3 — Evaluate the design choice — Why static methods are used
 
-"Why static methods are used" context lo SurveyAlgorithms. java meeda focus chestam. "Evaluate the design choice — Why static methods are" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
 
 ### Step 4 — State the interview rule — Why static methods are used
 
-Lesson 110 step 4 lo "State the interview rule — Why" kosam SurveyAlgorithms. Lesson 110 step 4 context lo, java ni use chesi "Why static methods are used" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+SurveyAlgorithms methods input arguments meeda work chestayi; object-specific state ledu. Anduke static utility methods natural fit. Instance configuration need unte static avoid cheyyali.
 
 ## Lesson 111 — Static method hiding versus overriding
 
 ### Step 1 — Open the AeroTopo baseline — Static method hiding versus overriding
 
-Lesson 111 step 1 lo "Open the AeroTopo baseline — Static" kosam SurveyProducts. Lesson 111 step 1 context lo, java ni use chesi "Static method hiding versus overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
 
 ### Step 2 — Create the focused static experiment — Static method hiding versus overriding
 
-Lesson 111 step 2 lo "Create the focused static experiment —" kosam StaticHidingDemo. Lesson 111 step 2 context lo, java ni use chesi "Static method hiding versus overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
 
 ### Step 3 — Run the focused static experiment — Static method hiding versus overriding
 
-"Static method hiding versus overriding" lo "Run the focused static experiment — Static" step terminal result ni direct evidence ga use chestundi. Ee "Run the focused static experiment — Static" point previous explanation repeat cheyyakunda "Static method hiding versus overriding" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
 
 ### Step 4 — Remove the temporary static experiment — Static method hiding versus overriding
 
-[no highlight] Lesson 111 step 4 lo "Remove the temporary static experiment —" kosam StaticHidingDemo. Lesson 111 step 4 context lo, java ni use chesi "Static method hiding versus overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
 
 ### Step 5 — Return to the real AeroTopo code — Static method hiding versus overriding
 
-"Static method hiding versus overriding" context lo SurveyProducts. java meeda focus chestam. "Return to the real AeroTopo code — Static method" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.
 
 ## Lesson 112 — Accessing non-static members inside a static method
 
 ### Step 1 — Open the AeroTopo baseline — Accessing non-static members inside a static method
 
-"Accessing non-static members inside a static method" context lo LanguageLab. java meeda focus chestam. "Open the AeroTopo baseline — Accessing non-static members inside" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
 
 ### Step 2 — Create the focused static experiment — Accessing non-static members inside a static method
 
-Lesson 112 step 2 lo "Create the focused static experiment —" kosam StaticWithInstanceDemo. Lesson 112 step 2 context lo, java ni use chesi "Accessing non-static members inside a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
 
 ### Step 3 — Run the focused static experiment — Accessing non-static members inside a static method
 
-Lesson 112 step 3 lo "Run the focused static experiment —" kosam terminal result ni use chesi "Accessing non-static members inside a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
 
 ### Step 4 — Remove the temporary static experiment — Accessing non-static members inside a static method
 
-[no highlight] Lesson 112 step 4 lo "Remove the temporary static experiment —" kosam StaticWithInstanceDemo. Lesson 112 step 4 context lo, java ni use chesi "Accessing non-static members inside a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
 
 ### Step 5 — Return to the real AeroTopo code — Accessing non-static members inside a static method
 
-Lesson 112 step 5 lo "Return to the real AeroTopo code" kosam LanguageLab. Lesson 112 step 5 context lo, java ni use chesi "Accessing non-static members inside a static" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static context nundi instance member access possible, kani explicit object reference through cheyyali. Direct `accepted` access possible kaadu because implicit `this` ledu.
 
 ## Lesson 113 — Calling a static method through a null object reference
 
 ### Step 1 — Open the AeroTopo baseline — Calling a static method through a null object reference
 
-Lesson 113 step 1 lo "Open the AeroTopo baseline — Calling" kosam SurveyProducts. Lesson 113 step 1 context lo, java ni use chesi "Calling a static method through a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
 
 ### Step 2 — Create the focused static experiment — Calling a static method through a null object reference
 
-Lesson 113 step 2 lo "Create the focused static experiment —" kosam NullStaticCallDemo. Lesson 113 step 2 context lo, java ni use chesi "Calling a static method through a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
 
 ### Step 3 — Run the focused static experiment — Calling a static method through a null object reference
 
-"Run the focused static experiment — Calling a static" step result observation meeda focus chestundi. "Calling a static method through a null object" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
 
 ### Step 4 — Remove the temporary static experiment — Calling a static method through a null object reference
 
-[no highlight] Lesson 113 step 4 lo "Remove the temporary static experiment —" kosam NullStaticCallDemo. Lesson 113 step 4 context lo, java ni use chesi "Calling a static method through a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
 
 ### Step 5 — Return to the real AeroTopo code — Calling a static method through a null object reference
 
-Lesson 113 step 5 lo "Return to the real AeroTopo code" kosam SurveyProducts. Lesson 113 step 5 context lo, java ni use chesi "Calling a static method through a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static method class type batti resolve avutundi. Null reference syntax dwara call technically work avvachu, kani misleading. Class name tho call cheyyadam correct readable style.
 
 ## Lesson 114 — Calling a non-static method directly from static main
 
 ### Step 1 — Open the AeroTopo baseline — Calling a non-static method directly from static main
 
-Lesson 114 step 1 lo "Open the AeroTopo baseline — Calling" kosam AeroTopoApplication. Lesson 114 step 1 context lo, java ni use chesi "Calling a non-static method directly from" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
 
 ### Step 2 — Create the focused static experiment — Calling a non-static method directly from static main
 
-Lesson 114 step 2 lo "Create the focused static experiment —" kosam MainInstanceCallDemo. Lesson 114 step 2 context lo, java ni use chesi "Calling a non-static method directly from" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
 
 ### Step 3 — Run the focused static experiment — Calling a non-static method directly from static main
 
-Lesson 114 step 3 lo "Run the focused static experiment —" kosam terminal result ni use chesi "Calling a non-static method directly from" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
 
 ### Step 4 — Remove the temporary static experiment — Calling a non-static method directly from static main
 
-[no highlight] Lesson 114 step 4 lo "Remove the temporary static experiment —" kosam MainInstanceCallDemo. Lesson 114 step 4 context lo, java ni use chesi "Calling a non-static method directly from" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] `main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
 
 ### Step 5 — Return to the real AeroTopo code — Calling a non-static method directly from static main
 
-"Calling a non-static method directly from static main" context lo AeroTopoApplication. java meeda focus chestam. "Return to the real AeroTopo code — Calling a" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+`main` static context lo implicit object ledu. Non-static method call cheyyali ante object create/get chesi reference dwara invoke cheyyali. Direct call compiler reject chestundi.
 
 ## Lesson 115 — How final is used in the AeroTopo project
 
 ### Step 1 — Open the project evidence — How final is used in the AeroTopo project
 
-Lesson 115 step 1 lo "Open the project evidence — How" kosam SurveyProducts. Lesson 115 step 1 context lo, java ni use chesi "How final is used in the" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
 
 ### Step 2 — Trace binding and ownership — How final is used in the AeroTopo project
 
-Lesson 115 step 2 lo "Trace binding and ownership — How" kosam SurveyProducts. Lesson 115 step 2 context lo, java ni use chesi "How final is used in the" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
 
 ### Step 3 — Evaluate the design choice — How final is used in the AeroTopo project
 
-Lesson 115 step 3 lo "Evaluate the design choice — How" kosam SurveyProducts. Lesson 115 step 3 context lo, java ni use chesi "How final is used in the" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
 
 ### Step 4 — State the interview rule — How final is used in the AeroTopo project
 
-Lesson 115 step 4 lo "State the interview rule — How" kosam SurveyProducts. Lesson 115 step 4 context lo, java ni use chesi "How final is used in the" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Project lo final fields, final method, final classes actual ga use chestunnam. Stable references and closed inheritance/behavior intent ni code lo explicit ga show chestayi.
 
 ## Lesson 116 — A real project use case for final
 
 ### Step 1 — Open the project evidence — A real project use case for final
 
-Lesson 116 step 1 lo "Open the project evidence — A" kosam ProjectService. Lesson 116 step 1 context lo, java ni use chesi "A real project use case for" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
 
 ### Step 2 — Trace binding and ownership — A real project use case for final
 
-Lesson 116 step 2 lo "Trace binding and ownership — A" kosam ProjectService. Lesson 116 step 2 context lo, java ni use chesi "A real project use case for" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
 
 ### Step 3 — Evaluate the design choice — A real project use case for final
 
-"A real project use case for final" context lo ProjectService. java meeda focus chestam. "Evaluate the design choice — A real project use" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
 
 ### Step 4 — State the interview rule — A real project use case for final
 
-Lesson 116 step 4 lo "State the interview rule — A" kosam ProjectService. Lesson 116 step 4 context lo, java ni use chesi "A real project use case for" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+ProjectService injected dependencies private final fields ga unnayi. Constructor lo once assign ayyaka service lifetime lo references reassign kaavu. Dependency objects themselves automatic immutable kaavu.
 
 ## Lesson 117 — Static methods written in the AeroTopo project
 
 ### Step 1 — Open the project evidence — Static methods written in the AeroTopo project
 
-Lesson 117 step 1 lo "Open the project evidence — Static" kosam SurveyAlgorithms. Lesson 117 step 1 context lo, java ni use chesi "Static methods written in the AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
 
 ### Step 2 — Trace binding and ownership — Static methods written in the AeroTopo project
 
-"Static methods written in the AeroTopo project" context lo SurveyAlgorithms. java meeda focus chestam. "Trace binding and ownership — Static methods written in" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
 
 ### Step 3 — Evaluate the design choice — Static methods written in the AeroTopo project
 
-Lesson 117 step 3 lo "Evaluate the design choice — Static" kosam SurveyAlgorithms. Lesson 117 step 3 context lo, java ni use chesi "Static methods written in the AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
 
 ### Step 4 — State the interview rule — Static methods written in the AeroTopo project
 
-Lesson 117 step 4 lo "State the interview rule — Static" kosam SurveyAlgorithms. Lesson 117 step 4 context lo, java ni use chesi "Static methods written in the AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.
 
 ## Lesson 118 — Constructor chaining in inheritance
 
 ### Step 1 — Open the inheritance evidence — Constructor chaining in inheritance
 
-"Constructor chaining in inheritance" lo "Open the inheritance evidence — Constructor chaining in" context lo, "Constructor chaining in inheritance" context lo SurveyProducts. java meeda focus chestam. "Open the inheritance evidence — Constructor chaining in inheritance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
 
 ### Step 2 — Trace the parent-child rule — Constructor chaining in inheritance
 
-Lesson 118 step 2 lo "Trace the parent-child rule — Constructor" kosam SurveyProducts. Lesson 118 step 2 context lo, java ni use chesi "Constructor chaining in inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
 
 ### Step 3 — Evaluate the hierarchy design — Constructor chaining in inheritance
 
-Lesson 118 step 3 lo "Evaluate the hierarchy design — Constructor" kosam SurveyProducts. Lesson 118 step 3 context lo, java ni use chesi "Constructor chaining in inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
 
 ### Step 4 — State the interview answer — Constructor chaining in inheritance
 
-"Constructor chaining in inheritance" lo "State the interview answer — Constructor chaining in" context lo, "Constructor chaining in inheritance" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Constructor chaining in inheritance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Constructor chaining lo parent state first initialize avutundi. Product `this(...)` use chestundi; Orthomosaic `super(...)` use chestundi. Taruvata child-specific gsd validation and assignment complete avutayi.
 
 ## Lesson 119 — Hybrid inheritance in Java
 
 ### Step 1 — Open the inheritance evidence — Hybrid inheritance in Java
 
-Lesson 119 step 1 lo "Open the inheritance evidence — Hybrid" kosam SurveyProducts. Lesson 119 step 1 context lo, java ni use chesi "Hybrid inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
 
 ### Step 2 — Trace the parent-child rule — Hybrid inheritance in Java
 
-Lesson 119 step 2 lo "Trace the parent-child rule — Hybrid" kosam SurveyProducts. Lesson 119 step 2 context lo, java ni use chesi "Hybrid inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
 
 ### Step 3 — Evaluate the hierarchy design — Hybrid inheritance in Java
 
-"Hybrid inheritance in Java" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — Hybrid inheritance in Java" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
 
 ### Step 4 — State the interview answer — Hybrid inheritance in Java
 
-Lesson 119 step 4 lo "State the interview answer — Hybrid" kosam SurveyProducts. Lesson 119 step 4 context lo, java ni use chesi "Hybrid inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java multiple class inheritance support cheyyadu, kani one superclass plus multiple interfaces use cheyyachu. AeroTopo Product hierarchy lo hierarchical inheritance and multiple interface contracts kalisi hybrid-style design create chestayi.
 
 ## Lesson 120 — The diamond problem and default-method conflict resolution
 
 ### Step 1 — Open the inheritance evidence — The diamond problem and default-method conflict resolution
 
-Lesson 120 step 1 lo "Open the inheritance evidence — The" kosam SurveyProducts. Lesson 120 step 1 context lo, java ni use chesi "The diamond problem and default-method conflict" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
 
 ### Step 2 — Trace the parent-child rule — The diamond problem and default-method conflict resolution
 
-"The diamond problem and default-method conflict resolution" context lo SurveyProducts. java meeda focus chestam. "Trace the parent-child rule — The diamond problem and" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
 
 ### Step 3 — Evaluate the hierarchy design — The diamond problem and default-method conflict resolution
 
-Lesson 120 step 3 lo "Evaluate the hierarchy design — The" kosam SurveyProducts. Lesson 120 step 3 context lo, java ni use chesi "The diamond problem and default-method conflict" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
 
 ### Step 4 — State the interview answer — The diamond problem and default-method conflict resolution
 
-Lesson 120 step 4 lo "State the interview answer — The" kosam SurveyProducts. Lesson 120 step 4 context lo, java ni use chesi "The diamond problem and default-method conflict" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Left and Right rendu same default `units()` provide chestayi. Units class conflict ni explicit override tho resolve chesi `Left.super.units()` choose chestundi. Java ambiguity ni automatic ga guess cheyyadu.
 
 ## Lesson 121 — Composition over inheritance
 
 ### Step 1 — Open the inheritance evidence — Composition over inheritance
 
-"Composition over inheritance" context lo SurveyProducts. java meeda focus chestam. "Open the inheritance evidence — Composition over inheritance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
 
 ### Step 2 — Trace the parent-child rule — Composition over inheritance
 
-Lesson 121 step 2 lo "Trace the parent-child rule — Composition" kosam SurveyProducts. java ni use chesi "Composition over inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
 
 ### Step 3 — Evaluate the hierarchy design — Composition over inheritance
 
-"Evaluate the hierarchy design — Composition over inheritance" step lo SurveyProducts. java open chesi "Composition over inheritance" concept project code lo ela represent ayyindo identify chestam. "Composition over inheritance" lo "Evaluate the hierarchy design — Composition over inheritance" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
 
 ### Step 4 — State the interview answer — Composition over inheritance
 
-"Composition over inheritance" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Composition over inheritance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Orthomosaic `Product` is-a relation kabatti inheritance correct. Product tiles ni own chestundi kabatti has-a relation composition. Every reuse problem ni subclassing tho solve cheyyakudadhu.
 
 ## Lesson 122 — Superclass constructor runs before subclass construction
 
 ### Step 1 — Open the inheritance evidence — Superclass constructor runs before subclass construction
 
-Lesson 122 step 1 lo "Open the inheritance evidence — Superclass" kosam SurveyProducts. Lesson 122 step 1 context lo, java ni use chesi "Superclass constructor runs before subclass construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
 
 ### Step 2 — Trace the parent-child rule — Superclass constructor runs before subclass construction
 
-Lesson 122 step 2 lo "Trace the parent-child rule — Superclass" kosam SurveyProducts. Lesson 122 step 2 context lo, java ni use chesi "Superclass constructor runs before subclass construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
 
 ### Step 3 — Evaluate the hierarchy design — Superclass constructor runs before subclass construction
 
-"Superclass constructor runs before subclass construction" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — Superclass constructor runs before" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
 
 ### Step 4 — State the interview answer — Superclass constructor runs before subclass construction
 
-Lesson 122 step 4 lo "State the interview answer — Superclass" kosam SurveyProducts. Lesson 122 step 4 context lo, java ni use chesi "Superclass constructor runs before subclass construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child object create chestappudu parent constructor first complete avutundi. Orthomosaic `super(id,tiles)` dwara Product state initialize chesi taruvata gsd validate and assign chestundi.
 
 ## Lesson 123 — Parent with only parameterized constructors
 
 ### Step 1 — Open the inheritance evidence — Parent with only parameterized constructors
 
-Lesson 123 step 1 lo "Open the inheritance evidence — Parent" kosam SurveyProducts. Lesson 123 step 1 context lo, java ni use chesi "Parent with only parameterized constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
 
 ### Step 2 — Trace the parent-child rule — Parent with only parameterized constructors
 
-"Parent with only parameterized constructors" context lo SurveyProducts. java meeda focus chestam. "Trace the parent-child rule — Parent with only parameterized" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
 
 ### Step 3 — Evaluate the hierarchy design — Parent with only parameterized constructors
 
-Lesson 123 step 3 lo "Evaluate the hierarchy design — Parent" kosam SurveyProducts. Lesson 123 step 3 context lo, java ni use chesi "Parent with only parameterized constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
 
 ### Step 4 — State the interview answer — Parent with only parameterized constructors
 
-Lesson 123 step 4 lo "State the interview answer — Parent" kosam SurveyProducts. Lesson 123 step 4 context lo, java ni use chesi "Parent with only parameterized constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent no-arg constructor lekapothe child explicit ga available parameterized `super(...)` call cheyyali. Orthomosaic exactly `super(id,tiles)` use chesi Product construction valid ga complete chestundi.
 
 ## Lesson 124 — Why super() must be the first constructor statement
 
 ### Step 1 — Open the inheritance evidence — Why super() must be the first constructor statement
 
-Lesson 124 step 1 lo "Open the inheritance evidence — Why" kosam SurveyProducts. Lesson 124 step 1 context lo, java ni use chesi "Why super() must be the first" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
 
 ### Step 2 — Trace the parent-child rule — Why super() must be the first constructor statement
 
-Lesson 124 step 2 lo "Trace the parent-child rule — Why" kosam SurveyProducts. Lesson 124 step 2 context lo, java ni use chesi "Why super() must be the first" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
 
 ### Step 3 — Evaluate the hierarchy design — Why super() must be the first constructor statement
 
-Lesson 124 step 3 lo "Evaluate the hierarchy design — Why" kosam SurveyProducts. Lesson 124 step 3 context lo, java ni use chesi "Why super() must be the first" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
 
 ### Step 4 — State the interview answer — Why super() must be the first constructor statement
 
-Lesson 124 step 4 lo "State the interview answer — Why" kosam SurveyProducts. Lesson 124 step 4 context lo, java ni use chesi "Why super() must be the first" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.
 
 ## Lesson 125 — Effect of final methods on inheritance
 
 ### Step 1 — Open the inheritance evidence — Effect of final methods on inheritance
 
-Lesson 125 step 1 lo "Open the inheritance evidence — Effect" kosam SurveyProducts. Lesson 125 step 1 context lo, java ni use chesi "Effect of final methods on inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
 
 ### Step 2 — Trace the parent-child rule — Effect of final methods on inheritance
 
-Lesson 125 step 2 lo "Trace the parent-child rule — Effect" kosam SurveyProducts. Lesson 125 step 2 context lo, java ni use chesi "Effect of final methods on inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
 
 ### Step 3 — Evaluate the hierarchy design — Effect of final methods on inheritance
 
-"Effect of final methods on inheritance" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — Effect of final methods" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
 
 ### Step 4 — State the interview answer — Effect of final methods on inheritance
 
-Lesson 125 step 4 lo "State the interview answer — Effect" kosam SurveyProducts. Lesson 125 step 4 context lo, java ni use chesi "Effect of final methods on inheritance" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
 
 ## Lesson 126 — Inheritance and its types in Java
 
 ### Step 1 — Open the inheritance evidence — Inheritance and its types in Java
 
-Lesson 126 step 1 lo "Open the inheritance evidence — Inheritance" kosam SurveyProducts. Lesson 126 step 1 context lo, java ni use chesi "Inheritance and its types in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
 
 ### Step 2 — Trace the parent-child rule — Inheritance and its types in Java
 
-"Inheritance and its types in Java" context lo SurveyProducts. java meeda focus chestam. "Trace the parent-child rule — Inheritance and its types" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
 
 ### Step 3 — Evaluate the hierarchy design — Inheritance and its types in Java
 
-Lesson 126 step 3 lo "Evaluate the hierarchy design — Inheritance" kosam SurveyProducts. Lesson 126 step 3 context lo, java ni use chesi "Inheritance and its types in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
 
 ### Step 4 — State the interview answer — Inheritance and its types in Java
 
-Lesson 126 step 4 lo "State the interview answer — Inheritance" kosam SurveyProducts. Lesson 126 step 4 context lo, java ni use chesi "Inheritance and its types in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
 
 ## Lesson 127 — Why a class cannot extend itself
 
 ### Step 1 — Open the inheritance evidence — Why a class cannot extend itself
 
-Lesson 127 step 1 lo "Open the inheritance evidence — Why" kosam CompilerRulesTest. Lesson 127 step 1 context lo, java ni use chesi "Why a class cannot extend itself" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
 
 ### Step 2 — Trace the parent-child rule — Why a class cannot extend itself
 
-Lesson 127 step 2 lo "Trace the parent-child rule — Why" kosam CompilerRulesTest. Lesson 127 step 2 context lo, java ni use chesi "Why a class cannot extend itself" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
 
 ### Step 3 — Evaluate the hierarchy design — Why a class cannot extend itself
 
-Lesson 127 step 3 lo "Evaluate the hierarchy design — Why" kosam CompilerRulesTest. Lesson 127 step 3 context lo, java ni use chesi "Why a class cannot extend itself" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
 
 ### Step 4 — State the interview answer — Why a class cannot extend itself
 
-Lesson 127 step 4 lo "State the interview answer — Why" kosam CompilerRulesTest. Lesson 127 step 4 context lo, java ni use chesi "Why a class cannot extend itself" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
 
 ## Lesson 128 — Multiple inheritance in Java
 
 ### Step 1 — Open the inheritance evidence — Multiple inheritance in Java
 
-Lesson 128 step 1 lo "Open the inheritance evidence — Multiple" kosam SurveyProducts. Lesson 128 step 1 context lo, java ni use chesi "Multiple inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
 
 ### Step 2 — Trace the parent-child rule — Multiple inheritance in Java
 
-Lesson 128 step 2 lo "Trace the parent-child rule — Multiple" kosam SurveyProducts. Lesson 128 step 2 context lo, java ni use chesi "Multiple inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
 
 ### Step 3 — Evaluate the hierarchy design — Multiple inheritance in Java
 
-"Multiple inheritance in Java" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — Multiple inheritance in Java" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
 
 ### Step 4 — State the interview answer — Multiple inheritance in Java
 
-Lesson 128 step 4 lo "State the interview answer — Multiple" kosam SurveyProducts. Lesson 128 step 4 context lo, java ni use chesi "Multiple inheritance in Java" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
 
 ## Lesson 129 — How inheritance works in AeroTopo
 
 ### Step 1 — Open the inheritance evidence — How inheritance works in AeroTopo
 
-Lesson 129 step 1 lo "Open the inheritance evidence — How" kosam SurveyProducts. Lesson 129 step 1 context lo, java ni use chesi "How inheritance works in AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
 
 ### Step 2 — Trace the parent-child rule — How inheritance works in AeroTopo
 
-"How inheritance works in AeroTopo" context lo SurveyProducts. java meeda focus chestam. "Trace the parent-child rule — How inheritance works in" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
 
 ### Step 3 — Evaluate the hierarchy design — How inheritance works in AeroTopo
 
-Lesson 129 step 3 lo "Evaluate the hierarchy design — How" kosam SurveyProducts. Lesson 129 step 3 context lo, java ni use chesi "How inheritance works in AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
 
 ### Step 4 — State the interview answer — How inheritance works in AeroTopo
 
-Lesson 129 step 4 lo "State the interview answer — How" kosam SurveyProducts. Lesson 129 step 4 context lo, java ni use chesi "How inheritance works in AeroTopo" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
 
 ## Lesson 130 — Access visibility in subclasses
 
 ### Step 1 — Open the inheritance evidence — Access visibility in subclasses
 
-"Access visibility in subclasses" lo "Open the inheritance evidence — Access visibility in" context lo, "Access visibility in subclasses" context lo SurveyProducts. java meeda focus chestam. "Open the inheritance evidence — Access visibility in subclasses" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
 
 ### Step 2 — Trace the parent-child rule — Access visibility in subclasses
 
-Lesson 130 step 2 lo "Trace the parent-child rule — Access" kosam SurveyProducts. Lesson 130 step 2 context lo, java ni use chesi "Access visibility in subclasses" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
 
 ### Step 3 — Evaluate the hierarchy design — Access visibility in subclasses
 
-Lesson 130 step 3 lo "Evaluate the hierarchy design — Access" kosam SurveyProducts. Lesson 130 step 3 context lo, java ni use chesi "Access visibility in subclasses" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
 
 ### Step 4 — State the interview answer — Access visibility in subclasses
 
-"Access visibility in subclasses" lo "State the interview answer — Access visibility in" context lo, "Access visibility in subclasses" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Access visibility in subclasses" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
 
 ## Lesson 131 — When inheritance violates the parent contract
 
 ### Step 1 — Open the inheritance evidence — When inheritance violates the parent contract
 
-Lesson 131 step 1 lo "Open the inheritance evidence — When" kosam SurveyProducts. Lesson 131 step 1 context lo, java ni use chesi "When inheritance violates the parent contract" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
 
 ### Step 2 — Trace the parent-child rule — When inheritance violates the parent contract
 
-Lesson 131 step 2 lo "Trace the parent-child rule — When" kosam SurveyProducts. Lesson 131 step 2 context lo, java ni use chesi "When inheritance violates the parent contract" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
 
 ### Step 3 — Evaluate the hierarchy design — When inheritance violates the parent contract
 
-"When inheritance violates the parent contract" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — When inheritance violates the" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
 
 ### Step 4 — State the interview answer — When inheritance violates the parent contract
 
-Lesson 131 step 4 lo "State the interview answer — When" kosam SurveyProducts. Lesson 131 step 4 context lo, java ni use chesi "When inheritance violates the parent contract" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
 
 ## Lesson 132 — Using super without an explicit superclass
 
 ### Step 1 — Open the AeroTopo inheritance baseline — Using super without an explicit superclass
 
-Lesson 132 step 1 lo "Open the AeroTopo inheritance baseline —" kosam SurveyProducts. Lesson 132 step 1 context lo, java ni use chesi "Using super without an explicit superclass" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
 
 ### Step 2 — Create the focused inheritance experiment — Using super without an explicit superclass
 
-Lesson 132 step 2 lo "Create the focused inheritance experiment —" kosam ImplicitObjectSuperDemo. Lesson 132 step 2 context lo, java ni use chesi "Using super without an explicit superclass" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
 
 ### Step 3 — Run the inheritance experiment — Using super without an explicit superclass
 
-"Using super without an explicit superclass" lo "Run the inheritance experiment — Using super" step terminal result ni direct evidence ga use chestundi. Ee "Run the inheritance experiment — Using super" point previous explanation repeat cheyyakunda "Using super without an explicit superclass" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
 
 ### Step 4 — Remove the temporary inheritance experiment — Using super without an explicit superclass
 
-[no highlight] Lesson 132 step 4 lo "Remove the temporary inheritance experiment —" kosam ImplicitObjectSuperDemo. Lesson 132 step 4 context lo, java ni use chesi "Using super without an explicit superclass" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
 
 ### Step 5 — Return to the production hierarchy — Using super without an explicit superclass
 
-"Using super without an explicit superclass" context lo SurveyProducts. java meeda focus chestam. "Return to the production hierarchy — Using super without" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
 
 ## Lesson 133 — Inheritance versus composition
 
 ### Step 1 — Open the inheritance evidence — Inheritance versus composition
 
-"Inheritance versus composition" context lo SurveyProducts. java meeda focus chestam. "Open the inheritance evidence — Inheritance versus composition" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
 
 ### Step 2 — Trace the parent-child rule — Inheritance versus composition
 
-Lesson 133 step 2 lo "Trace the parent-child rule — Inheritance" kosam SurveyProducts. java ni use chesi "Inheritance versus composition" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
 
 ### Step 3 — Evaluate the hierarchy design — Inheritance versus composition
 
-"Evaluate the hierarchy design — Inheritance versus composition" step lo SurveyProducts. java open chesi "Inheritance versus composition" concept project code lo ela represent ayyindo identify chestam. "Inheritance versus composition" lo "Evaluate the hierarchy design — Inheritance versus composition" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
 
 ### Step 4 — State the interview answer — Inheritance versus composition
 
-"Inheritance versus composition" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Inheritance versus composition" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
 
 ## Lesson 134 — Interfaces as Java's multiple-inheritance solution
 
 ### Step 1 — Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution
 
-Lesson 134 step 1 lo "Open the inheritance evidence — Interfaces" kosam SurveyProducts. Lesson 134 step 1 context lo, java ni use chesi "Interfaces as Java's multiple-inheritance solution" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
 
 ### Step 2 — Trace the parent-child rule — Interfaces as Java's multiple-inheritance solution
 
-Lesson 134 step 2 lo "Trace the parent-child rule — Interfaces" kosam SurveyProducts. Lesson 134 step 2 context lo, java ni use chesi "Interfaces as Java's multiple-inheritance solution" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
 
 ### Step 3 — Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance solution
 
-"Interfaces as Java's multiple-inheritance solution" context lo SurveyProducts. java meeda focus chestam. "Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
 
 ### Step 4 — State the interview answer — Interfaces as Java's multiple-inheritance solution
 
-Lesson 134 step 4 lo "State the interview answer — Interfaces" kosam SurveyProducts. Lesson 134 step 4 context lo, java ni use chesi "Interfaces as Java's multiple-inheritance solution" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.
 
 ## Lesson 135 — Static methods in parent and child classes
 
 ### Step 1 — Open the inheritance evidence — Static methods in parent and child classes
 
-Lesson 135 step 1 lo "Open the inheritance evidence — Static" kosam SurveyProducts. Lesson 135 step 1 context lo, java ni use chesi "Static methods in parent and child" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
 
 ### Step 2 — Trace the parent-child rule — Static methods in parent and child classes
 
-"Static methods in parent and child classes" context lo SurveyProducts. java meeda focus chestam. "Trace the parent-child rule — Static methods in parent" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
 
 ### Step 3 — Evaluate the hierarchy design — Static methods in parent and child classes
 
-Lesson 135 step 3 lo "Evaluate the hierarchy design — Static" kosam SurveyProducts. Lesson 135 step 3 context lo, java ni use chesi "Static methods in parent and child" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
 
 ### Step 4 — State the interview answer — Static methods in parent and child classes
 
-Lesson 135 step 4 lo "State the interview answer — Static" kosam SurveyProducts. Lesson 135 step 4 context lo, java ni use chesi "Static methods in parent and child" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Static same-signature methods override kaavu; hiding avutundi. Call qualifying class or declared reference type batti compile time lo resolve avutundi. Product and Orthomosaic category methods direct example.
 
 ## Lesson 136 — Covariant return types
 
 ### Step 1 — Open the AeroTopo baseline — Covariant return types
 
-"Covariant return types" context lo SurveyProducts. java meeda focus chestam. "Open the AeroTopo baseline — Covariant return types" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
 
 ### Step 2 — Create the focused dispatch experiment — Covariant return types
 
-Lesson 136 step 2 lo "Create the focused dispatch experiment —" kosam CovariantReturnDemo. Lesson 136 step 2 context lo, java ni use chesi "Covariant return types" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
 
 ### Step 3 — Run the dispatch experiment — Covariant return types
 
-"Covariant return types" kosam "Run the dispatch experiment — Covariant return types" step terminal evidence ni use chestundi. "Covariant return types" lo "Run the dispatch experiment — Covariant return types" context lo, terminal result result ni source code tho compare chesi, rule compile time lo apply ayyinda leda runtime lo execute ayyinda ani distinguish chestam.
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
 
 ### Step 4 — Remove the temporary dispatch experiment — Covariant return types
 
-[no highlight] "Covariant return types" experiment complete ayyaka "Remove the temporary dispatch experiment — Covariant return types" step CovariantReturnDemo. java ni delete chestundi. "Covariant return types" lo "Remove the temporary dispatch experiment — Covariant return" context lo, ila temporary teaching code project architecture lo mix avvadu, kani verified Java rule lesson knowledge ga remain avutundi.
+[no highlight] Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
 
 ### Step 5 — Return to the project design — Covariant return types
 
-Lesson 136 step 5 lo "Return to the project design —" kosam SurveyProducts. Lesson 136 step 5 context lo, java ni use chesi "Covariant return types" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Covariant return lo child override same parameters maintain chesi parent return type subtype ni return cheyyachu. Caller subclass-specific result ni cast lekunda pondagaladu; parent contract break kaadu.
 
 ## Lesson 137 — Calling overridable methods from constructors
 
 ### Step 1 — Open the AeroTopo baseline — Calling overridable methods from constructors
 
-Lesson 137 step 1 lo "Open the AeroTopo baseline — Calling" kosam SurveyProducts. Lesson 137 step 1 context lo, java ni use chesi "Calling overridable methods from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
 
 ### Step 2 — Create the focused dispatch experiment — Calling overridable methods from constructors
 
-Lesson 137 step 2 lo "Create the focused dispatch experiment —" kosam ConstructorDispatchRiskDemo. Lesson 137 step 2 context lo, java ni use chesi "Calling overridable methods from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
 
 ### Step 3 — Run the dispatch experiment — Calling overridable methods from constructors
 
-"Run the dispatch experiment — Calling overridable methods from" step result observation meeda focus chestundi. "Calling overridable methods from constructors" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
 
 ### Step 4 — Remove the temporary dispatch experiment — Calling overridable methods from constructors
 
-[no highlight] Lesson 137 step 4 lo "Remove the temporary dispatch experiment —" kosam ConstructorDispatchRiskDemo. Lesson 137 step 4 context lo, java ni use chesi "Calling overridable methods from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
 
 ### Step 5 — Return to the project design — Calling overridable methods from constructors
 
-Lesson 137 step 5 lo "Return to the project design —" kosam SurveyProducts. Lesson 137 step 5 context lo, java ni use chesi "Calling overridable methods from constructors" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent constructor overridable method call chesthe runtime dispatch child override ki vellachu. Appatiki child fields complete initialize kakapovachu. Default or inconsistent state observe avvadam main risk.
 
 ## Lesson 138 — Inheritance and polymorphism working together
 
 ### Step 1 — Open the polymorphism evidence — Inheritance and polymorphism working together
 
-Lesson 138 step 1 lo "Open the polymorphism evidence — Inheritance" kosam SurveyProducts. Lesson 138 step 1 context lo, java ni use chesi "Inheritance and polymorphism working together" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
 
 ### Step 2 — Trace method selection — Inheritance and polymorphism working together
 
-"Inheritance and polymorphism working together" context lo SurveyProducts. java meeda focus chestam. "Trace method selection — Inheritance and polymorphism working together" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
 
 ### Step 3 — Evaluate the design contract — Inheritance and polymorphism working together
 
-Lesson 138 step 3 lo "Evaluate the design contract — Inheritance" kosam SurveyProducts. Lesson 138 step 3 context lo, java ni use chesi "Inheritance and polymorphism working together" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
 
 ### Step 4 — State the interview answer — Inheritance and polymorphism working together
 
-Lesson 138 step 4 lo "State the interview answer — Inheritance" kosam SurveyProducts. Lesson 138 step 4 context lo, java ni use chesi "Inheritance and polymorphism working together" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.
 
 ## Lesson 139 — Method overloading
 
 ### Step 1 — Open the polymorphism evidence — Method overloading
 
-"Method overloading" context lo LanguageLab. java meeda focus chestam. "Open the polymorphism evidence — Method overloading" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
 
 ### Step 2 — Trace method selection — Method overloading
 
-"Method overloading" lo "Trace method selection — Method overloading" step LanguageLab. "Method overloading" lo "Trace method selection — Method overloading" context lo, java ni direct evidence ga use chestundi. Ee "Trace method selection — Method overloading" point previous explanation repeat cheyyakunda "Method overloading" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
 
 ### Step 3 — Evaluate the design contract — Method overloading
 
-"Evaluate the design contract — Method overloading" step lo LanguageLab. java open chesi "Method overloading" concept project code lo ela represent ayyindo identify chestam. "Method overloading" lo "Evaluate the design contract — Method overloading" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
 
 ### Step 4 — State the interview answer — Method overloading
 
-"Method overloading" context lo LanguageLab. java meeda focus chestam. "State the interview answer — Method overloading" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+LanguageLab `join` same method name tho `int` and `Integer` parameter signatures provide chestundi. Compiler argument compile-time type batti overload choose chestundi.
 
 ## Lesson 140 — Overloading is resolved at compile time
 
 ### Step 1 — Open the polymorphism evidence — Overloading is resolved at compile time
 
-Lesson 140 step 1 lo "Open the polymorphism evidence — Overloading" kosam LanguageLab. Lesson 140 step 1 context lo, java ni use chesi "Overloading is resolved at compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
 
 ### Step 2 — Trace method selection — Overloading is resolved at compile time
 
-Lesson 140 step 2 lo "Trace method selection — Overloading is" kosam LanguageLab. Lesson 140 step 2 context lo, java ni use chesi "Overloading is resolved at compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
 
 ### Step 3 — Evaluate the design contract — Overloading is resolved at compile time
 
-"Overloading is resolved at compile time" context lo LanguageLab. java meeda focus chestam. "Evaluate the design contract — Overloading is resolved at" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
 
 ### Step 4 — State the interview answer — Overloading is resolved at compile time
 
-Lesson 140 step 4 lo "State the interview answer — Overloading" kosam LanguageLab. Lesson 140 step 4 context lo, java ni use chesi "Overloading is resolved at compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Overload selection compile time lo declared argument types batti jarugutundi. Runtime object type overload ni malli choose cheyyadu. Overriding మాత్రం selected instance signature meeda runtime dispatch use chestundi.
 
 ## Lesson 141 — How Java resolves overloaded methods
 
 ### Step 1 — Open the polymorphism evidence — How Java resolves overloaded methods
 
-Lesson 141 step 1 lo "Open the polymorphism evidence — How" kosam LanguageLab. Lesson 141 step 1 context lo, java ni use chesi "How Java resolves overloaded methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
 
 ### Step 2 — Trace method selection — How Java resolves overloaded methods
 
-"How Java resolves overloaded methods" context lo LanguageLab. java meeda focus chestam. "Trace method selection — How Java resolves overloaded methods" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
 
 ### Step 3 — Evaluate the design contract — How Java resolves overloaded methods
 
-Lesson 141 step 3 lo "Evaluate the design contract — How" kosam LanguageLab. Lesson 141 step 3 context lo, java ni use chesi "How Java resolves overloaded methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
 
 ### Step 4 — State the interview answer — How Java resolves overloaded methods
 
-Lesson 141 step 4 lo "State the interview answer — How" kosam LanguageLab. Lesson 141 step 4 context lo, java ni use chesi "How Java resolves overloaded methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.
 
 ## Lesson 142 — Return type alone cannot overload a method
 
 ### Step 1 — Open the polymorphism evidence — Return type alone cannot overload a method
 
-Lesson 142 step 1 lo "Open the polymorphism evidence — Return" kosam CompilerRulesTest. Lesson 142 step 1 context lo, java ni use chesi "Return type alone cannot overload a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
 
 ### Step 2 — Trace method selection — Return type alone cannot overload a method
 
-Lesson 142 step 2 lo "Trace method selection — Return type" kosam CompilerRulesTest. Lesson 142 step 2 context lo, java ni use chesi "Return type alone cannot overload a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
 
 ### Step 3 — Evaluate the design contract — Return type alone cannot overload a method
 
-Lesson 142 step 3 lo "Evaluate the design contract — Return" kosam CompilerRulesTest. Lesson 142 step 3 context lo, java ni use chesi "Return type alone cannot overload a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
 
 ### Step 4 — State the interview answer — Return type alone cannot overload a method
 
-Lesson 142 step 4 lo "State the interview answer — Return" kosam CompilerRulesTest. Lesson 142 step 4 context lo, java ni use chesi "Return type alone cannot overload a" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Return type method signature overload distinction lo part kaadu. Same name plus same parameters tho two methods different returns ichina compiler duplicate/conflicting declaration ga reject chestundi.
 
 ## Lesson 143 — Choosing between int and Integer overloads
 
 ### Step 1 — Open the polymorphism evidence — Choosing between int and Integer overloads
 
-Lesson 143 step 1 lo "Open the polymorphism evidence — Choosing" kosam LanguageLab. Lesson 143 step 1 context lo, java ni use chesi "Choosing between int and Integer overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
 
 ### Step 2 — Trace method selection — Choosing between int and Integer overloads
 
-Lesson 143 step 2 lo "Trace method selection — Choosing between" kosam LanguageLab. Lesson 143 step 2 context lo, java ni use chesi "Choosing between int and Integer overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
 
 ### Step 3 — Evaluate the design contract — Choosing between int and Integer overloads
 
-"Choosing between int and Integer overloads" context lo LanguageLab. java meeda focus chestam. "Evaluate the design contract — Choosing between int and" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
 
 ### Step 4 — State the interview answer — Choosing between int and Integer overloads
 
-Lesson 143 step 4 lo "State the interview answer — Choosing" kosam LanguageLab. Lesson 143 step 4 context lo, java ni use chesi "Choosing between int and Integer overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Primitive int argument ki int overload exact match. Integer reference ki Integer overload exact match. `null` primitive ki valid kaadu kabatti ee pair lo Integer overload applicable.
 
 ## Lesson 144 — Why return type is not enough for overloading
 
 ### Step 1 — Open the polymorphism evidence — Why return type is not enough for overloading
 
-Lesson 144 step 1 lo "Open the polymorphism evidence — Why" kosam CompilerRulesTest. Lesson 144 step 1 context lo, java ni use chesi "Why return type is not enough" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
 
 ### Step 2 — Trace method selection — Why return type is not enough for overloading
 
-"Why return type is not enough for overloading" context lo CompilerRulesTest. java meeda focus chestam. "Trace method selection — Why return type is not" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
 
 ### Step 3 — Evaluate the design contract — Why return type is not enough for overloading
 
-Lesson 144 step 3 lo "Evaluate the design contract — Why" kosam CompilerRulesTest. Lesson 144 step 3 context lo, java ni use chesi "Why return type is not enough" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
 
 ### Step 4 — State the interview answer — Why return type is not enough for overloading
 
-Lesson 144 step 4 lo "State the interview answer — Why" kosam CompilerRulesTest. Lesson 144 step 4 context lo, java ni use chesi "Why return type is not enough" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Only return type change chesi overload create cheyyalem. Caller arguments same kabatti compiler method select cheyyadaniki parameter distinction ledu. CompilerRulesTest exact illegal case ni verify chestundi.
 
 ## Lesson 145 — Overloading ambiguity and maintenance risk
 
 ### Step 1 — Open the AeroTopo baseline — Overloading ambiguity and maintenance risk
 
-"Overloading ambiguity and maintenance risk" context lo LanguageLab. java meeda focus chestam. "Open the AeroTopo baseline — Overloading ambiguity and maintenance" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
 
 ### Step 2 — Create the focused dispatch experiment — Overloading ambiguity and maintenance risk
 
-Lesson 145 step 2 lo "Create the focused dispatch experiment —" kosam AmbiguousOverloadDemo. Lesson 145 step 2 context lo, java ni use chesi "Overloading ambiguity and maintenance risk" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
 
 ### Step 3 — Run the dispatch experiment — Overloading ambiguity and maintenance risk
 
-"Overloading ambiguity and maintenance risk" lo "Run the dispatch experiment — Overloading ambiguity" step terminal result ni direct evidence ga use chestundi. Ee "Run the dispatch experiment — Overloading ambiguity" point previous explanation repeat cheyyakunda "Overloading ambiguity and maintenance risk" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
 
 ### Step 4 — Remove the temporary dispatch experiment — Overloading ambiguity and maintenance risk
 
-[no highlight] Lesson 145 step 4 lo "Remove the temporary dispatch experiment —" kosam AmbiguousOverloadDemo. Lesson 145 step 4 context lo, java ni use chesi "Overloading ambiguity and maintenance risk" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
 
 ### Step 5 — Return to the project design — Overloading ambiguity and maintenance risk
 
-Lesson 145 step 5 lo "Return to the project design —" kosam LanguageLab. Lesson 145 step 5 context lo, java ni use chesi "Overloading ambiguity and maintenance risk" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Too many unrelated overloads null, boxing, varargs cases lo ambiguity create cheyyachu. Caller ki selected method obvious ga undali. Otherwise compile errors or surprising behavior vastayi.
 
 ## Lesson 146 — Null with String and Object overloads
 
 ### Step 1 — Open the AeroTopo baseline — Null with String and Object overloads
 
-Lesson 146 step 1 lo "Open the AeroTopo baseline — Null" kosam LanguageLab. Lesson 146 step 1 context lo, java ni use chesi "Null with String and Object overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
 
 ### Step 2 — Create the focused dispatch experiment — Null with String and Object overloads
 
-Lesson 146 step 2 lo "Create the focused dispatch experiment —" kosam NullSpecificityDemo. Lesson 146 step 2 context lo, java ni use chesi "Null with String and Object overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
 
 ### Step 3 — Run the dispatch experiment — Null with String and Object overloads
 
-"Run the dispatch experiment — Null with String and" step result observation meeda focus chestundi. "Null with String and Object overloads" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
 
 ### Step 4 — Remove the temporary dispatch experiment — Null with String and Object overloads
 
-[no highlight] Lesson 146 step 4 lo "Remove the temporary dispatch experiment —" kosam NullSpecificityDemo. Lesson 146 step 4 context lo, java ni use chesi "Null with String and Object overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] `null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
 
 ### Step 5 — Return to the project design — Null with String and Object overloads
 
-Lesson 146 step 5 lo "Return to the project design —" kosam LanguageLab. Lesson 146 step 5 context lo, java ni use chesi "Null with String and Object overloads" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.
 
 ## Lesson 147 — Overriding cannot reduce method visibility
 
 ### Step 1 — Open the AeroTopo baseline — Overriding cannot reduce method visibility
 
-Lesson 147 step 1 lo "Open the AeroTopo baseline — Overriding" kosam SurveyProducts. Lesson 147 step 1 context lo, java ni use chesi "Overriding cannot reduce method visibility" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
 
 ### Step 2 — Create the focused dispatch experiment — Overriding cannot reduce method visibility
 
-Lesson 147 step 2 lo "Create the focused dispatch experiment —" kosam ReducedVisibilityOverrideDemo. Lesson 147 step 2 context lo, java ni use chesi "Overriding cannot reduce method visibility" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
 
 ### Step 3 — Run the dispatch experiment — Overriding cannot reduce method visibility
 
-"Overriding cannot reduce method visibility" lo "Run the dispatch experiment — Overriding cannot" step terminal result ni direct evidence ga use chestundi. Ee "Run the dispatch experiment — Overriding cannot" point previous explanation repeat cheyyakunda "Overriding cannot reduce method visibility" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
 
 ### Step 4 — Remove the temporary dispatch experiment — Overriding cannot reduce method visibility
 
-[no highlight] Lesson 147 step 4 lo "Remove the temporary dispatch experiment —" kosam ReducedVisibilityOverrideDemo. Lesson 147 step 4 context lo, java ni use chesi "Overriding cannot reduce method visibility" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
 
 ### Step 5 — Return to the project design — Overriding cannot reduce method visibility
 
-"Overriding cannot reduce method visibility" context lo SurveyProducts. java meeda focus chestam. "Return to the project design — Overriding cannot reduce" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Override parent method visibility ni reduce cheyyakudadhu. Protected parent method child lo package-private ga మార్చితే compiler reject chestundi. Parent contract access child preserve or widen cheyyali.
 
 ## Lesson 148 — How Java achieves polymorphism
 
 ### Step 1 — Open the polymorphism evidence — How Java achieves polymorphism
 
-"How Java achieves polymorphism" lo "Open the polymorphism evidence — How Java achieves" context lo, "How Java achieves polymorphism" context lo SurveyProducts. java meeda focus chestam. "Open the polymorphism evidence — How Java achieves polymorphism" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
 
 ### Step 2 — Trace method selection — How Java achieves polymorphism
 
-Lesson 148 step 2 lo "Trace method selection — How Java" kosam SurveyProducts. Lesson 148 step 2 context lo, java ni use chesi "How Java achieves polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
 
 ### Step 3 — Evaluate the design contract — How Java achieves polymorphism
 
-Lesson 148 step 3 lo "Evaluate the design contract — How" kosam SurveyProducts. Lesson 148 step 3 context lo, java ni use chesi "How Java achieves polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
 
 ### Step 4 — State the interview answer — How Java achieves polymorphism
 
-"How Java achieves polymorphism" lo "State the interview answer — How Java achieves" context lo, "How Java achieves polymorphism" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — How Java achieves polymorphism" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Java runtime polymorphism overriding/dynamic dispatch tho achieve chestundi; compile-time polymorphism overloading tho. Product hierarchy runtime example. Common parent reference different subtype behavior ni invoke chestundi.
 
 ## Lesson 149 — A practical benefit of polymorphism
 
 ### Step 1 — Open the polymorphism evidence — A practical benefit of polymorphism
 
-Lesson 149 step 1 lo "Open the polymorphism evidence — A" kosam SurveyProducts. Lesson 149 step 1 context lo, java ni use chesi "A practical benefit of polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
 
 ### Step 2 — Trace method selection — A practical benefit of polymorphism
 
-Lesson 149 step 2 lo "Trace method selection — A practical" kosam SurveyProducts. Lesson 149 step 2 context lo, java ni use chesi "A practical benefit of polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
 
 ### Step 3 — Evaluate the design contract — A practical benefit of polymorphism
 
-"A practical benefit of polymorphism" context lo SurveyProducts. java meeda focus chestam. "Evaluate the design contract — A practical benefit of" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
 
 ### Step 4 — State the interview answer — A practical benefit of polymorphism
 
-Lesson 149 step 4 lo "State the interview answer — A" kosam SurveyProducts. Lesson 149 step 4 context lo, java ni use chesi "A practical benefit of polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Common Product/Exportable contract use cheste callers subtype checks rayalsina need taggutundi. Orthomosaic and Dem own behavior runtime lo execute chestayi. New subtype add cheyyadam easier.
 
 ## Lesson 150 — How Java implements runtime polymorphism
 
 ### Step 1 — Open the polymorphism evidence — How Java implements runtime polymorphism
 
-Lesson 150 step 1 lo "Open the polymorphism evidence — How" kosam SurveyProducts. Lesson 150 step 1 context lo, java ni use chesi "How Java implements runtime polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
 
 ### Step 2 — Trace method selection — How Java implements runtime polymorphism
 
-"How Java implements runtime polymorphism" context lo SurveyProducts. java meeda focus chestam. "Trace method selection — How Java implements runtime polymorphism" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
 
 ### Step 3 — Evaluate the design contract — How Java implements runtime polymorphism
 
-Lesson 150 step 3 lo "Evaluate the design contract — How" kosam SurveyProducts. Lesson 150 step 3 context lo, java ni use chesi "How Java implements runtime polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
 
 ### Step 4 — State the interview answer — How Java implements runtime polymorphism
 
-Lesson 150 step 4 lo "State the interview answer — How" kosam SurveyProducts. Lesson 150 step 4 context lo, java ni use chesi "How Java implements runtime polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Compiler override contract verify chestundi; runtime lo actual object class eligible instance method implementation execute avutundi. Static methods/fields same virtual dispatch use cheyyavu.
 
 ## Lesson 151 — Method overloading versus overriding
 
 ### Step 1 — Open the polymorphism evidence — Method overloading versus overriding
 
-"Method overloading versus overriding" lo "Open the polymorphism evidence — Method overloading versus" context lo, "Method overloading versus overriding" context lo SurveyProducts. java meeda focus chestam. "Open the polymorphism evidence — Method overloading versus overriding" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
 
 ### Step 2 — Trace method selection — Method overloading versus overriding
 
-Lesson 151 step 2 lo "Trace method selection — Method overloading" kosam SurveyProducts. Lesson 151 step 2 context lo, java ni use chesi "Method overloading versus overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
 
 ### Step 3 — Evaluate the design contract — Method overloading versus overriding
 
-Lesson 151 step 3 lo "Evaluate the design contract — Method" kosam SurveyProducts. Lesson 151 step 3 context lo, java ni use chesi "Method overloading versus overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
 
 ### Step 4 — State the interview answer — Method overloading versus overriding
 
-"Method overloading versus overriding" lo "State the interview answer — Method overloading versus" context lo, "Method overloading versus overriding" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Method overloading versus overriding" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Overloading different parameters tho compile-time selection. Overriding inheritance lo same signature compatible return/access rules tho runtime dispatch. Static methods hiding, final methods override kaavu.
 
 ## Lesson 152 — Access modifiers and polymorphic overriding
 
 ### Step 1 — Open the polymorphism evidence — Access modifiers and polymorphic overriding
 
-Lesson 152 step 1 lo "Open the polymorphism evidence — Access" kosam SurveyProducts. Lesson 152 step 1 context lo, java ni use chesi "Access modifiers and polymorphic overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
 
 ### Step 2 — Trace method selection — Access modifiers and polymorphic overriding
 
-Lesson 152 step 2 lo "Trace method selection — Access modifiers" kosam SurveyProducts. Lesson 152 step 2 context lo, java ni use chesi "Access modifiers and polymorphic overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
 
 ### Step 3 — Evaluate the design contract — Access modifiers and polymorphic overriding
 
-"Access modifiers and polymorphic overriding" context lo SurveyProducts. java meeda focus chestam. "Evaluate the design contract — Access modifiers and polymorphic" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
 
 ### Step 4 — State the interview answer — Access modifiers and polymorphic overriding
 
-Lesson 152 step 4 lo "State the interview answer — Access" kosam SurveyProducts. Lesson 152 step 4 context lo, java ni use chesi "Access modifiers and polymorphic overriding" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Override visibility parent kanna narrow ga undakudadhu; same or wider access valid. Access compile-time caller permissions ni control chestundi, runtime dispatch valid override implementation ni choose chestundi.
 
 ## Lesson 153 — Overridden method execution during construction
 
 ### Step 1 — Open the AeroTopo baseline — Overridden method execution during construction
 
-Lesson 153 step 1 lo "Open the AeroTopo baseline — Overridden" kosam SurveyProducts. Lesson 153 step 1 context lo, java ni use chesi "Overridden method execution during construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
 
 ### Step 2 — Create the focused dispatch experiment — Overridden method execution during construction
 
-Lesson 153 step 2 lo "Create the focused dispatch experiment —" kosam ConstructorOverrideDispatchDemo. Lesson 153 step 2 context lo, java ni use chesi "Overridden method execution during construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
 
 ### Step 3 — Run the dispatch experiment — Overridden method execution during construction
 
-"Overridden method execution during construction" lo "Run the dispatch experiment — Overridden method" step terminal result ni direct evidence ga use chestundi. Ee "Run the dispatch experiment — Overridden method" point previous explanation repeat cheyyakunda "Overridden method execution during construction" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
 
 ### Step 4 — Remove the temporary dispatch experiment — Overridden method execution during construction
 
-[no highlight] Lesson 153 step 4 lo "Remove the temporary dispatch experiment —" kosam ConstructorOverrideDispatchDemo. Lesson 153 step 4 context lo, java ni use chesi "Overridden method execution during construction" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
 
 ### Step 5 — Return to the project design — Overridden method execution during construction
 
-"Overridden method execution during construction" context lo SurveyProducts. java meeda focus chestam. "Return to the project design — Overridden method execution" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Parent constructor non-static overridable method call cheste child object runtime type kabatti child override execute avvachu. Child fields ఇంకా initialize kakapovadam dangerous.
 
 ## Lesson 154 — Constructors are not polymorphic
 
 ### Step 1 — Open the polymorphism evidence — Constructors are not polymorphic
 
-"Constructors are not polymorphic" lo "Open the polymorphism evidence — Constructors are not" context lo, "Constructors are not polymorphic" context lo SurveyProducts. java meeda focus chestam. "Open the polymorphism evidence — Constructors are not polymorphic" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
 
 ### Step 2 — Trace method selection — Constructors are not polymorphic
 
-Lesson 154 step 2 lo "Trace method selection — Constructors are" kosam SurveyProducts. Lesson 154 step 2 context lo, java ni use chesi "Constructors are not polymorphic" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
 
 ### Step 3 — Evaluate the design contract — Constructors are not polymorphic
 
-Lesson 154 step 3 lo "Evaluate the design contract — Constructors" kosam SurveyProducts. Lesson 154 step 3 context lo, java ni use chesi "Constructors are not polymorphic" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
 
 ### Step 4 — State the interview answer — Constructors are not polymorphic
 
-"Constructors are not polymorphic" lo "State the interview answer — Constructors are not" context lo, "Constructors are not polymorphic" context lo SurveyProducts. java meeda focus chestam. "State the interview answer — Constructors are not polymorphic" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Constructors inherit/override kaavu kabatti runtime polymorphic dispatch ki subject kaavu. Constructor overloading and chaining separate concepts. Product `resolutionMetres()` మాత్రం actual polymorphic method.
 
 ## Lesson 155 — Dynamic method dispatch
 
 ### Step 1 — Open the polymorphism evidence — Dynamic method dispatch
 
-Lesson 155 step 1 lo "Open the polymorphism evidence — Dynamic" kosam SurveyProducts. Lesson 155 step 1 context lo, java ni use chesi "Dynamic method dispatch" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
 
 ### Step 2 — Trace method selection — Dynamic method dispatch
 
-"Trace method selection — Dynamic method dispatch" step lo SurveyProducts. java open chesi "Dynamic method dispatch" concept project code lo ela represent ayyindo identify chestam. "Dynamic method dispatch" lo "Trace method selection — Dynamic method dispatch" context lo, ikkada main goal exact code relationship ni chudatam; definition matrame repeat cheyyadam kaadu.
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
 
 ### Step 3 — Evaluate the design contract — Dynamic method dispatch
 
-"Dynamic method dispatch" context lo SurveyProducts. java meeda focus chestam. "Evaluate the design contract — Dynamic method dispatch" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
 
 ### Step 4 — State the interview answer — Dynamic method dispatch
 
-Lesson 155 step 4 lo "State the interview answer — Dynamic" kosam SurveyProducts. Lesson 155 step 4 context lo, java ni use chesi "Dynamic method dispatch" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Parent reference compile-time contract provide chestundi; runtime object type overridden method implementation decide chestundi. Product reference Orthomosaic or Dem resolution ni dynamically invoke cheyyagaladu.
 
 ## Lesson 156 — Why fields are hidden rather than overridden
 
 ### Step 1 — Open the AeroTopo baseline — Why fields are hidden rather than overridden
 
-Lesson 156 step 1 lo "Open the AeroTopo baseline — Why" kosam SurveyProducts. Lesson 156 step 1 context lo, java ni use chesi "Why fields are hidden rather than" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
 
 ### Step 2 — Create the focused dispatch experiment — Why fields are hidden rather than overridden
 
-Lesson 156 step 2 lo "Create the focused dispatch experiment —" kosam FieldHidingDemo. Lesson 156 step 2 context lo, java ni use chesi "Why fields are hidden rather than" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
 
 ### Step 3 — Run the dispatch experiment — Why fields are hidden rather than overridden
 
-Lesson 156 step 3 lo "Run the dispatch experiment — Why" kosam terminal result ni use chesi "Why fields are hidden rather than" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
 
 ### Step 4 — Remove the temporary dispatch experiment — Why fields are hidden rather than overridden
 
-[no highlight] Lesson 156 step 4 lo "Remove the temporary dispatch experiment —" kosam FieldHidingDemo. Lesson 156 step 4 context lo, java ni use chesi "Why fields are hidden rather than" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
 
 ### Step 5 — Return to the project design — Why fields are hidden rather than overridden
 
-"Why fields are hidden rather than overridden" context lo SurveyProducts. java meeda focus chestam. "Return to the project design — Why fields are" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Fields virtual methods laga runtime dispatch use cheyyavu. Same-name child field parent field ni hide chestundi. Reference declared type field selection decide chestundi; overridden methods runtime object batti execute avutayi.
 
 ## Lesson 157 — Passing subclass objects to superclass parameters
 
 ### Step 1 — Open the polymorphism evidence — Passing subclass objects to superclass parameters
 
-Lesson 157 step 1 lo "Open the polymorphism evidence — Passing" kosam SurveyProducts. Lesson 157 step 1 context lo, java ni use chesi "Passing subclass objects to superclass parameters" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
 
 ### Step 2 — Trace method selection — Passing subclass objects to superclass parameters
 
-Lesson 157 step 2 lo "Trace method selection — Passing subclass" kosam SurveyProducts. Lesson 157 step 2 context lo, java ni use chesi "Passing subclass objects to superclass parameters" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
 
 ### Step 3 — Evaluate the design contract — Passing subclass objects to superclass parameters
 
-Lesson 157 step 3 lo "Evaluate the design contract — Passing" kosam SurveyProducts. Lesson 157 step 3 context lo, java ni use chesi "Passing subclass objects to superclass parameters" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
 
 ### Step 4 — State the interview answer — Passing subclass objects to superclass parameters
 
-Lesson 157 step 4 lo "State the interview answer — Passing" kosam SurveyProducts. Lesson 157 step 4 context lo, java ni use chesi "Passing subclass objects to superclass parameters" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Superclass parameter/reference compatible subclasses ni accept chestundi. `Success(Product product)` ki Orthomosaic or Dem pass cheyyachu. Caller Product contract use chestundi; overridden behavior runtime lo remain avutundi.
 
 ## Lesson 158 — Overloading versus overriding across compile time and runtime
 
 ### Step 1 — Open the AeroTopo baseline — Overloading versus overriding across compile time and runtime
 
-Lesson 158 step 1 lo "Open the AeroTopo baseline — Overloading" kosam SurveyProducts. Lesson 158 step 1 context lo, java ni use chesi "Overloading versus overriding across compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
 
 ### Step 2 — Create the focused dispatch experiment — Overloading versus overriding across compile time and runtime
 
-Lesson 158 step 2 lo "Create the focused dispatch experiment —" kosam OverloadOverrideStagesDemo. Lesson 158 step 2 context lo, java ni use chesi "Overloading versus overriding across compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
 
 ### Step 3 — Run the dispatch experiment — Overloading versus overriding across compile time and runtime
 
-"Run the dispatch experiment — Overloading versus overriding across" step result observation meeda focus chestundi. "Overloading versus overriding across compile time and runtime" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
 
 ### Step 4 — Remove the temporary dispatch experiment — Overloading versus overriding across compile time and runtime
 
-[no highlight] Lesson 158 step 4 lo "Remove the temporary dispatch experiment —" kosam OverloadOverrideStagesDemo. Lesson 158 step 4 context lo, java ni use chesi "Overloading versus overriding across compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
 
 ### Step 5 — Return to the project design — Overloading versus overriding across compile time and runtime
 
-Lesson 158 step 5 lo "Return to the project design —" kosam SurveyProducts. Lesson 158 step 5 context lo, java ni use chesi "Overloading versus overriding across compile time" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+First compiler overload signature select chestundi. Selected method instance override ayithe runtime actual object implementation dispatch chestundi. Overloading and overriding two separate stages.
 
 ## Lesson 159 — Using super with overridden methods
 
 ### Step 1 — Open the AeroTopo baseline — Using super with overridden methods
 
-Lesson 159 step 1 lo "Open the AeroTopo baseline — Using" kosam SurveyProducts. Lesson 159 step 1 context lo, java ni use chesi "Using super with overridden methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
 
 ### Step 2 — Create the focused dispatch experiment — Using super with overridden methods
 
-Lesson 159 step 2 lo "Create the focused dispatch experiment —" kosam SuperOverrideDemo. Lesson 159 step 2 context lo, java ni use chesi "Using super with overridden methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
 
 ### Step 3 — Run the dispatch experiment — Using super with overridden methods
 
-"Using super with overridden methods" lo "Run the dispatch experiment — Using super" step terminal result ni direct evidence ga use chestundi. Ee "Run the dispatch experiment — Using super" point previous explanation repeat cheyyakunda "Using super with overridden methods" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
 
 ### Step 4 — Remove the temporary dispatch experiment — Using super with overridden methods
 
-[no highlight] Lesson 159 step 4 lo "Remove the temporary dispatch experiment —" kosam SuperOverrideDemo. Lesson 159 step 4 context lo, java ni use chesi "Using super with overridden methods" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
 
 ### Step 5 — Return to the project design — Using super with overridden methods
 
-"Using super with overridden methods" context lo SurveyProducts. java meeda focus chestam. "Return to the project design — Using super with" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Child override lo `super.method()` immediate parent implementation ni explicit ga call chestundi. Aa call normal runtime override selection ni bypass chestundi, taruvata child behavior add cheyyachu.
 
 ## Lesson 160 — Designing a plug-in system with polymorphism
 
 ### Step 1 — Open the AeroTopo baseline — Designing a plug-in system with polymorphism
 
-"Designing a plug-in system with polymorphism" context lo PatternLab. java meeda focus chestam. "Open the AeroTopo baseline — Designing a plug-in system" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
 
 ### Step 2 — Create the focused dispatch experiment — Designing a plug-in system with polymorphism
 
-Lesson 160 step 2 lo "Create the focused dispatch experiment —" kosam PluginPolymorphismDemo. Lesson 160 step 2 context lo, java ni use chesi "Designing a plug-in system with polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
 
 ### Step 3 — Run the dispatch experiment — Designing a plug-in system with polymorphism
 
-"Designing a plug-in system with polymorphism" lo "Run the dispatch experiment — Designing a" step terminal result ni direct evidence ga use chestundi. Ee "Run the dispatch experiment — Designing a" point previous explanation repeat cheyyakunda "Designing a plug-in system with polymorphism" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
 
 ### Step 4 — Remove the temporary dispatch experiment — Designing a plug-in system with polymorphism
 
-[no highlight] Lesson 160 step 4 lo "Remove the temporary dispatch experiment —" kosam PluginPolymorphismDemo. Lesson 160 step 4 context lo, java ni use chesi "Designing a plug-in system with polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+[no highlight] Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.
 
 ### Step 5 — Return to the project design — Designing a plug-in system with polymorphism
 
-Lesson 160 step 5 lo "Return to the project design —" kosam PatternLab. Lesson 160 step 5 context lo, java ni use chesi "Designing a plug-in system with polymorphism" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.
+Plugin system lo stable interface define chesi host interface meeda depend avvali. Multiple implementations register/discover chesi same method ni polymorphically invoke cheyyali. Implementation selection host core logic ni మార్చకూడదు.

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — What a Java constructor is",
-      "question": "A constructor initializes a new object and establishes its valid starting state is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"What a Java constructor is\" and connect the syntax to the initialization rule behind it. For the \"What a Java constructor is\" lesson, use the \"Open the project evidence — What a Java constructor is\" evidence, which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
-      "why_te": "Lesson 73 step 1 lo \"Open the project evidence — What\" kosam SurveyProducts. Lesson 73 step 1 context lo, java ni use chesi \"What a Java constructor is\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A constructor initializes a new object and establishes its valid starting state is visible in AeroTopo rather than only as a language definition. Inspect the highlighted code for \"What a Java constructor is\" and connect the syntax to the initialization rule behind it. Which exact part demonstrates the rule, and what would change if object creation followed a different constructor or access pattern instead?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -37,8 +37,8 @@
     },
     {
       "title": "Trace the Java rule — What a Java constructor is",
-      "question": "For \"What a Java constructor is\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. For the \"What a Java constructor is\" lesson, use the \"Trace the Java rule — What a Java constructor is\" evidence, examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. At the \"Trace the Java rule — What a Java constructor is\" stage of \"What a Java constructor is\", why does Java enforce this behavior during construction, and what mistake does the example prevent?",
-      "why_te": "Lesson 73 step 2 lo \"Trace the Java rule — What\" kosam SurveyProducts. Lesson 73 step 2 context lo, java ni use chesi \"What a Java constructor is\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "For \"What a Java constructor is\", memorizing a yes-or-no answer is not enough because constructor behavior depends on Java's object-initialization rules. Examine the highlighted example again and trace which class member, invocation, modifier, or state transition is involved. Why does Java enforce this behavior during construction, and what mistake does the example prevent?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -64,8 +64,8 @@
     },
     {
       "title": "Connect caller and object state — What a Java constructor is",
-      "question": "A practical explanation of \"What a Java constructor is\" should connect caller intent to what the class guarantees during initialization. At the \"Connect caller and object state — What a Java constructor\" stage of \"What a Java constructor is\", using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. Using \"Connect caller and object state — What a Java constructor\" as the concrete case for \"What a Java constructor is\", how does this separation make object creation predictable while protecting the type's invariants?",
-      "why_te": "Lesson 73 step 3 lo \"Connect caller and object state —\" kosam SurveyProducts. Lesson 73 step 3 context lo, java ni use chesi \"What a Java constructor is\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A practical explanation of \"What a Java constructor is\" should connect caller intent to what the class guarantees during initialization. Using this example, identify what the caller supplies, what the constructor or class controls, and what state becomes valid afterward. How does this separation make object creation predictable while protecting the type's invariants?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -91,8 +91,8 @@
     },
     {
       "title": "State the interview rule — What a Java constructor is",
-      "question": "Now summarize \"What a Java constructor is\" from the evidence instead of from memorized syntax. Using \"State the interview rule — What a Java constructor is\" as the concrete case for \"What a Java constructor is\", how would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
-      "why_te": "Lesson 73 step 4 lo \"State the interview rule — What\" kosam SurveyProducts. Lesson 73 step 4 context lo, java ni use chesi \"What a Java constructor is\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now summarize \"What a Java constructor is\" from the evidence instead of from memorized syntax. How would you explain the allowed form, the runtime or compiler effect, and the most important limitation or design reason in an interview, while using the AeroTopo example as the concrete reference for your answer?",
+      "why_te": "Orthomosaic constructor object state ni initialize chestundi. `super` common Product state set chestundi; validation taruvata gsd assign avutundi. Constructor valid starting state create chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

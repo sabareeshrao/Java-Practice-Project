@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the manual substring-search implementation",
-      "question": "AeroTopo's `SurveyAlgorithms. indexOf` intentionally searches without calling String's built-in substring-checking methods. It tries every legal start position and compares characters one by one. Inspect the method and identify the outer candidate-start loop, inner character comparison, successful return path, and final not-found result.",
-      "why_te": "SurveyAlgorithms. indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.",
+      "question": "AeroTopo's `SurveyAlgorithms.indexOf` intentionally searches without calling String's built-in substring-checking methods. It tries every legal start position and compares characters one by one. Inspect the method and identify the outer candidate-start loop, inner character comparison, successful return path, and final not-found result.",
+      "why_te": "SurveyAlgorithms.indexOf manual substring search ni implement chestundi. Outer loop possible starts check chestundi; inner loop characters compare chestundi. Match complete ayithe index return, lekapothe -1.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

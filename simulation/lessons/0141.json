@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — How Java resolves overloaded methods",
-      "question": "How does Java resolve a call to an overloaded method? Using \"Open the polymorphism evidence — How Java resolves overloaded methods\" as the concrete case for \"How Java resolves overloaded methods\", use the AeroTopo code as the starting point rather than answering from terminology alone. The adjacent overloads let the caller's compile-time argument type determine the selected signature. While working through \"Open the polymorphism evidence — How Java resolves overloaded methods\" in \"How Java resolves overloaded methods\", inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Lesson 141 step 1 lo \"Open the polymorphism evidence — How\" kosam LanguageLab. Lesson 141 step 1 context lo, java ni use chesi \"How Java resolves overloaded methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "How does Java resolve a call to an overloaded method? Use the AeroTopo code as the starting point rather than answering from terminology alone. The adjacent overloads let the caller's compile-time argument type determine the selected signature. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Trace method selection — How Java resolves overloaded methods",
-      "question": "For \"How Java resolves overloaded methods\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. From the \"Trace method selection — How Java resolves overloaded methods\" result in \"How Java resolves overloaded methods\", which of those pieces controls method selection in this example, and which details do not participate? While working through \"Trace method selection — How Java resolves overloaded methods\" in \"How Java resolves overloaded methods\", why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "\"How Java resolves overloaded methods\" context lo LanguageLab. java meeda focus chestam. \"Trace method selection — How Java resolves overloaded methods\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "For \"How Java resolves overloaded methods\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -54,8 +54,8 @@
     },
     {
       "title": "Evaluate the design contract — How Java resolves overloaded methods",
-      "question": "From the \"Evaluate the design contract — How Java resolves overloaded methods\" result in \"How Java resolves overloaded methods\", a production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"How Java resolves overloaded methods\", explain what contract callers depend on and what implementations may vary. For the \"How Java resolves overloaded methods\" lesson, use the \"Evaluate the design contract — How Java resolves overloaded methods\" evidence, what maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "Lesson 141 step 3 lo \"Evaluate the design contract — How\" kosam LanguageLab. Lesson 141 step 3 context lo, java ni use chesi \"How Java resolves overloaded methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"How Java resolves overloaded methods\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -76,8 +76,8 @@
     },
     {
       "title": "State the interview answer — How Java resolves overloaded methods",
-      "question": "Now answer the interview question \"How does Java resolve a call to an overloaded method? \" directly from the evidence. At the \"State the interview answer — How Java resolves overloaded methods\" stage of \"How Java resolves overloaded methods\", state the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. Using \"State the interview answer — How Java resolves overloaded methods\" as the concrete case for \"How Java resolves overloaded methods\", how would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Lesson 141 step 4 lo \"State the interview answer — How\" kosam LanguageLab. Lesson 141 step 4 context lo, java ni use chesi \"How Java resolves overloaded methods\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer the interview question \"How does Java resolve a call to an overloaded method?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Compiler applicable overloads identify chesi most specific signature choose chestundi. Exact primitive int argument int overload ki, Integer reference wrapper overload ki match avutundi. Boxing/unboxing rules kuda selection lo role play chestayi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

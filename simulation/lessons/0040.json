@@ -11,7 +11,7 @@
     {
       "title": "Open the stable zero-compaction algorithm",
       "question": "Unlike the previous binary-only problem, this array can contain any non-zero integers, so the algorithm must keep all non-zero values while moving every zero to the right. AeroTopo's `moveZerosRight` uses a write index and a final fill. Which lines perform stable compaction and which line restores trailing zeros?",
-      "why_te": "SurveyAlgorithms. moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.",
+      "why_te": "SurveyAlgorithms.moveZerosRight any non-zero values ni handle chestundi. `write` index next non-zero position ni track chestundi. Scan non-zero values front ki compact chesi remaining positions zeros tho fill chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -62,8 +62,8 @@
     },
     {
       "title": "Inspect how trailing positions become zeros",
-      "question": "After compaction, every index before `write` contains a non-zero value in stable order, but old values may still remain in later array slots. The final `Arrays. fill` overwrites exactly that suffix with zeros. Why is this cleanup step necessary even though zeros were skipped during the scan?",
-      "why_te": "Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays. fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.",
+      "question": "After compaction, every index before `write` contains a non-zero value in stable order, but old values may still remain in later array slots. The final `Arrays.fill` overwrites exactly that suffix with zeros. Why is this cleanup step necessary even though zeros were skipped during the scan?",
+      "why_te": "Compaction front positions ni correct ga write chestundi, kani tail lo old values remain avvachu. `Arrays.fill` write index nundi end varaku zeros set chesi final array ni correct chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -166,7 +166,7 @@
     },
     {
       "title": "Remove the temporary zero-movement driver",
-      "question": "The temporary caller has verified the existing production algorithm, so it should be removed while leaving `SurveyAlgorithms. moveZerosRight` unchanged. After cleanup, what should you emphasize about the write pointer, in-place modification, stable non-zero ordering, and constant additional memory when explaining the solution?",
+      "question": "The temporary caller has verified the existing production algorithm, so it should be removed while leaving `SurveyAlgorithms.moveZerosRight` unchanged. After cleanup, what should you emphasize about the write pointer, in-place modification, stable non-zero ordering, and constant additional memory when explaining the solution?",
       "why_te": "Temporary driver ni remove chestunnam. Main points write pointer, in-place update, non-zero stable order, O(1) extra space. Production method project lo unchanged ga remain avutundi.",
       "software": "intellij",
       "required_capability": "delete-resource",

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Exceptions from a static block",
-      "question": "Before isolating \"Exceptions from a static block\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. From the \"Open the AeroTopo baseline — Exceptions from a static block\" result in \"Exceptions from a static block\", what lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
-      "why_te": "Lesson 102 step 1 lo \"Open the AeroTopo baseline — Exceptions\" kosam LanguageLab. Lesson 102 step 1 context lo, java ni use chesi \"Exceptions from a static block\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Before isolating \"Exceptions from a static block\", inspect the highlighted AeroTopo code and identify the valid static, final, or initialization pattern already used by the project. What lifecycle or restriction does this baseline show, and why is it useful to compare a production example with a small temporary experiment before drawing the language-level conclusion?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused language experiment — Exceptions from a static block",
-      "question": "The temporary class for \"Exceptions from a static block\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. While working through \"Create the focused language experiment — Exceptions from a static\" in \"Exceptions from a static block\", read the highlighted lines and predict the output or failure path. For the \"Exceptions from a static block\" lesson, use the \"Create the focused language experiment — Exceptions from a static\" evidence, which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
-      "why_te": "Lesson 102 step 2 lo \"Create the focused language experiment —\" kosam StaticFailureDemo. Lesson 102 step 2 context lo, java ni use chesi \"Exceptions from a static block\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary class for \"Exceptions from a static block\" is intentionally small so class initialization, final-reference behavior, or static semantics can be observed without Spring or framework noise. Read the highlighted lines and predict the output or failure path. Which exact Java rule determines what can execute, be reassigned, be overridden, or be initialized here?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -59,8 +59,8 @@
     },
     {
       "title": "Run the focused language experiment — Exceptions from a static block",
-      "question": "The temporary program for \"Exceptions from a static block\" now provides direct runtime or compiler evidence. For the \"Exceptions from a static block\" lesson, use the \"Run the focused language experiment — Exceptions from a static\" evidence, compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. At the \"Run the focused language experiment — Exceptions from a static\" stage of \"Exceptions from a static block\", which common misunderstanding about static or final behavior does this example remove?",
-      "why_te": "\"Exceptions from a static block\" lo \"Run the focused language experiment — Exceptions\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the focused language experiment — Exceptions\" point previous explanation repeat cheyyakunda \"Exceptions from a static block\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
+      "question": "The temporary program for \"Exceptions from a static block\" now provides direct runtime or compiler evidence. Compare the observed result with the source and explain what happened before any instance construction or method call, or what restriction the compiler enforced. Which common misunderstanding about static or final behavior does this example remove?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -81,8 +81,8 @@
     },
     {
       "title": "Remove the temporary experiment — Exceptions from a static block",
-      "question": "The focused example for \"Exceptions from a static block\" has established the rule and should not become permanent AeroTopo functionality. At the \"Remove the temporary experiment — Exceptions from a static block\" stage of \"Exceptions from a static block\", after deleting the temporary source, keep only the verified behavior as lesson evidence. Using \"Remove the temporary experiment — Exceptions from a static block\" as the concrete case for \"Exceptions from a static block\", why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
-      "why_te": "[no highlight] Lesson 102 step 4 lo \"Remove the temporary experiment — Exceptions\" kosam StaticFailureDemo. Lesson 102 step 4 context lo, java ni use chesi \"Exceptions from a static block\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The focused example for \"Exceptions from a static block\" has established the rule and should not become permanent AeroTopo functionality. After deleting the temporary source, keep only the verified behavior as lesson evidence. Why does removing these artificial examples preserve cumulative project continuity while still allowing language edge cases to be tested safely?",
+      "why_te": "[no highlight] Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -99,8 +99,8 @@
     },
     {
       "title": "Return to the production example — Exceptions from a static block",
-      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Exceptions from a static block\" and connect the observed rule back to project design. Using \"Return to the production example — Exceptions from a static\" as the concrete case for \"Exceptions from a static block\", how would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
-      "why_te": "\"Exceptions from a static block\" context lo LanguageLab. java meeda focus chestam. \"Return to the production example — Exceptions from a\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "With the temporary source removed, revisit AeroTopo's valid implementation for \"Exceptions from a static block\" and connect the observed rule back to project design. How would you answer the interview question using both pieces of evidence, including the lifecycle timing, allowed operations, and the reason this static or final choice is appropriate here?",
+      "why_te": "Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

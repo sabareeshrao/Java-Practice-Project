@@ -108,7 +108,7 @@
     },
     {
       "title": "Focus on the reassignment assertion",
-      "question": "After `LanguageLab. reassign(ids)`, the assertion still expects only `A`. If Java passed the caller's variable itself by reference, assigning a new list inside the method could replace what the caller variable points to. Why does this unchanged assertion instead support Java's copy-of-reference-value model?",
+      "question": "After `LanguageLab.reassign(ids)`, the assertion still expects only `A`. If Java passed the caller's variable itself by reference, assigning a new list inside the method could replace what the caller variable points to. Why does this unchanged assertion instead support Java's copy-of-reference-value model?",
       "why_te": "`reassign` call taruvata test still `A` matrame expect chestundi. Caller variable replace avvaledu ani idi prove chestundi. Method local reference copy matrame new List ki marchindi.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -134,8 +134,8 @@
     },
     {
       "title": "Focus on the mutation assertion",
-      "question": "The next assertion expects `A` and `GCP` after `LanguageLab. mutate(ids)`. The copied reference value still points to the same mutable object, so an `add` operation is visible to the caller. Why does this not contradict the statement that Java passes every argument by value?",
-      "why_te": "\"Focus on the mutation assertion\" step LearningLabTest. java ni close ga inspect chestundi. \"Java is pass-by-value, including object references\" concept lo syntax, ownership, leda dispatch decision ee target tho connect avutundi. \"Java is pass-by-value, including object references\" lo \"Focus on the mutation assertion\" context lo, next step lo result ni ee evidence tho compare chestam.",
+      "question": "The next assertion expects `A` and `GCP` after `LanguageLab.mutate(ids)`. The copied reference value still points to the same mutable object, so an `add` operation is visible to the caller. Why does this not contradict the statement that Java passes every argument by value?",
+      "why_te": "`mutate` same object state ni change chestundi kabatti caller List lo `GCP` kanipistundi. Reference itself by value copy ayyindi; object మాత్రం common ga undi. Anduke rule ki contradiction ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -161,7 +161,7 @@
     {
       "title": "Run the existing language-semantics test",
       "question": "The source and assertions already describe the expected parameter behavior, but executing the JUnit method gives an additional verification point. When the test passes with both reassignment and mutation assertions intact, what does that tell you about the distinction between copying a reference value and sharing the referenced object?",
-      "why_te": "\"Run the existing language-semantics test\" step lo terminal result ni run chesi \"Java is pass-by-value, including object references\" rule ni actual result tho verify chestam. \"Java is pass-by-value, including object references\" lo \"Run the existing language-semantics test\" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.",
+      "why_te": "JUnit test pass ayithe rendu behaviors expected ga work chestunnayi ani confirm avutundi. Reference value copy avutundi; shared mutable object ni copied reference dwara modify cheyyachu. Caller variable మాత్రం reassign avvadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,

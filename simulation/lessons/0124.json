@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Why super() must be the first constructor statement",
-      "question": "Why must a super() Constructor call be the first statement in a Constructor? For the \"Why super() must be the first constructor statement\" lesson, use the \"Open the inheritance evidence — Why super() must be the\" evidence, start with the AeroTopo implementation instead of a memorized definition. The Orthomosaic constructor puts super(... ) before validation and field assignment. From the \"Open the inheritance evidence — Why super() must be the\" result in \"Why super() must be the first constructor statement\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. While working through \"Open the inheritance evidence — Why super() must be the\" in \"Why super() must be the first constructor statement\", how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Lesson 124 step 1 lo \"Open the inheritance evidence — Why\" kosam SurveyProducts. Lesson 124 step 1 context lo, java ni use chesi \"Why super() must be the first\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Why must a super() Constructor call be the first statement in a Constructor? Start with the AeroTopo implementation instead of a memorized definition. The Orthomosaic constructor puts super(...) before validation and field assignment. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -35,8 +35,8 @@
     },
     {
       "title": "Trace the parent-child rule — Why super() must be the first constructor statement",
-      "question": "For \"Why super() must be the first constructor statement\", trace the relationship from the superclass or interface down to the concrete child. At the \"Trace the parent-child rule — Why super() must be the\" stage of \"Why super() must be the first constructor statement\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Using \"Trace the parent-child rule — Why super() must be the\" as the concrete case for \"Why super() must be the first constructor statement\", why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Lesson 124 step 2 lo \"Trace the parent-child rule — Why\" kosam SurveyProducts. Lesson 124 step 2 context lo, java ni use chesi \"Why super() must be the first\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "For \"Why super() must be the first constructor statement\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -60,8 +60,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Why super() must be the first constructor statement",
-      "question": "At the \"Evaluate the hierarchy design — Why super() must be the\" stage of \"Why super() must be the first constructor statement\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Why super() must be the first constructor statement\", explain what contract the parent establishes and what freedom the child retains. From the \"Evaluate the hierarchy design — Why super() must be the\" result in \"Why super() must be the first constructor statement\", what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "Lesson 124 step 3 lo \"Evaluate the hierarchy design — Why\" kosam SurveyProducts. Lesson 124 step 3 context lo, java ni use chesi \"Why super() must be the first\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Why super() must be the first constructor statement\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "State the interview answer — Why super() must be the first constructor statement",
-      "question": "Now answer the interview question \"Why must a super() Constructor call be the first statement in a Constructor? \" from the project evidence. While working through \"State the interview answer — Why super() must be the\" in \"Why super() must be the first constructor statement\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. For the \"Why super() must be the first constructor statement\" lesson, use the \"State the interview answer — Why super() must be the\" evidence, how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Lesson 124 step 4 lo \"State the interview answer — Why\" kosam SurveyProducts. Lesson 124 step 4 context lo, java ni use chesi \"Why super() must be the first\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer the interview question \"Why must a super() Constructor call be the first statement in a Constructor?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Inherited Product state first initialize avvali kabatti `super(...)` constructor first statement ga undali. Child code parent initialization mundu object state ni use cheyyakudadhu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the existing merge-and-sort implementation",
-      "question": "AeroTopo's `SurveyAlgorithms. mergeSorted` already solves the exact interview task with a primitive-stream pipeline. The two input arrays do not need to be sorted beforehand because the combined stream is sorted afterward. Which operations on this single line perform the merge, the global sort, and the final array materialization?",
-      "why_te": "SurveyAlgorithms. mergeSorted exact task ni already solve chestundi. First and second arrays streams ga convert ayi concat avutayi, taruvata combined data sort ayi `toArray` tho result vastundi.",
+      "question": "AeroTopo's `SurveyAlgorithms.mergeSorted` already solves the exact interview task with a primitive-stream pipeline. The two input arrays do not need to be sorted beforehand because the combined stream is sorted afterward. Which operations on this single line perform the merge, the global sort, and the final array materialization?",
+      "why_te": "SurveyAlgorithms.mergeSorted exact task ni already solve chestundi. First and second arrays streams ga convert ayi concat avutayi, taruvata combined data sort ayi `toArray` tho result vastundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -31,7 +31,7 @@
     },
     {
       "title": "Focus on concatenate-then-sort order",
-      "question": "The pipeline calls `IntStream. concat` before `sorted`, so values from both unsorted inputs enter one logical stream and only then receive global ordering. Why would sorting each input separately but merely appending them afterward fail to guarantee a correctly sorted final array without an additional merge step?",
+      "question": "The pipeline calls `IntStream.concat` before `sorted`, so values from both unsorted inputs enter one logical stream and only then receive global ordering. Why would sorting each input separately but merely appending them afterward fail to guarantee a correctly sorted final array without an additional merge step?",
       "why_te": "`concat` taruvata `sorted` whole combined values meeda run avutundi. Separate arrays ni sort chesi simple ga append chesthe second array small values first array large values taruvata ravachu. Global order guarantee kaadu.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -133,8 +133,8 @@
     },
     {
       "title": "Compare with an imperative copy-then-sort pattern",
-      "question": "AeroTopo's `CollectionLab. sorted` demonstrates the imperative idea of copying values into a mutable container and sorting that copy before returning an immutable result. Although it works on a List rather than two arrays, how does this pattern correspond to the array alternative of combining storage first and calling `Arrays. sort`?",
-      "why_te": "CollectionLab. sorted copy create chesi sort chestundi. Array alternative lo kuda first combined array create chesi values copy chesi `Arrays. sort` call cheyyachu. Concept copy/combine then sort.",
+      "question": "AeroTopo's `CollectionLab.sorted` demonstrates the imperative idea of copying values into a mutable container and sorting that copy before returning an immutable result. Although it works on a List rather than two arrays, how does this pattern correspond to the array alternative of combining storage first and calling `Arrays.sort`?",
+      "why_te": "CollectionLab.sorted copy create chesi sort chestundi. Array alternative lo kuda first combined array create chesi values copy chesi `Arrays.sort` call cheyyachu. Concept copy/combine then sort.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -157,8 +157,8 @@
     },
     {
       "title": "Remove the temporary merge driver",
-      "question": "The real `SurveyAlgorithms. mergeSorted` method already provides the reusable project implementation, so the temporary caller is no longer needed after verification. Once deleted, what two interview approaches can you describe clearly: the concise Stream API pipeline and the imperative combined-array plus `Arrays. sort` approach?",
-      "why_te": "Temporary driver ni remove chestunnam. Interview lo Stream API `concat → sorted → toArray` approach cheppachu. Imperative ga combined array create chesi copy chesi `Arrays. sort` use cheyyachu.",
+      "question": "The real `SurveyAlgorithms.mergeSorted` method already provides the reusable project implementation, so the temporary caller is no longer needed after verification. Once deleted, what two interview approaches can you describe clearly: the concise Stream API pipeline and the imperative combined-array plus `Arrays.sort` approach?",
+      "why_te": "Temporary driver ni remove chestunnam. Interview lo Stream API `concat → sorted → toArray` approach cheppachu. Imperative ga combined array create chesi copy chesi `Arrays.sort` use cheyyachu.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -178,7 +178,7 @@
     },
     {
       "title": "Return to the one-line Stream API implementation",
-      "question": "The final production line captures the complete stream solution without assuming either source array is sorted. How would you explain its time cost, why sorting dominates the work, and why `IntStream. concat` is appropriate here instead of converting primitive arrays into boxed `List<Integer>` values first?",
+      "question": "The final production line captures the complete stream solution without assuming either source array is sorted. How would you explain its time cost, why sorting dominates the work, and why `IntStream.concat` is appropriate here instead of converting primitive arrays into boxed `List<Integer>` values first?",
       "why_te": "Final line primitive IntStream use chestundi kabatti unnecessary boxing avoid avutundi. Combined `n+m` values sorting main cost. Interview lo roughly O((n+m) log(n+m)) time ani explain cheyyachu.",
       "software": "intellij",
       "required_capability": "open-file",

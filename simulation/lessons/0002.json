@@ -9,7 +9,7 @@
   "steps": [
     {
       "title": "Open the project build baseline",
-      "question": "A fast-moving ecosystem is manageable only when a project states its current technology baseline explicitly. Before considering any upgrade, why should you first inspect AeroTopo's `pom. xml` rather than starting from whatever versions happen to be installed on your machine?",
+      "question": "A fast-moving ecosystem is manageable only when a project states its current technology baseline explicitly. Before considering any upgrade, why should you first inspect AeroTopo's `pom.xml` rather than starting from whatever versions happen to be installed on your machine?",
       "why": "The build descriptor is the project's reproducible source of truth for Java, Spring Boot, dependencies, and plugins. Keeping up with the ecosystem begins by knowing exactly what the application is already built against.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -20,7 +20,7 @@
           "file": "pom.xml"
         }
       },
-      "why_te": "pom. xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.",
+      "why_te": "pom.xml lo Java version, Spring Boot version and dependencies untayi. Upgrade mundu current versions enti ani ikkada check cheyyali. Appudu old and new setup ni easy ga compare cheyyachu.",
       "highlight": {
         "kind": "code",
         "lines": [
@@ -35,7 +35,7 @@
     },
     {
       "title": "Check the declared Java baseline",
-      "question": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable. Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java. version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
+      "question": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable. Java evolves through regular feature releases while enterprise projects deliberately choose a supported baseline. What does an explicit `java.version` property give the team when evaluating whether a newer JDK is actually appropriate for AeroTopo?",
       "why": "An explicit Java baseline separates deliberate project compatibility from a developer's local machine. It gives upgrades a clear before-and-after point and keeps compiler and CI expectations understandable.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -51,7 +51,7 @@
           }
         }
       },
-      "why_te": "Highlight ayina `<java. version>21</java. version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.",
+      "why_te": "Highlight ayina `<java.version>21</java.version>` ni chudandi. Project Java 21 use cheyyali ani idi cheptundi. Developer machine lo vere Java unna kuda Maven ki expected version clear ga untundi.",
       "highlight": {
         "kind": "code",
         "lines": [
@@ -98,7 +98,7 @@
         "action": "showExternalLibraries",
         "data": {}
       },
-      "why_te": "\"Keeping up with the evolving Java ecosystem\" lo \"Inspect resolved external libraries\" step highlighted project evidence ni direct evidence ga use chestundi. Ee \"Inspect resolved external libraries\" point previous explanation repeat cheyyakunda \"Keeping up with the evolving Java ecosystem\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
+      "why_te": "External Libraries lo JDK and Maven dependencies kanipistayi. Project ki ye libraries available unnayo ikkada easy ga check cheyyachu. Dependency missing ayina leda wrong version unna, ee view useful clue istundi. Navigation and tests kuda ee resolved libraries ni use chestayi.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -150,7 +150,7 @@
           ]
         }
       },
-      "why_te": "\"Keeping up with the evolving Java ecosystem\" lo \"Open the Maven tool window\" step highlighted project evidence ni direct evidence ga use chestundi. Ee \"Open the Maven tool window\" point previous explanation repeat cheyyakunda \"Keeping up with the evolving Java ecosystem\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
+      "why_te": "Maven window lo dependencies, plugins and lifecycle goals kanipistayi. Project ela build avutundo ikkada easy ga check cheyyachu. Same Maven setup local machine and CI lo use avutundi.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -169,7 +169,7 @@
         "action": "openIntegratedTerminal",
         "data": {}
       },
-      "why_te": "\"Keeping up with the evolving Java ecosystem\" lesson lo \"Open IntelliJ's integrated terminal\" step separate knowledge point ni explain chestundi. \"Keeping up with the evolving Java ecosystem\" lo \"Open IntelliJ's integrated terminal\" context lo, highlighted project evidence tho visible evidence ni check chesi, same explanation repeat cheyyakunda ee step ki specific conclusion ni build chestam.",
+      "why_te": "IntelliJ terminal ni open chesi commands run cheddam. Integrated terminal nundi real JDK mariyu Maven commands ni same project context lo verify cheyyachu. Release knowledge ni actual build verification tho connect chestundi.",
       "highlight": {
         "kind": "target",
         "selectors": [
@@ -179,7 +179,7 @@
     },
     {
       "title": "Verify the active JDK",
-      "question": "A `pom. xml` can declare Java 21 while the shell or CI runner uses a different JDK. Before testing an ecosystem upgrade, why must you verify the active runtime instead of assuming the configured version and executable version are identical?",
+      "question": "A `pom.xml` can declare Java 21 while the shell or CI runner uses a different JDK. Before testing an ecosystem upgrade, why must you verify the active runtime instead of assuming the configured version and executable version are identical?",
       "why": "Version drift produces misleading build results. Confirming the active JDK ensures that compilation and tests are evaluating the environment you think they are evaluating.",
       "software": "intellij",
       "required_capability": "type-terminal",
@@ -195,7 +195,7 @@
           "output": "openjdk 21"
         }
       },
-      "why_te": "\"Verify the active JDK\" step lo terminal result ni run chesi \"Keeping up with the evolving Java ecosystem\" rule ni actual result tho verify chestam. \"Keeping up with the evolving Java ecosystem\" lo \"Verify the active JDK\" context lo, output leda compiler message expected behavior tho match ayithe previous code reasoning correct ani confirm avutundi.",
+      "why_te": "Ee command run chesi output ni chudandi. Version drift misleading build results ivvachu. Active JDK ni confirm cheyyadam valla compile mariyu tests correct environment ni evaluate chestunnayi ani telustundi.",
       "highlight": {
         "kind": "auto"
       }

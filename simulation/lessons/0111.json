@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Static method hiding versus overriding",
-      "question": "Before testing \"Static method hiding versus overriding\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. Using \"Open the AeroTopo baseline — Static method hiding versus overriding\" as the concrete case for \"Static method hiding versus overriding\", what does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
-      "why_te": "Lesson 111 step 1 lo \"Open the AeroTopo baseline — Static\" kosam SurveyProducts. Lesson 111 step 1 context lo, java ni use chesi \"Static method hiding versus overriding\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Before testing \"Static method hiding versus overriding\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -33,8 +33,8 @@
     },
     {
       "title": "Create the focused static experiment — Static method hiding versus overriding",
-      "question": "The temporary class for \"Static method hiding versus overriding\" isolates Java binding and access behavior without Spring framework effects. From the \"Create the focused static experiment — Static method hiding versus\" result in \"Static method hiding versus overriding\", read the highlighted declarations and predict the result before execution. While working through \"Create the focused static experiment — Static method hiding versus\" in \"Static method hiding versus overriding\", which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
-      "why_te": "Lesson 111 step 2 lo \"Create the focused static experiment —\" kosam StaticHidingDemo. Lesson 111 step 2 context lo, java ni use chesi \"Static method hiding versus overriding\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary class for \"Static method hiding versus overriding\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -61,8 +61,8 @@
     },
     {
       "title": "Run the focused static experiment — Static method hiding versus overriding",
-      "question": "The program for \"Static method hiding versus overriding\" now gives direct runtime or compiler evidence. While working through \"Run the focused static experiment — Static method hiding versus\" in \"Static method hiding versus overriding\", compare the result with the declared reference types and member modifiers instead of only the runtime object. For the \"Static method hiding versus overriding\" lesson, use the \"Run the focused static experiment — Static method hiding versus\" evidence, what exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
-      "why_te": "\"Static method hiding versus overriding\" lo \"Run the focused static experiment — Static\" step terminal result ni direct evidence ga use chestundi. Ee \"Run the focused static experiment — Static\" point previous explanation repeat cheyyakunda \"Static method hiding versus overriding\" ki specific behavior, result, leda design consequence ni clear ga explain chestundi.",
+      "question": "The program for \"Static method hiding versus overriding\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -83,8 +83,8 @@
     },
     {
       "title": "Remove the temporary static experiment — Static method hiding versus overriding",
-      "question": "The focused source for \"Static method hiding versus overriding\" is no longer needed after the behavior has been observed. For the \"Static method hiding versus overriding\" lesson, use the \"Remove the temporary static experiment — Static method hiding versus\" evidence, removing it keeps lesson-only code from becoming permanent project functionality. At the \"Remove the temporary static experiment — Static method hiding versus\" stage of \"Static method hiding versus overriding\", why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
-      "why_te": "[no highlight] Lesson 111 step 4 lo \"Remove the temporary static experiment —\" kosam StaticHidingDemo. Lesson 111 step 4 context lo, java ni use chesi \"Static method hiding versus overriding\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The focused source for \"Static method hiding versus overriding\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
+      "why_te": "[no highlight] Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -101,8 +101,8 @@
     },
     {
       "title": "Return to the real AeroTopo code — Static method hiding versus overriding",
-      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Static method hiding versus overriding\" and connect the observed rule back to production design. At the \"Return to the real AeroTopo code — Static method hiding\" stage of \"Static method hiding versus overriding\", how would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
-      "why_te": "\"Static method hiding versus overriding\" context lo SurveyProducts. java meeda focus chestam. \"Return to the real AeroTopo code — Static method\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Static method hiding versus overriding\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
+      "why_te": "Static same-signature method hiding compile-time type batti resolve avutundi. Runtime object dispatch static methods ki apply kaadu. Product category example same rule ni show chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

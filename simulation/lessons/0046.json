@@ -89,7 +89,7 @@
     },
     {
       "title": "Connect the demo to real AeroTopo builder usage",
-      "question": "AeroTopo already follows the same pattern in `expandRuns`: create a local builder, append pieces while processing input, then return `output. toString()`. How does this production method reinforce the recommendation that `StringBuilder` is the usual mutable companion to immutable String values?",
+      "question": "AeroTopo already follows the same pattern in `expandRuns`: create a local builder, append pieces while processing input, then return `output.toString()`. How does this production method reinforce the recommendation that `StringBuilder` is the usual mutable companion to immutable String values?",
       "why_te": "expandRuns real project lo same pattern use chestundi. Builder create chesi content append chesi end lo String return chestundi. Idi StringBuilder practical mutable alternative ani show chestundi.",
       "software": "intellij",
       "required_capability": "open-file",

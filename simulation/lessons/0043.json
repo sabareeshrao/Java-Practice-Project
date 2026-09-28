@@ -38,8 +38,8 @@
     },
     {
       "title": "Inspect the explicit char-array wipe",
-      "question": "`Arrays. fill(password, '\\0')` replaces every element of the mutable array with the null character after the sensitive value is no longer needed. Why does this give application code more control over the password's intended lifetime than an immutable String object whose character contents cannot be changed after construction?",
-      "why_te": "`Arrays. fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.",
+      "question": "`Arrays.fill(password, '\\0')` replaces every element of the mutable array with the null character after the sensitive value is no longer needed. Why does this give application code more control over the password's intended lifetime than an immutable String object whose character contents cannot be changed after construction?",
+      "why_te": "`Arrays.fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,

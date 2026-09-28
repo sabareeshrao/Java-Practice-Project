@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the project evidence — Static methods written in the AeroTopo project",
-      "question": "The AeroTopo code already provides direct evidence for \"Static methods written in the AeroTopo project\". From the \"Open the project evidence — Static methods written in the\" result in \"Static methods written in the AeroTopo project\", inspect the highlighted members and determine whether they belong to the class itself or to individual objects. While working through \"Open the project evidence — Static methods written in the\" in \"Static methods written in the AeroTopo project\", which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
-      "why_te": "Lesson 117 step 1 lo \"Open the project evidence — Static\" kosam SurveyAlgorithms. Lesson 117 step 1 context lo, java ni use chesi \"Static methods written in the AeroTopo\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The AeroTopo code already provides direct evidence for \"Static methods written in the AeroTopo project\". Inspect the highlighted members and determine whether they belong to the class itself or to individual objects. Which Java static or final rule is visible here, and what problem does this design solve without requiring callers to create unnecessary instances?",
+      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -46,8 +46,8 @@
     },
     {
       "title": "Trace binding and ownership — Static methods written in the AeroTopo project",
-      "question": "For \"Static methods written in the AeroTopo project\", the important distinction is not only syntax but binding and state ownership. While working through \"Trace binding and ownership — Static methods written in the\" in \"Static methods written in the AeroTopo project\", look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. For the \"Static methods written in the AeroTopo project\" lesson, use the \"Trace binding and ownership — Static methods written in the\" evidence, why does this distinction matter when code is accessed through different references or subclasses?",
-      "why_te": "\"Static methods written in the AeroTopo project\" context lo SurveyAlgorithms. java meeda focus chestam. \"Trace binding and ownership — Static methods written in\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "For \"Static methods written in the AeroTopo project\", the important distinction is not only syntax but binding and state ownership. Look again at the project example and trace whether a call is resolved from the declared class, whether instance state is required, and whether inheritance can replace the behavior. Why does this distinction matter when code is accessed through different references or subclasses?",
+      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "Evaluate the design choice — Static methods written in the AeroTopo project",
-      "question": "While working through \"Evaluate the design choice — Static methods written in the\" in \"Static methods written in the AeroTopo project\", experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Static methods written in the AeroTopo project\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. At the \"Evaluate the design choice — Static methods written in the\" stage of \"Static methods written in the AeroTopo project\", what bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
-      "why_te": "Lesson 117 step 3 lo \"Evaluate the design choice — Static\" kosam SurveyAlgorithms. Lesson 117 step 3 context lo, java ni use chesi \"Static methods written in the AeroTopo\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Experienced Java code uses static and final deliberately rather than as shortcuts. Using the highlighted AeroTopo implementation for \"Static methods written in the AeroTopo project\", explain what shared behavior or invariant is being encoded and what flexibility the design intentionally gives up. What bug or confusion could appear if instance-dependent behavior were incorrectly made static or if a stable rule remained overridable?",
+      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -118,8 +118,8 @@
     },
     {
       "title": "State the interview rule — Static methods written in the AeroTopo project",
-      "question": "Now answer \"Static methods written in the AeroTopo project\" from the project evidence. At the \"State the interview rule — Static methods written in the\" stage of \"Static methods written in the AeroTopo project\", how would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
-      "why_te": "Lesson 117 step 4 lo \"State the interview rule — Static\" kosam SurveyAlgorithms. Lesson 117 step 4 context lo, java ni use chesi \"Static methods written in the AeroTopo\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer \"Static methods written in the AeroTopo project\" from the project evidence. How would you state the Java rule, the binding or access behavior, the practical use case, and the main limitation an interviewer should hear, while avoiding the incorrect assumption that static methods participate in runtime overriding like ordinary instance methods?",
+      "why_te": "AeroTopo SurveyAlgorithms lo many static methods unnayi. Input arguments meeda work chestayi and instance dependencies levu. Stateful service behavior మాత్రం instance methods ga untundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

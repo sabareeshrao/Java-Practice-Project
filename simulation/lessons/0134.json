@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution",
-      "question": "Why is multiple inheritance not possible, and how does an interface solve this problem? For the \"Interfaces as Java's multiple-inheritance solution\" lesson, use the \"Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution\" evidence, start with the AeroTopo implementation instead of a memorized definition. Left, Right, and Units show how interfaces permit multiple contracts while forcing explicit conflict resolution. Using \"Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution\" as the concrete case for \"Interfaces as Java's multiple-inheritance solution\", inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. From the \"Open the inheritance evidence — Interfaces as Java's multiple-inheritance solution\" result in \"Interfaces as Java's multiple-inheritance solution\", how does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
-      "why_te": "Lesson 134 step 1 lo \"Open the inheritance evidence — Interfaces\" kosam SurveyProducts. Lesson 134 step 1 context lo, java ni use chesi \"Interfaces as Java's multiple-inheritance solution\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Why is multiple inheritance not possible, and how does an interface solve this problem? Start with the AeroTopo implementation instead of a memorized definition. Left, Right, and Units show how interfaces permit multiple contracts while forcing explicit conflict resolution. Inspect the highlighted lines and identify the exact inheritance relationship or Java rule they demonstrate. How does this project example establish the behavior, and what would be different if the class hierarchy or member declaration were changed?",
+      "why_te": "Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Trace the parent-child rule — Interfaces as Java's multiple-inheritance solution",
-      "question": "For \"Interfaces as Java's multiple-inheritance solution\", trace the relationship from the superclass or interface down to the concrete child. At the \"Trace the parent-child rule — Interfaces as Java's multiple-inheritance solution\" stage of \"Interfaces as Java's multiple-inheritance solution\", which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Using \"Trace the parent-child rule — Interfaces as Java's multiple-inheritance solution\" as the concrete case for \"Interfaces as Java's multiple-inheritance solution\", why does that distinction matter for safe extension of the hierarchy?",
-      "why_te": "Lesson 134 step 2 lo \"Trace the parent-child rule — Interfaces\" kosam SurveyProducts. Lesson 134 step 2 context lo, java ni use chesi \"Interfaces as Java's multiple-inheritance solution\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "For \"Interfaces as Java's multiple-inheritance solution\", trace the relationship from the superclass or interface down to the concrete child. Which state, constructor, method, or access rule is inherited, which part is supplied by the child, and what does Java resolve at compile time versus runtime? Why does that distinction matter for safe extension of the hierarchy?",
+      "why_te": "Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance solution",
-      "question": "At the \"Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance solution\" stage of \"Interfaces as Java's multiple-inheritance solution\", a maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Interfaces as Java's multiple-inheritance solution\", explain what contract the parent establishes and what freedom the child retains. From the \"Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance solution\" result in \"Interfaces as Java's multiple-inheritance solution\", what design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
-      "why_te": "\"Interfaces as Java's multiple-inheritance solution\" context lo SurveyProducts. java meeda focus chestam. \"Evaluate the hierarchy design — Interfaces as Java's multiple-inheritance\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "A maintainable inheritance design should reuse genuine shared behavior without forcing unrelated classes into the same hierarchy. Using the highlighted AeroTopo code for \"Interfaces as Java's multiple-inheritance solution\", explain what contract the parent establishes and what freedom the child retains. What design problem would appear if that contract were weakened, contradicted, or replaced with unnecessary inheritance?",
+      "why_te": "Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,8 +82,8 @@
     },
     {
       "title": "State the interview answer — Interfaces as Java's multiple-inheritance solution",
-      "question": "Now answer the interview question \"Why is multiple inheritance not possible, and how does an interface solve this problem? \" from the project evidence. While working through \"State the interview answer — Interfaces as Java's multiple-inheritance solution\" in \"Interfaces as Java's multiple-inheritance solution\", state the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. For the \"Interfaces as Java's multiple-inheritance solution\" lesson, use the \"State the interview answer — Interfaces as Java's multiple-inheritance solution\" evidence, how would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
-      "why_te": "Lesson 134 step 4 lo \"State the interview answer — Interfaces\" kosam SurveyProducts. Lesson 134 step 4 context lo, java ni use chesi \"Interfaces as Java's multiple-inheritance solution\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer the interview question \"Why is multiple inheritance not possible, and how does an interface solve this problem?\" from the project evidence. State the Java rule, show how AeroTopo follows it, and include the important limitation or design consequence. How would you explain this clearly without confusing class inheritance, interface inheritance, composition, static hiding, or runtime overriding?",
+      "why_te": "Multiple class parents state and implementation ambiguity create cheyyachu. Interfaces multiple contracts allow chestayi. Default methods conflict ayithe Units laga explicit override chesi chosen implementation specify cheyyali.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

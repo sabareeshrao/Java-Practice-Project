@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Null with String and Object overloads",
-      "question": "You have overloaded methods getData(String) and getData(Object). Using \"Open the AeroTopo baseline — Null with String and Object\" as the concrete case for \"Null with String and Object overloads\", which one is called when you pass null? From the \"Open the AeroTopo baseline — Null with String and Object\" result in \"Null with String and Object overloads\", before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. While working through \"Open the AeroTopo baseline — Null with String and Object\" in \"Null with String and Object overloads\", which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
-      "why_te": "Lesson 146 step 1 lo \"Open the AeroTopo baseline — Null\" kosam LanguageLab. Lesson 146 step 1 context lo, java ni use chesi \"Null with String and Object overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null? Before testing the edge case, inspect the valid AeroTopo implementation and identify the related overload, override, or inheritance rule already present. Which highlighted lines provide the baseline, and why should the focused edge case remain temporary instead of changing the real project model?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -32,8 +32,8 @@
     },
     {
       "title": "Create the focused dispatch experiment — Null with String and Object overloads",
-      "question": "The temporary source for \"Null with String and Object overloads\" isolates the exact Java dispatch or signature rule asked by the interview question. From the \"Create the focused dispatch experiment — Null with String and\" result in \"Null with String and Object overloads\", read the highlighted declarations and predict the compiler or runtime result. While working through \"Create the focused dispatch experiment — Null with String and\" in \"Null with String and Object overloads\", which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
-      "why_te": "Lesson 146 step 2 lo \"Create the focused dispatch experiment —\" kosam NullSpecificityDemo. Lesson 146 step 2 context lo, java ni use chesi \"Null with String and Object overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary source for \"Null with String and Object overloads\" isolates the exact Java dispatch or signature rule asked by the interview question. Read the highlighted declarations and predict the compiler or runtime result. Which rule about covariant returns, constructor dispatch, overload specificity, visibility, field hiding, or super calls determines the outcome?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -58,8 +58,8 @@
     },
     {
       "title": "Run the dispatch experiment — Null with String and Object overloads",
-      "question": "The focused program for \"Null with String and Object overloads\" now gives direct compiler or runtime evidence. While working through \"Run the dispatch experiment — Null with String and Object\" in \"Null with String and Object overloads\", compare the result with the declared reference types and method signatures rather than guessing from names. For the \"Null with String and Object overloads\" lesson, use the \"Run the dispatch experiment — Null with String and Object\" evidence, what does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
-      "why_te": "\"Run the dispatch experiment — Null with String and\" step result observation meeda focus chestundi. \"Null with String and Object overloads\" concept ki terminal result direct evidence istundi; expected output, error, leda dispatch result ni code declaration tho connect cheyyali.",
+      "question": "The focused program for \"Null with String and Object overloads\" now gives direct compiler or runtime evidence. Compare the result with the declared reference types and method signatures rather than guessing from names. What does the observed output or compiler diagnostic prove, and which common overloading or overriding misconception does it eliminate?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -80,8 +80,8 @@
     },
     {
       "title": "Remove the temporary dispatch experiment — Null with String and Object overloads",
-      "question": "The isolated example for \"Null with String and Object overloads\" has established the Java rule and should not remain as lesson-only production code. For the \"Null with String and Object overloads\" lesson, use the \"Remove the temporary dispatch experiment — Null with String and\" evidence, after deleting it, preserve the compiler or runtime behavior as evidence. At the \"Remove the temporary dispatch experiment — Null with String and\" stage of \"Null with String and Object overloads\", why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
-      "why_te": "[no highlight] Lesson 146 step 4 lo \"Remove the temporary dispatch experiment —\" kosam NullSpecificityDemo. Lesson 146 step 4 context lo, java ni use chesi \"Null with String and Object overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The isolated example for \"Null with String and Object overloads\" has established the Java rule and should not remain as lesson-only production code. After deleting it, preserve the compiler or runtime behavior as evidence. Why does cleanup keep AeroTopo cumulative while still letting us verify difficult polymorphism and overload edge cases safely?",
+      "why_te": "[no highlight] `null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -98,8 +98,8 @@
     },
     {
       "title": "Return to the project design — Null with String and Object overloads",
-      "question": "With the temporary source removed, return to AeroTopo and answer \"You have overloaded methods getData(String) and getData(Object). At the \"Return to the project design — Null with String and\" stage of \"Null with String and Object overloads\", which one is called when you pass null? Using \"Return to the project design — Null with String and\" as the concrete case for \"Null with String and Object overloads\", \" using both the real project and the focused result. From the \"Return to the project design — Null with String and\" result in \"Null with String and Object overloads\", how would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
-      "why_te": "Lesson 146 step 5 lo \"Return to the project design —\" kosam LanguageLab. Lesson 146 step 5 context lo, java ni use chesi \"Null with String and Object overloads\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "With the temporary source removed, return to AeroTopo and answer \"You have overloaded methods getData(String) and getData(Object). Which one is called when you pass null?\" using both the real project and the focused result. How would you explain the method-selection rule, the practical design consequence, and the limitation that prevents this behavior from being confused with another form of polymorphism?",
+      "why_te": "`null` String and Object rendu reference overloads ki applicable. String Object subtype kabatti more specific; compiler String overload choose chestundi. Unrelated types ayithe ambiguity possible.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

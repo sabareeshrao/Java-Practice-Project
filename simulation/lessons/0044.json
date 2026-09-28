@@ -39,8 +39,8 @@
     },
     {
       "title": "Inspect literal sharing versus explicit allocation",
-      "question": "The first two variables use the same literal, whereas `heap` explicitly constructs another String object with equal content. Because `==` compares references, why should the literal comparison be true while the literal-versus-new-object comparison is false even though `. equals()` would report equal text?",
-      "why_te": "Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `. equals()` content compare chestundi.",
+      "question": "The first two variables use the same literal, whereas `heap` explicitly constructs another String object with equal content. Because `==` compares references, why should the literal comparison be true while the literal-versus-new-object comparison is false even though `.equals()` would report equal text?",
+      "why_te": "Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `.equals()` content compare chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
       "feature_available": true,
@@ -69,7 +69,7 @@
     },
     {
       "title": "Inspect what intern() actually requests",
-      "question": "Calling `heap. intern()` returns the canonical pooled representation for the same character sequence, so comparing it with the literal reference should become true. Why does this mechanism save memory only when many equal values are actually reused instead of when nearly every dynamic String is unique?",
+      "question": "Calling `heap.intern()` returns the canonical pooled representation for the same character sequence, so comparing it with the literal reference should become true. Why does this mechanism save memory only when many equal values are actually reused instead of when nearly every dynamic String is unique?",
       "why_te": "`intern()` same text kosam canonical pooled reference ni istundi. Repeated equal values ekkuva unte sharing benefit untundi. Mostly unique strings ayithe share cheyyadaniki duplicates takkuva untayi.",
       "software": "intellij",
       "required_capability": "highlight-target",

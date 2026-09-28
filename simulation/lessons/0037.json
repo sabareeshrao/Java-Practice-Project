@@ -11,7 +11,7 @@
     {
       "title": "Open the existing AeroTopo duplicate-removal method",
       "question": "The real `SurveyAlgorithms` class already contains an array-specific `unique` method, so creating another production implementation would duplicate working code. Inspect the method and identify the three-stage stream pipeline that converts the primitive array into a stream, removes duplicates, and materializes a new `int[]` result.",
-      "why_te": "SurveyAlgorithms. unique already real implementation ni contain chestundi. `Arrays. stream`, `distinct`, `toArray` three stages kanipistayi. Duplicate production method create cheyyakunda existing code ni reuse chestam.",
+      "why_te": "SurveyAlgorithms.unique already real implementation ni contain chestundi. `Arrays.stream`, `distinct`, `toArray` three stages kanipistayi. Duplicate production method create cheyyakunda existing code ni reuse chestam.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -82,7 +82,7 @@
     },
     {
       "title": "Inspect the input and real method call together",
-      "question": "The temporary caller sends `{4,2,4,1,2}` directly to `SurveyAlgorithms. unique` and prints the returned array instead of mutating the original input for display. How does this setup make it easy to verify both duplicate removal and preservation of the first-encounter order in one visible result?",
+      "question": "The temporary caller sends `{4,2,4,1,2}` directly to `SurveyAlgorithms.unique` and prints the returned array instead of mutating the original input for display. How does this setup make it easy to verify both duplicate removal and preservation of the first-encounter order in one visible result?",
       "why_te": "Input and method call same demo lo clear ga kanipistayi. Result new array ga return avutundi. Output chusi duplicates remove ayyaya mariyu first order preserve ayyinda easy ga verify cheyyachu.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -131,7 +131,7 @@
     },
     {
       "title": "Compare the array method with the reusable stream exercise",
-      "question": "AeroTopo also has `StreamExercises. distinct` for `List<Integer>`, which uses the same stream concept but returns a List instead of a primitive array. Comparing these two methods, what part of the solution is conceptually identical and what changes only because the input and required return types differ?",
+      "question": "AeroTopo also has `StreamExercises.distinct` for `List<Integer>`, which uses the same stream concept but returns a List instead of a primitive array. Comparing these two methods, what part of the solution is conceptually identical and what changes only because the input and required return types differ?",
       "why_te": "SurveyAlgorithms array kosam `IntStream` use chestundi; StreamExercises List kosam object stream use chestundi. Duplicate removal concept same `distinct`. Final container type matrame different.",
       "software": "intellij",
       "required_capability": "open-file",
@@ -174,7 +174,7 @@
     {
       "title": "Return to the production array solution",
       "question": "The production method now remains as the final visual reference: primitive array to `IntStream`, then `distinct`, then back to `int[]`. How would you explain this approach step by step in an interview, including preserved encounter order, the returned array, and an alternative Set-based implementation when needed?",
-      "why_te": "Final ga `Arrays. stream → distinct → toArray` flow ni chudandi. First occurrence order preserve avutundi and new int array return avutundi. Alternative ga order important ayithe LinkedHashSet use cheyyachu.",
+      "why_te": "Final ga `Arrays.stream → distinct → toArray` flow ni chudandi. First occurrence order preserve avutundi and new int array return avutundi. Alternative ga order important ayithe LinkedHashSet use cheyyachu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

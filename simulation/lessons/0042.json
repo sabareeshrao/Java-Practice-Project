@@ -11,7 +11,7 @@
     {
       "title": "Open the existing in-place deduplication method",
       "question": "AeroTopo already contains `deduplicateSorted`, which is designed specifically for a sorted primitive array. It uses a write index and one scan rather than allocating a second array. Which lines show the uniqueness comparison, the in-place write, and the logical length returned to the caller?",
-      "why_te": "SurveyAlgorithms. deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.",
+      "why_te": "SurveyAlgorithms.deduplicateSorted sorted array kosam already implement ayyindi. `write` next unique position ni track chestundi. Method same array prefix ni update chesi final logical length return chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

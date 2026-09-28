@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the polymorphism evidence — Inheritance and polymorphism working together",
-      "question": "How do Inheritance and Polymorphism work together? While working through \"Open the polymorphism evidence — Inheritance and polymorphism working together\" in \"Inheritance and polymorphism working together\", use the AeroTopo code as the starting point rather than answering from terminology alone. Product provides the shared contract and two subclasses provide different runtime implementations. At the \"Open the polymorphism evidence — Inheritance and polymorphism working together\" stage of \"Inheritance and polymorphism working together\", inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
-      "why_te": "Lesson 138 step 1 lo \"Open the polymorphism evidence — Inheritance\" kosam SurveyProducts. Lesson 138 step 1 context lo, java ni use chesi \"Inheritance and polymorphism working together\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "How do Inheritance and Polymorphism work together? Use the AeroTopo code as the starting point rather than answering from terminology alone. Product provides the shared contract and two subclasses provide different runtime implementations. Inspect the highlighted methods or type declarations and identify whether Java is choosing between overloads at compile time or dispatching an overridden method at runtime. What exact evidence supports that distinction?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -41,8 +41,8 @@
     },
     {
       "title": "Trace method selection — Inheritance and polymorphism working together",
-      "question": "For \"Inheritance and polymorphism working together\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. For the \"Inheritance and polymorphism working together\" lesson, use the \"Trace method selection — Inheritance and polymorphism working together\" evidence, which of those pieces controls method selection in this example, and which details do not participate? At the \"Trace method selection — Inheritance and polymorphism working together\" stage of \"Inheritance and polymorphism working together\", why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
-      "why_te": "\"Inheritance and polymorphism working together\" context lo SurveyProducts. java meeda focus chestam. \"Trace method selection — Inheritance and polymorphism working together\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "For \"Inheritance and polymorphism working together\", trace the method signature, declared reference type, runtime object type, and inheritance relationship separately. Which of those pieces controls method selection in this example, and which details do not participate? Why is separating overload resolution from override dispatch essential for predicting Java behavior correctly?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -72,8 +72,8 @@
     },
     {
       "title": "Evaluate the design contract — Inheritance and polymorphism working together",
-      "question": "For the \"Inheritance and polymorphism working together\" lesson, use the \"Evaluate the design contract — Inheritance and polymorphism working together\" evidence, a production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Inheritance and polymorphism working together\", explain what contract callers depend on and what implementations may vary. Using \"Evaluate the design contract — Inheritance and polymorphism working together\" as the concrete case for \"Inheritance and polymorphism working together\", what maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
-      "why_te": "Lesson 138 step 3 lo \"Evaluate the design contract — Inheritance\" kosam SurveyProducts. Lesson 138 step 3 context lo, java ni use chesi \"Inheritance and polymorphism working together\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "A production design should use polymorphism to remove unnecessary type checks without hiding surprising overload or visibility behavior. Using the highlighted AeroTopo implementation for \"Inheritance and polymorphism working together\", explain what contract callers depend on and what implementations may vary. What maintenance problem would appear if static hiding, field access, overloading, and overriding were treated as though they all used the same dispatch rules?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "State the interview answer — Inheritance and polymorphism working together",
-      "question": "Now answer the interview question \"How do Inheritance and Polymorphism work together? \" directly from the evidence. From the \"State the interview answer — Inheritance and polymorphism working together\" result in \"Inheritance and polymorphism working together\", state the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. While working through \"State the interview answer — Inheritance and polymorphism working together\" in \"Inheritance and polymorphism working together\", how would you keep the explanation precise enough for a five-year Java interview?",
-      "why_te": "Lesson 138 step 4 lo \"State the interview answer — Inheritance\" kosam SurveyProducts. Lesson 138 step 4 context lo, java ni use chesi \"Inheritance and polymorphism working together\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "Now answer the interview question \"How do Inheritance and Polymorphism work together?\" directly from the evidence. State the compile-time or runtime rule, give the AeroTopo example, and include the important restriction involving signatures, return types, access, constructors, fields, or static methods. How would you keep the explanation precise enough for a five-year Java interview?",
+      "why_te": "Inheritance Product subtype relation create chestundi. Polymorphism Product reference dwara Orthomosaic/Dem objects ni common ga use chesi runtime lo correct overridden resolution method execute chestundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

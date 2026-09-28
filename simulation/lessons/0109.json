@@ -10,8 +10,8 @@
   "steps": [
     {
       "title": "Open the AeroTopo baseline — Calling instance members from a static method",
-      "question": "Before testing \"Calling instance members from a static method\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. For the \"Calling instance members from a static method\" lesson, use the \"Open the AeroTopo baseline — Calling instance members from a\" evidence, what does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
-      "why_te": "\"Calling instance members from a static method\" context lo LanguageLab. java meeda focus chestam. \"Open the AeroTopo baseline — Calling instance members from\" step highlighted lines ni surrounding code tho connect chesi, ee concept application lo enduku ila design chesaro understand chestam.",
+      "question": "Before testing \"Calling instance members from a static method\", inspect the highlighted AeroTopo code and identify a valid static or instance pattern already used in production. What does this baseline tell you about where state and behavior live, and why should the temporary experiment remain separate from the cumulative project implementation?",
+      "why_te": "Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -34,8 +34,8 @@
     },
     {
       "title": "Create the focused static experiment — Calling instance members from a static method",
-      "question": "The temporary class for \"Calling instance members from a static method\" isolates Java binding and access behavior without Spring framework effects. At the \"Create the focused static experiment — Calling instance members from\" stage of \"Calling instance members from a static method\", read the highlighted declarations and predict the result before execution. Using \"Create the focused static experiment — Calling instance members from\" as the concrete case for \"Calling instance members from a static method\", which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
-      "why_te": "Lesson 109 step 2 lo \"Create the focused static experiment —\" kosam StaticInstanceAccessDemo. Lesson 109 step 2 context lo, java ni use chesi \"Calling instance members from a static\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The temporary class for \"Calling instance members from a static method\" isolates Java binding and access behavior without Spring framework effects. Read the highlighted declarations and predict the result before execution. Which rule about class initialization, static-member resolution, null references, or instance access determines whether this source compiles and what it prints?",
+      "why_te": "Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.",
       "software": "intellij",
       "required_capability": "create-file",
       "feature_available": true,
@@ -63,8 +63,8 @@
     },
     {
       "title": "Run the focused static experiment — Calling instance members from a static method",
-      "question": "The program for \"Calling instance members from a static method\" now gives direct runtime or compiler evidence. Using \"Run the focused static experiment — Calling instance members from\" as the concrete case for \"Calling instance members from a static method\", compare the result with the declared reference types and member modifiers instead of only the runtime object. From the \"Run the focused static experiment — Calling instance members from\" result in \"Calling instance members from a static method\", what exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
-      "why_te": "Lesson 109 step 3 lo \"Run the focused static experiment —\" kosam terminal result ni use chesi \"Calling instance members from a static\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The program for \"Calling instance members from a static method\" now gives direct runtime or compiler evidence. Compare the result with the declared reference types and member modifiers instead of only the runtime object. What exactly does the output prove about static binding or instance access, and which common Java interview misconception does it correct?",
+      "why_te": "Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.",
       "software": "intellij",
       "required_capability": "type-terminal",
       "feature_available": true,
@@ -85,8 +85,8 @@
     },
     {
       "title": "Remove the temporary static experiment — Calling instance members from a static method",
-      "question": "The focused source for \"Calling instance members from a static method\" is no longer needed after the behavior has been observed. From the \"Remove the temporary static experiment — Calling instance members from\" result in \"Calling instance members from a static method\", removing it keeps lesson-only code from becoming permanent project functionality. While working through \"Remove the temporary static experiment — Calling instance members from\" in \"Calling instance members from a static method\", why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
-      "why_te": "[no highlight] Lesson 109 step 4 lo \"Remove the temporary static experiment —\" kosam StaticInstanceAccessDemo. Lesson 109 step 4 context lo, java ni use chesi \"Calling instance members from a static\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "The focused source for \"Calling instance members from a static method\" is no longer needed after the behavior has been observed. Removing it keeps lesson-only code from becoming permanent project functionality. Why is this cleanup necessary for cumulative continuity while still preserving the verified Java rule for later inheritance and polymorphism chapters?",
+      "why_te": "[no highlight] Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.",
       "software": "intellij",
       "required_capability": "delete-resource",
       "feature_available": true,
@@ -103,8 +103,8 @@
     },
     {
       "title": "Return to the real AeroTopo code — Calling instance members from a static method",
-      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling instance members from a static method\" and connect the observed rule back to production design. While working through \"Return to the real AeroTopo code — Calling instance members\" in \"Calling instance members from a static method\", how would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
-      "why_te": "Lesson 109 step 5 lo \"Return to the real AeroTopo code\" kosam LanguageLab. Lesson 109 step 5 context lo, java ni use chesi \"Calling instance members from a static\" ki specific behavior, result, leda design consequence ni previous explanation repeat cheyyakunda clear ga explain chestam.",
+      "question": "With the experiment removed, return to the highlighted AeroTopo implementation for \"Calling instance members from a static method\" and connect the observed rule back to production design. How would you explain the Java behavior, why the project uses this static or final form, and what would require an instance instead?",
+      "why_te": "Static method ki implicit `this` ledu. Instance field/method use cheyyali ante actual object reference kavali. Class-level execution specific object state ni automatic ga know cheyyadu.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,

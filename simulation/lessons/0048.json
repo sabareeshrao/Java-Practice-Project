@@ -11,7 +11,7 @@
     {
       "title": "Open the real AeroTopo reverse implementation",
       "question": "The project already contains the exact text-reversal operation requested by the interview problem: construct a `StringBuilder` from the comment, call `reverse`, and convert the result back to String. Which three operations on this line form the complete in-memory reversal pipeline?",
-      "why_te": "SurveyAlgorithms. reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.",
+      "why_te": "SurveyAlgorithms.reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.",
       "software": "intellij",
       "required_capability": "open-file",
       "feature_available": true,
@@ -31,7 +31,7 @@
     },
     {
       "title": "Inspect why a mutable builder fits reversal",
-      "question": "A String cannot be modified character by character in place because it is immutable, while `StringBuilder. reverse()` can rearrange the builder's mutable character sequence before one final String is created. Why does that avoid writing a manual loop that repeatedly concatenates one-character Strings?",
+      "question": "A String cannot be modified character by character in place because it is immutable, while `StringBuilder.reverse()` can rearrange the builder's mutable character sequence before one final String is created. Why does that avoid writing a manual loop that repeatedly concatenates one-character Strings?",
       "why_te": "String immutable kabatti repeated character concatenation unnecessary intermediate values create cheyyachu. StringBuilder mutable buffer ni reverse chesi final ga one String create chestundi.",
       "software": "intellij",
       "required_capability": "highlight-target",
@@ -124,7 +124,7 @@
     },
     {
       "title": "Remove the temporary reversal driver",
-      "question": "The project already owns the reusable reverse method, so the temporary caller can be deleted after verification. What concise interview answer should remain about `StringBuilder. reverse()`, final `toString()`, O(n) character work, and the distinction between ordinary in-memory text and extremely large external content?",
+      "question": "The project already owns the reusable reverse method, so the temporary caller can be deleted after verification. What concise interview answer should remain about `StringBuilder.reverse()`, final `toString()`, O(n) character work, and the distinction between ordinary in-memory text and extremely large external content?",
       "why_te": "Temporary driver remove chestunnam. Final answer builder reverse plus toString, O(n) time ani cheppali. Very large external content memory fit avvakapothe different strategy kavachu.",
       "software": "intellij",
       "required_capability": "delete-resource",
