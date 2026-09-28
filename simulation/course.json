@@ -15,7 +15,7 @@
       "title": "Java Foundations & Enterprise Context",
       "subtitle": "Start with the Java platform, IntelliJ workflow, JDK, build tooling, and enterprise-development context.",
       "chapterStart": 1,
-      "chapterEnd": 8
+      "chapterEnd": 10
     }
   ],
   "chapters": [
@@ -115,6 +115,50 @@
         "lessons/0040.json",
         "lessons/0041.json",
         "lessons/0042.json"
+      ]
+    },
+    {
+      "id": "chapter-009",
+      "title": "9: Strings, Mutable Text & String Algorithms",
+      "subtitle": "Keep the complete String sequence together: password memory handling, String Pool trade-offs, StringBuilder versus StringBuffer, reversal, concatenation internals, anagram grouping, manual substring search, first-unique characters, run expansion, and longest-palindrome logic.",
+      "lessons": [
+        "lessons/0043.json",
+        "lessons/0044.json",
+        "lessons/0045.json",
+        "lessons/0046.json",
+        "lessons/0047.json",
+        "lessons/0048.json",
+        "lessons/0049.json",
+        "lessons/0050.json",
+        "lessons/0051.json",
+        "lessons/0052.json",
+        "lessons/0053.json",
+        "lessons/0054.json",
+        "lessons/0055.json"
+      ]
+    },
+    {
+      "id": "chapter-010",
+      "title": "10: OOP Foundations, Classes, Objects & Object Lifecycle",
+      "subtitle": "Build the complete OOP foundation from object creation and Java's mixed primitive/object model through classes, objects, lifecycle, reuse, abstraction, encapsulation, relationships, and the role OOP plays in AeroTopo and enterprise development.",
+      "lessons": [
+        "lessons/0056.json",
+        "lessons/0057.json",
+        "lessons/0058.json",
+        "lessons/0059.json",
+        "lessons/0060.json",
+        "lessons/0061.json",
+        "lessons/0062.json",
+        "lessons/0063.json",
+        "lessons/0064.json",
+        "lessons/0065.json",
+        "lessons/0066.json",
+        "lessons/0067.json",
+        "lessons/0068.json",
+        "lessons/0069.json",
+        "lessons/0070.json",
+        "lessons/0071.json",
+        "lessons/0072.json"
       ]
     }
   ],
