@@ -2646,3 +2646,167 @@ Static block class ki once; constructor prathi object creation ki run avutundi. 
 ### Step 5 — Return to the production example — final, effectively final, and immutable values
 
 `final` reference reassignment ni stop chestundi. Effectively final local variable reassigned kaadu. Immutable object state itself change kaadu; three concepts separate.
+
+## Lesson 97 — Whether a class can be both final and abstract
+
+### Step 1 — Open the AeroTopo baseline — Whether a class can be both final and abstract
+
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
+
+### Step 2 — Create the focused language experiment — Whether a class can be both final and abstract
+
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
+
+### Step 3 — Run the focused language experiment — Whether a class can be both final and abstract
+
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
+
+### Step 4 — Remove the temporary experiment — Whether a class can be both final and abstract
+
+[no highlight] Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
+
+### Step 5 — Return to the production example — Whether a class can be both final and abstract
+
+Abstract class extension require chestundi; final class extension ni forbid chestundi. Rendu same class ki contradictory. AeroTopo base Product abstract, concrete Orthomosaic final.
+
+## Lesson 98 — Mutating an object referenced by a final variable
+
+### Step 1 — Open the AeroTopo baseline — Mutating an object referenced by a final variable
+
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
+
+### Step 2 — Create the focused language experiment — Mutating an object referenced by a final variable
+
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
+
+### Step 3 — Run the focused language experiment — Mutating an object referenced by a final variable
+
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
+
+### Step 4 — Remove the temporary experiment — Mutating an object referenced by a final variable
+
+[no highlight] Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
+
+### Step 5 — Return to the production example — Mutating an object referenced by a final variable
+
+Final reference ni vere object ki reassign cheyyalem. Referenced object mutable ayithe methods dwara state change cheyyachu. Final and immutable same kaavu.
+
+## Lesson 99 — The final keyword on variables, methods, and classes
+
+### Step 1 — Open the project evidence — The final keyword on variables, methods, and classes
+
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
+
+### Step 2 — Trace lifecycle and restriction — The final keyword on variables, methods, and classes
+
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
+
+### Step 3 — Evaluate the design effect — The final keyword on variables, methods, and classes
+
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
+
+### Step 4 — State the interview rule — The final keyword on variables, methods, and classes
+
+SurveyProducts lo final field, final method, final classes examples unnayi. Variable reassignment, method overriding, class inheritance different restrictions. Deep immutability automatic kaadu.
+
+## Lesson 100 — What final means on a method
+
+### Step 1 — Open the project evidence — What final means on a method
+
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
+
+### Step 2 — Trace lifecycle and restriction — What final means on a method
+
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
+
+### Step 3 — Evaluate the design effect — What final means on a method
+
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
+
+### Step 4 — State the interview rule — What final means on a method
+
+Product `id()` final method subclass override cheyyaledu. Identity behavior base class control lo consistent ga untundi. Final method genuine invariant protect cheyyadaniki use cheyyali.
+
+## Lesson 101 — A design scenario where final materially affects Java code
+
+### Step 1 — Open the project evidence — A design scenario where final materially affects Java code
+
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
+
+### Step 2 — Trace lifecycle and restriction — A design scenario where final materially affects Java code
+
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
+
+### Step 3 — Evaluate the design effect — A design scenario where final materially affects Java code
+
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
+
+### Step 4 — State the interview rule — A design scenario where final materially affects Java code
+
+AeroTopo final fields stable object identity/state ni protect chestayi; final classes hierarchy close chestayi; final method identity behavior override ni block chestundi. Design intent clear ga untundi.
+
+## Lesson 102 — Exceptions from a static block
+
+### Step 1 — Open the AeroTopo baseline — Exceptions from a static block
+
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
+
+### Step 2 — Create the focused language experiment — Exceptions from a static block
+
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
+
+### Step 3 — Run the focused language experiment — Exceptions from a static block
+
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
+
+### Step 4 — Remove the temporary experiment — Exceptions from a static block
+
+[no highlight] Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
+
+### Step 5 — Return to the production example — Exceptions from a static block
+
+Static block unchecked exception throw cheyyachu. Initialization fail ayithe class usable ga initialize kaadu; caller `ExceptionInInitializerError` chudachu. Static init simple ga unchadam safer.
+
+## Lesson 103 — Multiple static blocks in one class
+
+### Step 1 — Open the AeroTopo baseline — Multiple static blocks in one class
+
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
+
+### Step 2 — Create the focused language experiment — Multiple static blocks in one class
+
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
+
+### Step 3 — Run the focused language experiment — Multiple static blocks in one class
+
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
+
+### Step 4 — Remove the temporary experiment — Multiple static blocks in one class
+
+[no highlight] Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
+
+### Step 5 — Return to the production example — Multiple static blocks in one class
+
+Multiple static blocks legal. Class initialization time lo source order prakaram once execute avutayi. Too many blocks initialization flow ni hard ga follow cheyyadaniki lead avvachu.
+
+## Lesson 104 — Why a static block runs before main
+
+### Step 1 — Open the AeroTopo baseline — Why a static block runs before main
+
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
+
+### Step 2 — Create the focused language experiment — Why a static block runs before main
+
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
+
+### Step 3 — Run the focused language experiment — Why a static block runs before main
+
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
+
+### Step 4 — Remove the temporary experiment — Why a static block runs before main
+
+[no highlight] Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
+
+### Step 5 — Return to the production example — Why a static block runs before main
+
+Main class use cheyyadaniki JVM first class initialize chestundi. Static initializers/block complete ayyaka `main` invoke avutundi. Anduke block output first.
