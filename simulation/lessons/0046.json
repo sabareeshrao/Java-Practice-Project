@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "lesson_number": 46,
+  "question_id": 46,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Choose a mutable String alternative",
+  "info_language": "te-Latn",
+  "answer": "Use `StringBuilder` for mutable text in ordinary single-threaded or thread-confined code. It lets you append, insert, replace, delete, and reverse characters without creating a new immutable String for every change. Use `StringBuffer` only when you specifically need its synchronized mutable operations for a shared buffer. The final result can be converted back to an immutable String with `toString()`. For most modern application code, `StringBuilder` is the default mutable alternative to String.",
+  "steps": [
+    {
+      "title": "Create a mutable text demonstration",
+      "question": "A temporary class can show mutation directly: one `StringBuilder` starts with `tile`, appends a suffix, replaces part of the text, and deletes one character before producing the final String. Which property distinguishes these operations from modifying a String, where each content change conceptually produces a different immutable value?",
+      "why_te": "StringBuilder same mutable object content ni change cheyyagaladu. Append, replace, delete operations builder meeda jarugutayi. String immutable kabatti content direct ga modify cheyyalem.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/MutableStringDemo.java",
+          "language": "java",
+          "content": "public class MutableStringDemo {\n    public static void main(String[] args) {\n        StringBuilder text = new StringBuilder(\"tile\");\n        text.append(\"-A\");\n        text.replace(0,4,\"map\");\n        text.deleteCharAt(text.length()-1);\n        System.out.println(text.toString());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect several mutations on the same builder",
+      "question": "The append, replace, and delete calls all target the same `text` variable rather than assigning newly concatenated String values after each operation. Why is this mutability useful for loops, parsers, text editors, and other workflows that perform many incremental character changes before producing one final result?",
+      "why_te": "Same builder meeda multiple mutations chestunnam. Repeated text changes unna loops, parser, editor logic lo intermediate immutable Strings reduce cheyyadaniki idi useful.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/MutableStringDemo.java",
+            "line": 4,
+            "expected_text": "text.append(\"-A\");"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the mutable sequence",
+      "question": "The demonstration transforms `tile` through several builder operations and prints the final immutable representation only at the end. When the output is `map-`, what does that show about using a builder as working mutable state and `toString()` as the boundary where a normal String result is needed?",
+      "why_te": "Builder working state mutable ga change avutundi. Final boundary daggara `toString()` normal immutable String result istundi. Output `map-` complete mutation sequence ni confirm chestundi.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson46-demo labs/java/MutableStringDemo.java; java -cp target/lesson46-demo MutableStringDemo",
+          "output": "map-"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Connect the demo to real AeroTopo builder usage",
+      "question": "AeroTopo already follows the same pattern in `expandRuns`: create a local builder, append pieces while processing input, then return `output.toString()`. How does this production method reinforce the recommendation that `StringBuilder` is the usual mutable companion to immutable String values?",
+      "why_te": "expandRuns real project lo same pattern use chestundi. Builder create chesi content append chesi end lo String return chestundi. Idi StringBuilder practical mutable alternative ani show chestundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          42,
+          43,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the generic mutable-text demonstration",
+      "question": "The temporary class has shown the API mechanics, while the real project already contains meaningful builder usage, so the lab should be removed. What choice rule should remain between immutable String, local `StringBuilder`, and synchronized `StringBuffer` based on whether text changes and whether one buffer is shared across threads?",
+      "why_te": "Temporary demo remove chestunnam. Fixed text/value kosam String, local repeated mutations kosam StringBuilder, genuine shared synchronized buffer requirement unte StringBuffer ani choose cheyyali.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/MutableStringDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          43,
+          50,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Return to the project pattern for the final answer",
+      "question": "The project method ends by converting its mutable builder into a String, which cleanly separates construction from the immutable value returned to callers. How would you answer which mutable String alternative to use while also noting that `StringBuffer` is a specialized synchronized alternative rather than the default?",
+      "why_te": "Final answer StringBuilder default mutable text choice ani cheppali. Build complete ayyaka `toString()` return cheyyachu. StringBuffer shared-thread synchronization specifically kavali appudu consider chestam.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          43,
+          50,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

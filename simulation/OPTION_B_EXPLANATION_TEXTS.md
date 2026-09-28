@@ -1466,3 +1466,189 @@ Each value once scan chestam kabatti O(n) time. Extra ga `write` integer matrame
 ### Step 6 — Remove the temporary driver and retain the real algorithm
 
 Temporary driver remove chestunnam. Interview lo sorted values adjacent ani, write pointer unique prefix build chestundi ani, returned length valid range ani, tail ignore cheyyali ani explain cheyyali.
+
+## Lesson 43 — Why passwords are often stored in char[] instead of String
+
+### Step 1 — Create a small mutable password-memory demonstration
+
+Project lo password buffer ledu kabatti temporary demo use chestunnam. `char[]` mutable kabatti use ayyaka characters overwrite cheyyachu. String immutable kabatti same object content ni direct ga clear cheyyalem.
+
+### Step 2 — Inspect the explicit char-array wipe
+
+`Arrays.fill` original char array contents ni overwrite chestundi. Application sensitive value use ayyaka explicit ga clear cheyyagaladu. Immutable String ki alanti in-place wipe operation ledu.
+
+### Step 3 — Run the mutable-versus-immutable comparison
+
+Output first `true` ante char array clear ayyindi. Taruvata String copy still `secret` print chestundi. Oka sari String copy create cheste array wipe aa separate immutable object ni erase cheyyadu.
+
+### Step 4 — Identify the limitation of converting passwords back to String
+
+`char[]` use chesina taruvata String copies create chesthe benefit reduce avutundi. Sensitive data logs, intern, unnecessary conversions avoid cheyyali. Mutable array control surrounding code discipline tho kalisi useful.
+
+### Step 5 — Remove the temporary password example
+
+[no highlight] Temporary password demo source lo retain cheyyakudadhu. Final answer char array explicit wipe control istundi ani cheppali, kani JVM/library internal copies anni guaranteed ga erase avutayi ani overclaim cheyyakudadhu.
+
+## Lesson 44 — When the String Pool is not beneficial
+
+### Step 1 — Create a direct String-pool identity experiment
+
+Temporary demo String pool basic identity behavior ni chupistundi. Same literals pooled object share chestayi. `new String` separate object; `intern()` canonical pooled reference ni return chestundi.
+
+### Step 2 — Inspect literal sharing versus explicit allocation
+
+Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `.equals()` content compare chestundi.
+
+### Step 3 — Inspect what intern() actually requests
+
+`intern()` same text kosam canonical pooled reference ni istundi. Repeated equal values ekkuva unte sharing benefit untundi. Mostly unique strings ayithe share cheyyadaniki duplicates takkuva untayi.
+
+### Step 4 — Run the three identity checks
+
+Output pool behavior ni prove chestundi, automatic recommendation kaadu. Pool equal strings share cheyyagaladu. Benefit actual duplicate frequency, lifetime, lookup overhead batti decide cheyyali.
+
+### Step 5 — Reason about mostly unique dynamic values
+
+Mostly unique dynamic values lo duplicates almost levu. Intern lookup/manage work jarigina sharing benefit little ga untundi. Anduke profile or measure chesi real benefit unte matrame explicit intern use cheyyali.
+
+### Step 6 — Remove the String-pool demonstration
+
+[no highlight] Temporary pool demo remove chestunnam. Final answer repeated equal values ki pooling useful avvachu; unique dynamic or sensitive strings ki default ga intern cheyyadam avoid cheyyali. Measurement important.
+
+## Lesson 45 — When StringBuilder is preferable to StringBuffer
+
+### Step 1 — Open a real single-threaded StringBuilder use case
+
+SurveyAlgorithms.reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.
+
+### Step 2 — Inspect a second local accumulation scenario
+
+expandRuns lo kuda builder each method call ki local ga create avutundi. Shared mutable state ledu. StringBuffer synchronization ikkada solve cheyyalsina concurrency problem emi ledu.
+
+### Step 3 — Connect the choice to thread confinement rather than class popularity
+
+Choice ownership model batti untundi. Local single-thread buffer ki StringBuilder enough. Same mutable buffer multiple threads share chesthe synchronized StringBuffer relevant avvachu.
+
+### Step 4 — Inspect how repeated append operations build decoded output
+
+Loop lo repeated append jarugutundi. Immutable String concatenation repeated ga intermediate values create cheyyachu. Local StringBuilder same mutable buffer lo content accumulate chestundi.
+
+### Step 5 — Relate the API decision to real AeroTopo usage
+
+Project examples short-lived local builders. Shared field kaadu. StringBuffer replace cheste synchronization add avutundi kani ee methods correctness ki extra benefit ledu.
+
+### Step 6 — State the scenario-based interview answer
+
+Final answer scenario-based ga undali. Local single-thread text building ki StringBuilder; shared synchronized mutable buffer requirement unte StringBuffer. One class always best ani cheppakudadhu.
+
+## Lesson 46 — Choose a mutable String alternative
+
+### Step 1 — Create a mutable text demonstration
+
+StringBuilder same mutable object content ni change cheyyagaladu. Append, replace, delete operations builder meeda jarugutayi. String immutable kabatti content direct ga modify cheyyalem.
+
+### Step 2 — Inspect several mutations on the same builder
+
+Same builder meeda multiple mutations chestunnam. Repeated text changes unna loops, parser, editor logic lo intermediate immutable Strings reduce cheyyadaniki idi useful.
+
+### Step 3 — Run the mutable sequence
+
+Builder working state mutable ga change avutundi. Final boundary daggara `toString()` normal immutable String result istundi. Output `map-` complete mutation sequence ni confirm chestundi.
+
+### Step 4 — Connect the demo to real AeroTopo builder usage
+
+expandRuns real project lo same pattern use chestundi. Builder create chesi content append chesi end lo String return chestundi. Idi StringBuilder practical mutable alternative ani show chestundi.
+
+### Step 5 — Remove the generic mutable-text demonstration
+
+Temporary demo remove chestunnam. Fixed text/value kosam String, local repeated mutations kosam StringBuilder, genuine shared synchronized buffer requirement unte StringBuffer ani choose cheyyali.
+
+### Step 6 — Return to the project pattern for the final answer
+
+Final answer StringBuilder default mutable text choice ani cheppali. Build complete ayyaka `toString()` return cheyyachu. StringBuffer shared-thread synchronization specifically kavali appudu consider chestam.
+
+## Lesson 47 — Why AeroTopo does not use StringBuffer
+
+### Step 1 — Inspect the project's first StringBuilder use
+
+reverse method builder local ga create avutundi and method lo ne finish avutundi. Multiple threads same builder object share cheyyavu. StringBuffer synchronization requirement ikkada ledu.
+
+### Step 2 — Inspect the second project StringBuilder use
+
+Each expandRuns call own StringBuilder create chestundi. Many requests parallel ga call chesina builders separate objects. Shared mutable buffer ledu kabatti internal synchronization avasaram ledu.
+
+### Step 3 — Search the real source tree for StringBuffer usage
+
+Source search lo StringBuffer match ledu. Kabatti project lo use chestunnam ani claim cheyyakudadhu. Existing local builder design ki synchronization need ledu ani evidence-based answer ivvali.
+
+### Step 4 — Search for the actual StringBuilder usage instead
+
+StringBuilder actual usages search lo kanipistayi. Positive usage plus StringBuffer absence rendu kalisi project choice ni prove chestayi. Generic claim kante code evidence stronger.
+
+### Step 5 — Identify when the answer would change
+
+Future lo same mutable buffer multiple threads share chesthe synchronization requirement real avvachu. Appudu StringBuffer consider cheyyachu. Decision actual ownership/concurrency batti undali, blanket rule kaadu.
+
+### Step 6 — State the project-specific interview answer
+
+Final answer project lo local StringBuilder enough ani cheppali. StringBuffer current usage ledu. Shared mutable text synchronization genuinely required ayithe StringBuffer appropriate avvachu ani add cheyyali.
+
+## Lesson 48 — Reverse large text efficiently with StringBuilder
+
+### Step 1 — Open the real AeroTopo reverse implementation
+
+SurveyAlgorithms.reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.
+
+### Step 2 — Inspect why a mutable builder fits reversal
+
+String immutable kabatti repeated character concatenation unnecessary intermediate values create cheyyachu. StringBuilder mutable buffer ni reverse chesi final ga one String create chestundi.
+
+### Step 3 — Create a driver with a realistic multiword comment
+
+Demo full character sequence ni reverse chestundi, words matrame kaadu. Spaces kuda characters laga reverse position ki move avutayi. Expected output complete text mirror order lo untundi.
+
+### Step 4 — Run the real reverse method
+
+Output all characters reverse ayyayi ani show chestundi. Word order-only reverse different result istundi. Requirement ambiguous ayithe characters aa words aa interviewer tho clarify cheyyadam better.
+
+### Step 5 — Discuss large-text limits honestly
+
+Memory lo fit ayye text ki builder approach simple. Huge file entire ga memory lo load cheyyadam costly avvachu. Appudu chunked leda file-oriented design consider cheyyali.
+
+### Step 6 — Remove the temporary reversal driver
+
+Temporary driver remove chestunnam. Final answer builder reverse plus toString, O(n) time ani cheppali. Very large external content memory fit avvakapothe different strategy kavachu.
+
+### Step 7 — Return to the production reversal line
+
+Final project line actual reusable solution. Character reverse chestundi, word reverse kaadu. In-memory text ki suitable; huge external content ki separate design kavachu ani explain cheyyali.
+
+## Lesson 49 — What happens when String values are concatenated with +
+
+### Step 1 — Create a runtime String concatenation example
+
+Temporary class runtime values ni `+` tho concatenate chestundi. JDK 21 compiler modern string-concat mechanism use chestundi. Bytecode inspect chesi actual implementation evidence chuddam.
+
+### Step 2 — Inspect the language-level concatenation expression
+
+Source lo `+` language-level concatenation. Compiler internal implementation Java version batti optimize avvachu. `always StringBuilder create avutundi` ani fixed statement modern Java ki accurate kaadu.
+
+### Step 3 — Compile and inspect the generated bytecode
+
+`javap` bytecode lo `invokedynamic makeConcatWithConstants` kanipistundi. Modern Java runtime concat strategy StringConcatFactory mechanism use chestundi. Old `always explicit StringBuilder` explanation complete kaadu.
+
+### Step 4 — Run the concatenation to connect bytecode with behavior
+
+Runtime output normal String result `ORTHO-7`. Source behavior stable ga concatenate chestundi. Underlying compiler/JVM strategy implementation detail; bytecode current JDK strategy ni show chestundi.
+
+### Step 5 — Relate plus concatenation to explicit builders in loops
+
+expandRuns repeated loop appends chestundi kabatti explicit builder intent clear ga chupistundi. Modern `+` optimized ayina repeated construction pattern ki builder readable and controlled choice.
+
+### Step 6 — Remove the bytecode demonstration class
+
+Temporary concat demo remove chestunnam. Final answer modern Java runtime concat usually invokedynamic/StringConcatFactory use chestundi ani, constants fold avvachu ani, loops lo builder useful ani cheppali.
+
+### Step 7 — Return to the real repeated-construction example
+
+Final project example repeated construction ki builder use chestundi. Simple expressions ki `+` readable; loop across many appends ki explicit builder intent and mutable state clear ga untayi.

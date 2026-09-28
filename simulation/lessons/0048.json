@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "lesson_number": 48,
+  "question_id": 48,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "Reverse large text efficiently with StringBuilder",
+  "info_language": "te-Latn",
+  "answer": "For an in-memory text block, a direct Java solution is `new StringBuilder(text).reverse().toString()`. `StringBuilder` stores mutable characters, `reverse()` reverses them efficiently, and `toString()` produces the final immutable String. AeroTopo's `SurveyAlgorithms.reverse` uses exactly this approach. Its time complexity is O(n) for n characters and it requires O(n) space for the mutable character storage/result. For extremely large content that cannot comfortably fit in memory, a streaming or chunked design would be needed instead.",
+  "steps": [
+    {
+      "title": "Open the real AeroTopo reverse implementation",
+      "question": "The project already contains the exact text-reversal operation requested by the interview problem: construct a `StringBuilder` from the comment, call `reverse`, and convert the result back to String. Which three operations on this line form the complete in-memory reversal pipeline?",
+      "why_te": "SurveyAlgorithms.reverse exact solution ni already contain chestundi. StringBuilder input text ni mutable buffer ga teesukuntundi, `reverse()` order reverse chestundi, `toString()` final String istundi.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect why a mutable builder fits reversal",
+      "question": "A String cannot be modified character by character in place because it is immutable, while `StringBuilder.reverse()` can rearrange the builder's mutable character sequence before one final String is created. Why does that avoid writing a manual loop that repeatedly concatenates one-character Strings?",
+      "why_te": "String immutable kabatti repeated character concatenation unnecessary intermediate values create cheyyachu. StringBuilder mutable buffer ni reverse chesi final ga one String create chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 24,
+            "expected_text": "public static String reverse(String comment) { return new StringBuilder(comment).reverse().toString(); }"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Create a driver with a realistic multiword comment",
+      "question": "A temporary caller can verify the reusable method without modifying it. The input `survey tile accepted` contains spaces and multiple words, so reversing the full character sequence will also move spaces to their mirrored positions. What exact output should appear when the method reverses every character rather than reversing word order?",
+      "why_te": "Demo full character sequence ni reverse chestundi, words matrame kaadu. Spaces kuda characters laga reverse position ki move avutayi. Expected output complete text mirror order lo untundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/ReverseCommentDemo.java",
+          "language": "java",
+          "content": "import com.aerotopo.learning.SurveyAlgorithms;\npublic class ReverseCommentDemo {\n    public static void main(String[] args) {\n        System.out.println(SurveyAlgorithms.reverse(\"survey tile accepted\"));\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the real reverse method",
+      "question": "The driver compiles against AeroTopo and prints `detpecca elit yevrus`, proving that the project method reverses the whole character sequence. How does this output distinguish character reversal from alternatives such as reversing words only, and why should the interview requirement be clarified when ambiguous?",
+      "why_te": "Output all characters reverse ayyayi ani show chestundi. Word order-only reverse different result istundi. Requirement ambiguous ayithe characters aa words aa interviewer tho clarify cheyyadam better.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "mvn -q -DskipTests compile; javac -cp target/classes -d target/lesson48-demo labs/java/ReverseCommentDemo.java; java -cp \"target/classes;target/lesson48-demo\" ReverseCommentDemo",
+          "output": "detpecca elit yevrus"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Discuss large-text limits honestly",
+      "question": "For a text block that fits in memory, builder reversal is simple and O(n), but an extremely large file may not be appropriate to load as one String and one builder. Why would a file-scale requirement potentially need chunked or random-access processing instead of blindly applying this in-memory helper to arbitrary input size?",
+      "why_te": "Memory lo fit ayye text ki builder approach simple. Huge file entire ga memory lo load cheyyadam costly avvachu. Appudu chunked leda file-oriented design consider cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the temporary reversal driver",
+      "question": "The project already owns the reusable reverse method, so the temporary caller can be deleted after verification. What concise interview answer should remain about `StringBuilder.reverse()`, final `toString()`, O(n) character work, and the distinction between ordinary in-memory text and extremely large external content?",
+      "why_te": "Temporary driver remove chestunnam. Final answer builder reverse plus toString, O(n) time ani cheppali. Very large external content memory fit avvakapothe different strategy kavachu.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/ReverseCommentDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Return to the production reversal line",
+      "question": "The temporary caller is gone, leaving the one-line AeroTopo implementation as the final reference. How would you connect this exact code to a text-editor interview scenario while making clear that it reverses characters, not words, and that its simple in-memory design assumes the text block fits comfortably in memory?",
+      "why_te": "Final project line actual reusable solution. Character reverse chestundi, word reverse kaadu. In-memory text ki suitable; huge external content ki separate design kavachu ani explain cheyyali.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}

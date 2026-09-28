@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "lesson_number": 44,
+  "question_id": 44,
+  "mode": "demo",
+  "project_impact": "temporary",
+  "title": "When the String Pool is not beneficial",
+  "info_language": "te-Latn",
+  "answer": "The String Pool is useful when many equal String values are reused, especially literals, because those equal values can share one canonical object. Explicit interning is less useful when strings are highly dynamic, mostly unique, short-lived, or created in very large numbers, because there is little duplicate storage to eliminate while interning still requires String-table lookup and management. It is also inappropriate for sensitive data such as passwords. Use `intern()` only when measurements show substantial repetition and a real memory benefit; do not intern every dynamic String by default.",
+  "steps": [
+    {
+      "title": "Create a direct String-pool identity experiment",
+      "question": "A temporary class can make the basic pool behavior visible without changing AeroTopo source. Two identical literals should refer to the same pooled String, while `new String` creates a separate object until `intern()` asks for the canonical pooled representation. Which identity comparisons should distinguish those three cases clearly?",
+      "why_te": "Temporary demo String pool basic identity behavior ni chupistundi. Same literals pooled object share chestayi. `new String` separate object; `intern()` canonical pooled reference ni return chestundi.",
+      "software": "intellij",
+      "required_capability": "create-file",
+      "feature_available": true,
+      "action": {
+        "action": "createFile",
+        "data": {
+          "path": "labs/java/StringPoolDemo.java",
+          "language": "java",
+          "content": "public class StringPoolDemo {\n    public static void main(String[] args) {\n        String first = \"tile\";\n        String second = \"tile\";\n        String heap = new String(\"tile\");\n        System.out.println(first == second);\n        System.out.println(first == heap);\n        System.out.println(first == heap.intern());\n    }\n}\n"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect literal sharing versus explicit allocation",
+      "question": "The first two variables use the same literal, whereas `heap` explicitly constructs another String object with equal content. Because `==` compares references, why should the literal comparison be true while the literal-versus-new-object comparison is false even though `.equals()` would report equal text?",
+      "why_te": "Same literal references pool nundi same canonical object ni use chestayi. `new String` equal content tho separate object create chestundi. `==` reference compare chestundi; `.equals()` content compare chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/StringPoolDemo.java",
+            "line": 5,
+            "expected_text": "String heap = new String(\"tile\");"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect what intern() actually requests",
+      "question": "Calling `heap.intern()` returns the canonical pooled representation for the same character sequence, so comparing it with the literal reference should become true. Why does this mechanism save memory only when many equal values are actually reused instead of when nearly every dynamic String is unique?",
+      "why_te": "`intern()` same text kosam canonical pooled reference ni istundi. Repeated equal values ekkuva unte sharing benefit untundi. Mostly unique strings ayithe share cheyyadaniki duplicates takkuva untayi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/StringPoolDemo.java",
+            "line": 8,
+            "expected_text": "System.out.println(first == heap.intern());"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          6,
+          7,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Run the three identity checks",
+      "question": "The program should print `true`, `false`, and `true`: literal sharing works, explicit allocation produces a distinct reference, and `intern()` returns the pooled canonical reference. How does that output establish what the pool does without implying that every String should automatically be interned for performance?",
+      "why_te": "Output pool behavior ni prove chestundi, automatic recommendation kaadu. Pool equal strings share cheyyagaladu. Benefit actual duplicate frequency, lifetime, lookup overhead batti decide cheyyali.",
+      "software": "intellij",
+      "required_capability": "type-terminal",
+      "feature_available": true,
+      "action": {
+        "action": "typeTerminal",
+        "data": {
+          "sessionId": "powershell-1",
+          "session": "PowerShell",
+          "shell": "PowerShell",
+          "exitCode": 0,
+          "command": "javac -d target/lesson44-demo labs/java/StringPoolDemo.java; java -cp target/lesson44-demo StringPoolDemo",
+          "output": "true\nfalse\ntrue"
+        }
+      },
+      "highlight": {
+        "kind": "auto"
+      }
+    },
+    {
+      "title": "Reason about mostly unique dynamic values",
+      "question": "Imagine request IDs, generated tokens, or high-cardinality labels where nearly every String differs from every other String. Interning those values still performs canonical-table work but offers little duplicate-object sharing. Why is measurement more important than assuming the String Pool is always a memory optimization in such workloads?",
+      "why_te": "Mostly unique dynamic values lo duplicates almost levu. Intern lookup/manage work jarigina sharing benefit little ga untundi. Anduke profile or measure chesi real benefit unte matrame explicit intern use cheyyali.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "labs/java/StringPoolDemo.java",
+            "line": 8,
+            "expected_text": "System.out.println(first == heap.intern());"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          5,
+          8
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Remove the String-pool demonstration",
+      "question": "The identity experiment has shown the mechanism and does not belong as permanent AeroTopo functionality. After deleting it, what interview answer should distinguish useful repeated literals or highly duplicated values from dynamic, mostly unique, short-lived, or sensitive Strings where explicit interning can be unnecessary or undesirable?",
+      "why_te": "[no highlight] Temporary pool demo remove chestunnam. Final answer repeated equal values ki pooling useful avvachu; unique dynamic or sensitive strings ki default ga intern cheyyadam avoid cheyyali. Measurement important.",
+      "software": "intellij",
+      "required_capability": "delete-resource",
+      "feature_available": true,
+      "action": {
+        "action": "deleteResource",
+        "data": {
+          "path": "labs/java/StringPoolDemo.java"
+        }
+      },
+      "highlight": {
+        "kind": "none",
+        "reason": "The String-pool experiment is deleted; AeroTopo has no production intern() code to highlight."
+      }
+    }
+  ]
+}

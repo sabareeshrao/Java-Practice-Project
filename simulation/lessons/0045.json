@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "lesson_number": 45,
+  "question_id": 45,
+  "mode": "inspect",
+  "project_impact": "none",
+  "title": "When StringBuilder is preferable to StringBuffer",
+  "info_language": "te-Latn",
+  "answer": "`StringBuilder` is preferable when mutable text is confined to one thread or one method and does not need synchronized access. It offers the same basic append, insert, delete, and reverse style of operations without the synchronization overhead of `StringBuffer`. In AeroTopo, `SurveyAlgorithms.reverse` and `expandRuns` create local `StringBuilder` instances that are not shared across threads, so `StringBuilder` is the appropriate choice. `StringBuffer` is mainly relevant when one mutable character buffer is genuinely shared by multiple threads and synchronized method access is required.",
+  "steps": [
+    {
+      "title": "Open a real single-threaded StringBuilder use case",
+      "question": "AeroTopo's `reverse` method creates a `StringBuilder` locally, reverses the supplied comment, and immediately converts the result back to String. The builder never escapes the method or becomes shared state. Why does this thread-confined usage make synchronization unnecessary and therefore favor `StringBuilder` over `StringBuffer`?",
+      "why_te": "SurveyAlgorithms.reverse lo builder local method variable. Vere thread tho share kaadu. Synchronization avasaram ledu kabatti StringBuilder simple and appropriate choice.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect a second local accumulation scenario",
+      "question": "`expandRuns` also creates a local `StringBuilder` and repeatedly appends generated text while decoding an input sequence. Because one invocation owns its builder from creation to return, what concurrency problem would a synchronized `StringBuffer` solve here that the method does not actually have?",
+      "why_te": "expandRuns lo kuda builder each method call ki local ga create avutundi. Shared mutable state ledu. StringBuffer synchronization ikkada solve cheyyalsina concurrency problem emi ledu.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 43,
+            "expected_text": "var output=new StringBuilder();"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Connect the choice to thread confinement rather than class popularity",
+      "question": "The important decision is not that `StringBuilder` is universally better; it is that synchronization should match the ownership model. If one mutable buffer were genuinely shared and modified concurrently by several threads, why would `StringBuffer` become more relevant even though local builders remain preferable for ordinary method-scoped work?",
+      "why_te": "Choice ownership model batti untundi. Local single-thread buffer ki StringBuilder enough. Same mutable buffer multiple threads share chesthe synchronized StringBuffer relevant avvachu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24,
+          43,
+          50
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Inspect how repeated append operations build decoded output",
+      "question": "The `output.append(...)` call can execute many times while `expandRuns` builds one result, which is exactly the kind of repeated mutation that mutable text classes are designed for. Why would repeatedly concatenating immutable String objects inside this loop create unnecessary intermediate results compared with a local builder?",
+      "why_te": "Loop lo repeated append jarugutundi. Immutable String concatenation repeated ga intermediate values create cheyyachu. Local StringBuilder same mutable buffer lo content accumulate chestundi.",
+      "software": "intellij",
+      "required_capability": "highlight-target",
+      "feature_available": true,
+      "action": {
+        "action": "highlightTarget",
+        "data": {
+          "target": {
+            "type": "line",
+            "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java",
+            "line": 50,
+            "expected_text": "output.append(String.valueOf(c).repeat((int)count)); count=0; digits=false;"
+          }
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "Relate the API decision to real AeroTopo usage",
+      "question": "Both current project examples use builders as short-lived local variables and never expose them as shared mutable fields. Based on those concrete call patterns, why would replacing them with `StringBuffer` add synchronization semantics without providing an observable correctness benefit for these specific methods?",
+      "why_te": "Project examples short-lived local builders. Shared field kaadu. StringBuffer replace cheste synchronization add avutundi kani ee methods correctness ki extra benefit ledu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24,
+          42,
+          43,
+          50,
+          54
+        ],
+        "preserveHorizontal": true
+      }
+    },
+    {
+      "title": "State the scenario-based interview answer",
+      "question": "The strongest answer should describe a scenario rather than repeat a definition: a request-processing method builds or reverses text locally on one thread, so `StringBuilder` avoids unnecessary synchronization; a genuinely shared mutable buffer may justify `StringBuffer`. How would you express that trade-off without claiming one class is always superior?",
+      "why_te": "Final answer scenario-based ga undali. Local single-thread text building ki StringBuilder; shared synchronized mutable buffer requirement unte StringBuffer. One class always best ani cheppakudadhu.",
+      "software": "intellij",
+      "required_capability": "open-file",
+      "feature_available": true,
+      "action": {
+        "action": "openFile",
+        "data": {
+          "file": "src/main/java/com/aerotopo/learning/SurveyAlgorithms.java"
+        }
+      },
+      "highlight": {
+        "kind": "code",
+        "lines": [
+          24,
+          43,
+          50
+        ],
+        "preserveHorizontal": true
+      }
+    }
+  ]
+}
