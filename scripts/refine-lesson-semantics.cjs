@@ -218,7 +218,7 @@ function oneKnowledgeSentence(text){
  let s=String(text||"")
    .replace(/[\u0C00-\u0C7F]+/g,"")
    .replace(/\bundefined\b\s*/gi,"")
-   .replace(/([.!?])\s+(?=[A-Z\[])/g,"; ")
+   .replace(/[.!?]+(?=\s)/g,"; ")
    .replace(/\s+/g," ")
    .trim();
  s=s.replace(/[.!?;]+$/,"").trim();
@@ -240,6 +240,57 @@ for(const lesson of lessons){
    r.step.why_te=(no?"[no highlight] ":"")+body+".";
   }
   if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error(`L${r.lessonNo}S${r.stepNo} Telugu words=${wc(r.step.why_te)}`);
+ }
+}
+
+function contextPrefix(r){
+ const stepName=clean(r.step.title);
+ const file=shortAnchor(r);
+ return stepName+" context lo "+file+" evidence ni specific ga use chestam";
+}
+function fitTelugu(r,text){
+ const no=r.step.highlight?.kind==="none"||/^\[no highlight\]/i.test(text);
+ let body=stripNo(oneKnowledgeSentence(text));
+ if(wc(body)>55){
+  body=body.replace(/[.!?;]+$/,"").split(/\s+/).slice(0,52).join(" ")+".";
+ }
+ if(wc(body)<15)body=body.replace(/[.!?]+$/,"")+"; ee evidence current step reasoning ki direct base ga use avutundi.";
+ return (no?"[no highlight] ":"")+body;
+}
+
+// Normalize every existing step, including older lessons that did not need semantic rewriting.
+for(const lesson of lessons){
+ for(const r of rowsFor(lesson)){
+  r.step.question=oneKnowledgeSentence(r.step.question);
+  r.step.why_te=fitTelugu(r,r.step.why_te);
+  if(wc(r.step.question)<39)throw new Error("Question became too short at L"+r.lessonNo+"S"+r.stepNo);
+  if(wc(r.step.why_te)<15||wc(r.step.why_te)>55)throw new Error("Telugu length after normalization at L"+r.lessonNo+"S"+r.stepNo+"="+wc(r.step.why_te));
+  if(/[\u0C00-\u0C7F]/.test(r.step.question+r.step.why_te))throw new Error("Telugu Unicode remains at L"+r.lessonNo+"S"+r.stepNo);
+  if(/\bundefined\b/i.test(r.step.question+r.step.why_te))throw new Error("undefined remains at L"+r.lessonNo+"S"+r.stepNo);
+ }
+}
+
+// If a whole Telugu paragraph is still identical, add real step/file context to the later occurrence.
+for(let pass=0;pass<4;pass++){
+ const m=new Map();
+ for(const lesson of lessons)for(const r of rowsFor(lesson)){
+  const key=norm(r.step.why_te);
+  if(!m.has(key))m.set(key,[]);
+  m.get(key).push(r);
+ }
+ const groups=[...m.values()].filter(g=>g.length>1);
+ if(!groups.length)break;
+ for(const group of groups){
+  const ordered=group.slice().sort((a,b)=>(a.lessonNo-b.lessonNo)||(a.stepNo-b.stepNo));
+  for(const r of ordered.slice(1)){
+   const no=r.step.highlight?.kind==="none";
+   const prefix=contextPrefix(r);
+   const body=stripNo(r.step.why_te).replace(/[.!?;]+$/,"");
+   const maxBody=Math.max(8,52-wc(prefix));
+   let merged=prefix+"; "+body.split(/\s+/).slice(0,maxBody).join(" ");
+   merged=oneKnowledgeSentence(merged);
+   r.step.why_te=(no?"[no highlight] ":"")+stripNo(merged);
+  }
  }
 }
 
