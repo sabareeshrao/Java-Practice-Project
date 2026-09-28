@@ -3212,3 +3212,151 @@ Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()
 ### Step 4 — State the interview answer — Effect of final methods on inheritance
 
 Final method subclass ki inherit avutundi kani override cheyyalem. Product `id()` identity behavior ni base class control lo stable ga unchutundi. Genuine invariant unte final useful.
+
+## Lesson 126 — Inheritance and its types in Java
+
+### Step 1 — Open the inheritance evidence — Inheritance and its types in Java
+
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
+
+### Step 2 — Trace the parent-child rule — Inheritance and its types in Java
+
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
+
+### Step 3 — Evaluate the hierarchy design — Inheritance and its types in Java
+
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
+
+### Step 4 — State the interview answer — Inheritance and its types in Java
+
+Inheritance shared parent behavior ni subclasses reuse cheyyadaniki use chestam. AeroTopo Product nundi Orthomosaic and Dem hierarchical inheritance; Product multiple interfaces implement chestundi. Multiple class parents Java allow cheyyadu.
+
+## Lesson 127 — Why a class cannot extend itself
+
+### Step 1 — Open the inheritance evidence — Why a class cannot extend itself
+
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
+
+### Step 2 — Trace the parent-child rule — Why a class cannot extend itself
+
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
+
+### Step 3 — Evaluate the hierarchy design — Why a class cannot extend itself
+
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
+
+### Step 4 — State the interview answer — Why a class cannot extend itself
+
+Class self ni extend chesthe cyclic hierarchy create avutundi. Java compiler direct ga reject chestundi. CompilerRulesTest illegal declaration ni compile chesi diagnostic verify chestundi.
+
+## Lesson 128 — Multiple inheritance in Java
+
+### Step 1 — Open the inheritance evidence — Multiple inheritance in Java
+
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
+
+### Step 2 — Trace the parent-child rule — Multiple inheritance in Java
+
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
+
+### Step 3 — Evaluate the hierarchy design — Multiple inheritance in Java
+
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
+
+### Step 4 — State the interview answer — Multiple inheritance in Java
+
+Java class ki one direct superclass matrame. Multiple interfaces implement cheyyachu. Product two interfaces implement chestundi; Units default conflict ni override tho resolve chestundi.
+
+## Lesson 129 — How inheritance works in AeroTopo
+
+### Step 1 — Open the inheritance evidence — How inheritance works in AeroTopo
+
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
+
+### Step 2 — Trace the parent-child rule — How inheritance works in AeroTopo
+
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
+
+### Step 3 — Evaluate the hierarchy design — How inheritance works in AeroTopo
+
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
+
+### Step 4 — State the interview answer — How inheritance works in AeroTopo
+
+Orthomosaic Product nundi common behavior inherit chestundi, own gsd field add chestundi, resolution method override chestundi. Dem same parent ni different implementation tho reuse chestundi.
+
+## Lesson 130 — Access visibility in subclasses
+
+### Step 1 — Open the inheritance evidence — Access visibility in subclasses
+
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
+
+### Step 2 — Trace the parent-child rule — Access visibility in subclasses
+
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
+
+### Step 3 — Evaluate the hierarchy design — Access visibility in subclasses
+
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
+
+### Step 4 — State the interview answer — Access visibility in subclasses
+
+Product fields private kabatti child direct ga access cheyyadu. Constructors protected kabatti subclasses use cheyyagalavu. Public methods controlled API boundary provide chestayi.
+
+## Lesson 131 — When inheritance violates the parent contract
+
+### Step 1 — Open the inheritance evidence — When inheritance violates the parent contract
+
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
+
+### Step 2 — Trace the parent-child rule — When inheritance violates the parent contract
+
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
+
+### Step 3 — Evaluate the hierarchy design — When inheritance violates the parent contract
+
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
+
+### Step 4 — State the interview answer — When inheritance violates the parent contract
+
+Child parent contract meaning ni break chesthe substitutability damage avutundi. Product subtype resolution/export semantics preserve cheyyali. Completely unrelated behavior unte inheritance bad design signal.
+
+## Lesson 132 — Using super without an explicit superclass
+
+### Step 1 — Open the AeroTopo inheritance baseline — Using super without an explicit superclass
+
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
+
+### Step 2 — Create the focused inheritance experiment — Using super without an explicit superclass
+
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
+
+### Step 3 — Run the inheritance experiment — Using super without an explicit superclass
+
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
+
+### Step 4 — Remove the temporary inheritance experiment — Using super without an explicit superclass
+
+[no highlight] Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
+
+### Step 5 — Return to the production hierarchy — Using super without an explicit superclass
+
+Explicit `extends` lekapoyina ordinary class implicit ga Object ni extend chestundi. Constructor lo `super()` Object constructor ni refer chestundi. Every normal class hierarchy Object daggara end avutundi.
+
+## Lesson 133 — Inheritance versus composition
+
+### Step 1 — Open the inheritance evidence — Inheritance versus composition
+
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
+
+### Step 2 — Trace the parent-child rule — Inheritance versus composition
+
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
+
+### Step 3 — Evaluate the hierarchy design — Inheritance versus composition
+
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
+
+### Step 4 — State the interview answer — Inheritance versus composition
+
+Inheritance is-a relation; composition has-a relation. Orthomosaic Product subtype kabatti inheritance. Product tiles list ni own chestundi kabatti composition. Relationship meaning batti choice cheyyali.
